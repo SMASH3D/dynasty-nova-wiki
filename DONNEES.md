@@ -807,3 +807,57 @@ Source : page Actualités du jeu (https://play.dynastynova.com/news), API `GET /
 - **30 sept.** : favoris (10, 200 en Premium), vue Empire, bonus de position (DONNEES §15), Synthétiseur d'hydrogène dépendant de la température (plus froid = plus de production, consommation d'énergie inchangée).
 - **Univers privés (30 sept.)** : formules Escouade (25), Flotte (75), Armada (200) ; EN : Squad, Fleet, Armada ; à la semaine, au mois ou pour une durée fixe ; à partir de 4,99 € la semaine (`misc-06` en partie répondue).
 - **Premium (30 sept.)** : files de 2 à 5 ordres, lot mensuel (2 avatars, 1 skin, 30 Points stellaires, jamais vendus en boutique, conservés après l'abonnement), formules 1, 3 ou 6 mois dès 4,33 € par mois.
+
+## 18. Dynasties et talents (code du jeu, relevé le 6 octobre 2026)
+
+Source : code du serveur (dépôt Backend, fusion « dynasties, classes and talents v2 », #469, puis #473 et #474) et textes du client (`talents.json`, `classes.json`, `dynasties.json`, FR et EN). Règles confirmées par l'équipe (déduites du code). **Pas encore en jeu au 6 octobre 2026** (dernière version serveur publiée : 2.7.0) : les pages de la rubrique `dynasty` restent non publiées jusqu'à la sortie.
+
+### Dynasties et traits
+- Une dynastie par univers, choisie une fois, jamais changée. Deux traits passifs, deux classes exclusives.
+- **L'Héritage** : *Rien ne se perd* (remboursement d'annulation +5 points, 80 → 85 % ; reconstruction gratuite des défenses +5 points, 70 → 75 %), *La rotation Halden* (mines +2 %). Classes exclusives : Archiviste, Vétéran.
+- **L'Accord** : *Le diapason* (+5 % de dégâts sur les unités contre lesquelles le vaisseau a un tir rapide), *Écouter loin* (flotte ennemie lue un palier plus tôt dans les rapports d'espionnage). Classes exclusives : Symbiote, Oracle.
+- **Le Chœur** : non jouable (avatars seulement). Classes exclusives prévues : Essaim, Rémanence, sans arbre.
+- Un trait déplace la valeur de départ, jamais le plafond. Il s'ajoute aux talents d'alliance.
+
+### Classes
+- 6 communes (Bâtisseur, Énergéticien, Théoricien, Amiral, Navigateur, Ombre), 4 exclusives.
+- Changement de classe : dans la même dynastie, **50 Points stellaires**, **une fois tous les 7 jours** ; vide l'arbre de classe et remet sa réinitialisation à « gratuite » ; l'arbre commun ne bouge pas.
+- Maîtrise de classe : de 0 au niveau 50. Une classe jouée depuis le début = niveau du joueur. Une classe prise ensuite part de sa maîtrise enregistrée et suit la courbe d'expérience du joueur, sans dépasser son niveau. Jamais jouée = 0 jusqu'à la première expérience, puis niveau 1. Chaque classe garde sa maîtrise.
+
+### Expérience et niveaux
+- Expérience = quêtes + **10 par point** du record de points, divisé par la vitesse de l'univers.
+- Seuils d'expérience (début de niveau) : 1 : 0 · 8 : 500 · 10 : 1 221 · 20 : 43 939 · 24 : 100 397 · 25 : 121 716 · 32 : 437 052 · 40 : 1 773 675 · 50 : 10 000 000. Au-delà du niveau 50, chaque niveau coûte autant que le 50e et ne rapporte rien.
+
+### Règles des arbres
+- Arbre commun : 3 × 10, rangs par rangée 3, 5, 1, 5, 1, 1, 5, 1, 5, 1 (28 par branche), portes à 0/0/0/8/8/8/20/20/32/32 points placés au-dessus (toutes branches), 1 point par niveau, 50 au maximum.
+- Arbre de classe : 3 × 9, rangs 1, 3, 1, 3, 1, 1, 3, 1, 1 (15 par branche), portes 0/0/0/5/5/5/12/12/12, ⌈maîtrise / 2⌉ points, 25 au maximum.
+- Ultime : niveau 40 et branche pleine.
+- Brouillon puis validation ; un point validé ne se reprend que par réinitialisation. Réinitialisation par arbre : la 1re gratuite, ensuite 20 Points stellaires et 24 h depuis la précédente.
+
+### Plafonds (talents / total avec l'alliance)
+- Vitesse de flotte : commun 40 %, accent 10 %, talents 50 %, total 60 %. Les bonus de vitesse divisent la durée. Vent arrière (25 %), Liaisons internes (40 %), Retour victorieux (30 %) hors budget.
+- Hydrogène : commun 20 %, accent 5 %, talents 25 %, total 45 %. Soutes 25 %. Flottes en vol +3.
+- Recherche 25 / 45 %. Mines 25 / 45 %. Bâtiments 25 / 45 %, accent 15 % sur une famille (50 % au total). Vaisseaux et défenses 10 %, accent 15 %. Coûts 5 % (accent). Cases +4. Pillage des cibles abandonnées +20 points. Protection contre le pillage 20 points au catalogue (15 pour le Vétéran, 10 pour l'Oracle), taux de pillage jamais sous 30 %.
+- Combat : armement des vaisseaux 9 %, coque 11 %, bouclier 3 % ; défenses : armement 9 %, bouclier 5 %, coque 10 % ; dégâts sur tirs rapides 15 % (trait compris).
+
+### Arbre commun
+Valeurs par rang (code `CommonTalents`), identiques au document de conception : voir la page `dynasty/common-tree`. Astrométrie touche la catégorie « exploration » : Renseignement Tactique et Cosmologie Appliquée.
+
+### Arbres de classe
+Valeurs par rang tirées du catalogue de chaque classe (`AdmiralTalents`, `BuilderTalents`…) et des plafonds de classe (`ClassCaps`). Écarts avec le document de conception, retenus d'après le code : Lire la coque 3,5 %/rang, Feu concentré 7,5 %, Contre-batterie 2 %/rang, Premier rang 3 %/rang, coque de l'Amiral plafonnée à 11 %.
+
+### Réponses et vérifications du 6 octobre 2026 (questions `dynasty-04` à `dynasty-20`)
+- Vaisseaux de combat (Amiral) : les 8 vaisseaux non civils hors Collecteur solaire (Intercepteur, Assaillant, Corvette, Cuirassé, Frappe-orbital, Prédateur, Annihilateur, Colossus stellaire).
+- Pluie d'acier : 24 h glissantes. Décollage d'urgence : fenêtre de retour comptée depuis le décollage.
+- La nuit est courte : 49 % de la part qui ne part pas en débris (30 % de débris : 0,7 × 0,49 ≈ 34 % des Collecteurs détruits).
+- Recherche « civile » (Prototype) : toute recherche qui n'augmente ni la puissance militaire ni la vitesse des vaisseaux.
+- Terraformeur vivant : se cumule avec la case des niveaux pairs (Modulateur 6 : 33 → 39 cases).
+- La lune tient et Briseur de lunes : en relatif, chance ou risque × 0,75 (code `MoonDestructionOdds`).
+- Chantier de démontage : part de la Station de réparation × 1,2 (code `RepairDock`).
+- Épaves fraîches : +20 points ajoutés après le plafond de 25 % de Ferrailleur et Tri des métaux (jusqu'à 45 %). Indemnité : payée ressource par ressource sur le coût des vaisseaux perdus.
+- Formation serrée : seul le vaisseau le plus lent est accéléré, plafonné par le plus rapide ; la flotte vole à une seule vitesse.
+- Prudence : comparée au risque après les bornes de 5 % et 25 %.
+- Protection contre le pillage : le plafond de classe porte sur le total, arbre commun compris (Vétéran 15 points ; Oracle 10 points, d'après Backend #476). Baisse en points du taux de pillage, jamais sous 30 %.
+- Écouter loin et Lecture des hangars se cumulent : 2 paliers plus tôt pour la flotte (décision de l'équipe, Backend #476). Retard comblé ne double que Fonds d'archives : 40 % au plus sur un niveau connu (Backend #476).
+- Température actuelle d'une planète (code `Map::getTemperatureAt`) : suit le mois du calendrier, minimale le 1er, maximale au jour floor(jours du mois / 2) (le 15, le 14 en février), minimale le dernier jour, linéaire jour par jour, arrondie.
+- Alerte d'attaque : 60 s avant l'impact (code `Fleet::ATTACK_ALERT_LEAD_TIME_IN_SECONDS`), jusqu'à 360 s avec les talents de l'Oracle.

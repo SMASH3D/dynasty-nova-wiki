@@ -21,6 +21,7 @@ updated: "2026-10-06T08:08:31.529Z"
 - **2 October 2026**: wiki created. Getting started pages, buildings, technologies, ships and defenses lists, and rules for economy, fleets, combat, espionage and alliances written. Values recorded on the Redline universe.
 - **5 October 2026**: distance and flight time formulas reformatted.
 - **6 October 2026**: flight time formula corrected (constant 35,000, speed factor from 1 to 10, following the game fix for trips that were ten times too short); 7-day inactivity on Redline; rotating shop and planet skin rarities; spying on players on vacation; reports your way; alliance announcement; private universe plan names and starting price.
+- **6 October 2026 (continued)**: monthly planet temperature cycle detailed; attack alert 1 minute before impact.
 
 ## Related pages
 

@@ -22,6 +22,7 @@ updated: "2026-10-02T16:36:34.291Z"
 2. L'hydrogène du **retour est payé au départ**, sauf pour la Colonisation et le Stationnement, qui sont des allers simples.
 3. Une flotte peut être **rappelée** à tout moment avant la fin du trajet aller, sans remboursement d'hydrogène.
 4. **Il n'existe ni attaque groupée, ni défense alliée** : on ne peut pas stationner une flotte chez un allié.
+5. Le joueur attaqué reçoit une **alerte 1 minute avant l'impact** d'une Attaque.
 
 ## Données détaillées
 

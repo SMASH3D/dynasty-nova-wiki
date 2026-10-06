@@ -25,6 +25,7 @@ updated: "2026-10-02T16:38:08.029Z"
 2. Hydrogen for the **return is paid at departure**, except for Colonization and Stationing, which are one-way.
 3. A fleet can be **recalled** at any time before the end of its outbound trip, with no hydrogen refund.
 4. **There is no grouped attack and no allied defense**: you cannot station a fleet at an ally's planet.
+5. The attacked player gets an **alert 1 minute before the impact** of an Attack.
 
 ## Detailed data
 

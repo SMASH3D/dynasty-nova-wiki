@@ -1,0 +1,62 @@
+{
+  "fr/fleet/movement": [
+    [
+      "3. Une flotte avance à la vitesse de son **vaisseau le plus lent**, augmentée du talent d'alliance Propulsion coordonnée.",
+      "3. Une flotte avance à la vitesse de son **vaisseau le plus lent**. Les bonus de vitesse (talents personnels et talent d'alliance Propulsion coordonnée) **divisent la durée du vol** : +50 % = un vol 1,5 fois plus court, au plus +60 % au total. Voir [Les talents](/fr/dynasty/talents)."
+    ]
+  ],
+  "en/fleet/movement": [
+    [
+      "3. A fleet flies at the speed of its **slowest ship**, raised by the Coordinated propulsion alliance talent.",
+      "3. A fleet flies at the speed of its **slowest ship**. Speed bonuses (personal talents and the Coordinated propulsion alliance talent) **divide the flight time**: +50% = a flight 1.5 times shorter, +60% at most in total. See [Talents](/en/dynasty/talents)."
+    ]
+  ],
+  "fr/getting-started/tutorial-quests": [
+    [
+      "6. L'expérience est propre à chaque univers. Elle servira à la progression de votre personnage, une fonctionnalité à venir.",
+      "6. L'expérience est propre à chaque univers. Elle fait monter le niveau de votre personnage, qui donne vos points de talent. Voir [Dynastie et talents](/fr/dynasty)."
+    ]
+  ],
+  "en/getting-started/tutorial-quests": [
+    [
+      "6. Experience is tracked per universe. It will feed your character's progression, a feature still to come.",
+      "6. Experience is tracked per universe. It raises your character's level, which gives your talent points. See [Dynasty and talents](/en/dynasty)."
+    ]
+  ],
+  "fr/combat/defense-rebuild": [
+    [
+      "3. La **Barrière défensive** et le **Dôme protecteur** suivent la même règle : 70 % de chances de les garder.",
+      "3. La **Barrière défensive** et le **Dôme protecteur** suivent la même règle : 70 % de chances de les garder.\n4. La dynastie **L'Héritage** porte cette chance à **75 %** (trait Rien ne se perd). Les talents du [Vétéran](/fr/dynasty/classes/veteran) peuvent la monter plus haut ; ceux de l'[Amiral](/fr/dynasty/classes/admiral) la baissent chez les défenseurs qu'il attaque."
+    ]
+  ],
+  "en/combat/defense-rebuild": [
+    [
+      "3. The **Defensive Barrier** and the **Protective Dome** follow the same rule: a 70% chance of keeping them.",
+      "3. The **Defensive Barrier** and the **Protective Dome** follow the same rule: a 70% chance of keeping them.\n4. The **Heritage** dynasty raises this chance to **75%** (Nothing Is Lost trait). The [Veteran](/en/dynasty/classes/veteran)'s talents can raise it further; the [Admiral](/en/dynasty/classes/admiral)'s lower it for the defenders it attacks."
+    ]
+  ],
+  "fr/home": [
+    [
+      "### [Divers](/fr/misc)",
+      "### [Dynastie et talents](/fr/dynasty)\n- [Les dynasties](/fr/dynasty/dynasties)\n- [Les classes](/fr/dynasty/classes)\n- [Les talents](/fr/dynasty/talents)\n- [L'arbre commun](/fr/dynasty/common-tree)\n\n### [Divers](/fr/misc)"
+    ]
+  ],
+  "en/home": [
+    [
+      "### [Miscellaneous](/en/misc)",
+      "### [Dynasty and talents](/en/dynasty)\n- [The dynasties](/en/dynasty/dynasties)\n- [The classes](/en/dynasty/classes)\n- [Talents](/en/dynasty/talents)\n- [The common tree](/en/dynasty/common-tree)\n\n### [Miscellaneous](/en/misc)"
+    ]
+  ],
+  "fr/espionage/spying": [
+    [
+      "13. **Un seul tirage pour toute la vague** : toutes les sondes sont détruites, ou aucune. Le nombre de sondes ne change pas le risque. Il n'y a pas de combat.",
+      "13. **Un seul tirage pour toute la vague** : toutes les sondes sont détruites, ou aucune. Le nombre de sondes ne change pas le risque. Il n'y a pas de combat. Exception : les talents de l'[Ombre](/fr/dynasty/classes/shadow) Sondes larguées et Coques muettes font survivre une partie d'une vague prise."
+    ]
+  ],
+  "en/espionage/spying": [
+    [
+      "13. **A single roll for the whole wave**: all probes are destroyed, or none. The number of probes does not change the risk. There is no battle.",
+      "13. **A single roll for the whole wave**: all probes are destroyed, or none. The number of probes does not change the risk. There is no battle. Exception: the [Shadow](/en/dynasty/classes/shadow)'s Dropped Probes and Silent Hulls talents let part of a caught wave survive."
+    ]
+  ]
+}

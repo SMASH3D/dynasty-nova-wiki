@@ -29,7 +29,7 @@ game_version: "Serveur 2.1.0 · Client 3.1.0"
 1. **Taille** : le nombre total de cases d'une planète vaut la taille moyenne de sa position, plus ou moins 15, tirée au hasard à sa création puis figée.
 2. La **planète mère** démarre toujours à **163 cases**, quelle que soit sa position.
 3. Chaque niveau de bâtiment occupe **une case**. Le [Modulateur planétaire](/fr/economy/terraformer-and-logistics) ajoute des cases.
-4. **Température** : chaque position a une température minimale et maximale (table ci-dessous). La température **actuelle** oscille entre les deux au fil du mois, avec un pic à mi-mois.
+4. **Température** : chaque position a une température minimale et maximale (table ci-dessous). La température **actuelle** suit le mois du calendrier : à sa minimale le 1er, elle monte chaque jour jusqu'à sa maximale au milieu du mois (le 15, le 14 en février), puis redescend jusqu'à sa minimale le dernier jour du mois.
 5. La température agit sur trois productions :
    - **Condensateur d'hydrogène** : production × (1,44 − 0,004 × température maximale). Plus il fait froid, plus il produit.
    - **Collecteur solaire** : production = température maximale / 4, plus une énergie de base.

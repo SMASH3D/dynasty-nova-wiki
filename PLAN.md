@@ -163,6 +163,18 @@ Chaque page porte un identifiant de page (P-xx). Abréviations : *[B]* = ton bri
 | P-95 | `misc/referral` | Parrainage | | [J] | `misc-03` |
 | P-97 | `misc/changelog` | Historique du wiki | | | |
 
+### `dynasty`, dynastie et talents (ajoutée le 6 octobre 2026, non publiée jusqu'à la sortie)
+| ID | Chemin | Page | Contenu | Sources | Manque |
+|---|---|---|---|---|---|
+| P-100 | `dynasty` | Dynastie et talents (index) | Modèle dynastie + classe + arbre commun, sommaire. | Code [E] | |
+| P-101 | `dynasty/dynasties` | Les dynasties | L'Héritage, L'Accord, Le Chœur ; traits et classes exclusives. | Code [E] | |
+| P-102 | `dynasty/classes` | Les classes | Les 10 classes, maîtrise, changement de classe. | Code [E] | |
+| P-103 | `dynasty/talents` | Les talents | Deux arbres, points par niveau, portes, brouillon, réinitialisation, plafonds et accents. | Code [E] | `dynasty-04` |
+| P-104 | `dynasty/common-tree` | L'arbre commun | Prospérité, Exploration, Logistique, builds à 50 points. | Code [E] | |
+| P-105 à P-114 | `dynasty/classes/<code>` | Un arbre de classe par page | `admiral`, `builder`, `energist`, `theorist`, `navigator`, `shadow`, `archivist`, `veteran`, `symbiote`, `oracle` : 3 branches × 9 rangées, exemples, builds à 25 points. | Code [E] | `dynasty-05` à `dynasty-20` |
+
+[E] = code du jeu fourni par l'équipe (règles « déduites du code », AGENTS §4). Détail des données : [DONNEES.md §18](DONNEES.md).
+
 Pages par unité (17 bâtiments, 17 recherches, 14 vaisseaux, 10 défenses) : plus tard, sous `economy/buildings/<code>`, `research/technologies/<code>`, `fleet/ships/<code>` et `defense/defenses/<code>`. Les pages de liste suffisent pour le lancement.
 
 ---
@@ -360,6 +372,28 @@ Règle : aucune de ces formules ne va dans le wiki avant confirmation. Les pages
 
 ---
 
+### Dynastie et talents (6 octobre 2026)
+- `dynasty-01` ✅ Le wiki n'annonce aucune date de sortie. Les pages restent non publiées tant que la fonctionnalité n'est pas en jeu ; les modifications des pages existantes sont prêtes dans `edits/2026-10-06-dynasty-release.json`, à appliquer à ce moment-là.
+- `dynasty-02` ✅ Ce n'est pas du pay to win : changer de classe ou réinitialiser un arbre ne donne aucune puissance de plus. Les pages donnent les prix sans les présenter comme un avantage.
+- `dynasty-03` ✅ Le wiki emploie les noms du jeu, d'après les traductions du client (Centre d'innovation, Récupérateur, Capteurs photovoltaïques, Collecteur solaire, Condensateur d'hydrogène, Dock orbital, Éclaireur…). Les noms des talents restent ceux qu'affiche le jeu.
+- `dynasty-04` ✅ Le plafond de classe compte l'arbre commun : Vétéran 15 points (pillage 35 %), Oracle 10 points (pillage 40 %, La cache s'ajoute à Coffres enterrés). Code corrigé (Backend #476). Question initiale : Protection contre le pillage : plafond de classe de 15 points pour le Vétéran (arbre commun compris) ; le plafond de 5 de l'Oracle porte-t-il sur La cache seule ou sur le total ?
+- `dynasty-05` ✅ (code) En relatif : × 0,75. Question initiale : Amiral, Vétéran : La lune tient et Briseur de lunes baissent-ils le risque de 25 % en relatif (27 % → 20 %) ou en points ?
+- `dynasty-06` ✅ (code) Multiplicatif : part de la Station de réparation × 1,2. Question initiale : Amiral : le « +20 % d'efficacité » de Chantier de démontage s'ajoute-t-il en points à la part de la Station de réparation, ou la multiplie-t-il ?
+- `dynasty-07` ✅ Tous les vaisseaux non civils ; le code exclut le Collecteur solaire. Question initiale : Amiral : quels vaisseaux comptent comme « vaisseaux de combat » (Chantier de guerre, Économie de guerre, Rapaces) ? Seulement la catégorie combat (Intercepteur, Assaillant, Corvette, Cuirassé) ou aussi Frappe-orbital, Prédateur, Annihilateur, Colossus stellaire ?
+- `dynasty-08` ✅ 24 h glissantes. Remorquage depuis une lune : non traité. Question initiale : Vétéran : le cycle de 24 h de Pluie d'acier est-il glissant ou calendaire ? Amiral : Remorquage pour une flotte partie d'une lune ?
+- `dynasty-09` ✅ 49 % de la part qui ne part pas en débris. Question initiale : Énergéticien : La nuit est courte (49 %) s'applique-t-elle à tous les Collecteurs solaires détruits ou seulement à la part qui ne part pas en débris ?
+- `dynasty-10` ✅ Le cycle de température suit le mois du calendrier (formule dans DONNEES §18) ; pages `universe/planets` FR et EN précisées. Question initiale : Énergéticien : Plein midi parle du « maximum du mois ». Le cycle mensuel de la température des Capteurs photovoltaïques n'est pas décrit sur le wiki (`economy/energy` parle de la température actuelle).
+- `dynasty-11` ✅ Retard comblé ne double que Fonds d'archives (10 + 15 × 2 = 40 %), comme le dit le texte. Code corrigé (Backend #476). Question initiale : Archiviste : Retard comblé double-t-il seulement Fonds d'archives ou toute la vitesse des niveaux connus (plafond de 25 % dans le code) ?
+- `dynasty-12` ✅ (code) Additif, après le plafond de 25 % ; ressources créées au retour, le champ n'est pas vidé davantage ; Indemnité ressource par ressource. Question initiale : Archiviste : Épaves fraîches (+20 %) s'ajoute-t-il ou se multiplie-t-il avec Ferrailleur et Tri des métaux ? L'Indemnité est-elle versée ressource par ressource ?
+- `dynasty-13` ✅ Civile = n'augmente ni la puissance militaire ni la vitesse des vaisseaux. Question initiale : Théoricien : quelles recherches sont « civiles » pour Prototype ?
+- `dynasty-14` ✅ Formation serrée nivelle les vitesses : tous les vaisseaux sauf le plus rapide +15 %, plafonnés au plus rapide (le code, qui n'accélère que le plus lent, donne la même vitesse de flotte). Question initiale : Navigateur : effet exact de Formation serrée sur une flotte de plus de deux types de vaisseaux.
+- `dynasty-15` ✅ Depuis le décollage. Question initiale : Navigateur : la fenêtre de retour de Décollage d'urgence (1 h à 3 h) compte-t-elle depuis le décollage ou depuis l'impact ?
+- `dynasty-16` ✅ (code) Après les bornes. Question initiale : Ombre : le seuil de 15 % de Prudence se compare-t-il à la chance avant ou après les bornes de 5 % et 25 % ?
+- `dynasty-17` ✅ Quand les sondes devraient être détruites, une partie revient. Nuance à ajouter à `espionage/spying` à la sortie. ⚠️ Plafond de survie de l'Ombre à 41 % alors que l'arbre ne monte qu'à 27 %. Question initiale : Ombre : Sondes larguées et Coques muettes contredisent la règle « toute la vague tombe » de `espionage/spying` ; à nuancer sur cette page à la sortie.
+- `dynasty-18` ✅ Pas de limite : Écouter loin et Lecture des hangars se cumulent (2 paliers). Code corrigé (Backend #476). Question initiale : Ombre : Écouter loin (trait de L'Accord) et Lecture des hangars ne se cumulent pas (un palier plus tôt au plus par catégorie). Voulu ?
+- `dynasty-19` ✅ Ajoutée à `fleet/missions` FR et EN (60 s, jusqu'à 6 min avec l'Oracle). Question initiale : Oracle : l'alerte d'attaque de base (60 s avant l'impact, d'après le code) n'est décrite sur aucune page du wiki.
+- `dynasty-20` ✅ Se cumule avec la case des niveaux pairs. Question initiale : Symbiote : la case de plus par niveau de Modulateur planétaire (Terraformeur vivant) se cumule-t-elle avec la case de plus aux niveaux pairs ?
+
 ## 8. Conventions issues des réponses
 
 ### Encart « paramètre d'univers » (`general-03`)
@@ -414,6 +448,8 @@ Traduction des noms français, à utiliser dans les pages EN (et ES tant que le 
 **Publication le 2 octobre 2026 (16:35 à 16:39 UTC)** : 130 pages publiées (65 FR, 65 EN). Restent non publiées les 5 pages bloquées, en FR et en EN. L'accueil FR (`fr/home`) et l'accueil EN (`en/home`, ancienne page de test réutilisée) sont réécrits le 2 octobre (portail et index complet). L'espagnol attend `wiki-02`.
 
 **Publiées** : P-96, P-29, P-02, P-03, P-05, P-06, P-07, P-11, P-12, P-13, P-14, P-15, P-16, P-21, P-22, P-23, P-24, P-26, P-27, P-28, P-31, P-32, P-33, P-41, P-42, P-44, P-45, P-46, P-47, P-51, P-52, P-53, P-61, P-62, P-63, P-64, P-65, P-66, P-67, P-71, P-72, P-73, P-81, P-82, P-83, P-84, P-85, P-86, P-87, P-88, P-89, P-92, P-93, P-94, P-95, P-97, et les 10 pages de rubrique.
+
+**Rubrique `dynasty` (6 octobre 2026)** : 15 pages FR et 15 pages EN rédigées en local (P-100 à P-114), **non créées sur le wiki** (pas de clé d'API sur ce poste) et non publiées tant que la fonctionnalité n'est pas en jeu (`dynasty-01`). À la sortie : `create`, application de `edits/2026-10-06-dynasty-release.json` (déplacements, didacticiel, reconstruction des défenses, accueil), ligne d'historique FR et EN, publication.
 
 **Bloquées** :
 | Page | Bloquée par |

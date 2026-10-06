@@ -29,7 +29,7 @@ game_version: "Serveur 2.1.0 · Client 3.1.0"
 1. **Size**: a planet's total number of fields equals the average size of its position, plus or minus 15, rolled when the planet is created and then fixed.
 2. The **mother planet** always starts with **163 fields**, whatever its position.
 3. Each building level takes **one field**. The [Planetary Modulator](/en/economy/terraformer-and-logistics) adds fields.
-4. **Temperature**: each position has a minimum and a maximum temperature (table below). The **current** temperature swings between the two over the month, peaking mid-month.
+4. **Temperature**: each position has a minimum and a maximum temperature (table below). The **current** temperature follows the calendar month: at its minimum on the 1st, it rises each day to its maximum in the middle of the month (the 15th, the 14th in February), then falls back to its minimum on the last day of the month.
 5. Temperature affects three outputs:
    - **Hydrogen Condenser**: output × (1.44 − 0.004 × maximum temperature). The colder, the more it produces.
    - **Solar Collector**: output = maximum temperature / 4, plus a base amount of energy.
