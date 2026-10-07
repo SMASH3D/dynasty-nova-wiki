@@ -39,6 +39,117 @@ updated: "2026-10-06T10:29:56.814Z"
 
 ## Données détaillées
 
+### Vue d'ensemble de l'arbre
+
+Les trois branches de l'arbre de classe, de la rangée 1 à l'ultime. Le détail de chaque talent est dans les tableaux ci-dessous.
+
+```mermaid
+graph TB
+    subgraph B3[" "]
+        B3H["SILO<br/>Ce qui répond."]:::head
+        B3R1{{"Fosses profondes<br/>1 pt"}}:::key
+        B3H --- B3R1
+        B3R2("Charge creuse<br/>3 pts"):::rank
+        B3R1 --- B3R2
+        B3R3A["① Casemates<br/>1 pt"]:::option
+        B3R3B["② Allonge<br/>1 pt"]:::option
+        B3R2 --- B3R3A
+        B3R2 --- B3R3B
+        B3G3(["🔒 5 points dans l'arbre"]):::gate
+        B3R3A --- B3G3
+        B3R3B --- B3G3
+        B3R4("Intercepteurs récupérés<br/>3 pts"):::rank
+        B3G3 --- B3R4
+        B3R5{{"Contre-salve<br/>1 pt"}}:::key
+        B3R4 --- B3R5
+        B3R6A["① Riposte automatique<br/>1 pt"]:::option
+        B3R6B["② Production en série<br/>1 pt"]:::option
+        B3R5 --- B3R6A
+        B3R5 --- B3R6B
+        B3G6(["🔒 12 points dans l'arbre"]):::gate
+        B3R6A --- B3G6
+        B3R6B --- B3G6
+        B3R7("Portée d'impulsion<br/>3 pts"):::rank
+        B3G6 --- B3R7
+        B3R8{{"Silo lunaire<br/>1 pt"}}:::key
+        B3R7 --- B3R8
+        B3R9[["✦ Pluie d'acier<br/>ultime"]]:::ultimate
+        B3R8 --- B3R9
+    end
+    subgraph B2[" "]
+        B2H["RELÈVE<br/>Ce qui revient."]:::head
+        B2R1{{"Brancardiers<br/>1 pt"}}:::key
+        B2H --- B2R1
+        B2R2("Fonds de reconstruction<br/>3 pts"):::rank
+        B2R1 --- B2R2
+        B2R3A["① Sous le feu<br/>1 pt"]:::option
+        B2R3B["② Brancards rapides<br/>1 pt"]:::option
+        B2R2 --- B2R3A
+        B2R2 --- B2R3B
+        B2G3(["🔒 5 points dans l'arbre"]):::gate
+        B2R3A --- B2G3
+        B2R3B --- B2G3
+        B2R4("Ateliers de campagne<br/>3 pts"):::rank
+        B2G3 --- B2R4
+        B2R5{{"Récupération du matériel<br/>1 pt"}}:::key
+        B2R4 --- B2R5
+        B2R6A["① Reconstruction express<br/>1 pt"]:::option
+        B2R6B["② Rappel des réservistes<br/>1 pt"]:::option
+        B2R5 --- B2R6A
+        B2R5 --- B2R6B
+        B2G6(["🔒 12 points dans l'arbre"]):::gate
+        B2R6A --- B2G6
+        B2R6B --- B2G6
+        B2R7("Caisse de guerre<br/>3 pts"):::rank
+        B2G6 --- B2R7
+        B2R8{{"Les dômes d'abord<br/>1 pt"}}:::key
+        B2R7 --- B2R8
+        B2R9[["✦ Ligne reformée<br/>ultime"]]:::ultimate
+        B2R8 --- B2R9
+    end
+    subgraph B1[" "]
+        B1H["MURAILLE<br/>Ce qui tient debout."]:::head
+        B1R1{{"Béton armé<br/>1 pt"}}:::key
+        B1H --- B1R1
+        B1R2("Pointeurs<br/>3 pts"):::rank
+        B1R1 --- B1R2
+        B1R3A["① Pièces lourdes<br/>1 pt"]:::option
+        B1R3B["② Rideau léger<br/>1 pt"]:::option
+        B1R2 --- B1R3A
+        B1R2 --- B1R3B
+        B1G3(["🔒 5 points dans l'arbre"]):::gate
+        B1R3A --- B1G3
+        B1R3B --- B1G3
+        B1R4("Contre-batterie<br/>3 pts"):::rank
+        B1G3 --- B1R4
+        B1R5{{"Branle-bas de combat<br/>1 pt"}}:::key
+        B1R4 --- B1R5
+        B1R6A["① Abri souterrain<br/>1 pt"]:::option
+        B1R6B["② Prise de guerre<br/>1 pt"]:::option
+        B1R5 --- B1R6A
+        B1R5 --- B1R6B
+        B1G6(["🔒 12 points dans l'arbre"]):::gate
+        B1R6A --- B1G6
+        B1R6B --- B1G6
+        B1R7("Premier rang<br/>3 pts"):::rank
+        B1G6 --- B1R7
+        B1R8{{"La lune tient<br/>1 pt"}}:::key
+        B1R7 --- B1R8
+        B1R9[["✦ Dernière salve<br/>ultime"]]:::ultimate
+        B1R8 --- B1R9
+    end
+    classDef head fill:#111b2e,stroke:#2a3852,color:#e6ecf7,stroke-width:1px;
+    classDef key fill:#1c1606,stroke:#f5c542,color:#fde9a8,stroke-width:2px;
+    classDef rank fill:#0e1a30,stroke:#4f8cff,color:#e6ecf7,stroke-width:2px;
+    classDef option fill:#101827,stroke:#46546e,color:#cfd8e6,stroke-width:1px;
+    classDef gate fill:#241b06,stroke:#c99a2e,color:#f5c542,stroke-width:1px;
+    classDef ultimate fill:#1a1630,stroke:#e2c068,color:#fff6d8,stroke-width:3px;
+    linkStyle default stroke:#33415c,stroke-width:2px,fill:none;
+    style B1 fill:#0b1322,stroke:#1e2a40,stroke-width:1px;
+    style B2 fill:#0b1322,stroke:#1e2a40,stroke-width:1px;
+    style B3 fill:#0b1322,stroke:#1e2a40,stroke-width:1px;
+```
+
 ### Muraille
 
 *Ce qui tient debout.*

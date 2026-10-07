@@ -41,6 +41,117 @@ updated: "2026-10-06T10:29:46.081Z"
 
 ## Données détaillées
 
+### Vue d'ensemble de l'arbre
+
+Les trois branches de l'arbre de classe, de la rangée 1 à l'ultime. Le détail de chaque talent est dans les tableaux ci-dessous.
+
+```mermaid
+graph TB
+    subgraph B3[" "]
+        B3H["FRET<br/>Tout ramener, rien perdre"]:::head
+        B3R1{{"Fret retour<br/>1 pt"}}:::key
+        B3H --- B3R1
+        B3R2("Arrimage<br/>3 pts"):::rank
+        B3R1 --- B3R2
+        B3R3A["① Livraison groupée<br/>1 pt"]:::option
+        B3R3B["② Cales sans fond<br/>1 pt"]:::option
+        B3R2 --- B3R3A
+        B3R2 --- B3R3B
+        B3G3(["🔒 5 points dans l'arbre"]):::gate
+        B3R3A --- B3G3
+        B3R3B --- B3G3
+        B3R4("Coques civiles<br/>3 pts"):::rank
+        B3G3 --- B3R4
+        B3R5{{"Double fond<br/>1 pt"}}:::key
+        B3R4 --- B3R5
+        B3R6A["① Double fond en vol<br/>1 pt"]:::option
+        B3R6B["② Double fond partagé<br/>1 pt"]:::option
+        B3R5 --- B3R6A
+        B3R5 --- B3R6B
+        B3G6(["🔒 12 points dans l'arbre"]):::gate
+        B3R6A --- B3G6
+        B3R6B --- B3G6
+        B3R7("Cales préparées<br/>3 pts"):::rank
+        B3G6 --- B3R7
+        B3R8{{"Fret assuré<br/>1 pt"}}:::key
+        B3R7 --- B3R8
+        B3R9[["✦ Razzia<br/>ultime"]]:::ultimate
+        B3R8 --- B3R9
+    end
+    subgraph B2[" "]
+        B2H["LIGNES<br/>Toutes vos planètes, une seule base"]:::head
+        B2R1{{"Navettes<br/>1 pt"}}:::key
+        B2H --- B2R1
+        B2R2("Soute à carburant<br/>3 pts"):::rank
+        B2R1 --- B2R2
+        B2R3A["① Plein à l'arrivée<br/>1 pt"]:::option
+        B2R3B["② Réservoir rendu<br/>1 pt"]:::option
+        B2R2 --- B2R3A
+        B2R2 --- B2R3B
+        B2G3(["🔒 5 points dans l'arbre"]):::gate
+        B2R3A --- B2G3
+        B2R3B --- B2G3
+        B2R4("Portes chaudes<br/>3 pts"):::rank
+        B2G3 --- B2R4
+        B2R5{{"Changement de cap<br/>1 pt"}}:::key
+        B2R4 --- B2R5
+        B2R6A["① Porte double<br/>1 pt"]:::option
+        B2R6B["② Pont aérien<br/>1 pt"]:::option
+        B2R5 --- B2R6A
+        B2R5 --- B2R6B
+        B2G6(["🔒 12 points dans l'arbre"]):::gate
+        B2R6A --- B2G6
+        B2R6B --- B2G6
+        B2R7("Navettes en plus<br/>3 pts"):::rank
+        B2G6 --- B2R7
+        B2R8{{"Ascenseur orbital<br/>1 pt"}}:::key
+        B2R7 --- B2R8
+        B2R9[["✦ Port d'attache<br/>ultime"]]:::ultimate
+        B2R8 --- B2R9
+    end
+    subgraph B1[" "]
+        B1H["POUSSÉE<br/>Arriver quand on l'a décidé"]:::head
+        B1R1{{"Postcombustion<br/>1 pt"}}:::key
+        B1H --- B1R1
+        B1R2("Réservoirs d'appoint<br/>3 pts"):::rank
+        B1R1 --- B1R2
+        B1R3A["① Route marchande<br/>1 pt"]:::option
+        B1R3B["② Route de chasse<br/>1 pt"]:::option
+        B1R2 --- B1R3A
+        B1R2 --- B1R3B
+        B1G3(["🔒 5 points dans l'arbre"]):::gate
+        B1R3A --- B1G3
+        B1R3B --- B1G3
+        B1R4("Postcombustion poussée<br/>3 pts"):::rank
+        B1G3 --- B1R4
+        B1R5{{"Formation serrée<br/>1 pt"}}:::key
+        B1R4 --- B1R5
+        B1R6A["① Relance<br/>1 pt"]:::option
+        B1R6B["② Mise en attente<br/>1 pt"]:::option
+        B1R5 --- B1R6A
+        B1R5 --- B1R6B
+        B1G6(["🔒 12 points dans l'arbre"]):::gate
+        B1R6A --- B1G6
+        B1R6B --- B1G6
+        B1R7("Sillage<br/>3 pts"):::rank
+        B1G6 --- B1R7
+        B1R8{{"Décollage d'urgence<br/>1 pt"}}:::key
+        B1R7 --- B1R8
+        B1R9[["✦ Saut de retour<br/>ultime"]]:::ultimate
+        B1R8 --- B1R9
+    end
+    classDef head fill:#111b2e,stroke:#2a3852,color:#e6ecf7,stroke-width:1px;
+    classDef key fill:#1c1606,stroke:#f5c542,color:#fde9a8,stroke-width:2px;
+    classDef rank fill:#0e1a30,stroke:#4f8cff,color:#e6ecf7,stroke-width:2px;
+    classDef option fill:#101827,stroke:#46546e,color:#cfd8e6,stroke-width:1px;
+    classDef gate fill:#241b06,stroke:#c99a2e,color:#f5c542,stroke-width:1px;
+    classDef ultimate fill:#1a1630,stroke:#e2c068,color:#fff6d8,stroke-width:3px;
+    linkStyle default stroke:#33415c,stroke-width:2px,fill:none;
+    style B1 fill:#0b1322,stroke:#1e2a40,stroke-width:1px;
+    style B2 fill:#0b1322,stroke:#1e2a40,stroke-width:1px;
+    style B3 fill:#0b1322,stroke:#1e2a40,stroke-width:1px;
+```
+
 ### Poussée : « Arriver quand on l'a décidé »
 
 | Rangée | Type | Nœud | Effet (exemple) | Valeur |

@@ -46,6 +46,117 @@ updated: "2026-10-06T10:29:39.722Z"
 
 ## Données détaillées
 
+### Vue d'ensemble de l'arbre
+
+Les trois branches de l'arbre de classe, de la rangée 1 à l'ultime. Le détail de chaque talent est dans les tableaux ci-dessous.
+
+```mermaid
+graph TB
+    subgraph B3[" "]
+        B3H["REGISTRE<br/>Se relever plus vite qu'on ne tombe."]:::head
+        B3R1{{"Registre des pertes<br/>1 pt"}}:::key
+        B3H --- B3R1
+        B3R2("Plans conservés<br/>3 pts"):::rank
+        B3R1 --- B3R2
+        B3R3A["① Relève éclair<br/>1 pt"]:::option
+        B3R3B["② Longue mémoire<br/>1 pt"]:::option
+        B3R2 --- B3R3A
+        B3R2 --- B3R3B
+        B3G3(["🔒 5 points dans l'arbre"]):::gate
+        B3R3A --- B3G3
+        B3R3B --- B3G3
+        B3R4("Chaînes de relève<br/>3 pts"):::rank
+        B3G3 --- B3R4
+        B3R5{{"Indemnité<br/>1 pt"}}:::key
+        B3R4 --- B3R5
+        B3R6A["① Retour au front<br/>1 pt"]:::option
+        B3R6B["② Remise de guerre<br/>1 pt"]:::option
+        B3R5 --- B3R6A
+        B3R5 --- B3R6B
+        B3G6(["🔒 12 points dans l'arbre"]):::gate
+        B3R6A --- B3G6
+        B3R6B --- B3G6
+        B3R7("Fonds de guerre<br/>3 pts"):::rank
+        B3G6 --- B3R7
+        B3R8{{"Leçons de la défaite<br/>1 pt"}}:::key
+        B3R7 --- B3R8
+        B3R9[["✦ Chantier de relève<br/>ultime"]]:::ultimate
+        B3R8 --- B3R9
+    end
+    subgraph B2[" "]
+        B2H["ÉPAVE<br/>Arriver le premier sur ce qui flotte."]:::head
+        B2R1{{"Ferrailleur<br/>1 pt"}}:::key
+        B2H --- B2R1
+        B2R2("Radar d'épaves<br/>3 pts"):::rank
+        B2R1 --- B2R2
+        B2R3A["① Charognard<br/>1 pt"]:::option
+        B2R3B["② Course aux épaves<br/>1 pt"]:::option
+        B2R2 --- B2R3A
+        B2R2 --- B2R3B
+        B2G3(["🔒 5 points dans l'arbre"]):::gate
+        B2R3A --- B2G3
+        B2R3B --- B2G3
+        B2R4("Tri des métaux<br/>3 pts"):::rank
+        B2G3 --- B2R4
+        B2R5{{"Alerte d'épave<br/>1 pt"}}:::key
+        B2R4 --- B2R5
+        B2R6A["① Garnison de récupération<br/>1 pt"]:::option
+        B2R6B["② Épaves fraîches<br/>1 pt"]:::option
+        B2R5 --- B2R6A
+        B2R5 --- B2R6B
+        B2G6(["🔒 12 points dans l'arbre"]):::gate
+        B2R6A --- B2G6
+        B2R6B --- B2G6
+        B2R7("Équipe d'astreinte<br/>3 pts"):::rank
+        B2G6 --- B2R7
+        B2R8{{"Ramasse-tout<br/>1 pt"}}:::key
+        B2R7 --- B2R8
+        B2R9[["✦ Scellés<br/>ultime"]]:::ultimate
+        B2R8 --- B2R9
+    end
+    subgraph B1[" "]
+        B1H["MÉMOIRE<br/>Ce que d'autres ont déjà trouvé."]:::head
+        B1R1{{"Niveaux connus<br/>1 pt"}}:::key
+        B1H --- B1R1
+        B1R2("Redécouverte<br/>3 pts"):::rank
+        B1R1 --- B1R2
+        B1R3A["① Bibliothèque d'alliance<br/>1 pt"]:::option
+        B1R3B["② Bibliothèque publique<br/>1 pt"]:::option
+        B1R2 --- B1R3A
+        B1R2 --- B1R3B
+        B1G3(["🔒 5 points dans l'arbre"]):::gate
+        B1R3A --- B1G3
+        B1R3B --- B1G3
+        B1R4("Fonds d'archives<br/>3 pts"):::rank
+        B1G3 --- B1R4
+        B1R5{{"Élan<br/>1 pt"}}:::key
+        B1R4 --- B1R5
+        B1R6A["① Retard comblé<br/>1 pt"]:::option
+        B1R6B["② Au coude à coude<br/>1 pt"]:::option
+        B1R5 --- B1R6A
+        B1R5 --- B1R6B
+        B1G6(["🔒 12 points dans l'arbre"]):::gate
+        B1R6A --- B1G6
+        B1R6B --- B1G6
+        B1R7("Lancée<br/>3 pts"):::rank
+        B1G6 --- B1R7
+        B1R8{{"Mémoire vive<br/>1 pt"}}:::key
+        B1R7 --- B1R8
+        B1R9[["✦ Bibliothèque universelle<br/>ultime"]]:::ultimate
+        B1R8 --- B1R9
+    end
+    classDef head fill:#111b2e,stroke:#2a3852,color:#e6ecf7,stroke-width:1px;
+    classDef key fill:#1c1606,stroke:#f5c542,color:#fde9a8,stroke-width:2px;
+    classDef rank fill:#0e1a30,stroke:#4f8cff,color:#e6ecf7,stroke-width:2px;
+    classDef option fill:#101827,stroke:#46546e,color:#cfd8e6,stroke-width:1px;
+    classDef gate fill:#241b06,stroke:#c99a2e,color:#f5c542,stroke-width:1px;
+    classDef ultimate fill:#1a1630,stroke:#e2c068,color:#fff6d8,stroke-width:3px;
+    linkStyle default stroke:#33415c,stroke-width:2px,fill:none;
+    style B1 fill:#0b1322,stroke:#1e2a40,stroke-width:1px;
+    style B2 fill:#0b1322,stroke:#1e2a40,stroke-width:1px;
+    style B3 fill:#0b1322,stroke:#1e2a40,stroke-width:1px;
+```
+
 Types de rangée : *clé* (1 point), *3 rangs*, *choix* (un point, option A ou B), *ultime*.
 
 ### Mémoire : « Ce que d'autres ont déjà trouvé. »

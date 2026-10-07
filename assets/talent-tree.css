@@ -1,0 +1,28 @@
+/* Arbres de talents (diagrammes Mermaid générés par tools/talent_diagrams.py).
+   Reprend la DA de l'écran Talents du jeu : fond bleu nuit, cartes de branche, or pour les clés et les portes,
+   bleu pour les talents à rangs. Sans cette feuille, les couleurs du diagramme suffisent à un rendu lisible.
+   À coller dans les scripts CSS d'une page, ou dans le CSS du thème (Administration > Thème) pour tout le wiki. */
+
+.mermaid svg { font-family: 'Quicksand', 'Nunito', 'Segoe UI', sans-serif !important; height: auto !important; }
+
+/* Cartes de branche */
+.mermaid .cluster rect {
+  fill: #0b1322 !important; stroke: #1e2a40 !important; stroke-width: 1px !important;
+  rx: 14px; ry: 14px;
+}
+.mermaid .cluster .label { display: none; }
+.mermaid .node.head rect { rx: 10px; ry: 10px; }
+.mermaid .node.head .label { font-weight: 700; letter-spacing: .04em; }
+
+/* Liens : la ligne verticale qui traverse la branche */
+.mermaid .edgePath .path { stroke: #33415c !important; stroke-width: 2px !important; fill: none !important; }
+
+/* Nœuds */
+.mermaid .node .label, .mermaid .node .label div { line-height: 1.3; font-size: 13px; }
+.mermaid .node.key polygon { filter: drop-shadow(0 0 6px rgba(245, 197, 66, .35)); }
+.mermaid .node.rank rect { rx: 18px; ry: 18px; filter: drop-shadow(0 0 5px rgba(79, 140, 255, .35)); }
+.mermaid .node.option rect { rx: 8px; ry: 8px; stroke-dasharray: 4 3; }
+.mermaid .node.gate rect { filter: drop-shadow(0 0 4px rgba(201, 154, 46, .4)); }
+.mermaid .node.gate .label { font-size: 12px; font-weight: 600; }
+.mermaid .node.ultimate polygon, .mermaid .node.ultimate rect { filter: drop-shadow(0 0 10px rgba(226, 192, 104, .55)); }
+.mermaid .node.ultimate .label { font-weight: 700; }
