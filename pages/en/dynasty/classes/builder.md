@@ -38,6 +38,117 @@ A planet with a Mineral Excavator at level 20 (4,036 metal per hour; 4,662 at le
 
 ## Detailed data
 
+### Tree at a glance
+
+The three branches of the class tree, from row 1 to the ultimate. Each talent is detailed in the tables.
+
+```mermaid
+graph TB
+    subgraph B3[" "]
+        B3H["FOUNDRY<br/>Pay less, keep what you set aside."]:::head
+        B3R1{{"Known plans<br/>1 pt"}}:::key
+        B3H --- B3R1
+        B3R2("Master stroke<br/>3 pts"):::rank
+        B3R1 --- B3R2
+        B3R3A["① Tight quote<br/>1 pt"]:::option
+        B3R3B["② Bulk buying<br/>1 pt"]:::option
+        B3R2 --- B3R3A
+        B3R2 --- B3R3B
+        B3G3(["🔒 5 points in the tree"]):::gate
+        B3R3A --- B3G3
+        B3R3B --- B3G3
+        B3R4("Yard archives<br/>3 pts"):::rank
+        B3G3 --- B3R4
+        B3R5{{"Down payment<br/>1 pt"}}:::key
+        B3R4 --- B3R5
+        B3R6A["① Yard credit<br/>1 pt"]:::option
+        B3R6B["② Metal payment<br/>1 pt"]:::option
+        B3R5 --- B3R6A
+        B3R5 --- B3R6B
+        B3G6(["🔒 12 points in the tree"]):::gate
+        B3R6A --- B3G6
+        B3R6B --- B3G6
+        B3R7("Yard vault<br/>3 pts"):::rank
+        B3G6 --- B3R7
+        B3R8{{"Alliance plans<br/>1 pt"}}:::key
+        B3R7 --- B3R8
+        B3R9[["✦ State order<br/>ultimate"]]:::ultimate
+        B3R8 --- B3R9
+    end
+    subgraph B2[" "]
+        B2H["YARD<br/>The yard that works while you sleep."]:::head
+        B2R1{{"The yard never sleeps<br/>1 pt"}}:::key
+        B2H --- B2R1
+        B2R2("Night shifts<br/>3 pts"):::rank
+        B2R1 --- B2R2
+        B2R3A["① Continuous pour<br/>1 pt"]:::option
+        B2R3B["② Poured foundations<br/>1 pt"]:::option
+        B2R2 --- B2R3A
+        B2R2 --- B2R3B
+        B2G3(["🔒 5 points in the tree"]):::gate
+        B2R3A --- B2G3
+        B2R3B --- B2G3
+        B2R4("Catch-up<br/>3 pts"):::rank
+        B2G3 --- B2R4
+        B2R5{{"Night shipyard<br/>1 pt"}}:::key
+        B2R4 --- B2R5
+        B2R6A["① Hour bank<br/>1 pt"]:::option
+        B2R6B["② Automatic relay<br/>1 pt"]:::option
+        B2R5 --- B2R6A
+        B2R5 --- B2R6B
+        B2G6(["🔒 12 points in the tree"]):::gate
+        B2R6A --- B2G6
+        B2R6B --- B2G6
+        B2R7("Head start plans<br/>3 pts"):::rank
+        B2G6 --- B2R7
+        B2R8{{"Shared head start<br/>1 pt"}}:::key
+        B2R7 --- B2R8
+        B2R9[["✦ All-out push<br/>ultimate"]]:::ultimate
+        B2R8 --- B2R9
+    end
+    subgraph B1[" "]
+        B1H["LODE<br/>Mines that pay more than their level."]:::head
+        B1R1{{"First pour<br/>1 pt"}}:::key
+        B1H --- B1R1
+        B1R2("Great pours<br/>3 pts"):::rank
+        B1R1 --- B1R2
+        B1R3A["① Master shaft<br/>1 pt"]:::option
+        B1R3B["② Twin mines<br/>1 pt"]:::option
+        B1R2 --- B1R3A
+        B1R2 --- B1R3B
+        B1G3(["🔒 5 points in the tree"]):::gate
+        B1R3A --- B1G3
+        B1R3B --- B1G3
+        B1R4("Prospecting<br/>3 pts"):::rank
+        B1G3 --- B1R4
+        B1R5{{"Mother lode<br/>1 pt"}}:::key
+        B1R4 --- B1R5
+        B1R6A["① Chosen lode<br/>1 pt"]:::option
+        B1R6B["② Double lode<br/>1 pt"]:::option
+        B1R5 --- B1R6A
+        B1R5 --- B1R6B
+        B1G6(["🔒 12 points in the tree"]):::gate
+        B1R6A --- B1G6
+        B1R6B --- B1G6
+        B1R7("Galleries<br/>3 pts"):::rank
+        B1G6 --- B1R7
+        B1R8{{"Nothing spills<br/>1 pt"}}:::key
+        B1R7 --- B1R8
+        B1R9[["✦ Core sampling<br/>ultimate"]]:::ultimate
+        B1R8 --- B1R9
+    end
+    classDef head fill:#111b2e,stroke:#2a3852,color:#e6ecf7,stroke-width:1px;
+    classDef key fill:#1c1606,stroke:#f5c542,color:#fde9a8,stroke-width:2px;
+    classDef rank fill:#0e1a30,stroke:#4f8cff,color:#e6ecf7,stroke-width:2px;
+    classDef option fill:#101827,stroke:#46546e,color:#cfd8e6,stroke-width:1px;
+    classDef gate fill:#241b06,stroke:#c99a2e,color:#f5c542,stroke-width:1px;
+    classDef ultimate fill:#1a1630,stroke:#e2c068,color:#fff6d8,stroke-width:3px;
+    linkStyle default stroke:#33415c,stroke-width:2px,fill:none;
+    style B1 fill:#0b1322,stroke:#1e2a40,stroke-width:1px;
+    style B2 fill:#0b1322,stroke:#1e2a40,stroke-width:1px;
+    style B3 fill:#0b1322,stroke:#1e2a40,stroke-width:1px;
+```
+
 ### Lode: "Mines that pay more than their level."
 
 | Row | Type | Talent | Effect | Value |

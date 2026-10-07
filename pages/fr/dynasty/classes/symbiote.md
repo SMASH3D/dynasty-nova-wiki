@@ -50,6 +50,117 @@ updated: "2026-10-06T10:29:52.515Z"
 
 ## Données détaillées
 
+### Vue d'ensemble de l'arbre
+
+Les trois branches de l'arbre de classe, de la rangée 1 à l'ultime. Le détail de chaque talent est dans les tableaux ci-dessous.
+
+```mermaid
+graph TB
+    subgraph B3[" "]
+        B3H["HÔTE<br/>Faire vivre un monde avec ce qu'il a."]:::head
+        B3R1{{"Jeune pousse<br/>1 pt"}}:::key
+        B3H --- B3R1
+        B3R2("Sève montante<br/>3 pts"):::rank
+        B3R1 --- B3R2
+        B3R3A["① Petits mondes<br/>1 pt"]:::option
+        B3R3B["② Géants<br/>1 pt"]:::option
+        B3R2 --- B3R3A
+        B3R2 --- B3R3B
+        B3G3(["🔒 5 points dans l'arbre"]):::gate
+        B3R3A --- B3G3
+        B3R3B --- B3G3
+        B3R4("Longue friche<br/>3 pts"):::rank
+        B3G3 --- B3R4
+        B3R5{{"Voisinage<br/>1 pt"}}:::key
+        B3R4 --- B3R5
+        B3R6A["① Foule<br/>1 pt"]:::option
+        B3R6B["② Solitude<br/>1 pt"]:::option
+        B3R5 --- B3R6A
+        B3R5 --- B3R6B
+        B3G6(["🔒 12 points dans l'arbre"]):::gate
+        B3R6A --- B3G6
+        B3R6B --- B3G6
+        B3R7("Marées<br/>3 pts"):::rank
+        B3G6 --- B3R7
+        B3R8{{"Repousse<br/>1 pt"}}:::key
+        B3R7 --- B3R8
+        B3R9[["✦ Friche éternelle<br/>ultime"]]:::ultimate
+        B3R8 --- B3R9
+    end
+    subgraph B2[" "]
+        B2H["CROISSANCE<br/>Le bon endroit, la bonne taille."]:::head
+        B2R1{{"Racines<br/>1 pt"}}:::key
+        B2H --- B2R1
+        B2R2("Terre natale<br/>3 pts"):::rank
+        B2R1 --- B2R2
+        B2R3A["① Filon de métal<br/>1 pt"]:::option
+        B2R3B["② Veine de cristal<br/>1 pt"]:::option
+        B2R2 --- B2R3A
+        B2R2 --- B2R3B
+        B2G3(["🔒 5 points dans l'arbre"]):::gate
+        B2R3A --- B2G3
+        B2R3B --- B2G3
+        B2R4("Lunes creusées<br/>3 pts"):::rank
+        B2G3 --- B2R4
+        B2R5{{"Marcottage<br/>1 pt"}}:::key
+        B2R4 --- B2R5
+        B2R6A["① Terrain gagné<br/>1 pt"]:::option
+        B2R6B["② Lune pleine<br/>1 pt"]:::option
+        B2R5 --- B2R6A
+        B2R5 --- B2R6B
+        B2G6(["🔒 12 points dans l'arbre"]):::gate
+        B2R6A --- B2G6
+        B2R6B --- B2G6
+        B2R7("Sol vivant<br/>3 pts"):::rank
+        B2G6 --- B2R7
+        B2R8{{"Terraformeur vivant<br/>1 pt"}}:::key
+        B2R7 --- B2R8
+        B2R9[["✦ Transplantation<br/>ultime"]]:::ultimate
+        B2R8 --- B2R9
+    end
+    subgraph B1[" "]
+        B1H["THERMIE<br/>La planète décide, vous l'écoutez."]:::head
+        B1R1{{"Sang-froid<br/>1 pt"}}:::key
+        B1H --- B1R1
+        B1R2("Climatiseur planétaire<br/>3 pts"):::rank
+        B1R1 --- B1R2
+        B1R3A["① Pôle froid<br/>1 pt"]:::option
+        B1R3B["② Pôle chaud<br/>1 pt"]:::option
+        B1R2 --- B1R3A
+        B1R2 --- B1R3B
+        B1G3(["🔒 5 points dans l'arbre"]):::gate
+        B1R3A --- B1G3
+        B1R3B --- B1G3
+        B1R4("Peau de lumière<br/>3 pts"):::rank
+        B1G3 --- B1R4
+        B1R5{{"La saison longue<br/>1 pt"}}:::key
+        B1R4 --- B1R5
+        B1R6A["① Racines profondes<br/>1 pt"]:::option
+        B1R6B["② Soleil d'hiver<br/>1 pt"]:::option
+        B1R5 --- B1R6A
+        B1R5 --- B1R6B
+        B1G6(["🔒 12 points dans l'arbre"]):::gate
+        B1R6A --- B1G6
+        B1R6B --- B1G6
+        B1R7("Écoute du climat<br/>3 pts"):::rank
+        B1G6 --- B1R7
+        B1R8{{"Satellites d'altitude<br/>1 pt"}}:::key
+        B1R7 --- B1R8
+        B1R9[["✦ Les deux saisons<br/>ultime"]]:::ultimate
+        B1R8 --- B1R9
+    end
+    classDef head fill:#111b2e,stroke:#2a3852,color:#e6ecf7,stroke-width:1px;
+    classDef key fill:#1c1606,stroke:#f5c542,color:#fde9a8,stroke-width:2px;
+    classDef rank fill:#0e1a30,stroke:#4f8cff,color:#e6ecf7,stroke-width:2px;
+    classDef option fill:#101827,stroke:#46546e,color:#cfd8e6,stroke-width:1px;
+    classDef gate fill:#241b06,stroke:#c99a2e,color:#f5c542,stroke-width:1px;
+    classDef ultimate fill:#1a1630,stroke:#e2c068,color:#fff6d8,stroke-width:3px;
+    linkStyle default stroke:#33415c,stroke-width:2px,fill:none;
+    style B1 fill:#0b1322,stroke:#1e2a40,stroke-width:1px;
+    style B2 fill:#0b1322,stroke:#1e2a40,stroke-width:1px;
+    style B3 fill:#0b1322,stroke:#1e2a40,stroke-width:1px;
+```
+
 ### Thermie
 
 *La planète décide, vous l'écoutez.*

@@ -99,6 +99,135 @@ Branche pleine : vols **30 %** plus rapides et fret **+25 %** (option A), ou vol
 
 ## Données détaillées
 
+### Vue d'ensemble de l'arbre
+
+Les trois branches de l'arbre commun, de la rangée 1 à l'ultime. Le détail de chaque talent est dans les tableaux de chaque branche.
+
+```mermaid
+graph TB
+    subgraph B3[" "]
+        B3H["LOGISTIQUE<br/>Plus loin, plus vite, plus chargé."]:::head
+        B3R1("Réacteurs réglés<br/>3 pts"):::rank
+        B3H --- B3R1
+        B3R2("Économiseurs<br/>5 pts"):::rank
+        B3R1 --- B3R2
+        B3R3A["① Cales élargies<br/>1 pt"]:::option
+        B3R3B["② Moteurs poussés<br/>1 pt"]:::option
+        B3R2 --- B3R3A
+        B3R2 --- B3R3B
+        B3G3(["🔒 8 points dans l'arbre"]):::gate
+        B3R3A --- B3G3
+        B3R3B --- B3G3
+        B3R4("Soutes modulaires<br/>5 pts"):::rank
+        B3G3 --- B3R4
+        B3R5{{"Escadre supplémentaire<br/>1 pt"}}:::key
+        B3R4 --- B3R5
+        B3R6A["① Vent arrière<br/>1 pt"]:::option
+        B3R6B["② Liaisons internes<br/>1 pt"]:::option
+        B3R5 --- B3R6A
+        B3R5 --- B3R6B
+        B3G6(["🔒 20 points dans l'arbre"]):::gate
+        B3R6A --- B3G6
+        B3R6B --- B3G6
+        B3R7("Propulsion avancée<br/>5 pts"):::rank
+        B3G6 --- B3R7
+        B3R8{{"Chargement prioritaire<br/>1 pt"}}:::key
+        B3R7 --- B3R8
+        B3G8(["🔒 32 points dans l'arbre"]):::gate
+        B3R8 --- B3G8
+        B3R9("Ravitaillement<br/>5 pts"):::rank
+        B3G8 --- B3R9
+        B3R10[["✦ Grande flotte<br/>ultime"]]:::ultimate
+        B3R9 --- B3R10
+    end
+    subgraph B2[" "]
+        B2H["EXPLORATION<br/>Chercher plus vite, s'étendre plus loin."]:::head
+        B2R1("Méthode<br/>3 pts"):::rank
+        B2H --- B2R1
+        B2R2("Cartographes<br/>5 pts"):::rank
+        B2R1 --- B2R2
+        B2R3A["① Arche<br/>1 pt"]:::option
+        B2R3B["② Jeunes mondes<br/>1 pt"]:::option
+        B2R2 --- B2R3A
+        B2R2 --- B2R3B
+        B2G3(["🔒 8 points dans l'arbre"]):::gate
+        B2R3A --- B2G3
+        B2R3B --- B2G3
+        B2R4("Pillards d'abandonnés<br/>5 pts"):::rank
+        B2G3 --- B2R4
+        B2R5{{"Arpenteurs<br/>1 pt"}}:::key
+        B2R4 --- B2R5
+        B2R6A["① Expéditions<br/>1 pt"]:::option
+        B2R6B["② Astrométrie<br/>1 pt"]:::option
+        B2R5 --- B2R6A
+        B2R5 --- B2R6B
+        B2G6(["🔒 20 points dans l'arbre"]):::gate
+        B2R6A --- B2G6
+        B2R6B --- B2G6
+        B2R7("Comptoirs pionniers<br/>5 pts"):::rank
+        B2G6 --- B2R7
+        B2R8A["① Archives volées<br/>1 pt"]:::option
+        B2R8B["② Flair de prospecteur<br/>1 pt"]:::option
+        B2R7 --- B2R8A
+        B2R7 --- B2R8B
+        B2G8(["🔒 32 points dans l'arbre"]):::gate
+        B2R8A --- B2G8
+        B2R8B --- B2G8
+        B2R9("Pillage organisé<br/>5 pts"):::rank
+        B2G8 --- B2R9
+        B2R10[["✦ Second laboratoire<br/>ultime"]]:::ultimate
+        B2R9 --- B2R10
+    end
+    subgraph B1[" "]
+        B1H["PROSPÉRITÉ<br/>Ce que vos mondes produisent et bâtissent."]:::head
+        B1R1("Extraction<br/>3 pts"):::rank
+        B1H --- B1R1
+        B1R2("Grues automatisées<br/>5 pts"):::rank
+        B1R1 --- B1R2
+        B1R3A["① Entrepôts<br/>1 pt"]:::option
+        B1R3B["② Coffres enterrés<br/>1 pt"]:::option
+        B1R2 --- B1R3A
+        B1R2 --- B1R3B
+        B1G3(["🔒 8 points dans l'arbre"]):::gate
+        B1R3A --- B1G3
+        B1R3B --- B1G3
+        B1R4("Veines riches<br/>5 pts"):::rank
+        B1G3 --- B1R4
+        B1R5{{"Fonderie à plasma<br/>1 pt"}}:::key
+        B1R4 --- B1R5
+        B1R6A["① Réseau optimisé<br/>1 pt"]:::option
+        B1R6B["② Colonies prospères<br/>1 pt"]:::option
+        B1R5 --- B1R6A
+        B1R5 --- B1R6B
+        B1G6(["🔒 20 points dans l'arbre"]):::gate
+        B1R6A --- B1G6
+        B1R6B --- B1G6
+        B1R7("Ateliers<br/>5 pts"):::rank
+        B1G6 --- B1R7
+        B1R8A["① Pont de ressources<br/>1 pt"]:::option
+        B1R8B["② Stock de sécurité<br/>1 pt"]:::option
+        B1R7 --- B1R8A
+        B1R7 --- B1R8B
+        B1G8(["🔒 32 points dans l'arbre"]):::gate
+        B1R8A --- B1G8
+        B1R8B --- B1G8
+        B1R9("Chantiers de nuit<br/>5 pts"):::rank
+        B1G8 --- B1R9
+        B1R10[["✦ Âge d'or<br/>ultime"]]:::ultimate
+        B1R9 --- B1R10
+    end
+    classDef head fill:#111b2e,stroke:#2a3852,color:#e6ecf7,stroke-width:1px;
+    classDef key fill:#1c1606,stroke:#f5c542,color:#fde9a8,stroke-width:2px;
+    classDef rank fill:#0e1a30,stroke:#4f8cff,color:#e6ecf7,stroke-width:2px;
+    classDef option fill:#101827,stroke:#46546e,color:#cfd8e6,stroke-width:1px;
+    classDef gate fill:#241b06,stroke:#c99a2e,color:#f5c542,stroke-width:1px;
+    classDef ultimate fill:#1a1630,stroke:#e2c068,color:#fff6d8,stroke-width:3px;
+    linkStyle default stroke:#33415c,stroke-width:2px,fill:none;
+    style B1 fill:#0b1322,stroke:#1e2a40,stroke-width:1px;
+    style B2 fill:#0b1322,stroke:#1e2a40,stroke-width:1px;
+    style B3 fill:#0b1322,stroke:#1e2a40,stroke-width:1px;
+```
+
 ### Ce que 50 points achètent
 
 Aucun build ne prend tout : chacun choisit où va sa vitesse.

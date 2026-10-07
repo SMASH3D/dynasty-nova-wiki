@@ -48,6 +48,117 @@ Reference study: **Weapon Systems 10** (409,600 metal, 102,400 crystal), univers
 
 ## Detailed data
 
+### Tree at a glance
+
+The three branches of the class tree, from row 1 to the ultimate. Each talent is detailed in the tables.
+
+```mermaid
+graph TB
+    subgraph B3[" "]
+        B3H["PROTOTYPES<br/>One level ahead of everyone."]:::head
+        B3R1{{"Prototype<br/>1 pt"}}:::key
+        B3H --- B3R1
+        B3R2("Extended Trials<br/>3 pts"):::rank
+        B3R1 --- B3R2
+        B3R3A["① Combat Prototype<br/>1 pt"]:::option
+        B3R3B["② Green Light<br/>1 pt"]:::option
+        B3R2 --- B3R3A
+        B3R2 --- B3R3B
+        B3G3(["🔒 5 points in the tree"]):::gate
+        B3R3A --- B3G3
+        B3R3B --- B3G3
+        B3R4("Reverse Engineering<br/>3 pts"):::rank
+        B3G3 --- B3R4
+        B3R5{{"Double Prototype<br/>1 pt"}}:::key
+        B3R4 --- B3R5
+        B3R6A["① Patents<br/>1 pt"]:::option
+        B3R6B["② Test Bench<br/>1 pt"]:::option
+        B3R5 --- B3R6A
+        B3R5 --- B3R6B
+        B3G6(["🔒 12 points in the tree"]):::gate
+        B3R6A --- B3G6
+        B3R6B --- B3G6
+        B3R7("Spin-offs<br/>3 pts"):::rank
+        B3G6 --- B3R7
+        B3R8{{"Specialty<br/>1 pt"}}:::key
+        B3R7 --- B3R8
+        B3R9[["✦ Revolution<br/>ultimate"]]:::ultimate
+        B3R8 --- B3R9
+    end
+    subgraph B2[" "]
+        B2H["NETWORK<br/>Every colony is a laboratory."]:::head
+        B2R1{{"Uplink<br/>1 pt"}}:::key
+        B2H --- B2R1
+        B2R2("Field Labs<br/>3 pts"):::rank
+        B2R1 --- B2R2
+        B2R3A["① Distant Antenna<br/>1 pt"]:::option
+        B2R3B["② Mother Lab<br/>1 pt"]:::option
+        B2R2 --- B2R3A
+        B2R2 --- B2R3B
+        B2G3(["🔒 5 points in the tree"]):::gate
+        B2R3A --- B2G3
+        B2R3B --- B2G3
+        B2R4("Flat-Pack Benches<br/>3 pts"):::rank
+        B2G3 --- B2R4
+        B2R5{{"One More Lab<br/>1 pt"}}:::key
+        B2R4 --- B2R5
+        B2R6A["① Living Network<br/>1 pt"]:::option
+        B2R6B["② Shared Results<br/>1 pt"]:::option
+        B2R5 --- B2R6A
+        B2R5 --- B2R6B
+        B2G6(["🔒 12 points in the tree"]):::gate
+        B2R6A --- B2G6
+        B2R6B --- B2G6
+        B2R7("Study Grants<br/>3 pts"):::rank
+        B2G6 --- B2R7
+        B2R8{{"University Exchange<br/>1 pt"}}:::key
+        B2R7 --- B2R8
+        B2R9[["✦ Symposium<br/>ultimate"]]:::ultimate
+        B2R8 --- B2R9
+    end
+    subgraph B1[" "]
+        B1H["METHOD<br/>A study never waits."]:::head
+        B1R1{{"Unbroken Thread<br/>1 pt"}}:::key
+        B1H --- B1R1
+        B1R2("Flying Start<br/>3 pts"):::rank
+        B1R1 --- B1R2
+        B1R3A["① Night Watch<br/>1 pt"]:::option
+        B1R3B["② Kept Draft<br/>1 pt"]:::option
+        B1R2 --- B1R3A
+        B1R2 --- B1R3B
+        B1G3(["🔒 5 points in the tree"]):::gate
+        B1R3A --- B1G3
+        B1R3B --- B1G3
+        B1R4("Protocols<br/>3 pts"):::rank
+        B1G3 --- B1R4
+        B1R5{{"Flash of Genius<br/>1 pt"}}:::key
+        B1R4 --- B1R5
+        B1R6A["① Quick Wit<br/>1 pt"]:::option
+        B1R6B["② Reflex<br/>1 pt"]:::option
+        B1R5 --- B1R6A
+        B1R5 --- B1R6B
+        B1G6(["🔒 12 points in the tree"]):::gate
+        B1R6A --- B1G6
+        B1R6B --- B1G6
+        B1R7("Stroke of Genius<br/>3 pts"):::rank
+        B1G6 --- B1R7
+        B1R8{{"Inspiration<br/>1 pt"}}:::key
+        B1R7 --- B1R8
+        B1R9[["✦ Twin Laboratory<br/>ultimate"]]:::ultimate
+        B1R8 --- B1R9
+    end
+    classDef head fill:#111b2e,stroke:#2a3852,color:#e6ecf7,stroke-width:1px;
+    classDef key fill:#1c1606,stroke:#f5c542,color:#fde9a8,stroke-width:2px;
+    classDef rank fill:#0e1a30,stroke:#4f8cff,color:#e6ecf7,stroke-width:2px;
+    classDef option fill:#101827,stroke:#46546e,color:#cfd8e6,stroke-width:1px;
+    classDef gate fill:#241b06,stroke:#c99a2e,color:#f5c542,stroke-width:1px;
+    classDef ultimate fill:#1a1630,stroke:#e2c068,color:#fff6d8,stroke-width:3px;
+    linkStyle default stroke:#33415c,stroke-width:2px,fill:none;
+    style B1 fill:#0b1322,stroke:#1e2a40,stroke-width:1px;
+    style B2 fill:#0b1322,stroke:#1e2a40,stroke-width:1px;
+    style B3 fill:#0b1322,stroke:#1e2a40,stroke-width:1px;
+```
+
 Row types: *key* (1 point), *3 ranks*, *choice* (one point, option A or B), *ultimate*.
 
 ### Method: "A study never waits."

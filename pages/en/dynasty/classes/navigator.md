@@ -44,6 +44,117 @@ updated: "2026-10-06T10:30:19.530Z"
 
 ## Detailed data
 
+### Tree at a glance
+
+The three branches of the class tree, from row 1 to the ultimate. Each talent is detailed in the tables.
+
+```mermaid
+graph TB
+    subgraph B3[" "]
+        B3H["FREIGHT<br/>Bring it all back, lose nothing"]:::head
+        B3R1{{"Return Freight<br/>1 pt"}}:::key
+        B3H --- B3R1
+        B3R2("Stowage<br/>3 pts"):::rank
+        B3R1 --- B3R2
+        B3R3A["① Grouped Delivery<br/>1 pt"]:::option
+        B3R3B["② Bottomless Holds<br/>1 pt"]:::option
+        B3R2 --- B3R3A
+        B3R2 --- B3R3B
+        B3G3(["🔒 5 points in the tree"]):::gate
+        B3R3A --- B3G3
+        B3R3B --- B3G3
+        B3R4("Civil Hulls<br/>3 pts"):::rank
+        B3G3 --- B3R4
+        B3R5{{"False Bottom<br/>1 pt"}}:::key
+        B3R4 --- B3R5
+        B3R6A["① False Bottom in Flight<br/>1 pt"]:::option
+        B3R6B["② Shared False Bottom<br/>1 pt"]:::option
+        B3R5 --- B3R6A
+        B3R5 --- B3R6B
+        B3G6(["🔒 12 points in the tree"]):::gate
+        B3R6A --- B3G6
+        B3R6B --- B3G6
+        B3R7("Prepared Holds<br/>3 pts"):::rank
+        B3G6 --- B3R7
+        B3R8{{"Insured Freight<br/>1 pt"}}:::key
+        B3R7 --- B3R8
+        B3R9[["✦ Razzia<br/>ultimate"]]:::ultimate
+        B3R8 --- B3R9
+    end
+    subgraph B2[" "]
+        B2H["LINES<br/>All your planets, one single base"]:::head
+        B2R1{{"Shuttles<br/>1 pt"}}:::key
+        B2H --- B2R1
+        B2R2("Fuel Hold<br/>3 pts"):::rank
+        B2R1 --- B2R2
+        B2R3A["① Fuel on Arrival<br/>1 pt"]:::option
+        B2R3B["② Fuel Returned<br/>1 pt"]:::option
+        B2R2 --- B2R3A
+        B2R2 --- B2R3B
+        B2G3(["🔒 5 points in the tree"]):::gate
+        B2R3A --- B2G3
+        B2R3B --- B2G3
+        B2R4("Hot Gates<br/>3 pts"):::rank
+        B2G3 --- B2R4
+        B2R5{{"Change of Course<br/>1 pt"}}:::key
+        B2R4 --- B2R5
+        B2R6A["① Double Gate<br/>1 pt"]:::option
+        B2R6B["② Airlift<br/>1 pt"]:::option
+        B2R5 --- B2R6A
+        B2R5 --- B2R6B
+        B2G6(["🔒 12 points in the tree"]):::gate
+        B2R6A --- B2G6
+        B2R6B --- B2G6
+        B2R7("More Shuttles<br/>3 pts"):::rank
+        B2G6 --- B2R7
+        B2R8{{"Orbital Lift<br/>1 pt"}}:::key
+        B2R7 --- B2R8
+        B2R9[["✦ Home Port<br/>ultimate"]]:::ultimate
+        B2R8 --- B2R9
+    end
+    subgraph B1[" "]
+        B1H["THRUST<br/>Arrive when you decided to"]:::head
+        B1R1{{"Afterburner<br/>1 pt"}}:::key
+        B1H --- B1R1
+        B1R2("Reserve Tanks<br/>3 pts"):::rank
+        B1R1 --- B1R2
+        B1R3A["① Trade Route<br/>1 pt"]:::option
+        B1R3B["② Hunting Route<br/>1 pt"]:::option
+        B1R2 --- B1R3A
+        B1R2 --- B1R3B
+        B1G3(["🔒 5 points in the tree"]):::gate
+        B1R3A --- B1G3
+        B1R3B --- B1G3
+        B1R4("Full Afterburner<br/>3 pts"):::rank
+        B1G3 --- B1R4
+        B1R5{{"Tight Formation<br/>1 pt"}}:::key
+        B1R4 --- B1R5
+        B1R6A["① Relaunch<br/>1 pt"]:::option
+        B1R6B["② Holding Pattern<br/>1 pt"]:::option
+        B1R5 --- B1R6A
+        B1R5 --- B1R6B
+        B1G6(["🔒 12 points in the tree"]):::gate
+        B1R6A --- B1G6
+        B1R6B --- B1G6
+        B1R7("Slipstream<br/>3 pts"):::rank
+        B1G6 --- B1R7
+        B1R8{{"Emergency Takeoff<br/>1 pt"}}:::key
+        B1R7 --- B1R8
+        B1R9[["✦ Return Jump<br/>ultimate"]]:::ultimate
+        B1R8 --- B1R9
+    end
+    classDef head fill:#111b2e,stroke:#2a3852,color:#e6ecf7,stroke-width:1px;
+    classDef key fill:#1c1606,stroke:#f5c542,color:#fde9a8,stroke-width:2px;
+    classDef rank fill:#0e1a30,stroke:#4f8cff,color:#e6ecf7,stroke-width:2px;
+    classDef option fill:#101827,stroke:#46546e,color:#cfd8e6,stroke-width:1px;
+    classDef gate fill:#241b06,stroke:#c99a2e,color:#f5c542,stroke-width:1px;
+    classDef ultimate fill:#1a1630,stroke:#e2c068,color:#fff6d8,stroke-width:3px;
+    linkStyle default stroke:#33415c,stroke-width:2px,fill:none;
+    style B1 fill:#0b1322,stroke:#1e2a40,stroke-width:1px;
+    style B2 fill:#0b1322,stroke:#1e2a40,stroke-width:1px;
+    style B3 fill:#0b1322,stroke:#1e2a40,stroke-width:1px;
+```
+
 ### Thrust: "Arrive when you decided to"
 
 | Row | Type | Node | Effect (example) | Value |
