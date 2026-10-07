@@ -8,7 +8,7 @@ description: "Cases, température et effet de la position."
 tags: ["universe"]
 published: true
 created: "2026-10-02T13:08:10.469Z"
-updated: "2026-10-02T17:41:10.735Z"
+updated: "2026-10-06T10:31:13.668Z"
 game_version: "Serveur 2.1.0 · Client 3.1.0"
 ---
 

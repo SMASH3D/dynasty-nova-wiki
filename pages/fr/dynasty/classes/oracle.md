@@ -1,11 +1,14 @@
 ---
+wiki_id: 156
 locale: "fr"
 path: "dynasty/classes/oracle"
 url: "https://wiki.dynastynova.com/fr/dynasty/classes/oracle"
 title: "L'Oracle"
 description: "La classe de l'information anticipée, exclusive à L'Accord : Veille, Présage et Préavis."
 tags: ["dynasty"]
-published: false
+published: true
+created: "2026-10-06T10:29:46.872Z"
+updated: "2026-10-06T10:29:51.014Z"
 ---
 
 # L'Oracle

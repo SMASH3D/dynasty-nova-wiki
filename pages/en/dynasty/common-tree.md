@@ -1,11 +1,14 @@
 ---
+wiki_id: 163
 locale: "en"
 path: "dynasty/common-tree"
 url: "https://wiki.dynastynova.com/en/dynasty/common-tree"
 title: "The common tree"
 description: "Prosperity, Exploration and Logistics: the generic bonuses, node by node."
 tags: ["dynasty"]
-published: false
+published: true
+created: "2026-10-06T10:30:02.079Z"
+updated: "2026-10-06T10:30:08.713Z"
 ---
 
 # The common tree

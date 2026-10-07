@@ -8,7 +8,7 @@ description: "Les 7 grades de quêtes, leurs objectifs et leurs récompenses."
 tags: ["getting-started"]
 published: true
 created: "2026-10-02T13:07:53.225Z"
-updated: "2026-10-02T16:35:52.620Z"
+updated: "2026-10-06T10:31:08.930Z"
 ---
 
 # Le didacticiel (quêtes)
@@ -23,7 +23,7 @@ updated: "2026-10-02T16:35:52.620Z"
 3. Une quête est terminée dès que son objectif est atteint (un niveau de bâtiment ou de recherche, une unité construite, une colonisation, un recyclage). Il faut ensuite **réclamer** la récompense.
 4. **Récompenses** : un pack de ressources, rangé dans votre inventaire, que vous utilisez quand vous voulez et sur la planète de votre choix. Plus de l'expérience.
 5. Terminer un grade entier rapporte un **bonus d'expérience**.
-6. L'expérience est propre à chaque univers. Elle servira à la progression de votre personnage, une fonctionnalité à venir.
+6. L'expérience est propre à chaque univers. Elle fait monter le niveau de votre personnage, qui donne vos points de talent. Voir [Dynastie et talents](/fr/dynasty).
 7. Les quêtes ne rapportent pas de Points stellaires. Il n'y a pas de grade après le 7e.
 
 ## Exemple chiffré

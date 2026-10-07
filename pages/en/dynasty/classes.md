@@ -1,11 +1,14 @@
 ---
+wiki_id: 162
 locale: "en"
 path: "dynasty/classes"
 url: "https://wiki.dynastynova.com/en/dynasty/classes"
 title: "The classes"
 description: "The ten playable classes, class mastery and changing class."
 tags: ["dynasty"]
-published: false
+published: true
+created: "2026-10-06T10:29:59.660Z"
+updated: "2026-10-06T10:30:31.982Z"
 ---
 
 # The classes

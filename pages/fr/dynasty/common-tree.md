@@ -1,11 +1,14 @@
 ---
+wiki_id: 148
 locale: "fr"
 path: "dynasty/common-tree"
 url: "https://wiki.dynastynova.com/fr/dynasty/common-tree"
 title: "L'arbre commun"
 description: "Prospérité, Exploration et Logistique : les bonus génériques, nœud par nœud."
 tags: ["dynasty"]
-published: false
+published: true
+created: "2026-10-06T10:29:29.270Z"
+updated: "2026-10-06T10:29:35.998Z"
 ---
 
 # L'arbre commun

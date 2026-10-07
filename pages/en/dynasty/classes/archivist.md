@@ -1,11 +1,14 @@
 ---
+wiki_id: 167
 locale: "en"
 path: "dynasty/classes/archivist"
 url: "https://wiki.dynastynova.com/en/dynasty/classes/archivist"
 title: "The Archivist"
 description: "The Archivist's class tree: Memory, Wreck, Registry."
 tags: ["dynasty"]
-published: false
+published: true
+created: "2026-10-06T10:30:11.381Z"
+updated: "2026-10-06T10:30:12.908Z"
 ---
 
 # The Archivist

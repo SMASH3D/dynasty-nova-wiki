@@ -1,11 +1,14 @@
 ---
+wiki_id: 170
 locale: "en"
 path: "dynasty/classes/navigator"
 url: "https://wiki.dynastynova.com/en/dynasty/classes/navigator"
 title: "The Navigator"
 description: "The Navigator's class tree: Thrust, Lines and Freight."
 tags: ["dynasty"]
-published: false
+published: true
+created: "2026-10-06T10:30:18.119Z"
+updated: "2026-10-06T10:30:19.530Z"
 ---
 
 # The Navigator

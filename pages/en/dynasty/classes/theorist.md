@@ -1,11 +1,14 @@
 ---
+wiki_id: 174
 locale: "en"
 path: "dynasty/classes/theorist"
 url: "https://wiki.dynastynova.com/en/dynasty/classes/theorist"
 title: "The Theorist"
 description: "The Theorist's class tree: Method, Network, Prototypes."
 tags: ["dynasty"]
-published: false
+published: true
+created: "2026-10-06T10:30:27.452Z"
+updated: "2026-10-06T10:30:28.918Z"
 ---
 
 # The Theorist

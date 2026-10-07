@@ -8,7 +8,7 @@ description: "The 7 quest grades, their goals and rewards."
 tags: ["getting-started"]
 published: true
 created: "2026-10-02T13:10:08.766Z"
-updated: "2026-10-02T16:37:26.982Z"
+updated: "2026-10-06T10:30:54.904Z"
 ---
 
 # The tutorial (quests)
@@ -26,7 +26,7 @@ updated: "2026-10-02T16:37:26.982Z"
 3. A quest is done as soon as its goal is reached (a building or research level, a unit built, a colonization, a recycling run). You then have to **claim** the reward.
 4. **Rewards**: a resource pack, stored in your inventory, that you use whenever you want on the planet of your choice. Plus experience.
 5. Completing a whole grade gives an **experience bonus**.
-6. Experience is tracked per universe. It will feed your character's progression, a feature still to come.
+6. Experience is tracked per universe. It raises your character's level, which gives your talent points. See [Dynasty and talents](/en/dynasty).
 7. Quests give no Stellar Points. There is no grade after the 7th.
 
 ## Worked example

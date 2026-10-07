@@ -1,11 +1,14 @@
 ---
+wiki_id: 153
 locale: "fr"
 path: "dynasty/classes/builder"
 url: "https://wiki.dynastynova.com/fr/dynasty/classes/builder"
 title: "Le Bâtisseur"
 description: "Arbre de classe du Bâtisseur : Filon, Chantier, Fonderie."
 tags: ["dynasty"]
-published: false
+published: true
+created: "2026-10-06T10:29:40.591Z"
+updated: "2026-10-06T10:29:41.875Z"
 ---
 
 # Le Bâtisseur

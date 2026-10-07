@@ -8,7 +8,7 @@ description: "The Dynasty Nova player wiki: rules, data and worked examples."
 tags: ["home"]
 published: true
 created: "2026-10-02T13:33:57.746Z"
-updated: "2026-10-02T17:41:49.808Z"
+updated: "2026-10-06T10:30:56.630Z"
 ---
 
 # Dynasty Nova Wiki
@@ -96,6 +96,12 @@ updated: "2026-10-02T17:41:49.808Z"
 - [Pacts, fair play and wars](/en/players/pacts-and-wars)
 - [Alliance missions and station](/en/players/alliance-missions)
 - [Messages and reports](/en/players/messages-and-reports)
+
+### [Dynasty and talents](/en/dynasty)
+- [The dynasties](/en/dynasty/dynasties)
+- [The classes](/en/dynasty/classes)
+- [Talents](/en/dynasty/talents)
+- [The common tree](/en/dynasty/common-tree)
 
 ### [Miscellaneous](/en/misc)
 - [Maintenance](/en/misc/maintenance)

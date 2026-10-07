@@ -1,11 +1,14 @@
 ---
+wiki_id: 154
 locale: "fr"
 path: "dynasty/classes/energist"
 url: "https://wiki.dynastynova.com/fr/dynasty/classes/energist"
 title: "L'Énergéticien"
 description: "Arbre de classe de l'Énergéticien : Surrégime, Centrales, Continuité."
 tags: ["dynasty"]
-published: false
+published: true
+created: "2026-10-06T10:29:42.744Z"
+updated: "2026-10-06T10:29:43.975Z"
 ---
 
 # L'Énergéticien

@@ -1,11 +1,14 @@
 ---
+wiki_id: 173
 locale: "en"
 path: "dynasty/classes/symbiote"
 url: "https://wiki.dynastynova.com/en/dynasty/classes/symbiote"
 title: "The Symbiote"
 description: "The environment class, exclusive to The Accord: Thermal, Growth and Host."
 tags: ["dynasty"]
-published: false
+published: true
+created: "2026-10-06T10:30:25.107Z"
+updated: "2026-10-06T10:30:26.572Z"
 ---
 
 # The Symbiote

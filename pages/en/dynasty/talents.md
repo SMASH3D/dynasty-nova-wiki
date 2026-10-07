@@ -1,11 +1,14 @@
 ---
+wiki_id: 165
 locale: "en"
 path: "dynasty/talents"
 url: "https://wiki.dynastynova.com/en/dynasty/talents"
 title: "Talents"
 description: "The two trees, points, gates, the draft, resets and caps."
 tags: ["dynasty"]
-published: false
+published: true
+created: "2026-10-06T10:30:06.594Z"
+updated: "2026-10-06T10:30:07.976Z"
 ---
 
 # Talents

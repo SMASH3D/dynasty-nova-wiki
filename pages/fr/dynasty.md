@@ -1,11 +1,14 @@
 ---
+wiki_id: 146
 locale: "fr"
 path: "dynasty"
 url: "https://wiki.dynastynova.com/fr/dynasty"
 title: "Dynastie et talents"
 description: "Dynasties, classes, arbre commun et arbres de classe."
 tags: ["dynasty"]
-published: false
+published: true
+created: "2026-10-06T10:29:25.188Z"
+updated: "2026-10-06T10:29:57.527Z"
 ---
 
 # Dynastie et talents

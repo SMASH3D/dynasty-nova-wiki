@@ -1,11 +1,14 @@
 ---
+wiki_id: 171
 locale: "en"
 path: "dynasty/classes/oracle"
 url: "https://wiki.dynastynova.com/en/dynasty/classes/oracle"
 title: "The Oracle"
 description: "The foreknowledge class, exclusive to The Accord: Watch, Omen and Forewarning."
 tags: ["dynasty"]
-published: false
+published: true
+created: "2026-10-06T10:30:20.508Z"
+updated: "2026-10-06T10:30:24.814Z"
 ---
 
 # The Oracle

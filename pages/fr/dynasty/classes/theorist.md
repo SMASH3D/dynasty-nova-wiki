@@ -1,11 +1,14 @@
 ---
+wiki_id: 159
 locale: "fr"
 path: "dynasty/classes/theorist"
 url: "https://wiki.dynastynova.com/fr/dynasty/classes/theorist"
 title: "Le Théoricien"
 description: "Arbre de classe du Théoricien : Méthode, Réseau, Prototypes."
 tags: ["dynasty"]
-published: false
+published: true
+created: "2026-10-06T10:29:53.373Z"
+updated: "2026-10-06T10:29:54.678Z"
 ---
 
 # Le Théoricien

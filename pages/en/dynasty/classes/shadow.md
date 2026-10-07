@@ -1,11 +1,14 @@
 ---
+wiki_id: 172
 locale: "en"
 path: "dynasty/classes/shadow"
 url: "https://wiki.dynastynova.com/en/dynasty/classes/shadow"
 title: "The Shadow"
 description: "The Shadow's class tree: Infiltration, Stealth and Backlight."
 tags: ["dynasty"]
-published: false
+published: true
+created: "2026-10-06T10:30:22.733Z"
+updated: "2026-10-06T10:30:24.072Z"
 ---
 
 # The Shadow

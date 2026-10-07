@@ -8,7 +8,7 @@ description: "Chaque défense détruite a 70 % de chances de revenir."
 tags: ["combat"]
 published: true
 created: "2026-10-02T13:09:17.609Z"
-updated: "2026-10-02T16:36:51.142Z"
+updated: "2026-10-06T10:31:02.120Z"
 ---
 
 # Reconstruction des défenses
@@ -21,6 +21,7 @@ updated: "2026-10-02T16:36:51.142Z"
 1. Après chaque combat, **chaque défense détruite** fait l'objet d'un **tirage indépendant à 70 %**. Réussi, elle est réparée sans frais ; raté, elle est perdue.
 2. Ce n'est **pas un pourcentage appliqué au lot** : avec 10 défenses détruites, entre 0 et 10 reviennent, 7 en moyenne.
 3. La **Barrière défensive** et le **Dôme protecteur** suivent la même règle : 70 % de chances de les garder.
+4. La dynastie **L'Héritage** porte cette chance à **75 %** (trait Rien ne se perd). Les talents du [Vétéran](/fr/dynasty/classes/veteran) peuvent la monter plus haut ; ceux de l'[Amiral](/fr/dynasty/classes/admiral) la baissent chez les défenseurs qu'il attaque.
 4. Les défenses détruites par des **Ogives longue portée** ne sont **jamais** réparées.
 5. Les **vaisseaux** ne sont jamais réparés gratuitement. Seule la [Station de réparation](/fr/economy/repair-station) en récupère une partie après un combat perdu en défense.
 6. Les missiles stockés ne combattent pas et ne sont donc pas concernés.

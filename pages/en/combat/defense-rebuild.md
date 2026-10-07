@@ -8,7 +8,7 @@ description: "Each destroyed defense has a 70% chance to come back."
 tags: ["combat"]
 published: true
 created: "2026-10-02T13:11:36.096Z"
-updated: "2026-10-02T16:38:25.087Z"
+updated: "2026-10-06T10:30:48.224Z"
 ---
 
 # Defense rebuild
@@ -21,6 +21,7 @@ updated: "2026-10-02T16:38:25.087Z"
 1. After every battle, **each destroyed defense** gets an **independent 70% roll**. On success it is repaired at no cost; on failure it is lost.
 2. It is **not a percentage applied to the batch**: with 10 defenses destroyed, between 0 and 10 come back, 7 on average.
 3. The **Defensive Barrier** and the **Protective Dome** follow the same rule: a 70% chance of keeping them.
+4. The **Heritage** dynasty raises this chance to **75%** (Nothing Is Lost trait). The [Veteran](/en/dynasty/classes/veteran)'s talents can raise it further; the [Admiral](/en/dynasty/classes/admiral)'s lower it for the defenders it attacks.
 4. Defenses destroyed by **Long-Range Warheads** are **never** repaired.
 5. **Ships** are never repaired for free. Only the [Repair Station](/en/economy/repair-station) recovers part of them after a battle lost while defending.
 6. Stored missiles do not fight, so they are not concerned.

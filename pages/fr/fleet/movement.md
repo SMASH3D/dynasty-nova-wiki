@@ -8,7 +8,7 @@ description: "Vitesse, durée de vol, consommation d'hydrogène et emplacements 
 tags: ["fleet"]
 published: true
 created: "2026-10-02T13:08:52.470Z"
-updated: "2026-10-06T08:04:51.583Z"
+updated: "2026-10-06T10:31:07.317Z"
 ---
 
 # Déplacements
@@ -27,7 +27,7 @@ updated: "2026-10-06T08:04:51.583Z"
 
 ### Vitesse
 2. Vitesse d'un vaisseau = vitesse de base × (1 + bonus × niveau de la recherche de son moteur) : **+10 %** par niveau de Propulseur Chimique, **+20 %** de Moteur Magnétique, **+30 %** de Navigation Transdimensionnelle.
-3. Une flotte avance à la vitesse de son **vaisseau le plus lent**, augmentée du talent d'alliance Propulsion coordonnée.
+3. Une flotte avance à la vitesse de son **vaisseau le plus lent**. Les bonus de vitesse (talents personnels et talent d'alliance Propulsion coordonnée) **divisent la durée du vol** : +50 % = un vol 1,5 fois plus court, au plus +60 % au total. Voir [Les talents](/fr/dynasty/talents).
 4. Vous choisissez un **pourcentage de vitesse** de 10 à 100 %, par pas de 10. Dans les formules, il devient le facteur $S$, de 1 à 10 : $S = 1$ pour 10 %, $S = 10$ pour 100 %.
 
 ### Distance

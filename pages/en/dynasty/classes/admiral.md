@@ -1,11 +1,14 @@
 ---
+wiki_id: 166
 locale: "en"
 path: "dynasty/classes/admiral"
 url: "https://wiki.dynastynova.com/en/dynasty/classes/admiral"
 title: "The Admiral"
 description: "The head-on combat class: Firing Line, Campaign and Spoils of War."
 tags: ["dynasty"]
-published: false
+published: true
+created: "2026-10-06T10:30:08.859Z"
+updated: "2026-10-06T10:30:10.470Z"
 ---
 
 # The Admiral

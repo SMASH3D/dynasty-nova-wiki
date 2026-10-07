@@ -1,11 +1,14 @@
 ---
+wiki_id: 164
 locale: "en"
 path: "dynasty/dynasties"
 url: "https://wiki.dynastynova.com/en/dynasty/dynasties"
 title: "The dynasties"
 description: "The Heritage, The Accord and The Choir: traits and exclusive classes."
 tags: ["dynasty"]
-published: false
+published: true
+created: "2026-10-06T10:30:04.323Z"
+updated: "2026-10-06T10:30:31.982Z"
 ---
 
 # The dynasties

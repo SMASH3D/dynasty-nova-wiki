@@ -8,7 +8,7 @@ description: "Envoyer des Éclaireurs : niveau de détail, risques et contre-esp
 tags: ["espionage"]
 published: true
 created: "2026-10-02T13:09:25.232Z"
-updated: "2026-10-06T08:08:39.881Z"
+updated: "2026-10-06T10:31:03.704Z"
 game_version: "Serveur 2.1.0 · Client 3.1.0"
 ---
 
@@ -38,7 +38,7 @@ game_version: "Serveur 2.1.0 · Client 3.1.0"
 ### Risque pour les sondes
 11. **Chance de destruction (en %)** = (2 × Renseignement de la cible − votre Renseignement) × nombre de vaisseaux stationnés chez elle × 0,05, bornée entre **5 % et 25 %**.
 12. Le risque tombe à **0** si votre niveau est au moins le **double** de celui de la cible, s'il n'y a **aucun vaisseau** en orbite (les défenses ne comptent pas), ou si la cible est inhabitée, abandonnée ou en vacances.
-13. **Un seul tirage pour toute la vague** : toutes les sondes sont détruites, ou aucune. Le nombre de sondes ne change pas le risque. Il n'y a pas de combat.
+13. **Un seul tirage pour toute la vague** : toutes les sondes sont détruites, ou aucune. Le nombre de sondes ne change pas le risque. Il n'y a pas de combat. Exception : les talents de l'[Ombre](/fr/dynasty/classes/shadow) Sondes larguées et Coques muettes font survivre une partie d'une vague prise.
 14. Si vos sondes tombent, un second tirage décide si vous êtes **tracé** (pseudo et coordonnées) ou seulement **identifié** (pseudo).
 15. Le défenseur reçoit **toujours** une alerte d'intrusion.
 

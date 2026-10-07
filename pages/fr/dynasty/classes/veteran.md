@@ -1,11 +1,14 @@
 ---
+wiki_id: 160
 locale: "fr"
 path: "dynasty/classes/veteran"
 url: "https://wiki.dynastynova.com/fr/dynasty/classes/veteran"
 title: "Le Vétéran"
 description: "La classe défensive de L'Héritage : Muraille, Relève et Silo."
 tags: ["dynasty"]
-published: false
+published: true
+created: "2026-10-06T10:29:55.451Z"
+updated: "2026-10-06T10:29:56.814Z"
 ---
 
 # Le Vétéran

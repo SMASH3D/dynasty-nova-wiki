@@ -1,11 +1,14 @@
 ---
+wiki_id: 169
 locale: "en"
 path: "dynasty/classes/energist"
 url: "https://wiki.dynastynova.com/en/dynasty/classes/energist"
 title: "The Energetician"
 description: "The Energetician's class tree: Overdrive, Plants, Continuity."
 tags: ["dynasty"]
-published: false
+published: true
+created: "2026-10-06T10:30:15.907Z"
+updated: "2026-10-06T10:30:17.302Z"
 ---
 
 # The Energetician

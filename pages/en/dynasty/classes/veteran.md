@@ -1,11 +1,14 @@
 ---
+wiki_id: 175
 locale: "en"
 path: "dynasty/classes/veteran"
 url: "https://wiki.dynastynova.com/en/dynasty/classes/veteran"
 title: "The Veteran"
 description: "The Heritage's defensive class: Rampart, Relief and Silo."
 tags: ["dynasty"]
-published: false
+published: true
+created: "2026-10-06T10:30:29.753Z"
+updated: "2026-10-06T10:30:31.218Z"
 ---
 
 # The Veteran

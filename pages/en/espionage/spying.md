@@ -8,7 +8,7 @@ description: "Sending Scouts: detail level, risks and counter-espionage."
 tags: ["espionage"]
 published: true
 created: "2026-10-02T13:11:44.334Z"
-updated: "2026-10-06T08:08:30.124Z"
+updated: "2026-10-06T10:30:49.903Z"
 game_version: "Serveur 2.1.0 · Client 3.1.0"
 ---
 
@@ -41,7 +41,7 @@ game_version: "Serveur 2.1.0 · Client 3.1.0"
 ### Risk to probes
 11. **Destruction chance (in %)** = (2 × target's Espionage − yours) × number of ships stationed there × 0.05, capped between **5% and 25%**.
 12. The risk drops to **0** if your level is at least **double** the target's, if there is **no ship** in orbit (defenses do not count), or if the target is uninhabited, abandoned or on vacation.
-13. **A single roll for the whole wave**: all probes are destroyed, or none. The number of probes does not change the risk. There is no battle.
+13. **A single roll for the whole wave**: all probes are destroyed, or none. The number of probes does not change the risk. There is no battle. Exception: the [Shadow](/en/dynasty/classes/shadow)'s Dropped Probes and Silent Hulls talents let part of a caught wave survive.
 14. If your probes go down, a second roll decides whether you are **traced** (username and coordinates) or only **identified** (username).
 15. The defender **always** receives an intrusion alert.
 

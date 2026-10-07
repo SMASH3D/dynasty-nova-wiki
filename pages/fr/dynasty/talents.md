@@ -1,11 +1,14 @@
 ---
+wiki_id: 150
 locale: "fr"
 path: "dynasty/talents"
 url: "https://wiki.dynastynova.com/fr/dynasty/talents"
 title: "Les talents"
 description: "Les deux arbres, les points, les portes, le brouillon, la réinitialisation et les plafonds."
 tags: ["dynasty"]
-published: false
+published: true
+created: "2026-10-06T10:29:33.970Z"
+updated: "2026-10-06T10:29:35.275Z"
 ---
 
 # Les talents

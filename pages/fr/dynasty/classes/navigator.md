@@ -1,11 +1,14 @@
 ---
+wiki_id: 155
 locale: "fr"
 path: "dynasty/classes/navigator"
 url: "https://wiki.dynastynova.com/fr/dynasty/classes/navigator"
 title: "Le Navigateur"
 description: "Arbre de classe du Navigateur : Poussée, Lignes et Fret."
 tags: ["dynasty"]
-published: false
+published: true
+created: "2026-10-06T10:29:44.757Z"
+updated: "2026-10-06T10:29:46.081Z"
 ---
 
 # Le Navigateur

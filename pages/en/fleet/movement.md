@@ -8,7 +8,7 @@ description: "Speed, flight time, hydrogen use and fleet slots."
 tags: ["fleet"]
 published: true
 created: "2026-10-02T13:11:09.961Z"
-updated: "2026-10-06T08:04:43.668Z"
+updated: "2026-10-06T10:30:53.371Z"
 ---
 
 # Fleet movement
@@ -27,7 +27,7 @@ updated: "2026-10-06T08:04:43.668Z"
 
 ### Speed
 2. A ship's speed = base speed × (1 + bonus × level of its drive's research): **+10%** per level of Combustion Drive, **+20%** of Impulse Drive, **+30%** of Hyperspace Drive.
-3. A fleet flies at the speed of its **slowest ship**, raised by the Coordinated propulsion alliance talent.
+3. A fleet flies at the speed of its **slowest ship**. Speed bonuses (personal talents and the Coordinated propulsion alliance talent) **divide the flight time**: +50% = a flight 1.5 times shorter, +60% at most in total. See [Talents](/en/dynasty/talents).
 4. You choose a **speed percentage** from 10 to 100%, in steps of 10. In the formulas it becomes the factor $S$, from 1 to 10: $S = 1$ for 10%, $S = 10$ for 100%.
 
 ### Distance

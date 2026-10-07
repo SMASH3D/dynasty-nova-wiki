@@ -1,11 +1,14 @@
 ---
+wiki_id: 168
 locale: "en"
 path: "dynasty/classes/builder"
 url: "https://wiki.dynastynova.com/en/dynasty/classes/builder"
 title: "The Builder"
 description: "The Builder's class tree: Lode, Yard, Foundry."
 tags: ["dynasty"]
-published: false
+published: true
+created: "2026-10-06T10:30:13.759Z"
+updated: "2026-10-06T10:30:15.017Z"
 ---
 
 # The Builder

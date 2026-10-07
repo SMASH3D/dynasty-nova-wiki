@@ -1,11 +1,14 @@
 ---
+wiki_id: 151
 locale: "fr"
 path: "dynasty/classes/admiral"
 url: "https://wiki.dynastynova.com/fr/dynasty/classes/admiral"
 title: "L'Amiral"
 description: "La classe du combat frontal : Ligne de feu, Campagne et Butin de guerre."
 tags: ["dynasty"]
-published: false
+published: true
+created: "2026-10-06T10:29:36.126Z"
+updated: "2026-10-06T10:29:37.507Z"
 ---
 
 # L'Amiral

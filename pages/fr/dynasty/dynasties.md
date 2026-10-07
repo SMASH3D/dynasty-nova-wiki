@@ -1,11 +1,14 @@
 ---
+wiki_id: 149
 locale: "fr"
 path: "dynasty/dynasties"
 url: "https://wiki.dynastynova.com/fr/dynasty/dynasties"
 title: "Les dynasties"
 description: "L'Héritage, L'Accord et Le Chœur : traits et classes exclusives."
 tags: ["dynasty"]
-published: false
+published: true
+created: "2026-10-06T10:29:31.825Z"
+updated: "2026-10-06T10:29:57.527Z"
 ---
 
 # Les dynasties
