@@ -8,7 +8,7 @@ description: "Arbre de classe de l'Énergéticien : Surrégime, Centrales, Conti
 tags: ["dynasty"]
 published: true
 created: "2026-10-06T10:29:42.744Z"
-updated: "2026-10-06T10:29:43.975Z"
+updated: "2026-10-07T22:08:23.088Z"
 ---
 
 # L'Énergéticien

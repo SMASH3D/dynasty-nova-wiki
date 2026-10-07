@@ -8,7 +8,7 @@ description: "Arbre de classe du Navigateur : Poussée, Lignes et Fret."
 tags: ["dynasty"]
 published: true
 created: "2026-10-06T10:29:44.757Z"
-updated: "2026-10-06T10:29:46.081Z"
+updated: "2026-10-07T22:08:24.684Z"
 ---
 
 # Le Navigateur

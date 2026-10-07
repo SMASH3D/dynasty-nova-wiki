@@ -8,7 +8,7 @@ description: "The head-on combat class: Firing Line, Campaign and Spoils of War.
 tags: ["dynasty"]
 published: true
 created: "2026-10-06T10:30:08.859Z"
-updated: "2026-10-06T10:30:10.470Z"
+updated: "2026-10-07T22:08:00.206Z"
 ---
 
 # The Admiral

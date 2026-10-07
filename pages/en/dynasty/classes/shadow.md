@@ -8,7 +8,7 @@ description: "The Shadow's class tree: Infiltration, Stealth and Backlight."
 tags: ["dynasty"]
 published: true
 created: "2026-10-06T10:30:22.733Z"
-updated: "2026-10-06T10:30:24.072Z"
+updated: "2026-10-07T22:08:09.480Z"
 ---
 
 # The Shadow

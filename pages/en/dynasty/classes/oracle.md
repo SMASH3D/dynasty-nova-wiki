@@ -8,7 +8,7 @@ description: "The foreknowledge class, exclusive to The Accord: Watch, Omen and 
 tags: ["dynasty"]
 published: true
 created: "2026-10-06T10:30:20.508Z"
-updated: "2026-10-06T10:30:24.814Z"
+updated: "2026-10-07T22:08:07.934Z"
 ---
 
 # The Oracle

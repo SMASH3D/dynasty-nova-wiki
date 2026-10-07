@@ -8,7 +8,7 @@ description: "The Heritage's defensive class: Rampart, Relief and Silo."
 tags: ["dynasty"]
 published: true
 created: "2026-10-06T10:30:29.753Z"
-updated: "2026-10-06T10:30:31.218Z"
+updated: "2026-10-07T22:08:14.085Z"
 ---
 
 # The Veteran

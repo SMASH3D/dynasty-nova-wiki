@@ -8,7 +8,7 @@ description: "The Theorist's class tree: Method, Network, Prototypes."
 tags: ["dynasty"]
 published: true
 created: "2026-10-06T10:30:27.452Z"
-updated: "2026-10-06T10:30:28.918Z"
+updated: "2026-10-07T22:08:12.623Z"
 ---
 
 # The Theorist

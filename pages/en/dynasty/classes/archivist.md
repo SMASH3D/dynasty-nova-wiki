@@ -8,7 +8,7 @@ description: "The Archivist's class tree: Memory, Wreck, Registry."
 tags: ["dynasty"]
 published: true
 created: "2026-10-06T10:30:11.381Z"
-updated: "2026-10-06T10:30:12.908Z"
+updated: "2026-10-07T22:08:01.810Z"
 ---
 
 # The Archivist

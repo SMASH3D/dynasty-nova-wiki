@@ -8,7 +8,7 @@ description: "The Navigator's class tree: Thrust, Lines and Freight."
 tags: ["dynasty"]
 published: true
 created: "2026-10-06T10:30:18.119Z"
-updated: "2026-10-06T10:30:19.530Z"
+updated: "2026-10-07T22:08:06.524Z"
 ---
 
 # The Navigator

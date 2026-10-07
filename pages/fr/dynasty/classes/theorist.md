@@ -8,7 +8,7 @@ description: "Arbre de classe du Théoricien : Méthode, Réseau, Prototypes."
 tags: ["dynasty"]
 published: true
 created: "2026-10-06T10:29:53.373Z"
-updated: "2026-10-06T10:29:54.678Z"
+updated: "2026-10-07T22:08:30.718Z"
 ---
 
 # Le Théoricien

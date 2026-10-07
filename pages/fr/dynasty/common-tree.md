@@ -8,7 +8,7 @@ description: "Prospérité, Exploration et Logistique : les bonus génériques, 
 tags: ["dynasty"]
 published: true
 created: "2026-10-06T10:29:29.270Z"
-updated: "2026-10-06T10:29:35.998Z"
+updated: "2026-10-07T22:08:33.836Z"
 ---
 
 # L'arbre commun

@@ -8,7 +8,7 @@ description: "La classe de l'information anticipée, exclusive à L'Accord : Vei
 tags: ["dynasty"]
 published: true
 created: "2026-10-06T10:29:46.872Z"
-updated: "2026-10-06T10:29:51.014Z"
+updated: "2026-10-07T22:08:26.135Z"
 ---
 
 # L'Oracle

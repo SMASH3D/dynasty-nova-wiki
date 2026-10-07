@@ -8,7 +8,7 @@ description: "The environment class, exclusive to The Accord: Thermal, Growth an
 tags: ["dynasty"]
 published: true
 created: "2026-10-06T10:30:25.107Z"
-updated: "2026-10-06T10:30:26.572Z"
+updated: "2026-10-07T22:08:11.037Z"
 ---
 
 # The Symbiote
