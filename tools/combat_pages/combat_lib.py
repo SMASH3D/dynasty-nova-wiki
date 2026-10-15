@@ -89,9 +89,13 @@ def name(code, lang):
     u = SHIP.get(code) or DEF.get(code)
     return u[1] if lang == 'fr' else u[2]
 
+def php_round(x):
+    """round() de PHP : moitié arrondie loin de zéro (Python arrondit au pair)."""
+    return int(fl(abs(x) + 0.5)) * (1 if x >= 0 else -1)
+
 # --- Statistiques effectives (Ship/Defense::combatStats(), CombatResearch::withBonuses(), AllianceBonuses::boost()) ---
 def boosted(base, level):
-    return int(round(base * (1.0 + BONUS_PER_LEVEL * max(0, level))))
+    return php_round(base * (1.0 + BONUS_PER_LEVEL * max(0, level)))
 
 def boost(value, percent):
     return value if percent == 0 else fl(round(value * (100 + percent) / 100, 6))
@@ -99,7 +103,7 @@ def boost(value, percent):
 def stats(code, weapons=0, shielding=0, armor=0, doctrine_weapons=0, doctrine_protection=0):
     u = SHIP.get(code) or DEF.get(code)
     structure, shield, weapon = (u[4], u[5], u[6])
-    hull = int(round(boosted(structure, armor) / HULL_DIVISOR))
+    hull = php_round(boosted(structure, armor) / HULL_DIVISOR)
     return {
         'weapon': boost(boosted(weapon, weapons), doctrine_weapons),
         'shield': boost(boosted(shield, shielding), doctrine_protection),
@@ -153,4 +157,4 @@ def fit(load, room):
     return tuple(fl(room * r / total) for r in load)
 
 def cargo(code, qty, hyperspace=0):
-    return int(round(SHIP[code][7] * (1.0 + CARGO_PER_LEVEL * max(0, hyperspace)))) * qty
+    return php_round(SHIP[code][7] * (1.0 + CARGO_PER_LEVEL * max(0, hyperspace))) * qty

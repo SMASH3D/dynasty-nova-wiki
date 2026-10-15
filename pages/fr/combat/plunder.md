@@ -51,7 +51,7 @@ Capacité de fret par vaisseau, selon le niveau de Pliage Spatial :
 | Pionnier spatial | 7 500 | 9 375 | 11 250 |
 | Récupérateur | 20 000 | 25 000 | 30 000 |
 | Éclaireur | 5 | 6 | 8 |
-| Intercepteur | 50 | 62 | 75 |
+| Intercepteur | 50 | 63 | 75 |
 | Assaillant | 100 | 125 | 150 |
 | Corvette | 800 | 1 000 | 1 200 |
 | Cuirassé | 1 500 | 1 875 | 2 250 |

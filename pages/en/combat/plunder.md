@@ -51,7 +51,7 @@ Cargo capacity per ship, by Hyperspace Technology level (ship names are provisio
 | Space Pioneer | 7,500 | 9,375 | 11,250 |
 | Salvager | 20,000 | 25,000 | 30,000 |
 | Scout | 5 | 6 | 8 |
-| Interceptor | 50 | 62 | 75 |
+| Interceptor | 50 | 63 | 75 |
 | Assailant | 100 | 125 | 150 |
 | Corvette | 800 | 1,000 | 1,200 |
 | Battleship | 1,500 | 1,875 | 2,250 |
