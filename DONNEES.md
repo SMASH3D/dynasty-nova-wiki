@@ -332,6 +332,13 @@ Formules et règles :
 - Démolition interdite : bâtiment d'ancrage de l'astre (Base planetaire, Base lunaire) et niveau 0 (`Base::checkCanDemolishBuilding()`).
 - Station de réparation : `RepairDock` (coefficients de 45 % à 54 % du niveau 1 au niveau 10, 10 points de structure par seconde et par niveau, 1 800 à 43 200 s). Taux de débris par défaut : 30 % (`DebrisRule::default()`).
 - Modulateur : `Base::planetFields()`, 5 cases par niveau + partie entière(niveau / 2). Base lunaire : 3 cases par niveau, plafonnées par le diamètre (`moonFields()`).
+- Vaisseaux et défenses : coût par unité constant (`Ship::getCost`, `Defense::getCost`) ; durée = `build_time` du catalogue / ((1 + Dock orbital) × 2^Assembleur) ÷ vitesse chantier, au moins 1 s (`getConstructionTime()`), puis bonus de vitesse du propriétaire (`Base::unitTimeOf()`). Commande : stock vérifié pour toute la quantité à la commande (`checkHasEnoughResources(magnitude: quantity)`), unités payées une à une à leur entrée en production, commande coupée si l'unité suivante ne peut pas être payée (`Base::startNextUnit()`, `cutUnitOrderShort()`). Même unité que la dernière commande en attente : fusion sans nouvelle place (`findMergeableShipConstruction`, `findMergeableDefenseConstruction`). Réponse à `fleet-09` et `formula-04`.
+- Collecteur solaire : `Ship::getProduction()`, partie entière(Tmax / 4 + 20) par unité, jamais négatif (réponse à `formula-05`).
+- Recherche : `Research::getResearchTime()` = (métal + cristal) / (1 000 × (1 + niveau effectif du Centre d'innovation)) h ÷ vitesse recherche, puis bonus de vitesse (`Base::researchTimeOf()`).
+- Bonus de vitesse : `AllianceBonuses::hasten()`, durée × 100 / (100 + bonus), arrondie au supérieur, au moins 1 s. La démolition n'en profite pas (`Base::demolitionTimeOf()`).
+- Lune : sans Base planetaire, la capacité de repli est de 10 000 par ressource (`Base::buildingsStorage()`, `RESOURCE_BASE_STORAGE`).
+- Station de réparation : déclenchée par `Base::sufferBattleDamage()`, appelée pour la planète qui défend après **tout** combat (`AttackCombatResolver`) et après une tentative de destruction de lune, qu'elle gagne ou perde : l'ancienne règle « combat perdu en défense » (`economy-08`) est corrigée.
+- Déficit d'énergie : `Production::percentages()` tronque ; la Base planetaire est ajoutée après (`Base::productionAt()`).
 - Écart corrigé le 15 octobre 2026 : le coût « relevé » de la Fabrique d'automates niveau 5 (12 800 / 3 840 / 6 400) était celui du niveau 6. Niveau 5 : 6 400 / 1 920 / 3 200.
 
 ### Station de réparation
