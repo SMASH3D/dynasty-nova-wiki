@@ -622,7 +622,7 @@ Conditions : expéditions activées dans l'univers ; Cosmologie Appliquée ≥ 1
 - Chaque round : boucliers rechargés, effectifs figés, l'attaquant tire puis le défenseur. Une unité vivante en début de round tire toutes ses salves même si elle meurt pendant le round (tir simultané en pratique).
 - Cible tirée uniformément parmi les unités adverses vivantes. Tout tir touche.
 - Tir rapide : après chaque tir, si le facteur f du couple tireur / cible dépasse 1, le tireur retire avec une probabilité 1 − 1/f sur une nouvelle cible aléatoire, tant que le tirage réussit. Identique à OGame.
-- Explosion : après un tir qui entame la coque sans la détruire, si la coque passe sous 70 %, l'unité explose avec une probabilité de 1 − fraction de coque restante. Un tir rebondi n'ouvre pas ce tirage.
+- Explosion (**précisé par le code le 15 octobre 2026** : après tout tir non rebondi, voir ci-dessous) : après un tir qui entame la coque sans la détruire, si la coque passe sous 70 %, l'unité explose avec une probabilité de 1 − fraction de coque restante. Un tir rebondi n'ouvre pas ce tirage.
 - **Statistiques de combat** : coque = structure × (1 + 0,1 × Métallurgie Avancée) / 10 ; bouclier × (1 + 0,1 × Champs de Protection) ; arme × (1 + 0,1 × Systèmes Offensifs). Les Doctrines d'alliance ajoutent 5 %.
 - Résultat : victoire de l'attaquant si le défenseur est vide ; victoire du défenseur si l'attaquant est vide ; sinon égalité (deux camps debout après 6 rounds, ou deux camps vides).
 - Les tirages sont déterministes par combat : un même combat rejoué donne le même résultat.
@@ -634,7 +634,7 @@ Conditions : expéditions activées dans l'univers ; Cosmologie Appliquée ≥ 1
 - Barrière défensive et Dôme protecteur : cibles ordinaires avec un gros bouclier individuel, **pas de bouclier global**. Un seul exemplaire de chaque (impossible d'en commander ou d'en mettre en file un deuxième).
 
 **Pillage** (`combat-04`, `combat-05`)
-- Butin = 50 % de chaque ressource de la cible (arrondi inférieur), énergie exclue, **uniquement en cas de victoire**. Paramètre d'univers.
+- Butin = 50 % de chaque ressource de la cible (arrondi inférieur), énergie exclue, **uniquement en cas de victoire**. ~~Paramètre d'univers.~~ **Corrigé par le code (15 octobre 2026)** : taux fixe, aucun réglage d'univers, voir « Relevé dans le code » ci-dessous.
 - Si le total dépasse la soute libre des survivants, chaque ressource est réduite dans la même proportion. Pas d'ordre de priorité. La soute tient compte du Pliage Spatial et de ce qui est déjà à bord.
 - **Pas de pillage dégressif** : 50 % à chaque attaque.
 
@@ -660,6 +660,67 @@ Conditions : expéditions activées dans l'univers ; Cosmologie Appliquée ≥ 1
 - 10 cases par niveau. Intercepteurs : 1 case ; Ogives longue portée : 2 cases. Les missiles en file ou en construction comptent.
 - Les missiles n'occupent pas de cases de la planète. Niveau 2 requis pour les Intercepteurs, 4 pour les Ogives.
 - Démolir le silo sous son contenu ne détruit rien.
+
+#### Relevé dans le code (15 octobre 2026)
+
+Source : dépôt `astro-nova-backend`, `main` au commit `7b255c83` (15 octobre 2026) ; catalogue lu dans les tables `ship`, `defense`, `rapid_fire` et `alliance_talent` d'une base où toutes les migrations ont été rejouées ; libellés du front (`Astro-Nova-React`, `origin/main` du 15 octobre 2026, `src/i18n/locales/{fr,en}`). Les huit pages de la rubrique sont générées par `tools/combat_pages/p_all.py` (constantes et formules dans `combat_lib.py`). Les valeurs modifiées en production par l'administration ne sont pas visibles ainsi.
+
+Moteur (`Game/Domain/Service/BattleSimulator.php`, version d'algorithme 4.3) :
+- `BattleRules::default()` : 6 rounds, rebond sous 1 % du bouclier de la cible (`shieldBounceThreshold` 0,01, comparé au bouclier effectif maximal, `BattleLine::takeHit()`), explosion sous 70 % de coque (`explosionThreshold` 0,7). Ces règles ne sont pas réglables par univers (TODO dans `AttackCombatResolver`).
+- Précision : `HitChanceParameters::alwaysHit()` dans `AttackCombatResolver`, `MoonDestructionResolver`, `ExpeditionCombatResolver` et `BattleSimulationRunner` : tout tir touche. Le modèle d'esquive (`HitChanceCalculator`, `HitChanceParameters::default()`, sigmoïde vitesse / coque, parité 70 %) existe mais **n'est pas branché** : non publié.
+- Round : boucliers rechargés (`BattleLine::resetShields()`), coque jamais réparée en cours de combat ; effectifs du début de round figés (`aliveByType()`), attaquant puis défenseur ; chaque unité tire `shotCount` coups (1 pour toutes les unités du catalogue), dégâts par coup = arme / `shotCount` (`CombatStats::damagePerShot()`), multipliés par la table de talents du camp (`BattleTraits`).
+- Cible : `BattleLine::pick()`, uniforme sur toutes les unités vivantes du camp adverse.
+- Tir rapide : après chaque tir, nouveau tir avec probabilité (f − 1) / f contre la cible qui vient d'être visée, nouvelle cible tirée à chaque fois (`BattleSimulator::fire()`). Les défenses n'ont aucune ligne d'attaquant dans `rapid_fire`.
+- Explosion : `resolveShot()` tire l'explosion après **tout tir non rebondi** qui n'a pas détruit la cible (tir absorbé par le bouclier compris), si coque / coque max < 0,7 ; probabilité 1 − ratio. Écart avec l'ancien wiki (« après un tir qui entame la coque »).
+- Résultat : `result()` ; égalité si les deux camps sont vides ou debout.
+- Talents du Vétéran : table de premier round et dernière salve des défenses sur un match nul (`BattleTraits::defenderFirstRound`, `defenderLastSalvo`).
+- Après le combat, seules les quantités sont conservées (`Base::sufferBattleDamage()`, `Fleet::loseShips()`) : une unité survivante repart intacte. Réponse à `combat-03`.
+- Hasard : une graine par arrivée (identifiant de flotte et instant d'arrivée, `BattleDiceFactoryInterface::seedFor()`), flux séparés pour la reconstruction, la lune, le remorquage et la destruction de lune. Le wiki dit seulement que le combat est rejouable et que les tirages suivants sont fixés par le combat ; ni graine, ni sel, ni mode de calcul publiés.
+
+Statistiques effectives (`Ship::combatStats()`, `Defense::combatStats()`, `CombatResearch::withBonuses()`, `AllianceBonuses::boost()`) :
+- arme = round(arme × (1 + 0,1 × Systèmes Offensifs)) ; bouclier = round(bouclier × (1 + 0,1 × Champs de Protection)) ; coque = round(round(structure × (1 + 0,1 × Métallurgie Avancée)) / 10) (`COMBAT_HULL_DIVISOR` 10, `COMBAT_STAT_BONUS_PER_LEVEL` 0,1). `round` de PHP (moitié loin de zéro).
+- Puis × (1 + (Doctrine + talents) / 100), arrondi à l'inférieur après `round(…, 6)` : Doctrine d'armement sur l'arme, Doctrine de protection sur bouclier et coque, chacune 5 % (`alliance_talent.effect_per_level` 5, `max_level` 1, migration `Version20261010090000`), additionnées aux talents de dynastie avant application. Doctrine active à la fin de la période d'intégration (`AllianceMemberBonuses`, `effectiveFrom`).
+- Catalogue de combat relu dans `ship` et `defense` : identique à DONNEES §6 et §7.
+
+Pillage (`AttackCombatResolver::plunder()`, `LootRate`, `Fleet::loadPlunder()`, `Fleet::fit()`) :
+- `LootRate::STANDARD_PERCENT` = 50, **constante du code** : il n'existe aucun réglage d'univers de la part pillée (`Universe` n'a pas de champ de pillage). `combat-04` et l'encart de la page Pillage disaient le contraire : corrigé.
+- Victoire seulement, sauf talent Percée (Amiral) sur un match nul. Stock mis à jour à l'instant d'arrivée (`updateResources(force: true)`). Arrondi : floor(round(r × 50 / 100, 6)) par ressource, énergie exclue.
+- Soute : `CargoBonus::capacityOf()`, `Ship::effectiveCargoCapacity()` = round(fret × (1 + 0,05 × Pliage Spatial)) par vaisseau, × quantité, plus les talents de soute ; moins la cargaison à bord (`freeCargo()`). Dépassement : floor(soute × r / total) par ressource, ou ordre de chargement choisi (talent, `LoadingPriority`).
+- Talents : abri du défenseur, plancher 30 % (`PlayerBonuses::LOOT_RATE_FLOOR`) ; pillage relevé contre une planète abandonnée (`ruinLootRatePoints`, Razzia) ; Acompte.
+- Une attaque visant une lune pille le stock de la lune (`$targetMap->body($targetBody)`).
+
+Débris (`DebrisFieldCalculator::fromLosses()`, `Shared/Domain/ValueObject/DebrisRule.php`) :
+- Défauts : vaisseaux 30 %, défenses 0 % ; expédition 10 % fixe (`DebrisRule::expedition()`). Métal et cristal du coût de chaque unité détruite des deux camps, total arrondi à l'inférieur. Les défenses détruites comptent toutes, reconstruites ou non.
+- `Map::addDebris()` ajoute au champ ; aucune expiration dans `Universe/Domain/Entity/Map.php`. Destruction de lune : aucun appel à `addDebris` (`MoonDestructionResolver`).
+
+Formation de lune (`MoonFormationResolver`, `Shared/Domain/ValueObject/MoonFormation.php`, `Game/Domain/ValueObject/MoonDiameter.php`) :
+- Chance = min(D × max / Dmax, max), 0 si D < Dmax / max ; défauts 20 % et 2 000 000. Calculée sur les débris du combat (`battleDebris`), pas sur le champ. Impossible sans propriétaire, sur une planète abandonnée ou si la case a déjà une lune. Lune donnée au propriétaire de la planète. Champ non consommé.
+- Diamètre : cases = 10 + X + 300 × p, X uniforme sur 0 à 10, p = max(0,01 ; min(1, chance / max) × 0,20) ; diamètre = floor(1 000 × √cases), de 3 605 à 8 944 km ; cases max = floor((diamètre / 1 000)²). Publié comme règle (11 tailles équiprobables) : c'est l'issue affichée dans le rapport, pas un mécanisme caché.
+- Redline : 30 % / 0 % et 20 % pour 2 000 000 (§2).
+
+Reconstruction des défenses (`Base::sufferBattleDamage()`, `DefenseRepairRate`, `DynastyTraits`) :
+- Tirage indépendant par unité, après tout combat (victoire, défaite ou nul) et aussi dans la destruction de lune. 70 % (`STANDARD_PERCENT`), L'Héritage +5 (`NOTHING_IS_LOST_DEFENSE_REPAIR_POINTS`), talents +15 points au plus (`PlayerBonuses::DEFENSE_REPAIR_POINTS_CEILING`), plafond 85 % (`CEILING_PERCENT`). Terre brûlée (Amiral) baisse ; Ligne reformée (Vétéran) : 100 % ; Les dômes d'abord et Rideau léger : toujours reconstruits.
+- Missiles (`MissileStrikeResolver`, `Base::sufferMissileStrike()`) : pas de reconstruction gratuite, sauf talent `missileStrikeRepair`.
+
+Station de réparation (`RepairDock`, `Base::salvageShipWreckage()`) : appelée par `sufferBattleDamage()` après **tout** combat où le défenseur perd des vaisseaux, quel que soit le résultat (constaté aussi dans le lot Économie).
+
+Destruction de lune (`MoonDestructionResolver`, `MoonDestructionOdds`, `FleetComposition::hasOnlyColossi()`, `FlightPlan`) :
+- Flotte de Colossus seulement (`INVALID_DESTROY_COMPOSITION`), cible lune (`DESTROY_REQUIRES_MOON`) ; proposée seulement si l'attaque l'est (`AllowedMissions`).
+- Tirages sur victoire seulement ; N = Colossus restant après les pertes du combat ; chances (100 − √S) × √N plafonné à 100 et √S / 2 ; Briseur de lunes × (1 − réduction) sur le risque ; La lune tient × 0,75 sur la chance (`resistedBy()`).
+- Ni pillage, ni débris, ni formation de lune ; défenses de la lune soumises à la reconstruction. Flottes redirigées vers la planète (`RerouteFleetsOnMoonDestroyedHandler`), points retirés (`DeductMoonPointsHandler`). Rapport `moon_destruction_report` déclinable (`DeclinableReport`).
+
+Rapport de combat (`AttackCombatResolver::fileReports()`, `BattleReportDisclosure`) :
+- Un rapport par camp ; aucun pour le défenseur d'une planète abandonnée. Origine de l'attaque donnée aux deux camps. `battle_report` n'est pas dans `DeclinableReport` : toujours reçu.
+- Vue partielle de l'attaquant : unités adverses croisées (`EngagementRecorder`), restes du défenseur par round retirés.
+- Lignes propres au défenseur : `salvaged`, `forewarnedGuard`, `garrisonRecovered`, `defenseLossRefund`, `warPrize` ; à l'attaquant : `recycled`, `towed`, `raptors`, `secondWave`, `raidEye`.
+- Partage dans l'alliance : 30 jours dans le canal (texte du front `notifications.json`, `share.retentionNotice`). Lien public : `battleShowcase.json` (contenu montré et masqué, 10 par 24 h, adversaire prévenu).
+
+Simulateur (`SimulateBattleHandler`, `SimulationAssumptions`, `DeclaredDefender`, `SimulationLimits`, `config/services.yaml`) :
+- Rapport refusé s'il n'a pas atteint le palier Flotte (`SpyReportTooShallowException`) ; défenses non vues = vides ; recherches non vues = celles de l'attaquant sans ses talents (`withoutTalents()`, la Doctrine de l'attaquant reste).
+- Le défenseur combat sans talents ; l'attaquant avec `CombatModifiers::of($bonuses)` et ses recherches réelles.
+- Limites : 5 000 000 unités par camp, 50 itérations, 10 000 000 déploiements. Le front envoie 50 itérations (`SimulatorPage.tsx`, `SIMULATION_ITERATIONS`).
+- Débris moyen au taux de l'univers ; Butin prévu et Bilan de chasse réservés à des talents.
+- ⚠️ Écart du jeu (à remonter à l'équipe, §11.9) : l'aide dit « Un champ laissé vide vaut ma recherche réelle, jamais zéro » (citation, ponctuation adaptée), mais dès qu'un champ de recherche est rempli, le front n'envoie que celui-là et `CombatResearch::fromMap()` compte les deux autres à 0 (et sans Doctrine ni talents). Le wiki conseille de remplir les trois champs sans parler du défaut.
 
 ### 11.5 Espionnage (`spy-01`, `spy-02`, `spy-04`)
 
