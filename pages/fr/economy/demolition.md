@@ -19,17 +19,17 @@ updated: "2026-10-15T16:10:26.413Z"
 ## Règles
 
 1. Démolir fait **redescendre le bâtiment d'un niveau** et **libère une case**.
-2. La démolition **ne coûte rien et ne rend rien**, ni au lancement ni à la fin.
+2. La démolition **ne coûte rien et ne rend rien**, ni au lancement ni à la fin ; l'annuler ne rend rien non plus.
 3. Elle **retire les points** du niveau démoli.
-4. Sa durée vaut **la moitié du temps de construction** du niveau retiré, avec les bonus de la Fabrique d'automates et de l'Assembleur moléculaire.
+4. Sa durée vaut **la moitié du temps de construction** du niveau retiré, avec la Fabrique d'automates, l'Assembleur moléculaire et la vitesse de construction de l'univers, mais **sans les bonus de vitesse** d'alliance ou de talents.
 5. Impossible de démolir la **Base planetaire**, la **Base lunaire** ou un bâtiment au **niveau 0**.
-6. On ne peut pas mettre en file une amélioration et une démolition du même bâtiment en même temps.
+6. Une démolition passe par la file des bâtiments et y prend une place. Elle ne peut pas attendre derrière une amélioration du même bâtiment, ni l'inverse.
 7. Le **Dock orbital** ne peut pas être démoli pendant qu'il produit des unités.
-8. Démolir l'**Arsenal balistique** alors qu'il est plein ne détruit aucun missile.
+8. Démolir l'**Arsenal balistique** ne détruit aucun missile : ceux qui sont stockés restent.
 
 ## Exemple chiffré
 
-Sur une planète avec Fabrique d'automates 4, construire l'Excavateur minéral niveau 14 a pris **4 204 secondes** (1 h 10 min).
+Sur une planète avec Fabrique d'automates 4, construire l'Excavateur minéral niveau 14 prend **4 204 secondes** (1 h 10 min).
 - Démolir ce niveau 14 prend la moitié : **2 102 secondes** (35 min).
 - Vous récupérez 1 case, perdez 14,6 points d'économie et ne récupérez aucune ressource.
 
@@ -37,6 +37,7 @@ Sur une planète avec Fabrique d'automates 4, construire l'Excavateur minéral n
 
 - **Aucun remboursement** : démolir n'est utile que pour libérer de la place, jamais pour récupérer des ressources.
 - **Vos points baissent** : une démolition peut vous faire changer de palier de protection.
+- **La démolition occupe la file** : pendant ce temps, vous ne construisez rien d'autre sur cette planète si la file est pleine.
 
 ## Pages liées
 
