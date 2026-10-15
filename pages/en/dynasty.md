@@ -15,15 +15,15 @@ updated: "2026-10-06T10:30:31.982Z"
 
 **Dynasties, classes, the common tree and the class trees.**
 
-> **In short**: in each universe, you embody a **dynasty** and a **class** taken within that dynasty. The dynasty grants two passive traits. The class carries a talent tree made of mechanics of its own. Everyone also has a **common tree**, which grows with your level and sets your own pace of play: production, research or fleet.
+> **In short**: in each universe, you embody a **dynasty** and a **class** taken from that dynasty. The dynasty gives two passive traits. The class carries a talent tree made of mechanics of its own. Everyone also has a **common tree**, which grows with your level and sets your own pace: production, research or fleet.
 {.is-info}
 
 | | Dynasty | Class | Common tree |
 |---|---|---|---|
-| What it gives | 2 passive traits, 2 exclusive classes | a talent tree of its own | the generic bonuses |
+| What it gives | 2 passive traits, 2 exclusive classes | a talent tree specific to the class | the generic bonuses |
 | Chosen | once per universe | among your dynasty's classes | |
-| Changes | never in that universe | 50 Stellar Points, once a week | never emptied by a class change |
-| Points | | 1 point per 2 mastery levels, 25 at most | 1 point per level, 50 at most |
+| Changes | never in the universe | 50 Stellar Points, once every 7 days | never emptied by a class change |
+| Points | | 1 point per 2 mastery levels, rounded up, 25 at most | 1 point per level, 50 at most |
 
 ## Pages in this section
 
@@ -34,10 +34,10 @@ updated: "2026-10-06T10:30:31.982Z"
 
 ### Class trees
 
-- [The Admiral](/en/dynasty/classes/admiral)
 - [The Builder](/en/dynasty/classes/builder)
 - [The Energetician](/en/dynasty/classes/energist)
 - [The Theorist](/en/dynasty/classes/theorist)
+- [The Admiral](/en/dynasty/classes/admiral)
 - [The Navigator](/en/dynasty/classes/navigator)
 - [The Shadow](/en/dynasty/classes/shadow)
 - [The Archivist](/en/dynasty/classes/archivist) (The Heritage)

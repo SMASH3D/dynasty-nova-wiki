@@ -22,8 +22,8 @@ updated: "2026-10-06T10:29:57.527Z"
 |---|---|---|---|
 | Ce qu'elle donne | 2 traits passifs, 2 classes exclusives | un arbre de talents propre à la classe | les bonus génériques |
 | Se choisit | une fois par univers | parmi les classes de votre dynastie | |
-| Change | jamais dans l'univers | 50 Points stellaires, une fois par semaine | n'est jamais vidé par un changement de classe |
-| Points | | 1 point par 2 niveaux de maîtrise, 25 au maximum | 1 point par niveau, 50 au maximum |
+| Change | jamais dans l'univers | 50 Points stellaires, une fois tous les 7 jours | n'est jamais vidé par un changement de classe |
+| Points | | 1 point par 2 niveaux de maîtrise, arrondi au supérieur, 25 au maximum | 1 point par niveau, 50 au maximum |
 
 ## Pages de cette rubrique
 
@@ -34,10 +34,10 @@ updated: "2026-10-06T10:29:57.527Z"
 
 ### Arbres de classe
 
-- [L'Amiral](/fr/dynasty/classes/admiral)
 - [Le Bâtisseur](/fr/dynasty/classes/builder)
 - [L'Énergéticien](/fr/dynasty/classes/energist)
 - [Le Théoricien](/fr/dynasty/classes/theorist)
+- [L'Amiral](/fr/dynasty/classes/admiral)
 - [Le Navigateur](/fr/dynasty/classes/navigator)
 - [L'Ombre](/fr/dynasty/classes/shadow)
 - [L'Archiviste](/fr/dynasty/classes/archivist) (L'Héritage)
