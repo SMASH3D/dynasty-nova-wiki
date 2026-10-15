@@ -23,7 +23,8 @@ Un agent IA qui travaille sur ce dépôt doit lire [AGENTS.md](AGENTS.md) avant 
 |---|---|
 | `tools/wikijs.py` | Synchronisation avec Wiki.js : `status`, `push`, `create`, `pull`, `upload`. |
 | `tools/apply_edits.py` | Applique un lot de remplacements `[ancien, nouveau]` aux pages locales. |
-| `tools/talent_diagrams.py` | Diagrammes Mermaid des arbres de talents, générés depuis les tableaux des pages de classe (compatibles Mermaid 8.8.2). Finitions facultatives : `assets/talent-tree.css`. |
+| `tools/talent_diagrams.py` | Diagrammes Mermaid des arbres de talents, générés depuis la forme des arbres lue dans le code (`tools/dynasty_pages/talents.json`), compatibles Mermaid 8.8.2 ; vérifie aussi les tableaux des pages. Finitions facultatives : `assets/talent-tree.css`. |
+| `tools/dynasty_pages/` | Rubrique Dynastie et talents générée d'après le code : export du catalogue (`export_talents.php` → `talents.json`), textes du client (`labels.json`), générateurs `p_*.py`, textes vérifiés de chaque classe `t_<classe>.py`. |
 | `tools/building_tables.py` | Annexe des bâtiments niveau par niveau (coût, énergie, production), générée depuis le catalogue relevé dans le code. |
 | `tools/body_hash.py` | Empreinte SHA-256 du corps d'une page (sans front matter). |
 | `tools/export_to_md.py` | Export initial du wiki vers les fichiers markdown (historique). |
