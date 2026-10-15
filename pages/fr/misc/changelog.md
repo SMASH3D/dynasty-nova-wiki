@@ -28,6 +28,17 @@ updated: "2026-10-15T16:29:45.768Z"
 - **15 octobre 2026 (alliances)** : rubrique Alliances vérifiée sur le code du jeu. Missions et station d'alliance réécrites (convois vers la trésorerie, entraide, station à 3 paliers, missions par inscription et effort relatif) ; tous les membres votent ; droits par rang et par fonction ; coûts de renommage ; fair-play de 0 à 100 ; limite d'attaques précisée.
 - **15 octobre 2026 (annexe)** : nouvelle [annexe des bâtiments niveau par niveau](/fr/economy/building-levels) : coût, énergie et production de chaque niveau, jusqu'au niveau 50.
 - **15 octobre 2026 (banque)** : nouvelle page [Banque stellaire](/fr/economy/stellar-bank).
+- **15 octobre 2026 (réécriture)** : toutes les rubriques réécrites d'après le code du jeu, valeurs et tables recalculées.
+  - **Économie** : tables de production, d'énergie et de stockage niveau par niveau, catalogue complet des bâtiments, page des formules, paiement des commandes du chantier, Station de réparation après tout combat en défense.
+  - **Alliances** : rangs, fonctions et droits, recrutement, succession ; pactes, fair-play de 0 à 100, votes de tous les membres, guerres et score.
+  - **Recherche** : une étude à la fois, formule de durée complète, effets chiffrés, énergie de Manipulation Gravitationnelle, arbre complet, réseau de la Collaboration Stellaire.
+  - **Flotte** : changements de moteur, vitesse de 1 à 100 %, carte qui boucle, hydrogène dans les soutes, dépôts à la Station stellaire, règles d'envoi par mission.
+  - **Défense** : durées de construction, file et paiement des défenses, portée, vol, interception et dégâts des missiles.
+  - **Combat** : pillage à 50 % dans tous les univers, explosions, plafond de reconstruction à 85 %, taille des lunes, simulateur.
+  - **Espionnage** : espionnage des lunes, vision partagée d'alliance, alerte d'intrusion, Phalange de capteur.
+  - **Univers** : carte qui boucle, Station stellaire, colonisation, abandon, bonus de position dans les univers de 9 à 20 positions.
+  - **Joueurs** : points militaires de tous les vaisseaux, protection des nouveaux arrivants de 7 jours, conservation des rapports, univers privé gelé, réglages des rapports.
+  - **Dynastie et talents** : valeurs corrigées, ultime de classe sans condition de niveau, règles des arêtes et des verrous, textes des talents repris du jeu.
 
 ## Pages liées
 
