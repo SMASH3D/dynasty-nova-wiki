@@ -13,7 +13,7 @@ updated: "2026-10-02T16:36:16.412Z"
 
 # Files de construction
 
-> **En bref** : chaque planète a quatre files : bâtiments, recherche, vaisseaux et défenses. Chaque file accepte 2 ordres (5 en Premium), celui en cours compris. Un bâtiment ou une recherche n'est payé qu'au moment où il démarre ; s'il ne peut pas être payé, il est abandonné sans frais.
+> **En bref** : chaque planète a quatre files : bâtiments, recherche, vaisseaux et défenses. Chaque file accepte 2 ordres (5 en Premium), celui en cours compris. La recherche avance une étude à la fois pour tout votre empire. Un bâtiment ou une recherche n'est payé qu'au moment où il démarre ; s'il ne peut pas être payé, il est abandonné sans frais.
 {.is-info}
 
 > **Paramètre d'univers** : la taille des files peut être différente selon l'univers.
@@ -22,16 +22,16 @@ updated: "2026-10-02T16:36:16.412Z"
 
 ## Règles
 
-1. Quatre files indépendantes : **bâtiments**, **recherche**, **vaisseaux**, **défenses**.
+1. Quatre files par planète : **bâtiments**, **recherche**, **vaisseaux**, **défenses**. Les études de recherche passent **une à la fois pour tout votre empire** : chaque planète garde sa propre file, mais une étude placée sur une colonie attend que celle en cours sur une autre planète soit terminée (le talent [Second laboratoire](/fr/dynasty/common-tree) permet d'en mener deux).
 2. Chaque file accepte **2 ordres**, celui en cours compris, ou **5 en Premium**.
 3. Un **bâtiment** ou une **recherche** est **payé au lancement**, pas à la mise en file. Si, au moment de démarrer, la planète n'a pas les ressources, l'ordre est **abandonné sans frais**.
 4. Les ordres en attente affichent une **durée estimée**, recalculée au lancement.
 5. On ne peut pas mettre en file une amélioration et une démolition du même bâtiment en même temps.
-6. Pendant que le **Dock orbital** produit des unités, il ne peut être ni amélioré ni démoli. Pendant que le **Centre d'innovation** est en travaux, aucune recherche ne peut être lancée ni ajoutée.
+6. Pendant que le **Dock orbital** produit des unités, il ne peut être ni amélioré ni démoli ; pendant qu'il est en travaux, aucun vaisseau ni aucune défense ne peut y être commandé. Pendant que le **Centre d'innovation** d'une planète est en travaux, aucune recherche ne peut être lancée ni ajoutée depuis cette planète ; et tant qu'une recherche lancée depuis une planète est en cours, son Centre d'innovation ne peut pas être amélioré.
 
 ### Annulation
 7. Annuler un ordre **encore en attente** ne coûte rien et ne rend rien : il n'a pas été payé.
-8. Annuler un **bâtiment ou une recherche en cours** rend **80 % du coût × (temps restant / durée totale)**, arrondi à l'inférieur pour chaque ressource.
+8. Annuler un **bâtiment ou une recherche en cours** rend **80 % du coût × (temps restant / durée totale)**, arrondi à l'inférieur pour chaque ressource. Le trait de dynastie [Rien ne se perd](/fr/dynasty/dynasties) porte ce taux à 85 %.
 9. Annuler une commande de **vaisseaux ou de défenses** rend 80 % des unités payées mais pas encore livrées, sans prorata de temps. Les unités déjà livrées sont conservées.
 10. L'**énergie requise** n'est jamais remboursée : elle n'est pas dépensée.
 

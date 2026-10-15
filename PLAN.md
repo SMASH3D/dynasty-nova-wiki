@@ -346,7 +346,7 @@ Règle : aucune de ces formules ne va dans le wiki avant confirmation. Les pages
 
 - `formula-01` ⏳ Production et consommation des mines. Les valeurs du jeu suivent : Excavateur minéral 30 × N × 1,1^N métal/h ; Extracteur cristallin 20 × N × 1,1^N cristal/h ; Capteurs photovoltaïques 20 × N × 1,1^N énergie (avant bonus de température) ; consommation d'énergie 10 × N × 1,1^N pour l'Excavateur, l'Extracteur et le Condensateur. Est-ce exact ? Le Condensateur produit-il 10 × N × 1,1^N × (1,44 − 0,004 × Tmax) ?
 - `formula-02` ⏳ Capacité des entrepôts : les valeurs suivent 5 000 × partie entière(2,5 × e^(20 × N / 33)), plus 10 000 de la Base planetaire. Est-ce exact ?
-- `formula-03` ⏳ Durée de construction d'un bâtiment : les valeurs suivent (métal + cristal) / (2 500 × (1 + Fabrique d'automates) × 2^Assembleur moléculaire) heures, divisé par la vitesse construction de l'univers. Est-ce exact ?
+- `formula-03` ⚠️ (audit du 15 octobre 2026 : le code compte métal + cristal + **hydrogène**, voir DONNEES §4 ; statut à trancher dans le lot des formules) Durée de construction d'un bâtiment : les valeurs suivent (métal + cristal) / (2 500 × (1 + Fabrique d'automates) × 2^Assembleur moléculaire) heures, divisé par la vitesse construction de l'univers. Est-ce exact ?
 - `formula-04` ⏳ (ex `fleet-08`) Durée de construction des vaisseaux et défenses au Dock orbital : quelle formule ? Exemple relevé : une Navette de fret avec Dock orbital 4 et Assembleur 0 prend 1 080 s.
 - `formula-05` ⏳ Collecteur solaire : l'équipe indique « Tmax / 4 plus sa base d'énergie ». La base vaut-elle 20 (35 relevés à Tmax = 60 °C) ?
 - `formula-06` ⏳ Coût des bâtiments et recherches : coût du niveau N = coût du niveau 1 × facteur^(N − 1), avec les facteurs relevés (1,5 ; 1,6 ; 1,75 ; 1,8 ; 2 ; 3 ; 5) ? Arrondi appliqué ?
@@ -359,7 +359,7 @@ Règle : aucune de ces formules ne va dans le wiki avant confirmation. Les pages
 - `fleet-09` ⏳ Paiement des vaisseaux et défenses : « payés par unité à la mise en file » (`fleet-01`) ou « payés à leur tour, abandonnés sans frais si la base ne peut pas payer » (liste du 2 octobre) ? Un texte du jeu évoque une commande coupée « faute de ressources pour l'unité suivante ». Bloque P-43 avec `formula-04`.
 - `misc-05` ✅ L'attaque aboutit ; seuls les nouveaux départs sont bloqués. (Question : Une flotte d'attaque qui arrive pendant une maintenance : combat différé, annulé, ou retour automatique ?)
 
-- `economy-11` ⏳ Le bonus du Centre logistique (+10 % par niveau) s'applique-t-il aussi aux 10 000 de la Base planetaire ? Se cumule-t-il avec le talent Entrepôts fédérés (addition ou multiplication) ?
+- `economy-11` ✅ (code, 15 octobre 2026) Oui, il s'applique aux 10 000 de la Base planetaire, et il s'**additionne** aux autres bonus (Entrepôts fédérés, talents) : DONNEES §4, « Relevé dans le code ». Page `economy/storage` FR et EN complétée. (Question : Le bonus du Centre logistique (+10 % par niveau) s'applique-t-il aussi aux 10 000 de la Base planetaire ? Se cumule-t-il avec le talent Entrepôts fédérés (addition ou multiplication) ?)
 
 - `universe-12` ⏳ Le bonus de position suit-il aussi la mise à l'échelle sur 15 positions dans les univers de 9 à 20 positions ? Est-il réglable par univers ?
 
