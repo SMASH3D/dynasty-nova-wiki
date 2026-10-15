@@ -8,7 +8,7 @@ description: "All buildings: role, maximum level, requirements."
 tags: ["economy"]
 published: true
 created: "2026-10-02T13:10:42.469Z"
-updated: "2026-10-02T17:40:11.025Z"
+updated: "2026-10-15T16:10:14.029Z"
 game_version: "Serveur 2.1.0 · Client 3.1.0"
 ---
 

@@ -8,7 +8,7 @@ description: "Storage capacity and overflow."
 tags: ["economy"]
 published: true
 created: "2026-10-02T13:10:40.543Z"
-updated: "2026-10-02T17:40:53.488Z"
+updated: "2026-10-15T16:10:20.353Z"
 game_version: "Serveur 2.1.0 · Client 3.1.0"
 ---
 

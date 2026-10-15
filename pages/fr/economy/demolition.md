@@ -8,7 +8,7 @@ description: "Rendre un niveau pour libérer une case."
 tags: ["economy"]
 published: true
 created: "2026-10-02T13:08:31.723Z"
-updated: "2026-10-02T16:36:18.031Z"
+updated: "2026-10-15T16:10:26.413Z"
 ---
 
 # Démolir un bâtiment

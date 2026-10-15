@@ -8,7 +8,7 @@ description: "Recovering part of the ships destroyed while defending."
 tags: ["economy"]
 published: true
 created: "2026-10-02T13:10:50.356Z"
-updated: "2026-10-02T17:40:17.223Z"
+updated: "2026-10-15T16:10:17.134Z"
 game_version: "Serveur 2.1.0 · Client 3.1.0"
 ---
 

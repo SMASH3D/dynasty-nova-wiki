@@ -8,7 +8,7 @@ description: "Ordres en file, paiement et annulation."
 tags: ["economy"]
 published: true
 created: "2026-10-02T13:08:29.825Z"
-updated: "2026-10-02T16:36:16.412Z"
+updated: "2026-10-15T16:10:23.274Z"
 ---
 
 # Files de construction

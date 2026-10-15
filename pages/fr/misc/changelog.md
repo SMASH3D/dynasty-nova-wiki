@@ -8,7 +8,7 @@ description: "Les modifications du wiki, date par date."
 tags: ["misc"]
 published: true
 created: "2026-10-02T13:10:02.305Z"
-updated: "2026-10-07T22:08:35.172Z"
+updated: "2026-10-15T16:10:32.348Z"
 ---
 
 # Historique du wiki
