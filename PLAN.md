@@ -84,6 +84,7 @@ Chaque page porte un identifiant de page (P-xx). Abréviations : *[B]* = ton bri
 | P-22 | `economy/energy` | L'énergie | Sources, consommation, déficit proportionnel, taux de fonctionnement. | [B] + [J] | `economy-01`, `economy-02` |
 | P-23 | `economy/storage` | Le stockage | Capacités, arrêt de production quand c'est plein. | [J] complet | |
 | P-24 | `economy/buildings` | Liste des bâtiments | Tableau : rôle, coût niv. 1, facteur, niveau max, prérequis. | [J] complet | `economy-03` |
+| P-24b | `economy/building-levels` | Annexe : les bâtiments niveau par niveau | Coût, énergie, production de chaque niveau (50 au plus), générée par `tools/building_tables.py`. | Code (DONNEES §4) | `formula-01`, `formula-02`, `formula-06` |
 | P-25 | `economy/formulas` | Formules de l'économie | Coûts, durées, production, points. | [J] vérifié | `economy-04` |
 | P-26 | `economy/build-queue` | Files de construction | 2 ordres (5 en Premium), annulation, remboursement. | [J] | `economy-05`, `economy-06` |
 | P-27 | `economy/demolition` | Démolir un bâtiment | Retour au niveau précédent, case libérée. | [J] | `economy-07` |
@@ -344,12 +345,12 @@ En bref · encart « paramètre d'univers » si besoin · Règles · Exemple chi
 
 Règle : aucune de ces formules ne va dans le wiki avant confirmation. Les pages concernées n'affichent que des valeurs relevées en jeu.
 
-- `formula-01` ⏳ Production et consommation des mines. Les valeurs du jeu suivent : Excavateur minéral 30 × N × 1,1^N métal/h ; Extracteur cristallin 20 × N × 1,1^N cristal/h ; Capteurs photovoltaïques 20 × N × 1,1^N énergie (avant bonus de température) ; consommation d'énergie 10 × N × 1,1^N pour l'Excavateur, l'Extracteur et le Condensateur. Est-ce exact ? Le Condensateur produit-il 10 × N × 1,1^N × (1,44 − 0,004 × Tmax) ?
-- `formula-02` ⏳ Capacité des entrepôts : les valeurs suivent 5 000 × partie entière(2,5 × e^(20 × N / 33)), plus 10 000 de la Base planetaire. Est-ce exact ?
+- `formula-01` ✅ Confirmé par le code (15 octobre 2026, DONNEES §4 « Relevé dans le code »). Ancienne question : Production et consommation des mines. Les valeurs du jeu suivent : Excavateur minéral 30 × N × 1,1^N métal/h ; Extracteur cristallin 20 × N × 1,1^N cristal/h ; Capteurs photovoltaïques 20 × N × 1,1^N énergie (avant bonus de température) ; consommation d'énergie 10 × N × 1,1^N pour l'Excavateur, l'Extracteur et le Condensateur. Est-ce exact ? Le Condensateur produit-il 10 × N × 1,1^N × (1,44 − 0,004 × Tmax) ?
+- `formula-02` ✅ Confirmé par le code (15 octobre 2026, DONNEES §4). Ancienne question : Capacité des entrepôts : les valeurs suivent 5 000 × partie entière(2,5 × e^(20 × N / 33)), plus 10 000 de la Base planetaire. Est-ce exact ?
 - `formula-03` ⚠️ (audit du 15 octobre 2026 : le code compte métal + cristal + **hydrogène**, voir DONNEES §4 ; statut à trancher dans le lot des formules) Durée de construction d'un bâtiment : les valeurs suivent (métal + cristal) / (2 500 × (1 + Fabrique d'automates) × 2^Assembleur moléculaire) heures, divisé par la vitesse construction de l'univers. Est-ce exact ?
 - `formula-04` ⏳ (ex `fleet-08`) Durée de construction des vaisseaux et défenses au Dock orbital : quelle formule ? Exemple relevé : une Navette de fret avec Dock orbital 4 et Assembleur 0 prend 1 080 s.
 - `formula-05` ⏳ Collecteur solaire : l'équipe indique « Tmax / 4 plus sa base d'énergie ». La base vaut-elle 20 (35 relevés à Tmax = 60 °C) ?
-- `formula-06` ⏳ Coût des bâtiments et recherches : coût du niveau N = coût du niveau 1 × facteur^(N − 1), avec les facteurs relevés (1,5 ; 1,6 ; 1,75 ; 1,8 ; 2 ; 3 ; 5) ? Arrondi appliqué ?
+- `formula-06` ✅ Confirmé par le code : arrondi à l'inférieur par ressource (15 octobre 2026, DONNEES §4). Ancienne question : Coût des bâtiments et recherches : coût du niveau N = coût du niveau 1 × facteur^(N − 1), avec les facteurs relevés (1,5 ; 1,6 ; 1,75 ; 1,8 ; 2 ; 3 ; 5) ? Arrondi appliqué ?
 - `moon-02` ⏳ **À clarifier pour compléter P-73** : coût de construction et prérequis de la Phalange de capteur. P-73 est rédigée sans ces données, et P-17 Lunes reste bloquée faute de données sur la Base lunaire (`universe-09`).
 
 ### Nouvelles questions (2 octobre 2026, fin de journée)
