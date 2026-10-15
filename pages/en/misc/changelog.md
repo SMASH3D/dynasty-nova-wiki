@@ -23,7 +23,7 @@ updated: "2026-10-06T10:30:58.836Z"
 - **6 October 2026**: flight time formula corrected (constant 35,000, speed factor from 1 to 10, following the game fix for trips that were ten times too short); 7-day inactivity on Redline; rotating shop and planet skin rarities; spying on players on vacation; reports your way; alliance announcement; private universe plan names and starting price.
 - **6 October 2026 (continued)**: monthly planet temperature cycle detailed; attack alert 1 minute before impact.
 - **6 October 2026 (dynasties)**: new [Dynasty and talents](/en/dynasty) section: dynasties, classes, talents, the common tree and the ten class trees. Movement, tutorial, defence rebuild and espionage updated accordingly.
-- **15 October 2026 (alliances)**: Alliances pages checked against the game code. Alliance missions and station rewritten (convoys to the treasury, mutual aid, 3-tier station, missions by enrollment and relative effort); every member votes; rights by rank and function; renaming costs; fair play from 0 to 100; attack limit clarified.
+- **15 October 2026 (alliances)**: Alliances, Pacts and Missions pages rewritten from the game code. Alliance missions and station (convoys to the treasury, mutual aid, 3-tier station, missions by enrollment and relative effort); every member votes; rights by rank and function; renaming costs; fair play from 0 to 100; attack limit clarified.
 
 ## Related pages
 

@@ -21,7 +21,7 @@ published: false
 4. Vendre et acheter sont impossibles en [mode vacances](/fr/players/vacation-mode).
 
 ### Vendre
-5. Vendre, c'est **envoyer des cargos** à la station de votre système, depuis une planète ou une lune qui a un **Dock orbital**. Seuls les **petits et grands cargos** peuvent partir ; un envoi porte de 1 à 3 ressources.
+5. Vendre, c'est **envoyer des cargos** à la station de votre système, depuis une planète ou une lune qui a un **Dock orbital**. Seuls partent les **Navettes de fret** et les **Cargos stellaires** ; un envoi porte de 1 à 3 ressources.
 6. Le trajet dure **1 heure à l'aller et 1 heure au retour**, quelle que soit la distance, **sans hydrogène** et **sans rappel possible**. Il occupe un emplacement de flotte.
 7. Le **prix est fixé au départ**, au cours du moment. Les Crédits sont versés à l'arrivée des cargos à la station, qui rentrent ensuite à vide.
 8. La banque prélève une **taxe de 10 %** sur chaque vente.

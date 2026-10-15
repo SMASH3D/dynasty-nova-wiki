@@ -21,7 +21,7 @@ published: false
 4. Selling and buying are impossible in [vacation mode](/en/players/vacation-mode).
 
 ### Selling
-5. Selling means **sending cargo ships** to your system's station, from a planet or moon with an **Orbital Dock**. Only **light and heavy cargo ships** can go; one shipment carries 1 to 3 resources.
+5. Selling means **sending cargo ships** to your system's station, from a planet or moon with an **Orbital Dock**. Only **Cargo Shuttles and Stellar Freighters** can go; one shipment carries 1 to 3 resources.
 6. The trip takes **1 hour out and 1 hour back**, whatever the distance, **with no hydrogen** and **no recall**. It takes a fleet slot.
 7. The **price is set at departure**, at the rate of the moment. The Credits are paid when the cargo ships reach the station, and they come home empty.
 8. The bank takes a **10% tax** on every sale.

@@ -19,7 +19,7 @@ updated: "2026-10-02T16:37:12.732Z"
 ## Règles
 
 ### Trésorerie (la bourse commune)
-1. La trésorerie se remplit **par convoi** : depuis une planète ou une lune qui a un **Dock orbital**, vous envoyez des **petits ou grands cargos** chargés de métal, de cristal ou d'hydrogène vers la **Station stellaire de votre système**, la dernière ligne de chaque système dans la vue galaxie.
+1. La trésorerie se remplit **par convoi** : depuis une planète ou une lune qui a un **Dock orbital**, vous envoyez des **Navettes de fret ou Cargos stellaires** chargés de métal, de cristal ou d'hydrogène vers la **Station stellaire de votre système**, la dernière ligne de chaque système dans la vue galaxie.
 2. Un convoi vole **1 heure à l'aller et 1 heure au retour**, quelle que soit la distance, **sans consommer d'hydrogène** et **sans rappel possible**. Il occupe un emplacement de flotte. Il est refusé en mode vacances et quand une attaque est annoncée sur la planète de départ.
 3. Rien n'est versé au départ : à l'arrivée, la trésorerie prend ce que son plafond permet, ressource par ressource, et **le surplus rentre avec les cargos**. Un don ne revient jamais au membre.
 4. Le plafond est de **5 000 000 par ressource**, doublé par niveau du talent Soutes mutualisées : 10, 20 puis **40 000 000** au niveau 3.

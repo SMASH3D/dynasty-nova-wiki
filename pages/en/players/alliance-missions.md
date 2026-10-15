@@ -19,7 +19,7 @@ updated: "2026-10-02T16:38:46.269Z"
 ## Rules
 
 ### Treasury (the common purse)
-1. The treasury fills up **by convoy**: from a planet or moon with an **Orbital Dock**, you send **light or heavy cargo ships** loaded with metal, crystal or hydrogen to the **Stellar Station of your system**, the last row of every system in the galaxy view.
+1. The treasury fills up **by convoy**: from a planet or moon with an **Orbital Dock**, you send **Cargo Shuttles or Stellar Freighters** loaded with metal, crystal or hydrogen to the **Stellar Station of your system**, the last row of every system in the galaxy view.
 2. A convoy flies **1 hour out and 1 hour back**, whatever the distance, **burning no hydrogen** and **with no recall**. It takes a fleet slot. It is refused in vacation mode and when an attack has been announced on the departure planet.
 3. Nothing is paid in at departure: on arrival, the treasury takes what its cap allows, resource by resource, and **the surplus comes home with the cargo ships**. A donation never goes back to the member.
 4. The cap is **5,000,000 per resource**, doubled per level of the Shared holds talent: 10, 20, then **40,000,000** at level 3.
