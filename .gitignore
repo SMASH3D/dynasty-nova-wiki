@@ -3,3 +3,4 @@
 __pycache__/
 .env
 pages/fr/dynasty/classes/diagrams.md
+.idea/

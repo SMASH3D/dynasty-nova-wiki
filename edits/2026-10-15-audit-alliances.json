@@ -1,0 +1,162 @@
+{
+ "fr/players/alliances": [
+  [
+   "Le talent **Ambassades** ajoute 2 places par niveau (3 niveaux), soit **56 membres** au maximum.",
+   "Le talent **Ambassades** ajoute 2 places par niveau (3 niveaux), soit **56 membres** au maximum. La capacité monte quand le fondateur en place termine un niveau de Diplomatie Stellaire : un nouveau fondateur mieux équipé ne la relève qu'à son prochain niveau terminé."
+  ],
+  [
+   "5. **Période d'intégration** : pendant ses **24 premières heures**, un nouveau membre a sa place mais ne bénéficie d'aucun avantage de l'alliance.",
+   "5. **Période d'intégration** : pendant ses **24 premières heures**, un nouveau membre a sa place mais ne bénéficie d'aucun avantage de l'alliance : ni talents, ni aide, ni missions. Il peut déjà voter."
+  ],
+  [
+   "avant d'en rejoindre une autre. Revenir plus tard repart de zéro : ancienneté et période d'intégration comprises.",
+   "avant d'en rejoindre ou d'en fonder une autre ; vous pouvez déjà postuler et recevoir des invitations pendant ce délai. Une dissolution n'impose aucun délai. Revenir plus tard repart de zéro : ancienneté et période d'intégration comprises."
+  ],
+  [
+   "7. Le fondateur **ne peut pas quitter** son alliance : il doit d'abord céder sa place à un autre membre, et devient alors vice-président. Ce choix est définitif.",
+   "7. Le fondateur **ne peut pas quitter** son alliance : il doit d'abord céder sa place à un autre membre, présent et membre depuis au moins 24 heures, et devient alors vice-président. Ce choix est définitif."
+  ],
+  [
+   "8. **Succession automatique** : un fondateur qui ne se connecte plus est alerté à 7 puis 12 jours, et **perd sa place à 14 jours**. Le successeur est choisi par rang, puis par ancienneté dans ce rang. Il doit être présent et membre depuis plus de 24 heures.",
+   "8. **Succession automatique** : quand le fondateur ne se connecte plus, les membres sont alertés à 7 puis 12 jours, et il **perd sa place à 14 jours**. Le successeur est choisi par rang, puis par ancienneté dans ce rang ; il doit être présent et membre depuis au moins 24 heures. L'héritier prévu est affiché aux membres. Sans candidat éligible, le fondateur garde sa place."
+  ],
+  [
+   "9. Les membres reçoivent des **rangs** et des **fonctions** (par exemple gérer les missions, voter les guerres).",
+   "9. Chaque membre a un **rang** : Fondateur, Vice-président, Officier, Membre ou Recrue. Il peut aussi recevoir des **fonctions** : Diplomate, Stratège, Intendant, Recruteur, Coordinateur. Rangs et fonctions donnent des droits (voir « Qui peut quoi »)."
+  ],
+  [
+   "10. Changer le **nom et le tag** (ensemble) ou la **description** se paie en Points stellaires. L'ancien nom reste visible dans l'historique public de l'alliance.",
+   "10. Changer le **nom et le tag** (ensemble) coûte **500 Points stellaires**, la **description** **50** (la vider est gratuit), payés par le membre qui fait le changement. La devise, la couleur, l'écusson et la bannière sont gratuits. L'ancien nom reste visible dans l'historique public de l'alliance."
+  ],
+  [
+   "Le nom et le tag restent réservés 30 jours.",
+   "Les membres sont libérés sans délai d'attente, l'historique du canal est effacé et les guerres en cours prennent fin. Le nom et le tag restent réservés 30 jours, pour tout le monde."
+  ],
+  [
+   "12. **Annonce** : le fondateur et le vice-président peuvent épingler un message en tête de l'accueil de l'alliance, visible des seuls membres.",
+   "12. **Annonce** : le fondateur et le vice-président peuvent épingler un message en tête de l'accueil de l'alliance, visible des seuls membres. Ils peuvent aussi garder jusqu'à trois messages du canal d'alliance en tête du fil.\n13. **Recrutement** : une alliance est **ouverte** (on entre directement), **sur candidature** (un Recruteur ou un dirigeant accepte) ou **sur invitation** (seule une invitation ouvre une place).\n14. **Exclure** un membre demande d'être au moins Officier et de le surclasser.\n15. **Pas de tir ami** : dès votre arrivée, vous ne pouvez ni attaquer ni viser de missiles un membre de votre alliance. L'espionnage et le transport restent possibles."
+  ],
+  [
+   "| Avec Ambassades niveau 3 | 16 | 21 | 26 | 31 | 36 | 41 | 46 | 56 |\n",
+   "| Avec Ambassades niveau 3 | 16 | 21 | 26 | 31 | 36 | 41 | 46 | 56 |\n\n### Qui peut quoi\n\n| Droit | Fondateur | Vice-président | Officier | Fonction qui le donne |\n|---|---|---|---|---|\n| Dissoudre l'alliance | oui | | | |\n| Transmettre la direction | oui | | | |\n| Modifier l'identité | oui | oui | | |\n| Publier l'annonce | oui | oui | | |\n| Épingler des messages | oui | oui | | |\n| Changer les rangs | oui | oui | oui | |\n| Attribuer les fonctions | oui | oui | oui | |\n| Exclure un membre | oui | oui | oui | |\n| Écarter des missions | oui | oui | oui | Coordinateur |\n| Gérer le recrutement | oui | oui | | Recruteur |\n| Mener la diplomatie | oui | oui | | Diplomate |\n| Gérer la trésorerie | oui | oui | | Intendant |\n| Gérer les missions | oui | oui | | Coordinateur |\n\nUn Officier n'agit que sur les membres de rang inférieur au sien. Membre et Recrue n'ont aucun droit par leur rang. Les fonctions se cumulent. Voter n'est pas un droit : tous les membres votent.\n"
+  ]
+ ],
+ "en/players/alliances": [
+  [
+   "The **Embassies** talent adds 2 seats per level (3 levels), so **56 members** at most.",
+   "The **Embassies** talent adds 2 seats per level (3 levels), so **56 members** at most. Capacity rises when the founder in office completes a Stellar Diplomacy level: a new, better-equipped founder only raises it at their next completed level."
+  ],
+  [
+   "5. **Settling-in period**: during their **first 24 hours**, a new member holds a seat but gets none of the alliance's benefits.",
+   "5. **Settling-in period**: during their **first 24 hours**, a new member holds a seat but gets none of the alliance's benefits: no talents, no aid, no missions. They can already vote."
+  ],
+  [
+   "you must wait **24 hours** before joining another. Coming back later starts from scratch: seniority and settling-in period included.",
+   "you must wait **24 hours** before joining or founding another; you can already apply and receive invitations during that wait. A dissolution imposes no wait. Coming back later starts from scratch: seniority and settling-in period included."
+  ],
+  [
+   "7. The founder **cannot leave** the alliance: they must first hand the founding seat to another member, and then become vice-president. This choice is final.",
+   "7. The founder **cannot leave** the alliance: they must first hand the founding seat to another member, present and a member for at least 24 hours, and then become vice-president. This choice is final."
+  ],
+  [
+   "8. **Automatic succession**: a founder who stops logging in is warned at 7 then 12 days, and **loses the seat at 14 days**. The successor is chosen by rank, then by seniority in that rank. They must be present and a member for more than 24 hours.",
+   "8. **Automatic succession**: when the founder stops logging in, the members are alerted at 7 then 12 days, and the founder **loses the seat at 14 days**. The successor is chosen by rank, then by seniority in that rank; they must be present and a member for at least 24 hours. The planned heir is shown to the members. With no eligible candidate, the founder keeps the seat."
+  ],
+  [
+   "9. Members get **ranks** and **functions** (for example managing missions, voting on wars).",
+   "9. Each member has a **rank**: Founder, Vice-president, Officer, Member or Recruit. They can also be given **functions**: Diplomat, Strategist, Quartermaster, Recruiter, Coordinator. Ranks and functions grant rights (see \"Who can do what\")."
+  ],
+  [
+   "10. Changing the **name and tag** (together) or the **description** costs Stellar Points. The former name stays visible in the alliance's public history.",
+   "10. Changing the **name and tag** (together) costs **500 Stellar Points**, the **description** **50** (clearing it is free), paid by the member who makes the change. The motto, colour, crest and banner are free. The former name stays visible in the alliance's public history."
+  ],
+  [
+   "The name and tag stay reserved for 30 days.",
+   "Members are released with no wait, the channel history is erased and ongoing wars end. The name and tag stay reserved for 30 days, for everyone."
+  ],
+  [
+   "12. **Announcement**: the founder and the vice-president can pin a message at the top of the alliance home, visible to members only.",
+   "12. **Announcement**: the founder and the vice-president can pin a message at the top of the alliance home, visible to members only. They can also keep up to three alliance channel messages at the top of the feed.\n13. **Recruitment**: an alliance is **open** (anyone walks straight in), **by application** (a Recruiter or a leader accepts) or **by invitation** (only an invitation opens a seat).\n14. **Excluding** a member takes being at least an Officer and outranking them.\n15. **No friendly fire**: from the day you join, you can neither attack nor fire missiles at a member of your alliance. Espionage and transport are still possible."
+  ],
+  [
+   "| With Embassies level 3 | 16 | 21 | 26 | 31 | 36 | 41 | 46 | 56 |\n",
+   "| With Embassies level 3 | 16 | 21 | 26 | 31 | 36 | 41 | 46 | 56 |\n\n### Who can do what\n\n| Right | Founder | Vice-president | Officer | Function that grants it |\n|---|---|---|---|---|\n| Dissolve the alliance | yes | | | |\n| Hand over leadership | yes | | | |\n| Edit the identity | yes | yes | | |\n| Publish the announcement | yes | yes | | |\n| Pin messages | yes | yes | | |\n| Change ranks | yes | yes | yes | |\n| Assign functions | yes | yes | yes | |\n| Exclude a member | yes | yes | yes | |\n| Bar from missions | yes | yes | yes | Coordinator |\n| Manage recruitment | yes | yes | | Recruiter |\n| Run diplomacy | yes | yes | | Diplomat |\n| Manage the treasury | yes | yes | | Quartermaster |\n| Manage missions | yes | yes | | Coordinator |\n\nAn Officer only acts on members ranked below them. Member and Recruit get no right from their rank. Functions add up. Voting is not a right: every member votes.\n"
+  ]
+ ],
+ "fr/players/pacts-and-wars": [
+  [
+   "Rappeler la flotte n'annule pas la violation.",
+   "Rappeler la flotte n'annule pas la violation. Seuls comptent les raids et les tirs de missiles ; l'espionnage et le transport, non. Une alliance ne perd pas plus de **30 points** de fair-play par jour."
+  ],
+  [
+   "5. Rompre proprement un pacte ne coûte rien, mais demande ces 24 heures de préavis.",
+   "5. Rompre proprement un pacte ne coûte rien, mais demande ces 24 heures de préavis. **Déclarer la guerre** à une alliance liée par un pacte compte comme une violation, au même tarif, et met fin au pacte sur-le-champ."
+  ],
+  [
+   "6. Le score de fair-play mesure ce que vaut la parole de l'alliance.",
+   "6. Le score de fair-play mesure ce que vaut la parole de l'alliance. Il va de 0 à 100 et part de 100. Il s'affiche en cinq mentions : **Exemplaire** (90 et plus), **Fiable** (70 et plus), **Douteuse** (40 et plus), **Peu fiable** (15 et plus), **Parjure** (moins de 15)."
+  ],
+  [
+   "7. Une violation le fait baisser ; chaque jour de pacte respecté rapporte **1 point**, plus 1 par niveau du talent **Parole tenue**.",
+   "7. Une violation le fait baisser. Chaque jour où l'alliance a au moins un pacte en vigueur et ne commet aucune violation rapporte **1 point**, plus 1 par niveau du talent **Parole tenue**, sans dépasser 100."
+  ],
+  [
+   "8. Une guerre se décide par un **vote**. Ouvrir une question demande le droit de diplomatie ; les officiers et au-dessus votent.",
+   "8. Une guerre se décide par un **vote**. Ouvrir la question demande le droit « Mener la diplomatie » ; **tous les membres votent**, recrues comprises, un bulletin chacun, qui ne se modifie pas."
+  ],
+  [
+   "En cas d'égalité, elle est rejetée. L'adoption déclare la guerre immédiatement.",
+   "En cas d'égalité, ou sans aucune voix, elle est rejetée. L'adoption déclare la guerre immédiatement. Celui qui pose la question choisit la durée du vote, **de 1 à 24 heures**, et peut le clore plus tôt."
+  ],
+  [
+   "10. La guerre devient **mutuelle** quand les deux camps l'ont déclarée. Elle se termine par une **paix acceptée**.",
+   "10. La guerre devient **mutuelle** quand les deux camps l'ont déclarée. Elle se termine par une **paix** proposée sans vote par un membre qui a le droit de diplomatie et acceptée par l'autre camp, ou par la dissolution d'un des deux camps."
+  ],
+  [
+   "11. La guerre compte les victoires et marque les cases ennemies sur la carte. Elle **ne change rien** au combat, au pillage ni à la [limite d'attaques](/fr/players/attack-limit).",
+   "11. La guerre compte les combats gagnés par chaque camp, en attaque comme en défense (un match nul ne compte pas), et marque les cases ennemies sur la carte. Le score s'affiche pendant la guerre, puis reste dans l'historique des guerres passées. Elle **ne change rien** au combat, au pillage ni à la [limite d'attaques](/fr/players/attack-limit).\n\n### Autres votes\n12. Un **pacte** peut être proposé directement par un membre qui a le droit de diplomatie, ou soumis au vote : son adoption envoie l'offre.\n13. Une **question libre** (droit de diplomatie ou d'annonce) recueille l'avis des membres, sans effet automatique."
+  ],
+  [
+   "la limite de 6 attaques par jour et la protection des débutants s'appliquent toujours.",
+   "la limite de 6 attaques sur un même joueur en 24 heures et la protection des débutants s'appliquent toujours."
+  ]
+ ],
+ "en/players/pacts-and-wars": [
+  [
+   "Recalling the fleet does not undo the violation.",
+   "Recalling the fleet does not undo the violation. Only raids and missile strikes count; espionage and transport do not. An alliance loses no more than **30** fair-play points per day."
+  ],
+  [
+   "5. Breaking a pact cleanly costs nothing, but takes those 24 hours of notice.",
+   "5. Breaking a pact cleanly costs nothing, but takes those 24 hours of notice. **Declaring war** on an alliance bound by a pact counts as a violation, at the same price, and ends the pact on the spot."
+  ],
+  [
+   "6. The fair-play score measures what the alliance's word is worth.",
+   "6. The fair-play score measures what the alliance's word is worth. It runs from 0 to 100 and starts at 100. It shows as five grades: **Exemplary** (90 and up), **Reliable** (70 and up), **Questionable** (40 and up), **Unreliable** (15 and up), **Forsworn** (under 15)."
+  ],
+  [
+   "7. A violation lowers it; each day of pacts kept earns **1 point**, plus 1 per level of the **Kept word** talent.",
+   "7. A violation lowers it. Each day the alliance has at least one pact in force and commits no violation earns **1 point**, plus 1 per level of the **Kept word** talent, never above 100."
+  ],
+  [
+   "8. A war is decided by a **vote**. Opening a question requires the diplomacy right; officers and above vote.",
+   "8. A war is decided by a **vote**. Opening the question takes the \"Run diplomacy\" right; **every member votes**, recruits included, one ballot each, which cannot be changed."
+  ],
+  [
+   "A tie rejects it. Adoption declares war immediately.",
+   "A tie, or no vote at all, rejects it. Adoption declares war immediately. Whoever asks the question picks how long the vote lasts, **from 1 to 24 hours**, and can close it early."
+  ],
+  [
+   "10. The war becomes **mutual** once both sides have declared it. It ends with an **accepted peace**.",
+   "10. The war becomes **mutual** once both sides have declared it. It ends with a **peace** offered without a vote by a member with the diplomacy right and accepted by the other side, or with the dissolution of either side."
+  ],
+  [
+   "11. War counts victories and marks enemy cells on the map. It **changes nothing** about combat, plunder or the [attack limit](/en/players/attack-limit).",
+   "11. War counts the battles won by each side, attacking or defending (a draw does not count), and marks enemy cells on the map. The score shows during the war, then stays in the history of past wars. It **changes nothing** about combat, plunder or the [attack limit](/en/players/attack-limit).\n\n### Other votes\n12. A **pact** can be offered directly by a member with the diplomacy right, or put to a vote: its adoption sends the offer.\n13. A **free question** (diplomacy or announcement right) gathers the members' opinion, with no automatic effect."
+  ],
+  [
+   "the 6 attacks per day limit and beginner protection still apply.",
+   "the limit of 6 attacks on the same player in 24 hours and beginner protection still apply."
+  ]
+ ]
+}

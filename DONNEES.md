@@ -456,9 +456,9 @@ Coût M / C / H ; structure (coque) ; bouclier ; attaque ; fret ; vitesse ; fact
 ### Alliances
 - Rejoindre ou quitter : 24 h d'attente avant de rejoindre une autre alliance. Nouveau membre : 24 h de « quarantaine » sans les avantages.
 - Pactes : non-agression (−10 points de fair-play si violé), alliance (−15). Dénonciation publique avec 24 h de préavis. +1 point de fair-play par jour de pacte tenu. Les pactes ne changent rien au combat.
-- Guerres : déclarées par vote des officiers et plus, à la majorité des voix exprimées ; égalité = rejet.
+- Guerres : déclarées par vote ~~des officiers et plus~~ de **tous les membres** (corrigé le 15 octobre 2026, voir §19), à la majorité des voix exprimées ; égalité = rejet.
 - Station d'alliance, talents (payés en points de doctrine et ressources), trésorerie commune, demandes d'aide plafonnées par jour.
-- Missions d'alliance par cycle : combats, pillage, espionnage, recyclage, dons, bâtiments, recherches, vaisseaux, défenses. Paliers Bronze, Argent, Or selon la contribution ; récompenses en packs de ressources et parfois en Points stellaires.
+- Missions d'alliance par cycle : combats, pillage, espionnage, recyclage, dons, bâtiments, recherches, vaisseaux, défenses. Paliers Bronze, Argent, Or selon la contribution ; récompenses en packs de ressources et parfois en Points stellaires. **Périmé** : remplacé par les missions V2, voir §19.
 - Partage de rapports et de positions dans le canal d'alliance (conservés 30 jours).
 - Capacité d'alliance augmentée par Diplomatie Stellaire.
 
@@ -713,7 +713,7 @@ Conditions : expéditions activées dans l'univers ; Cosmologie Appliquée ≥ 1
 - Alliance : un fondateur silencieux est alerté à 7 et 12 jours et perd son siège à 14.
 
 **Alliances**
-- Capacité selon la Diplomatie Stellaire **du fondateur** : 10, 15, 20, 25, 30, 35, 40, 50 membres aux niveaux 1 à 8. Niveau 1 requis pour fonder (donc Centre logistique 3). Une capacité acquise ne redescend jamais. Talent Ambassades : +2 sièges par niveau sur 3 niveaux, soit 56 au maximum.
+- Capacité selon la Diplomatie Stellaire **du fondateur** : 10, 15, 20, 25, 30, 35, 40, 50 membres aux niveaux 1 à 8. Niveau 1 requis pour fonder (donc Centre d'innovation 5 et Calcul Quantique 4 ; le Centre logistique n'est plus requis, `economy-10`). Une capacité acquise ne redescend jamais. Talent Ambassades : +2 sièges par niveau sur 3 niveaux, soit 56 au maximum.
 - Guerre : déclarée par vote, mutuelle quand les deux camps déclarent, terminée par une paix acceptée. Elle compte les victoires et marque les cases ennemies sur la carte, sans effet sur les règles de combat.
 
 **Talents d'alliance** (14 talents, 5 branches)
@@ -729,7 +729,7 @@ Conditions : expéditions activées dans l'univers ; Cosmologie Appliquée ≥ 1
 | Extraction coordonnée | Économie | 4 | +5 % de production métal, cristal, hydrogène |
 | Entrepôts fédérés | Économie | 2 | +10 % de capacité des entrepôts |
 | Bâtisseurs associés | Économie | 2 | +10 % de vitesse de construction |
-| Laboratoires en réseau | Science | 4 | +5 % de vitesse de recherche |
+| Centres d'innovation en réseau (nom affiché ; « Laboratoires en réseau » avant le 15 octobre 2026) | Science | 4 | +5 % de vitesse de recherche |
 | Doctrine d'armement | Science | 1 | +5 % de puissance de feu (vaisseaux et défenses) |
 | Doctrine de protection | Science | 1 | +5 % de boucliers et de coques |
 | Réseau d'informateurs | Renseignement | 3 | +1 niveau d'espionnage pour vos sondes |
@@ -758,6 +758,8 @@ Conditions : expéditions activées dans l'univers ; Cosmologie Appliquée ≥ 1
 | Aide, Boutique et Points stellaires (PvP) | « aucun avantage de jeu » | Le Premium (files plus longues) s'obtient en Points stellaires (`patch-02`) |
 | Nom du bâtiment `planetary_base` (FR) | « Base planetaire » | Accent manquant |
 | Écran de connexion | Lien « conditions d'utilisation » | Page inexistante (`players-09`) |
+| Alliance, station (`pages.alliance.station.levelGrantsPoint`, FR et EN) | « chaque niveau donne 1 point de doctrine » | Le code en donne 2 par niveau du niveau 1 au niveau 5 (`AllianceExperience::pointsAt()`) |
+| Boutique (`components/shop.json` `categories.stellar`, `topUp`) | « Crédits », « Ajouter des crédits » | Homonyme des Crédits de la Banque stellaire, qui ne s'achètent pas (`bank-01` : le responsable laisse tel quel, 15 octobre 2026) |
 
 ---
 
@@ -907,3 +909,56 @@ Valeurs par rang tirées du catalogue de chaque classe (`AdmiralTalents`, `Build
 - Écouter loin et Lecture des hangars se cumulent : 2 paliers plus tôt pour la flotte (décision de l'équipe, Backend #476). Retard comblé ne double que Fonds d'archives : 40 % au plus sur un niveau connu (Backend #476).
 - Température actuelle d'une planète (code `Map::getTemperatureAt`) : suit le mois du calendrier, minimale le 1er, maximale au jour floor(jours du mois / 2) (le 15, le 14 en février), minimale le dernier jour, linéaire jour par jour, arrondie.
 - Alerte d'attaque : 60 s avant l'impact (code `Fleet::ATTACK_ALERT_LEAD_TIME_IN_SECONDS`), jusqu'à 360 s avec les talents de l'Oracle.
+
+## 19. Alliances (code du jeu, relevé le 15 octobre 2026)
+
+Source : `astro-nova-backend` `main` au commit `7b255c83`, contexte `src/Alliance/`, réglages dans `config/services.yaml`, catalogues dans les migrations `2026/09/Version20260926090000`, `2026/10/Version20261010090000` et `2027/01/Version20270102120000` ; libellés : `Astro-Nova-React` `main` (`33217140`), `src/i18n/locales/{fr,en}/pages/alliance.json`.
+
+**Membres et gouvernance**
+- Capacité : `AllianceCapacity` (10 à 50), monte seulement quand le fondateur en place termine un niveau de Diplomatie Stellaire (`RaiseAllianceCapacityHandler`) ; capacité effective = capacité + sièges d'Ambassades (`Alliance::getEffectiveCapacity()`).
+- Rangs (`AllianceRole`) : Fondateur, Vice-président, Officier, Membre, Recrue. Fonctions cumulables (`AllianceFunction`) : Diplomate, Stratège, Intendant, Recruteur, Coordinateur. 14 droits (`AlliancePermission`) ; un Officier n'agit que sur un rang inférieur (`AllianceRole::outranks`). Le droit « Mener les attaques groupées » (Stratège) ne mène encore à rien.
+- Recrutement (`AllianceRecruitmentMode`) : ouverte, sur candidature (par défaut), sur invitation. Candidatures et invitations n'expirent pas.
+- Intégration 24 h (`alliance_quarantine_hours`) : ni talents, ni aide, ni missions ; le vote, la vision partagée et l'interdiction du tir ami s'appliquent dès l'arrivée. Délai de 24 h après départ ou exclusion (`alliance_membership_cooldown_hours`), qui bloque aussi la fondation ; aucun délai après une dissolution.
+- Succession (`alliance_succession_*`) : alertes **aux membres** à 7 et 12 jours, perte du siège à 14 ; successeur par rang puis ancienneté dans le rang, présent (vu depuis moins de 14 jours) et membre depuis 24 h ou plus ; sans candidat, rien ne change. Cession volontaire : même condition d'éligibilité.
+- Renommage : 500 Points stellaires (nom et tag), description 50, payés par le membre qui agit (`alliance_rename_cost_stellar_points`, `alliance_description_cost_stellar_points`). Devise, couleur, écusson, bannière gratuits. Réservation du nom 30 jours, y compris pour celui qui a dissous.
+- Dissolution (`DissolveAllianceHandler`) : canal effacé, demandes annulées, membres libérés sans délai, guerres archivées.
+- Tir ami interdit (raid et missile) : `src/Game/Domain/Service/FriendlyFireChecker.php`.
+
+**Pactes, fair-play, votes, guerres**
+- Violation : 10 (non-agression) ou 15 (alliance) ; raids et missiles seulement ; plafond 30 points par jour (`alliance_pact_daily_violation_cost_cap`). Déclarer la guerre à un partenaire = violation et fin du pacte (`BreakAlliancePactOnWarDeclarationHandler`).
+- Fair-play de 0 à 100, départ à 100 ; mentions (`AllianceFairPlayGrade`) : Exemplaire ≥ 90, Fiable ≥ 70, Douteuse ≥ 40, Peu fiable ≥ 15, Parjure. Gain : 1 + Parole tenue par jour et par alliance, s'il y a au moins un pacte qui engage et aucune violation ce jour-là (`AccrueAllianceFairPlayHandler`).
+- Votes (`AllianceVote`, `Alliance::mayVote`, correctif Backend #554) : **tous les membres votent**, recrues comprises ; durée de 1 à 24 h choisie par l'auteur ; clôture anticipée par l'auteur ; égalité ou aucune voix = rejet. Pactes : vote facultatif, l'adoption envoie l'offre. Question libre : droit de diplomatie ou d'annonce, sans effet.
+- Guerre : score = combats gagnés par chaque camp, attaque ou défense, nuls exclus (`CountWarVictoryHandler`) ; paix sans vote, acceptée par l'autre camp, ou fin par dissolution ; historique des guerres passées.
+- Limite d'attaques : 6 attaques **contre un même défenseur** sur 24 h glissantes (`BashingRule::default()`), réglable par univers.
+- Un membre en période d'intégration qui viole un pacte coûte 0 point à l'alliance, la violation restant inscrite (`AllianceFairPlayScorer::costOf`) : publié le 15 octobre 2026 sur accord du responsable (`players-13`). Non publiées : les fréquences des balayages internes.
+
+**Trésorerie, entraide, station**
+- Convois (`SendAllianceConvoyHandler`, `FleetMission::ALLIANCE_DEPOSIT`) : petits et grands cargos, base avec Dock orbital, vers la Station stellaire du système, 1 h aller et 1 h retour, sans hydrogène ni rappel, emplacement de flotte, refus en vacances et sous attaque annoncée (Backend #579). À l'arrivée, la trésorerie prend ce que le plafond permet, le surplus rentre (`AllianceConvoyArrivalResolver`).
+- Plafond : 5 000 000 par ressource (`alliance_treasury_cap_per_resource`), ×2 par niveau de Soutes mutualisées, avec un plancher de 2 × le métal du palier 3 (`alliance_treasury_station_factor`), sans effet constaté : non publié.
+- Vues : solde, plafond, ses propres versements, top 5 des donateurs, totaux donné et reçu par membre sur la liste des membres ; registre détaillé réservé à « Gérer la trésorerie ».
+- Aide : 50 000 par membre (+50 000 par niveau de Réseau d'assistance), ×5 pour l'alliance, sur 24 h glissantes, une demande à la fois, expiration 24 h, livraison 1 h après l'accord (`alliance_aid_*`, `AllianceAidRequest::TRANSIT_SECONDS`).
+- Station : 3 paliers (`AllianceStationTier`), prix = heures × production de référence de l'univers, 60/30/10, figé à l'achat (`AllianceStationPricing`). Les heures (150, 350, 700) et la référence (médiane des actifs) ne sont pas publiées : le jeu affiche le prix.
+
+**Missions V2** (Backend #571, #572)
+- Interrupteur d'univers `alliance-missions`, fermé par défaut, avec surcharge par alliance au BO (`AllianceMissionsGate`). **Ouvert sur Redline** (responsable, 15 octobre 2026, `players-12`). La surcharge par alliance n'est pas publiée.
+- Cycles Europe/Paris ; 3 propositions quotidiennes et 5 hebdomadaires, une par famille ; repos 3 et 14 jours ; une mission par famille à la fois ; inscriptions pendant 25 % du cycle ; objectif ×1,8 (Avancée), ×3,2 (Épique) ; plafonds : 25 % de l'objectif par jour (hebdomadaire), 2,5 parts par membre.
+- Clôture : 100 % réussite, ×1,25 à 150 %, ×1,5 à 200 %. Taux = 40 % médiane + 60 % production propre (métal + cristal + hydrogène, `ProductionRateReader`) ; base 1 h (quotidienne) ou 4 h (hebdomadaire), ×1,5 Avancée, ×2 Épique ; effort relatif, seuil 30 %, 2,5 parts au plus ; plafond 7 jours = min(24 h de taux, 25 % du revenu hebdomadaire) ; versement 60/30/10, réclamation sous 7 jours, transit 30 min.
+- Points stellaires (hebdomadaire réussie) : 1 sous l'effort moyen, 2 au-dessus, ×1,5 / ×2, arrondi au supérieur, 8 par compte sur 7 jours.
+- Remplacement : 200 000 (quotidienne) ou 1 000 000 (hebdomadaire), doublé à chaque fois, 3 par cycle. Mise Épique : 25 % de la cagnotte potentielle.
+- Expérience : 1 000 / 1 600 / 2 500 (quotidienne), 5 000 / 8 000 / 12 500 (hebdomadaire), plafond 8 000 par semaine et par alliance.
+- Catalogue : 5 familles, 13 missions, noms et règles « Ce qui compte » repris des libellés affichés (`missions.objectives.*`), qui citent déjà la pondération des bots et inactifs, l'exclusion des alliés et ex-membres, la dégressivité sur une même cible et les seuils de Victoire nette. Non publiés : les pourcentages de dégressivité (50 %, 3 coups), le tirage et la galaxie de Cartographie avant le choix, les réglages par univers.
+
+## 20. Banque stellaire (code du jeu, relevé le 15 octobre 2026)
+
+Source : `astro-nova-backend` `main` (`7b255c83`), contexte `src/Bank/` (Backend #540, #568, #570, #579) ; libellés `pages/bank.json` du front.
+
+- Lieu : une Station stellaire par système, après l'espace lointain (`Universe::getBankStationSector()`), seules les missions de dépôt y sont possibles. Accès par la vue galaxie, l'onglet Station de l'alliance ou une notification.
+- Ouverture au 7e jour de l'univers (`BankSeed::WINDOW_DAYS`), pas dans un univers à l'arrêt ; banque fermée = `BankClosedException`. Aucun réglage par univers.
+- Crédits : centièmes (`Credits::PER_CREDIT`), par univers, sans plafond ni érosion, ni vol ; aucun lien avec le paiement ni les Points stellaires.
+- Vente (dépôt) : petits et grands cargos, base avec Dock orbital, 1 à 3 ressources, 1 h aller et retour sans hydrogène ni rappel (`FleetMission::fixedLeg`), prix fixé au départ, Crédits à l'arrivée, refus en vacances et sous attaque annoncée. Taxe 10 % sur les ventes (`ReserveLevels::SALE_TAX_PERCENT`).
+- Achat : 1 à 3 ressources, débit immédiat, pas de taxe, une livraison en 1 h (`BankDelivery::TRANSIT_SECONDS`), non plafonnée par le stockage, redirigée vers la planète mère si la planète est perdue, annulée sans remboursement s'il n'y a plus de base.
+- Cours (`ReserveLevels`) : produit constant ; vente brut = ⌊M·Δ/(R+Δ)⌋, taxe arrondie au supérieur ; achat coût = ⌈M·q/(R−q)⌉ ; cours = M/R pour 1 000 unités. Parité d'ouverture métal, cristal, hydrogène = 1 : 1,5 : 3.
+- Exclusion d'un univers privé : solde confisqué, livraisons annulées (`CloseBankAccountCommand`).
+- Non publiés : profondeur initiale des réserves (un tiers de la dépense quotidienne de l'univers, plancher 3 000 000), commandes d'administration (`app:bank:seed`), contrôles de cohérence et rattrapages, idempotence.
+- Exemple du wiki recalculé par script (réserves hypothétiques : métal 1 000 000 face à 1 000 Crédits, cristal 666 666 face à 1 000).
+
