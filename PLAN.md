@@ -123,13 +123,13 @@ Chaque page porte un identifiant de page (P-xx). Abréviations : *[B]* = ton bri
 | ID | Chemin | Page | Contenu | Sources | Manque |
 |---|---|---|---|---|---|
 | P-60 | `combat` | Combat (index) | | | |
-| P-61 | `combat/how-combat-works` | Déroulement d'un combat | Tours, ciblage, boucliers. | [J] partiel | `combat-01`, `combat-02`, `combat-03` |
-| P-62 | `combat/battle-report` | Lire un rapport de combat | | [B] + [J] | captures |
-| P-63 | `combat/plunder` | Pillage | Fret, dégressivité. | [J] partiel | `combat-04`, `combat-05` |
-| P-64 | `combat/debris` | Champs de débris (« Champ de ruines » en jeu) | 30 % vaisseaux, 0 % défenses. | [B] + [J] | `combat-06` |
-| P-65 | `combat/defense-rebuild` | Reconstruction des défenses | 70 % arrondi inférieur, sauf missiles. | [B] + [J] | `combat-07` |
-| P-66 | `combat/simulator` | Simulateur | Import de rapport, hypothèses, limites. | [J] | |
-| P-67 | `combat/moon-destruction` | Destruction de lune | Colossus, deux tirages. | [J] | `combat-08` |
+| P-61 | `combat/how-combat-works` | Déroulement d'un combat | Statistiques effectives, rounds, tirs rapides, boucliers, explosions. Réécrite d'après le code le 15 octobre 2026. | code | |
+| P-62 | `combat/battle-report` | Lire un rapport de combat | Contenu, vue partielle, partage. Réécrite d'après le code le 15 octobre 2026. | code | captures |
+| P-63 | `combat/plunder` | Pillage | 50 % fixe, soute, talents. Réécrite d'après le code le 15 octobre 2026. | code | |
+| P-64 | `combat/debris` | Champs de débris (« Champ de ruines » en jeu) | Taux réglables, formation et taille des lunes. Réécrite d'après le code le 15 octobre 2026. | code | |
+| P-65 | `combat/defense-rebuild` | Reconstruction des défenses | Tirage à 70 % par unité, L'Héritage, plafond 85 %. Réécrite d'après le code le 15 octobre 2026. | code | |
+| P-66 | `combat/simulator` | Simulateur | Import de rapport, hypothèses, 50 combats, limites. Réécrite d'après le code le 15 octobre 2026. | code | |
+| P-67 | `combat/moon-destruction` | Destruction de lune | Colossus, deux tirages, talents. Réécrite d'après le code le 15 octobre 2026. | code | |
 
 ### `espionage`, espionnage
 | ID | Chemin | Page | Contenu | Sources | Manque |
@@ -312,8 +312,8 @@ En bref · encart « paramètre d'univers » si besoin · Règles · Exemple chi
 ### Combat
 - `combat-01` ✅ Même fonctionnement qu'OGame (tours, tirs, cibles, tirs rapides).
 - `combat-02` ✅ Règle du 1 %, absorption puis coque, régénération à chaque round. Barrière et Dôme : boucliers individuels, pas global.
-- `combat-03` ⏳ Réparation des unités endommagées.
-- `combat-04` ✅ Pillage de 50 % de chaque ressource par défaut, **paramètre d'univers**. ✅ Pas d'ordre : réduction proportionnelle si la soute est trop petite. Butin uniquement en cas de victoire.
+- `combat-03` ✅ (code, 15 octobre 2026) Les dégâts de coque ne durent que le temps du combat : seuls les boucliers se rechargent entre les rounds, et après le combat le jeu ne garde que les quantités, donc une unité survivante repart intacte. Écrit sur P-61 (DONNEES §11.4, « Relevé dans le code »). (Question : Réparation des unités endommagées.)
+- `combat-04` ⚠️ (code, 15 octobre 2026) Le taux de 50 % est une **constante du code** (`LootRate`), pas un paramètre d'univers : l'encart est retiré de P-63. Ancienne réponse : Pillage de 50 % de chaque ressource par défaut, **paramètre d'univers**. ✅ Pas d'ordre : réduction proportionnelle si la soute est trop petite. Butin uniquement en cas de victoire.
 - `combat-05` ✅ Taux fixe de 50 %, dégressif de fait sur le stock. La limite d'attaques fonctionne par tranche de 24 h fixe (pas glissante).
 - `combat-06` ✅ Les vaisseaux civils détruits produisent des débris. ✅ Les débris ne disparaissent jamais.
 - `combat-07` ✅ Reconstruction des défenses : 70 % fixe.
@@ -361,7 +361,7 @@ Règle : aucune de ces formules ne va dans le wiki avant confirmation. Les pages
 - `formula-04` ⏳ (ex `fleet-08`) Durée de construction des vaisseaux et défenses au Dock orbital : quelle formule ? Exemple relevé : une Navette de fret avec Dock orbital 4 et Assembleur 0 prend 1 080 s.
 - `formula-05` ⏳ Collecteur solaire : l'équipe indique « Tmax / 4 plus sa base d'énergie ». La base vaut-elle 20 (35 relevés à Tmax = 60 °C) ?
 - `formula-06` ✅ Confirmé par le code : arrondi à l'inférieur par ressource (15 octobre 2026, DONNEES §4). Ancienne question : Coût des bâtiments et recherches : coût du niveau N = coût du niveau 1 × facteur^(N − 1), avec les facteurs relevés (1,5 ; 1,6 ; 1,75 ; 1,8 ; 2 ; 3 ; 5) ? Arrondi appliqué ?
-- `moon-02` ✅ (code, 15 octobre 2026) Prérequis Base lunaire 1 ; coût 20 000 métal, 40 000 cristal, 20 000 hydrogène au niveau 1, × 2 par niveau, sans niveau maximum (DONNEES « Espionnage (code, 15 octobre 2026) »). P-73 complétée. Question initiale : coût de construction et prérequis de la Phalange de capteur. P-73 est rédigée sans ces données, et P-17 Lunes reste bloquée faute de données sur la Base lunaire (`universe-09`).
+- `moon-02` ✅ (code, 15 octobre 2026) Prérequis Base lunaire 1 ; coût 20 000 métal, 40 000 cristal, 20 000 hydrogène au niveau 1, × 2 par niveau, sans niveau maximum (DONNEES « Espionnage (code, 15 octobre 2026) »). P-73 complétée. Base lunaire : mêmes coûts, sans prérequis (lot Combat). Question initiale : coût de construction et prérequis de la Phalange de capteur. P-73 est rédigée sans ces données, et P-17 Lunes reste bloquée faute de données sur la Base lunaire (`universe-09`).
 
 ### Nouvelles questions (2 octobre 2026, fin de journée)
 - `universe-10` ✅ Position ramenée sur une échelle de 15. (Question : Les systèmes comptent de 9 à 20 positions selon l'univers : comment se répartissent taille moyenne, température et types quand un système n'a pas 15 positions ? (P-14 ne donne que la table à 15 positions.))

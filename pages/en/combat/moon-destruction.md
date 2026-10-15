@@ -14,51 +14,69 @@ game_version: "Serveur 2.1.0 · Client 3.1.0"
 
 # Moon destruction
 
-> **In short**: a fleet made only of Stellar Colossi can try to destroy another player's moon. It must win the battle first. Then two independent rolls decide whether the moon is destroyed and whether the Colossi are lost.
+> **In short**: a fleet made only of Stellar Colossi can try to destroy another player's moon. It must first win the battle against whatever defends the moon. Then two independent rolls decide whether the moon is destroyed and whether the Colossi are lost.
 {.is-info}
-
-> Ship names are provisional English translations: the game still shows French names (see the [glossary](/en/getting-started/glossary)).
-{.is-warning}
 
 <img src="/images/illustrations/ships/colossus-stellaire.jpg" width="180" alt="Stellar Colossus">
 
 ## Rules
 
-1. The **Moon destruction** mission requires a fleet made **only of Stellar Colossi**, and targets another player's moon.
-2. A **regular battle** takes place first, against the moon's fleet and defenses.
-3. The rolls only happen on a **clear victory** for the attacker.
-4. With **S** the moon's diameter in km and **N** the number of surviving Colossi:
-   - chance to **destroy the moon** = min(100, (100 − √S) × √N)%;
-   - chance to **lose the Colossi** = √S / 2%, a single roll for the whole fleet.
-5. Both rolls are **independent** and both happen, whether the moon blows up or not. Sending more Colossi only improves the chance of destroying the moon: the risk of losing the fleet does not move.
-6. If the moon is destroyed: everything on it disappears, and the matching points are removed from its owner. Fleets heading to or from the moon are redirected to the planet.
-7. **No plunder, no debris.**
-8. A moon whose owner is on vacation cannot be destroyed.
+### The mission
+1. The **Moon destruction** mission requires a fleet made **only of Stellar Colossi**, and targets another player's **moon**. It is not offered on a planet.
+2. It follows the same conditions as an attack: it is not offered against a protected player, a member of your alliance or a target whose [attack limit](/en/players/attack-limit) is reached.
+
+### The battle
+3. A **regular battle** takes place first, against the ships and defenses **of the moon**. See [How combat works](/en/combat/how-combat-works).
+4. The moon's destroyed defenses follow the [defense rebuild](/en/combat/defense-rebuild).
+5. This battle leaves **no plunder, no debris and no new moon**.
+
+### The two rolls
+6. The rolls only happen if the attacker **wins**. On a draw or a defeat, the moon is untouched and the survivors fly home.
+7. With $S$ the moon's diameter and $N$ the number of **surviving** Colossi:
+
+$$p_{moon} = \min\left(100,\ (100 - \sqrt{S}) \times \sqrt{N}\right) \qquad p_{fleet} = \frac{\sqrt{S}}{2}$$
+
+- $p_{moon}$: chance of destroying the moon, in %; $p_{fleet}$: chance of losing the whole fleet, in %.
+- $S$: moon diameter in km; $N$: Stellar Colossi still standing after the battle.
+
+8. Both rolls are **independent** and both take place, whether or not the moon is destroyed. All four outcomes are possible, the worst being a fleet lost over an intact moon.
+9. Losing the fleet is **one roll for the whole fleet** and **does not depend on the number of Colossi**: sending more Colossi only improves the chance of destroying the moon.
+10. The **Moonbreaker** talent ([Admiral](/en/dynasty/classes/admiral)) multiplies the risk of losing the fleet by 0.75. The **The Moon Holds** talent ([Veteran](/en/dynasty/classes/veteran)) multiplies the chance of destroying the Veteran's moon by 0.75.
+
+### Aftermath
+11. If the moon is destroyed: everything on it disappears, and the matching points are removed from its owner. Fleets on their way to the moon, or due to return to it, are redirected to the planet.
+12. Each side receives a **Moon destruction** report, which gives both chances even when the battle is lost. This report can be turned off in the report settings.
+13. A moon whose owner is on vacation cannot be targeted.
 
 ## Worked example
 
-A **8,944 km** moon and **100** surviving Colossi:
+A **8,944 km** moon (the largest possible size) and **100 Colossi** surviving:
 - √8,944 ≈ 94.6.
-- Chance to destroy the moon: (100 − 94.6) × √100 ≈ **54.3%**.
-- Chance to lose the Colossi: 94.6 / 2 ≈ **47.3%**.
+- Chance of destroying the moon: (100 − 94.6) × √100 ≈ **54.3%**.
+- Chance of losing the Colossi: 94.6 / 2 ≈ **47.3%**.
+- With Moonbreaker, the risk drops to 47.3% × 0.75 ≈ **35.5%**. Against a Veteran holding The Moon Holds, the destruction chance drops to 54.3% × 0.75 ≈ **40.7%**.
 
 ## Detailed data
 
-Chance to destroy an 8,944 km moon by number of surviving Colossi (the loss risk stays at 47.3%):
+Chance of destroying the moon by its diameter and the number of surviving Colossi, and risk of losing the fleet (no talent). Moons are 3,605 to 8,944 km wide.
 
-| Surviving Colossi | 1 | 4 | 25 | 100 | 400 |
-|---|---|---|---|---|---|
-| Destruction chance | 5.4% | 10.9% | 27.1% | 54.3% | 100% |
+| Diameter | 1 Colossus | 4 Colossus | 25 Colossus | 100 Colossus | 400 Colossus | Fleet loss |
+|---|---|---|---|---|---|---|
+| 3,605 km | 40.0% | 79.9% | 100.0% | 100.0% | 100.0% | 30.0% |
+| 6,324 km | 20.5% | 41.0% | 100.0% | 100.0% | 100.0% | 39.8% |
+| 8,944 km | 5.4% | 10.9% | 27.1% | 54.3% | 100.0% | 47.3% |
 
 ## Common pitfalls
 
 - **A big moon is harder and more dangerous**: the larger the diameter, the harder the destruction and the higher the risk of losing the fleet.
-- **Numbers do not protect the fleet**: the loss risk depends only on the diameter.
-- **You must win the battle first**: without a clear victory, no roll.
+- **Numbers do not protect the fleet**: the risk of loss depends only on the diameter.
+- **You must win the battle first**: without a victory, no roll. Colossi lost during the battle no longer count in $N$.
+- **No loot, no debris**: a moon destruction brings no resources to either side.
 
 ## Related pages
 
 - [Moons](/en/universe/moons)
-- [Ships list](/en/fleet/ships)
+- [Ship list](/en/fleet/ships)
 - [Missions](/en/fleet/missions)
 - [How combat works](/en/combat/how-combat-works)
+- [Debris fields and moon formation](/en/combat/debris)
