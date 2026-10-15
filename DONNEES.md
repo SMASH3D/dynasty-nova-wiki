@@ -414,6 +414,50 @@ Coût M / C / H ; structure (coque) ; bouclier ; attaque ; fret ; vitesse ; fact
 - Une salve compte comme une attaque dans le quota anti-bash, sur toutes les colonies du joueur ciblé, et elle ne peut pas être rappelée. La protection des débutants s'applique.
 - Les ogives ne reviennent jamais, même si la planète cible est abandonnée entre-temps.
 
+### Défense : relevé dans le code (15 octobre 2026)
+
+Source : `astro-nova-backend` `main` au commit `7b255c83` ; catalogue dans la table `defense` d'une base migrée (semée par `migrations/2026/01/Version20260107171230` et suivantes), tirs rapides dans `rapid_fire`, Arsenal dans `building` ; libellés : `Astro-Nova-React` `main`, `src/i18n/locales/{fr,en}/defenses.json`, `pages/defense.json`, `researches.json`. Pages générées par `tools/defense_pages/p_defense.py` (valeurs dans `def_lib.py`).
+
+**Catalogue** (`build_time` en secondes, durée à Dock 0) : Projecteur balistique 2 880, Canon photonique 2 880, Émetteur à haute énergie 11 520, Batterie ionique 11 520, Accélérateur magnétique 50 400, Éjecteur à plasma 100 800, Barrière défensive 28 800, Dôme protecteur 144 000, Intercepteurs 11 520, Ogives 21 600. La colonne « Durée (s) » du tableau ci-dessus était relevée avec un Dock orbital niveau 4 (÷ 5). Coûts, structure, bouclier, arme, prérequis, unicité (`unique`) et cases (`silo_slots`) identiques au tableau ci-dessus ; `shot_count` = 1 partout ; `unit_kind` = `missile` pour Intercepteurs et Ogives.
+
+**Construction** (`Base::startDefenseConstruction()`, `startActiveDefenseConstruction()`, `addDefensesToConstruction()`, `StartConstructionHandler`)
+- Dock orbital requis (`checkHasShipyard`), refus pendant son agrandissement (`checkShipyardIsNotUnderConstruction`), refus en vacances (`ensureNotOnVacationIn`).
+- File des défenses comptée à part de celle des vaisseaux (`countUnfinishedDefenseOrders`, `hasActiveDefenseConstruction`) ; capacité `ConstructionQueueCapacity::default()` 2, Premium 5, par univers.
+- Fusion avec une commande non terminée de la même défense (`findMergeableDefenseConstruction`), jamais pour une défense unique.
+- Unicité (`checkUniqueDefenseNotAlreadyBuilt`) : quantité 1 au plus, aucune possédée, aucune en file ou en cours.
+- Durée : `Defense::getConstructionTime()`, `round(build_time / ((1 + Dock) × 2^Assembleur) / vitesse chantier)`, au moins 1 s, puis `Base::unitTimeOf()` (bonus de vitesse). Paiement unité par unité : voir la rubrique Économie (`fleet-09`).
+- Défenses possibles sur une lune : le Dock orbital y est constructible (`building.scope` = `both`), aucune restriction de corps dans la commande. L'Arsenal balistique est `planet` seulement.
+
+**Combat et points**
+- `Defense::combatStats()` : arme, bouclier, structure × (1 + 0,1 × niveau de Systèmes Offensifs, Champs de Protection, Métallurgie Avancée), arrondis (`round`) ; coque = structure renforcée / 10, arrondie (`COMBAT_HULL_DIVISOR`). Les missiles sont exclus des combats et des débris (`Defense::isMissile()`).
+- Aucune défense n'a de tir rapide (`rapid_fire` : aucune ligne dont l'attaquant est une défense).
+- Règle du 1 % : `BattleRules::default()` (`shieldBounceThreshold` 0,01), `BattleLine::takeHit()`.
+- Débris des défenses : `DebrisRule` 0 % par défaut, Redline 0 %.
+- Points : `Constructable::getPoints()` = coût total / 1 000 ; `Base::defensePoints()` compte les missiles stockés dans les points militaires (`RankingCategory::MILITARY`).
+
+**Arsenal balistique** (`SiloCapacity`, `Base::missileSiloCapacity()`, `checkSiloHasRoom()`)
+- 10 cases par niveau (`SLOTS_PER_LEVEL`) ; cases occupées = missiles stockés + unités restantes des commandes en file ou en cours ; une commande qui ne tient pas est refusée avant paiement (`MissileSiloCapacityExceededException`). Cases libres jamais négatives (Arsenal démoli sous son contenu). Bonus de talent en pourcentage, arrondi à l'inférieur (*Fosses profondes*).
+- Arsenal : coût 20 000 / 20 000 / 1 000, facteur 2, niveau max 10, prérequis Dock orbital 1, planète seulement (table `building`).
+
+**Portée, vol, cibles** (`MissileRange`, `MissileFlight`, `Distance`, `LaunchMissilesHandler`, `MissileStrike::launch()`)
+- Portée = 5 × niveau du Moteur Magnétique (`impulse_drive`) − 1 systèmes, −1 sans le moteur ; jamais d'une galaxie à l'autre (`covers()` : `distance->galaxy > 0` = hors de portée). Bonus de talents en systèmes (*Allonge*, *Portée d'impulsion*) ; *Contre-salve* rend portée illimitée contre une base qui vient de frapper.
+- Distance en systèmes mesurée sur l'anneau de la galaxie (`Distance::roundTheRing`, Backend #509 et #513 du 9 octobre 2026). La position ne compte pas. Ce point contredit « la carte n'est pas circulaire » (AGENTS.md §4), déjà signalé par la rubrique Espionnage.
+- Vol = 30 s par système (`SECONDS_PER_SYSTEM`), au moins 30 s (`max(1, systèmes)`). La cible n'est pas prévenue : seules les salves du tireur sont listées (`ListMissileStrikesHandler`), et l'aide du jeu le dit (`missiles.strike.rules.noSlot`).
+- Cible : la planète de la case (`Map::getBase()` = corps `PLANET`), jamais la lune ; case vide refusée (`MissileTargetNotFoundException`) ; sa propre planète refusée (`CannotStrikeOwnPlanetException`). Tir depuis une lune réservé au talent *Silo lunaire* (`Base::fireMissiles()`), sans effet pratique puisque l'Arsenal ne se construit pas sur une lune.
+- Contrôles dans l'ordre : maintenance (`MaintenanceGuard::assertHostilitiesAllowed`, une salve en vol arrive quand même), vacances du tireur, puis, si la planète a un propriétaire : pas soi-même, vacances de la cible (`VacationShieldChecker`), tir ami (`FriendlyFireChecker`, ALL-307), protection des nouveaux arrivants (`NewcomerProtectionChecker`), protection des débutants (`BeginnerProtectionChecker`), limite d'attaques (`AttackTally::registerAttack`, `BashingRule` 6 sur 24 h par couple tireur, défenseur). Planète abandonnée : aucun de ces contrôles. Le tir met fin à la protection de nouvel arrivant du tireur (`breakNewcomerProtectionIn`).
+
+**Impact** (`MissileStrikeResolver`, `MissileInterception`, `MissileBarrage`, `DefenseGrid`, `Base::sufferMissileStrike()`)
+- Interception : un Intercepteur pour une Ogive, sans tirage, avant les dégâts ; les Intercepteurs consommés sortent du stock et des points (`BaseMissilesFiredEvent`). Talents : *Pluie d'acier* (salve non interceptable) et *Intercepteurs récupérés* (tirage par unité, non publié).
+- Dégâts = ⌊12 000 × (1 + 0,1 × Systèmes Offensifs du tireur) × Ogives arrivées⌋, × (1 + bonus *Charge creuse*).
+- Résistance d'une ligne = bouclier + coque de combat du défenseur, recherches, doctrines et talents compris (`Base::defenseGrid()`, `CombatResearch::withBonuses`). Missiles du silo exclus de la grille.
+- Ordre (`DefenseGrid::firingOrder`) : ligne désignée d'abord si présente, puis résistance décroissante. `MissileBarrage::shatter()` : sur chaque ligne, `min(quantité, ⌊reste / résistance⌋)` unités détruites ; une ligne qu'on ne peut pas entamer est **sautée** (`continue`), le reste passe aux lignes suivantes. Le commentaire de la classe dit « stopping as soon as the pool can no longer pay » : le code continue, c'est lui qui est publié.
+- Pertes définitives, points retirés (`BaseUnitsLostEvent`) ; seule exception, le talent *Sous le feu* (tirage par unité, un cinquième au plus, non publié).
+- Rapports pour le tireur et le défenseur (si le rapport n'est pas désactivé, `DeclinableReport::MISSILE_STRIKE_REPORT`), avec la planète d'origine ; les lignes non touchées ne sont pas révélées au tireur.
+- Riposte automatique (talent du Vétéran) : réserve marquée, salve égale à celle reçue dans la limite du talent ; non détaillée dans la rubrique Défense.
+- Non publiés : graine et tirages (`MissileStrikeDice`), taux des talents (renvoi vers la rubrique Dynastie).
+
+**Exemples recalculés** par `tools/defense_pages/p_defense.py` (Projecteurs à Dock 4, Batterie ionique en combat, Dôme face aux Ogives, salve de 5 Ogives sur [3:55:4], anneau 97 → 3).
+
 ---
 
 ## 8. Règles tirées de l'aide et des textes du jeu

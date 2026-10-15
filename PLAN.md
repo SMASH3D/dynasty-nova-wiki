@@ -114,10 +114,10 @@ Chaque page porte un identifiant de page (P-xx). Abréviations : *[B]* = ton bri
 ### `defense`, défense
 | ID | Chemin | Page | Contenu | Sources | Manque |
 |---|---|---|---|---|---|
-| P-50 | `defense` | Défense (index) | | | |
-| P-51 | `defense/defenses` | Liste des défenses | Tableau des 8 défenses. **Rédigée FR + EN le 2 octobre, à valider.** | [B] + [J] complet | |
-| P-52 | `defense/shield-domes` | Barrière et Dôme | Uniques, rôle. | [J] | `defense-01` |
-| P-53 | `defense/missiles` | Missiles | Arsenal, cases, ogives, intercepteurs, ciblage. **Rédigée FR + EN le 2 octobre, à valider.** Manque `defense-03` (portée, interception). | [J] | `defense-02`, `defense-03` |
+| P-50 | `defense` | Défense (index) | Résumé de la rubrique. **Réécrite d'après le code le 15 octobre 2026.** | code | |
+| P-51 | `defense/defenses` | Liste des défenses | 8 défenses : coûts, statistiques, prérequis, durées par niveau de Dock, file, paiement, tirs rapides subis. **Réécrite d'après le code le 15 octobre 2026** (`tools/defense_pages`). | code | |
+| P-52 | `defense/shield-domes` | Barrière et Dôme | Uniques, rôle, résistance face aux Ogives. **Réécrite d'après le code le 15 octobre 2026.** | code | |
+| P-53 | `defense/missiles` | Missiles | Arsenal, cases, portée, vol, cibles, interception, dégâts et ordre des cibles. **Réécrite d'après le code le 15 octobre 2026**, `defense-03` tranchée. | code | |
 
 ### `combat`, combat
 | ID | Chemin | Page | Contenu | Sources | Manque |
@@ -305,7 +305,7 @@ En bref · encart « paramètre d'univers » si besoin · Règles · Exemple chi
 ### Défense
 - `defense-01` ✅ Barrière et Dôme : 70 % de chances de reconstruction. L'équipe confirme pour toutes les défenses : « chaque unité de défense détruite a 70 % de chance d'être réparée ». Voir `combat-09`.
 - `defense-02` ✅ 10 cases par niveau ; Intercepteurs 1 case, Ogives 2.
-- `defense-03` ⏳ Portée des Ogives, interception.
+- `defense-03` ✅ (code, 15 octobre 2026) Portée : 5 × Moteur Magnétique − 1 systèmes, dans la même galaxie seulement, distance mesurée sur l'anneau des systèmes. Vol : 30 s par système, 30 s au moins. Interception : un Intercepteur abat une Ogive, sans tirage, avant les dégâts, et il est consommé. Dégâts : 12 000 × (1 + 0,1 × Systèmes Offensifs) par Ogive arrivée, mis en commun, dépensés sur bouclier + coque de chaque défense par ordre de résistance (cible désignée d'abord), unités entières seulement, lignes trop chères sautées. Voir DONNEES §7.
 
 ### Combat
 - `combat-01` ✅ Même fonctionnement qu'OGame (tours, tirs, cibles, tirs rapides).
