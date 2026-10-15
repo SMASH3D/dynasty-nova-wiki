@@ -110,6 +110,8 @@ Attention : le code `battle_cruiser` désigne le Colossus (équivalent de l'Éto
 | expedition | Expédition | Expedition | Expedición |
 | recycle | Recyclage | Recycling | Reciclaje |
 | destroy | Destruction de lune | Moon destruction | Destrucción de luna |
+| bank_deposit | Dépôt à la banque | Bank deposit | Depósito en el banco |
+| alliance_deposit | Don à l'alliance | Alliance donation | Donación a la alianza |
 
 **Il n'y a ni attaque groupée ni défense alliée** (`fleet-05`). L'attaque groupée est un chantier à part, non planifié (le terme existe déjà dans les traductions). La défense alliée est en réflexion. Le Stationnement ne vise que ses propres bases ; le Transport peut viser un allié.
 
@@ -389,6 +391,65 @@ Coût M / C / H ; structure (coque) ; bouclier ; attaque ; fret ; vitesse ; fact
 | Colossus stellaire | Éclaireur 1 250, Collecteur 1 250, Pionnier 250, Cargo 250, Récupérateur 250, Navette 250, Projecteur 200, Intercepteur 200, Canon photonique 200, Assaillant 100, Émetteur 100, Batterie ionique 100, Accélérateur 50, Corvette 33, Cuirassé 30, Frappe-orbital 25, Prédateur 15, Annihilateur 5 |
 | Éclaireur, Collecteur solaire, toutes les défenses | aucun |
 
+## Flotte (code, 15 octobre 2026)
+
+Source : `astro-nova-backend` `main` au commit `7b255c83` ; catalogues lus dans une base migrée (tables `ship`, `rapid_fire`) ; libellés `Astro-Nova-React` `main` (`33217140`), `src/i18n/locales/{fr,en}/pages/fleet.json`, `researches.json`, `defenses.json`, noms des vaisseaux dans `src/data/shipsData.ts` (toujours en français). Pages générées par `tools/fleet_pages/` (`fleet_lib.py` porte les valeurs et les formules ; exemples recalculés par les scripts).
+
+**Vaisseaux** (`Game/Domain/Entity/Ship.php`, table `ship`)
+- Coûts, structure, bouclier, attaque, fret, vitesse, consommation, prérequis : identiques au tableau du §6, relevés en base. `build_time` (s, durée de base) : Navette 5 400, Cargo 14 400, Pionnier 100 800, Récupérateur 25 200, Éclaireur 600, Collecteur 2 880, Intercepteur 1 800, Assaillant 5 400, Corvette 28 800, Cuirassé 64 800, Frappe-orbital 86 400, Prédateur 79 200, Annihilateur 115 200, Colossus 12 960 000. Durée = `build_time` / ((1 + Dock) × 2^Assembleur) ÷ vitesse chantier, arrondie, au moins 1 s (`getConstructionTime()`) : 5 400 / 5 = 1 080 s retrouve le relevé de `formula-04`.
+- **Changement de moteur** (`reactor_upgrades`, `ReactorUpgrades::bestReachedWith()`, Backend #543 du 11 octobre 2026) : Navette → Moteur Magnétique au niveau 5 (vitesse 10 000, conso 20) ; Récupérateur → Moteur Magnétique 17 (4 000, 600) ou Navigation Transdimensionnelle 15 (6 000, 900), le plus avancé atteint l'emporte ; Frappe-orbital → Navigation Transdimensionnelle 8 (5 000, 700). Le §6 et le §11.2 (« moteur fixe ») sont périmés.
+- Vitesse = vitesse du moteur × (1 + bonus × niveau), bonus 0,1 / 0,2 / 0,3 (`ReactorType::getBonusPerLevel()`). Aucune recherche ne baisse la consommation (`fuelConsumptionFor()`).
+- Fret : arrondi(fret × (1 + 0,05 × Pliage Spatial)) (`effectiveCargoCapacity()`) ; talents de soute plafonnés à 25 % (`PlayerBonuses::CARGO_TALENT_CEILING`).
+- Combat : +10 % par niveau, arrondi ; coque en combat = structure / 10 (`combatStats()`, `COMBAT_HULL_DIVISOR`).
+- `warp_factor` : lu par aucun calcul (seulement affiché).
+- Points : (M + C + H) / 1 000 par unité (`Constructable::getPoints()`), crédités au seau **militaire** à la livraison pour **tous** les vaisseaux (`AbstractUnitDeliveryPointsHandler`), retirés à la perte (`DeductLostShipsPointsHandler`). L'ancienne règle « les civils ne comptent pas » est fausse.
+- Familles du jeu : `type` civil / military / advanced = « Vaisseaux Civils / de Combat / Spéciaux » (`fleet.json`). Le Collecteur solaire est `advanced`.
+- Collecteur solaire : ne vole jamais (`FlightViolation::SOLAR_SATELLITE_ABOARD`).
+
+**Tirs rapides** (table `rapid_fire`, 56 lignes, identiques au §6 ; `BattleSimulator::fire`) : cible tirée au hasard, après chaque tir (touché ou non) nouveau tir avec probabilité (f − 1) / f si la dernière cible est dans la table, nouvelle cible au hasard. Facteurs de base, modifiables par talents (non détaillés sur la page).
+
+**Vols** (`FlightPlan`, `FleetFlight`, `Distance`)
+- Vitesse de 1 à 100 % par pas de 1 (`FlightPlan::MIN/MAX_SPEED_PERCENT`, `SendFleetRequestPayload` Range 1..100, front `speedScale.ts` pas 1). L'ancien pas de 10 % est périmé.
+- Distance : `Distance::units()` (20 000 × Δg ; 2 700 + 95 × Δs ; 1 000 + 5 × Δp ; 5). **Carte circulaire** pour galaxies et systèmes : `Distance::roundTheRing()` (Backend #509 et #513, 9 octobre 2026), écart = min(écart direct, taille − écart direct). Positions non circulaires. Contredit `universe-03` (§11.2).
+- Durée = (10 + 3 500 / s × √(10 d / V)) / vitesse flotte / bonus, s en fraction, arrondie, au moins 1 s (`FleetFlight::over()`), identique à l'ancienne écriture 35 000 / S.
+- Consommation par trajet : Σ F × N × d / 35 000 × (s √(V / Vᵢ) + 1)², arrondie à l'inférieur, au moins 1 (`legBurn()`, `computeLegConsumption()`) ; aller-retour = deux trajets, sauf Colonisation et Stationnement (`FleetMission::isRoundTrip()`). F = consommation du moteur actuel.
+- **Le carburant occupe la soute** : charge = cargaison + volume du carburant (`FlightPlan::loadOf()`, `FlightTalents::fuelVolume()`), talent Soute à carburant au plus −75 %.
+- Bonus : vitesse plafonnée à 60 % (`FleetBonus::FLEET_SPEED_CEILING`), carburant à 45 % (`FUEL_CONSUMPTION_CEILING`), jamais sous 1 ; talents d'alliance Propulsion coordonnée et Ravitaillement optimisé, 4 niveaux de 5 %. Bonus hors plafond (retour, trajets internes, rappel, repli éclair) cités sans chiffres.
+- Vitesse flotte de l'univers : divise la durée, pas la consommation (`UniverseSpeeds`). Défaut ×1 (`UniverseSpeeds::default()`), Redline ×1 (§2).
+- Emplacements : 1 + Calcul Quantique + talents (`UserUniverse::getMaxFleets()`, `FLEET_SLOTS_CEILING` 3, dont l'emplacement d'attaque de l'Amiral) ; comptent les flottes à l'aller, en maintien et au retour, dépôts compris ; missiles et sauts non. Navettes du Navigateur hors emplacements (`takesShuttle()`). Premium : aucun emplacement de flotte.
+- Rappel (`Fleet::returnToOrigin()`) : à l'aller ou en maintien, pas au retour, jamais pour un dépôt ; retour = temps déjà volé ; expédition en maintien : tout l'aller, aucun résultat ; aucun remboursement sauf talent Réservoir rendu ; l'attaque rappelée rend sa place dans la limite (`AttackTally::refund()`).
+- Retour (`ReturningFleetResolver`) : base de départ disparue, perdue ou sans Dock orbital = flotte perdue (`HOME_DOCK_UNAVAILABLE`) ; déchargement au-delà des entrepôts.
+
+**Missions** (`FleetMission`, `SendFleetHandler`, `FlightPlan::structuralViolations()`, `MissionTarget`)
+- 10 missions : les 8 du §1 + `bank_deposit` « Dépôt à la banque » / « Bank deposit » et `alliance_deposit` « Don à l'alliance » / « Alliance donation ». Dépôts : 1 h aller, 1 h retour (`fixedLeg()`), 0 hydrogène, sans rappel, cargos seulement, base de départ avec Dock (`STATION_DEPOSIT_REQUIRES_DOCK`, Backend #569).
+- Maintenance : Attaque, Espionnage, Destruction bloquées au départ (`isIntrusive()`). Vacances : l'expéditeur ne peut rien envoyer ; la cible en vacances refuse Attaque, Destruction, Transport (`reachesTargetOwner()`).
+- Stationnement : propre base avec Dock ≥ 1 ; à l'arrivée sans Dock, cargaison déposée, vaisseaux renvoyés (`DeploymentResolver`).
+- Colonisation : place de colonie libre et cible espionnée (`ColonizeEligibilityChecker`) ; un Pionnier consommé, cargaison = stock de départ, autres vaisseaux en garnison (`ColonizationResolver`).
+- Espionnage : hydrogène payé × max(0,5 ; 1 − 0,05 × Renseignement Tactique), arrondi à l'inférieur (`SendFleetHandler`).
+- Recyclage : position espionnée au moins une fois par soi ou l'alliance, sauf sa base et l'espace lointain (`RecycleEligibilityChecker`) ; soute des Récupérateurs seulement (`RecycleArrivalResolver`).
+- Transport : livraison sans plafond d'entrepôt (`Base::receiveFleet()`).
+- Alerte d'attaque : 60 s, jusqu'à 360 s (Oracle) (§18).
+- Non publiés : le contrôle serveur de la Destruction de lune (tir ami, protections, limite d'attaques) ne passe que par la vue galaxie (`AllowedMissions`) ; un rapport de recyclage refusé semble laisser la flotte à l'arrivée (`RecycleArrivalResolver::resolve()` sort avant `returnFromMission()`) : deux points signalés dans la PR, à remonter à l'équipe.
+
+**Expéditions** (`ExpeditionRule`, `HoldDuration`, `ExpeditionSlots`, `ExpeditionResolver`)
+- Ouvertes par défaut (`ExpeditionRule::default()`, migration `Version20261031100000` pour tous les univers) ; Redline ouvert (note de version, §10).
+- Maintien 1 h à niveau de Cosmologie h, par heure ; carburant du maintien = ⌈h × Σ conso de base / 10⌉ (`HoldDuration::fuelFor()`, consommation d'origine), hors économies de carburant.
+- Simultanées = ⌊√Cosmologie⌋ (`ExpeditionSlots`), **+1 en Premium** (`PREMIUM_BONUS`, Backend #442) : non écrit dans le wiki tant que `patch-04` est ouvert.
+- Rappel en maintien : aucun résultat ni rapport. Le raccourci « skip-hold » est un outil de test interdit en production.
+- Points d'expédition = max(200, ⌊Σ structure / 200⌋) (`ExpeditionPoints`), plafond selon le meilleur joueur humain (`ExpeditionFindCap`, table inchangée du §11.3).
+- Effets publiés : diviseurs 1 / 2 / 3 (`FoundResource::amountFor()`), vaisseaux = moitié de la valeur (`ExpeditionResolver`), hors soute, échelle `ExpeditionShipLadder::standard` (rang + 1, exclusions) ; retard + maintien × 2/3/5, retour anticipé ÷ 2/3/5 (`ReturnLegShift`) ; pirates −3, aliens +3 (`HostileFaction::RESEARCH_GAP`) ; débris 10 % (`DebrisRule::expedition()`) ; trou noir = perte totale ; épuisement à 10 et 25 expéditions sur 24 h par espace lointain, tous joueurs (`DepletionLevel`, `ExpeditionVisits`) ; état de la zone donné si un Éclaireur est à bord.
+- **Non publiés (tirages et probabilités cachés)** : poids des résultats (`ExpeditionOutcomeWeights::default()`), probabilités de taille et plages de facteur (`FindSize`), choix de la ressource (`FoundResource::fromRoll()`), part des flottes pirates et aliens et sa dispersion, composition des escortes (`HostileFaction`, `EncounterShare`), multiplicateurs d'épuisement (`DepletionLevel::oddsKept()`), talent Flair de prospecteur. Les valeurs ne sont pas recopiées ici (dépôt public) ; celles du §11.3 datent du 2 octobre et étaient publiées sur la page jusqu'au 15 octobre 2026 : retirées de la page, leur maintien au §11.3 est signalé au responsable.
+
+**Porte de saut** (`JumpFleetHandler`, `JumpGateCooldown`, migrations `Version20260918090000`, `Version20260919090000`)
+- Recharge : table `LADDER` (§11.6 confirmée), niveau 14 et plus = 10 min, sans vitesse d'univers ; talents −30 % au plus (`JUMP_GATE_RECHARGE_SPEED_CEILING`), Porte double = 2 sauts.
+- Lunes du même joueur seulement (`differentOwners`), même univers ; les deux portes vérifiées avant tout mouvement ; aucune ressource ; pas de niveau maximum (`max_level` NULL).
+
+**Dock orbital** (`Base::startNextUnit()`, `UnitConstructionTrait`, `ConstructionQueueCapacity`)
+- File de vaisseaux et file de défenses en parallèle, 2 ordres (5 en Premium) chacune, paramètre d'univers (défaut 2 / 5, Redline 2 / 5, §2) ; fusion avec le dernier ordre en attente (unités uniques jamais) ; 1 à 1 000 000 unités.
+- Paiement : commande vérifiée en entier, unités payées une à une à l'entrée en production, commande coupée faute de ressources (`cutUnitOrderShort()`), livraison unité par unité.
+- Annulation : 80 % de l'unité payée non livrée (`CancellationRefundRate`, 95 % au plus par talent) ; arrêt après l'unité en cours (`stopUnitOrderAfterCurrentUnit()`).
+- Dock occupé : ni amélioration ni démolition (`checkShipyardIsNotProducingUnits()`) ; Dock en travaux : aucune commande. Dock constructible sur lune (`scope 'both'`), Assembleur moléculaire non.
+
 ---
 
 ## 7. Défenses (`/defenses?page=1&itemsPerPage=50`)
@@ -559,15 +620,15 @@ Durée d'une recherche (h) = (métal + cristal) / (1 000 × (1 + niveau effectif
 | Planète et sa lune | 5 |
 
 - L'espace lointain est la position N+1 du système et suit la formule normale.
-- **La carte n'est pas circulaire** : la galaxie 9 n'est pas voisine de la 1.
+- ~~**La carte n'est pas circulaire** : la galaxie 9 n'est pas voisine de la 1.~~ **Périmé** depuis le 9 octobre 2026 : galaxies et systèmes bouclent (voir « Flotte (code, 15 octobre 2026) »).
 
 **Vitesse**
 - Vitesse d'un vaisseau = vitesse de base × (1 + bonus × niveau de la recherche de son moteur) : +10 % par niveau de Propulseur Chimique, +20 % Moteur Magnétique, +30 % Navigation Transdimensionnelle.
-- **Le moteur d'un vaisseau est fixe** : pas de changement de moteur à un certain niveau comme dans OGame.
+- ~~**Le moteur d'un vaisseau est fixe**~~ **Périmé** depuis le 11 octobre 2026 : Navette, Récupérateur et Frappe-orbital changent de moteur comme dans OGame (voir « Flotte (code, 15 octobre 2026) »).
 - La flotte va à la vitesse de son vaisseau le plus lent, × bonus du talent Propulsion coordonnée.
 - **Le facteur de distorsion (`warpFactor`) n'a aucun effet** : statistique réservée, lue par aucun calcul.
 
-**Durée** (secondes) = (10 + 35 000 / S × √(10 × d / V)) / vitesse Flottes de l'univers, arrondie, minimum 1. V = vitesse de la flotte ; S = facteur de vitesse de 1 à 10 par pas de 1 (1 = 10 %, 10 = 100 %), précisé le 2026-10-06 (la constante est passée de 3 500 à 35 000).
+**Durée** (secondes) = (10 + 35 000 / S × √(10 × d / V)) / vitesse Flottes de l'univers, arrondie, minimum 1. V = vitesse de la flotte ; S = facteur de vitesse de 1 à 10 par pas de 1 (1 = 10 %, 10 = 100 %), précisé le 2026-10-06 (la constante est passée de 3 500 à 35 000). **Mis à jour** le 15 octobre 2026 : la vitesse se règle de 1 à 100 % par pas de 1 (voir « Flotte (code, 15 octobre 2026) »).
 
 **Consommation** par trajet = somme, pour chaque type de vaisseau, de conso × quantité × d / 35 000 × (S / 10 × √(V flotte / V vaisseau) + 1)², arrondie à l'inférieur, minimum 1.
 - Flotte homogène : formule OGame (vitesse% / 10 + 1)² à un facteur près. Les vaisseaux plus rapides que la flotte paient moins.

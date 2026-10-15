@@ -102,14 +102,14 @@ Chaque page porte un identifiant de page (P-xx). Abréviations : *[B]* = ton bri
 ### `fleet`, flotte
 | ID | Chemin | Page | Contenu | Sources | Manque |
 |---|---|---|---|---|---|
-| P-40 | `fleet` | Flotte (index) | | | |
-| P-41 | `fleet/ships` | Liste des vaisseaux | Tableau complet des 14 vaisseaux. **Rédigée FR + EN le 2 octobre, à valider.** | [B] + [J] complet | |
-| P-42 | `fleet/rapid-fire` | Tirs rapides | Table complète, explication. **Rédigée FR + EN le 2 octobre, à valider.** | [J] complet | `combat-01` |
-| P-43 | `fleet/orbital-dock` | Dock orbital (chantier) | File, livraison progressive, blocages. | [J] | `fleet-01` |
-| P-44 | `fleet/movement` | Déplacements | Vitesse, distorsion, durée, hydrogène, emplacements de flotte. | [J] partiel | `fleet-02`, `fleet-03`, `fleet-04` |
-| P-45 | `fleet/missions` | Les 8 missions | Attaque, espionnage, transport, colonisation, stationnement, expédition, recyclage, destruction de lune. | [J] | `fleet-05` |
-| P-46 | `fleet/expeditions` | Expéditions | Espace lointain, résultats, taille des trouvailles, épuisement. | Note de version | `fleet-06`, `patch-03` |
-| P-47 | `fleet/jump-gate` | Porte de saut | Recharge, limites. **Rédigée FR + EN le 2 octobre, à valider.** | [J] | `fleet-07` |
+| P-40 | `fleet` | Flotte (index) | Sommaire avec une ligne par page. Réécrite d'après le code le 15 octobre 2026. | code | |
+| P-41 | `fleet/ships` | Liste des vaisseaux | 14 vaisseaux : coûts, durées de base, statistiques, changements de moteur, prérequis, points militaires. Réécrite d'après le code le 15 octobre 2026. | code | |
+| P-42 | `fleet/rapid-fire` | Tirs rapides | Table complète, mécanique de la chaîne. Réécrite d'après le code le 15 octobre 2026. | code | `combat-01` |
+| P-43 | `fleet/orbital-dock` | Dock orbital (chantier) | Files parallèles, paiement unité par unité, livraison, durées, annulation, blocages. Rédigée d'après le code le 15 octobre 2026, **non publiée**. | code | `fleet-01`, `fleet-09`, `formula-04` |
+| P-44 | `fleet/movement` | Déplacements | Emplacements, vitesse 1 à 100 %, carte circulaire, durée, hydrogène dans les soutes, bonus, rappel, retour. Réécrite d'après le code le 15 octobre 2026. | code | `fleet-02`, `fleet-03`, `fleet-04` |
+| P-45 | `fleet/missions` | Les missions | Les 8 missions et les 2 dépôts à la Station stellaire (banque, don à l'alliance). Réécrite d'après le code le 15 octobre 2026. | code | `fleet-05` |
+| P-46 | `fleet/expeditions` | Expéditions | Espace lointain, conditions, résultats sans leurs probabilités, taille des trouvailles, épuisement. Réécrite d'après le code le 15 octobre 2026. | code | `fleet-06`, `patch-03`, `patch-04` |
+| P-47 | `fleet/jump-gate` | Porte de saut | Recharge, coût, lunes du joueur seulement, talents. Réécrite d'après le code le 15 octobre 2026. | code | `fleet-07` |
 
 ### `defense`, défense
 | ID | Chemin | Page | Contenu | Sources | Manque |
@@ -294,13 +294,13 @@ En bref · encart « paramètre d'univers » si besoin · Règles · Exemple chi
 - `research-02` ✅ N meilleurs Centres des autres bases au niveau N, s'ils sont au moins au niveau du Centre local.
 
 ### Flotte
-- `fleet-01` ✅ Vaisseaux et défenses payés par unité à la mise en file ; bâtiments et recherches payés au lancement.
-- `fleet-02` ✅ Statistique réservée, **sans effet**.
-- `fleet-03` ✅ Vitesse réglable de 10 % à 100 %. ✅ Formules de distance, durée et consommation (DONNEES §11.2). Retour payé au départ, sauf Colonisation et Stationnement.
-- `fleet-04` ✅ Rappel possible à tout moment avant la fin du trajet aller. L'hydrogène n'est pas remboursé.
+- `fleet-01` ✅ (corrigé par le code le 15 octobre 2026) Une commande de vaisseaux ou de défenses est vérifiée en entier quand elle est passée, puis chaque unité est payée à son entrée en production (voir `fleet-09`) ; bâtiments et recherches payés au lancement. P-43 et P-41. (Ancienne réponse : payés par unité à la mise en file.)
+- `fleet-02` ✅ Statistique réservée, **sans effet** (toujours lue par aucun calcul, code du 15 octobre 2026).
+- `fleet-03` ✅ (code, 15 octobre 2026) Vitesse réglable de **1 % à 100 %, par pas de 1** (l'ancien pas de 10 % est périmé). Formules de distance, durée et consommation confirmées ; la carte est circulaire pour galaxies et systèmes, et l'hydrogène du voyage occupe la soute (DONNEES « Flotte (code, 15 octobre 2026) »). Retour payé au départ, sauf Colonisation et Stationnement.
+- `fleet-04` ✅ (code, 15 octobre 2026) Rappel possible à l'aller et pendant le maintien d'une expédition, jamais au retour ni pour un dépôt à la Station stellaire. Retour en autant de temps que l'aller déjà volé. L'hydrogène n'est pas remboursé (sauf talent).
 - `fleet-05` ✅ (le terme « Attaque groupée » existe dans les traductions du jeu) Attaque groupée et défense alliée possibles **uniquement au sein d'une alliance**. ⏳ L'équipe vérifie si c'est implémenté : elles n'apparaissent pas dans les 8 missions du jeu. Non documenté d'ici là.
-- `fleet-06` ✅ Note de version : espace lointain, résultats possibles, taille des trouvailles, épuisement. ✅ Durée et nombre simultané connus. ⏳ Probabilités des résultats, chiffres de la limite liée au premier joueur, vitesse d'épuisement.
-- `fleet-07` ✅ Table de recharge, coût, prérequis (DONNEES §11.6).
+- `fleet-06` ✅ (code, 15 octobre 2026) Note de version : espace lointain, résultats possibles, taille des trouvailles, épuisement. Durée, nombre simultané, plafond lié au meilleur joueur et seuils d'épuisement (10 et 25 sur 24 h) tirés du code et publiés. Les probabilités des résultats, des tailles et l'effet chiffré de l'épuisement sont des tirages cachés : **retirés** de P-46 (voir `fleet-12`).
+- `fleet-07` ✅ Table de recharge, coût, prérequis (DONNEES §11.6), confirmés par le code le 15 octobre 2026 ; sauts entre lunes du même joueur seulement, pas de niveau maximum.
 
 ### Défense
 - `defense-01` ✅ Barrière et Dôme : 70 % de chances de reconstruction. L'équipe confirme pour toutes les défenses : « chaque unité de défense détruite a 70 % de chance d'être réparée ». Voir `combat-09`.
@@ -405,6 +405,11 @@ Règle : aucune de ces formules ne va dans le wiki avant confirmation. Les pages
 - `dynasty-18` ✅ Pas de limite : Écouter loin et Lecture des hangars se cumulent (2 paliers). Code corrigé (Backend #476). Question initiale : Ombre : Écouter loin (trait de L'Accord) et Lecture des hangars ne se cumulent pas (un palier plus tôt au plus par catégorie). Voulu ?
 - `dynasty-19` ✅ Ajoutée à `fleet/missions` FR et EN (60 s, jusqu'à 6 min avec l'Oracle). Question initiale : Oracle : l'alerte d'attaque de base (60 s avant l'impact, d'après le code) n'est décrite sur aucune page du wiki.
 - `dynasty-20` ✅ Se cumule avec la case des niveaux pairs. Question initiale : Symbiote : la case de plus par niveau de Modulateur planétaire (Terraformeur vivant) se cumule-t-elle avec la case de plus aux niveaux pairs ?
+
+### Flotte (15 octobre 2026)
+- `fleet-10` ⏳ (équipe, code) La Destruction de lune ne repasse pas, au départ, les contrôles de l'Attaque (tir ami, protections, limite d'attaques) : seule la vue galaxie retire la mission. Voulu ? Rien n'est écrit dans le wiki.
+- `fleet-11` ⏳ (équipe, code) Un joueur qui a désactivé les rapports de recyclage : `RecycleArrivalResolver::resolve()` s'arrête avant de renvoyer la flotte, qui semble rester sur place. Bogue ?
+- `fleet-12` ⏳ (**éditoriale**) Les probabilités des résultats d'expédition, des tailles de trouvaille, de la ressource trouvée et l'effet chiffré de l'épuisement étaient publiés sur P-46 ; ce sont des tirages cachés : retirés le 15 octobre 2026. Faut-il aussi les retirer de DONNEES §11.3 (dépôt public) ? Et publier la force typique des flottes pirates et aliens (part de votre flotte selon la taille) ?
 
 ## 8. Conventions issues des réponses
 
