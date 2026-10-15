@@ -5,10 +5,11 @@ Textes propres à chaque classe (en bref, règles, exemples, builds, pièges) : 
 
 Usage : python3 tools/dynasty_pages/p_classes.py [classe ...]   puis   python3 tools/talent_diagrams.py
 """
+import re
 import sys
 from pathlib import Path
 
-from dyn_lib import DATA, RULES, CLASSES, LABELS, tree, branch_name, branch_motto, branch_table, class_caps_table, class_label, clean
+from dyn_lib import DATA, RULES, CLASSES, LABELS, tree, branch_name, branch_motto, branch_table, class_caps_table, class_label, clean, node_name
 from write import write
 from classes_text import PROSE
 from p_core import ARTICLE, dyn_name
@@ -41,8 +42,30 @@ def generic_rules(lang, c):
             f"Each branch has 9 rows and costs {BRANCH_K} points. With {KMAX} points at most, you complete one branch and its ultimate, plus a second branch down to row 6 ({ROWS6} points). How points, gates and choices work is described on [Talents](/en/dynasty/talents)."]
 
 
+MARK = re.compile(r'\[\[(b:)?([a-z_]+?\d*)(?::([12]))?\]\]')
+
+
+def names(text, lang):
+    """[[cle_du_noeud]], [[cle:1]] (option d'un choix) et [[b:cle_de_branche]] : noms affichés par le jeu."""
+    def sub(m):
+        if m.group(1):
+            return branch_name(lang, m.group(2))
+        return node_name(lang, m.group(2), int(m.group(3)) if m.group(3) else None)
+    return MARK.sub(sub, text)
+
+
+def resolve(value, lang):
+    if isinstance(value, str):
+        return names(value, lang)
+    if isinstance(value, list):
+        return [resolve(v, lang) for v in value]
+    if isinstance(value, dict):
+        return {k: resolve(v, lang) for k, v in value.items()}
+    return value
+
+
 def body(lang, c):
-    P = PROSE[c][lang]
+    P = resolve(PROSE[c][lang], lang)
     fr = lang == 'fr'
     rules = generic_rules(lang, c) + P['rules']
     rules_md = '\n'.join(f'{i}. {r}' for i, r in enumerate(rules, 1))
@@ -73,7 +96,7 @@ def body(lang, c):
 
 
 if __name__ == '__main__':
-    todo = sys.argv[1:] or CLASSES
+    todo = sys.argv[1:] or [c for c in CLASSES if c in PROSE]
     for c in todo:
         for lang in ('fr', 'en'):
             write(lang, f'dynasty/classes/{c}', body(lang, c))
