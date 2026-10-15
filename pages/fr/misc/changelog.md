@@ -28,7 +28,6 @@ updated: "2026-10-15T16:29:45.768Z"
 - **15 octobre 2026 (alliances)** : rubrique Alliances vérifiée sur le code du jeu. Missions et station d'alliance réécrites (convois vers la trésorerie, entraide, station à 3 paliers, missions par inscription et effort relatif) ; tous les membres votent ; droits par rang et par fonction ; coûts de renommage ; fair-play de 0 à 100 ; limite d'attaques précisée.
 - **15 octobre 2026 (annexe)** : nouvelle [annexe des bâtiments niveau par niveau](/fr/economy/building-levels) : coût, énergie et production de chaque niveau, jusqu'au niveau 50.
 - **15 octobre 2026 (banque)** : nouvelle page [Banque stellaire](/fr/economy/stellar-bank).
-- **15 octobre 2026 (réécriture)** : rubrique Économie réécrite d'après le code du jeu : tables de production, d'énergie et de stockage calculées niveau par niveau, catalogue complet des bâtiments, page des formules, paiement des commandes du chantier, Station de réparation après tout combat en défense.
 
 ## Pages liées
 
