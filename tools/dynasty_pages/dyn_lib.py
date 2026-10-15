@@ -239,10 +239,11 @@ def class_caps_table(lang, owner):
         if cap is None:
             continue
         unit = DATA['lever_units'][lever]
-        note = ''
-        if r > cap + 1e-9:
-            note = ' (plafonné)' if fr else ' (capped)'
-        rows.append([lever_text(lang, lever, cap), amount(unit, r, lang) + note])
+        if r > cap + 1e-9:  # la somme des nœuds dépasse le plafond : le joueur n'en reçoit que le plafond
+            cell = (f'{amount(unit, cap, lang)} (plafonné)' if fr else f'{amount(unit, cap, lang)} (capped)')
+        else:
+            cell = amount(unit, r, lang)
+        rows.append([lever_text(lang, lever, cap), cell])
     head = ['Plafond de la classe (talents des deux arbres)', "Ce que l'arbre de classe atteint"] if fr else \
            ['Class cap (talents of both trees)', 'What the class tree reaches']
     return table(head, rows)
