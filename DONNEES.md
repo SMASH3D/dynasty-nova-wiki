@@ -725,6 +725,49 @@ Conditions : expéditions activées dans l'univers ; Cosmologie Appliquée ≥ 1
 - 5 000 hydrogène par scan. Uniquement sur une lune ; ne peut pas cibler une lune.
 - Montre toutes les flottes ayant la planète pour origine ou destination, aller et retour : composition, mission, heure d'arrivée. Cargaison masquée.
 
+## Espionnage (code, 15 octobre 2026)
+
+Relevé dans `astro-nova-backend` main 7b255c83 (lecture seule), le front `Astro-Nova-React` origin/main (libellés) et la base migrée (SELECT). Pages générées par `tools/espionage_pages/` (constantes dans `esp_lib.py`). Remplace §11.5 là où ils diffèrent.
+
+**Niveau effectif** (`Game/Domain/Service/EffectiveEspionageLevelCalculator.php`)
+- `max(0, (espA − espD) + min(MAX_PROBE_BONUS = 5, floor(sondes / PROBES_PER_BONUS = 2)) + talentLevels − mufflingLevels)`. `talentLevels` / `mufflingLevels` : talents de dynastie (`PlayerBonuses::espionageDepthLevels()` / `espionageMufflingLevels()`), qui ne jouent **pas** sur le risque. *Sondes économes* compte des sondes en plus, sans dépasser le plafond.
+- `espA` et `espD` (`SpyDetectionOdds::attackerLevel()` / `defenderLevel()`) = Renseignement Tactique + `AllianceBonuses::espionageAttackLevels` (Réseau d'informateurs) / `espionageDefenseLevels` (Contre-espionnage fédéré). Ces niveaux d'alliance entrent **à la fois** dans le niveau effectif et dans le risque. Cible inhabitée : `espD` = 0.
+- Paliers (`ValueObject/EspionageTier.php`) : ressources 1, flotte 3, défenses 5 (défenses et missiles), bâtiments 7, recherches 9. `EspionageReach` : des talents ouvrent la flotte et les ressources plus tôt.
+
+**Contre-espionnage** (`Service/CounterEspionageCalculator.php`, `Service/SpyDetectionOdds.php`, `ValueObject/SpyDetectionModifiers.php`)
+- `clamp((2 × espD − espA) × vaisseaux × RISK_PER_SHIP = 0,05, MIN_CHANCE = 5, MAX_CHANCE = 25)` ; 0 si aucun vaisseau (sauf talent *Orbite gardée*), si `2 × espD − espA ≤ 0`, si la cible est inhabitée, abandonnée ou en vacances. Vaisseaux comptés sur le corps visé (planète ou lune), et l'autre corps de la case avec *Sentinelles de lune*. Points des talents ajoutés avant la borne.
+- `probesShotDown()` : un tirage pour la vague ; prise, toutes les sondes tombent sauf `floor(sondes × survie %)` (talents). Les chances du second tirage (identifié / localisé, `SpyMissionResolver`) ne sont **pas** publiées dans le wiki (`spy-05`).
+
+**Mission** (`Service/SpyMissionResolver.php`, `ValueObject/FlightPlan.php`, `ValueObject/AllowedMissions.php`, `ValueObject/FleetMission.php`, `Application/Command/SendFleet/SendFleetHandler.php`)
+- Éclaireurs seuls (`INVALID_SPY_COMPOSITION`) ; jamais sa propre planète (`CannotSpyOwnPlanetException`) ; pas d'espace lointain (`DEEP_SPACE_TARGET`) ; planète ou lune (`fleet->target()->kind`). Autorisé sur joueur protégé et allié ; retiré pendant une maintenance (`isIntrusive()`) ; aucune mission pour un joueur lui-même en vacances (`AllowedMissions::none()`).
+- Hydrogène facturé : `max(0,5 ; 1 − niveau × 0,05)` × consommation, arrondi par défaut (`SendFleetHandler`, ligne « Espionage runs cheap »).
+- Ressources de la cible mises à jour à l'heure d'arrivée (`updateResources(force)`), dégradation d'abandon réglée avant lecture.
+- Alerte au défenseur sauf planète abandonnée, joueur en vacances ou `DeclinableReport::INTRUSION_ALERT` refusé (préférences de rapports, `ReportPreferencesSection.tsx`). Niveaux `IntrusionDetection` : undetected / identified / traced ; libellés « Auteur inconnu », « Auteur identifié », « Origine localisée » ; « Sonde repérée sur … » sans nom (`notifications.json`).
+- Rapport : `probes.sent` / `probes.destroyed` (« N sondes perdues sur M ») ; `pruneSpyHistory(keep: SPY_HISTORY_KEPT = 10)` par cible.
+- Découverte : `SpyDiscovery` du joueur et, s'il est dans une alliance, de l'alliance (ALL-306). `FULL_DISCOVERY_LEVEL = 10` fait passer le statut de `spied` à `discovered`, mais aucune expiration n'existe et le front traite les deux pareil (`PlanetModal.tsx` : `isSpied = status === 'spied' || 'discovered'`) : **pas d'effet visible**, règle « au niveau 10, la case reste découverte » retirée de P-71.
+
+**Rapport** (`Service/SpyReportGenerator.php`, front `ReportContent.tsx`)
+- Toujours : type (biome), taille, cases libres, températures ; pour une lune, diamètre et cases de la lune, températures de la case.
+- Inhabitée : `status: uninhabited`, toutes sections nulles. Abandonnée : pas de propriétaire, `abandonedSinceDays`. Vacances : propriétaire nommé, toutes sections nulles.
+- Missiles listés à part des défenses (même palier 5). Section nulle affichée « Niveau d'espionnage insuffisant », section vide « Aucun élément détecté » (`notifications.report.locked` / `none`).
+
+**Vision partagée d'alliance (ALL-306)** (`ValueObject/PlanetVision.php`, `ReadModel/MapReadModel.php`, `Application/Command/ShareSpyDiscoveriesWithAlliance/`, `Alliance/Domain/ValueObject/AllianceQuarantine.php`, `Service/SpyReportRequirementChecker.php`)
+- Chaque espionnage d'un membre crée la découverte côté alliance ; en rejoignant (ou en fondant), les découvertes du joueur sont fusionnées dans celles de l'alliance. Hors du délai d'installation de 24 h (commentaire d'`AllianceQuarantine`), retirée au départ. Pas de date ni de contenu de rapport partagés (`lastSpiedAt` nul si `visionSource = alliance`).
+- Front : badge et ligne « Découverte par un membre de l'alliance » / « Discovered by an alliance member » (`pages/planet.json` `allianceVision`, `allianceDiscoveredBy`).
+- Colonisation et recyclage : exigent une découverte du joueur **ou** de son alliance (`TARGET_NOT_SPIED`, `RECYCLE_TARGET_NOT_SPIED`).
+
+**Talents d'alliance** (table `alliance_talent`, migration `migrations/2026/10/Version20261010090000.php` ; `Alliance/Domain/Service/AllianceMemberBonuses.php`)
+- `informant_network` « Réseau d'informateurs » / « Informant network » et `federated_counterintelligence` « Contre-espionnage fédéré » / « Federated counterintelligence » : branche `intelligence`, `max_level` 3, `effect_per_level` 1 (niveau entier), coût 300 000 / 150 000 / 50 000 × 2, 1 point de doctrine. Bonus actif après `alliance_quarantine_hours: 24` (`config/services.yaml`).
+
+**Phalange de capteur** (`Game/Domain/Entity/Base.php` `scanWithPhalanx()`, `phalanxSweepCost()`, `PHALANX_SCAN_COST = 5000` ; `ValueObject/PhalanxRange.php` ; `ValueObject/Distance.php` ; `FleetDoctrineRepository::findPhalanxSweepOn()` ; `ReadModel/FleetReadModel::fromPhalanxSweep()`)
+- Bâtiment `sensor_phalanx` (table `building`) : coût 20 000 / 40 000 / 20 000, multiplicateur 2, `max_level` NULL, `scope` moon (migration `2026/09/Version20260918090000.php`) ; prérequis `lunar_base` 1 (`2026/09/Version20260921090000.php`). Base lunaire : même coût, aucun prérequis.
+- Portée `max(1, niveau² − 1)`, −1 si non construite ; même galaxie ; distance de systèmes **par le plus court côté de l'anneau** (`Distance::roundTheRing`, la carte boucle sur galaxies et systèmes, pas sur les positions).
+- Refus avant paiement : pas une lune, cible lune, pas de phalange, hors portée, hydrogène insuffisant ; vacances du scanneur refusées dans `ScanWithPhalanxHandler`.
+- Flottes vues : statut `traveling`, `returning` ou `exploring`, départ ou destination = la **planète** de la case (la lune seulement avec un talent de l'Oracle), missions `spy` et `recycle` exclues ; cargaison nulle. Pas de notification au joueur balayé, sauf talent de l'Ombre *Lumière dans le dos* (`NotifyPhalanxSweepHandler`).
+- Libellés : « Phalange de capteur » / « Sensor phalanx », « Base lunaire » / « Lunar base » (`buildings.json`).
+
+**Univers** : aucun réglage propre à l'espionnage. Seul le nombre de systèmes par galaxie (fixé à la création, `nbRegions`, 99 sur Redline) change le bouclage de la portée de la phalange.
+
 ### 11.6 Porte de saut (`fleet-07`)
 
 | Niveau | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14+ |

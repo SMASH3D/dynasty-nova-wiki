@@ -134,10 +134,10 @@ Chaque page porte un identifiant de page (P-xx). Abréviations : *[B]* = ton bri
 ### `espionage`, espionnage
 | ID | Chemin | Page | Contenu | Sources | Manque |
 |---|---|---|---|---|---|
-| P-70 | `espionage` | Espionnage (index) | | | |
-| P-71 | `espionage/spying` | Espionner | Éclaireur, sondage rapide, détail, interception. | [B] | `spy-01`, `spy-02`, `spy-03` |
-| P-72 | `espionage/spy-report` | Lire un rapport d'espionnage | | [B] + [J] | `spy-01` |
-| P-73 | `espionage/sensor-phalanx` | Phalange de capteur | Portée, coût, invisibilités. **Rédigée FR + EN le 2 octobre, à valider.** | [J] | `spy-04` |
+| P-70 | `espionage` | Espionnage (index) | Réécrite d'après le code le 15 octobre 2026. | [E] | |
+| P-71 | `espionage/spying` | Espionner | Éclaireur, sondage rapide, détail, interception, vision partagée d'alliance, alerte. **Réécrite d'après le code le 15 octobre 2026.** | [E] | `spy-05` |
+| P-72 | `espionage/spy-report` | Lire un rapport d'espionnage | Sections, mention « Niveau d'espionnage insuffisant », historique, alerte d'intrusion. **Réécrite d'après le code le 15 octobre 2026.** | [E] | |
+| P-73 | `espionage/sensor-phalanx` | Phalange de capteur | Portée (galaxie qui boucle), coût, prérequis, invisibilités. **Réécrite d'après le code le 15 octobre 2026.** | [E] | |
 
 ### `players`, joueurs et règles
 | ID | Chemin | Page | Contenu | Sources | Manque |
@@ -319,10 +319,12 @@ En bref · encart « paramètre d'univers » si besoin · Règles · Exemple chi
 - `combat-09` ✅ Tirage indépendant à 70 % par unité. **P-65 débloquée.** (ta question) Reconstruction : chance de 70 % par unité, ou 70 % arrondi à l'inférieur ? Avec 2 Barrières détruites, combien reviennent ? ⚠️ `defense-01` (« 70 % de chances ») et `combat-07` (« fixe ») se contredisent. Le brief disait « 10 canons détruits → 7 reconstruits ».
 
 ### Espionnage
-- `spy-01` ✅ Formule et paliers (DONNEES §11.5).
+- `spy-01` ✅ Formule et paliers (DONNEES §11.5). Revérifié dans le code le 15 octobre 2026 : inchangé ; les talents d'alliance comptent aussi dans le risque (DONNEES « Espionnage (code, 15 octobre 2026) »).
 - `spy-02` ✅ Formule bornée 5 à 25 %, un tirage pour toute la vague.
-- `spy-03` ✅ Le joueur espionné est prévenu.
-- `spy-04` ✅ Portée niveau² − 1 systèmes, 5 000 hydrogène par scan.
+- `spy-03` ✅ Le joueur espionné est prévenu. Précisé par le code le 15 octobre 2026 : sans nom si la vague passe, identifié ou localisé si elle est abattue ; pas d'alerte sur une planète abandonnée, en vacances ou si le joueur a désactivé ces alertes.
+- `spy-04` ✅ Portée niveau² − 1 systèmes, 5 000 hydrogène par scan. ⚠️ corrigé le 15 octobre 2026 : la portée boucle sur les systèmes de la galaxie (le code mesure la distance par le plus court côté de l'anneau), contrairement à « carte non circulaire » ; missions Espionnage et Recyclage invisibles, trafic de la lune invisible.
+- `spy-05` ⏳ **Éditoriale, au responsable** : la formule du contre-espionnage (5 à 25 %) est publiée depuis le 2 octobre (`spy-02`) et la réécriture la garde. La consigne « pas de probabilités ni de tirages cachés » invite à la retirer ; un talent de l'Ombre affiche d'ailleurs ce risque en jeu. La réécriture ne publie pas les chances du second tirage (identifié ou localisé). Garder la formule, ou ne donner que la fourchette 5 à 25 % et les cas à risque nul ?
+- `spy-06` ⏳ **Éditoriale, au responsable** : le code mesure toutes les distances sur une carte qui boucle (galaxies et systèmes), alors qu'AGENTS.md §4 et plusieurs pages disent « la carte n'est pas circulaire ». P-73 suit le code ; AGENTS.md n'est pas modifié dans ce lot (fichier commun aux rubriques).
 
 ### Joueurs
 - `players-01` ✅ Classement général = économie + recherche + militaire.
@@ -357,7 +359,7 @@ Règle : aucune de ces formules ne va dans le wiki avant confirmation. Les pages
 - `formula-04` ⏳ (ex `fleet-08`) Durée de construction des vaisseaux et défenses au Dock orbital : quelle formule ? Exemple relevé : une Navette de fret avec Dock orbital 4 et Assembleur 0 prend 1 080 s.
 - `formula-05` ⏳ Collecteur solaire : l'équipe indique « Tmax / 4 plus sa base d'énergie ». La base vaut-elle 20 (35 relevés à Tmax = 60 °C) ?
 - `formula-06` ✅ Confirmé par le code : arrondi à l'inférieur par ressource (15 octobre 2026, DONNEES §4). Ancienne question : Coût des bâtiments et recherches : coût du niveau N = coût du niveau 1 × facteur^(N − 1), avec les facteurs relevés (1,5 ; 1,6 ; 1,75 ; 1,8 ; 2 ; 3 ; 5) ? Arrondi appliqué ?
-- `moon-02` ⏳ **À clarifier pour compléter P-73** : coût de construction et prérequis de la Phalange de capteur. P-73 est rédigée sans ces données, et P-17 Lunes reste bloquée faute de données sur la Base lunaire (`universe-09`).
+- `moon-02` ✅ (code, 15 octobre 2026) Prérequis Base lunaire 1 ; coût 20 000 métal, 40 000 cristal, 20 000 hydrogène au niveau 1, × 2 par niveau, sans niveau maximum (DONNEES « Espionnage (code, 15 octobre 2026) »). P-73 complétée. Question initiale : coût de construction et prérequis de la Phalange de capteur. P-73 est rédigée sans ces données, et P-17 Lunes reste bloquée faute de données sur la Base lunaire (`universe-09`).
 
 ### Nouvelles questions (2 octobre 2026, fin de journée)
 - `universe-10` ✅ Position ramenée sur une échelle de 15. (Question : Les systèmes comptent de 9 à 20 positions selon l'univers : comment se répartissent taille moyenne, température et types quand un système n'a pas 15 positions ? (P-14 ne donne que la table à 15 positions.))
