@@ -21,6 +21,9 @@ game_version: "Serveur 2.1.0 · Client 3.1.0"
 > Default: **×1** · Redline: **×1**
 {.is-info}
 
+> Ship names are provisional English translations: the game still shows French names (see the [glossary](/en/getting-started/glossary)).
+{.is-warning}
+
 ## Rules
 
 1. Research is started from a planet with an **Innovation Center**. Its building requirements (most often the Innovation Center level) are read on **that planet**, its research requirements across the whole empire.
