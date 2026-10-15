@@ -14,7 +14,7 @@ game_version: "Serveur 2.1.0 · Client 3.1.0"
 
 # Modulateur planétaire et Centre logistique
 
-> **En bref** : deux bâtiments pour aller plus loin sur une planète. Le **Modulateur planétaire** ajoute des cases quand la planète est pleine. Le **Centre logistique** agrandit les entrepôts de 10 % par niveau.
+> **En bref** : deux bâtiments pour aller plus loin sur une planète. Le **Modulateur planétaire** ajoute des cases quand la planète est pleine. Le **Centre logistique** agrandit toute la capacité de stockage de 10 % par niveau.
 {.is-info}
 
 <img src="/images/illustrations/facilities/modulateur-planetaire.jpg" width="180" alt="Modulateur planétaire"> <img src="/images/illustrations/facilities/centre-logistique.jpg" width="180" alt="Centre logistique">
@@ -22,25 +22,25 @@ game_version: "Serveur 2.1.0 · Client 3.1.0"
 ## Règles
 
 ### Modulateur planétaire
-1. Prérequis : **Assembleur moléculaire 1** et **Science Énergétique 12**. Niveau maximum : 10.
-2. Chaque niveau ajoute **5 cases**, plus **1 case bonus aux niveaux pairs**. Le Modulateur occupe lui-même une case par niveau : le gain net est de 4 cases aux niveaux impairs et de 5 aux niveaux pairs.
+1. Prérequis : **Assembleur moléculaire 1** et **Science Énergétique 12**. Niveau maximum : 10. Planètes seulement.
+2. Chaque niveau ajoute **5 cases**, plus **1 case aux niveaux pairs**. Le Modulateur occupe lui-même une case par niveau : le gain net est de 4 cases aux niveaux impairs et de 5 aux niveaux pairs. Certains talents ajoutent une case de plus par niveau.
 3. Coût du niveau 1 : **50 000 cristal et 100 000 hydrogène**, sans métal. Le coût double à chaque niveau.
-4. Il demande aussi une **énergie requise** (1 000 au niveau 1, doublée à chaque niveau). Elle n'est pas consommée : la production d'énergie de la planète doit simplement atteindre ce seuil au lancement de la construction.
+4. Il demande aussi une **énergie requise** : 1 000 au niveau 1, doublée à chaque niveau. Elle n'est pas consommée : la production d'énergie de la planète doit simplement atteindre ce seuil au lancement.
 5. Une planète **pleine** accepte toujours une montée de niveau du Modulateur, puisque c'est le seul moyen de libérer de la place.
 
 ### Centre logistique
-6. Prérequis : **Calcul Quantique 2**. Niveau maximum : 10.
-7. Chaque niveau agrandit les entrepôts de **10 %** : +100 % au niveau 10.
+6. Prérequis : **Calcul Quantique 2**. Niveau maximum : 10. Planètes seulement.
+7. Chaque niveau agrandit la capacité de stockage de la planète de **10 %**, Base planetaire comprise : +100 % au niveau 10. Ce bonus s'additionne à ceux d'alliance et de talents (voir [Le stockage](/fr/economy/storage)).
 8. Coût du niveau 1 : **20 000 métal et 40 000 cristal**. Le coût double à chaque niveau.
 
 ## Exemple chiffré
 
 **Modulateur planétaire niveau 4** sur une planète de 163 cases
-- Cases ajoutées : 5 + 6 + 5 + 6 = **22**. Le Modulateur en occupe 4 : **18 cases** de plus pour vos autres bâtiments.
+- Cases ajoutées : 5 + 6 + 5 + 6 = **22**. Le Modulateur en occupe 4 : **18 cases** de plus pour vos autres bâtiments, soit 185 cases au total.
 - Coût total des 4 niveaux : 750 000 cristal et 1 500 000 hydrogène. Énergie requise pour lancer le niveau 4 : 8 000.
 
-**Centre logistique niveau 3** avec un Dépôt d'alliages niveau 2 (40 000 de capacité)
-- Bonus : +30 %, soit 40 000 × 1,3 = **52 000**.
+**Centre logistique niveau 3** avec un Dépôt d'alliages niveau 2 (40 000) et la Base planetaire (10 000)
+- Bonus : +30 % sur 50 000, soit **65 000 métal**.
 
 ## Données détaillées
 
@@ -61,7 +61,7 @@ game_version: "Serveur 2.1.0 · Client 3.1.0"
 
 ### Centre logistique
 
-| Niveau | Métal | Cristal | Bonus des entrepôts |
+| Niveau | Métal | Cristal | Bonus de stockage |
 |---|---|---|---|
 | 1 | 20 000 | 40 000 | +10 % |
 | 2 | 40 000 | 80 000 | +20 % |

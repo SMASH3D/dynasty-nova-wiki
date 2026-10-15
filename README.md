@@ -24,6 +24,7 @@ Un agent IA qui travaille sur ce dépôt doit lire [AGENTS.md](AGENTS.md) avant 
 | `tools/wikijs.py` | Synchronisation avec Wiki.js : `status`, `push`, `create`, `pull`, `upload`. |
 | `tools/apply_edits.py` | Applique un lot de remplacements `[ancien, nouveau]` aux pages locales. |
 | `tools/talent_diagrams.py` | Diagrammes Mermaid des arbres de talents, générés depuis les tableaux des pages de classe (compatibles Mermaid 8.8.2). Finitions facultatives : `assets/talent-tree.css`. |
+| `tools/economy_pages/` | Pages de la rubrique Économie générées depuis les formules et le catalogue du code (`econ_lib.py`) ; un script par page, à relancer après un rééquilibrage. |
 | `tools/body_hash.py` | Empreinte SHA-256 du corps d'une page (sans front matter). |
 | `tools/export_to_md.py` | Export initial du wiki vers les fichiers markdown (historique). |
 
