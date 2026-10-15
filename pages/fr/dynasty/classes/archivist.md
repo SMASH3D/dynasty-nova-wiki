@@ -13,36 +13,39 @@ updated: "2026-10-07T22:08:19.914Z"
 
 # L'Archiviste
 
-> **En bref** : « Rien ne se perd ». L'Archiviste récupère ce que les autres laissent derrière eux : un savoir que d'autres ont déjà trouvé (**Mémoire**), les épaves des batailles des autres (**Épave**), et sa propre flotte quand elle tombe (**Registre**). Classe exclusive à [L'Héritage](/fr/dynasty/dynasties).
+> **En bref** : « Rien ne se perd ». L'Archiviste récupère ce que les autres laissent derrière eux : un savoir que d'autres ont déjà trouvé (Mémoire), les épaves des batailles (Épave), et sa propre flotte quand elle tombe (Registre).
 {.is-info}
 
 ## Règles
 
-1. L'Archiviste est une classe **exclusive à L'Héritage** : seuls les joueurs de cette dynastie peuvent la prendre.
-2. Son arbre compte **3 branches de 9 rangées** (15 points par branche). Les règles de points, de portes et d'ultime sont celles de tous les arbres de classe : voir [Système de talents](/fr/dynasty/talents).
-3. **Niveau connu** : un niveau de recherche que **25 %** des joueurs actifs de l'univers détiennent déjà. Toute la branche Mémoire ne touche que ces niveaux.
-4. **Récoltes de débris** : le bonus de l'Archiviste est versé au retour des Récupérateurs. Il ne prend pas de place en soute et ne retire rien de plus au champ de débris.
-5. **Registre des pertes** : le registre garde pendant **7 jours** la liste des vaisseaux perdus au combat. Tout ce qui y figure se reconstruit à des conditions de faveur, dans la limite des quantités perdues. Il ne couvre que les vaisseaux, pas les défenses.
-6. La vitesse de reconstruction du registre s'**ajoute** à la vitesse de construction des vaisseaux (Ateliers de l'arbre commun, alliance). Une durée est divisée par (1 + somme des bonus).
-7. Le seul **accent** de la classe est la vitesse des missions de recyclage (Course aux épaves), voir [Système de talents](/fr/dynasty/talents).
-8. Le dock, le recyclage pendant le combat et l'hydrogène des débris appartiennent à l'Amiral ; les défenses au Vétéran.
+1. L'Archiviste est une classe **exclusive à [L'Héritage](/fr/dynasty/dynasties)** : seuls les joueurs de cette dynastie peuvent la prendre.
+2. Son arbre compte **trois branches** : Mémoire, Épave et Registre.
+3. Chaque branche a 9 rangées et coûte 15 points. Avec 25 points au maximum, vous complétez une branche et son ultime, plus une seconde branche jusqu'à la rangée 6 (10 points). Le fonctionnement des points, des portes et des choix est décrit sur [Les talents](/fr/dynasty/talents).
+4. **Niveau connu** : un niveau de recherche que détiennent déjà, à ce niveau ou plus haut, **25 %** des joueurs comptés de l'univers. Sont comptés les joueurs actifs dans les 7 derniers jours, hors mode vacances et hors bots. Le décompte est refait une fois par jour. Toute la branche Mémoire ne touche que ces niveaux.
+5. La vitesse d'un niveau connu (Niveaux connus, Fonds d'archives) et celle de Leçons de la défaite s'**ajoutent** à votre vitesse de recherche, en dehors de ses plafonds. Vitesse, coût et niveau connu se fixent au **lancement** de l'étude.
+6. **Récoltes de débris** : le bonus porte sur le métal et le cristal que vos Récupérateurs chargent réellement, donc dans la limite de leur soute. Il est versé au retour, ne prend pas de place en soute et ne retire rien de plus au champ.
+7. **Registre des pertes** : le registre, commun à tout votre empire, garde la liste des vaisseaux perdus au combat, ceux d'une flotte comme ceux qui défendaient une planète. Les défenses n'y entrent jamais. Une commande passée depuis le registre, sur n'importe quelle planète, se fait aux conditions du registre dans la limite des quantités qu'il garde, en puisant d'abord dans les pertes les plus anciennes.
+8. La vitesse du registre s'**ajoute** à la vitesse de construction des vaisseaux : une durée est divisée par (1 + somme des bonus). La réduction de coût du registre s'applique **sur le prix déjà réduit** par vos autres réductions de vaisseaux.
+9. Le seul **accent** de la classe est la vitesse des missions de recyclage (Course aux épaves), dans le budget de vitesse de flotte des talents. Le dock, le recyclage pendant le combat et l'hydrogène des débris appartiennent à l'Amiral ; les défenses au Vétéran.
 
 ## Exemple chiffré
 
-**Mémoire** : Systèmes Offensifs 10 (409 600 métal, 102 400 cristal), univers à vitesse de recherche ×1, Centre d'innovation 10 : **46 h 32 min** sans talent. Le niveau est connu.
-- Niveaux connus (+10 %) : **42 h 18 min**.
-- Avec Fonds d'archives au rang 3 (+25 % au total) : **37 h 14 min**.
+**Mémoire** : Systèmes Offensifs 10 (409 600 métal, 102 400 cristal), univers à vitesse de recherche ×1, Centre d'innovation 10 : **46 h 32 min 44 s** sans talent. Le niveau est connu.
+- Niveaux connus (+10 %) : **42 h 18 min 51 s**.
+- Avec Fonds d'archives au rang 3 (+25 % au total) : **37 h 14 min 12 s**. Avec Retard comblé, à 5 niveaux de retard ou plus (+40 %) : **33 h 14 min 49 s**.
 - Redécouverte au rang 3 (−12 %) : **360 448** métal et **90 112** cristal.
-- Élan : Systèmes Offensifs 11 (93 h 05 min au même Centre), s'il est connu, démarre avec 10 % de son temps fait, soit **9 h 18 min** ; avec Lancée au rang 3 (25 %), **23 h 16 min**.
+- Élan : Systèmes Offensifs 11, s'il est connu, dure 93 h 05 min 27 s, ramenées à 74 h 28 min 22 s par les +25 %. Il démarre avec 10 % de ce temps fait, **7 h 26 min 50 s** ; avec Lancée au rang 3 (25 %), **18 h 37 min 05 s**.
+- Le même Systèmes Offensifs 10, lancé dans les 24 h d'une défaite avec Leçons de la défaite : 25 + 20 = 45 % → **32 h 06 min 02 s**.
 
-**Épave** : un champ de débris de 400 000 ressources.
-- Ferrailleur (+10 %) : **440 000** rapportés.
-- Avec Tri des métaux au rang 3 (+25 % au total) : **500 000**. Le champ perd toujours 400 000 ressources, pas plus.
+**Épave** : 100 Corvettes détruites, univers à 30 % de débris (Redline) : 600 000 métal et 210 000 cristal, soit 810 000 ressources. Il faut 41 Récupérateurs (20 000 de soute chacun, sans Pliage Spatial).
+- Ferrailleur et Tri des métaux au rang 3 (+25 %) : +150 000 métal et +52 500 cristal, **1 012 500** rapportés. Le champ perd 810 000, pas plus.
+- Arrivée moins d'1 h après le combat, avec Épaves fraîches (+45 %) : **1 174 500**.
+- Avec 30 Récupérateurs seulement (600 000 de soute) : 444 444 métal et 155 555 cristal chargés au prorata, le bonus porte sur eux ; 210 001 ressources restent au champ.
 
 **Registre** : 200 Corvettes perdues, soit 4 000 000 métal, 1 400 000 cristal et 400 000 hydrogène (5 800 000 ressources).
-- Indemnité : 5 % de leur valeur, soit **290 000** ressources versées aussitôt ; **464 000** avec Fonds de guerre au rang 3 (8 %).
+- Indemnité : 5 % de leur prix, soit **290 000** ressources versées aussitôt (200 000 / 70 000 / 20 000) ; **464 000** avec Fonds de guerre au rang 3 (8 %).
 - Plans conservés au rang 3 (−12 %) : 4 000 000 → **3 520 000** métal ; avec Remise de guerre (−20 % au total), **3 200 000**.
-- Une reconstruction qui prend 10 h sans talent : **8 h 41 min** avec Registre des pertes (+15 %), **7 h 41 min** avec Chaînes de relève au rang 3 (+30 %), **6 h 40 min** avec Retour au front (+50 %). Avec Relève éclair en plus, pendant les 24 h qui suivent la perte (+70 %) : **5 h 53 min**.
+- Une reconstruction qui prend 10 h sans talent : **8 h 41 min 45 s** avec Registre des pertes (+15 %), **7 h 41 min 33 s** avec Chaînes de relève au rang 3 (+30 %), **6 h 40 min** avec Retour au front (+50 %). Avec Relève éclair en plus, dans les 24 h qui suivent la perte (+70 %) : **5 h 52 min 57 s**.
 
 ## Données détaillées
 
@@ -157,77 +160,121 @@ graph TB
     style B3 fill:#0b1322,stroke:#1e2a40,stroke-width:1px;
 ```
 
-Types de rangée : *clé* (1 point), *3 rangs*, *choix* (un point, option A ou B), *ultime*.
+### Mémoire
 
-### Mémoire : « Ce que d'autres ont déjà trouvé. »
+*Ce que d'autres ont déjà trouvé.*
 
-| Rangée | Type | Talent | Effet | Valeur |
+| Rangée | Nœud | Type | Effet (nœud plein) | Par rang |
 |---|---|---|---|---|
-| 1 | clé | **Niveaux connus** | Un niveau de recherche que 25 % des joueurs actifs de l'univers détiennent déjà est connu : vous l'étudiez plus vite, et le Centre d'innovation le signale. | +10 % |
-| 2 | 3 rangs | **Redécouverte** | Vos niveaux connus coûtent moins. | −4 % par rang (−12 %) |
-| 3 | choix | **A : Bibliothèque d'alliance** | Un niveau qu'un membre de votre alliance détient compte comme connu. | déblocage |
-| | | **B : Bibliothèque publique** | Un niveau est connu dès que 10 % des joueurs actifs le détiennent. | 10 % |
-| 4 | 3 rangs | **Fonds d'archives** | Vos niveaux connus s'étudient encore plus vite. | +5 % par rang (+25 % au total) |
-| 5 | clé | **Élan** | Quand vous terminez un niveau connu, le niveau suivant de la même recherche, s'il est connu, démarre avec une part de son temps déjà faite. | 10 % |
-| 6 | choix | **A : Retard comblé** | Sur une recherche où vous avez 5 niveaux de retard ou plus sur le niveau le plus répandu, Fonds d'archives compte double : 10 + 15 × 2 = +40 % sur un niveau connu. | ×2 |
-| | | **B : Au coude à coude** | Tout niveau que détient le joueur classé juste au-dessus de vous compte comme connu. | déblocage |
-| 7 | 3 rangs | **Lancée** | L'Élan donne plus d'avance au niveau suivant. | +5 % par rang (25 %) |
-| 8 | clé | **Mémoire vive** | Un niveau connu se lance sans le niveau de Centre d'innovation requis : il suffit d'avoir les autres prérequis. | déblocage |
-| 9 | ultime | **Bibliothèque universelle** | Un niveau compte comme connu dès qu'un seul joueur de l'univers le détient. Seul le premier à l'atteindre n'en profite pas sur cette recherche. | déblocage |
+| 1 | **Niveaux connus** | clé | Un niveau de recherche que 25 % des joueurs actifs de l'univers détiennent déjà est connu : vous l'étudiez 10 % plus vite, et le centre d'innovation le signale. |  |
+| 2 | **Redécouverte** | 3 rangs | Vos niveaux connus coûtent 12 % de moins. | 3 × 4 % |
+| 3 | **A · Bibliothèque d'alliance** | choix | Un niveau qu'un membre de votre alliance détient compte comme connu. | |
+|  | **B · Bibliothèque publique** |  | Un niveau est connu dès que 10 % des joueurs actifs le détiennent. | |
+| 4 | **Fonds d'archives** | 3 rangs | Vos niveaux connus s'étudient encore 15 % plus vite. | 3 × 5 % |
+| 5 | **Élan** | clé | Quand vous terminez un niveau connu, le niveau suivant de la même recherche, s'il est connu, démarre avec 10 % de son temps déjà fait. |  |
+| 6 | **A · Retard comblé** | choix | Sur une recherche où vous avez 5 niveaux de retard ou plus sur le niveau le plus répandu, Fonds d'archives compte deux fois. | |
+|  | **B · Au coude à coude** |  | Tout niveau que détient le joueur classé juste au-dessus de vous compte comme connu. | |
+| 7 | **Lancée** | 3 rangs | L'Élan donne 15 % d'avance en plus au niveau suivant. | 3 × 5 % |
+| 8 | **Mémoire vive** | clé | Un niveau connu se lance sans le niveau de centre d'innovation requis : il suffit d'avoir les autres prérequis. |  |
+| 9 | **Bibliothèque universelle** | ultime | Un niveau compte comme connu dès qu'un seul joueur de l'univers le détient. Seul le premier à l'atteindre n'en profite pas sur cette recherche. |  |
 
-### Épave : « Arriver le premier sur ce qui flotte. »
+- **Bibliothèque d'alliance** : un niveau qu'un autre membre de votre alliance détient, à ce niveau ou plus haut. **Au coude à coude** : le joueur classé juste au-dessus de vous au classement général. Ces deux listes sont relevées une fois par jour.
+- **Élan** : le niveau achevé doit être connu, et le suivant connu au moment où vous le lancez. L'avance est une part de la durée réelle de l'étude et s'ajoute au-delà du plafond des avances du Théoricien. Un seul élan à la fois : achever un autre niveau connu le remplace.
+- **Retard comblé** : le niveau le plus répandu est celui que le plus de joueurs comptés détiennent exactement (le plus bas en cas d'égalité). Seule la part de Fonds d'archives compte double : 10 + 15 × 2 = 40 %.
+- **Mémoire vive** lève seulement le niveau de Centre d'innovation demandé : la planète doit tout de même avoir un Centre d'innovation.
+- **Bibliothèque universelle** : un seul joueur compté suffit. Un niveau détenu seulement par des bots ou des joueurs inactifs ou en vacances ne devient pas connu ainsi.
 
-| Rangée | Type | Talent | Effet | Valeur |
+### Épave
+
+*Arriver le premier sur ce qui flotte.*
+
+| Rangée | Nœud | Type | Effet (nœud plein) | Par rang |
 |---|---|---|---|---|
-| 1 | clé | **Ferrailleur** | Vos récoltes de débris rapportent plus. Le bonus est versé au retour, ne prend pas de place en soute et ne vide pas davantage le champ. | +10 % |
-| 2 | 3 rangs | **Radar d'épaves** | Les champs de débris apparaissent pour vous sur la carte autour de vos planètes, même sur les cases jamais explorées. | 5 systèmes par rang (15) |
-| 3 | choix | **A : Charognard** | Vous recyclez un champ sans avoir sondé sa case : vous partez dès que vous le voyez. | déblocage |
-| | | **B : Course aux épaves** | Vos missions de recyclage vont plus vite (accent). | +10 % |
-| 4 | 3 rangs | **Tri des métaux** | Vos récoltes de débris rapportent encore plus. | +5 % par rang (+25 % au total) |
-| 5 | clé | **Alerte d'épave** | Vous êtes prévenu dès qu'un champ de plus de 50 000 ressources apparaît dans la portée de votre radar. | 50 000 |
-| 6 | choix | **A : Garnison de récupération** | Quand une de vos planètes est attaquée, ses Récupérateurs à quai récoltent le champ dès la fin du combat, avant ceux de l'attaquant. | déblocage |
-| | | **B : Épaves fraîches** | Sur un champ apparu il y a moins d'1 h, vos récoltes rapportent 20 points de plus, en plus de Ferrailleur et Tri des métaux. Comme eux, ce bonus est créé au retour : il ne vide pas davantage le champ (25 % → 45 % avec la branche pleine). | +20 points |
-| 7 | 3 rangs | **Équipe d'astreinte** | Quand l'alerte sonne, vos Récupérateurs partent seuls depuis la planète la plus proche, même si vous dormez. | 1 départ par jour et par rang (3) |
-| 8 | clé | **Ramasse-tout** | Dans le même vol, vos Récupérateurs récoltent aussi les champs des positions voisines (±1 dans le même système), dans la limite de leur soute. | ±1 position |
-| 9 | ultime | **Scellés** | Une fois toutes les 24 h, vous mettez sous scellés un champ que vous voyez : pendant 1 h, les autres joueurs ne le voient plus et ne peuvent plus y envoyer de Récupérateurs. Ceux déjà en vol arrivent normalement. | 1 h |
+| 1 | **Ferrailleur** | clé | Vos récoltes de débris rapportent 10 % de plus. Le bonus est versé au retour, ne prend pas de place en soute et ne vide pas davantage le champ. |  |
+| 2 | **Radar d'épaves** | 3 rangs | Les champs de débris apparaissent pour vous sur la carte jusqu'à 15 systèmes autour de vos planètes, même sur les cases jamais explorées. | 3 × 5 |
+| 3 | **A · Charognard** | choix | Vous recyclez un champ sans avoir sondé sa case : vous partez dès que vous le voyez. | |
+|  | **B · Course aux épaves** |  | Vos missions de recyclage vont 10 % plus vite. | |
+| 4 | **Tri des métaux** | 3 rangs | Vos récoltes de débris rapportent encore 15 % de plus. | 3 × 5 % |
+| 5 | **Alerte d'épave** | clé | Vous êtes prévenu dès qu'un champ de plus de 50 000 ressources apparaît dans la portée de votre radar : la course commence avant les autres. |  |
+| 6 | **A · Garnison de récupération** | choix | Quand une de vos planètes est attaquée, ses recycleurs à quai récoltent le champ dès la fin du combat, avant ceux de l'attaquant. | |
+|  | **B · Épaves fraîches** |  | Sur un champ apparu il y a moins de 1 h, vos récoltes rapportent 20 % de plus. | |
+| 7 | **Équipe d'astreinte** | 3 rangs | Quand l'alerte sonne, vos recycleurs partent seuls depuis la planète la plus proche, même si vous dormez, jusqu'à 3 fois par jour. | 3 × 1 |
+| 8 | **Ramasse-tout** | clé | Dans le même vol, vos recycleurs récoltent aussi les champs des positions voisines (±1 dans le même système), dans la limite de leur soute. |  |
+| 9 | **Scellés** | ultime | Une fois par jour, vous mettez sous scellés un champ que vous voyez : pendant 1 h, les autres joueurs ne le voient plus et ne peuvent plus y envoyer de recycleurs. Ceux déjà en vol arrivent normalement. |  |
 
-### Registre : « Se relever plus vite qu'on ne tombe. »
+- **Radar d'épaves** : jusqu'à 15 systèmes autour de chacune de vos planètes, dans la même galaxie.
+- **Charognard** : vous pouvez recycler n'importe quelle case sans l'avoir sondée, que le radar la montre ou non.
+- **Alerte d'épave** sonne chaque fois qu'un champ de votre radar reçoit des débris et dépasse 50 000 ressources, même s'il les dépassait déjà. Pas pour un champ qu'un autre joueur a mis sous scellés.
+- **Garnison de récupération** : après une attaque contre votre planète, ses Récupérateurs restés à quai récoltent tout le champ au-dessus d'elle, ancien compris, avant ceux de l'attaquant. Métal et cristal vont directement au stock, avec le bonus de Ferrailleur et Tri des métaux.
+- **Épaves fraîches** se mesure du dernier ajout de débris au champ jusqu'à l'**arrivée** de vos Récupérateurs. Il s'ajoute aux 25 % de Ferrailleur et Tri des métaux, au-delà de leur plafond.
+- **Équipe d'astreinte** : les Récupérateurs partent de votre planète la plus proche qui en a, dans la portée du radar, autant qu'il en faut pour le champ, à pleine vitesse. Pas de départ si une de vos flottes vise déjà cette case. Le compte de 24 h s'ouvre au premier départ. Un départ refusé par les règles de vol (hydrogène, emplacements de flotte, case jamais sondée sans Charognard) ne coûte rien.
+- **Ramasse-tout** passe sur les champs voisins après le champ visé, dans la place qui reste en soute, sauf un champ mis sous scellés par un autre joueur.
+- **Scellés** : un champ non vide que vous voyez, case sondée par vous ou votre alliance, ou couverte par votre radar. Les 24 h comptent depuis le dernier scellé. Impossible sur un champ déjà scellé par un autre joueur.
 
-| Rangée | Type | Talent | Effet | Valeur |
+### Registre
+
+*Se relever plus vite qu'on ne tombe.*
+
+| Rangée | Nœud | Type | Effet (nœud plein) | Par rang |
 |---|---|---|---|---|
-| 1 | clé | **Registre des pertes** | Le registre garde 7 jours la liste des vaisseaux que vous perdez au combat : ils se reconstruisent plus vite, dans la limite des quantités perdues. | +15 % |
-| 2 | 3 rangs | **Plans conservés** | Les vaisseaux du registre coûtent moins. | −4 % par rang (−12 %) |
-| 3 | choix | **A : Relève éclair** | Pendant les 24 h qui suivent une perte, le registre se reconstruit encore plus vite. | +20 % |
-| | | **B : Longue mémoire** | Le registre garde vos pertes 21 jours au lieu de 7. | 21 jours |
-| 4 | 3 rangs | **Chaînes de relève** | Les vaisseaux du registre se reconstruisent encore plus vite. | +5 % par rang (+30 % au total) |
-| 5 | clé | **Indemnité** | Après une bataille où vous perdez des vaisseaux, une part de leur coût vous est versée aussitôt sur la planète d'où ils étaient partis, ressource par ressource. | 5 % |
-| 6 | choix | **A : Retour au front** | Les vaisseaux du registre se reconstruisent encore plus vite. | +20 % (+50 % au total) |
-| | | **B : Remise de guerre** | Les vaisseaux du registre coûtent encore moins. | −8 % (−20 % au total) |
-| 7 | 3 rangs | **Fonds de guerre** | L'Indemnité verse une part de plus de la valeur perdue. | +1 point par rang (8 %) |
-| 8 | clé | **Leçons de la défaite** | Après une bataille où vous perdez plus que vous ne détruisez, vos recherches Systèmes Offensifs, Champs de Protection et Métallurgie Avancée avancent plus vite pendant 24 h. | +20 % |
-| 9 | ultime | **Chantier de relève** | Le registre se reconstruit dans une seconde file du Dock orbital, en parallèle de votre file normale. | 2e file |
+| 1 | **Registre des pertes** | clé | Le registre garde 7 jours la liste des vaisseaux que vous perdez au combat : ils se reconstruisent 15 % plus vite, dans la limite des quantités perdues. |  |
+| 2 | **Plans conservés** | 3 rangs | Les vaisseaux du registre coûtent 12 % de moins. | 3 × 4 % |
+| 3 | **A · Relève éclair** | choix | Pendant les 24 h qui suivent une perte, le registre se reconstruit encore 20 % plus vite. | |
+|  | **B · Longue mémoire** |  | Le registre garde vos pertes 21 jours, pour qui reconstruit sur la durée. | |
+| 4 | **Chaînes de relève** | 3 rangs | Les vaisseaux du registre se reconstruisent encore 15 % plus vite. | 3 × 5 % |
+| 5 | **Indemnité** | clé | Après une bataille où vous perdez des vaisseaux, 5 % de leur valeur vous est versée aussitôt sur la planète d'où ils étaient partis. |  |
+| 6 | **A · Retour au front** | choix | Les vaisseaux du registre se reconstruisent encore 20 % plus vite. | |
+|  | **B · Remise de guerre** |  | Les vaisseaux du registre coûtent encore 8 % de moins. | |
+| 7 | **Fonds de guerre** | 3 rangs | L'Indemnité vous verse 3 % de plus de la valeur perdue. | 3 × 1 pts |
+| 8 | **Leçons de la défaite** | clé | Après une bataille où vous perdez plus que vous ne détruisez, vos recherches Systèmes Offensifs, Champs de Protection et Métallurgie Avancée avancent 20 % plus vite pendant 24 h. |  |
+| 9 | **Chantier de relève** | ultime | Le registre se reconstruit dans une seconde file de chantier, en parallèle de votre file normale : plus besoin de choisir entre vous réarmer et continuer à construire. |  |
+
+- **Relève éclair** compte 24 h depuis **la dernière** perte encore au registre.
+- **Indemnité** se calcule sur le prix normal des vaisseaux perdus, ressource par ressource, et va à la planète d'où partait la flotte, ou à la planète défendue, si elle vous appartient encore.
+- **Leçons de la défaite** : une défaite est une attaque de planète, en attaque comme en défense, où vous avez perdu plus de points d'unités (vaisseaux et défenses) que l'adversaire. Seules les études lancées pendant ces 24 h vont plus vite : une étude déjà en cours ne change pas. Chaque nouvelle défaite relance les 24 h.
+- **Chantier de relève** : les commandes du registre ont leur propre file, en parallèle de la file normale des vaisseaux.
+
+### Plafonds de la classe
+
+Ce que les talents des deux arbres peuvent apporter au plus à cette classe, levier par levier. Au-delà, un point n'ajoute rien. Le trait de dynastie s'ajoute ensuite.
+
+| Plafond de la classe (talents des deux arbres) | Ce que l'arbre de classe atteint |
+|---|---|
+| +25 % de vitesse de recherche sur les niveaux connus | 25 % |
+| −12 % de coût de recherche sur les niveaux connus | 12 % |
+| Un niveau est connu dès que 10 % des joueurs de l'univers le détiennent | 10 % |
+| +25 % de ressources rapportées par une récolte de débris | 25 % |
+| +10 % de vitesse des flottes en mission de recyclage | 10 % |
+
+Deux bonus passent au-delà de ces plafonds : Retard comblé porte la vitesse d'un niveau connu à 40 %, et Épaves fraîches ajoute 20 points aux récoltes sur un champ frais (45 %).
 
 ### Builds à 25 points
 
 | Build | Répartition | Ce qu'il obtient |
 |---|---|---|
-| Le rattrapeur | Mémoire 15 · Registre 10 | Bibliothèque universelle ; niveaux connus +25 % plus vite et −12 % ; 25 % d'avance sur chaque niveau enchaîné ; registre +30 % et Indemnité 5 %. |
-| Le charognard | Épave 15 · Mémoire 10 | Scellés, alerte, départs automatiques, champs voisins ; récoltes +25 % ; niveaux connus +25 %. |
-| L'increvable | Registre 15 · Épave 10 | Chantier de relève, Indemnité 8 %, Leçons de la défaite ; récoltes +25 %, radar à 15 systèmes, Garnison de récupération. |
+| Le rattrapeur | Mémoire 15 · Registre 10 | Bibliothèque universelle, Mémoire vive ; niveaux connus +25 % (+40 % avec Retard comblé) et −12 %, 25 % d'avance sur chaque niveau enchaîné ; registre +50 % avec Retour au front (sinon +30 % et −20 % avec Remise de guerre), Plans conservés −12 %, Indemnité 5 % |
+| Le charognard | Épave 15 · Mémoire 10 | Scellés, Alerte d'épave, Équipe d'astreinte, Ramasse-tout ; récoltes +25 % ; niveaux connus +25 % et −12 %, Élan 10 % |
+| L'increvable | Registre 15 · Épave 10 | Chantier de relève, Indemnité 8 %, Leçons de la défaite, registre jusqu'à +70 % ; récoltes +25 %, radar à 15 systèmes, Garnison de récupération ou Épaves fraîches |
+
+Avant la rangée 7 de la branche principale, placez au moins 2 points dans la seconde : la porte demande 12 points, et les rangées 1 à 6 d'une branche n'en contiennent que 10.
 
 ## Pièges fréquents
 
-- **Un niveau connu se juge sur les joueurs actifs** de l'univers, pas sur tous les comptes.
+- **Un niveau connu se juge sur les joueurs comptés** (actifs depuis 7 jours, hors vacances, hors bots), et le décompte n'est refait qu'une fois par jour.
 - **Le premier sur une recherche ne profite pas de la Mémoire** sur cette recherche : il n'y a personne devant lui.
-- **Le bonus de récolte ne vide pas plus le champ** : d'autres joueurs peuvent encore récolter ce qui reste.
+- **Tout se fixe au lancement** : un niveau qui devient connu pendant l'étude ne l'accélère pas, et Leçons de la défaite n'accélère pas une étude déjà en cours.
+- **Bibliothèque publique ne sert plus à rien avec Bibliothèque universelle**, qui demande déjà moins : un seul détenteur.
+- **Le bonus de récolte suit la soute** : il porte sur ce que vos Récupérateurs chargent, pas sur tout le champ. Il ne vide pas plus le champ : d'autres joueurs peuvent récolter ce qui reste.
+- **Équipe d'astreinte sans Charognard** échoue sur une case jamais sondée.
+- **Épaves fraîches se juge à l'arrivée**, pas au départ : comptez le temps de vol.
 - **Le registre ne couvre que les vaisseaux perdus au combat**, dans la limite des quantités perdues et pendant 7 jours (21 avec Longue mémoire). Les défenses n'y entrent pas.
-- **Relève éclair ne dure que 24 h** après chaque perte.
+- **Relève éclair ne dure que 24 h** après la dernière perte.
 
 ## Pages liées
 
 - [Dynasties](/fr/dynasty/dynasties)
 - [Classes](/fr/dynasty/classes)
-- [Système de talents](/fr/dynasty/talents)
+- [Les talents](/fr/dynasty/talents)
 - [Arbre commun](/fr/dynasty/common-tree)
 - [Champs de débris](/fr/combat/debris)
 - [Liste des technologies](/fr/research/technologies)

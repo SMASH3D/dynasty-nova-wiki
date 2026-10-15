@@ -13,32 +13,46 @@ updated: "2026-10-07T22:08:05.012Z"
 
 # The Energetician
 
-> **In short**: for the Energetician, energy is never wasted. Its surplus becomes ore, its shortfall no longer blocks anything, and its plants cost less than anyone else's. Common to every dynasty. Its three branches: **Overdrive**, **Plants** and **Continuity**.
+> **In short**: for the Energetician, energy is never wasted. Overdrive pushes mines past their full rate and turns the surplus into hydrogen; Plants makes the Photovoltaic Sensors, the Thermonuclear Reactor and the Solar Collectors stronger and cheaper to run; Continuity keeps an energy shortfall from slowing the mines.
 {.is-info}
 
 > Ship names are provisional English translations: the game still shows French names (see the [glossary](/en/getting-started/glossary)).
 {.is-warning}
 
-*"The pulse."* The master of energy: one lever that drives all three of your mines at once.
-
 ## Rules
 
-1. The Energetician's tree follows the rules of every [class tree](/en/dynasty/talents): 3 branches of 9 rows, 15 points per branch, 25 points at most.
-2. The generic energy bonus (+8% on every plant and Solar Collector) comes from the [common tree](/en/dynasty/common-tree), Prosperity branch. The Energetician only has **mechanics**, and a single accent: the construction speed of the Photovoltaic Sensors and the Thermonuclear Reactor (10%).
-3. It has **no combat bonus**. It is the only class that plays on energy shortfall, the Thermonuclear Reactor and Solar Collectors.
-4. **Overdrive**: a mine can run above its full rate, drawing more energy. The yield stops at **125%** (Peak and Overheat included), and at **140%** on a single mine with Star Core.
-5. **Electrolysis** only converts energy that nothing uses: overdrive takes its share first, electrolysis takes the rest. It always takes at least 3 energy for 1 hydrogen.
+1. The Energetician is a **common** class: every dynasty can take it.
+2. Its tree has **three branches**: Overdrive, Plants and Continuity.
+3. Each branch has 9 rows and costs 15 points. With 25 points at most, you complete one branch and its ultimate, plus a second branch down to row 6 (10 points). How points, gates and choices work is described on [Talents](/en/dynasty/talents).
+4. The generic energy bonus, +8% on the Photovoltaic Sensors, the Thermonuclear Reactor and the Solar Collectors (Optimised Grid), comes from the [common tree](/en/dynasty/common-tree). The Energetician only has **mechanics**, and a single accent: the construction speed of the Photovoltaic Sensors and the Thermonuclear Reactor (Quick Ignition, 10%).
+5. The extra output of an overdriven mine is computed on its **own production**, beside Plasma Technology and the production bonuses, without being multiplied by them and outside the mines' production cap. The energy shortfall then slows the base's whole production; electrolysis finally converts the energy left unused.
+6. **Overdrive**: a mine set to 100% runs at 110%. Peak and Overheat raise that rate to **131%** on one mine per base; Wide Overdrive allows three mines per base, at 119% at most. Star Core takes one designated mine per base to 140%.
+7. **Load shedding**: in deficit, each mine wins back a share of the output points it lacks, **15 points at most** (30 with Transformers).
 
 ## Worked example
 
-A level 20 Mineral Excavator produces **4,036 metal per hour** and draws **1,345 energy** (see [Energy](/en/economy/energy)).
+Universe at speed 1. A level 20 Mineral Excavator produces **4,036 metal per hour** and draws **1,345 energy** (see [Energy](/en/economy/energy)).
 
-- **Overdrive** (110%, +25% energy): 4,036 × 1.1 = **4,440 metal per hour**, for 1,345 × 0.25 = **336 more energy**.
-- With **Fine Tuning** at rank 3 (extra draw down to 13%): the same mine only needs **175 more energy**.
-- With **Peak** and **Overheat** at rank 3 (125%): 4,036 × 1.25 = **5,045 metal per hour**.
-- **Electrolysis**: 1,000 unused energy gives **250 hydrogen per hour** (333 with Deep Electrolysis).
-- **Load Shedding** at rank 3: at 80% energy, 20 points are missing; your mines ignore 30% of them, 6 points, and run at **86%**. The Excavator produces 3,471 metal per hour instead of 3,229.
-- **Cold Fusion** on a level 10 Thermonuclear Reactor (Energy Science 3): **259 hydrogen per hour** saved, 6,216 per day.
+**Full overdrive**
+- Superconducting Cables at rank 3: 1,345 × 0.91 = **1,223** energy (rounded down).
+- Overdrive, Peak and Overheat at rank 3 (131%): 4,036 + 4,036 × 31% = 4,036 + 1,251 = **5,287 metal per hour**.
+- With Fine Tuning at rank 3, the extra draw goes from 25% to 13%: 1,223 × 1.13 = **1,381** energy, only 36 more than the mine without any talent.
+- Star Core on this mine (140%): 4,036 + 1,614 = **5,650 metal per hour**. The 9 points past 131% cost 4% each: extra draw 13 + 36 = 49%, that is 1,223 × 1.49 = **1,822** energy.
+
+**Load shedding, base at 50% energy**
+- With Load Shedding at rank 3 and Emergency Shedding (40%), 50 points are missing; 40% of 50 = 20, brought down to 15: the mines run at **65%**. With Transformers at rank 3 (30 points at most): **70%**.
+- The level 20 Excavator then produces 2,623, then **2,825 metal per hour**, instead of 2,018.
+
+**Level 10 Thermonuclear Reactor, Energy Science 3**
+- Output: 30 × 10 × 1.08^10 = 647 energy. With Breeder Reactor (Energy Science counted at level 4): 30 × 10 × 1.09^10 = **710**, then **766** with Optimised Grid (+8%).
+- It burns 10 × 10 × 1.1^10 = **259 hydrogen per hour**, 207 with Cold Core, **0** on the Cold Fusion base: 6,216 hydrogen saved per day.
+
+**Solar Collectors, planet with a 60 °C maximum temperature**
+- 100 Collectors: 100 × (60 / 4 + 20) = 3,500 energy. Sails at rank 3 and Optimised Grid (+23%): **4,305**. While Flare runs: 4,305 × 1.5 = **6,457**.
+- A defense destroys 100 of them, without a Repair Station: **49** stay on the base with The Night Is Short, **70** with Orbital Workshops at rank 3.
+
+**Electrolysis**
+- 1,000 unused energy gives **250 hydrogen per hour** with Electrolysis, **333** with Deep Electrolysis, provided the base's Hydrogen Condenser produces at least 84 (or 111) hydrogen per hour: electrolysis never exceeds 3 times its output.
 
 ## Detailed data
 
@@ -153,67 +167,126 @@ graph TB
     style B3 fill:#0b1322,stroke:#1e2a40,stroke-width:1px;
 ```
 
-### Overdrive: "Every spare watt becomes ore."
+### Overdrive
 
-| Row | Type | Talent | Effect | Value |
+*Every spare watt becomes ore.*
+
+| Row | Node | Type | Effect (full node) | Per rank |
 |---|---|---|---|---|
-| 1 | key | **Overdrive** | On each base, one mine can run above its full rate, for more energy drawn. | 110%, +25% energy, 1 mine |
-| 2 | 3 ranks | **Fine Tuning** | Overdrive's extra energy draw drops. | −4 points per rank (+13%) |
-| 3 | choice | **A: Peak** / **B: Wide Overdrive** | A: overdrive gains yield, with no extra energy. <br> B: up to 3 mines in overdrive on each base. | +6 points / 3 mines |
-| 4 | 3 ranks | **Overheat** | Overdrive gains further yield, with no extra energy. | +3 points per rank (119%, 125% with Peak) |
-| 5 | key | **Electrolysis** | Energy nothing uses turns into hydrogen. Overdrive takes its share first. | 4 energy for 1 hydrogen |
-| 6 | choice | **A: Deep Electrolysis** / **B: Exchanger** | A: less energy is needed for a unit of hydrogen. <br> B: on each base, electrolysis can yield metal or crystal instead. | 3 energy for 1 / 3 metal or 2 crystal per hydrogen |
-| 7 | 3 ranks | **Superconducting Cables** | Your mines draw less energy. | −3% per rank (−9%) |
-| 8 | key | **Circuit Breaker** | When energy runs short, overdrive backs off on its own before the base falls into deficit, then comes back as soon as it can. | unlock |
-| 9 | ultimate | **Star Core** | On each base, the mine of your choice can go past overdrive. Each step of 5 points beyond draws more energy. | up to 140%, +20% energy per step |
+| 1 | **Overdrive** | key | Your mines can run at 110% of their full rate for 25% more energy drawn: 1 per base. |  |
+| 2 | **Fine Tuning** | 3 ranks | Overdrive's extra energy draw drops by 12 points. | 3 × 4 pts |
+| 3 | **A · Peak** | choice | Overdrive gains 12 points of yield, with no extra energy. | |
+|  | **B · Wide Overdrive** |  | You can overclock up to 3 mines on each base. | |
+| 4 | **Overheat** | 3 ranks | Overdrive gains a further 9 points of yield, with no extra energy. | 3 × 3 pts |
+| 5 | **Electrolysis** | key | Energy nothing uses is no longer lost: it turns into hydrogen, 4 energy per unit, up to three times what the mine of that resource produces on the base. Overdrive takes its share first. |  |
+| 6 | **A · Deep Electrolysis** | choice | Only 3 unused energy now makes a unit of hydrogen. | |
+|  | **B · Exchanger** |  | On each base, electrolysis can yield metal or crystal instead: 3 metal or 2 crystal for what would have made 1 hydrogen, still capped by the base's metal or crystal mine. | |
+| 7 | **Superconducting Cables** | 3 ranks | Your mines draw 9% less energy. | 3 × 3% |
+| 8 | **Circuit Breaker** | key | When energy runs short, overdrive backs off on its own before the base falls into deficit, then comes back as soon as it can. |  |
+| 9 | **Star Core** | ultimate | On each base, the mine of your choice can go past overdrive, up to 140% of its full rate. Each step of 5 points beyond draws 20% more energy. |  |
 
-### Plants: "The cheapest energy in the galaxy."
+- **Overdrive**: only a mine set to 100% can be overdriven; lowering its rate stops it. The extra draw applies to the draw already reduced by Superconducting Cables.
+- **Electrolysis**: the energy left unused once everything is served, overdrive included. Per hour, electrolysis never yields more than 3 times what the base's Hydrogen Condenser produces: no Condenser, no hydrogen. It stops while the Accumulators reserve is filling.
+- **Exchanger** is chosen base by base; it excludes Deep Electrolysis, so it takes 4 energy for 3 metal or 2 crystal. The cap is then 3 times the output of the base's Mineral Excavator or Crystal Extractor.
+- **Circuit Breaker**: if overdrive would throw the base into deficit, the base's whole overdrive (Star Core included) backs off by the same share, just enough to keep energy balanced; it comes back on its own when energy allows.
+- **Star Core**: the designated mine must be overdriven. Each point past the overdrive rate costs 4% energy (20% per 5-point step), added to the overdrive's extra draw: 36% from 131%, 84% from 119%.
 
-| Row | Type | Talent | Effect | Value |
+### Plants
+
+*The cheapest energy in the galaxy.*
+
+| Row | Node | Type | Effect (full node) | Per rank |
 |---|---|---|---|---|
-| 1 | key | **The Night Is Short** | After a defense, part of your destroyed Solar Collectors is raised again for free, on the share that does not go to debris. With 30% debris, 70% of the destroyed Collectors remain, and 49% of those come back: 100 destroyed → 34 raised. | 49% |
-| 2 | 3 ranks | **Sails** | Your Solar Collectors produce more energy. | +5% per rank (15%) |
-| 3 | choice | **A: Full Sun** / **B: Cold Core** | A: your Photovoltaic Sensors produce more energy. <br> B: your Thermonuclear Reactor burns less hydrogen. | +10% / −20% |
-| 4 | 3 ranks | **High Noon** | Your Photovoltaic Sensors read a temperature closer to the month's maximum. | 15% per rank (45%) |
-| 5 | key | **Breeder Reactor** | Your Thermonuclear Reactor counts Energy Science as one level higher. | +1 level |
-| 6 | choice | **A: Cold Standby** / **B: Swarm** | A: the Thermonuclear Reactor can be set like a mine, from off to full rate, and burns that much less hydrogen. <br> B: your Solar Collectors cost less. | setting / −20% |
-| 7 | 3 ranks | **Orbital Workshops** | The Night Is Short raises more destroyed Collectors. | +7 points per rank (70%) |
-| 8 | key | **Cluster Launch** | Your Solar Collectors are built on their own line, beside the Orbital Dock, which stays free for your ships. | unlock |
-| 9 | ultimate | **Cold Fusion** | On the base of your choice, the Thermonuclear Reactor burns no hydrogen at all. | 1 base |
+| 1 | **The Night Is Short** | key | After a defense, 49% of your destroyed solar satellites are raised again for free, on the share that does not go to debris. |  |
+| 2 | **Sails** | 3 ranks | Your solar satellites produce 15% more energy. | 3 × 5% |
+| 3 | **A · Full Sun** | choice | Your solar plants produce 10% more energy. | |
+|  | **B · Cold Core** |  | Your fusion plant burns 20% less hydrogen. | |
+| 4 | **High Noon** | 3 ranks | Your solar plant reads a temperature 45% closer to the month's maximum. | 3 × 15% |
+| 5 | **Breeder Reactor** | key | Your fusion plant counts energy science as 1 level higher. |  |
+| 6 | **A · Cold Standby** | choice | Your fusion plant can be set like a mine, from off to full rate, and burns that much less hydrogen. | |
+|  | **B · Swarm** |  | Your solar satellites cost 20% less. | |
+| 7 | **Orbital Workshops** | 3 ranks | The Night Is Short raises 21 more points of your destroyed satellites. | 3 × 7 pts |
+| 8 | **Cluster Launch** | key | Your solar satellites are built on their own line, beside the shipyard: it stays free for your ships while a cluster goes up. |  |
+| 9 | **Cold Fusion** | ultimate | On the base of your choice, the fusion plant burns no hydrogen at all. |  |
 
-### Continuity: "Never out of power."
+- **The Night Is Short**: after a battle where the base loses Solar Collectors, 49% of the destroyed Collectors (rounded down) stay on the base at once. Those the Repair Station already took in are counted off: you get back the larger of the two numbers. The debris field is computed on all losses.
+- **Sails**, **Full Sun**: these percentages add to the 8% of Optimised Grid (23% for Collectors, 18% for Sensors).
+- **High Noon**: the Sensors read the day's temperature plus 45% of the gap up to the month's maximum. The Sensors gain nothing below 0 °C: on a cold planet, the node changes nothing.
+- **Cold Standby**: without this node, the Reactor always runs at 100%, whatever its setting. With it, its energy and hydrogen burn follow the chosen rate.
+- **Swarm** applies on top of the 5% cap on cost reductions.
+- **Cluster Launch**: Collectors built on their own lane do not draw on a Builder's Orbital Dock head start.
+- **Cold Fusion**: you designate the base, and can change it.
 
-| Row | Type | Talent | Effect | Value |
+### Continuity
+
+*Never out of power.*
+
+| Row | Node | Type | Effect (full node) | Per rank |
 |---|---|---|---|---|
-| 1 | key | **Deferred Load** | A mine level just completed draws its new consumption only later: time to raise the plant that goes with it. | 4 h |
-| 2 | 3 ranks | **Load Shedding** | Your mines ignore part of the energy shortfall. | 10% per rank (30%) |
-| 3 | choice | **A: Emergency Shedding** / **B: Start-up** | A: your mines ignore more of the energy shortfall. <br> B: on a colony younger than 7 days, your mines ignore the whole energy shortfall. | +10% (40%) / colonies younger than 7 days |
-| 4 | 3 ranks | **Spinning Reserve** | Deferred Load lasts longer. | +2 h per rank (10 h) |
-| 5 | key | **Load Priority** | On each base, the mine of your choice is served first when energy runs short; the others share the rest. | unlock |
-| 6 | choice | **A: Accumulators** / **B: Quick Ignition** | A: your spare energy is stored and covers a deficit on its own. <br> B: your Photovoltaic Sensors and Thermonuclear Reactors are built faster (accent). | up to 12 h of surplus / +10% |
-| 7 | 3 ranks | **Transformers** | Load shedding can win back more points of energy, on top of the 15 it already does. | +5 points per rank (30 points) |
-| 8 | key | **Flare** | Once a day, on the base of your choice, Photovoltaic Sensors and Solar Collectors produce more energy for 4 h. | ×1.5 for 4 h |
-| 9 | ultimate | **Interplanetary Grid** | Your planets' surplus feeds those short of energy, up to part of their consumption. | 20% |
+| 1 | **Deferred Load** | key | A mine level just completed draws its new consumption only 4 h later: time to raise the plant that goes with it. |  |
+| 2 | **Load Shedding** | 3 ranks | Your mines ignore 30% of the energy shortfall. | 3 × 10% |
+| 3 | **A · Emergency Shedding** | choice | Your mines ignore a further 10% of the energy shortfall. | |
+|  | **B · Start-up** |  | On a colony younger than 30 days, your mines ignore the whole energy shortfall: raise them before the first plant. | |
+| 4 | **Spinning Reserve** | 3 ranks | Deferred Load lasts 6 h longer. | 3 × 2 h |
+| 5 | **Load Priority** | key | On each base, the mine of your choice is served first when energy runs short; the others share the rest. |  |
+| 6 | **A · Accumulators** | choice | Your spare energy is stored, up to 12 h of surplus, and covers a deficit on its own. | |
+|  | **B · Quick Ignition** |  | Your solar and fusion plants are built 10% faster. | |
+| 7 | **Transformers** | 3 ranks | Load shedding can win back 15 more points of energy, on top of the 15 it already does. | 3 × 5 pts |
+| 8 | **Flare** | key | Once a day, on the base of your choice, solar plants and satellites produce one and a half times as much energy for 4 h. |  |
+| 9 | **Interplanetary Grid** | ultimate | Your planets' surplus feeds those short of energy, up to 20% of their consumption. |  |
 
-### What 25 points give
+- **Deferred Load**: the completed level produces at once; only its draw waits, the previous level's draw staying in force during the delay.
+- **Start-up**: on a colony founded by a Space Pioneer less than 30 days ago, not on the home planet.
+- **Load Priority**: the designated mine runs full as long as energy production covers **its** draw; the others share the rest, with their load shedding.
+- **Accumulators**: the base stores at most 12 hours of its current surplus. In deficit, the reserve covers the whole shortfall, the mines running full, until it runs out.
+- **Flare**: on a base with Photovoltaic Sensors or Solar Collectors, 24 h after the previous one, for your whole empire.
+- **Interplanetary Grid**: each planet in deficit receives at most the smaller of its shortfall and 20% of its draw, within the others' surplus, shared in proportion. Moons take no part. The sharing is redone regularly.
+- **Flare** and **Interplanetary Grid** do not count toward the energy a research such as Graviton Technology requires.
+
+### Class caps
+
+The most the talents of both trees can bring this class, lever by lever. Past it, a point adds nothing. The dynasty trait then adds on top.
+
+| Class cap (talents of both trees) | What the class tree reaches |
+|---|---|
+| −12 pts on overdrive's extra energy draw | 12 pts |
+| −9% energy drawn by the mines | 9% |
+| +15% solar satellite energy | 15% |
+| +10% solar plant energy | 10% |
+| −20% fusion plant hydrogen consumption | 20% |
+| The solar plant reads a temperature of the day that closes 45% of the gap to the month's maximum | 45% |
+| The fusion plant reads energy science as if it had +1 level | 1 |
+| −20% solar satellite cost | 20% |
+| A mine level just completed draws its new energy consumption only 10 h later | 10 h |
+| All three mines ignore a further 40% of the energy shortfall | 40% |
+| +10% solar and fusion plant construction speed | 10% |
+| Load shedding can win back 15 pts more energy | 15 pts |
+
+### 25-point builds
 
 | Build | Split | What it gets |
 |---|---|---|
-| Surplus miner | Overdrive 15 · Plants 10 | three mines at 119% or one at 125%, one mine up to 140% with Star Core, electrolysis of the rest; stronger Sensors or a Reactor burning 20% less, and Breeder Reactor |
-| Climber | Continuity 15 · Overdrive 10 | no more deficit: 10 h deferred load, load priority, Flare, then a grid between planets; overdrive and electrolysis so nothing is wasted |
-| Lord of the Collectors | Plants 15 · Continuity 10 | Collectors raised at 70%, built on their own line and 20% cheaper, a base whose Reactor burns nothing; deferred load and load priority |
+| Surplus Miner | Overdrive 15 · Plants 10 | one mine at 131% or three at 119% per base, 13% extra draw, electrolysis, mines −9% energy, Circuit Breaker, one mine up to 140% with Star Core; Collectors +15%, Full Sun or Cold Core, High Noon, Breeder Reactor |
+| Climber | Continuity 15 · Overdrive 10 | 10 h delay, load shedding up to 30 points (40% of the shortfall), Load Priority, Flare, Interplanetary Grid; one mine at 131% or three at 119%, electrolysis |
+| Lord of the Collectors | Plants 15 · Continuity 10 | Collectors raised at 70%, Cluster Launch, Swarm −20%, Cold Fusion on one base; 10 h delay, load shedding, Load Priority |
+
+Before row 7 of the main branch, place at least 2 points in the second one: the gate requires 12 points, and rows 1 to 6 of a branch only hold 10.
 
 ## Common pitfalls
 
-- **Overdrive always costs energy**: without a surplus it throws the base into deficit and slows all three mines. Circuit Breaker avoids that trap.
-- **Electrolysis creates nothing from energy already used**: overclock your mines first, then convert what is left.
+- **Overdrive always costs energy**: without a surplus it throws the base into deficit and slows all three mines. Circuit Breaker makes it back off in time.
+- **An overdriven mine must stay at 100%**: lowering its rate stops the overdrive.
+- **Electrolysis creates nothing from energy already used**, nor without a Hydrogen Condenser on the base, nor while the Accumulators reserve is filling.
+- **Load shedding is bounded**: in a deep deficit, it only gives back 15 output points (30 with Transformers).
 - **No Continuity talent produces ore**: the branch removes the brake that stops you from raising a mine before its plant.
-- **Row 3 of Plants decides your energy**: Photovoltaic Sensors cost nothing to run but depend on the planet's temperature; the Reactor burns hydrogen but grows with Energy Science.
+- **Row 3 of Plants decides your energy**: Photovoltaic Sensors burn nothing but depend on temperature, and High Noon is useless on a cold planet; the Reactor burns hydrogen but grows with Energy Science.
+- **Flare and Interplanetary Grid do not unlock Graviton Technology**: the energy it requires is read without them.
 
 ## Related pages
 
-- [Talent system](/en/dynasty/talents)
+- [Talents](/en/dynasty/talents)
 - [Common tree](/en/dynasty/common-tree)
 - [Classes](/en/dynasty/classes)
 - [Energy](/en/economy/energy)
 - [Planets: size, temperature, type](/en/universe/planets)
+- [Repair Station](/en/economy/repair-station)

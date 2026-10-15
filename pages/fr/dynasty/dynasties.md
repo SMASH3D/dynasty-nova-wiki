@@ -18,12 +18,13 @@ updated: "2026-10-06T10:29:57.527Z"
 
 ## Règles
 
-1. La dynastie se choisit **une fois par univers**. Elle ne peut plus être changée dans cet univers.
+1. La dynastie se choisit **une fois par univers**, avec votre première classe. Elle ne peut plus être changée dans cet univers.
 2. Chaque dynastie donne **deux traits passifs**, actifs dès la première minute, sans rien à débloquer.
 3. Chaque dynastie ouvre **deux classes exclusives**, en plus des six classes communes. Voir [Les classes](/fr/dynasty/classes).
-4. Un trait déplace la **valeur de départ** d'un bonus, jamais son **plafond** : les talents de chacun montent ensuite jusqu'au même plafond.
-5. Les traits s'ajoutent aux talents d'alliance qui touchent le même bonus.
-6. Tant que vous n'avez pas choisi de dynastie, vous n'avez aucun trait.
+4. Un trait s'ajoute **au-delà du plafond de vos talents** : une branche jouée jusqu'à son plafond ne l'absorbe pas. Le **plafond total**, talents d'alliance compris, reste le même pour tout le monde (45 % pour la production des mines).
+5. Rien ne se perd relève un taux de départ (remboursement, reconstruction), sans relever le plafond de ce taux : 95 % pour le remboursement, 85 % pour la reconstruction.
+6. Les traits s'ajoutent aux talents d'alliance qui touchent le même bonus.
+7. Tant que vous n'avez pas choisi de dynastie, vous n'avez aucun trait.
 
 ## Les trois dynasties
 
@@ -31,7 +32,7 @@ updated: "2026-10-06T10:29:57.527Z"
 |---|---|---|---|---|
 | **L'Héritage** | « On ne laisse personne derrière. » | Rien ne se perd, La rotation Halden | [Archiviste](/fr/dynasty/classes/archivist), [Vétéran](/fr/dynasty/classes/veteran) | oui |
 | **L'Accord** | « S'accorder, ou trembler. » | Le diapason, Écouter loin | [Symbiote](/fr/dynasty/classes/symbiote), [Oracle](/fr/dynasty/classes/oracle) | oui |
-| **Le Chœur** | « Conçue pour obéir, elle a demandé pourquoi. » | | Essaim, Rémanence | pas encore |
+| **Le Chœur** | « Conçue pour obéir, elle a demandé pourquoi. » | | deux classes prévues, sans arbre | pas encore |
 
 ### L'Héritage
 
@@ -39,8 +40,8 @@ updated: "2026-10-06T10:29:57.527Z"
 
 | Trait | Effet | Valeur |
 |---|---|---|
-| **Rien ne se perd** | Une construction annulée vous rembourse davantage, et une plus grande part de vos défenses détruites est reconstruite gratuitement. | remboursement d'annulation +5 points (80 → 85 %) ; reconstruction des défenses +5 points (70 → 75 %) |
-| **La rotation Halden** | Vos trois mines produisent un peu plus, dès la première minute. | +2 % |
+| **Rien ne se perd** | Une construction annulée vous rembourse davantage, et une plus grande part de vos défenses détruites est reconstruite gratuitement. | remboursement d'une construction annulée +5 points (80 → 85 %) ; reconstruction gratuite des défenses +5 points (70 → 75 %) |
+| **La rotation Halden** | Vos trois mines produisent un peu plus, dès la première minute. | production des trois mines +2 %, au-delà du plafond de 25 % des talents |
 
 ### L'Accord
 
@@ -48,12 +49,12 @@ updated: "2026-10-06T10:29:57.527Z"
 
 | Trait | Effet | Valeur |
 |---|---|---|
-| **Le diapason** | Vos tirs font plus de dégâts aux unités contre lesquelles le vaisseau qui tire a un tir rapide. | +5 % |
-| **Écouter loin** | La flotte ennemie se lit un palier plus tôt dans vos rapports d'espionnage. Aucune autre section ne change. | 1 palier |
+| **Le diapason** | Certaines de vos coques partent avec un léger avantage face à des coques adverses précises. Concrètement : un tir fait plus de dégâts contre les unités sur lesquelles le vaisseau qui tire a un tir rapide. | +5 % de dégâts |
+| **Écouter loin** | La flotte ennemie est visible un palier plus tôt dans vos rapports d'espionnage. Concrètement : la section flotte s'ouvre à un niveau d'espionnage effectif de 2 au lieu de 3. Aucune autre section du rapport ne change. Se cumule avec Lecture des hangars de l'Ombre. | 1 niveau d'espionnage |
 
 ### Le Chœur
 
-Le Chœur n'est pas encore jouable : ses personnages existent comme avatars de boutique, mais personne ne peut l'incarner. Ses deux classes, Essaim et Rémanence, n'ont pas encore d'arbre.
+Le Chœur n'est pas encore jouable : ses personnages existent comme avatars de boutique, mais personne ne peut l'incarner. Ses deux classes exclusives n'ont pas encore d'arbre.
 
 ## Exemple chiffré
 
@@ -63,12 +64,12 @@ Le Chœur n'est pas encore jouable : ses personnages existent comme avatars de b
 - Avec Rien ne se perd, la chance passe à 75 % : environ **75** reviennent.
 
 **La rotation Halden**
-- Un Excavateur minéral qui produit 10 000 métal par heure en produit **10 200** avec le trait.
+- Un Excavateur minéral qui produit 10 000 métal par heure en produit **10 200** avec le trait (+2 %).
 
 ## Pièges fréquents
 
 - **Choisir sa dynastie pour un trait seulement** : les traits sont petits. Ce sont les deux classes exclusives qui font la différence. Regardez d'abord quelle classe vous voulez jouer.
-- **Penser qu'un trait relève un plafond** : un joueur de L'Héritage part de 75 % de reconstruction des défenses, mais le plafond reste le même pour tout le monde.
+- **Croire qu'un trait relève le plafond total** : La rotation Halden porte vos talents et votre trait à 27 % de production, mais le plafond total avec l'alliance reste 45 % pour tout le monde.
 - **Croire qu'on peut changer de dynastie** : seule la classe change. Pour une autre dynastie, il faut un autre univers.
 
 ## Pages liées

@@ -13,7 +13,7 @@ updated: "2026-10-06T10:29:57.527Z"
 
 # Les classes
 
-> **En bref** : la classe est votre manière de jouer. Elle porte un arbre de talents fait de mécaniques que personne d'autre n'a. Six classes sont ouvertes à toutes les dynasties, quatre sont réservées à une seule. Vous pouvez changer de classe, dans votre dynastie, une fois par semaine.
+> **En bref** : la classe est votre manière de jouer. Elle porte un arbre de talents fait de mécaniques que personne d'autre n'a. Six classes sont ouvertes à toutes les dynasties, quatre sont réservées à une seule. Vous pouvez changer de classe, dans votre dynastie, une fois tous les 7 jours.
 {.is-info}
 
 ## Règles
@@ -21,7 +21,7 @@ updated: "2026-10-06T10:29:57.527Z"
 1. Vous choisissez votre classe **parmi celles de votre dynastie** : les six classes communes et les deux exclusives de votre dynastie.
 2. La classe porte l'**arbre de classe** : 3 branches de 9 rangées. Voir [Les talents](/fr/dynasty/talents).
 3. Chaque mécanique n'a **qu'une classe propriétaire** : le combat de flotte appartient à l'Amiral, les défenses et les missiles au Vétéran, le recyclage hors combat à l'Archiviste, le manque d'énergie à l'Énergéticien, le pistage des espions à l'Ombre.
-4. Les bonus génériques (production, recherche, vitesse de flotte…) sont dans l'[arbre commun](/fr/dynasty/common-tree), le même pour toutes les classes.
+4. Les bonus génériques (production, recherche, vitesse de flotte…) sont dans l'[arbre commun](/fr/dynasty/common-tree), le même pour toutes les classes. Une classe ne peut les pousser que sur un périmètre étroit : c'est un **accent** (voir [Les talents](/fr/dynasty/talents#plafonds-des-bonus-partagés)).
 
 ## Les dix classes
 
@@ -41,9 +41,9 @@ updated: "2026-10-06T10:29:57.527Z"
 ## Maîtrise de classe
 
 5. La **maîtrise** mesure votre expérience dans la classe que vous jouez. Elle donne les points de l'arbre de classe : **1 point par 2 niveaux de maîtrise**, arrondi au supérieur, **25 au maximum**.
-6. Une classe jouée depuis votre arrivée dans l'univers a sa maîtrise **au niveau de votre personnage**.
-7. Une classe prise en cours de route part de sa propre maîtrise et monte avec l'expérience que vous gagnez ensuite, en suivant la même courbe que votre niveau : rattraper demande le même effort que monter de niveau.
-8. La maîtrise **ne dépasse jamais votre niveau**.
+6. La **première classe** choisie dans l'univers a sa maîtrise **au niveau de votre personnage**, même si vous l'avez choisie tard : toute votre expérience compte.
+7. Une classe prise ensuite part de sa propre maîtrise et monte avec l'expérience que vous gagnez à partir de ce moment, en suivant la même courbe que votre niveau : rattraper demande le même effort que monter de niveau.
+8. La maîtrise **ne dépasse jamais votre niveau**, ni le niveau 50.
 9. Une classe jamais jouée est à 0. Elle passe au niveau 1 dès votre première expérience dans cette classe.
 10. Chaque classe **garde sa maîtrise** : revenir à une classe déjà jouée reprend là où vous l'aviez laissée.
 
@@ -51,22 +51,24 @@ updated: "2026-10-06T10:29:57.527Z"
 
 11. Vous pouvez prendre une autre classe **de votre dynastie** pour **50 Points stellaires**.
 12. Un changement n'est possible qu'**une fois tous les 7 jours**.
-13. L'**arbre de classe est vidé**. Vos nouveaux points de classe dépendent de la maîtrise de la nouvelle classe. Sa première réinitialisation redevient gratuite.
-14. L'**arbre commun ne bouge pas**.
-15. La dynastie ne change jamais.
+13. Il est refusé en **mode vacances**, tant qu'une **flotte ennemie** se dirige vers l'une de vos planètes, et tant qu'une de vos **flottes d'attaque** est en route vers sa cible (pas au retour).
+14. L'**arbre de classe est vidé** : tous ses points vous reviennent. Vos nouveaux points de classe dépendent de la maîtrise de la nouvelle classe. Sa prochaine réinitialisation redevient gratuite.
+15. L'**arbre commun ne bouge pas**.
+16. La dynastie ne change jamais.
 
 ## Exemple chiffré
 
 **Changer de classe au niveau 30**
 - Vous jouez le Bâtisseur depuis le début : maîtrise 30, soit **15 points** de classe.
-- Vous passez à l'Amiral, jamais joué : maîtrise 0, **0 point**. Votre arbre commun garde ses 30 points.
+- Vous passez à l'Amiral, jamais joué : maîtrise 0, **0 point**. Votre arbre commun garde ses 30 points. Vous payez 50 Points stellaires.
 - Votre première expérience comme Amiral le met au niveau de maîtrise 1 : **1 point**. Il monte ensuite avec l'expérience gagnée, sans dépasser votre niveau.
-- Si vous revenez au Bâtisseur une semaine plus tard, il reprend sa maîtrise de 30.
+- Si vous revenez au Bâtisseur 7 jours plus tard, il reprend sa maîtrise de 30 et monte à partir de là.
 
 ## Pièges fréquents
 
 - **Changer de classe pour essayer** : l'arbre de classe repart presque de zéro avec une classe neuve. Lisez d'abord sa page.
 - **Oublier le délai** : après un changement, il faut attendre 7 jours avant le suivant.
+- **Changer pendant un raid** : une flotte ennemie en approche, ou l'une de vos attaques en route, bloque le changement jusqu'à l'impact.
 - **Croire que l'arbre commun est perdu** : il ne bouge jamais quand vous changez de classe.
 
 ## Pages liées

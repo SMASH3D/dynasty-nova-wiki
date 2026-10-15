@@ -1251,20 +1251,20 @@ Source : code du serveur (dépôt Backend, fusion « dynasties, classes and tale
 ### Règles des arbres
 - Arbre commun : 3 × 10, rangs par rangée 3, 5, 1, 5, 1, 1, 5, 1, 5, 1 (28 par branche), portes à 0/0/0/8/8/8/20/20/32/32 points placés au-dessus (toutes branches), 1 point par niveau, 50 au maximum.
 - Arbre de classe : 3 × 9, rangs 1, 3, 1, 3, 1, 1, 3, 1, 1 (15 par branche), portes 0/0/0/5/5/5/12/12/12, ⌈maîtrise / 2⌉ points, 25 au maximum.
-- Ultime : niveau 40 et branche pleine.
+- Ultime : branche pleine au-dessus ; niveau 40 en plus pour l'arbre commun seulement (relevé du 15 octobre 2026).
 - Brouillon puis validation ; un point validé ne se reprend que par réinitialisation. Réinitialisation par arbre : la 1re gratuite, ensuite 20 Points stellaires et 24 h depuis la précédente.
 
 ### Plafonds (talents / total avec l'alliance)
 - Vitesse de flotte : commun 40 %, accent 10 %, talents 50 %, total 60 %. Les bonus de vitesse divisent la durée. Vent arrière (25 %), Liaisons internes (40 %), Retour victorieux (30 %) hors budget.
 - Hydrogène : commun 20 %, accent 5 %, talents 25 %, total 45 %. Soutes 25 %. Flottes en vol +3.
 - Recherche 25 / 45 %. Mines 25 / 45 %. Bâtiments 25 / 45 %, accent 15 % sur une famille (50 % au total). Vaisseaux et défenses 10 %, accent 15 %. Coûts 5 % (accent). Cases +4. Pillage des cibles abandonnées +20 points. Protection contre le pillage 20 points au catalogue (15 pour le Vétéran, 10 pour l'Oracle), taux de pillage jamais sous 30 %.
-- Combat : armement des vaisseaux 9 %, coque 11 %, bouclier 3 % ; défenses : armement 9 %, bouclier 5 %, coque 10 % ; dégâts sur tirs rapides 15 % (trait compris).
+- Combat : armement des vaisseaux 9 %, coque 13 % (15 octobre 2026), bouclier 3 % ; défenses : armement 9 %, bouclier 5 %, coque 10 % ; dégâts sur tirs rapides 15 % (trait compris).
 
 ### Arbre commun
 Valeurs par rang (code `CommonTalents`), identiques au document de conception : voir la page `dynasty/common-tree`. Astrométrie touche la catégorie « exploration » : Renseignement Tactique et Cosmologie Appliquée.
 
 ### Arbres de classe
-Valeurs par rang tirées du catalogue de chaque classe (`AdmiralTalents`, `BuilderTalents`…) et des plafonds de classe (`ClassCaps`). Écarts avec le document de conception, retenus d'après le code : Lire la coque 3,5 %/rang, Feu concentré 7,5 %, Contre-batterie 2 %/rang, Premier rang 3 %/rang, coque de l'Amiral plafonnée à 11 %.
+Valeurs par rang tirées du catalogue de chaque classe (`AdmiralTalents`, `BuilderTalents`…) et des plafonds de classe (`ClassCaps`). Écarts avec le document de conception, retenus d'après le code : Lire la coque 3,5 %/rang, Feu concentré 7,5 %, Contre-batterie 2 %/rang, Premier rang 3 %/rang, coque de l'Amiral plafonnée à 13 % (relevé du 15 octobre 2026 ; 11 % auparavant).
 
 ### Réponses et vérifications du 6 octobre 2026 (questions `dynasty-04` à `dynasty-20`)
 - Vaisseaux de combat (Amiral) : les 8 vaisseaux non civils hors Collecteur solaire (Intercepteur, Assaillant, Corvette, Cuirassé, Frappe-orbital, Prédateur, Annihilateur, Colossus stellaire).
@@ -1281,6 +1281,23 @@ Valeurs par rang tirées du catalogue de chaque classe (`AdmiralTalents`, `Build
 - Écouter loin et Lecture des hangars se cumulent : 2 paliers plus tôt pour la flotte (décision de l'équipe, Backend #476). Retard comblé ne double que Fonds d'archives : 40 % au plus sur un niveau connu (Backend #476).
 - Température actuelle d'une planète (code `Map::getTemperatureAt`) : suit le mois du calendrier, minimale le 1er, maximale au jour floor(jours du mois / 2) (le 15, le 14 en février), minimale le dernier jour, linéaire jour par jour, arrondie.
 - Alerte d'attaque : 60 s avant l'impact (code `Fleet::ATTACK_ALERT_LEAD_TIME_IN_SECONDS`), jusqu'à 360 s avec les talents de l'Oracle.
+
+### Relevé dans le code (15 octobre 2026, réécriture de la rubrique)
+
+Source : dépôt Backend `origin/main` 7b255c83, en lecture seule. Le catalogue est exporté par `tools/dynasty_pages/export_talents.php` (TalentTree, TalentKey, TalentTreeRules, ClassCaps, PlayerBonuses, PlayerExperience, DynastyTraits, TalentRespec, ClassChangeAllowance) dans `tools/dynasty_pages/talents.json` ; les textes du client (`talents.json`, `dynasties.json`, `classes.json`, `pages/talents.json`, FR et EN, Frontend `origin/main`) dans `tools/dynasty_pages/labels.json`. Les pages de la rubrique sont générées par `tools/dynasty_pages/p_*.py` ; les textes propres à chaque classe (`t_<classe>.py`) ont été vérifiés nœud par nœud dans le code (notes de vérification gardées hors dépôt).
+
+- **Arêtes** (`PlayerTalents`, `SpentTalents::hasFullParent`) : un nœud demande que le nœud au-dessus de lui, dans sa branche, soit plein. Une branche se remplit de haut en bas.
+- **Ultime** (`TalentKey::requiredLevel`) : niveau 40 et branche pleine au-dessus **dans l'arbre commun seulement** ; un ultime de classe ne demande que sa branche pleine (15 points, maîtrise 29). Corrige « Ultime : niveau 40 et branche pleine » ci-dessus.
+- **Choix de l'arbre commun** : rangées 3, 6 et 8 en Prospérité et Exploration ; en Logistique, rangées 3 et 6 seulement (la rangée 8, Chargement prioritaire, est une clé). `tools/talent_diagrams.py` lit désormais la forme des arbres dans l'export.
+- **Points de classe** : `min(25, intdiv(maîtrise + 1, 2))` (`TalentBudget::classPointsOf`) : 5 points dès la maîtrise 9, 12 dès 23, 15 dès 29.
+- **Maîtrise** (`UserUniverse::selectCharacter`, `ClassTenure`) : la première classe entre à la maîtrise 1 avec l'expérience comptée depuis 0, donc au niveau du joueur même choisie tard. Plafond : niveau du joueur et 50.
+- **Expérience** (`PlayerExperience::earnedByRecord`, `UserUniverse::refreshTotal`) : 10 par point gagné au-delà du record de points, divisé par la vitesse d'**économie** de l'univers (défaut ×1, Redline ×1) ; perdre des points ne retire rien.
+- **Verrous** (`TalentTreeLocks`) : réinitialisation et changement de classe refusés tant qu'une flotte ennemie arrive ou qu'une de vos flottes de combat est à l'aller ; changement de classe refusé aussi en vacances. Un arbre vide ne se réinitialise pas (rien facturé).
+- **Builds enregistrés** (`User::ensureTalentBuildsAvailable`, `applyTalentBuildIn`, `TalentBuildSlot::FREE_SLOT_COUNT = 2`, nom de 32 caractères au plus) : enregistrer et appliquer un build sont réservés au Premium ; appliquer est gratuit, hors flotte ennemie en approche, flotte de combat à l'aller ou ordre en production ; lire un lien partagé est ouvert à tous. **Non publié** : point commercial à arbitrer (`dynasty-21`).
+- **Traits** (`DynastyTraits`, `PlayerBonuses`) : La rotation Halden (+2 %) et Le diapason (+5 %) s'ajoutent après le plafond de classe (production talents et trait jusqu'à 27 %, plafond total 45 % inchangé ; dégâts 15,5 % pour un Amiral de L'Accord). Rien ne se perd : remboursement 80 → 85 % (plafond 95 %), reconstruction 70 → 75 % (plafond 85 %). Écouter loin : section flotte au niveau d'espionnage effectif 2 au lieu de 3 (`EspionageTier::FLEET = 3`). Le Chœur : `DynastyKey::isPlayable()` faux, aucun trait, classes sans arbre ni nom affiché par le client.
+- **Plafonds partagés** (`PlayerBonuses`) : flotte commun 40, accent 10, talents 50, total 60 % ; hydrogène commun 20, accent 10 (Amiral, pondéré par la part des vaisseaux de combat), talents 30, total 45 % ; fret 25 % sans part d'alliance ; flottes +3 ; recherche 25/45 % (Astrométrie dans le même budget) ; mines 25/45 % ; colonies 10 % et jeunes colonies 25 % (mines) / 20 % (bâtiments) hors plafond ; Plasma 50 % ; énergie 15 % (8 % atteints) ; expéditions 20 % et −25 % ; stockage 20/40 % ; bâtiments 25/45 %, accent 15 % (50 % sur la famille : Bâtisseur 15, Énergéticien 10, Théoricien 9, Symbiote 10) ; vaisseaux et défenses 10 %, accent 15 %, sans part d'alliance ; coûts 5 % (Bâtisseur) ; cases 4 ; pillage des cibles abandonnées 20 points ; abri 20 points au catalogue, 15 Vétéran, 10 Oracle, taux jamais sous 30 %. Combat : coque des vaisseaux **13 %** (et non 11 %).
+- **Arbre commun** (`CommonTalents`) : Fonderie à plasma **+50 %** (niveau de Plasma ×1,5, `Base::plasmaProductionBonus`), et non +20 % ; Arche = coût −25 %, construction +50 %, colonisations +25 % (sous les 60 %) ; Comptoirs pionniers +24 h de jeunesse par rang (fenêtre de 7 jours, jusqu'à 15 avec Jeunes mondes) ; seul Comptoirs pionniers lit l'état jeune ; Pont de ressources : 2 h de production de la planète de départ, trois ressources additionnées, 24 h glissantes pour l'empire ; Stock de sécurité : 25 % versés au-dessus de la capacité ; Archives volées : pillage d'au moins 1 h de production de la planète mère ; Flair de prospecteur : « rien » 33 → 22,11 %, « ressources » 33 → 43,89 % sur une case neuve ; cible abandonnée = ruine, bot ou joueur inactif depuis `inactivityDays` (14 par défaut, 7 sur Redline, `Base::isAbandonedTarget`). L'ultime d'Exploration s'appelle « Second centre d'innovation » dans le jeu.
+- **Arbres de classe** : écarts relevés et corrigés dans les pages (Doctrine de coque +4 %, Économie de guerre −10 %, Percée 30 %, Casemates +30 %, Pointe +12 points et surrégime 131 %, Mise en route 30 jours, Éclair de génie plafonné à 6 h, etc.) : voir la description de la PR `rewrite-dynastie` et PLAN §7 (`dynasty-21` et suivantes).
 
 ## 19. Alliances (code du jeu, relevé le 15 octobre 2026)
 

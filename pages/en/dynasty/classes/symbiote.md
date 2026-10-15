@@ -13,7 +13,7 @@ updated: "2026-10-07T22:08:11.037Z"
 
 # The Symbiote
 
-> **In short**: the Symbiote plays what others endure: the planet's temperature, its place in the system, its size, its moon and its neighbours. Thermal turns temperature into an asset, Growth makes the most of position and fields, Host makes fallow planets and crowded systems produce.
+> **In short**: the Symbiote plays what others endure: the planet's temperature, its place in the system, its size, its moon and its neighbours. Thermal turns temperature into an asset, Growth makes the most of position and fields, Host makes fallow planets and planets with neighbours produce.
 {.is-info}
 
 > Ship names are provisional English translations: the game still shows French names (see the [glossary](/en/getting-started/glossary)).
@@ -23,33 +23,43 @@ updated: "2026-10-07T22:08:11.037Z"
 
 1. The Symbiote is a class **exclusive to [The Accord](/en/dynasty/dynasties)**: only players of that dynasty can take it.
 2. Its tree has **three branches**: Thermal, Growth and Host.
-3. Each branch has 9 rows and costs 15 points. With 25 points at most, you complete one branch and its ultimate, plus a second branch down to row 6. Points, gates and choices are explained on [Talents](/en/dynasty/talents).
-4. Mine production, young colonies and generic fields come from the [common tree](/en/dynasty/common-tree). Fusion, Solar Collectors and energy shortage belong to the [Energetician](/en/dynasty/classes/energist). The Symbiote has a single accent: 2 more fields per planet (*Ground Gained*), 4 at most with the common tree.
-5. The temperature and position bonus rules these talents play on are described on [Planets: size, temperature, type](/en/universe/planets).
+3. Each branch has 9 rows and costs 15 points. With 25 points at most, you complete one branch and its ultimate, plus a second branch down to row 6 (10 points). How points, gates and choices work is described on [Talents](/en/dynasty/talents).
+4. Generic mine production, young colonies and generic fields come from the [common tree](/en/dynasty/common-tree). Fusion, the Solar Collectors' own output and energy shortage belong to the [Energetician](/en/dynasty/classes/energist). The Symbiote has a single **accent**: 2 more fields per planet (Ground Gained), 4 at most with Surveyors (common tree).
+5. The Host's mine bonuses are mechanics of their own: they add to each other and to the other bonuses, all computed on the **gross output** of the three mines (Mineral Excavator, Crystal Extractor, Hydrogen Condenser), and they stay **outside** the talents' production cap. Never on a moon.
+6. Temperature talents only widen a factor's **bonus share**, never its sign. Hydrogen Condenser: factor 1.44 − 0.004 × maximum temperature, widened only above 1. Photovoltaic Sensors: factor 1 + the day's temperature / 100, widened only above 0 °C. Solar Collector: maximum temperature / 4 + 20 energy, only the temperature share is widened, rounded down. Temperatures are detailed on [Planets: size, temperature, type](/en/universe/planets).
+7. The position bonus **depends on the number of positions in the system**, a universe setting (15 on Redline). In a 15-position system, the Crystal Extractor gains +40, +30 and +20% in positions 1 to 3, the Mineral Excavator +17, +23, +35, +23 and +17% in positions 6 to 10. Elsewhere, the position is brought onto a 15-position scale and the bonus is computed between the two neighbouring positions: in a 9-position system, position 2 gives +22.5% crystal. The Hydrogen Condenser never gets a position bonus.
+8. A planet is **fallow** while its built fields are strictly under 50% of its total fields (Planetary Modulator and bonus fields included). This only exists for a Symbiote holding Young Shoot or Rising Sap, and never applies to a moon. It has nothing to do with the common tree's young colony.
 
 ## Worked example
 
-**Hydrogen Condenser on a colony in position 15** (−85 to −45 °C)
-- Without talents, the factor is 1.44 − 0.004 × (−45) = **1.62**. The cold bonus is the part above 1: 0.62.
-- With *Cold Blood* (+10%): 1 + 0.62 × 1.10 = **1.68**.
-- With *Cold Blood* and *Reading the Climate* at rank 3 (+40%): 1 + 0.62 × 1.40 = **1.87**.
-- With *Cold Pole* on top (+65% in all): 1 + 0.62 × 1.65 = **2.02**.
+**Hydrogen Condenser in position 15 of a 15-position system** (−85 to −45 °C)
+- No talent: 1.44 − 0.004 × (−45) = **1.62**. The bonus share is 0.62.
+- With Cold Blood (+10%): 1 + 0.62 × 1.10 = **1.68**.
+- Adding Reading the Climate at rank 3 (+40% in all): 1 + 0.62 × 1.40 = **1.87**.
+- Adding Cold Pole (+65% in all): 1 + 0.62 × 1.65 = **2.02**.
+- Full branch, with The Two Seasons and Planetary Climate Control set toward the cold: the Condenser reads −85 − 30 = −115 °C, factor 1.44 + 0.46 = 1.90, then 1 + 0.90 × 1.65 = **2.485**.
+- At level 20, economy speed ×1 (Redline): 10 × 20 × 1.1²⁰ = 1,345.5 hydrogen per hour before the factor, that is **2,179** with no talent and **3,343** with the full branch (+53%).
 
-**The Two Seasons on a colony in position 8** (20 to 60 °C)
-- Without talents, the Condenser reads the maximum temperature: 1.44 − 0.004 × 60 = **1.20**.
-- With the ultimate, it reads the minimum: 1.44 − 0.004 × 20 = **1.36**, 13% more hydrogen.
-- With the whole branch (+40%): 1.28 without the ultimate, **1.50** with it, 17.5% more.
+**The Two Seasons on a colony in position 8 of a 15-position system** (20 to 60 °C)
+- No talent, the Condenser reads the maximum temperature: 1.44 − 0.004 × 60 = **1.20**.
+- With the ultimate, it reads the minimum: 1.44 − 0.004 × 20 = **1.36**, that is 13% more hydrogen.
 
-**Mineral Excavator position bonus in position 8** (+35% without talents)
-- *Roots*: 35 × 1.15 = **+40.25%**.
-- *Roots* and *Layering*: 35 × 1.45 = **+50.75%**.
-- With *Metal Lode* on top: 35 × 1.65 = **+57.75%**.
-- A homeworld in position 8 with *Native Soil* at rank 3 and no other talent: 35 × ½ = **+17.5%**.
+**Mineral Excavator position bonus in position 8 of a 15-position system** (+35% with no talent)
+- Roots: 35 × 1.15 = **+40.25%**.
+- Roots and Layering: 35 × 1.45 = **+50.75%**.
+- Adding Metal Lode: 35 × 1.65 = **+57.75%**.
+- A homeworld at the same spot, with Roots, Layering and Native Soil at rank 3: 35 × 1.45 × ½ = **+25.375%**.
 
-**Solar Collector in position 8** (maximum temperature 60 °C)
-- Without talents: 60 / 4 + 20 = **35** energy per Collector.
-- *Skin of Light* at rank 3: 15 × 1.45 + 20 = 41.75, rounded down to **41** energy.
-- *High-Altitude Satellites*: the planet is read at 100 °C, 100 / 4 + 20 = **45** energy.
+**Solar Collector in position 8 of a 15-position system** (maximum temperature 60 °C)
+- No talent: 60 / 4 + 20 = **35** energy per Collector.
+- Skin of Light at rank 3: 15 × 1.45 + 20 = 41.75, rounded down to **41**.
+- High-Altitude Satellites: the planet is read at 100 °C, 100 / 4 + 20 = **45**.
+- Skin of Light at rank 3, Hot Pole, High-Altitude Satellites and Planetary Climate Control set toward the heat: (60 + 30 + 40) / 4 = 32.5, × 1.70 (45 + 25% amplitude) = 55.25, + 20 = **75**.
+
+**Host on a 210-field colony with 100 fields built, Mineral Excavator level 20** (4,036 metal per hour gross, speed ×1)
+- Fallow (100 / 210 = 47.6%) with Rising Sap at rank 3: +15%. Giants (over 200 fields): +8%. Three planets of other players in the system with Crowd: 3 × 2 = +6%. Another of your planets in the system with Tides at rank 3: +9%.
+- Total **+38%**: 4,036 × 0.38 = **1,533** more metal per hour.
+- For 6 h after a raid that took resources, Regrowth adds 20%: +58%, that is **2,340**.
 
 ## Detailed data
 
@@ -168,71 +178,125 @@ graph TB
 
 *The planet decides, you listen.*
 
-| Row | Node | Effect | Per rank | Total |
+| Row | Node | Type | Effect (full node) | Per rank |
 |---|---|---|---|---|
-| 1 | **Cold Blood** | Your planets' temperature bonuses (cold for the Hydrogen Condenser, heat for the Photovoltaic Sensors) are stronger. | 1 rank | +10% |
-| 2 | **Planetary Climate Control** | On each planet, you shift the temperature toward the cold or the heat. Adjustable once a week. | 3 × 10 °C | 30 °C |
-| 3 | **A · Cold Pole** or **B · Hot Pole** | A: the Hydrogen Condenser's cold bonus is stronger still. <br> B: the heat bonus of the Photovoltaic Sensors and Solar Collectors is stronger still. | 1 rank | +25% |
-| 4 | **Skin of Light** | The share of your Solar Collectors' energy that comes from temperature is stronger. | 3 × 15% | +45% |
-| 5 | **The Long Season** | The Photovoltaic Sensors always produce as at the month's hottest, instead of following the cycle. | 1 rank | unlock |
-| 6 | **A · Deep Roots** or **B · Winter Sun** | A: on a planet too hot for it, the Hydrogen Condenser's factor never drops below ×1. <br> B: on a cold planet, the Photovoltaic Sensors' factor never drops below ×1.25. | 1 rank | A: ×1 <br> B: ×1.25 |
-| 7 | **Reading the Climate** | Temperature bonuses are stronger still. | 3 × 10% | +30% (+40% with Cold Blood) |
-| 8 | **High-Altitude Satellites** | Your Solar Collectors produce as if the planet were hotter. | 1 rank | +40 °C |
-| 9 | **The Two Seasons** *(ultimate)* | Your Hydrogen Condenser reads the planet's **minimum** temperature, not its maximum. | 1 rank | unlock |
+| 1 | **Cold Blood** | key | Your planets' temperature bonuses, cold for hydrogen and heat for solar, are 10% stronger. |  |
+| 2 | **Planetary Climate Control** | 3 ranks | On each planet, shift the temperature by 30° toward the cold or the heat, adjustable once a week. | 3 × 10° |
+| 3 | **A · Cold Pole** | choice | Your hydrogen synthesizer's cold bonus is 25% stronger still. | |
+|  | **B · Hot Pole** |  | The heat bonus of your solar plants and satellites is 25% stronger still. | |
+| 4 | **Skin of Light** | 3 ranks | The share of your solar satellites' energy that comes from temperature is 45% stronger. | 3 × 15% |
+| 5 | **The Long Season** | key | Your solar plants always produce as at the month's hottest, instead of following the cycle. |  |
+| 6 | **A · Deep Roots** | choice | On a planet too hot for it, your hydrogen synthesizer's yield never drops below ×1. | |
+|  | **B · Winter Sun** |  | On a cold planet, your solar plants' yield never drops below ×1.25. | |
+| 7 | **Reading the Climate** | 3 ranks | Your planets' temperature bonuses are 30% stronger still. | 3 × 10% |
+| 8 | **High-Altitude Satellites** | key | Your solar satellites produce as if the planet were 40° hotter. |  |
+| 9 | **The Two Seasons** | ultimate | Your hydrogen synthesizer reads the planet's coldest temperature, not its hottest. |  |
 
-Row 3 amplifies your strength, row 6 fixes your weakness: the player of cold planets and the player of hot planets do not make the same choices.
+- **Cold Blood** and **Reading the Climate** add up (40% at most) and work on the Hydrogen Condenser and the Photovoltaic Sensors, not on Solar Collectors.
+- **Planetary Climate Control**: never on a moon. The first setting is immediate; after that each planet waits 7 days between two settings, going back to "no shift" included. The shift applies to the Condenser, the Sensors and the Collectors at once, in the same direction: toward the cold, more hydrogen and less solar energy.
+- **Cold Pole** only targets the Condenser (65% amplitude at most with the two nodes above). **Hot Pole** targets the Sensors **and** the Collectors' temperature share.
+- **Skin of Light** only touches a Collector's temperature share (maximum temperature / 4), never its 20 base energy.
+- **The Long Season**: a planet's temperature follows the month, from its minimum on the 1st to its maximum mid-month. With this node, the Sensors always read the maximum.
+- **Deep Roots** raises the Condenser to ×1 wherever it falls under 1 (maximum temperature read above 110 °C). **Winter Sun** raises the Sensors to ×1.25 wherever their factor is lower.
+- **High-Altitude Satellites** adds to the Climate Control's shift.
+- **The Two Seasons** reads the minimum temperature, 40 °C under the maximum, shift included.
 
 ### Growth
 
 *The right place, the right size.*
 
-| Row | Node | Effect | Per rank | Total |
+| Row | Node | Type | Effect (full node) | Per rank |
 |---|---|---|---|---|
-| 1 | **Roots** | Your planets' position bonus is stronger. | 1 rank | +15% |
-| 2 | **Native Soil** | Your homeworld, which never gets a position bonus, receives a share of it. | 3 × ⅙ | ½ |
-| 3 | **A · Metal Lode** or **B · Crystal Vein** | A: the Mineral Excavator's position bonus (positions 6 to 10) is stronger still. <br> B: the Crystal Extractor's (positions 1 to 3) is stronger still. | 1 rank | +20% |
-| 4 | **Hollowed Moons** | Each Lunar base level gives fields on top of its 3, within the moon's diameter. | 3 × 1 field | 6 fields per level |
-| 5 | **Layering** | The position bonus is stronger still. | 1 rank | +30% (+45% with Roots) |
-| 6 | **A · Ground Gained** or **B · Full Moon** | A: each of your planets gains 2 fields (accent). <br> B: your moons are no longer bounded by their diameter. | 1 rank | A: +2 fields <br> B: unlock |
-| 7 | **Living Soil** | The Planetary Modulator and the Lunar base cost less. | 3 × 8% | −24% |
-| 8 | **Living Terraformer** | Each Planetary Modulator level gives one more field, on top of the extra field at even levels (Modulator 6: 33 → 39 fields). | 1 rank | +1 field per level |
-| 9 | **Transplantation** *(ultimate)* | Once a week, you move a colony to a free position of its system, buildings and moon included, if no fleet is flying to or from it. | 1 rank | 1 per week |
+| 1 | **Roots** | key | The position bonus of your planets in their system is 15% stronger. |  |
+| 2 | **Native Soil** | 3 ranks | Your homeworld receives ⅙ of the bonus of its position in the system per rank, ½ at rank 3. | 3 × 16.67% |
+| 3 | **A · Metal Lode** | choice | The position bonus of your metal mines, mid-system, is 20% stronger still. | |
+|  | **B · Crystal Vein** |  | The position bonus of your crystal mines, near the star, is 20% stronger still. | |
+| 4 | **Hollowed Moons** | 3 ranks | Each lunar base level digs +3 fields on top of its 3, within the moon's diameter. | 3 × 1 |
+| 5 | **Layering** | key | Your planets' position bonus is 30% stronger still. |  |
+| 6 | **A · Ground Gained** | choice | Each of your planets gains 2 buildable fields. | |
+|  | **B · Full Moon** |  | Your moons are no longer bounded by their diameter: each lunar base level gives them all its fields. | |
+| 7 | **Living Soil** | 3 ranks | Your terraformer and lunar base cost 24% less. | 3 × 8% |
+| 8 | **Living Terraformer** | key | Each terraformer level gives +1 field on top of its 5. |  |
+| 9 | **Transplantation** | ultimate | Once a week, move a colony to a free position of its system, buildings and moon included, if no fleet is flying to or from it. |  |
 
-Every Growth point is worth something on the right positions and nothing elsewhere; the ultimate fixes a bad placement.
+- **Roots**, **Layering** and **Metal Lode** or **Crystal Vein** add up, then multiply the position bonus: +65% at most on one mine. Nothing where the position gives nothing.
+- **Native Soil**: the homeworld never gets a position bonus without this node. The share applies to the bonus already widened by the nodes above.
+- **Hollowed Moons**: each Lunar base level gives 6 fields at rank 3, always within the moon's diameter, except with Full Moon.
+- **Ground Gained** only applies to planets, not moons.
+- **Living Soil** only targets the Planetary Modulator and the Lunar base; the reduction adds to the other building price reductions, past their common cap.
+- **Living Terraformer**: 6 fields per Modulator level instead of 5, and the extra field of even levels stays (Modulator 6: 33 → 39 fields).
+- **Transplantation**: once every 7 days for **the whole empire**, never the homeworld. The target position must be free, moonless and outside deep space. Refused while another player's fleet is heading for the colony, while one of your fleets flies to or from it, or in vacation mode. The colony keeps its size and buildings, but takes the temperature and position bonus of its new spot.
 
 ### Host
 
 *Make a world live on what it has.*
 
-A planet is **fallow** while fewer than half of its fields are built. This notion belongs to the Symbiote; do not mix it up with the common tree's young colony.
-
-| Row | Node | Effect | Per rank | Total |
+| Row | Node | Type | Effect (full node) | Per rank |
 |---|---|---|---|---|
-| 1 | **Young Shoot** | On a fallow planet, your buildings are built faster. | 1 rank | +10% |
-| 2 | **Rising Sap** | The mines of your fallow planets produce more. | 3 × 5% | +15% |
-| 3 | **A · Small Worlds** or **B · Giants** | A: on a planet of fewer than 150 fields, your buildings cost 15% less. <br> B: on a planet of more than 200 fields, your mines produce 8% more. | 1 rank | A: −15% <br> B: +8% |
-| 4 | **Long Fallow** | A planet stays fallow longer: the threshold rises above half of its fields built. | 3 × 10 pts | 80% of the fields |
-| 5 | **Neighbourhood** | Each planet of another player in the system of one of your planets raises its mines. | 1 rank | +1% per neighbour, 8% at most |
-| 6 | **A · Crowd** or **B · Solitude** | A: +2% per neighbour, up to 15%. <br> B: a planet alone in its system, with no other player, produces 10% more in its mines. | 1 rank | A: 15% at most <br> B: +10% |
-| 7 | **Tides** | When several of your planets share a system, each one's mines produce more. | 3 × 3% | +9% |
-| 8 | **Regrowth** | A plundered planet produces more in its mines for the next 6 hours. | 1 rank | +20% for 6 h |
-| 9 | **Eternal Fallow** *(ultimate)* | One planet of your choice, homeworld included, stays fallow for good, however many fields are built. Changing it takes a week. | 1 rank | 1 planet |
+| 1 | **Young Shoot** | key | On a fallow planet, with fewer than 50% of its fields built, your buildings are built 10% faster. |  |
+| 2 | **Rising Sap** | 3 ranks | Your fallow planets produce 15% more in their mines. | 3 × 5% |
+| 3 | **A · Small Worlds** | choice | On a planet of fewer than 150 fields, your buildings cost 15% less. | |
+|  | **B · Giants** |  | On a planet of more than 200 fields, your mines produce 8% more. | |
+| 4 | **Long Fallow** | 3 ranks | A planet stays fallow longer: its threshold rises by 30 pts above 50% of its fields built. | 3 × 10 pts |
+| 5 | **Neighbourhood** | key | Each planet of another player in the system of one of your planets raises its mines by 1%, up to 8%. |  |
+| 6 | **A · Crowd** | choice | Each planet of another player in the system raises your mines by 2%, up to 15%. | |
+|  | **B · Solitude** |  | A planet alone in its system, with no other player, produces 10% more in its mines. | |
+| 7 | **Tides** | 3 ranks | When several of your planets share a system, each one's mines produce 9% more. | 3 × 3% |
+| 8 | **Regrowth** | key | A plundered planet produces 20% more in its mines for the next 6 h. |  |
+| 9 | **Eternal Fallow** | ultimate | 1 planet of your choice, homeworld included, stays fallow for good, however many fields are built. Changing it takes 7 days. |  |
+
+- **Young Shoot** counts in the buildings' speed accent. A speed divides the duration: +10% = duration ÷ 1.1.
+- **Small Worlds** and **Giants** read the planet's **total** fields, which grow with the Planetary Modulator and bonus fields. The homeworld starts at 163 fields: neither small nor giant. Small Worlds adds to the other building price reductions.
+- **Long Fallow** brings the fallow threshold to 60, 70 then 80% of fields built.
+- **Neighbourhood** counts every planet of another player in the system, allies and bots included; moons do not count. The count is refreshed regularly, with a short delay.
+- **Crowd** **replaces** the rate of Neighbourhood (2% per neighbour instead of 1%, 15% at most instead of 8%): they do not add up. **Solitude** applies when no other player has a planet in the system; your own planets do not prevent it.
+- **Tides**: one other planet of yours in the system is enough. The bonus does not grow with their number, and it adds to Neighbourhood, Crowd or Solitude.
+- **Regrowth** only triggers if the raid took resources. A new raid restarts the 6 h.
+- **Eternal Fallow**: never a moon. The first planet named is fallow at once. Naming another removes the status from the old one at once, and the new one only gets it 7 days later.
+- At most, the Host adds +47% to a planet's mines (15 + 8 + 15 + 9), and +20% more for 6 h after a raid.
+
+### Class caps
+
+The most the talents of both trees can bring this class, lever by lever. Past it, a point adds nothing. The dynasty trait then adds on top.
+
+| Class cap (talents of both trees) | What the class tree reaches |
+|---|---|
+| The temperature bonuses (cold for hydrogen, heat for solar) gain 40% amplitude | 40% |
+| The hydrogen synthesizer's cold bonus gains 25% amplitude | 25% |
+| The heat bonus of the solar plant and satellites gains 25% amplitude | 25% |
+| The share of solar satellites' energy that comes from temperature gains 45% amplitude | 45% |
+| The system position bonus gains 45% amplitude | 45% |
+| The mother planet receives 50% of the position bonus of its place in the system | 50% |
+| The metal mines' position bonus gains 20% amplitude | 20% |
+| The crystal mines' position bonus gains 20% amplitude | 20% |
+| +4 fields on every planet | 2 |
+| −24% terraformer and lunar base cost | 24% |
+| −15% building cost on a small world | 15% |
+
+The fields row is completed by the common tree's Surveyors (+2): the class tree only gives 2 of the 4. The Host's bonuses, the Climate Control, the yield floors, the Lunar base and Modulator fields are mechanics bounded to what the tree gives: no point is lost there.
 
 ### 25-point builds
 
 | Build | Split | What it gets |
 |---|---|---|
-| Climatologist | Thermal 15 · Host 10 | The Two Seasons, temperature bonuses +40 to +65%, Photovoltaic Sensors at the month's hottest, 30 °C climate control; fallow planets +15%, small worlds or giants, fallow up to 80% of the fields, Neighbourhood |
-| Settler | Growth 15 · Thermal 10 | Transplantation, position bonus +45 to +65%, homeworld at half its bonus, one more field per Modulator level; temperature bonuses +40%, one pole, long season |
-| Gardener | Host 15 · Growth 10 | Eternal Fallow, fallow planets +15%, Neighbourhood, Tides, Regrowth; position bonus +45%, Native Soil, +2 fields or full moon |
+| Climatologist | Thermal 15 · Host 10 | The Two Seasons, temperature bonus +40% on both factors and +25% more on one, 30 °C Climate Control, Skin of Light, The Long Season, High-Altitude Satellites; Young Shoot, fallow planets +15%, small worlds or giants, fallow up to 80% of fields, Neighbourhood, Crowd or Solitude |
+| Settler | Growth 15 · Thermal 10 | Transplantation, position bonus +45% (+65% on one mine), homeworld at half its bonus, Hollowed Moons, Living Soil, Living Terraformer; temperature bonus **+10%** only (+35% on one building with the pole), 30 °C Climate Control, Skin of Light, The Long Season |
+| Gardener | Host 15 · Growth 10 | Eternal Fallow, fallow planets +15%, Neighbourhood, Tides, Regrowth; position bonus +45% (+65% on one mine), Native Soil, Hollowed Moons, +2 fields or Full Moon |
+
+Before row 7 of the main branch, place at least 2 points in the second one: the gate requires 12 points, and rows 1 to 6 of a branch only hold 10.
 
 ## Common pitfalls
 
-- **A temperature bonus never changes sign**: on a planet too hot for the Hydrogen Condenser (factor below 1), *Cold Blood* adds nothing. *Deep Roots* raises the floor instead.
-- **The position bonus only concerns two mines**: the Crystal Extractor in positions 1 to 3, the Mineral Excavator in positions 6 to 10. Elsewhere, Roots and Layering bring nothing.
-- **"Fallow" is not "young"**: a colony is young for its first 7 days (common tree); a planet is fallow while not enough of its fields are built.
-- **Climate Control is set once a week** per planet, and never on a moon.
-- **Transplantation** is refused while a fleet is flying to or from the colony.
+- **A temperature bonus never changes sign**: on a planet too hot for the Hydrogen Condenser (factor under 1), Cold Blood adds nothing, Deep Roots is what raises the floor. Likewise, under 0 °C the Photovoltaic Sensors have no bonus to widen: only Winter Sun helps them.
+- **Planetary Climate Control cuts both ways**: toward the cold, the planet gains hydrogen but loses solar energy; toward the heat, the reverse.
+- **10 points in Thermal do not give the +40%**: Reading the Climate is in row 7. Without it, the general amplitude stays at 10%.
+- **The position bonus only concerns two mines**, and its positions depend on the number of positions in the system: positions 1 to 3 and 6 to 10 in a 15-position system (Redline). On other positions, Roots and Layering bring nothing.
+- **"Fallow" is not "young"**: a colony is young for its first days (common tree); a planet is fallow while its fields are not built enough. Every level built brings it closer to the threshold.
+- **Crowd replaces Neighbourhood**, it does not add to it.
+- **The total of fields moves**: a Planetary Modulator level or Ground Gained can lose you Small Worlds (going from 149 to 151 fields) or win you Giants.
+- **Regrowth needs real loot**: a won raid on an empty stock triggers nothing.
+- **Transplantation only works once a week for the whole empire**, and the moved colony changes temperature: its Condenser and Sensors produce differently.
+- **Eternal Fallow has no overlap**: when changing planet, the old one loses the status at once and the new one gets it 7 days later.
 
 ## Related pages
 

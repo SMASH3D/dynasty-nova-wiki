@@ -13,28 +13,46 @@ updated: "2026-10-07T22:08:03.388Z"
 
 # The Builder
 
-> **In short**: the Builder is the class whose mines pay more than their level, whose yard works while they sleep, and who pays less for each level, above all when catching up on colonies. Common to every dynasty. Its three branches: **Lode**, **Yard** and **Foundry**.
+> **In short**: the Builder is the class of the construction economy. Its mines pay more than their level, its yard moves forward while its queues are empty, and every level it already knows costs it less. Lode makes the mines produce; Yard banks lost time; Foundry cuts prices and protects what waits in the queue.
 {.is-info}
 
-*"What stands."* Mine and yard: produce more, build faster, waste less.
+> Ship names are provisional English translations: the game still shows French names (see the [glossary](/en/getting-started/glossary)).
+{.is-warning}
 
 ## Rules
 
-1. The Builder's tree follows the rules of every [class tree](/en/dynasty/talents): 3 branches of 9 rows, 15 points per branch, 25 points at most.
-2. The generic bonuses (mine production, construction speed, storage, Plasma Technology) come from the [common tree](/en/dynasty/common-tree), Prosperity branch. The Builder only has **mechanics**, and a single accent bonus: **cost**, either of buildings or of ships and defenses (5%).
-3. **Catch-up** is its construction speed accent: it only applies on a colony, to a building still below the level reached on your home planet (15% at most).
-4. A mine gains at most **1 extra production level** from Mother lode, and at most 1 more from Master shaft or Twin mines.
-5. The whole tree serves only you, except **Down payment**: the one talent another player meets, when they loot the planet.
+1. The Builder is a **common** class: every dynasty can take it.
+2. Its tree has **three branches**: Lode, Yard and Foundry.
+3. Each branch has 9 rows and costs 15 points. With 25 points at most, you complete one branch and its ultimate, plus a second branch down to row 6 (10 points). How points, gates and choices work is described on [Talents](/en/dynasty/talents).
+4. Generic bonuses (mine production, construction speed, storage, Plasma Technology) come from the [common tree](/en/dynasty/common-tree). The Builder only has **mechanics**, a 5% cost accent (Tight quote or Bulk buying) and a construction speed accent, Catch-up, limited to colonies catching up with the home planet.
+5. The extra levels of Master shaft, Twin mines and Mother lode only apply to the three mines (Mineral Excavator, Crystal Extractor, Hydrogen Condenser) and only to their production: the mine still draws the energy of its real level. A mine gains at most 2 production levels: 1 from Master shaft or Twin mines, 1 from Mother lode.
+6. First pour, Prospecting and Core sampling are computed on the **mine's own production**: at its production level (extra levels included), its operating rate and the universe speed, without Plasma Technology or any other percentage bonus. Prospecting and Core sampling add to the planet's production and, like it, suffer from an energy shortfall; the First pour payout does not.
+7. "Once a day" means 24 h after the last use, for your whole empire (Core sampling, All-out push). State order comes back 7 days after the designated order is paid.
 
 ## Worked example
 
-A planet with a Mineral Excavator at level 20 (4,036 metal per hour; 4,662 at level 21, at full energy).
+Universe at speed 1. A Mineral Excavator produces 30 × N × 1.1^N metal per hour and draws 10 × N × 1.1^N energy: 4,036 metal and 1,345 energy at level 20, 4,662 metal and 1,554 energy at level 21.
 
-- **First pour + Great pours** (9 h): the Excavator reaches level 21 and pays out 9 × 4,662 = **41,958 metal** at once.
-- **Mother lode** (from level 20): the level 20 Excavator produces as a level 21, so **4,662 instead of 4,036** per hour (+15%).
-- **Prospecting** at rank 3 (+30%) on the level 21 Excavator: 4,662 × 1.3 = **6,061 per hour** for 24 h, about 33,600 more metal over the day.
-- **Core sampling** (triple production for 4 h) on the same Excavator: 2 × 4,662 × 4 = **37,296 more metal**.
-- **Known plans + Yard archives** (−25%): raising a colony's Excavator from level 13 to 14 when the home planet already reached 14 costs about **8,758 metal and 2,189 crystal** instead of 11,677 and 2,919.
+**Full Lode on the home planet (Master shaft and Mother lode)**
+- The Excavator reaches level 21. It produces as a level 23 (21 + 1 + 1): 30 × 23 × 1.1^23 = **6,178 metal per hour**, for the energy of a level 21 (1,554).
+- First pour and Great pours (9 h): 9 × 6,178 = **55,602 metal** paid when the level ends.
+- Prospecting at rank 3 on this mine: 6,178 × 30% = 1,853 (rounded down) more per hour, that is **44,472 metal** over the 24 h, at full energy.
+- Core sampling: 2 × 6,178 × 4 = **49,424 more metal** in 4 h, at full energy.
+
+**Galleries and Twin mines, on a colony**
+- With Galleries at rank 3, Mother lode applies from level 11. A level 11 Excavator produces as a level 13: **1,346 metal per hour** instead of 941, for the energy of a level 11 (313).
+
+**Foundry: an already known level**
+- Level 25 Excavator on a colony, a level the home planet already reached: 1,010,046 metal and 252,511 crystal at catalogue price.
+- Known plans and Yard archives (25%) plus Tight quote (5%): 30% less, rounded up, that is **707,033 metal** and **176,758 crystal**.
+- Designated for State order: half of this already reduced price, **353,517 metal** and **88,379 crystal**, 35% of the catalogue price. Points are still counted on the catalogue price.
+
+**Yard: an 8 h night, empty building queue**
+- With Head start plans at rank 3 (80%) and Automatic relay (5 h): 8 h × 80% = 6 h 24 min, brought down to the ceiling, that is **5 h** paid automatically to the order started in the morning.
+- With Hour bank (8 h): **6 h 24 min** kept, to pay onto the running order of your choice.
+
+**Nothing spills**
+- The crystal storage is full and 10,000 crystal produced overflow. Metal is chosen and its storage has room: 10,000 × 1.5 × 50% = **7,500 metal**. Had crystal been the chosen resource, those 10,000 would be lost.
 
 ## Detailed data
 
@@ -149,67 +167,123 @@ graph TB
     style B3 fill:#0b1322,stroke:#1e2a40,stroke-width:1px;
 ```
 
-### Lode: "Mines that pay more than their level."
+### Lode
 
-| Row | Type | Talent | Effect | Value |
+*Mines that pay more than their level.*
+
+| Row | Node | Type | Effect (full node) | Per rank |
 |---|---|---|---|---|
-| 1 | key | **First pour** | When a mine gains a level, it pays out part of its new production at once. | 3 h |
-| 2 | 3 ranks | **Great pours** | A mine that gains a level pays out more of its new production. | +2 h per rank (9 h in total) |
-| 3 | choice | **A: Master shaft** / **B: Twin mines** | A: your home planet's mines produce as if they were 1 level higher. <br> B: your colonies' mines produce as if they were 1 level higher. | +1 level |
-| 4 | 3 ranks | **Prospecting** | Every day, a mine drawn at random produces more for 24 h. | +10% per rank (30%) |
-| 5 | key | **Mother lode** | From level 20, each mine produces as if it were 1 level higher, on top of Master shaft or Twin mines. | +1 level from level 20 |
-| 6 | choice | **A: Chosen lode** / **B: Double lode** | A: you pick the Prospecting mine every day. <br> B: two mines are drawn every day instead of one. | choice / 2 mines |
-| 7 | 3 ranks | **Galleries** | Mother lode applies earlier. | −3 levels per rank (from level 11) |
-| 8 | key | **Nothing spills** | When a storage is full, the overflowing production is converted, unit for unit, into the resource of your choice. | 50% |
-| 9 | ultimate | **Core sampling** | Once a day, the mine of your choice produces three times as much for 4 h. You pick the mine and the moment. | ×3 for 4 h |
+| 1 | **First pour** | key | When one of your mines gains a level, it pays you 3 h of its new production at once. |  |
+| 2 | **Great pours** | 3 ranks | A mine that gains a level pays you 6 h more of its new production. | 3 × 2 h |
+| 3 | **A · Master shaft** | choice | Your home planet's mines produce as if they were 1 level higher. | |
+|  | **B · Twin mines** |  | Your colonies' mines produce as if they were 1 level higher. | |
+| 4 | **Prospecting** | 3 ranks | Every day, one of your mines drawn at random produces 30% more for 24 h. | 3 × 10% |
+| 5 | **Mother lode** | key | From level 20, each of your mines produces as if it were 1 level higher, on top of Master shaft or Twin mines. |  |
+| 6 | **A · Chosen lode** | choice | Every day, you pick the Prospecting mine instead of the draw. | |
+|  | **B · Double lode** |  | Every day, 2 mines are drawn for Prospecting instead of one. | |
+| 7 | **Galleries** | 3 ranks | Mother lode applies 9 levels earlier. | 3 × 3 |
+| 8 | **Nothing spills** | key | When a storage is full, 50 pts of the value of the overflowing production is converted into the resource of your choice, at equal value: three metal are worth two crystal or one hydrogen. |  |
+| 9 | **Core sampling** | ultimate | Once a day, the mine of your choice produces three times as much for 4 h. You pick the mine and the moment. |  |
 
-### Yard: "The yard that works while you sleep."
+- **First pour**: every completed level of a mine pays its hours of production, including the level granted by Master stroke. The payout goes straight into the planet's stock.
+- **Master shaft** applies to the home planet, **Twin mines** to every colony, from the mine's level 1.
+- **Prospecting**: the draw is made among all standing mines of all your planets (not moons), each with the same chance whatever its level. A new mine of the day is drawn shortly after the 24 h end.
+- **Mother lode** triggers on the mine's real level (20, or 11 with Galleries at rank 3), not its production level.
+- **Chosen lode**: your choice replaces the drawn mine and lasts 24 h; you choose again when those 24 h end. Without a choice, the draw goes on. **Double lode** draws two different mines.
+- **Nothing spills**: only the overflow of the two other resources is converted, at equal value, rounded down, and only into the free space of the chosen resource's storage (metal as long as you have chosen nothing). The choice is made planet by planet. It only applies to production, and after Safety Stock (common tree).
+- **Core sampling**: the Mineral Excavator, Crystal Extractor or Hydrogen Condenser, at the time you choose.
 
-| Row | Type | Talent | Effect | Value |
+### Yard
+
+*The yard that works while you sleep.*
+
+| Row | Node | Type | Effect (full node) | Per rank |
 |---|---|---|---|---|
-| 1 | key | **The yard never sleeps** | When a planet's building queue is empty, the yard sets aside a head start equal to part of the time passed; the next order takes that much less. | 50% of the time, up to 1 h |
-| 2 | 3 ranks | **Night shifts** | The yard can set aside more head start. | +1 h per rank (4 h) |
-| 3 | choice | **A: Continuous pour** / **B: Poured foundations** | A: an order that starts on its own after the previous one begins with part of its time already done. <br> B: an order started by hand begins with 30 min already done, at most half of its duration. | 10% / 30 min |
-| 4 | 3 ranks | **Catch-up** | On a colony, a building still below your home planet's level builds faster (accent). | +5% per rank (15%) |
-| 5 | key | **Night shipyard** | An idle Orbital Dock sets head start aside too, and it shortens your ships and defenses. | unlock |
-| 6 | choice | **A: Hour bank** / **B: Automatic relay** | A: head start is no longer paid on its own; you keep it and pay it into the order of your choice. <br> B: head start is still paid on its own, and its cap rises. | up to 8 h / +1 h (5 h) |
-| 7 | 3 ranks | **Head start plans** | The yard sets aside a larger share of its idle time. | +10% per rank (80%) |
-| 8 | key | **Shared head start** | A planet's head start can be paid into an order on any other of your planets. | at most 50% of the order |
-| 9 | ultimate | **All-out push** | Once a day, the yard of the planet of your choice works twice as fast for 4 h. | ×2 for 4 h |
+| 1 | **The yard never sleeps** | key | When a planet's building queue is empty, the yard sets aside a head start of 50% of the time passed, up to 1 h: the next order takes that much less. |  |
+| 2 | **Night shifts** | 3 ranks | Your yard can set aside 3 h more head start. | 3 × 1 h |
+| 3 | **A · Continuous pour** | choice | An order that starts on its own after the previous one begins with 10% of its time already done. | |
+|  | **B · Poured foundations** |  | An order you start by hand begins with 5% of its duration already done, 30 min at least, at most 50%. | |
+| 4 | **Catch-up** | 3 ranks | On a colony, a building still below your home planet's level builds 15% faster. | 3 × 5% |
+| 5 | **Night shipyard** | key | Your idle shipyard sets head start aside too, and it can shorten your ships and defenses. |  |
+| 6 | **A · Hour bank** | choice | Head start is no longer paid on its own: you keep it, up to 8 h, and pay it into the order of your choice. | |
+|  | **B · Automatic relay** |  | Head start is still paid into the next order, and you can set aside 1 h more. | |
+| 7 | **Head start plans** | 3 ranks | Your yard sets aside 30% more of its idle time. | 3 × 10% |
+| 8 | **Shared head start** | key | A planet's head start can be paid into an order on any other of your planets, at most 50% of that order. |  |
+| 9 | **All-out push** | ultimate | Once a day, the yard of the planet of your choice works twice as fast for 4 h. |  |
 
-### Foundry: "Pay less, keep what you set aside."
+- **The yard never sleeps**: the head start is banked planet by planet, while its building queue is empty. It is paid automatically to the next construction or demolition started on that empty queue, and the **whole** head start goes, even if the order is shorter than it.
+- **Continuous pour** only applies to a queued order that starts on its own. **Poured foundations** only applies to an order started on an empty queue: 30 min, or 5% of its duration if that is more, never past half its duration.
+- **Catch-up** also applies to the level equal to the home planet's. It adds to the common tree's construction speed; a duration is divided by (1 + speed).
+- **Night shipyard**: the planet has a single bank, which fills while at least one of its two yards (buildings, Orbital Dock) is empty, at the same rate. A ship or defense order started on an empty Orbital Dock only takes its own duration from it.
+- **Hour bank**: the ceiling becomes 8 h instead of 5 h (Night shifts no longer adds anything). You pay the head start onto a running order of the planet (ships and defenses with Night shipyard), at most what it has left.
+- **Shared head start**: paying another planet is done by hand, also with Automatic relay; all contributions from other planets together never exceed 50% of the order's duration.
+- **All-out push** only affects the building yard. The running order gains up to 4 h at once (at most half of what it has left); an order starting during the window gains the same way on what is left of the window.
 
-| Row | Type | Talent | Effect | Value |
+### Foundry
+
+*Pay less, keep what you set aside.*
+
+| Row | Node | Type | Effect (full node) | Per rank |
 |---|---|---|---|---|
-| 1 | key | **Known plans** | A building level already reached on another of your planets costs less. | −10% |
-| 2 | 3 ranks | **Master stroke** | Each finished building has a chance to reach the next level too, for free. | 2% per rank (6%) |
-| 3 | choice | **A: Tight quote** / **B: Bulk buying** | A: your buildings cost less. <br> B: your ships and defenses cost less. | −5% (accent) |
-| 4 | 3 ranks | **Yard archives** | Known levels cost even less. | −5% per rank (−25% with Known plans) |
-| 5 | key | **Down payment** | The resources set aside for the order at the head of the building queue are safe from looting, up to part of its cost. | 30% |
-| 6 | choice | **A: Yard credit** / **B: Metal payment** | A: an order starts even when part of its resources is missing; the rest is taken from your production. <br> B: missing crystal or hydrogen is paid in metal. | 10% / 2 metal per unit |
-| 7 | 3 ranks | **Yard vault** | Down payment shelters a larger share of the cost. | +10% per rank (60%) |
-| 8 | key | **Alliance plans** | A level a member of your alliance already reached counts as known for Known plans. | unlock |
-| 9 | ultimate | **State order** | Once a week, the upgrade of your choice costs half price. | −50%, once a week |
+| 1 | **Known plans** | key | A building level you already reached on another of your planets costs 10% less. |  |
+| 2 | **Master stroke** | 3 ranks | Each finished building has a 6% chance to reach the next level too, for free. | 3 × 2% |
+| 3 | **A · Tight quote** | choice | Your buildings cost 5% less. | |
+|  | **B · Bulk buying** |  | Your ships and defenses cost 5% less. | |
+| 4 | **Yard archives** | 3 ranks | Levels you already know cost another 15% less. | 3 × 5% |
+| 5 | **Down payment** | key | The resources set aside for the order at the head of your building queue are safe from looting, up to 30% of its cost. |  |
+| 6 | **A · Yard credit** | choice | An order starts even when up to 10% of its resources are missing; the rest is taken from your production. | |
+|  | **B · Metal payment** |  | The crystal or hydrogen an order lacks is paid in metal: 2 metal per missing unit. | |
+| 7 | **Yard vault** | 3 ranks | Down payment shelters another 30% of the order's cost. | 3 × 10% |
+| 8 | **Alliance plans** | key | A level a member of your alliance already reached counts as known for Known plans. |  |
+| 9 | **State order** | ultimate | Once a week, the upgrade of your choice costs 50% less. |  |
 
-### What 25 points give
+- **Known plans**: the level must be reached on **another** of your planets or moons. Building reductions add up (Known plans, Yard archives, Tight quote: 30% at most); the price is rounded up.
+- **Master stroke**: only after an upgrade (not a demolition), and if the next level is possible (maximum level, free field).
+- **Down payment**: the protected order is the first order **waiting** in the planet's queue, not the running one (already paid), nor a demolition. The sheltered share, at most the stock, is removed from what can be plundered; the plunder rate then applies to the rest.
+- **Yard credit**: you need at least 90% of **each** resource. The whole available stock goes, the shortfall becomes a debt taken from the stock as soon as it fills, before any other spending. No new credit while a debt runs. **Metal payment** pays missing crystal and hydrogen in metal, if there is enough metal. Both only apply to buildings.
+- **State order**: you designate on a planet the next level of a building; the price drops as soon as it is designated, and you can change it until the order is paid. The discount applies to the price already reduced by the other talents.
+
+### Class caps
+
+The most the talents of both trees can bring this class, lever by lever. Past it, a point adds nothing. The dynasty trait then adds on top.
+
+| Class cap (talents of both trees) | What the class tree reaches |
+|---|---|
+| The home planet's mines produce as if they had +1 level | 1 |
+| The colonies' mines produce as if they had +1 level | 1 |
+| Every mine produces as if it had +1 level | 1 |
+| Mother lode applies 9 levels earlier | 9 |
+| +15% build speed on a colony level the home planet already has | 15% |
+| −25% cost of a building level already reached on another of your planets | 25% |
+| −5% building resource cost | 5% |
+| −5% ship and defense cost | 5% |
+
+### 25-point builds
 
 | Build | Split | What it gets |
 |---|---|---|
-| Miner | Lode 15 · Foundry 10 | Core sampling, Mother lode from level 11, a mine at +30% every day, 9 h of production at each level; colonies caught up at −25%, Master stroke, Down payment |
-| Absent foreman | Yard 15 · Lode 10 | the yard catches up 5 to 8 h a night per planet, shared head start, All-out push; Mother lode, Prospecting, 9 h of production at each level |
-| Colonizer | Foundry 15 · Yard 10 | State order every week, Alliance plans, −25% costs on every catch-up; yard head start and Catch-up on colonies |
+| Miner | Lode 15 · Foundry 10 | Core sampling, Mother lode from level 11, 9 h of production at every mine level, Prospecting at 30% on one chosen mine or two drawn, Nothing spills; known levels −25% (−30% with Tight quote), Master stroke 6%, Down payment 30% |
+| Absent Foreman | Yard 15 · Lode 10 | bank of 80% of idle time, 5 h (Automatic relay) or 8 h (Hour bank) per planet, Orbital Dock included, Catch-up 15%, Shared head start, All-out push; 9 h of production at every mine level, Prospecting 30%, Mother lode from level 20 |
+| Colonizer | Foundry 15 · Yard 10 | State order, Alliance plans, Down payment up to 60%, known levels −25%; bank of 50% of idle time up to 5 h or 8 h, Catch-up 15% on colonies, Night shipyard |
+
+Before row 7 of the main branch, place at least 2 points in the second one: the gate requires 12 points, and rows 1 to 6 of a branch only hold 10.
 
 ## Common pitfalls
 
-- **The Yard rewards empty queues**: a player who keeps their queues full gets little from it. Continuous pour and All-out push are there for them.
-- **Known plans only covers a level already reached** on another of your planets (or by an ally with Alliance plans): your most advanced planet pays full price.
-- **Down payment only covers the order at the head of the queue**, and 60% of its cost at most: a raider still takes the rest of the stock.
-- **Cost reductions do not change points**: points and experience are computed on the catalogue cost, before any reduction.
+- **The Yard rewards empty queues**: the head start is only paid automatically to an order started on an empty queue. A player who keeps their queue full mostly benefits from Continuous pour and All-out push.
+- **A head start longer than the order is lost**: starting a 10 min building with 5 h banked uses up the 5 h. With Hour bank, pay it by hand onto a big order.
+- **First pour, Prospecting and Core sampling ignore Plasma Technology**: they apply to the mine's own production. An energy shortfall also reduces Prospecting and Core sampling.
+- **Extra production levels cost no energy**: the mine draws that of its real level.
+- **Nothing spills does not save the chosen resource**: its own overflow is lost, and nothing is converted when its storage is full.
+- **Known plans only covers a level already reached** on another of your planets (or by a member of your alliance with Alliance plans): your most advanced planet pays full price.
+- **Down payment protects the waiting order**: keep an order queued behind the running one. At most 60% of its cost, never more than the stock; the raider takes their rate on the rest.
+- **Cost reductions do not change points**: points and experience are computed on the catalogue price.
 
 ## Related pages
 
-- [Talent system](/en/dynasty/talents)
+- [Talents](/en/dynasty/talents)
 - [Common tree](/en/dynasty/common-tree)
 - [Classes](/en/dynasty/classes)
 - [Resources](/en/economy/resources)
 - [Build queues](/en/economy/build-queue)
+- [Plunder](/en/combat/plunder)
