@@ -16,11 +16,15 @@ updated: "2026-10-07T22:08:33.836Z"
 > **En bref** : l'arbre commun est le même pour toutes les dynasties et toutes les classes. Il reçoit 1 point par niveau, 50 au maximum, et règle votre propre vitesse de jeu : **Prospérité** pour produire et construire, **Exploration** pour chercher et s'étendre, **Logistique** pour vos flottes. 50 points suffisent pour une branche pleine et l'essentiel d'une deuxième.
 {.is-info}
 
+> **Paramètre d'univers** : un joueur compte comme inactif (cible abandonnée) après un nombre de jours sans activité qui dépend de l'univers.
+> Par défaut : **14 jours** · Redline : **7 jours**
+{.is-info}
+
 ## Règles
 
 1. 3 branches de 10 rangées, 28 points par branche, 84 au total. Vous en placez **50 au maximum**.
-2. Les rangées s'ouvrent à 8, 20 et 32 points placés au-dessus, toutes branches confondues. L'ultime (rangée 10) demande en plus le niveau 40 et la branche pleine. Voir [Les talents](/fr/dynasty/talents).
-3. Les rangées 3, 6 et 8 sont des **choix** : un point, option A ou B.
+2. Un nœud ne s'ouvre que lorsque le nœud au-dessus de lui est plein. Les rangées s'ouvrent à 8, 20 et 32 points placés au-dessus, toutes branches confondues : une branche seule contient 16 points dans ses rangées 1 à 6 et 22 dans ses rangées 1 à 8, il faut donc **4 points ailleurs** avant sa rangée 7 et **10** avant sa rangée 9. L'ultime (rangée 10) demande en plus le niveau 40 et la branche pleine. Voir [Les talents](/fr/dynasty/talents).
+3. Les rangées 3 et 6 sont des **choix** dans les trois branches : un point, option A ou B. La rangée 8 est un choix en Prospérité et en Exploration ; en Logistique, c'est une clé (Chargement prioritaire).
 4. L'arbre commun **ne change pas** quand vous changez de classe.
 5. Les bonus qui ne servent que vous (production, recherche, construction) montent haut. Ceux qui touchent les autres joueurs (vitesse de flotte, pillage) restent modérés.
 6. Les bonus de vitesse de flotte **divisent la durée du vol** : +50 % = un vol 1,5 fois plus court.
@@ -29,73 +33,108 @@ updated: "2026-10-07T22:08:33.836Z"
 
 *Ce que vos mondes produisent et bâtissent.*
 
-| Rangée | Nœud | Effet | Par rang | Total |
+| Rangée | Nœud | Type | Effet (nœud plein) | Par rang |
 |---|---|---|---|---|
-| 1 | **Extraction** | Production des trois mines | 3 rangs × 3 % | +9 % |
-| 2 | **Grues automatisées** | Vitesse de construction des bâtiments | 5 rangs × 2 % | +10 % |
-| 3 | **A · Entrepôts** ou **B · Coffres enterrés** | A : capacité des entrepôts <br> B : part de vos ressources qu'un pillard ne peut pas emporter | | A : +20 % <br> B : 5 points (un pillard prend 45 % au lieu de 50 %) |
-| 4 | **Veines riches** | Production des trois mines | 5 rangs × 3 % | +15 % (+24 % avec Extraction) |
-| 5 | **Fonderie à plasma** | Effet de la Maîtrise du Plasma sur la production | | +20 % de son effet |
-| 6 | **A · Réseau optimisé** ou **B · Colonies prospères** | A : énergie des Capteurs photovoltaïques, du Réacteur thermonucléaire et des Collecteurs solaires <br> B : production de vos colonies, planète mère exclue | | A : +8 % <br> B : +10 % |
-| 7 | **Ateliers** | Vitesse de construction des vaisseaux et des défenses | 5 rangs × 2 % | +10 % |
-| 8 | **A · Pont de ressources** ou **B · Stock de sécurité** | A : une fois par jour, transférez vers une autre de vos planètes, instantanément et sans flotte, jusqu'à 2 heures de production de la planète de départ <br> B : entrepôts pleins, vos mines continuent de produire à 25 % au lieu de s'arrêter | | A : 2 h, 1 fois par jour <br> B : 25 % |
-| 9 | **Chantiers de nuit** | Vitesse de construction des bâtiments | 5 rangs × 2 % | +10 % (+20 % avec Grues automatisées) |
-| 10 | **Âge d'or** *(ultime)* | Production des mines et vitesse des bâtiments | | mines +1 % (+25 % au total), bâtiments +5 % (+25 % au total) |
+| 1 | **Extraction** | 3 rangs | Vos mines de métal, de cristal et d'hydrogène produisent 9 % de plus. | 3 × 3 % |
+| 2 | **Grues automatisées** | 5 rangs | Vos bâtiments se construisent 10 % plus vite. | 5 × 2 % |
+| 3 | **A · Entrepôts** | choix | Vos hangars stockent 20 % de ressources en plus. | |
+|  | **B · Coffres enterrés** |  | Un pillard qui vous attaque emporte 5 pts de vos ressources en moins. | |
+| 4 | **Veines riches** | 5 rangs | Vos mines de métal, de cristal et d'hydrogène produisent 15 % de plus. | 5 × 3 % |
+| 5 | **Fonderie à plasma** | clé | L'effet de votre technologie plasma sur la production augmente de 50 %. |  |
+| 6 | **A · Réseau optimisé** | choix | Vos centrales et vos satellites produisent 8 % d'énergie en plus. | |
+|  | **B · Colonies prospères** |  | Vos colonies produisent 10 % de ressources en plus. Votre planète mère n'est pas concernée. | |
+| 7 | **Ateliers** | 5 rangs | Vos vaisseaux et vos défenses se construisent 10 % plus vite. | 5 × 2 % |
+| 8 | **A · Pont de ressources** | choix | Une fois par jour, transférez jusqu'à 2 h de production d'une de vos planètes à une autre, instantanément et sans flotte. | |
+|  | **B · Stock de sécurité** |  | Quand vos hangars sont pleins, vos mines continuent de produire à 25 % au lieu de s'arrêter. | |
+| 9 | **Chantiers de nuit** | 5 rangs | Vos bâtiments se construisent 10 % plus vite. | 5 × 2 % |
+| 10 | **Âge d'or** | ultime | Vos mines produisent 1 % de plus et vos bâtiments se construisent 5 % plus vite encore. |  |
 
-Branche pleine : mines **+25 %**, bâtiments **+25 %**, vaisseaux et défenses **+10 %**, Maîtrise du Plasma **+20 %** de son effet.
+- Les bonus de production s'appliquent à la production brute des trois mines, avant le rapport d'énergie. Ils s'additionnent entre eux, puis sont plafonnés.
+- **Entrepôts** s'ajoute au Centre logistique et à toute la capacité de la planète, Base planetaire comprise. **Coffres enterrés** retire 5 points au taux de pillage que vous subissez (50 % → 45 %), jamais sous 30 %.
+- **Fonderie à plasma** : votre niveau de Maîtrise du Plasma compte une fois et demie pour la production. Ce bonus se calcule à part du plafond de production.
+- **Réseau optimisé** augmente l'énergie produite par les Capteurs photovoltaïques, le Réacteur thermonucléaire et les Collecteurs solaires. **Colonies prospères** touche chaque planète qui n'est ni votre planète mère ni une lune (colonies et mondes conquis), au-delà du plafond de 45 %.
+- **Pont de ressources** : une fois par 24 heures glissantes pour tout votre empire, vers n'importe quelle autre de vos planètes ou lunes. La limite est de 2 heures de la production actuelle de la planète de départ, les trois ressources additionnées et réparties comme vous le voulez, sans dépasser son stock. La planète d'arrivée peut dépasser ses entrepôts.
+- **Stock de sécurité** : quand un entrepôt est plein, 25 % de ce que la mine aurait produit est quand même versé, au-dessus de la capacité.
+
+Branche pleine : mines **+25 %**, bâtiments **+25 %**, vaisseaux et défenses **+10 %**, Maîtrise du Plasma comptée **une fois et demie**.
 
 ## Exploration
 
 *Chercher plus vite, s'étendre plus loin.*
 
-| Rangée | Nœud | Effet | Par rang | Total |
+| Rangée | Nœud | Type | Effet (nœud plein) | Par rang |
 |---|---|---|---|---|
-| 1 | **Méthode** | Vitesse de recherche | 3 rangs × 5 % | +15 % |
-| 2 | **Cartographes** | Durée d'exploration d'une expédition. L'aller, le retour, l'hydrogène, le risque de retard et les gains restent calculés sur la durée que vous avez choisie : le talent raccourcit l'attente, pas les gains | 5 rangs × 5 % | −25 % |
-| 3 | **A · Arche** ou **B · Jeunes mondes** | A : coût du Pionnier spatial <br> B : durée pendant laquelle une colonie fondée reste « jeune » | | A : −25 % <br> B : +72 h (10 jours au lieu de 7) |
-| 4 | **Pillards d'abandonnés** | Pillage contre un joueur inactif, un monde en ruine ou un adversaire contrôlé par le jeu | 5 rangs × 2 points | +10 points (50 → 60 %) |
-| 5 | **Arpenteurs** | Cases constructibles sur chacune de vos planètes | | +2 |
-| 6 | **A · Expéditions** ou **B · Astrométrie** | A : ce que rapportent vos expéditions <br> B : vitesse de Renseignement Tactique et de Cosmologie Appliquée | | A : +20 % <br> B : +15 % |
-| 7 | **Comptoirs pionniers** | Tant qu'une colonie fondée est jeune : vitesse de ses bâtiments et production de ses mines | 5 rangs × 4 % et 5 % | bâtiments +20 %, mines +25 % |
-| 8 | **A · Archives volées** ou **B · Flair de prospecteur** | A : chaque pillage rentable d'une cible abandonnée avance votre recherche en cours de 1 % de son temps restant, 10 fois par jour <br> B : une part des expéditions qui ne trouvent rien ramènent des ressources à la place | | A : 1 %, 10 par jour <br> B : 33 % |
-| 9 | **Pillage organisé** | Pillage des cibles abandonnées | 5 rangs × 2 points | +10 points (+20 points avec Pillards d'abandonnés : 50 → 70 %) |
-| 10 | **Second laboratoire** *(ultime)* | Vous menez **deux recherches à la fois**, la seconde à mi-vitesse | | 2e recherche à 50 % |
+| 1 | **Méthode** | 3 rangs | Vos recherches avancent 15 % plus vite. | 3 × 5 % |
+| 2 | **Cartographes** | 5 rangs | Vos expéditions explorent 25 % moins longtemps : la durée d'exploration que vous choisissez est raccourcie d'autant. | 5 × 5 % |
+| 3 | **A · Arche** | choix | Vos vaisseaux de colonisation coûtent 25 % de moins et se construisent 50 % plus vite ; vos colonisations volent 25 % plus vite. | |
+|  | **B · Jeunes mondes** |  | Une colonie fondée reste jeune 3 jours de plus. | |
+| 4 | **Pillards d'abandonnés** | 5 rangs | Contre un joueur inactif, un monde en ruine ou un empire sans maître, vous pillez 10 pts de ressources en plus. | 5 × 2 pts |
+| 5 | **Arpenteurs** | clé | Chacune de vos planètes gagne 2 cases constructibles. |  |
+| 6 | **A · Expéditions** | choix | Vos expéditions rapportent 20 % de plus. | |
+|  | **B · Astrométrie** |  | Vos recherches d'espionnage et d'astrophysique avancent 15 % plus vite. | |
+| 7 | **Comptoirs pionniers** | 5 rangs | Tant qu'une colonie est jeune, elle construit 20 % plus vite et ses mines produisent 25 % de plus, et elle reste jeune 5 jours de plus. | 5 × 4 % |
+| 8 | **A · Archives volées** | choix | Chaque pillage rentable d'une cible abandonnée avance votre recherche en cours de 1 % de son temps restant (10 fois par jour). | |
+|  | **B · Flair de prospecteur** |  | 33 % de vos expéditions qui ne trouvent rien ramènent des ressources à la place. | |
+| 9 | **Pillage organisé** | 5 rangs | Contre un joueur inactif, un monde en ruine ou un empire sans maître, vous pillez 10 pts de ressources en plus. | 5 × 2 pts |
+| 10 | **Second centre d'innovation** | ultime | Second centre d'innovation : vous pouvez mener deux recherches à la fois ; la seconde avance à 50 % de la vitesse normale. |  |
 
-Branche pleine : recherche **+15 %** et une seconde recherche, expéditions **25 %** plus courtes, colonies jeunes plus rapides, **+2 cases**, pillage des cibles abandonnées **70 %**.
+- **Méthode** et **Astrométrie** partagent le même plafond de 25 % : avec Méthode pleine, Renseignement Tactique et Cosmologie Appliquée vont 25 % plus vite, pas 30 %.
+- **Cartographes** raccourcit le séjour d'exploration que vous choisissez. Le trajet ne change pas, et l'hydrogène du séjour, le risque de retard et les gains restent ceux de la durée choisie.
+- **Arche** a trois effets sur le Pionnier spatial et la colonisation. La vitesse des colonisations reste sous le plafond total de vitesse de flotte (60 %).
+- Une colonie est **jeune** pendant 7 jours après sa fondation par un Pionnier spatial (jamais la planète mère, une lune ou un monde conquis). Seul **Comptoirs pionniers** profite de cet état : **Jeunes mondes** n'a d'effet qu'avec lui. Avec les deux : 15 jours de jeunesse.
+- Une **cible abandonnée** est un monde en ruine, un adversaire contrôlé par le jeu, ou un joueur inactif dans l'univers. Le taux de pillage de base est 50 % ; Pillards d'abandonnés et Pillage organisé ajoutent des points à ce taux.
+- **Archives volées** ne compte que les pillages qui rapportent au moins une heure de production de votre planète mère (les trois ressources additionnées). Elle avance la recherche en cours (la première si deux tournent), jamais jusqu'à la fin ; les 10 charges se comptent sur 24 heures à partir de la première.
+- **Flair de prospecteur** : 33 % des chances de ne rien trouver passent du côté des ressources. Sur une case d'espace lointain encore jamais explorée, « rien » passe de 33 % à 22,11 %, « ressources » de 33 % à 43,89 %.
+- **Second centre d'innovation** : la seconde recherche doit être différente de la première et ne démarre que si une recherche tourne déjà. À mi-vitesse, une recherche de 4 h en dure 8.
+
+Branche pleine : recherche **+15 %** et une seconde recherche, séjours d'expédition **25 %** plus courts, pillage des cibles abandonnées **70 %**, **+2 cases**, jeunes colonies plus rapides et jeunes jusqu'à **12 jours** (**15** avec Jeunes mondes).
 
 ## Logistique
 
 *Plus loin, plus vite, plus chargé.*
 
-| Rangée | Nœud | Effet | Par rang | Total |
+| Rangée | Nœud | Type | Effet (nœud plein) | Par rang |
 |---|---|---|---|---|
-| 1 | **Réacteurs réglés** | Vitesse de toutes vos flottes | 3 rangs × 5 % | +15 % |
-| 2 | **Économiseurs** | Hydrogène consommé | 5 rangs × 2 % | −10 % |
-| 3 | **A · Cales élargies** ou **B · Moteurs poussés** | A : capacité de fret <br> B : vitesse de toutes vos flottes | | A : +10 % <br> B : +10 % |
-| 4 | **Soutes modulaires** | Capacité de fret | 5 rangs × 3 % | +15 % (+25 % avec Cales élargies) |
-| 5 | **Escadre supplémentaire** | Emplacements de flotte | | +1 |
-| 6 | **A · Vent arrière** ou **B · Liaisons internes** | A : vitesse de tous vos retours <br> B : vitesse des transports et des stationnements entre vos propres planètes | | A : +25 % <br> B : +40 % <br> hors plafond de vitesse |
-| 7 | **Propulsion avancée** | Vitesse de toutes vos flottes | 5 rangs × 3 % | +15 % (+30 % avec Réacteurs réglés, +40 % avec Moteurs poussés) |
-| 8 | **Chargement prioritaire** | Ce qui ne tient pas dans vos soutes se charge dans l'ordre que vous choisissez | | déblocage |
-| 9 | **Ravitaillement** | Hydrogène consommé | 5 rangs × 2 % | −10 % (−20 % avec Économiseurs) |
-| 10 | **Grande flotte** *(ultime)* | Emplacements de flotte | | +1 (+2 au total) |
+| 1 | **Réacteurs réglés** | 3 rangs | Toutes vos flottes volent 15 % plus vite. | 3 × 5 % |
+| 2 | **Économiseurs** | 5 rangs | Vos flottes brûlent 10 % d'hydrogène en moins. | 5 × 2 % |
+| 3 | **A · Cales élargies** | choix | Vos vaisseaux emportent 10 % de cargaison en plus. | |
+|  | **B · Moteurs poussés** |  | Toutes vos flottes volent 10 % plus vite. | |
+| 4 | **Soutes modulaires** | 5 rangs | Vos vaisseaux emportent 15 % de cargaison en plus. | 5 × 3 % |
+| 5 | **Escadre supplémentaire** | clé | Vous pouvez avoir 1 flotte de plus en vol en même temps. |  |
+| 6 | **A · Vent arrière** | choix | Vos flottes rentrent 25 % plus vite. | |
+|  | **B · Liaisons internes** |  | Vos transports et déploiements entre vos propres planètes vont 40 % plus vite. | |
+| 7 | **Propulsion avancée** | 5 rangs | Toutes vos flottes volent 15 % plus vite. | 5 × 3 % |
+| 8 | **Chargement prioritaire** | clé | Ce qui ne tient pas dans vos soutes se charge dans l'ordre que vous choisissez. |  |
+| 9 | **Ravitaillement** | 5 rangs | Vos flottes brûlent 10 % d'hydrogène en moins. | 5 × 2 % |
+| 10 | **Grande flotte** | ultime | Vous pouvez avoir 1 flotte de plus en vol en même temps. |  |
 
-Branche pleine : vols **30 %** plus rapides et fret **+25 %** (option A), ou vols **40 %** plus rapides et fret **+15 %** (option B) ; hydrogène **−20 %** ; **+2** flottes.
+- Les bonus de vitesse **divisent** la durée du vol : +40 % = un vol 1,4 fois plus court. Ils sont lus au départ de la flotte.
+- Les réductions d'hydrogène touchent le carburant du vol, pas celui d'un séjour d'expédition. Le fret s'ajoute à la capacité déjà augmentée par la Technologie hyperespace.
+- **Vent arrière** accélère tous les retours, rappels compris. **Liaisons internes** accélère les transports et stationnements qui arrivent sur l'une de vos planètes. Les deux multiplient la vitesse en plus du plafond de vitesse.
+- **Chargement prioritaire** : au départ, vous fixez l'ordre dans lequel butin et débris remplissent vos soutes quand tout ne tient pas. Sans lui, chaque ressource est chargée en proportion.
+
+Branche pleine : vols **30 %** plus rapides et fret **+25 %** (option A en rangée 3), ou vols **40 %** plus rapides et fret **+15 %** (option B) ; hydrogène **−20 %** ; **+2** flottes ; Chargement prioritaire.
 
 ## Exemple chiffré
 
-**Prospérité pleine**
-- Un Excavateur minéral à 10 000 métal par heure passe à **12 500** par heure (+25 %).
-- Un bâtiment de 8 h se construit en 8 / 1,25 = **6 h 24**.
+**Prospérité pleine, Maîtrise du Plasma niveau 10**
+- Une mine de métal qui produit 10 000 par heure (production brute) gagne +25 % de talents, soit 2 500.
+- Le Plasma 10 donne +10 % ; avec Fonderie à plasma, il compte pour 15 niveaux : +15 %, soit 1 500.
+- Total : **14 000** par heure (sans Fonderie : 13 500), avant le rapport d'énergie. Avec La rotation Halden : 14 200.
+- Un bâtiment de 8 h se construit en 8 / 1,25 = **6 h 24 min**.
 
-**Exploration jusqu'à Méthode et Cartographes**
-- Une recherche de 10 h se termine en 10 / 1,15 = **8 h 42**.
+**Exploration jusqu'à Astrométrie**
+- Une recherche de 10 h se termine en 10 / 1,15 = **8 h 41 min 45 s**.
+- Cosmologie Appliquée, 10 h avec Méthode pleine et Astrométrie : le plafond de 25 % s'applique, **8 h**.
 - Une expédition qui explore 4 h n'explore plus que **3 h** (Cartographes au rang 5). Le trajet ne change pas.
 
+**Pillage d'un joueur inactif** (taux de pillage de base 50 %, voir [Pillage](/fr/combat/plunder))
+- Il a 100 000 métal en stock : vous emportez 50 000 sans talent, **70 000** avec Pillards d'abandonnés et Pillage organisé pleins (+20 points), dans la limite de vos soutes.
+
 **Logistique pleine, option B**
-- Un vol de 1 h dure 60 / 1,4 = **42 min 51 s**.
+- Un vol de 1 h dure 60 / 1,4 = **42 min 51 s**. Avec Vent arrière au lieu de Liaisons internes, le retour dure 42 min 51 s / 1,25 = **34 min 17 s**.
 - Un vol qui brûle 10 000 hydrogène n'en brûle plus que **8 000**.
-- Un Cargo stellaire emporte 25 000 × 1,15 = **28 750** ressources.
+- Un Cargo stellaire de 25 000 de fret emporte 25 000 × 1,15 = **28 750** ressources (sans la Technologie hyperespace).
 
 ## Données détaillées
 
@@ -175,7 +214,7 @@ graph TB
         B2R8B --- B2G8
         B2R9("Pillage organisé<br/>5 pts"):::rank
         B2G8 --- B2R9
-        B2R10[["✦ Second laboratoire<br/>ultime"]]:::ultimate
+        B2R10[["✦ Second centre d'innovation<br/>ultime"]]:::ultimate
         B2R9 --- B2R10
     end
     subgraph B1[" "]
@@ -230,22 +269,25 @@ graph TB
 
 ### Ce que 50 points achètent
 
-Aucun build ne prend tout : chacun choisit où va sa vitesse.
+Aucun build ne prend tout : chacun choisit où va sa vitesse. Les quatre répartitions ci-dessous respectent les portes.
 
 | Build | Répartition | Ce qu'il obtient |
 |---|---|---|
-| **Industriel** | Prospérité 28, Exploration 22 (jusqu'à la rangée 8) | mines +25 %, bâtiments +25 %, vaisseaux +10 %, plasma +20 % de son effet ; recherche +15 %, expéditions 25 % plus courtes, colonies jeunes plus rapides, +2 cases |
-| **Raideur** | Logistique 28, Exploration 22 | vols 30 à 40 % plus rapides, hydrogène −20 %, fret +15 à 25 %, +2 flottes ; recherche +15 %, expéditions 25 % plus courtes, pillage des cibles abandonnées 60 % |
-| **Savant** | Exploration 28, Prospérité 22 | recherche +15 % et seconde recherche, expéditions 25 % plus courtes, pillage des cibles abandonnées 70 % ; mines +24 %, bâtiments +10 %, plasma +20 % de son effet |
-| **Généraliste** | environ 16 par branche | mines +24 %, bâtiments +10 % ; recherche +15 %, expéditions 25 % plus courtes ; vols 15 à 25 % plus rapides, hydrogène −10 %, +1 flotte |
+| **Industriel** | Prospérité 28, Exploration 22 (jusqu'à la rangée 8) | mines +25 %, bâtiments +25 %, vaisseaux +10 %, Plasma ×1,5 ; recherche +15 %, séjours 25 % plus courts, pillage des cibles abandonnées 60 %, +2 cases, jeunes colonies plus rapides |
+| **Raideur** | Logistique 28, Exploration 22 | vols 30 à 40 % plus rapides, hydrogène −20 %, fret +15 à 25 %, +2 flottes ; recherche +15 %, séjours 25 % plus courts, pillage des cibles abandonnées 60 % |
+| **Savant** | Exploration 28, Prospérité 22 | recherche +15 % et seconde recherche, séjours 25 % plus courts, pillage des cibles abandonnées 70 % ; mines +24 %, bâtiments +10 %, vaisseaux +10 %, Plasma ×1,5 |
+| **Généraliste** | rangées 1 à 6 des trois branches (48 points) et 2 points en rangée 7 | mines +24 %, bâtiments +10 %, Plasma ×1,5 ; recherche +15 %, séjours 25 % plus courts, pillage des cibles abandonnées 60 %, +2 cases ; vols 15 à 25 % plus rapides, hydrogène −10 %, +1 flotte |
 
 Les plafonds de chaque bonus, avec les talents d'alliance, sont sur la page [Les talents](/fr/dynasty/talents#plafonds-des-bonus-partagés).
 
 ## Pièges fréquents
 
 - **Lire « +40 % de vitesse » comme un vol 40 % plus court** : la vitesse divise la durée. Un vol de 1 h passe à 42 min 51 s, pas à 36 min.
+- **Prendre Jeunes mondes seul** : sans Comptoirs pionniers, une colonie jeune n'a aucun bonus, et la prolonger ne sert à rien.
+- **Additionner Méthode et Astrométrie** : les deux tiennent dans le même plafond de 25 %.
 - **Cartographes et les gains** : le talent raccourcit l'exploration, mais l'expédition rapporte comme si elle avait exploré la durée choisie.
 - **Pillards d'abandonnés contre un joueur actif** : le bonus ne joue que contre les joueurs inactifs, les mondes en ruine et les adversaires contrôlés par le jeu.
+- **Archives volées et les petits pillages** : un pillage qui rapporte moins d'une heure de production de votre planète mère ne compte pas.
 - **Deux ultimes** : deux branches pleines demandent 56 points, au-delà des 50 du budget.
 
 ## Pages liées
