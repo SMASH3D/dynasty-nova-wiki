@@ -143,15 +143,15 @@ Chaque page porte un identifiant de page (P-xx). Abréviations : *[B]* = ton bri
 | ID | Chemin | Page | Contenu | Sources | Manque |
 |---|---|---|---|---|---|
 | P-80 | `players` | Joueurs (index) | | | |
-| P-81 | `players/rankings` | Classements et points | 4 classements, 1 point par 1 000 ressources. | [B] + [J] | `players-01`, `players-02` |
-| P-82 | `players/beginner-protection` | Protection des débutants | Protection de 7 jours des nouveaux arrivants, paliers de points, inactivité. | [B] + [J] | `players-03` |
-| P-83 | `players/attack-limit` | Limite d'attaques | 6 sur 24 h, missiles compris. | [B] + [J] | `players-04` |
-| P-84 | `players/vacation-mode` | Mode vacances | 48 h min, conditions. | [B] + [J] | `players-05` |
-| P-85 | `players/inactivity` | Inactivité | | [B] | `players-06` |
+| P-81 | `players/rankings` | Classements et points | 4 classements de joueurs et 2 d'alliance, 1 point par 1 000 ressources du coût de catalogue, tous les vaisseaux au militaire. Réécrite d'après le code le 15 octobre 2026 (`tools/players_pages`). | [J] + code | |
+| P-82 | `players/beginner-protection` | Protection des débutants | Protection nouvel arrivant (7 jours, fixe), paliers de points, inactivité. Réécrite d'après le code le 15 octobre 2026. | [J] + code | |
+| P-83 | `players/attack-limit` | Limite d'attaques | 6 par tranche fixe de 24 h, missiles compris, destruction de lune exclue. Réécrite d'après le code le 15 octobre 2026. | [J] + code | |
+| P-84 | `players/vacation-mode` | Mode vacances | 48 h min, conditions, univers privé gelé. Réécrite d'après le code le 15 octobre 2026. | [J] + code | |
+| P-85 | `players/inactivity` | Inactivité | Délai par univers, activité par univers, succession du fondateur. Réécrite d'après le code le 15 octobre 2026. | [J] + code | `players-14` |
 | P-86 | `players/alliances` | Alliances | Créer, rejoindre, rangs, quarantaine, capacité. | [J] | `players-07` |
 | P-87 | `players/pacts-and-wars` | Pactes, fair-play et guerres | | [J] | |
 | P-88 | `players/alliance-missions` | Missions et station d'alliance | Trésorerie par convois, entraide, station à 3 paliers, missions V2 (inscription, effort relatif), talents. Réécrite d'après le code le 15 octobre 2026. | [J] + code | `players-08`, `players-12` |
-| P-89 | `players/messages-and-reports` | Messagerie et rapports | Partage, conservation. | [J] | |
+| P-89 | `players/messages-and-reports` | Messagerie et rapports | Chat, rapports gardés 7 jours, partage (30 jours), réglages des rapports. Réécrite d'après le code le 15 octobre 2026. | [J] + code | |
 | P-90 | `players/game-rules` | Règlement | | | `players-09` |
 
 Nouvelle page (15 octobre 2026, non publiée) :
@@ -325,18 +325,18 @@ En bref · encart « paramètre d'univers » si besoin · Règles · Exemple chi
 - `spy-04` ✅ Portée niveau² − 1 systèmes, 5 000 hydrogène par scan.
 
 ### Joueurs
-- `players-01` ✅ Classement général = économie + recherche + militaire.
+- `players-01` ✅ Classement général = économie + recherche + militaire. ✅ (code, 15 octobre 2026) Tous les vaisseaux comptent au militaire, civils compris ; points sur le coût de catalogue.
 - `players-02` ✅ Les points baissent quand on perd des unités ou qu'on démolit.
 - `players-03` ✅ **Le texte du jeu fait foi** : on ne peut attaquer ni un joueur beaucoup plus faible, ni un joueur beaucoup plus fort, selon la tranche du plus faible. Le brief est corrigé.
 - `players-04` ✅ Les espionnages ne comptent pas. Guerres et pactes ne changent ni le combat, ni le pillage, ni la limite.
-- `players-05` ✅ L'inactivité ne s'accumule pas pendant les vacances. ✅ Pas de durée maximale, pas de fin automatique.
+- `players-05` ✅ L'inactivité ne s'accumule pas pendant les vacances. ✅ Pas de durée maximale, pas de fin automatique. ✅ (code, 15 octobre 2026) Nuance : sans effet pour les attaques, mais la succession du fondateur compte les jours de vacances (perte du siège à 14 jours) ; écrit sur P-84 et P-85.
 - `players-06` ✅ Un seul palier, 14 jours par défaut (paramètre d'univers). Pas de suppression ni d'abandon automatique.
 - `players-07` ✅ 10 à 50 membres selon la Diplomatie Stellaire du fondateur, +6 avec Ambassades.
 - `players-08` ✅ 14 talents (DONNEES §11.7).
 - `players-09` ✅ **Aucun règlement publié.** P-90 bloquée tant que l'équipe n'a pas rédigé de règlement (`rules-01`).
 
 ### Note de version du 2 octobre 2026
-- `patch-01` ✅ Les 7 jours sont un paramètre d'univers. ⏳ Quand la protection par points s'applique aussi, laquelle l'emporte ?
+- `patch-01` ✅ (code, 15 octobre 2026) ~~Les 7 jours sont un paramètre d'univers.~~ Non : 7 jours en dur (`NewcomerProtection::DURATION_DAYS`), identiques dans tous les univers. ✅ Les deux protections se cumulent : une attaque doit passer l'une et l'autre (puis la limite d'attaques).
 - `patch-02` ⏳ (remonté à l'équipe) Le Premium (files de 5 ordres au lieu de 2) s'obtient avec 350 Points stellaires. Or l'aide du jeu dit qu'en PvP les Points stellaires ne servent qu'au cosmétique, « sans aucun avantage de jeu ». Le Premium est-il disponible dans les univers PvP ? Faut-il corriger le texte de l'aide ?
 - `patch-03` ✅ L'Éclaireur n'est pas perdu. Cosmologie Appliquée est requise. Durée sur place, nombre d'expéditions simultanées et coût en hydrogène connus (DONNEES §10).
 - `patch-04` ⏳ La note 3.5.0 annonce « Premium : une expédition simultanée de plus pour les abonnés ». C'est un avantage de jeu, alors que le wiki présente le Premium comme du confort et affirme qu'aucun achat ne donne d'avantage de jeu en PvP. L'avantage s'applique-t-il aux univers PvP ? Faut-il nuancer la section « Aucun pay to win » ? (Non reporté dans le wiki en attendant.)
@@ -373,6 +373,7 @@ Règle : aucune de ces formules ne va dans le wiki avant confirmation. Les pages
 ### Alliances et banque (15 octobre 2026)
 - `players-12` ✅ (responsable, 15 octobre 2026) Oui : encart « Par défaut : fermées · Redline : ouvertes » ajouté à P-88. (Question : Les missions d'alliance sont-elles ouvertes sur Redline ? Elles s'ouvrent univers par univers (fermées par défaut, réglage du back-office) ; la page P-88 dit seulement que l'onglet peut manquer.)
 - `players-13` ✅ (responsable, 15 octobre 2026) Oui, c'est écrit sur P-87 (règle 3), FR et EN. (Question **éditoriale** : un membre en période d'intégration qui viole un pacte ne coûte aucun point de fair-play à son alliance. Faut-il l'écrire dans le wiki ?)
+- `players-14` ⏳ (éditoriale, 15 octobre 2026) L'indicateur « Inactif » est maintenant affiché aux joueurs (badge de la fiche joueur au classement ; aussi calculé pour la galaxie). `text-01` demandait de ne pas en parler tant qu'il n'était pas affiché. Le wiki doit-il le décrire sur P-85 et P-81 ? (Non écrit en attendant.)
 - `bank-01` ✅ (responsable, 15 octobre 2026) On laisse comme ça : rien ne change dans le jeu ni dans P-106. (Question **éditoriale** : la boutique appelle « Crédits » l'onglet des packs de Points stellaires et « Ajouter des crédits » sa recharge, alors que les Crédits de la Banque stellaire ne s'achètent pas. Risque de confusion avec un achat qui donnerait un avantage de jeu (voir `patch-04`). P-106 précise que les deux n'ont rien à voir ; à trancher par le responsable, et à remonter à l'équipe (DONNEES §11.9).)
 
 ### Divers

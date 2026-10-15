@@ -517,7 +517,7 @@ Détails tirés de l'aide du jeu et des réponses de l'équipe (`patch-03`) :
 - Le temps restant s'affiche en haut de l'écran. Les planètes protégées portent un badge « Nouveau joueur ».
 - Lancer une attaque ou une salve de missiles met fin à la protection, définitivement. Un avertissement s'affiche avant de confirmer.
 - Espionnage, transport et autres missions ne la retirent pas.
-- Elle s'ajoute à la protection des débutants par paliers de points. La durée de 7 jours est un **paramètre d'univers** (`patch-01`).
+- Elle s'ajoute à la protection des débutants par paliers de points. ~~La durée de 7 jours est un **paramètre d'univers** (`patch-01`).~~ **Corrigé le 15 octobre 2026** : 7 jours en dur dans le code, identiques dans tous les univers (§11.7, relevé dans le code).
 
 ### Premium contre Points stellaires
 - Un mois de Premium s'échange contre **350 Points stellaires**, depuis la page Premium.
@@ -704,7 +704,7 @@ Conditions : expéditions activées dans l'univers ; Cosmologie Appliquée ≥ 1
 - Conditions d'entrée : aucune flotte en vol, aucune construction, recherche ou unité en cours, aucune attaque en approche.
 - Effets : production à zéro ; toutes les actions du joueur refusées (flottes, missiles, constructions, démolitions, Phalange).
 - Les autres joueurs ne peuvent ni l'attaquer, ni détruire sa lune, ni lui transporter des ressources, ni lui tirer des missiles. Espionnage et recyclage restent possibles, mais le rapport d'espionnage est vide.
-- L'inactivité ne s'accumule pas pendant les vacances.
+- L'inactivité ne s'accumule pas pendant les vacances. **Nuance (code, 15 octobre 2026)** : sans effet pour les attaques, mais la succession du fondateur compte les jours de vacances (voir le relevé ci-dessous).
 
 **Inactivité**
 - Un seul palier, paramètre d'univers : **14 jours** par défaut, **7 jours** sur Redline (`players-10`, confirmé le 2026-10-06 : 7 jours constatés, conforme à `inactivityDays: 7`).
@@ -746,6 +746,64 @@ Conditions : expéditions activées dans l'univers ; Cosmologie Appliquée ≥ 1
 - **Aucun règlement publié.** Seule mention : « le multi-compte est interdit par les conditions d'utilisation » (écran de parrainage). Le lien « conditions d'utilisation » de l'écran de connexion mène à une page inexistante.
 - Sitting et push : ni mentionnés ni détectés. Aucun mécanisme de bannissement, de suspension ou de détection d'IP partagée.
 - Sanctions techniques existantes : filtres du chat (sans mute), récompense de parrainage versée seulement quand le filleul atteint 100 points.
+
+#### Relevé dans le code (15 octobre 2026)
+
+Backend `origin/main` 7b255c83 (lecture seule), front `origin/main` 33217140 (libellés), catalogue du MySQL de dev migré (tables `ship`, `defense`, `building`, colonne `base_cost`). Les pages de la rubrique sont régénérées par `tools/players_pages/p_*.py` (constantes dans `players_lib.py`). Ce relevé remplace les lignes périmées ci-dessus quand elles divergent.
+
+**Points et classements**
+- 1 point = (métal + cristal + hydrogène) / 1 000 du **coût de catalogue** (`Constructable::getTotalCost()`, `getPoints()`) ; l'énergie est exclue ; le coût réellement payé (réductions) n'intervient pas.
+- Bâtiments : à la fin d'un niveau N, + points du niveau N (`Construction::getEarnedPoints()`) ; démolition : − points du niveau démoli (`WheneverConstructionFinished/UpdateUserPointsHandler`). Recherches : bucket RESEARCH. Niveau offert : points du niveau (`WheneverBuildingLevelBonusGranted/UpdateUserPointsHandler`).
+- Vaisseaux et défenses : + à chaque lot livré (`AbstractUnitDeliveryPointsHandler`). **Aucun filtre sur les vaisseaux civils** : tous comptent dans le militaire, aussi dans `Fleet::loseShips()`, `Base::shipPoints()` et `RecalculateUserPointsHandler`. **Corrige** l'ancienne règle « les transporteurs ne comptent pas » (`players-01`, P-81, et `fleet/ships` règle 7, rubrique Flotte).
+- Baisses : `DeductLostShipsPointsHandler`, `DeductBaseUnitsPointsHandler` (vaisseaux remorqués par la Station de réparation et défenses remises en état exclus, `Base` l. 7190-7300), `DeductFiredMissilesPointsHandler`, `StripAbandonedBasePointsHandler` (économie + militaire, recherche gardée), `DeductMoonPointsHandler`. Hausses : `AddFoundShipsPointsHandler` (expédition), `CreditRecolonizedBasePointsHandler`.
+- Total = économie + recherche + militaire (`UserUniverse::addPoints()` / `refreshTotal()`, `PointsBreakdown`) ; affichage et protection : partie entière (`Point::rounded()`).
+- Classement en direct, ordre `points DESC, user_id ASC` (`RankingDoctrineRepository::liveRanking()`), progression comparée au dernier `ranking_snapshot` (photographie quotidienne, `app:snapshot-rankings` ; heure de passage non versionnée dans le dépôt). Filtre Humains : rang calculé sur tout l'univers puis filtré.
+- Alliance Puissance = somme des `points` des membres ; Progression = expérience d'alliance, à égalité `levelReachedAt` (`AllianceRankingCategory`, `AllianceRankingDoctrineRepository`).
+- Libellés : `pages/ranking.json` (Points, Économie, Recherche, Militaire, Alliance Puissance, Alliance Progression, Humains, « Joueur IA (PvE) »).
+
+**Protection des débutants** (`Shared/Domain/ValueObject/BeginnerProtection.php`, `BeginnerProtectionTier(s)`, `Game/Domain/Service/BeginnerProtectionChecker`)
+- Défaut : paliers (500, 1:3), (5 000, 1:5), (500 000, 1:10), `inactivityDays` 14. Redline : mêmes paliers, 7 jours (§2, `players-10`).
+- Blocage si `plus fort >= plus faible × ratio` (égalité exacte bloquée), palier pris sur le plus faible (`points < upToPoints`), symétrique ; plus faible à 0 point : bloqué contre tout joueur > 0 ; deux joueurs à 0 : permis.
+- Seule l'inactivité du défenseur lève la protection (`blocksAttack(defenderInactive)`) ; joueurs IA jamais inactifs (`User::isInactiveIn()`).
+- Contrôlée pour l'attaque (`SendFleetHandler`, mission ATTACK seulement) et la salve de missiles (`LaunchMissilesHandler`). La destruction de lune n'est pas contrôlée à l'envoi mais retirée de la galaxie quand l'attaque l'est (`AllowedMissions::forTarget()`, `attackBlocked`).
+
+**Protection nouvel arrivant** (`User/Domain/ValueObject/NewcomerProtection.php`, `NewcomerProtectionChecker`)
+- `DURATION_DAYS = 7`, **constante**, pas un paramètre d'univers : aucun champ dans `Universe`, `UniverseSetup` ni l'écran de création d'univers. **Corrige** `patch-01` et §10.
+- Comptée depuis la première arrivée (`UserUniverse.joinedAt`, jamais renouvelée). Rompue définitivement par l'envoi d'une mission ATTACK (`FleetMission::engagesNewcomerShield()`, `recordDeparture()`) ou d'une salve (`LaunchMissilesHandler` l. 193), quelle que soit la cible (planète abandonnée comprise). Refuse l'attaque et la salve contre le protégé ; espionnage, transport, etc. libres. Joueurs IA : aucune (`User::getNewcomerProtectionIn()`).
+- Ordre des contrôles à l'envoi : vacances, alliés, nouvel arrivant, débutants, limite d'attaques (`SendFleetHandler` l. 185-305) : les deux protections se cumulent (`patch-01`, seconde partie).
+- Non décalée au dégel d'un univers privé (`DbalFrozenClockShifter` ne touche pas `joined_at`).
+- Libellés : `newcomer.json` (« Protection nouvel arrivant », badge « Nouveau joueur », « Attaquer et désactiver mon bouclier »).
+
+**Limite d'attaques** (`BashingRule`, `Game/Domain/Entity/AttackTally.php`)
+- Défaut 6 attaques / 24 h (`BashingRule::default()`), Redline 6 / 24 (§2) ; `maxAttacks` 0 désactive.
+- **Tranche fixe** malgré la docblock de `BashingRule` (« rolling window ») : `AttackTally::registerAttack()` remet le compteur à zéro quand `now >= windowStartedAt + windowHours` et rouvre la tranche à cette attaque. Une ligne par (univers, attaquant, défenseur).
+- Comptées : mission ATTACK (`SendFleetHandler`, `$defender` seulement si ATTACK) et salves (`LaunchMissilesHandler`). Non comptées : espionnage, transport, recyclage, **destruction de lune**. Rappel d'une attaque : `refund()` (`RecallFleetHandler`). Planète abandonnée : pas de propriétaire, pas de compteur. Boss d'événement exclu (non publié).
+- Quota affiché par défenseur dans la galaxie (`MapReadModelAssembler`, `AttackQuota`).
+
+**Mode vacances** (`User/Domain/ValueObject/VacationMode.php`, `VacationBlocker`, `StartVacationModeHandler`, `EndVacationModeHandler`, `VacationShieldChecker`)
+- `MINIMUM_HOURS = 48` ; pas de maximum, pas de fin automatique, pas de délai entre deux périodes ; par univers.
+- Blocages : `FLEET_IN_MOVEMENT`, `CONSTRUCTION_IN_PROGRESS` (bâtiment, recherche, vaisseaux, défenses), `UNDER_ATTACK`.
+- Production soldée au départ puis à zéro (`EmpireProductionSettler`, `ProductionModifier::VACATION_HALT`) ; soldée à zéro au retour.
+- Le joueur absent ne peut rien changer (`User::ensureNotOnVacationIn()` : ordres, annulation, démolition, flotte, salve, Phalange, convoi d'alliance) ; lecture libre (galaxie, rapports, chat, alliance).
+- Missions refusées contre lui : ATTACK, DESTROY, TRANSPORT (`FleetMission::reachesTargetOwner()`) et salves ; espionnage permis, rapport réduit à « propriétaire absent » ; recyclage permis.
+- **Inactivité** : `last_active_at` n'est ni gelé ni remis pendant les vacances ; il est rafraîchi par toute requête authentifiée dans l'univers courant (`PlayerActivityTrackerSubscriber`, au plus toutes les 15 min). Sans effet sur les attaques (le joueur est intouchable), mais **la succession du fondateur compte les jours de vacances** (`AllianceDoctrineRepository::findWithFounderIdleSince()` ne filtre que les univers suspendus). Nuance `players-05`.
+- Univers privé gelé (`SuspendUniverseHandler`, `RecallIntrusiveFleetsHandler`, `SuspendedUniverseGuardMiddleware`, `DbalFrozenClockShifter`) : vacances pour tous, attaques, espionnages et destructions en vol rappelés (créneau rendu), lecture seule ; au dégel, décalage de `last_active_at`, échéances de votes, préavis de pactes, demandes d'aide, conservation des rapports ; pas des cycles de missions d'alliance ni de la fenêtre du canal d'alliance.
+- Libellés : `vacation.json`.
+
+**Inactivité**
+- `BeginnerProtection::isInactive()` : inactif si `lastActiveAt < now − inactivityDays` ; 0 désactive. Toute requête authentifiée compte, pour l'univers courant seulement (`PlayerActivityTrackerSubscriber`, `player_activity_refresh_interval` 900 s).
+- Succession du fondateur : alertes 7 et 12 jours, perte du siège à 14 (`config/services.yaml` `alliance_succession_*`), indépendante de l'univers.
+- Indicateur « Inactif » : désormais affiché sur la fiche joueur (`PlayerCardModal.tsx`, `pages.ranking.card.inactive`) et calculé pour la galaxie (`MapReadModel::$isInactive`). **Non publié** dans le wiki (`text-01`), question `players-14`.
+
+**Messagerie** (`src/Chat/`)
+- Canaux GENERAL, ALLIANCE, PRIVATE (`ChatChannel`). 500 caractères (`MessageBody::MAX_LENGTH`). Anti-flood 5 messages / 60 s (`chat_spam_max_messages`, `chat_spam_window_seconds`, `SpamPolicy`). Liens refusés, termes interdits (liste non publiée). Réactions : palette fermée de 10 (`ReactionEmoji`). Mentions `@pseudo` (`MentionHandle`). Traduction (LibreTranslate). Blocage (`messages.json` `blockConfirmMessage`). Mise en sourdine par la modération (`ChatMute`).
+- Canal d'alliance : 30 jours glissants (`alliance_chat_retention_days`) ; général et privé non purgés (`AllianceChatRetention`). Épingles : 3, fondateur et vice-présidence (`messages.json` `errors.pin*`).
+- Cartes (`ChatCardType`) : rapport d'espionnage, rapport de combat, coordonnée, contribution, projet collectif, mission d'alliance (canal d'alliance seulement) ; combat exposé partout. Attaque groupée déclarée mais sans fonctionnalité (non publiée).
+
+**Rapports**
+- Conservation **7 jours** depuis la création, lu ou non (`player_report_retention_days`, `ReportRetention`). Nouveau dans le wiki.
+- Partage : `keptUntil` = partage + 30 jours (`ExtendSharedReportRetentionHandler`, `AllianceChatRetention::keepUntil()`), lisible aussi dans l'historique du destinataire (`PlayerReportDoctrineRepository` l. 367). Suppression d'un rapport partagé : retiré de l'historique, gardé jusqu'au plus tard de `keptUntil` et suppression + 7 jours (`shared_report_grace_days`, `DeletePlayerReportHandler`, `SharedReportGrace`).
+- Réglages : `DeclinableReport` (tous les types sauf espionnage et combat, retours par mission), `ReportPreferencesSection.tsx` (groupes, libellés, colonnes « Rapport » et « Notif. »), `pages/settings.json` (`reports`, `incidentsNote`).
 
 ### 11.8 Divers
 - Parrainage : récompense versée quand le filleul atteint **100 points** (`misc-03`, montant à confirmer).
