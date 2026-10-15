@@ -71,7 +71,7 @@ $$N = \\max\\left(0,\\ R_a - R_d + \\min\\left(5,\\ \\left\\lfloor \\frac{{E}}{{
 - $E$ : nombre d'Éclaireurs envoyés ; $\\lfloor\\ \\rfloor$ : partie entière.
 
 11. Selon ce niveau, le rapport révèle : les **ressources** dès 1, la **flotte** dès 3, les **défenses et missiles** dès 5, les **bâtiments** dès 7, les **recherches** dès 9. Le type, la taille et les températures de la planète sont toujours visibles.
-12. Chaque paire d'Éclaireurs ajoute 1 niveau, jusqu'à **+5 avec 10 Éclaireurs**. Au delà, le bonus ne monte plus : les bâtiments et les recherches demandent une vraie avance en Renseignement Tactique.
+12. Chaque paire d'Éclaireurs ajoute 1 niveau, jusqu'à **+5 avec 10 Éclaireurs**. Au-delà, le bonus ne monte plus : les bâtiments et les recherches demandent une vraie avance en Renseignement Tactique.
 13. **Talents d'alliance** : **Réseau d'informateurs** ajoute 1 niveau à votre Renseignement Tactique quand vous espionnez, **Contre-espionnage fédéré** 1 niveau à celui de vos planètes espionnées, par niveau de talent ({ALLIANCE_TALENT_MAX} niveaux chacun, branche Renseignement). Ces niveaux comptent comme de la recherche : ils changent le détail **et** le risque. Ils s'appliquent après **{ALLIANCE_QUARANTINE_HOURS} heures** dans l'alliance (voir [Missions et station d'alliance](/fr/players/alliance-missions)).
 14. Certains **talents de dynastie** de l'[Ombre](/fr/dynasty/classes/shadow) lisent plus profond ou ouvrent la flotte et les ressources plus tôt. Ceux-là ne changent pas le risque.
 
