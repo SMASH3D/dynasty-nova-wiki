@@ -8,7 +8,7 @@ description: "Producing and using energy, shortage and operating rate."
 tags: ["economy"]
 published: true
 created: "2026-10-02T13:10:38.606Z"
-updated: "2026-10-02T17:40:50.483Z"
+updated: "2026-10-15T18:52:47.615Z"
 game_version: "Serveur 2.1.0 · Client 3.1.0"
 ---
 

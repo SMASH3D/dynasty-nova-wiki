@@ -8,7 +8,7 @@ description: "Les quatre classements de joueurs, les deux classements d'alliance
 tags: ["players"]
 published: true
 created: "2026-10-02T13:09:33.068Z"
-updated: "2026-10-02T16:37:02.629Z"
+updated: "2026-10-15T18:54:50.409Z"
 ---
 
 # Classements et points

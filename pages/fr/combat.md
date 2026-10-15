@@ -8,7 +8,7 @@ description: "Déroulement des combats et leurs suites."
 tags: ["combat"]
 published: true
 created: "2026-10-02T13:09:08.102Z"
-updated: "2026-10-02T16:36:44.341Z"
+updated: "2026-10-15T18:53:59.829Z"
 ---
 
 # Combat

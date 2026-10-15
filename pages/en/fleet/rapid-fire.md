@@ -8,7 +8,7 @@ description: "Which units fire several times at which targets."
 tags: ["fleet", "combat"]
 published: true
 created: "2026-10-02T13:11:06.074Z"
-updated: "2026-10-02T16:38:05.031Z"
+updated: "2026-10-15T18:53:11.575Z"
 ---
 
 # Rapid fire

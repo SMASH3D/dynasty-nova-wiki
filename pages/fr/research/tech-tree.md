@@ -8,7 +8,7 @@ description: "Les prérequis de chaque bâtiment, recherche et unité."
 tags: ["research"]
 published: true
 created: "2026-10-02T13:08:41.100Z"
-updated: "2026-10-02T16:36:25.270Z"
+updated: "2026-10-15T18:54:56.113Z"
 ---
 
 # Arbre technologique

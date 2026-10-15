@@ -8,7 +8,7 @@ description: "Fonder des colonies avec le Pionnier spatial."
 tags: ["universe"]
 published: true
 created: "2026-10-02T13:08:12.330Z"
-updated: "2026-10-02T17:40:33.886Z"
+updated: "2026-10-15T18:55:02.503Z"
 game_version: "Serveur 2.1.0 · Client 3.1.0"
 ---
 

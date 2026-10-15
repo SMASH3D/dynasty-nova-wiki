@@ -8,7 +8,7 @@ description: "Reading the galaxy view, system by system."
 tags: ["universe"]
 published: true
 created: "2026-10-02T13:10:25.037Z"
-updated: "2026-10-02T17:41:09.034Z"
+updated: "2026-10-15T18:53:41.773Z"
 game_version: "Serveur 2.1.0 · Client 3.1.0"
 ---
 

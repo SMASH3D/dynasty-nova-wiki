@@ -8,7 +8,7 @@ description: "Débris créés par les combats, recyclage et formation des lunes.
 tags: ["combat"]
 published: true
 created: "2026-10-02T13:09:15.769Z"
-updated: "2026-10-02T17:40:36.847Z"
+updated: "2026-10-15T18:53:50.971Z"
 game_version: "Serveur 2.1.0 · Client 3.1.0"
 ---
 

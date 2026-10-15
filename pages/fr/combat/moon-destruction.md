@@ -8,7 +8,7 @@ description: "Détruire une lune avec des Colossus stellaires."
 tags: ["combat"]
 published: true
 created: "2026-10-02T13:09:21.362Z"
-updated: "2026-10-02T17:40:43.107Z"
+updated: "2026-10-15T18:53:55.673Z"
 game_version: "Serveur 2.1.0 · Client 3.1.0"
 ---
 

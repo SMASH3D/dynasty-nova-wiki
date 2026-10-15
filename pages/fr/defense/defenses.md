@@ -8,7 +8,7 @@ description: "Les défenses : coûts, statistiques, prérequis."
 tags: ["defense", "défenses"]
 published: true
 created: "2026-10-02T13:09:02.050Z"
-updated: "2026-10-02T17:40:06.227Z"
+updated: "2026-10-15T18:54:01.418Z"
 game_version: "Serveur 2.1.0 · Client 3.1.0"
 ---
 

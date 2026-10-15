@@ -8,7 +8,7 @@ description: "Sending Scouts: detail level, shared vision, risks and alerts."
 tags: ["espionage"]
 published: true
 created: "2026-10-02T13:11:44.334Z"
-updated: "2026-10-06T10:30:49.903Z"
+updated: "2026-10-15T18:53:01.030Z"
 game_version: "Serveur 2.1.0 · Client 3.1.0"
 ---
 

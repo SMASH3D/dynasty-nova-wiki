@@ -8,7 +8,7 @@ description: "What a universe is and its settings."
 tags: ["universe"]
 published: true
 created: "2026-10-02T13:10:20.972Z"
-updated: "2026-10-06T08:04:49.704Z"
+updated: "2026-10-15T18:53:46.623Z"
 ---
 
 # Universes

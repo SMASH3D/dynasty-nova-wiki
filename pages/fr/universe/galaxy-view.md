@@ -8,7 +8,7 @@ description: "Lire la vue galaxie, système par système."
 tags: ["universe"]
 published: true
 created: "2026-10-02T13:08:08.617Z"
-updated: "2026-10-02T17:41:07.527Z"
+updated: "2026-10-15T18:55:05.771Z"
 game_version: "Serveur 2.1.0 · Client 3.1.0"
 ---
 

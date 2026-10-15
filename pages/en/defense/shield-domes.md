@@ -8,7 +8,7 @@ description: "The two planetary shields."
 tags: ["defense"]
 published: true
 created: "2026-10-02T13:11:21.637Z"
-updated: "2026-10-02T17:40:32.442Z"
+updated: "2026-10-15T18:52:40.730Z"
 game_version: "Serveur 2.1.0 · Client 3.1.0"
 ---
 

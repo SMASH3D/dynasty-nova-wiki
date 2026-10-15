@@ -8,7 +8,7 @@ description: "Observer les flottes depuis une lune : portée, coût, ce qui est 
 tags: ["espionage", "lune"]
 published: true
 created: "2026-10-02T13:09:29.181Z"
-updated: "2026-10-02T17:40:24.782Z"
+updated: "2026-10-15T18:54:22.273Z"
 game_version: "Serveur 2.1.0 · Client 3.1.0"
 ---
 

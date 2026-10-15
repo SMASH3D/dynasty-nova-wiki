@@ -8,7 +8,7 @@ description: "Rankings, protections, alliances and rules."
 tags: ["players"]
 published: true
 created: "2026-10-02T13:11:50.347Z"
-updated: "2026-10-02T16:38:34.947Z"
+updated: "2026-10-15T18:53:29.526Z"
 ---
 
 # Players and rules

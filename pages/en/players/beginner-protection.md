@@ -8,7 +8,7 @@ description: "Who can attack whom: newcomer protection and point tiers."
 tags: ["players"]
 published: true
 created: "2026-10-02T13:11:54.297Z"
-updated: "2026-10-06T08:04:46.907Z"
+updated: "2026-10-15T18:53:20.884Z"
 ---
 
 # Beginner protection

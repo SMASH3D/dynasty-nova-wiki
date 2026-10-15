@@ -8,7 +8,7 @@ description: "Coûts, durées, production et points."
 tags: ["economy"]
 published: false
 created: "2026-10-02T13:08:27.831Z"
-updated: "2026-10-02T14:14:51.908Z"
+updated: "2026-10-15T18:54:13.575Z"
 ---
 
 # Formules de l'économie

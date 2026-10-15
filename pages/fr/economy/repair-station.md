@@ -8,7 +8,7 @@ description: "Récupérer une part des vaisseaux détruits en défense."
 tags: ["economy"]
 published: true
 created: "2026-10-02T13:08:33.619Z"
-updated: "2026-10-15T16:10:27.832Z"
+updated: "2026-10-15T18:54:14.988Z"
 game_version: "Serveur 2.1.0 · Client 3.1.0"
 ---
 

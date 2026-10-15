@@ -8,7 +8,7 @@ description: "Understanding each part of the battle report."
 tags: ["combat"]
 published: true
 created: "2026-10-02T13:11:30.068Z"
-updated: "2026-10-02T16:38:20.788Z"
+updated: "2026-10-15T18:52:25.027Z"
 ---
 
 # Reading a battle report

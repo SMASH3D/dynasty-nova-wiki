@@ -8,7 +8,7 @@ description: "Les 14 vaisseaux : coûts, statistiques, prérequis."
 tags: ["fleet", "vaisseaux"]
 published: true
 created: "2026-10-02T13:08:46.712Z"
-updated: "2026-10-02T17:39:42.676Z"
+updated: "2026-10-15T18:54:37.578Z"
 game_version: "Serveur 2.1.0 · Client 3.1.0"
 ---
 

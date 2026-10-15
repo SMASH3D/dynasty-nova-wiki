@@ -8,7 +8,7 @@ description: "Quelles unités tirent plusieurs fois sur quelles cibles."
 tags: ["fleet", "combat"]
 published: true
 created: "2026-10-02T13:08:48.505Z"
-updated: "2026-10-02T16:36:31.430Z"
+updated: "2026-10-15T18:54:36.001Z"
 ---
 
 # Tirs rapides

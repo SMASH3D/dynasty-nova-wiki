@@ -8,7 +8,7 @@ description: "Ballistic Arsenal, Interception Missiles and Long-Range Warheads."
 tags: ["defense", "missiles"]
 published: true
 created: "2026-10-02T13:11:23.628Z"
-updated: "2026-10-02T17:40:29.534Z"
+updated: "2026-10-15T18:52:39.425Z"
 game_version: "Serveur 2.1.0 · Client 3.1.0"
 ---
 

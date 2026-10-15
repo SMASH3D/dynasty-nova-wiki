@@ -8,7 +8,7 @@ description: "Networking your Innovation Centers."
 tags: ["research"]
 published: true
 created: "2026-10-02T13:10:59.894Z"
-updated: "2026-10-02T17:40:56.528Z"
+updated: "2026-10-15T18:53:31.021Z"
 game_version: "Serveur 2.1.0 · Client 3.1.0"
 ---
 

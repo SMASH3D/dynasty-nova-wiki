@@ -8,7 +8,7 @@ description: "Déplacer une flotte instantanément entre deux lunes."
 tags: ["fleet", "lune"]
 published: true
 created: "2026-10-02T13:08:58.343Z"
-updated: "2026-10-02T17:40:21.744Z"
+updated: "2026-10-15T18:54:29.635Z"
 game_version: "Serveur 2.1.0 · Client 3.1.0"
 ---
 

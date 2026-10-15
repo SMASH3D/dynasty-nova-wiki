@@ -8,7 +8,7 @@ description: "Destroying a moon with Stellar Colossi."
 tags: ["combat"]
 published: true
 created: "2026-10-02T13:11:40.153Z"
-updated: "2026-10-02T17:40:44.582Z"
+updated: "2026-10-15T18:52:31.608Z"
 game_version: "Serveur 2.1.0 · Client 3.1.0"
 ---
 

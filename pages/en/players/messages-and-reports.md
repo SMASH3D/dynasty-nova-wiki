@@ -8,7 +8,7 @@ description: "Chat, reports, retention, sharing with your alliance and report se
 tags: ["players"]
 published: true
 created: "2026-10-02T13:12:08.234Z"
-updated: "2026-10-06T08:08:38.488Z"
+updated: "2026-10-15T18:53:23.876Z"
 ---
 
 # Messages and reports

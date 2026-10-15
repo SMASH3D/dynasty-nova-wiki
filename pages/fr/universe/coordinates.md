@@ -8,7 +8,7 @@ description: "Galaxie, système, position et distances."
 tags: ["universe"]
 published: true
 created: "2026-10-02T13:08:06.755Z"
-updated: "2026-10-05T19:40:03.613Z"
+updated: "2026-10-15T18:55:04.314Z"
 ---
 
 # Coordonnées

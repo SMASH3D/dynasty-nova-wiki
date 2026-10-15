@@ -8,7 +8,7 @@ description: "Vitesse, durée de vol, consommation d'hydrogène et emplacements 
 tags: ["fleet"]
 published: true
 created: "2026-10-02T13:08:52.470Z"
-updated: "2026-10-06T10:31:07.317Z"
+updated: "2026-10-15T18:54:32.924Z"
 ---
 
 # Déplacements

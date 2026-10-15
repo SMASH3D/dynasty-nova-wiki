@@ -8,7 +8,7 @@ description: "Fields, temperature and the effect of position."
 tags: ["universe"]
 published: true
 created: "2026-10-02T13:10:27.007Z"
-updated: "2026-10-06T10:31:00.620Z"
+updated: "2026-10-15T18:53:45.173Z"
 game_version: "Serveur 2.1.0 · Client 3.1.0"
 ---
 

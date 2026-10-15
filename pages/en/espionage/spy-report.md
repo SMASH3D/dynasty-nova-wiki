@@ -8,7 +8,7 @@ description: "The report sections, what unlocks them, and the intrusion alert."
 tags: ["espionage"]
 published: true
 created: "2026-10-02T13:11:46.231Z"
-updated: "2026-10-02T16:38:32.118Z"
+updated: "2026-10-15T18:52:59.332Z"
 ---
 
 # Reading a spy report

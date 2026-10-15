@@ -8,7 +8,7 @@ description: "Removing a level to free a field."
 tags: ["economy"]
 published: true
 created: "2026-10-02T13:10:48.392Z"
-updated: "2026-10-15T16:10:15.588Z"
+updated: "2026-10-15T18:52:46.205Z"
 ---
 
 # Demolishing a building

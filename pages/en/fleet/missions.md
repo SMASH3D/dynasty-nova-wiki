@@ -8,7 +8,7 @@ description: "The ten fleet missions and their rules."
 tags: ["fleet"]
 published: true
 created: "2026-10-02T13:11:11.900Z"
-updated: "2026-10-06T10:30:51.426Z"
+updated: "2026-10-15T18:53:06.606Z"
 ---
 
 # Missions

@@ -8,7 +8,7 @@ description: "What happens to an inactive player."
 tags: ["players"]
 published: true
 created: "2026-10-02T13:12:00.163Z"
-updated: "2026-10-06T08:04:48.320Z"
+updated: "2026-10-15T18:53:22.336Z"
 ---
 
 # Inactivity

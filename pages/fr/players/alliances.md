@@ -8,7 +8,7 @@ description: "Fonder, rejoindre et gérer une alliance."
 tags: ["players"]
 published: true
 created: "2026-10-02T13:09:42.769Z"
-updated: "2026-10-15T16:27:48.933Z"
+updated: "2026-10-15T18:54:41.876Z"
 game_version: "Serveur 2.1.0 · Client 3.1.0"
 ---
 

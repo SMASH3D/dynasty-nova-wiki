@@ -8,7 +8,7 @@ description: "Building ships and defenses: queues, payment, delivery, build time
 tags: ["fleet"]
 published: false
 created: "2026-10-02T13:11:07.986Z"
-updated: "2026-10-02T14:16:31.522Z"
+updated: "2026-10-15T18:53:10.011Z"
 ---
 
 # Orbital Dock (shipyard)

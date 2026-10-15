@@ -8,7 +8,7 @@ description: "Arsenal balistique, Intercepteurs et Ogives longue portée."
 tags: ["defense", "missiles"]
 published: true
 created: "2026-10-02T13:09:06.140Z"
-updated: "2026-10-02T17:40:28.005Z"
+updated: "2026-10-15T18:54:03.174Z"
 game_version: "Serveur 2.1.0 · Client 3.1.0"
 ---
 

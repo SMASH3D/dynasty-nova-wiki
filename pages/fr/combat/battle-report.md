@@ -8,7 +8,7 @@ description: "Comprendre chaque partie du rapport de combat."
 tags: ["combat"]
 published: true
 created: "2026-10-02T13:09:11.923Z"
-updated: "2026-10-02T16:36:46.991Z"
+updated: "2026-10-15T18:53:49.324Z"
 ---
 
 # Lire un rapport de combat

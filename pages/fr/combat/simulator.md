@@ -8,7 +8,7 @@ description: "Préparer une attaque avec le simulateur."
 tags: ["combat"]
 published: true
 created: "2026-10-02T13:09:19.413Z"
-updated: "2026-10-02T16:36:52.542Z"
+updated: "2026-10-15T18:53:58.417Z"
 ---
 
 # Simulateur de combat

@@ -8,7 +8,7 @@ description: "Défenses planétaires et missiles."
 tags: ["defense"]
 published: true
 created: "2026-10-02T13:09:00.238Z"
-updated: "2026-10-02T16:36:38.519Z"
+updated: "2026-10-15T18:54:05.818Z"
 ---
 
 # Défense

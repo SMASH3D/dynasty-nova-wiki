@@ -8,7 +8,7 @@ description: "The 14 ships: costs, stats, requirements."
 tags: ["fleet", "ships"]
 published: true
 created: "2026-10-02T13:11:03.964Z"
-updated: "2026-10-02T17:40:04.626Z"
+updated: "2026-10-15T18:53:13.117Z"
 game_version: "Serveur 2.1.0 · Client 3.1.0"
 ---
 

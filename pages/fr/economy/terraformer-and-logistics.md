@@ -8,7 +8,7 @@ description: "Agrandir sa planète et ses entrepôts."
 tags: ["economy"]
 published: true
 created: "2026-10-02T13:08:35.486Z"
-updated: "2026-10-02T17:40:18.601Z"
+updated: "2026-10-15T18:54:20.883Z"
 game_version: "Serveur 2.1.0 · Client 3.1.0"
 ---
 

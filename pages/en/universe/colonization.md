@@ -8,7 +8,7 @@ description: "Founding colonies with the Space Pioneer."
 tags: ["universe"]
 published: true
 created: "2026-10-02T13:10:28.978Z"
-updated: "2026-10-02T17:40:35.384Z"
+updated: "2026-10-15T18:53:38.406Z"
 game_version: "Serveur 2.1.0 · Client 3.1.0"
 ---
 

@@ -8,7 +8,7 @@ description: "6 attaques sur un même joueur par tranche de 24 heures."
 tags: ["players"]
 published: true
 created: "2026-10-02T13:09:37.126Z"
-updated: "2026-10-02T16:37:05.541Z"
+updated: "2026-10-15T18:54:43.237Z"
 ---
 
 # Limite d'attaques

@@ -8,7 +8,7 @@ description: "Chaque défense détruite a 70 % de chances de revenir."
 tags: ["combat"]
 published: true
 created: "2026-10-02T13:09:17.609Z"
-updated: "2026-10-06T10:31:02.120Z"
+updated: "2026-10-15T18:53:52.373Z"
 ---
 
 # Reconstruction des défenses

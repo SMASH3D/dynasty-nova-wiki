@@ -8,7 +8,7 @@ description: "Les relations entre alliances."
 tags: ["players"]
 published: true
 created: "2026-10-02T13:09:44.670Z"
-updated: "2026-10-15T16:27:50.433Z"
+updated: "2026-10-15T18:54:48.870Z"
 ---
 
 # Pactes, fair-play et guerres

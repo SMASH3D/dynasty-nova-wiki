@@ -8,7 +8,7 @@ description: "Vaisseaux, déplacements et missions."
 tags: ["fleet"]
 published: true
 created: "2026-10-02T13:08:44.894Z"
-updated: "2026-10-02T16:36:27.919Z"
+updated: "2026-10-15T18:54:38.930Z"
 ---
 
 # Flotte

@@ -8,7 +8,7 @@ description: "Ce qu'est un univers et ses réglages."
 tags: ["universe"]
 published: true
 created: "2026-10-02T13:08:04.689Z"
-updated: "2026-10-06T08:04:57.344Z"
+updated: "2026-10-15T18:55:11.117Z"
 ---
 
 # Les univers

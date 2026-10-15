@@ -8,7 +8,7 @@ description: "Les sections du rapport, ce qui les débloque, et l'alerte d'intru
 tags: ["espionage"]
 published: true
 created: "2026-10-02T13:09:27.242Z"
-updated: "2026-10-02T16:36:58.413Z"
+updated: "2026-10-15T18:54:23.630Z"
 ---
 
 # Lire un rapport d'espionnage

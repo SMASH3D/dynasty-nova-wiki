@@ -8,7 +8,7 @@ description: "Échanger ses ressources contre des Crédits, et ses Crédits cont
 tags: ["economy"]
 published: true
 created: "2026-10-15T16:27:40.950Z"
-updated: "2026-10-15T16:29:39.389Z"
+updated: "2026-10-15T18:54:17.802Z"
 ---
 
 # Banque stellaire

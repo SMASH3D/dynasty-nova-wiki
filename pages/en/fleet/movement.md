@@ -8,7 +8,7 @@ description: "Speed, flight time, hydrogen use and fleet slots."
 tags: ["fleet"]
 published: true
 created: "2026-10-02T13:11:09.961Z"
-updated: "2026-10-06T10:30:53.371Z"
+updated: "2026-10-15T18:53:08.419Z"
 ---
 
 # Fleet movement

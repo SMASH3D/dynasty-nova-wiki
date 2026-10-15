@@ -8,7 +8,7 @@ description: "Construire vaisseaux et défenses : files, paiement, livraison, du
 tags: ["fleet"]
 published: false
 created: "2026-10-02T13:08:50.428Z"
-updated: "2026-10-02T14:15:06.349Z"
+updated: "2026-10-15T18:54:34.471Z"
 ---
 
 # Dock orbital (chantier)

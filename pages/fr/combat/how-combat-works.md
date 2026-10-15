@@ -8,7 +8,7 @@ description: "Rounds, tirs, boucliers, explosions et résultat."
 tags: ["combat"]
 published: true
 created: "2026-10-02T13:09:10.079Z"
-updated: "2026-10-02T16:36:45.627Z"
+updated: "2026-10-15T18:53:54.172Z"
 ---
 
 # Déroulement d'un combat

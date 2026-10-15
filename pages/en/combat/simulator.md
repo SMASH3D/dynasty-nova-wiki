@@ -8,7 +8,7 @@ description: "Planning an attack with the simulator."
 tags: ["combat"]
 published: true
 created: "2026-10-02T13:11:38.050Z"
-updated: "2026-10-02T16:38:26.529Z"
+updated: "2026-10-15T18:52:34.412Z"
 ---
 
 # Battle simulator

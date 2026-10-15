@@ -8,7 +8,7 @@ description: "Conditions et conséquences d'un abandon."
 tags: ["universe"]
 published: true
 created: "2026-10-02T13:08:14.263Z"
-updated: "2026-10-02T16:36:07.806Z"
+updated: "2026-10-15T18:55:00.934Z"
 ---
 
 # Abandonner une colonie

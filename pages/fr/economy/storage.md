@@ -8,7 +8,7 @@ description: "Capacités de stockage et débordement."
 tags: ["economy"]
 published: true
 created: "2026-10-02T13:08:24.087Z"
-updated: "2026-10-15T16:10:30.873Z"
+updated: "2026-10-15T18:54:19.377Z"
 game_version: "Serveur 2.1.0 · Client 3.1.0"
 ---
 

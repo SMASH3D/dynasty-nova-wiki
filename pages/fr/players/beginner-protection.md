@@ -8,7 +8,7 @@ description: "Qui peut attaquer qui : protection nouvel arrivant et paliers de p
 tags: ["players"]
 published: true
 created: "2026-10-02T13:09:35.168Z"
-updated: "2026-10-06T08:04:54.420Z"
+updated: "2026-10-15T18:54:44.723Z"
 ---
 
 # Protection des débutants

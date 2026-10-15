@@ -8,7 +8,7 @@ description: "Sondes, rapports, vision partagée et phalange."
 tags: ["espionage"]
 published: true
 created: "2026-10-02T13:09:23.289Z"
-updated: "2026-10-02T16:36:55.485Z"
+updated: "2026-10-15T18:54:26.692Z"
 ---
 
 # Espionnage

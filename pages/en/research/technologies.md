@@ -8,7 +8,7 @@ description: "All technologies: effects, maximum levels, requirements."
 tags: ["research"]
 published: true
 created: "2026-10-02T13:10:56.114Z"
-updated: "2026-10-02T17:40:14.225Z"
+updated: "2026-10-15T18:53:34.308Z"
 game_version: "Serveur 2.1.0 · Client 3.1.0"
 ---
 

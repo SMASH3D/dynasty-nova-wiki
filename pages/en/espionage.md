@@ -8,7 +8,7 @@ description: "Probes, reports, shared vision and the phalanx."
 tags: ["espionage"]
 published: true
 created: "2026-10-02T13:11:42.237Z"
-updated: "2026-10-02T16:38:29.235Z"
+updated: "2026-10-15T18:53:02.324Z"
 ---
 
 # Espionage

@@ -8,7 +8,7 @@ description: "The four player rankings, the two alliance rankings and how points
 tags: ["players"]
 published: true
 created: "2026-10-02T13:11:52.215Z"
-updated: "2026-10-02T16:38:36.337Z"
+updated: "2026-10-15T18:53:26.805Z"
 ---
 
 # Rankings and points

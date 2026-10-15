@@ -8,7 +8,7 @@ description: "Watching fleets from a moon: range, cost, what is seen."
 tags: ["espionage", "moon"]
 published: true
 created: "2026-10-02T13:11:48.294Z"
-updated: "2026-10-02T17:40:26.409Z"
+updated: "2026-10-15T18:52:57.935Z"
 game_version: "Serveur 2.1.0 · Client 3.1.0"
 ---
 

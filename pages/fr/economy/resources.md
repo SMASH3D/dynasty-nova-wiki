@@ -8,7 +8,7 @@ description: "Métal, cristal, hydrogène et énergie."
 tags: ["economy"]
 published: true
 created: "2026-10-02T13:08:20.081Z"
-updated: "2026-10-15T16:10:29.402Z"
+updated: "2026-10-15T18:54:16.405Z"
 game_version: "Serveur 2.1.0 · Client 3.1.0"
 ---
 

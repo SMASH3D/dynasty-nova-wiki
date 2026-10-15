@@ -8,7 +8,7 @@ description: "Les deux boucliers planétaires."
 tags: ["defense"]
 published: true
 created: "2026-10-02T13:09:03.978Z"
-updated: "2026-10-02T17:40:30.973Z"
+updated: "2026-10-15T18:54:04.511Z"
 game_version: "Serveur 2.1.0 · Client 3.1.0"
 ---
 

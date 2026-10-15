@@ -8,7 +8,7 @@ description: "Each destroyed defense has a 70% chance to come back."
 tags: ["combat"]
 published: true
 created: "2026-10-02T13:11:36.096Z"
-updated: "2026-10-06T10:30:48.224Z"
+updated: "2026-10-15T18:52:28.105Z"
 ---
 
 # Defense rebuild

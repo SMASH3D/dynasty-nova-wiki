@@ -8,7 +8,7 @@ description: "How battles work and what follows."
 tags: ["combat"]
 published: true
 created: "2026-10-02T13:11:25.709Z"
-updated: "2026-10-02T16:38:17.985Z"
+updated: "2026-10-15T18:52:36.126Z"
 ---
 
 # Combat

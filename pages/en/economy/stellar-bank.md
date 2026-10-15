@@ -8,7 +8,7 @@ description: "Trading your resources for Credits, and your Credits for resources
 tags: ["economy"]
 published: true
 created: "2026-10-15T16:27:27.035Z"
-updated: "2026-10-15T16:29:41.185Z"
+updated: "2026-10-15T18:52:53.731Z"
 ---
 
 # Stellar Bank

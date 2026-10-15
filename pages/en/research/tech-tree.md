@@ -8,7 +8,7 @@ description: "Requirements of every building, research and unit."
 tags: ["research"]
 published: true
 created: "2026-10-02T13:10:57.930Z"
-updated: "2026-10-02T16:37:59.180Z"
+updated: "2026-10-15T18:53:32.610Z"
 ---
 
 # Tech tree

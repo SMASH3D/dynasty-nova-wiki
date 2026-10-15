@@ -8,7 +8,7 @@ description: "Envoyer des Éclaireurs : niveau de détail, vision partagée, ris
 tags: ["espionage"]
 published: true
 created: "2026-10-02T13:09:25.232Z"
-updated: "2026-10-06T10:31:03.704Z"
+updated: "2026-10-15T18:54:25.308Z"
 game_version: "Serveur 2.1.0 · Client 3.1.0"
 ---
 

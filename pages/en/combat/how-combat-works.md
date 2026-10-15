@@ -8,7 +8,7 @@ description: "Rounds, shots, shields, explosions and outcome."
 tags: ["combat"]
 published: true
 created: "2026-10-02T13:11:27.663Z"
-updated: "2026-10-02T16:38:19.380Z"
+updated: "2026-10-15T18:52:29.924Z"
 ---
 
 # How combat works

@@ -8,7 +8,7 @@ description: "Explorer l'espace lointain : conditions, résultats et taille des 
 tags: ["fleet"]
 published: true
 created: "2026-10-02T13:08:56.440Z"
-updated: "2026-10-02T17:41:04.333Z"
+updated: "2026-10-15T18:54:28.222Z"
 game_version: "Serveur 2.1.0 · Client 3.1.0"
 ---
 

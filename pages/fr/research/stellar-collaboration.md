@@ -8,7 +8,7 @@ description: "Mettre ses Centres d'innovation en réseau."
 tags: ["research"]
 published: true
 created: "2026-10-02T13:08:42.942Z"
-updated: "2026-10-02T17:40:54.971Z"
+updated: "2026-10-15T18:54:54.606Z"
 game_version: "Serveur 2.1.0 · Client 3.1.0"
 ---
 

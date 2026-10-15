@@ -8,7 +8,7 @@ description: "Pausing your empire in a universe."
 tags: ["players"]
 published: true
 created: "2026-10-02T13:11:58.310Z"
-updated: "2026-10-02T16:38:40.611Z"
+updated: "2026-10-15T18:53:28.170Z"
 ---
 
 # Vacation mode

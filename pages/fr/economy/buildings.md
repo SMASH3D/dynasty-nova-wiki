@@ -8,7 +8,7 @@ description: "Tous les bâtiments : rôle, niveau maximum, prérequis."
 tags: ["economy"]
 published: true
 created: "2026-10-02T13:08:26.048Z"
-updated: "2026-10-15T16:27:40.705Z"
+updated: "2026-10-15T18:54:08.675Z"
 game_version: "Serveur 2.1.0 · Client 3.1.0"
 ---
 

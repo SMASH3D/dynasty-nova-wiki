@@ -8,7 +8,7 @@ description: "Universes, coordinates, planets and moons."
 tags: ["universe"]
 published: true
 created: "2026-10-02T13:10:19.035Z"
-updated: "2026-10-02T16:37:33.005Z"
+updated: "2026-10-15T18:53:47.968Z"
 ---
 
 # Universe and planets

@@ -8,7 +8,7 @@ description: "Conditions and consequences of abandoning a colony."
 tags: ["universe"]
 published: true
 created: "2026-10-02T13:10:30.810Z"
-updated: "2026-10-02T16:37:41.403Z"
+updated: "2026-10-15T18:53:37.036Z"
 ---
 
 # Abandoning a colony

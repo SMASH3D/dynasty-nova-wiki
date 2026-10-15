@@ -8,7 +8,7 @@ description: "Defenses: costs, stats, requirements."
 tags: ["defense"]
 published: true
 created: "2026-10-02T13:11:19.721Z"
-updated: "2026-10-02T17:40:07.729Z"
+updated: "2026-10-15T18:52:37.806Z"
 game_version: "Serveur 2.1.0 · Client 3.1.0"
 ---
 

@@ -8,7 +8,7 @@ description: "Technologies and the tech tree."
 tags: ["research"]
 published: true
 created: "2026-10-02T13:10:54.216Z"
-updated: "2026-10-02T16:37:56.019Z"
+updated: "2026-10-15T18:53:35.636Z"
 ---
 
 # Research

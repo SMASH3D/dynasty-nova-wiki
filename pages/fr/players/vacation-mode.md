@@ -8,7 +8,7 @@ description: "Mettre son empire en pause dans un univers."
 tags: ["players"]
 published: true
 created: "2026-10-02T13:09:39.037Z"
-updated: "2026-10-02T16:37:07.008Z"
+updated: "2026-10-15T18:54:51.824Z"
 ---
 
 # Mode vacances

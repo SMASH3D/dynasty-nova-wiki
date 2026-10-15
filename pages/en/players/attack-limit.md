@@ -8,7 +8,7 @@ description: "6 attacks on the same player per 24-hour window."
 tags: ["players"]
 published: true
 created: "2026-10-02T13:11:56.425Z"
-updated: "2026-10-02T16:38:39.212Z"
+updated: "2026-10-15T18:53:19.301Z"
 ---
 
 # Attack limit

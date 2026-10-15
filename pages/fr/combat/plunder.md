@@ -8,7 +8,7 @@ description: "Ce que l'attaquant emporte après une victoire."
 tags: ["combat"]
 published: true
 created: "2026-10-02T13:09:13.859Z"
-updated: "2026-10-02T16:36:48.391Z"
+updated: "2026-10-15T18:53:57.067Z"
 ---
 
 # Pillage

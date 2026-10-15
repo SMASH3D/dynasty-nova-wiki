@@ -8,7 +8,7 @@ description: "Chat, rapports, conservation, partage avec l'alliance et réglages
 tags: ["players"]
 published: true
 created: "2026-10-02T13:09:48.568Z"
-updated: "2026-10-06T08:08:48.242Z"
+updated: "2026-10-15T18:54:47.473Z"
 ---
 
 # Messagerie et rapports
