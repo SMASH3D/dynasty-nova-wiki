@@ -18,7 +18,7 @@ game_version: "Serveur 2.1.0 · Client 3.1.0"
 {.is-info}
 
 > **Paramètre d'univers** : la part récupérée dépend du taux de débris de l'univers, et la durée de réparation de sa vitesse de chantier.
-> Redline : débris **30 %**, chantier **×1**
+> Par défaut : débris **30 %**, chantier **×1** · Redline : débris **30 %**, chantier **×1**
 {.is-info}
 
 <img src="/images/illustrations/facilities/station-de-reparation.jpg" width="180" alt="Station de réparation">

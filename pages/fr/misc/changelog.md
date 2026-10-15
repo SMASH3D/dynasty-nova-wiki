@@ -23,6 +23,7 @@ updated: "2026-10-06T10:31:12.019Z"
 - **6 octobre 2026** : formule des durées de vol corrigée (constante 35 000, facteur de vitesse de 1 à 10, conformément à la correction du jeu qui rendait les trajets dix fois trop courts) ; inactivité de 7 jours sur Redline ; boutique en rotation et raretés des skins de planète ; espionnage des joueurs en vacances ; rapports à la carte ; annonce d'alliance ; noms et prix de départ des univers privés.
 - **6 octobre 2026 (suite)** : cycle mensuel de la température des planètes précisé ; alerte d'attaque 1 minute avant l'impact.
 - **6 octobre 2026 (dynasties)** : nouvelle rubrique [Dynastie et talents](/fr/dynasty) : dynasties, classes, talents, arbre commun et les dix arbres de classe. Déplacements, didacticiel, reconstruction des défenses et espionnage mis à jour en conséquence.
+- **15 octobre 2026** : rubrique Économie vérifiée sur le code du jeu. Coût de la Fabrique d'automates niveau 5 corrigé ; bâtiments constructibles sur une lune ; recherche une étude à la fois pour tout l'empire ; cumul des bonus de stockage ; Base lunaire non démolissable.
 
 ## Pages liées
 
