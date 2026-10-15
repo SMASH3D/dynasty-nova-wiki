@@ -20,9 +20,9 @@ def pct(x, lang):
     s = n(x, lang)
     return f'{s} %' if lang == 'fr' else f'{s}%'
 
-def dur(seconds):
-    s = int(seconds); h, s = divmod(s, 3600); m, s = divmod(s, 60)
-    parts = ([f'{h} h'] if h else []) + ([f'{m} min'] if m else []) + ([f'{s} s'] if s or not (h or m) else [])
+def dur(seconds, lang='fr'):
+    s = int(seconds); d, s = divmod(s, 86400); h, s = divmod(s, 3600); m, s = divmod(s, 60)
+    parts = ([f"{n(d, lang)} {'j' if lang == 'fr' else 'd'}"] if d else []) + ([f'{h} h'] if h else []) + ([f'{m} min'] if m else []) + ([f'{s} s'] if s or not (d or h or m) else [])
     return ' '.join(parts)
 
 RESEARCH = [  # code, catégorie serveur, position, max, facteur, (M, C, H, énergie) niv. 1, prérequis

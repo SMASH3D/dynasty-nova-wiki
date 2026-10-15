@@ -162,8 +162,8 @@ $$E = 30 \\times N \\times (1{{,}}05 + 0{{,}}01 \\times S)^N$$
 
 Renseignement Tactique niveau 4, lancé depuis une planète dont le Centre d'innovation est au niveau 4, sans Collaboration Stellaire :
 - Coût : 200 × 2^3 = **{N(ex_cost[0])} métal**, **{N(ex_cost[1])} cristal** et **{N(ex_cost[2])} hydrogène**.
-- Durée : ({N(ex_cost[0])} + {N(ex_cost[1])}) / (1 000 × (1 + 4)) = 1,92 h, soit **{dur(ex_t)}**.
-- Avec {P(15)} de vitesse de recherche (talents) : {N(ex_t)} × 100 / 115, arrondi au supérieur, soit **{dur(ex_t15)}**.
+- Durée : ({N(ex_cost[0])} + {N(ex_cost[1])}) / (1 000 × (1 + 4)) = 1,92 h, soit **{dur(ex_t, lang)}**.
+- Avec {P(15)} de vitesse de recherche (talents) : {N(ex_t)} × 100 / 115, arrondi au supérieur, soit **{dur(ex_t15, lang)}**.
 - Points de recherche gagnés : ({N(ex_cost[0])} + {N(ex_cost[1])} + {N(ex_cost[2])}) / 1 000 = **{n(ex_pts, lang)}**.
 
 Manipulation Gravitationnelle : le niveau 1 demande une production d'énergie de **{N(grav[0])}**, le niveau 2 **{N(grav[1])}**, le niveau 3 **{N(grav[2])}** (facteur 3).
@@ -280,8 +280,8 @@ $$E = 30 \\times N \\times (1.05 + 0.01 \\times S)^N$$
 
 Espionage Technology level 4, started from a planet whose Innovation Center is level 4, without Stellar Collaboration:
 - Cost: 200 × 2^3 = **{N(ex_cost[0])} metal**, **{N(ex_cost[1])} crystal** and **{N(ex_cost[2])} hydrogen**.
-- Duration: ({N(ex_cost[0])} + {N(ex_cost[1])}) / (1,000 × (1 + 4)) = 1.92 h, that is **{dur(ex_t)}**.
-- With {P(15)} research speed (talents): {N(ex_t)} × 100 / 115, rounded up, that is **{dur(ex_t15)}**.
+- Duration: ({N(ex_cost[0])} + {N(ex_cost[1])}) / (1,000 × (1 + 4)) = 1.92 h, that is **{dur(ex_t, lang)}**.
+- With {P(15)} research speed (talents): {N(ex_t)} × 100 / 115, rounded up, that is **{dur(ex_t15, lang)}**.
 - Research points gained: ({N(ex_cost[0])} + {N(ex_cost[1])} + {N(ex_cost[2])}) / 1,000 = **{n(ex_pts, lang)}**.
 
 Graviton Technology: level 1 needs an energy output of **{N(grav[0])}**, level 2 **{N(grav[1])}**, level 3 **{N(grav[2])}** (factor 3).
