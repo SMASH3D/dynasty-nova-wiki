@@ -18,7 +18,7 @@ game_version: "Serveur 2.1.0 · Client 3.1.0"
 {.is-info}
 
 > **Universe setting**: the recovered share depends on the universe's debris rate, and repair time on its shipyard speed.
-> Redline: debris **30%**, shipyard **×1**
+> Default: debris **30%**, shipyard **×1** · Redline: debris **30%**, shipyard **×1**
 {.is-info}
 
 <img src="/images/illustrations/facilities/station-de-reparation.jpg" width="180" alt="Repair Station">

@@ -22,7 +22,7 @@ updated: "2026-10-02T16:37:51.735Z"
 2. Demolition **costs nothing and refunds nothing**, neither when it starts nor when it ends.
 3. It **removes the points** of the demolished level.
 4. It takes **half the build time** of the level removed, with Automaton Factory and Molecular Assembler bonuses.
-5. You cannot demolish the **Planetary Base** or a building at **level 0**.
+5. You cannot demolish the **Planetary Base**, the **Lunar base** or a building at **level 0**.
 6. You cannot queue an upgrade and a demolition of the same building at the same time.
 7. The **Orbital Dock** cannot be demolished while it is producing units.
 8. Demolishing the **Ballistic Arsenal** while it is full destroys no missile.

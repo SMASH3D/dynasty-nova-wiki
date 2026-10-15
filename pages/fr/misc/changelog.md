@@ -24,6 +24,7 @@ updated: "2026-10-07T22:08:35.172Z"
 - **6 octobre 2026 (suite)** : cycle mensuel de la température des planètes précisé ; alerte d'attaque 1 minute avant l'impact.
 - **6 octobre 2026 (dynasties)** : nouvelle rubrique [Dynastie et talents](/fr/dynasty) : dynasties, classes, talents, arbre commun et les dix arbres de classe. Déplacements, didacticiel, reconstruction des défenses et espionnage mis à jour en conséquence.
 - **8 octobre 2026** : diagramme de l'arbre de talents en tête des données détaillées de chaque [classe](/fr/dynasty/classes) et de l'[arbre commun](/fr/dynasty/common-tree).
+- **15 octobre 2026** : rubrique Économie vérifiée sur le code du jeu. Coût de la Fabrique d'automates niveau 5 corrigé ; bâtiments constructibles sur une lune ; recherche une étude à la fois pour tout l'empire ; cumul des bonus de stockage ; Base lunaire non démolissable.
 
 ## Pages liées
 

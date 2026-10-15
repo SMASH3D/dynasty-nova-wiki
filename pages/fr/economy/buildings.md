@@ -14,7 +14,7 @@ game_version: "Serveur 2.1.0 · Client 3.1.0"
 
 # Liste des bâtiments
 
-> **En bref** : chaque planète compte jusqu'à 17 bâtiments (et 3 de plus sur une lune). Les mines produisent les ressources, les centrales l'énergie, les entrepôts stockent, et les installations débloquent la recherche, les vaisseaux, les défenses et les missiles. Chaque niveau de bâtiment occupe une case de la planète.
+> **En bref** : une planète compte jusqu'à 17 bâtiments. Une lune en accueille 5 : ses 3 bâtiments lunaires, plus la Fabrique d'automates et le Dock orbital. Les mines produisent les ressources, les centrales l'énergie, les entrepôts stockent, et les installations débloquent la recherche, les vaisseaux, les défenses et les missiles. Chaque niveau de bâtiment occupe une case de la planète.
 {.is-info}
 
 > **Paramètre d'univers** : la vitesse de construction des bâtiments peut être différente selon l'univers.
@@ -69,6 +69,8 @@ Coûts relevés en jeu pour faire passer l'Excavateur minéral du niveau 13 au n
 | <img src="/images/illustrations/facilities/phalange-de-capteur.jpg" width="48" alt="Phalange de capteur"> Phalange de capteur | Repère les flottes autour d'une planète (voir [Phalange de capteur](/fr/espionage/sensor-phalanx)) |
 | <img src="/images/illustrations/facilities/porte-de-saut.jpg" width="48" alt="Porte de saut"> Porte de saut | Saut instantané entre deux lunes (voir [Porte de saut](/fr/fleet/jump-gate)) |
 
+Sur une lune, on peut aussi construire la **Fabrique d'automates** et le **Dock orbital**, aux mêmes coûts et avec les mêmes prérequis que sur une planète. Les autres bâtiments de planète n'y sont pas constructibles.
+
 ### Coûts relevés en jeu
 
 Coût d'un niveau précis, relevé sur une planète de l'univers Redline. Les tables complètes niveau par niveau seront ajoutées sur les pages de chaque bâtiment.
@@ -84,7 +86,7 @@ Coût d'un niveau précis, relevé sur une planète de l'univers Redline. Les ta
 | Chambre cristalline | 2 | 2 000 | 1 000 | 0 | |
 | Citerne d'hydrogène | 2 | 2 000 | 2 000 | 0 | |
 | Centre d'innovation | 5 | 3 200 | 6 400 | 3 200 | |
-| Fabrique d'automates | 5 | 12 800 | 3 840 | 6 400 | |
+| Fabrique d'automates | 5 | 6 400 | 1 920 | 3 200 | |
 | Dock orbital | 5 | 6 400 | 3 200 | 1 600 | |
 | Assembleur moléculaire | 1 | 1 000 000 | 500 000 | 100 000 | |
 | Station de réparation | 1 | 200 | 0 | 50 | 50 |

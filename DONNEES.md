@@ -196,7 +196,7 @@ Coût du niveau N = coût du niveau 1 × facteur^(N−1). Points = (métal + cri
 | missile_silo | resource | 10 | 20 000 / 20 000 / 1 000 | 2 | Dock orbital 1 |
 | logistics_center | resource | 10 | 20 000 / 40 000 / 0 | 2 | Calcul quantique 2 |
 
-Bâtiments lunaires (Base lunaire, Phalange de capteur, Porte de saut) : présents dans les traductions, absents du catalogue planète. Coûts et prérequis identiques à OGame (`universe-09`). Diamètre et formation des lunes identiques à OGame : 1 % par 100 000 débris, plafonné à 20 % (`universe-08`).
+Bâtiments lunaires (Base lunaire, Phalange de capteur, Porte de saut) : présents dans les traductions, absents du catalogue planète. **Mise à jour du 15 octobre 2026** : ils sont désormais dans le catalogue du code (voir « Relevé dans le code » ci-dessous). Coûts et prérequis identiques à OGame (`universe-09`). Diamètre et formation des lunes identiques à OGame : 1 % par 100 000 débris, plafonné à 20 % (`universe-08`).
 
 ### Production et consommation observées
 
@@ -218,7 +218,53 @@ Formules vérifiées sur ces valeurs (identiques à OGame) :
 - Capteurs photovoltaïques : 20 × N × 1,1^N × (1 + T actuelle / 100) quand la température actuelle est positive ✅ (équipe). Vérifié : T = 23 °C donne ×1,23, soit 1 104 au niveau 13.
 - Collecteur solaire : Tmax / 4 + énergie de base par unité ✅ (équipe). Vérifié : 60 / 4 + 20 = 35.
 - Stockage : 5 000 × arrondi inférieur(2,5 × e^(20 × N / 33)). Niveau 1 = 20 000, niveau 2 = 40 000, plus 10 000 de la Base planétaire.
-- Durée de construction (h) = (métal + cristal) / (2 500 × (1 + Fabrique d'automates) × 2^Assembleur moléculaire). Vérifié sur l'Excavateur 13 : 2 802 s.
+- Durée de construction (h) = (métal + cristal + hydrogène) / (2 500 × (1 + Fabrique d'automates) × 2^Assembleur moléculaire) ÷ vitesse construction. **Corrigé le 15 octobre 2026 d'après le code** : l'hydrogène compte aussi (l'ancienne ligne disait métal + cristal, ce qui ne se voyait pas sur les mines, sans hydrogène). Vérifié sur l'Excavateur 13 : 2 802 s.
+
+### Relevé dans le code (15 octobre 2026)
+
+Source : dépôt `astro-nova-backend`, branche `main` au commit `8bd7652b` (15 octobre 2026). Catalogue lu dans la table `building` après avoir rejoué toutes les migrations sur une base vide ; formules lues dans les fichiers cités. Les valeurs modifiées en production par l'administration ne sont pas visibles ainsi : en cas d'écart avec le jeu, c'est le jeu qu'il faut relever.
+
+Catalogue (coût niv. 1 M / C / H / énergie requise, facteur, max, portée) :
+
+| Code | Coût niv. 1 | Facteur | Max | Portée |
+|---|---|---|---|---|
+| planetary_base | 0 | 2 | 1 | planète |
+| metal_mine | 60 / 15 / 0 | 1,5 | 50 | planète |
+| crystal_mine | 48 / 24 / 0 | 1,6 | 50 | planète |
+| hydrogen_synthesizer | 225 / 75 / 0 | 1,5 | 50 | planète |
+| solar_plant | 75 / 30 / 0 | 1,5 | 50 | planète |
+| fusion_plant | 900 / 360 / 180 | 1,8 | 50 | planète |
+| metal_storage, crystal_storage, hydrogen_storage | 1 000 / 0 / 0 ; 1 000 / 500 / 0 ; 1 000 / 1 000 / 0 | 2 | 20 | planète |
+| research_lab | 200 / 400 / 200 | 2 | 12 | planète |
+| robotic_factory | 400 / 120 / 200 | 2 | 10 | **planète et lune** |
+| shipyard | 400 / 200 / 100 | 2 | 12 | **planète et lune** |
+| nanite_factory | 1 000 000 / 500 000 / 100 000 | 2 | 10 | planète |
+| terraformer | 0 / 50 000 / 100 000 / 1 000 | 2 | 10 | planète |
+| repair_dock | 200 / 0 / 50 / 50 | 5 (énergie requise : 2,5) | 10 | planète |
+| missile_silo | 20 000 / 20 000 / 1 000 | 2 | 10 | planète (lune avec un talent de Vétéran) |
+| logistics_center | 20 000 / 40 000 / 0 | 2 | 10 | planète |
+| lunar_base | 20 000 / 40 000 / 20 000 | 2 | aucun | lune |
+| sensor_phalanx | 20 000 / 40 000 / 20 000 | 2 | aucun | lune ; prérequis Base lunaire 1 |
+| jump_gate | 2 000 000 / 4 000 000 / 2 000 000 | 2 | aucun | lune ; prérequis Base lunaire 1, Pliage Spatial 7 (`hyperspace`) |
+
+Prérequis identiques au tableau ci-dessus. Les données lunaires intéressent `universe-09` et `moon-02` : statut laissé au lot des questions.
+
+Formules et règles :
+- Coût du niveau N : `Building::getCost()`, coût niv. 1 × facteur^(N − 1), arrondi à l'inférieur par ressource ; l'énergie requise suit `getEnergyMultiplicator()` (le facteur du coût, sauf la Station de réparation : 2,5).
+- Points et durée : `Constructable::getTotalCost()` = métal + cristal + hydrogène, énergie exclue ; points = total / 1 000 (`getPoints()`) ; durée `Building::getBuildingTime()`, arrondie à la seconde, puis bonus du joueur dans `Base::buildingTimeOf()`. Démolition : moitié, arrondie (`getDemolitionTime()`).
+- Production : `Building::getProduction()`. Mines 30, 20, 10 × N × 1,1^N × vitesse économie ; consommation d'énergie 10 × N × 1,1^N **sans** la vitesse ; Réacteur 30 × N × (1,05 + 0,01 × Science énergétique)^N énergie et 10 × N × 1,1^N × vitesse hydrogène ; arrondis vers zéro (`truncate()`). Base planetaire 20 métal et 10 cristal × vitesse. Facteurs de température : `BaseTemperature::solarPlantFactor()` (1 + max(0, T actuelle / 100)) et `hydrogenSynthesisFactor()` (1,44 − 0,004 × Tmax, arrondi à 3 décimales).
+- Déficit d'énergie : `EnergyBalance::ratio()` = min(100 %, production / consommation), même ratio pour les trois mines hors talents (`MineEnergyRatios`). La Base planetaire n'est pas touchée.
+- Taux de fonctionnement : `OperatingRate`, pas de 10 %, mines seulement (Réacteur avec un talent).
+- Arrêt de la production : `Base::isProductionHalted()` : vacances, planète abandonnée, univers à l'arrêt (univers privé gelé ou terminé).
+- Stockage : `Building::getStorage()`, 5 000 × arrondi inférieur(2,5 × e^(20 × N / 33)) ; Base planetaire 10 000 × niveau. Bonus : `Base::storagePercent()` = talents (dont Entrepôts fédérés) + Centre logistique (`LogisticsCenter`, 10 % par niveau), **additionnés**, appliqués à toute la capacité des bâtiments, Base planetaire comprise (`getResourcesStorage()`). Réponse à `economy-11`.
+- Plafond : `Storage::fill()` : la production remplit jusqu'à la capacité, jamais au-delà ; un stock déjà au-dessus reste tel quel.
+- Files : `ConstructionQueueCapacity`, 2 ordres et 5 en Premium par défaut, réglable par univers. Recherche : une étude à la fois pour tout l'empire, mais chaque planète compte sa propre file (`Base::startResearchStudy()`, `StartConstructionHandler::researchQueue()`). Vaisseaux et défenses : files séparées (`ShipyardLane`). Dock orbital en travaux : aucune commande d'unité (`ShipyardBusyException::underConstruction`).
+- Centre d'innovation : le verrou « en travaux = pas de recherche sur cette planète » et l'inverse « recherche lancée d'ici = pas d'amélioration » sont appliqués par le front seulement (`Astro-Nova-React` : `useResearchLabLock.ts`, `BuildingCard.tsx`, `main` du 15 octobre 2026), pas par le serveur.
+- Annulation : `CancellationRefundRate`, 80 %, plafond 95 %, relevé par le trait Rien ne se perd (+5 points) ; `Construction::getCancelRefund()` puis prorata du temps restant, deux troncatures successives.
+- Démolition interdite : bâtiment d'ancrage de l'astre (Base planetaire, Base lunaire) et niveau 0 (`Base::checkCanDemolishBuilding()`).
+- Station de réparation : `RepairDock` (coefficients de 45 % à 54 % du niveau 1 au niveau 10, 10 points de structure par seconde et par niveau, 1 800 à 43 200 s). Taux de débris par défaut : 30 % (`DebrisRule::default()`).
+- Modulateur : `Base::planetFields()`, 5 cases par niveau + partie entière(niveau / 2). Base lunaire : 3 cases par niveau, plafonnées par le diamètre (`moonFields()`).
+- Écart corrigé le 15 octobre 2026 : le coût « relevé » de la Fabrique d'automates niveau 5 (12 800 / 3 840 / 6 400) était celui du niveau 6. Niveau 5 : 6 400 / 1 920 / 3 200.
 
 ### Station de réparation
 

@@ -24,6 +24,7 @@ updated: "2026-10-07T22:08:16.826Z"
 - **6 October 2026 (continued)**: monthly planet temperature cycle detailed; attack alert 1 minute before impact.
 - **6 October 2026 (dynasties)**: new [Dynasty and talents](/en/dynasty) section: dynasties, classes, talents, the common tree and the ten class trees. Movement, tutorial, defence rebuild and espionage updated accordingly.
 - **8 October 2026**: talent tree diagram at the top of the detailed data of each [class](/en/dynasty/classes) and of the [common tree](/en/dynasty/common-tree).
+- **15 October 2026**: Economy section checked against the game code. Automaton Factory level 5 cost corrected; buildings you can build on a moon; research one study at a time across the empire; how storage bonuses stack; Lunar base cannot be demolished.
 
 ## Related pages
 

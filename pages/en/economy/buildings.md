@@ -14,7 +14,7 @@ game_version: "Serveur 2.1.0 · Client 3.1.0"
 
 # Buildings list
 
-> **In short**: each planet can hold up to 17 buildings (plus 3 more on a moon). Mines produce resources, power plants produce energy, storage keeps your stock, and facilities unlock research, ships, defenses and missiles. Every building level takes one field on the planet.
+> **In short**: a planet can hold up to 17 buildings. A moon takes 5: its 3 lunar buildings, plus the Automaton Factory and the Orbital Dock. Mines produce resources, power plants produce energy, storage keeps your stock, and facilities unlock research, ships, defenses and missiles. Every building level takes one field on the planet.
 {.is-info}
 
 > **Universe setting**: building speed may differ from one universe to another.
@@ -69,6 +69,8 @@ Costs seen in game to raise the Mineral Excavator from level 13 to level 14:
 | <img src="/images/illustrations/facilities/phalange-de-capteur.jpg" width="48" alt="Sensor phalanx"> Sensor phalanx | Spots fleets around a planet (see [Sensor phalanx](/en/espionage/sensor-phalanx)) |
 | <img src="/images/illustrations/facilities/porte-de-saut.jpg" width="48" alt="Jump gate"> Jump gate | Instant jump between two moons (see [Jump gate](/en/fleet/jump-gate)) |
 
+On a moon you can also build the **Automaton Factory** and the **Orbital Dock**, at the same costs and with the same requirements as on a planet. The other planet buildings cannot be built there.
+
 ### Costs seen in game
 
 Cost of one given level, recorded on a planet in the Redline universe. Full level-by-level tables will be added to each building's own page.
@@ -84,7 +86,7 @@ Cost of one given level, recorded on a planet in the Redline universe. Full leve
 | Crystal Chamber | 2 | 2,000 | 1,000 | 0 | |
 | Hydrogen Tank | 2 | 2,000 | 2,000 | 0 | |
 | Innovation Center | 5 | 3,200 | 6,400 | 3,200 | |
-| Automaton Factory | 5 | 12,800 | 3,840 | 6,400 | |
+| Automaton Factory | 5 | 6,400 | 1,920 | 3,200 | |
 | Orbital Dock | 5 | 6,400 | 3,200 | 1,600 | |
 | Molecular Assembler | 1 | 1,000,000 | 500,000 | 100,000 | |
 | Repair Station | 1 | 200 | 0 | 50 | 50 |

@@ -31,7 +31,7 @@ game_version: "Serveur 2.1.0 · Client 3.1.0"
 4. **Energy**: produced by Photovoltaic Sensors, the Thermonuclear Reactor and Solar Collectors, used by mines. It cannot be stored (see [Energy](/en/economy/energy)).
 5. Production is **continuous**, computed per hour, and each planet has **its own stock**, capped by its storage.
 6. The **Planetary Base** gives a small fixed income: **20 metal and 10 crystal per hour**.
-7. Production stops when a resource's stock exceeds its capacity (see [Storage](/en/economy/storage)), or during [vacation mode](/en/players/vacation-mode).
+7. Production stops when a resource's stock reaches its capacity (see [Storage](/en/economy/storage)), during [vacation mode](/en/players/vacation-mode), or while a private universe is frozen (see [Private universes](/en/misc/private-universes)).
 8. Possible bonuses: Plasma Technology, the Coordinated extraction alliance talent (+5% per level), planet temperature for hydrogen, and the colonies' **position bonus** (up to +40% crystal at positions 1 to 3, up to +35% metal at positions 6 to 10; see [Planets](/en/universe/planets)).
 
 ## Worked example
