@@ -713,7 +713,7 @@ Conditions : expéditions activées dans l'univers ; Cosmologie Appliquée ≥ 1
 | Nom du bâtiment `planetary_base` (FR) | « Base planetaire » | Accent manquant |
 | Écran de connexion | Lien « conditions d'utilisation » | Page inexistante (`players-09`) |
 | Alliance, station (`pages.alliance.station.levelGrantsPoint`, FR et EN) | « chaque niveau donne 1 point de doctrine » | Le code en donne 2 par niveau du niveau 1 au niveau 5 (`AllianceExperience::pointsAt()`) |
-| Boutique (`components/shop.json` `categories.stellar`, `topUp`) | « Crédits », « Ajouter des crédits » | Homonyme des Crédits de la Banque stellaire, qui ne s'achètent pas (`bank-01`) |
+| Boutique (`components/shop.json` `categories.stellar`, `topUp`) | « Crédits », « Ajouter des crédits » | Homonyme des Crédits de la Banque stellaire, qui ne s'achètent pas (`bank-01` : le responsable laisse tel quel, 15 octobre 2026) |
 
 ---
 
@@ -884,7 +884,7 @@ Source : `astro-nova-backend` `main` au commit `7b255c83`, contexte `src/Allianc
 - Votes (`AllianceVote`, `Alliance::mayVote`, correctif Backend #554) : **tous les membres votent**, recrues comprises ; durée de 1 à 24 h choisie par l'auteur ; clôture anticipée par l'auteur ; égalité ou aucune voix = rejet. Pactes : vote facultatif, l'adoption envoie l'offre. Question libre : droit de diplomatie ou d'annonce, sans effet.
 - Guerre : score = combats gagnés par chaque camp, attaque ou défense, nuls exclus (`CountWarVictoryHandler`) ; paix sans vote, acceptée par l'autre camp, ou fin par dissolution ; historique des guerres passées.
 - Limite d'attaques : 6 attaques **contre un même défenseur** sur 24 h glissantes (`BashingRule::default()`), réglable par univers.
-- Non publié (à dessein) : un membre en période d'intégration qui viole un pacte coûte 0 point à l'alliance (`AllianceFairPlayScorer::costOf`), à arbitrer avant publication ; fréquences des balayages internes.
+- Un membre en période d'intégration qui viole un pacte coûte 0 point à l'alliance, la violation restant inscrite (`AllianceFairPlayScorer::costOf`) : publié le 15 octobre 2026 sur accord du responsable (`players-13`). Non publiées : les fréquences des balayages internes.
 
 **Trésorerie, entraide, station**
 - Convois (`SendAllianceConvoyHandler`, `FleetMission::ALLIANCE_DEPOSIT`) : petits et grands cargos, base avec Dock orbital, vers la Station stellaire du système, 1 h aller et 1 h retour, sans hydrogène ni rappel, emplacement de flotte, refus en vacances et sous attaque annoncée (Backend #579). À l'arrivée, la trésorerie prend ce que le plafond permet, le surplus rentre (`AllianceConvoyArrivalResolver`).
@@ -894,7 +894,7 @@ Source : `astro-nova-backend` `main` au commit `7b255c83`, contexte `src/Allianc
 - Station : 3 paliers (`AllianceStationTier`), prix = heures × production de référence de l'univers, 60/30/10, figé à l'achat (`AllianceStationPricing`). Les heures (150, 350, 700) et la référence (médiane des actifs) ne sont pas publiées : le jeu affiche le prix.
 
 **Missions V2** (Backend #571, #572)
-- Interrupteur d'univers `alliance-missions`, fermé par défaut, avec surcharge par alliance au BO (`AllianceMissionsGate`) : non publié en détail (`players-12`).
+- Interrupteur d'univers `alliance-missions`, fermé par défaut, avec surcharge par alliance au BO (`AllianceMissionsGate`). **Ouvert sur Redline** (responsable, 15 octobre 2026, `players-12`). La surcharge par alliance n'est pas publiée.
 - Cycles Europe/Paris ; 3 propositions quotidiennes et 5 hebdomadaires, une par famille ; repos 3 et 14 jours ; une mission par famille à la fois ; inscriptions pendant 25 % du cycle ; objectif ×1,8 (Avancée), ×3,2 (Épique) ; plafonds : 25 % de l'objectif par jour (hebdomadaire), 2,5 parts par membre.
 - Clôture : 100 % réussite, ×1,25 à 150 %, ×1,5 à 200 %. Taux = 40 % médiane + 60 % production propre (métal + cristal + hydrogène, `ProductionRateReader`) ; base 1 h (quotidienne) ou 4 h (hebdomadaire), ×1,5 Avancée, ×2 Épique ; effort relatif, seuil 30 %, 2,5 parts au plus ; plafond 7 jours = min(24 h de taux, 25 % du revenu hebdomadaire) ; versement 60/30/10, réclamation sous 7 jours, transit 30 min.
 - Points stellaires (hebdomadaire réussie) : 1 sous l'effort moyen, 2 au-dessus, ×1,5 / ×2, arrondi au supérieur, 8 par compte sur 7 jours.

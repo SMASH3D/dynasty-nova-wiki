@@ -370,9 +370,9 @@ Règle : aucune de ces formules ne va dans le wiki avant confirmation. Les pages
 - `universe-12` ⏳ Le bonus de position suit-il aussi la mise à l'échelle sur 15 positions dans les univers de 9 à 20 positions ? Est-il réglable par univers ?
 
 ### Alliances et banque (15 octobre 2026)
-- `players-12` ⏳ Les missions d'alliance sont-elles ouvertes sur Redline ? Elles s'ouvrent univers par univers (fermées par défaut, réglage du back-office) ; la page P-88 dit seulement que l'onglet peut manquer.
-- `players-13` ⏳ **Éditorial** : un membre en période d'intégration qui viole un pacte ne coûte aucun point de fair-play à son alliance. Faut-il l'écrire dans le wiki ? (non publié pour l'instant)
-- `bank-01` ⏳ **Éditorial** : la boutique appelle « Crédits » l'onglet des packs de Points stellaires et « Ajouter des crédits » sa recharge, alors que les Crédits de la Banque stellaire ne s'achètent pas. Risque de confusion avec un achat qui donnerait un avantage de jeu (voir `patch-04`). P-106 précise que les deux n'ont rien à voir ; à trancher par le responsable, et à remonter à l'équipe (DONNEES §11.9).
+- `players-12` ✅ (responsable, 15 octobre 2026) Oui : encart « Par défaut : fermées · Redline : ouvertes » ajouté à P-88. (Question : Les missions d'alliance sont-elles ouvertes sur Redline ? Elles s'ouvrent univers par univers (fermées par défaut, réglage du back-office) ; la page P-88 dit seulement que l'onglet peut manquer.)
+- `players-13` ✅ (responsable, 15 octobre 2026) Oui, c'est écrit sur P-87 (règle 3), FR et EN. (Question **éditoriale** : un membre en période d'intégration qui viole un pacte ne coûte aucun point de fair-play à son alliance. Faut-il l'écrire dans le wiki ?)
+- `bank-01` ✅ (responsable, 15 octobre 2026) On laisse comme ça : rien ne change dans le jeu ni dans P-106. (Question **éditoriale** : la boutique appelle « Crédits » l'onglet des packs de Points stellaires et « Ajouter des crédits » sa recharge, alors que les Crédits de la Banque stellaire ne s'achètent pas. Risque de confusion avec un achat qui donnerait un avantage de jeu (voir `patch-04`). P-106 précise que les deux n'ont rien à voir ; à trancher par le responsable, et à remonter à l'équipe (DONNEES §11.9).)
 
 ### Divers
 - `misc-01` ✅ Les flottes en vol arrivent normalement pendant une maintenance.

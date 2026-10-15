@@ -43,6 +43,7 @@ updated: "2026-10-02T16:38:46.269Z"
 | 3 | Standard, Advanced, Epic | 1 | 3 |
 
 > **Universe setting**: alliance missions open universe by universe. If the Missions tab does not show, they are not open in your universe yet.
+> Default: **closed** · Redline: **open**
 {.is-info}
 
 ### Missions

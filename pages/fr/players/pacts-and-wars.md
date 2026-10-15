@@ -21,7 +21,7 @@ updated: "2026-10-02T16:37:11.245Z"
 ### Pactes
 1. Deux types de pacte : **non-agression** et **alliance**.
 2. Un pacte ne lie personne tant que **l'autre alliance ne l'a pas signé**.
-3. **Attaquer** un membre d'une alliance liée par un pacte reste possible, mais l'attaque est enregistrée comme une **violation** et coûte du fair-play à votre alliance : **10 points** pour un pacte de non-agression, **15 points** pour un pacte d'alliance. Rappeler la flotte n'annule pas la violation. Seuls comptent les raids et les tirs de missiles ; l'espionnage et le transport, non. Une alliance ne perd pas plus de **30 points** de fair-play par jour.
+3. **Attaquer** un membre d'une alliance liée par un pacte reste possible, mais l'attaque est enregistrée comme une **violation** et coûte du fair-play à votre alliance : **10 points** pour un pacte de non-agression, **15 points** pour un pacte d'alliance. Rappeler la flotte n'annule pas la violation. Seuls comptent les raids et les tirs de missiles ; l'espionnage et le transport, non. Une alliance ne perd pas plus de **30 points** de fair-play par jour. Une violation commise par un membre encore en [période d'intégration](/fr/players/alliances) (ses 24 premières heures) ne coûte rien à l'alliance, mais elle reste inscrite.
 4. **Dénoncer** un pacte est public et irréversible. Le pacte reste valable **24 heures** après la dénonciation : attaquer pendant ce préavis reste une violation.
 5. Rompre proprement un pacte ne coûte rien, mais demande ces 24 heures de préavis. **Déclarer la guerre** à une alliance liée par un pacte compte comme une violation, au même tarif, et met fin au pacte sur-le-champ.
 

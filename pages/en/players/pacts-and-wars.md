@@ -21,7 +21,7 @@ updated: "2026-10-02T16:38:44.716Z"
 ### Pacts
 1. Two kinds of pact: **non-aggression** and **alliance**.
 2. A pact binds nobody until **the other alliance has signed it**.
-3. **Attacking** a member of an alliance bound by a pact is still possible, but the attack is recorded as a **violation** and costs your alliance fair-play points: **10 points** for a non-aggression pact, **15 points** for an alliance pact. Recalling the fleet does not undo the violation. Only raids and missile strikes count; espionage and transport do not. An alliance loses no more than **30** fair-play points per day.
+3. **Attacking** a member of an alliance bound by a pact is still possible, but the attack is recorded as a **violation** and costs your alliance fair-play points: **10 points** for a non-aggression pact, **15 points** for an alliance pact. Recalling the fleet does not undo the violation. Only raids and missile strikes count; espionage and transport do not. An alliance loses no more than **30** fair-play points per day. A violation by a member still in their [settling-in period](/en/players/alliances) (their first 24 hours) costs the alliance nothing, but it stays on record.
 4. **Denouncing** a pact is public and cannot be undone. The pact still binds for **24 hours** after denunciation: attacking during that notice is still a violation.
 5. Breaking a pact cleanly costs nothing, but takes those 24 hours of notice. **Declaring war** on an alliance bound by a pact counts as a violation, at the same price, and ends the pact on the spot.
 

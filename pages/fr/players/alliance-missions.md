@@ -43,6 +43,7 @@ updated: "2026-10-02T16:37:12.732Z"
 | 3 | Standard, Avancée, Épique | 1 | 3 |
 
 > **Paramètre d'univers** : les missions d'alliance s'ouvrent univers par univers. Si l'onglet Missions n'apparaît pas, elles ne sont pas encore ouvertes dans votre univers.
+> Par défaut : **fermées** · Redline : **ouvertes**
 {.is-info}
 
 ### Missions
