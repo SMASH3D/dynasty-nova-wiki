@@ -174,6 +174,72 @@ Attention : le code `battle_cruiser` désigne le Colossus (équivalent de l'Éto
 
 ---
 
+## Univers (code, 15 octobre 2026)
+
+Relevé dans `astro-nova-backend` (origin/main 7b255c83) et `Astro-Nova-React` (origin/main), catalogue lu dans un MySQL migré (migrations du même commit). Pages réécrites : `universe`, `universe/universes`, `universe/coordinates`, `universe/galaxy-view`, `universe/planets`, `universe/colonization`, `universe/abandoning-a-planet`, `universe/moons` (FR et EN). Générateurs : `tools/universe_pages/` (`univ_lib.py` porte toutes les constantes ; `python3 tools/universe_pages/p_all.py` régénère). Ce relevé prime sur les §2, §3 et §8 (Lunes, Colonies) quand ils divergent.
+
+### Réglages d'univers et valeurs par défaut
+- Défauts servis par `src/Universe/Domain/ReadModel/UniverseDefaultsReadModel::current()`, chacun lu dans le `default()` de son objet valeur (`src/Shared/Domain/ValueObject/`) :
+  - `UniverseSpeeds::default()` : économie, construction, recherche, chantier, flotte à 1 (la vitesse flotte n'agit que sur la durée des vols, jamais sur la consommation, docblock de la classe) ;
+  - `BashingRule::default()` : 6 attaques, fenêtre 24 h (0 attaque = règle coupée) ;
+  - `BeginnerProtection::default()` : paliers 500 → 1:3, 5 000 → 1:5, 500 000 → 1:10, `inactivityDays` 14 ;
+  - `DebrisRule` : vaisseaux 30 %, défenses 0 % ; `MoonFormation` : 20 %, 2 000 000 ;
+  - `AbandonmentRule` : 60 jours ; bâtiments −1 puis −1 tous les 2 j ; flotte −30 % puis −5 % tous les 2 j ; défenses −35 % puis −5 % tous les 3 j ; satellites −100 % ; verrou ancien propriétaire 30 j ;
+  - `ConstructionQueueCapacity` 2 / 5 ; `BookmarkCapacity` 10 / 200 ; `ExpeditionRule` ouverte ; `CosmicEventRule` : chaque événement fermé (`enabled` false par défaut dans `MeteorImpactRule`, `CometShowerRule`, `GiantImpactRule`).
+- Pas de défaut pour la carte ni les ressources de départ : fixées à la création (`CreateUniverseRequestPayload` : positions par système `Range(9, 20)`, galaxies `<= 100`).
+- Joueurs maximum : appliqué aux seuls univers privés (`Universe::hasRoomForAnotherPlayer()`).
+- Fin d'univers : réservée aux univers privés (`Universe::finish()` lève `UniverseNotFinishableException::becausePublic`). Statuts : `opened`, `closed` (inscriptions fermées), `finished`, `suspended` (`UniverseStatus`).
+- Mode `pvp` / `pve` (`UniverseMode`) : seul `pve` permet l'accélération payante (`allowsPaidAcceleration()`). Non publié (voir PR, point éditorial).
+- Fonctions ouvertes par univers : `Feature` (`launch`, `alliance-missions`), fermées par défaut.
+- Pillage : **pas** un réglage d'univers (taux calculé par `LootRate`, `AttackCombatResolver::plunder()`), retiré du tableau de P-11.
+- Protection nouvel arrivant : `NewcomerProtection::DURATION_DAYS = 7`, fixe.
+- Planète mère : `Base::createFirst()`, `DEFAULT_MOTHER_BASE_SIZE = 163`, ressources = `Universe::getBaseResources()`. Emplacement : `MotherPlanetFinderService` (galaxie puis système tirés, puis position) et `SectorRanges::motherPlanetPreference()` : positions floor(n × 5/15) à ceil(n × 8/15), puis floor(n × 2/15) à ceil(n × 12/15), puis 1 à n (Redline : 5 à 8, puis 2 à 12, puis 1 à 15).
+- Changement de règles d'un univers privé annoncé 24 h avant : `Universe::GAMEPLAY_NOTICE_HOURS`.
+
+### Carte et distances
+- Cases d'un système : positions 1 à n, espace lointain n + 1 (`Universe::getDeepSpaceSector()`), Station stellaire n + 2, **une par système** (`getBankStationSector()`, `CreateMapRegionHandler` crée les deux à chaque système ; le commentaire « one per galaxy » de `SectorType::BANK_STATION` est périmé).
+- Distance : `Game/Domain/ValueObject/Distance.php`, `units()` : 20 000 × ΔG, sinon 2 700 + 95 × ΔS, sinon 1 000 + 5 × ΔP, sinon 5. **Anneaux** depuis le 9 octobre 2026 (commits 3042c4e5 « wrap galaxy distance », #509, et 71ef4a35 « wrap systems round each galaxy », #513) : Δ = min(écart, taille − écart) pour galaxies et systèmes ; positions sans anneau. Remplace `universe-03` « pas circulaire ».
+- Navigation de la vue galaxie : boucle aussi (front `useGalaxyPosition.ts`).
+
+### Planètes
+- `Universe/Domain/Service/PlanetGeneratorService::generate()` : position ramenée sur 15 avec **arrondi** (`round((p − 1) × 14 / (n − 1)) + 1`), taille = moyenne ± 15 (graine par coordonnées), types de `getPositionConfig()`, biome 1 à 6, température base = 160 − 15 × p, min = base − 20, max = base + 20.
+- Température du jour : `Map::getTemperatureAt()` : pic au jour partie entière(jours du mois / 2), interpolation linéaire, arrondi.
+- Facteurs : `BaseTemperature::hydrogenSynthesisFactor()` max(0, round(1,44 − 0,004 × Tmax, 3)) ; `solarPlantFactor()` 1 + max(0, T / 100). Collecteur : partie entière(Tmax / 4 + 20) (repris de `tools/economy_pages/econ_lib.py`, branche `audit-economie`).
+- Cases : `Base::getSize()` ; la Station de réparation n'occupe pas de case (`occupiesField()`).
+- Bonus de position : `Game/Domain/ValueObject/SystemPosition.php` : métal [0,0,0,0,0,17,23,35,23,17,0,…], cristal [40,30,20,0,…] sur 15 ; position lue **sans arrondi** `1 + (p − 1) × 14 / (n − 1)` et interpolation linéaire, arrondie à 0,01 ; production bonus = partie entière(mine × bonus / 100). Planète mère : aucun bonus sauf la part d'un talent (`Base::positionProductionBonus()`, `motherBasePositionBonusPercent()`, DYN-378). Talents qui élargissent le bonus : `amplifiedBy()` (non détaillés dans la rubrique). Tranche `universe-12`.
+
+### Colonisation
+- Places : `UserUniverse::maxBasesForAstrophysics()` = 1 + floor((N + 1) / 2) ; seules les planètes comptent (`ColonizeEligibilityChecker`).
+- Cible espionnée obligatoire, par soi ou son alliance (`ColonizeEligibilityChecker::hasScouted()`, ALL-306).
+- Cibles permises : `MissionTarget::allows(COLONIZE)` : case vide, monde abandonné (sauf ancien propriétaire pendant le verrou), ruine (mécanique des adversaires du jeu, non publiée) ; jamais lune, espace lointain ni station. `FlightPlan` : Pionnier obligatoire, même univers.
+- Arrivée : `ColonizationResolver` : place revérifiée (sinon retour, rapport), un seul Pionnier consommé (`loseColonyShip()`), le reste de la flotte reste en garnison, cargaison déchargée (`Base::colonize()`, ressources = cargaison + `Map::consumeResources()`, ce qui est enfoui par les événements cosmiques). Case déjà occupée par un autre joueur : retour sans combat (`ColonizationCombatResolver` vide, TODO).
+- Reprise d'un monde abandonné : `takeOver()` : dégradation soldée, tout reste (bâtiments, ressources, flotte, défenses, lune).
+- Nouvelle colonie sans bâtiment : `Base::colonize()` passe `firstBuilding: null` ; Base planetaire (Base Coloniale) = bâtiment d'ancrage, préalable à tout autre (`BaseKind::anchorBuilding()`, `Base::checkAnchorBuilding()`), coût 0, durée fixe 10 s (`Building::PLANETARY_BASE_BUILDING_TIME`). Avant elle, stockage de repli 10 000 (`Base::getStorageDetail()`). Pionnier : MySQL `ship` (`colony_ship`) 10 000 / 20 000 / 10 000, structure 30 000, fret 7 500, vitesse 2 500, impulsion, conso 1 000, prérequis Dock orbital 4, Moteur Magnétique 3, Cosmologie Appliquée 1.
+
+### Abandon
+- Conditions : `Game/Domain/Service/AbandonEligibilityChecker::blockersFor()` : planète mère ; ordres `PENDING`/`QUEUED` sur la planète (bâtiment, vaisseau ou réparation, défense, recherche) ; activité sur la lune ; flotte du propriétaire touchant la case (`hasMovementTouchingMap`) ; missiles en vol depuis la case. Libellés : front `pages/planet.json`, `abandon.blockers`.
+- `AbandonBaseHandler` : une lune ne s'abandonne pas seule ; production soldée ; planète et lune abandonnées ; choc `Base::applyAbandonmentShock()` sur les deux (floor par type ; satellites au taux satellites, sans débris ; épaves des autres vaisseaux au taux de débris vaisseaux de l'univers ; défenses sans débris) ; joueur ramené sur sa planète mère ; points retirés (`BaseAbandonedEvent`).
+- Dégradation : `Base::settleAbandonmentDecay()`, pertes composées, au moins 1 unité par pas (`wastedAway()`). Ressources jamais dégradées.
+- Fin : `ExpireAbandonedBasesHandler` : 60 jours (`AbandonmentRule::hasExpired()`) ou planète et lune vides (`isStrippedBare()` : bâtiments à 0, ni vaisseau ni défense) ; tout disparaît sauf les débris ; nom d'origine rendu.
+- Transport interdit vers un monde abandonné (`MissionTarget::allows(TRANSPORT)`) ; limite d'attaques non appliquée (pas de défenseur, `SendFleetHandler`).
+
+### Lunes
+- Formation : `Game/Domain/Service/MoonFormationResolver` (débris de ce combat seulement, lune au propriétaire de la planète, débris non consommés, une lune par case) ; chance `MoonFormation::chanceFor()` = min(débris métal + cristal × max / plafond, max), nulle sous plafond / max.
+- Taille : `MoonDiameter::roll()` : cases = 10 + X + 300 × p, X entier tiré de 0 à 10, p = max(0,01, min(1, chance / max) × 0,20) ; diamètre = floor(1 000 × √cases) ; plafond = floor((diamètre / 1 000)²). Le wiki ne publie que les bornes (X = 0 et X = 10), pas le tirage.
+- Impact géant (événements cosmiques) : `MoonFormationResolver::resolveImpact()`, fermé par défaut ; chance non publiée.
+- Cases : `Base::MOON_INITIAL_SIZE = 1`, `LUNAR_BASE_FIELDS_PER_LEVEL = 3`, `moonFields()` plafonnées par le diamètre ; talents *Lunes creusées* et levée du plafond (`moonDiameterUnbound`) mentionnés sans détail.
+- Bâtiments (MySQL `building`, `scope`) : `lunar_base` 20 000 / 40 000 / 20 000, ×2, sans prérequis ni maximum, ancrage de la lune (`BaseKind::anchorBuilding()`, non démolissable) ; `sensor_phalanx` 20 000 / 40 000 / 20 000, ×2, Base lunaire 1 (tranche `moon-02`) ; `jump_gate` 2 000 000 / 4 000 000 / 2 000 000, ×2, Base lunaire 1 et `hyperspace` 7 ; `robotic_factory` et `shipyard` en `scope` `both`.
+- Missions vers une lune : front `MissionActionBar.tsx` (espionner, attaquer, détruire, transporter, déployer) ; jamais colonisée (`MissionTarget`).
+
+### Vue galaxie (front `src/features/galaxy`, `src/features/planets/page/GalaxyPage.tsx` ; back `MapReadModel::fromEntity()`)
+- Statuts `owned`, `spied`, `discovered`, `empty`, `unknown` (`MapStatus`). Une case est révélée par un espionnage arrivé, du joueur ou d'un membre de son alliance (`SpyMissionResolver` l. 332-358), **sans expiration** (`DiscoveryStatus`, `SpyDiscovery`) ; `discovered` (Renseignement Tactique ≥ 10) et `spied` s'affichent de la même façon (`PlanetModal.tsx`). Contredit l'ancienne règle « avec RT 10, la case reste découverte durablement ».
+- Badges (`PlanetCellBadges.tsx`, `utils/cellBadges.ts`, libellés `pages/planet.json`, `newcomer.json`), « Espionnée récemment » = moins de 5 min (`cellPresentation.ts`).
+- Espionnage rapide : 1 sonde, vitesse 100 % (`utils/quickSpy.ts`). Partage d'alliance : rétention 30 j (`alliance_chat_retention_days`, `config/services.yaml`). Raccourcis : `useGalaxyKeyboardNavigation.ts`. Affichages Orbites / Liste : `PlanetGrid.tsx`, `galaxyViewStore.ts`.
+- Lignes spéciales : `DeepSpaceRow.tsx`, `BankStationRow.tsx` (libellés `pages/bank.json`, « Station stellaire », « Ouvrir la station »).
+- Coloniser et recycler exigent une case espionnée (`AllowedMissions.php`).
+
+---
+
 ## 4. Bâtiments (`/buildings`, `/buildings/{code}`)
 
 Coût du niveau N = coût du niveau 1 × facteur^(N−1). Points = (métal + cristal + hydrogène) / 1 000.

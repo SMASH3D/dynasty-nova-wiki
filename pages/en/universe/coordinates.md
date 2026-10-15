@@ -13,69 +13,65 @@ updated: "2026-10-05T19:40:28.716Z"
 
 # Coordinates
 
-> **In short**: every planet has a three-number address, [galaxy:system:position], for example [2:83:6]. The number of galaxies, of systems per galaxy and of positions per system depends on the universe (9 galaxies of 99 systems on Redline). The distance between two coordinates sets a flight's duration and hydrogen cost.
+> **In short**: every planet has a three-number address, [galaxy:system:position], for example [2:83:6]. The number of galaxies, systems per galaxy and positions per system depends on the universe. The map **wraps around**: the last galaxy is next to the first one, and the last system of a galaxy is next to its first one. The distance between two coordinates sets a flight's duration and hydrogen cost.
 {.is-info}
 
-> **Universe setting**: the number of galaxies, of systems per galaxy and of positions per system (9 to 20) depends on the universe.
-> Redline: **9 galaxies**, **99 systems** per galaxy, **15 positions** per system
+> **Universe setting**: the number of galaxies, systems per galaxy and positions per system (9 to 20) is set when the universe is created.
+> Default: **none, each universe has its own** · Redline: **9 galaxies, 99 systems, 15 positions**
 {.is-info}
 
 ## Rules
 
-1. A coordinate reads **[galaxy:system:position]**.
-2. Each galaxy has a fixed number of **systems**, which depends on the universe: **99** on Redline, numbered 1 to 99.
-3. Each system has a fixed number of **positions** (15 on Redline). Each position holds at most one planet, plus possibly its moon.
-4. Beyond the last position lies **deep space**, reserved for expeditions.
-5. **The map is not circular**: galaxy 9 is not next to galaxy 1, and the last system is not next to the first.
-6. The **distance** between two points depends on what separates them (table below).
+1. A coordinate is written **[galaxy:system:position]**.
+2. Every galaxy has the same number of **systems**: 99 on Redline, numbered 1 to 99.
+3. Every system has the same number of **positions**: 15 on Redline. Each position holds at most one planet, and possibly its moon.
+4. After the last position, each system has two more cells, with no planet:
+   - **deep space** (position 16 on Redline), for expeditions and recycling;
+   - the **Stellar Station** (position 17 on Redline), home of the Stellar Bank and the alliance treasury.
+5. **The map wraps around on galaxies and on systems**: from galaxy 9 to galaxy 1 the gap is 1, as from galaxy 1 to galaxy 2. Likewise, system 99 is next to system 1 in the same galaxy. The game always takes the shorter way.
+6. **Positions do not wrap**: from position 1 to position 15, the gap is 14.
+7. The **distance** between two points depends only on the largest gap (table below): a galaxy gap outweighs everything else, then a system gap, then a position gap.
 
-## Summarized data
+## Formulas
 
-| Trip | Distance |
-|---|---|
-| To another galaxy | 20,000 × galaxy gap |
-| Same galaxy, other system | 2,700 + 95 × system gap |
-| Same system | 1,000 + 5 × position gap |
-| Between a planet and its moon | 5 |
+With $\Delta G$, $\Delta S$ and $\Delta P$ the galaxy, system and position gaps:
 
-Deep space counts as the position after the last one: on Redline, position 16.
+$$
+D = \begin{cases}
+20{,}000 \times \Delta G & \text{if } \Delta G > 0 \\
+2{,}700 + 95 \times \Delta S & \text{else, if } \Delta S > 0 \\
+1{,}000 + 5 \times \Delta P & \text{else, if } \Delta P > 0 \\
+5 & \text{between a planet and its moon}
+\end{cases}
+$$
 
-## Calculation
-
-**Travel from Galaxy G1 to Galaxy G2** 
-
-The distance from any planet in one galaxy to a planet in a different galaxy is: 
-
-$$ D = 20\,000 \times |G_1 - G_2| $$
-
-**Travel from System S1 to System S2**
-
-The distance from any planet in one system to any planet in a different system is: 
-$$ D = 2\,700 + 95 \times |S_1 - S_2| $$
-
-**Travel from Planet P1 to Planet P2**
-
-The distance between two planets in the same system is: 
-$$ D = 1\,000 + 5 \times |P_1 - P_2| $$
+- $\Delta G = \min(|G_1 - G_2|,\ n_G - |G_1 - G_2|)$, with $n_G$ the universe's number of galaxies;
+- $\Delta S = \min(|S_1 - S_2|,\ n_S - |S_1 - S_2|)$, with $n_S$ the number of systems per galaxy;
+- $\Delta P = |P_1 - P_2|$;
+- $D$: the flight distance, which feeds its duration and consumption (see [Movement](/en/fleet/movement)).
 
 ## Worked examples
 
-- to travel from any planet in galaxy 3 to a planet in galaxy 5 is:
-$$ D = 20\,000 \times |3 - 5| = 40\,000 $$
-- to travel from any planet in system 45 to a planet in system 50 is:
-  $$ D = 2\,700 + 95 \times |45 - 50| = 3\,175 $$
-- to travel from planet 3 to planet 6 in the same system is:
-  $$ D = 1\,000 + 5 \times |3 - 6| = 1\,015 $$
+On Redline (9 galaxies, 99 systems):
+
+| Trip | Gap used | Distance |
+|---|---|---|
+| [3:40:8] to [5:40:8] | 2 galaxies | 20,000 × 2 = **40,000** |
+| [1:40:8] to [9:40:8] | 1 galaxy (the map wraps) | 20,000 × 1 = **20,000** |
+| [2:45:8] to [2:50:8] | 5 systems | 2,700 + 95 × 5 = **3,175** |
+| [2:97:8] to [2:3:8] | 5 systems (the galaxy wraps) | 2,700 + 95 × 5 = **3,175** |
+| [2:45:3] to [2:45:6] | 3 positions | 1,000 + 5 × 3 = **1,015** |
+| [2:45:3] to its moon | same cell | **5** |
 
 ## Common pitfalls
 
-- **Crossing galaxies is expensive**: a single galaxy gap is already worth more than crossing a whole 99-system galaxy like Redline's (2,700 + 95 × 98 = 12,010).
-- **No shortcut over the edge**: from galaxy 1 to galaxy 9, the gap is 8 galaxies.
-- **Planet and moon are not in the same spot**: a distance of 5 is still a real, very short flight.
+- **Changing galaxy is expensive**: a single galaxy gap (20,000) is worth more than the longest trip inside a Redline galaxy, 49 systems apart at most thanks to the wrap (2,700 + 95 × 49 = 7,355).
+- **Remember the wrap**: a target in galaxy 9 is only one galaxy away if you are in galaxy 1.
+- **A planet and its moon are not in the same place**: a trip of 5 is still a real, very short flight.
 
 ## Related pages
 
 - [The galaxy view](/en/universe/galaxy-view)
-- [Fleet movement](/en/fleet/movement)
+- [Movement](/en/fleet/movement)
 - [Planets: size, temperature, type](/en/universe/planets)
 - [Expeditions](/en/fleet/expeditions)

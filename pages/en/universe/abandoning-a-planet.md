@@ -13,57 +13,74 @@ updated: "2026-10-02T16:37:41.403Z"
 
 # Abandoning a colony
 
-> **In short**: you can permanently abandon a colony to free its slot. The planet stays on the map with what it holds, decays for 60 days, then disappears. Any other player can plunder or recolonize it meanwhile.
+> **In short**: you can give up a colony for good to get its slot back. The planet stays on the map with what it holds, but immediately loses part of its buildings, fleet and defenses, then decays until it disappears after 60 days. Any other player can raid or recolonize it in the meantime, and then gets what is left.
 {.is-info}
 
-> **Universe setting**: decay rules for an abandoned planet may differ from one universe to another. The values below are Redline's.
+> **Universe setting**: every decay value of an abandoned planet (immediate losses, pace of losses, lifetime, delay before the former owner can take it back) may differ from one universe to another.
+> Default: **values in the table below** · Redline: **the same**
 {.is-info}
 
 ## Rules
 
 ### Conditions
-1. The **mother planet** cannot be abandoned.
-2. Abandoning is impossible while something is running on the planet: construction, ship or defense order, research started from this planet, fleet in movement, missile strike in flight, activity on its moon.
+1. The **mother planet** cannot be abandoned. A moon is never abandoned on its own: it leaves with its planet.
+2. Abandoning is impossible while something is under way **on this planet or its moon**: building, ship or defense construction, repair, research started from this planet, a fleet travelling from or to it, a missile strike still in flight. The game lists everything that blocks it. Your other planets may be busy.
 3. To confirm, you must type the planet's name. **Abandoning cannot be undone.**
 
 ### Immediate consequences
-4. You lose the planet **for good**. Nothing is refunded.
-5. You get a **colony slot back immediately**.
-6. Resources stay where they are. Production stops.
-7. Buildings lose **1 level**. Part of the fleet (**30%**) and of the defenses (**35%**) is destroyed. Solar Collectors are **all lost**.
-8. The planet's **moon**, and everything on it, goes with it.
+4. You lose the planet **for good**. Nothing is refunded, and its points leave your score.
+5. You get **a colony slot back at once**. If you were looking at that planet, the game takes you back to your mother planet.
+6. Resources stay where they are, and never decay. Production stops.
+7. The **first shock**, on the planet as on its moon: each building loses **1 level**, the fleet loses **30%** of each ship type and the defenses **35%** of each type (rounded down). Solar Collectors are **all lost**.
+8. Ships destroyed by this shock leave a **debris field** in orbit, at the universe's ship debris rate (30% by default). Defenses and Solar Collectors leave none.
+9. The planet's **moon**, and everything on it, is abandoned along with it.
 
 ### Afterwards
-9. Buildings lose 1 level **every 2 days**. The remaining fleet loses 5% every 2 days, defenses 5% every 3 days.
-10. Other players can **spy on, plunder or recolonize** it. Whoever recolonizes it gets the remaining buildings.
-11. The attack limit does not apply to abandoned planets.
-12. After **60 days**, the planet disappears. Debris fields in orbit remain.
-13. The former owner cannot recolonize it for **30 days**.
+10. Buildings lose 1 level **every 2 days**. The remaining fleet loses 5% of what is left every 2 days, the defenses 5% every 3 days: at least one unit each time, as long as any are left.
+11. Other players can **spy on, attack, raid or recolonize** it. Nobody can transport resources to it. The attack limit does not apply: the planet no longer has an owner.
+12. Whoever recolonizes it takes over **everything left**, moon included, and the decay stops.
+13. The planet **disappears** after **60 days**, or earlier once nothing is left on it or its moon (every building at 0, no ship or defense left). Resources go with it; the position becomes free again, under its original name. Debris fields in orbit stay.
+14. The former owner cannot recolonize it for **30 days**.
 
 ## Worked example
 
-You abandon a colony whose Mineral Excavator is level 10:
-- Right away: level **9**.
-- After 2 days: level **8**; after 4 days: level **7**; and so on.
-- If a player recolonizes it after 6 days, they get a level **6** Excavator.
+You abandon a colony with a level 10 Mineral Excavator, 1,000 Interceptors, 200 defenses of one type and 50 Solar Collectors.
+- At once: Excavator level **9**; 300 Interceptors destroyed, **700** left; **130** defenses left; no Solar Collector left.
+- The 300 destroyed Interceptors leave 300 × 3,000 × 30% = **270,000 metal** and 300 × 1,000 × 30% = **90,000 crystal** of debris.
+- The Excavator reaches 0 after 18 days. The planet still lasts 60 days, as long as ships or defenses are left.
+
+What is left over the days:
+
+| Day | Mineral Excavator | Interceptors | Defenses |
+|---|---|---|---|
+| 0 | 9 | 700 | 130 |
+| 2 | 8 | 665 | 130 |
+| 6 | 6 | 601 | 118 |
+| 10 | 4 | 543 | 113 |
+| 20 | 0 | 422 | 98 |
+| 40 | 0 | 255 | 72 |
+| 60 | 0 | 156 | 53 |
+
+If a player recolonizes it after 6 days, they get the Excavator at level **6**, 601 Interceptors, 118 defenses and all the resources.
 
 ## Detailed data
 
-| Item | Immediate loss | Later loss |
+| Item | Immediate loss | Loss afterwards |
 |---|---|---|
 | Buildings | −1 level | −1 level every 2 days |
-| Fleet | −30% | −5% every 2 days |
-| Defenses | −35% | −5% every 3 days |
-| Solar Collectors | −100% | |
-| Planet | | disappears after 60 days |
-| Recolonization by the former owner | | forbidden for 30 days |
+| Ships | −30% | −5% of what is left every 2 days |
+| Defenses | −35% | −5% of what is left every 3 days |
+| Solar Collectors | −100% |  |
+| Resources | no loss | no loss |
+| Planet |  | disappears after 60 days, or earlier if nothing is left on it |
+| Recolonization by the former owner |  | barred for 30 days |
 
 ## Common pitfalls
 
-- **Empty the planet first**: bring fleet and resources home before abandoning, or they are left to raiders.
-- **The moon is lost too**: a moon and its buildings disappear with the planet.
-- **No going back**: you cannot take the planet back for 30 days, and it will have kept decaying.
-- **Everything must be idle**: a construction, a research or a fleet on the move blocks abandonment.
+- **Empty the planet first**: bring fleet and resources home before abandoning, or they stay at the mercy of raiders and of whoever recolonizes it.
+- **The moon is lost too**: a moon and its buildings leave with the planet.
+- **No way back**: you cannot take it back for 30 days, and it will have kept decaying.
+- **Everything must be idle, moon included**: a construction, a research or a fleet on its way blocks the abandonment.
 
 ## Related pages
 

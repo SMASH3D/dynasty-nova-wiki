@@ -17,10 +17,10 @@ updated: "2026-10-02T16:35:58.682Z"
 
 ## Pages de cette rubrique
 
-- [Les univers](/fr/universe/universes)
-- [Coordonnées](/fr/universe/coordinates)
-- [La vue galaxie](/fr/universe/galaxy-view)
-- [Planètes : taille, température, type](/fr/universe/planets)
-- [Coloniser](/fr/universe/colonization)
-- [Abandonner une colonie](/fr/universe/abandoning-a-planet)
-- [Les lunes](/fr/universe/moons)
+- [Les univers](/fr/universe/universes) : parties indépendantes, réglages, vitesses, arrivée dans un univers
+- [Coordonnées](/fr/universe/coordinates) : galaxie, système, position, carte qui boucle, distances
+- [La vue galaxie](/fr/universe/galaxy-view) : cases inexplorées, badges, espace lointain, Station stellaire
+- [Planètes : taille, température, type](/fr/universe/planets) : cases, température, bonus de position
+- [Coloniser](/fr/universe/colonization) : Pionnier spatial, Cosmologie Appliquée, planètes abandonnées
+- [Abandonner une colonie](/fr/universe/abandoning-a-planet) : conditions, premier choc, dégradation
+- [Les lunes](/fr/universe/moons) : formation, diamètre, cases, Base lunaire

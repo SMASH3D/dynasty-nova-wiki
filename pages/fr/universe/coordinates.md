@@ -13,65 +13,60 @@ updated: "2026-10-05T19:40:03.613Z"
 
 # Coordonnées
 
-> **En bref** : chaque planète a une adresse à trois nombres, [galaxie:système:position], par exemple [2:83:6]. Le nombre de galaxies, de systèmes par galaxie et de positions par système dépend de l'univers (9 galaxies de 99 systèmes sur Redline). La distance entre deux coordonnées fixe la durée et le coût en hydrogène d'un vol.
+> **En bref** : chaque planète a une adresse à trois nombres, [galaxie:système:position], par exemple [2:83:6]. Le nombre de galaxies, de systèmes par galaxie et de positions par système dépend de l'univers. La carte **boucle** : la dernière galaxie est voisine de la première, et le dernier système d'une galaxie voisin du premier. La distance entre deux coordonnées fixe la durée et le coût en hydrogène d'un vol.
 {.is-info}
 
-> **Paramètre d'univers** : le nombre de galaxies, le nombre de systèmes par galaxie et le nombre de positions par système (de 9 à 20) dépendent de l'univers.
-> Redline : **9 galaxies**, **99 systèmes** par galaxie, **15 positions** par système
+> **Paramètre d'univers** : le nombre de galaxies, de systèmes par galaxie et de positions par système (de 9 à 20) est fixé à la création de l'univers.
+> Par défaut : **aucun, chaque univers a le sien** · Redline : **9 galaxies, 99 systèmes, 15 positions**
 {.is-info}
 
 ## Règles
 
 1. Une coordonnée s'écrit **[galaxie:système:position]**.
-2. Chaque galaxie compte un nombre fixe de **systèmes**, qui dépend de l'univers : **99** sur Redline, numérotés de 1 à 99.
-3. Chaque système compte un nombre fixe de **positions** (15 sur Redline). Chaque position accueille au plus une planète, et éventuellement sa lune.
-4. Au-delà de la dernière position s'étend l'**espace lointain**, réservé aux expéditions.
-5. **La carte n'est pas circulaire** : la galaxie 9 n'est pas voisine de la galaxie 1, et le dernier système n'est pas voisin du premier.
-6. La **distance** entre deux points dépend de ce qui les sépare (table ci-dessous).
-
-## En résumé
-
-| Trajet | Distance |
-|---|---|
-| Vers une autre galaxie | 20 000 × écart de galaxies |
-| Dans la même galaxie, vers un autre système | 2 700 + 95 × écart de systèmes |
-| Dans le même système | 1 000 + 5 × écart de positions |
-| Entre une planète et sa lune | 5 |
-
-L'espace lointain compte comme la position qui suit la dernière : sur Redline, la position 16.
+2. Chaque galaxie compte le même nombre de **systèmes** : 99 sur Redline, numérotés de 1 à 99.
+3. Chaque système compte le même nombre de **positions** : 15 sur Redline. Chaque position accueille au plus une planète, et éventuellement sa lune.
+4. Après la dernière position, chaque système a deux cases de plus, sans planète :
+   - l'**espace lointain** (position 16 sur Redline), pour les expéditions et le recyclage ;
+   - la **Station stellaire** (position 17 sur Redline), où se trouvent la Banque stellaire et la trésorerie d'alliance.
+5. **La carte boucle sur les galaxies et sur les systèmes** : de la galaxie 9 à la galaxie 1, l'écart est de 1, comme de la galaxie 1 à la galaxie 2. De même, le système 99 est voisin du système 1 dans la même galaxie. Le jeu prend toujours le plus court des deux sens.
+6. Les **positions ne bouclent pas** : de la position 1 à la position 15, l'écart est de 14.
+7. La **distance** entre deux points ne dépend que de l'écart le plus important (tableau ci-dessous) : un écart de galaxie l'emporte sur tout le reste, puis un écart de système, puis un écart de position.
 
 ## Formules
 
-**Voyage de la galaxie G1 vers la galaxie G2**
+Avec $\Delta G$, $\Delta S$ et $\Delta P$ les écarts de galaxie, de système et de position :
 
-La distance entre une planète d'une galaxie et une planète d'une autre galaxie est :
-$$ D = 20\,000 \times |G_1 - G_2| $$
+$$
+D = \begin{cases}
+20\,000 \times \Delta G & \text{si } \Delta G > 0 \\
+2\,700 + 95 \times \Delta S & \text{sinon, si } \Delta S > 0 \\
+1\,000 + 5 \times \Delta P & \text{sinon, si } \Delta P > 0 \\
+5 & \text{entre une planète et sa lune}
+\end{cases}
+$$
 
-**Voyage du système S1 vers le système S2**
-
-La distance entre une planète d'un système et une planète d'un autre système est :
-$$ D = 2\,700 + 95 \times |S_1 - S_2| $$
-par exemple, 
-
-**Voyage de la planète P1 vers la planète P2**
-
-La distance entre deux planètes d'un même système est :
-$$ D = 1\,000 + 5 \times |P_1 - P_2| $$
+- $\Delta G = \min(|G_1 - G_2|,\ n_G - |G_1 - G_2|)$, avec $n_G$ le nombre de galaxies de l'univers ;
+- $\Delta S = \min(|S_1 - S_2|,\ n_S - |S_1 - S_2|)$, avec $n_S$ le nombre de systèmes par galaxie ;
+- $\Delta P = |P_1 - P_2|$ ;
+- $D$ : distance du vol, qui entre dans sa durée et sa consommation (voir [Déplacements](/fr/fleet/movement)).
 
 ## Exemples chiffrés
 
-- pour voyager d'une planète de la galaxie 3 vers une planète de la galaxie 5 :
-$$ D = 20\,000 \times |3 - 5| = 40\,000 $$
-- pour voyager d'une planète du système 45 vers une planète du système 50 :
-  $$ D = 2\,700 + 95 \times |45 - 50| = 3\,175 $$
-- pour voyager de la planète 3 vers la planète 6 dans le même système :
-$$ D = 1\,000 + 5 \times |3 - 6| = 1\,015 $$
-- vers votre lune : **5**.
+Sur Redline (9 galaxies, 99 systèmes) :
+
+| Trajet | Écart retenu | Distance |
+|---|---|---|
+| [3:40:8] vers [5:40:8] | 2 galaxies | 20 000 × 2 = **40 000** |
+| [1:40:8] vers [9:40:8] | 1 galaxie (la carte boucle) | 20 000 × 1 = **20 000** |
+| [2:45:8] vers [2:50:8] | 5 systèmes | 2 700 + 95 × 5 = **3 175** |
+| [2:97:8] vers [2:3:8] | 5 systèmes (la galaxie boucle) | 2 700 + 95 × 5 = **3 175** |
+| [2:45:3] vers [2:45:6] | 3 positions | 1 000 + 5 × 3 = **1 015** |
+| [2:45:3] vers sa lune | même case | **5** |
 
 ## Pièges fréquents
 
-- **Aller d'une galaxie à l'autre coûte cher** : une seule galaxie d'écart (20 000) vaut déjà plus que la traversée complète d'une galaxie de 99 systèmes comme celles de Redline (2 700 + 95 × 98 = 12 010).
-- **Pas de raccourci par le bord** : de la galaxie 1 à la galaxie 9, l'écart est de 8 galaxies.
+- **Changer de galaxie coûte cher** : une seule galaxie d'écart (20 000) vaut plus que le trajet le plus long à l'intérieur d'une galaxie de Redline, 49 systèmes d'écart au plus grâce à la boucle (2 700 + 95 × 49 = 7 355).
+- **Pensez à la boucle** : une cible dans la galaxie 9 est à une seule galaxie de vous si vous êtes dans la galaxie 1.
 - **Planète et lune ne sont pas au même endroit** : un trajet de 5 reste un vrai vol, très court.
 
 ## Pages liées
