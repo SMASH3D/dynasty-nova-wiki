@@ -21,34 +21,45 @@ game_version: "Serveur 2.1.0 · Client 3.1.0"
 
 ## Règles
 
-1. **Un seul exemplaire de chaque** par planète : impossible d'en commander ou d'en mettre en file un deuxième tant que le premier existe.
+1. **Un seul exemplaire de chaque** par planète. Une commande ne peut porter que sur une unité, et elle est refusée s'il en existe déjà une sur la planète ou dans la file.
 2. En combat, ce sont des **cibles ordinaires** dotées d'un gros bouclier individuel. Elles **ne créent pas de bouclier global** autour de la planète.
-3. Comme toute défense, elles ont **70 % de chances** d'être réparées après avoir été détruites, et 30 % d'être perdues définitivement. Vous pouvez alors en reconstruire une.
-4. Elles tirent très peu (attaque 1) : leur rôle est d'absorber des tirs.
-5. Détruites par des Ogives longue portée, elles sont perdues définitivement. Sans cible désignée, les Ogives frappent d'abord la défense la plus robuste : souvent le Dôme.
+3. Elles tirent très peu (attaque 1) : leur rôle est d'absorber des tirs.
+4. Un tir inférieur à 1 % de leur bouclier rebondit sans effet (voir [Déroulement d'un combat](/fr/combat/how-combat-works)).
+5. Comme toute défense, elles peuvent être reconstruites gratuitement après un combat (voir [Reconstruction des défenses](/fr/combat/defense-rebuild)). Si elles sont perdues, vous pouvez en reconstruire une.
+6. Face aux missiles, elles comptent bouclier + coque comme les autres défenses. Sans cible désignée, les Ogives frappent d'abord la défense la plus résistante : souvent le Dôme. Détruites par des Ogives, elles sont perdues (voir [Missiles](/fr/defense/missiles)).
 
 ## Exemple chiffré
 
-Un Dôme protecteur (bouclier 10 000, coque 10 000) face à des Intercepteurs (attaque 50) :
-- Seuil du 1 % : 100. L'attaque de 50 est inférieure : **chaque tir rebondit**, le Dôme ne perd rien.
-- Face à des Cuirassés (attaque 1 000), les tirs passent : 10 tirs vident le bouclier, les suivants entament la coque.
+**Un Dôme protecteur sans recherche** (bouclier 10 000, coque 10 000)
+- Seuil du 1 % : 100. Un Intercepteur (vaisseau, attaque 50) est en dessous : **chacun de ses tirs rebondit**, le Dôme ne perd rien.
+- Un Cuirassé (attaque 1 000) passe le seuil : 10 tirs vident le bouclier, les suivants entament la coque.
+
+**Le même Dôme face aux Ogives longue portée**
+- Résistance : 10 000 + 10 000 = **20 000**. Une Ogive fait 12 000 dégâts sans recherche : il en faut **2** qui passent les Intercepteurs.
+- Avec Champs de Protection 6 et Métallurgie Avancée 6 chez le défenseur, la résistance monte à 32 000 : il faut **3** Ogives à un tireur sans recherche, mais **2** à un tireur à Systèmes Offensifs 4 (16 800 par Ogive).
 
 ## Données détaillées
 
-| | Barrière défensive | Dôme protecteur |
+|  | Barrière défensive | Dôme protecteur |
 |---|---|---|
-| Coût | 10 000 métal, 10 000 cristal | 50 000 métal, 50 000 cristal |
+| Coût (métal / cristal) | 10 000 / 10 000 | 50 000 / 50 000 |
+| Points | 20 | 100 |
 | Structure | 20 000 | 100 000 |
 | Coque en combat | 2 000 | 10 000 |
 | Bouclier | 2 000 | 10 000 |
 | Attaque | 1 | 1 |
+| Durée de base | 8 h | 1 j 16 h |
 | Prérequis | Dock orbital 1, Champs de Protection 2 | Dock orbital 6, Champs de Protection 6 |
 | Exemplaires | 1 | 1 |
+| Résistance face aux Ogives (sans recherche) | 4 000 | 20 000 |
+
+La durée de base est divisée par (1 + niveau du Dock orbital) et par 2 à chaque niveau d'Assembleur moléculaire (voir [Liste des défenses](/fr/defense/defenses)).
 
 ## Pièges fréquents
 
 - **Pas de bulle protectrice** : vos autres défenses et vaisseaux restent exposés.
-- **Le Dôme attire les Ogives** : c'est souvent la défense la plus robuste, donc la première visée par une salve sans cible désignée.
+- **Le Dôme attire les Ogives** : c'est souvent la défense la plus résistante, donc la première visée par une salve sans cible désignée.
+- **Pas de deuxième commande en attente** : tant qu'un Dôme est dans la file, un second est refusé.
 
 ## Pages liées
 
