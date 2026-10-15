@@ -1,9 +1,12 @@
-"""Génère le diagramme Mermaid de l'arbre de talents des pages de classe et de l'arbre commun, à partir de leurs tableaux.
+"""Génère le diagramme Mermaid de l'arbre de talents des pages de classe et de l'arbre commun, à partir du code du jeu.
 
-Les tableaux restent la source. Arbre de classe : 3 branches de 9 rangées, 15 points, choix en rangées 3 et 6,
-portes à 5 et 12 points. Arbre commun : 3 branches de 10 rangées, 28 points, choix en rangées 3, 6 et 8,
-portes à 8, 20 et 32 points. Le diagramme est inséré (ou remplacé) dans une section « Vue d'ensemble de l'arbre » placée en tête
-des données détaillées.
+La forme de chaque arbre vient de l'export du serveur (tools/dynasty_pages/talents.json) : rangées, rangs,
+nœuds de choix, portes, ultime ; les noms viennent des textes du client (tools/dynasty_pages/labels.json).
+Arbre de classe : 3 branches de 9 rangées, 15 points, choix en rangées 3 et 6, portes à 5 et 12 points.
+Arbre commun : 3 branches de 10 rangées, 28 points, portes à 8, 20 et 32 points ; choix en rangées 3, 6 et 8
+pour Prospérité et Exploration, en rangées 3 et 6 seulement pour Logistique (sa rangée 8 est une clé).
+Le diagramme est inséré (ou remplacé) dans une section « Vue d'ensemble de l'arbre » placée en tête des
+données détaillées. Le script vérifie aussi que les tableaux de chaque page nomment les nœuds du code, rangée par rangée.
 
 Syntaxe compatible avec Mermaid 8.8.2, la version embarquée par Wiki.js 2 :
 - `graph TB` et non `flowchart TB` (le moteur flowchart de cette version inverse les sous-graphes) ;
@@ -16,6 +19,8 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent / 'pages'
+sys.path.insert(0, str(Path(__file__).resolve().parent / 'dynasty_pages'))
+import dyn_lib  # noqa: E402  (export du code et textes du client)
 
 TEXT = {
     'fr': {'detail': '## Données détaillées', 'title': "### Vue d'ensemble de l'arbre",
@@ -28,11 +33,32 @@ TEXT = {
            'gate': '🔒 {n} points in the tree', 'pt': '{n} pt', 'pts': '{n} pts', 'ultimate': 'ultimate'},
 }
 
-# Forme de chaque arbre : rangées, points par branche, choix possibles, portes (rangée après laquelle elle se place : points).
-TREES = {
-    'class': {'rows': 9, 'points': 15, 'choices': {3, 6}, 'gates': {3: 5, 6: 12}},
-    'common': {'rows': 10, 'points': 28, 'choices': {3, 6, 8}, 'gates': {3: 8, 6: 20, 8: 32}},
-}
+
+
+def shape_of(owner):
+    """Forme d'un arbre lue dans le code : nombre de rangées, points par branche, rangées de choix par branche,
+    portes (rangée après laquelle elle se place : points placés au-dessus)."""
+    branches = dyn_lib.tree(owner)
+    nodes = branches[0]['nodes']
+    gates = {}
+    for previous, node in zip(nodes, nodes[1:]):
+        if node['gate'] > previous['gate']:
+            gates[previous['row']] = node['gate']
+    return {'rows': len(nodes), 'points': sum(x['ranks'] for x in nodes), 'gates': gates,
+            'choices': [{x['row'] for x in b['nodes'] if x['type'] == 'choice'} for b in branches]}
+
+
+def from_code(owner, locale):
+    """[(titre, devise, [(rangée, [noms], points)])] pour chaque branche, de gauche à droite, d'après le code."""
+    result = []
+    for b in dyn_lib.tree(owner):
+        rows = []
+        for x in b['nodes']:
+            names = [dyn_lib.node_name(locale, x['key'], o) for o in (1, 2)] if x['type'] == 'choice' else [dyn_lib.node_name(locale, x['key'])]
+            rows.append((x['row'], [quote(nm) for nm in names], x['ranks']))
+        result.append((dyn_lib.branch_name(locale, b['key']), dyn_lib.branch_motto(locale, b['key']), rows))
+    return result
+
 
 # Palette reprise de l'interface du jeu : fond bleu nuit, or pour les clés et les portes, bleu pour les rangs.
 # Ces couleurs suffisent à un rendu correct ; la feuille assets/talent-tree.css ajoute arrondis, halos et police.
@@ -83,9 +109,7 @@ def parse(text, shape):
         if not b['rows']:
             continue
         rows = b['rows']
-        choices = {r[0] for r in rows if len(r[1]) == 2}
-        if [r[0] for r in rows] != list(range(1, shape['rows'] + 1)) or sum(r[2] for r in rows) != shape['points'] \
-                or not choices <= shape['choices'] or any(len(r[1]) not in (1, 2) for r in rows):
+        if [r[0] for r in rows] != list(range(1, shape['rows'] + 1)) or any(len(r[1]) not in (1, 2) for r in rows):
             raise ValueError(f'branche inattendue : {b["title"]} {rows}')
         match = re.match(r'(.+?)\s*:\s*[«"](.+?)[»"]\s*$', b['title'])
         title, motto = (match.group(1), match.group(2)) if match else (b['title'], b['motto'])
@@ -97,6 +121,15 @@ def parse(text, shape):
 
 def quote(text):
     return text.replace('"', '#quot;')
+
+
+def check_tables(body, owner, locale, shape):
+    """Les tableaux de la page doivent nommer, rangée par rangée, les nœuds du code (choix compris)."""
+    tables = parse(body, shape)
+    for (title, _, rows), (code_title, _, code_rows) in zip(tables, from_code(owner, locale)):
+        for (number, names, _), (_, code_names, _) in zip(rows, code_rows):
+            if [quote(nm) for nm in names] != code_names:
+                raise ValueError(f'{locale}/{owner}, {title}, rangée {number} : {names} au lieu de {code_names}')
 
 
 def diagram(branches, t, shape):
@@ -155,12 +188,22 @@ def pages():
         yield ROOT / locale / 'dynasty' / 'common-tree.md', locale, 'common'
 
 
+def owner_of(path, kind):
+    return 'common' if kind == 'common' else path.stem
+
+
+def section_for(owner, locale, kind):
+    t, shape = TEXT[locale], shape_of(owner)
+    intro = t['intro'].format(tree=t['tree'][kind], where=t['where'][kind])
+    return f'{t["title"]}\n\n{intro}\n\n{diagram(from_code(owner, locale), t, shape)}\n\n'
+
+
 def update(path, locale, kind):
-    t, shape = TEXT[locale], TREES[kind]
+    t, owner = TEXT[locale], owner_of(path, kind)
     text = path.read_text(encoding='utf-8')
     head, body = text.split('\n---\n\n', 1)
-    intro = t['intro'].format(tree=t['tree'][kind], where=t['where'][kind])
-    section = f'{t["title"]}\n\n{intro}\n\n{diagram(parse(body, shape), t, shape)}\n\n'
+    check_tables(body, owner, locale, shape_of(owner))
+    section = section_for(owner, locale, kind)
     if t['title'] in body:
         start = body.index(t['title'])
         end = body.index('\n```\n', body.index('```mermaid', start)) + len('\n```\n\n')
@@ -177,9 +220,8 @@ if __name__ == '__main__':
     if '--print' in sys.argv:  # --print fr/energist ou fr/common-tree : affiche le bloc Mermaid d'une seule page
         locale, name = sys.argv[sys.argv.index('--print') + 1].split('/')
         kind = 'common' if name == 'common-tree' else 'class'
-        path = ROOT / locale / 'dynasty' / ('common-tree.md' if kind == 'common' else f'classes/{name}.md')
-        body = path.read_text(encoding='utf-8').split('\n---\n\n', 1)[1]
-        print(diagram(parse(body, TREES[kind]), TEXT[locale], TREES[kind]))
+        owner = 'common' if kind == 'common' else name
+        print(diagram(from_code(owner, locale), TEXT[locale], shape_of(owner)))
         sys.exit()
     check = '--check' in sys.argv
     for path, locale, kind in pages():
