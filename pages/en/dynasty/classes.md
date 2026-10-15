@@ -8,7 +8,7 @@ description: "The ten playable classes, class mastery and changing class."
 tags: ["dynasty"]
 published: true
 created: "2026-10-06T10:29:59.660Z"
-updated: "2026-10-06T10:30:31.982Z"
+updated: "2026-10-15T18:57:08.137Z"
 ---
 
 # The classes

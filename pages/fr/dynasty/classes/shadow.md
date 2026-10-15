@@ -8,7 +8,7 @@ description: "Arbre de classe de l'Ombre : Pénétration, Discrétion et Contre-
 tags: ["dynasty"]
 published: true
 created: "2026-10-06T10:29:49.095Z"
-updated: "2026-10-07T22:08:27.729Z"
+updated: "2026-10-15T18:57:28.237Z"
 ---
 
 # L'Ombre

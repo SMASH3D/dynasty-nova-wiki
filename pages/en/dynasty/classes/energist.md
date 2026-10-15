@@ -8,7 +8,7 @@ description: "The Energetician's class tree: Overdrive, Plants, Continuity."
 tags: ["dynasty"]
 published: true
 created: "2026-10-06T10:30:15.907Z"
-updated: "2026-10-07T22:08:05.012Z"
+updated: "2026-10-15T18:56:56.381Z"
 ---
 
 # The Energetician

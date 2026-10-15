@@ -8,7 +8,7 @@ description: "The Builder's class tree: Lode, Yard, Foundry."
 tags: ["dynasty"]
 published: true
 created: "2026-10-06T10:30:13.759Z"
-updated: "2026-10-07T22:08:03.388Z"
+updated: "2026-10-15T18:56:54.779Z"
 ---
 
 # The Builder

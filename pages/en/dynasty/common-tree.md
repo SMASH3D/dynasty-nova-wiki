@@ -8,7 +8,7 @@ description: "Prosperity, Exploration and Logistics: the generic bonuses, node b
 tags: ["dynasty"]
 published: true
 created: "2026-10-06T10:30:02.079Z"
-updated: "2026-10-07T22:08:15.538Z"
+updated: "2026-10-15T18:57:09.889Z"
 ---
 
 # The common tree

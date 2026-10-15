@@ -8,7 +8,7 @@ description: "Dynasties, classes, the common tree and the class trees."
 tags: ["dynasty"]
 published: true
 created: "2026-10-06T10:29:57.660Z"
-updated: "2026-10-06T10:30:31.982Z"
+updated: "2026-10-15T18:57:14.721Z"
 ---
 
 # Dynasty and talents

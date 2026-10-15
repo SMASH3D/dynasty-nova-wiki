@@ -8,7 +8,7 @@ description: "L'Héritage, L'Accord et Le Chœur : traits et classes exclusives.
 tags: ["dynasty"]
 published: true
 created: "2026-10-06T10:29:31.825Z"
-updated: "2026-10-06T10:29:57.527Z"
+updated: "2026-10-15T18:57:38.210Z"
 ---
 
 # Les dynasties

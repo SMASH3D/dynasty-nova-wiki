@@ -8,7 +8,7 @@ description: "The two trees, points, gates, the draft, resets and caps."
 tags: ["dynasty"]
 published: true
 created: "2026-10-06T10:30:06.594Z"
-updated: "2026-10-06T10:30:07.976Z"
+updated: "2026-10-15T18:57:13.217Z"
 ---
 
 # Talents

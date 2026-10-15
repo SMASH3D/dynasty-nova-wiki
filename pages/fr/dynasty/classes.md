@@ -8,7 +8,7 @@ description: "Les dix classes jouables, la maîtrise de classe et le changement 
 tags: ["dynasty"]
 published: true
 created: "2026-10-06T10:29:27.274Z"
-updated: "2026-10-06T10:29:57.527Z"
+updated: "2026-10-15T18:57:35.140Z"
 ---
 
 # Les classes

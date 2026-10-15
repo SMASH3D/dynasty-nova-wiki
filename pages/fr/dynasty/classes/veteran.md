@@ -8,7 +8,7 @@ description: "La classe défensive de L'Héritage : Muraille, Relève et Silo."
 tags: ["dynasty"]
 published: true
 created: "2026-10-06T10:29:55.451Z"
-updated: "2026-10-07T22:08:32.225Z"
+updated: "2026-10-15T18:57:33.704Z"
 ---
 
 # Le Vétéran

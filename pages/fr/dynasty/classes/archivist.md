@@ -8,7 +8,7 @@ description: "Arbre de classe de l'Archiviste : Mémoire, Épave, Registre."
 tags: ["dynasty"]
 published: true
 created: "2026-10-06T10:29:38.434Z"
-updated: "2026-10-07T22:08:19.914Z"
+updated: "2026-10-15T18:57:19.718Z"
 ---
 
 # L'Archiviste

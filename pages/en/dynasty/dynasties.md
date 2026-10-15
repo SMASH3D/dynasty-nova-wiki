@@ -8,7 +8,7 @@ description: "The Heritage, The Accord and The Choir: traits and exclusive class
 tags: ["dynasty"]
 published: true
 created: "2026-10-06T10:30:04.323Z"
-updated: "2026-10-06T10:30:31.982Z"
+updated: "2026-10-15T18:57:11.591Z"
 ---
 
 # The dynasties
