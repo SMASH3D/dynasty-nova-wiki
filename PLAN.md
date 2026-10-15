@@ -94,10 +94,10 @@ Chaque page porte un identifiant de page (P-xx). Abréviations : *[B]* = ton bri
 ### `research`, recherche
 | ID | Chemin | Page | Contenu | Sources | Manque |
 |---|---|---|---|---|---|
-| P-30 | `research` | Recherche (index) | | | |
-| P-31 | `research/technologies` | Liste des technologies | Tableau : effet, coût niv. 1, facteur, max, prérequis. | [J] complet | `research-01` |
-| P-32 | `research/tech-tree` | Arbre technologique | Schéma des prérequis (bâtiments, recherches, vaisseaux, défenses). | [J] complet | |
-| P-33 | `research/stellar-collaboration` | Collaboration Stellaire | Réseau de Centres d'innovation. | [J] partiel | `research-02` |
+| P-30 | `research` | Recherche (index) | En bref et sommaire. Réécrite d'après le code le 15 octobre 2026. | code | |
+| P-31 | `research/technologies` | Liste des technologies | Tableau : effet, coût niv. 1, facteur, max, prérequis ; formule de durée, une étude à la fois, Second centre d'innovation, énergie de Manipulation Gravitationnelle, changements de moteur. Réécrite d'après le code le 15 octobre 2026 (`tools/research_pages/`). | code | `research-03` |
+| P-32 | `research/tech-tree` | Arbre technologique | Schéma Mermaid des prérequis entre technologies, chemins complets calculés pour les 14 vaisseaux, 10 défenses, bâtiments et 17 technologies, déblocages. Réécrite d'après le code le 15 octobre 2026. | code | |
+| P-33 | `research/stellar-collaboration` | Collaboration Stellaire | Réseau de Centres d'innovation (`ResearchNetworkCalculator`), talents du Théoricien, gains et coûts. Réécrite d'après le code le 15 octobre 2026. | code | `research-04` |
 
 ### `fleet`, flotte
 | ID | Chemin | Page | Contenu | Sources | Manque |
@@ -290,8 +290,10 @@ En bref · encart « paramètre d'univers » si besoin · Règles · Exemple chi
 - `economy-10` ✅ Le Centre logistique agrandit les entrepôts de 10 % par niveau et n'est plus un prérequis de Diplomatie Stellaire. P-29 rédigée.
 
 ### Recherche
-- `research-01` ✅ Effets détaillés (DONNEES §11.1). Calcul Quantique : 1 + niveau emplacements de flotte. Cosmologie : bases = 1 + partie entière((N + 1) / 2), ce qui confirme `universe-07`.
-- `research-02` ✅ N meilleurs Centres des autres bases au niveau N, s'ils sont au moins au niveau du Centre local.
+- `research-01` ✅ Effets détaillés (DONNEES §11.1). Calcul Quantique : 1 + niveau emplacements de flotte. Cosmologie : bases = 1 + partie entière((N + 1) / 2), ce qui confirme `universe-07`. Confirmé et complété par le code le 15 octobre 2026 (DONNEES §5, « Relevé dans le code ») : Plasma 1 / 0,66 / 0,33 % par niveau, Science Énergétique (Réacteur), portée des missiles, changements de moteur.
+- `research-02` ✅ N meilleurs Centres des autres bases au niveau N, s'ils sont au moins au niveau du Centre local. Confirmé par le code le 15 octobre 2026 (`ResearchNetworkCalculator`) : réseau fixé au lancement, Centre local d'au moins 1, talents du Théoricien en plus.
+- `research-03` ⏳ (code, 15 octobre 2026) Le Récupérateur doit passer au Moteur Magnétique au niveau 17 de cette recherche (`ship.reactor_upgrades`), mais Moteur Magnétique plafonne au niveau 15 : ce changement de moteur est inatteignable. Voulu (seul le passage à la Navigation Transdimensionnelle 15 compte) ou niveau à corriger ? Le wiki ne cite que le passage atteignable.
+- `research-04` ⏳ (texte du jeu, 15 octobre 2026) L'aide du réseau en jeu (`pages.research.network.description`, FR et EN) parle « du Centre d'innovation le plus avancé de votre empire », alors que la Collaboration Stellaire en met jusqu'à N en réseau (N = son niveau). À remonter à l'équipe ; le wiki suit le code.
 
 ### Flotte
 - `fleet-01` ✅ Vaisseaux et défenses payés par unité à la mise en file ; bâtiments et recherches payés au lancement.
