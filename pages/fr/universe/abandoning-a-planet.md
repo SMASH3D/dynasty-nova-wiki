@@ -13,57 +13,74 @@ updated: "2026-10-02T16:36:07.806Z"
 
 # Abandonner une colonie
 
-> **En bref** : vous pouvez abandonner définitivement une colonie pour récupérer sa place. La planète reste sur la carte avec ce qu'elle contient, se dégrade pendant 60 jours puis disparaît. Tout autre joueur peut la piller ou la recoloniser pendant ce temps.
+> **En bref** : vous pouvez abandonner définitivement une colonie pour récupérer sa place. La planète reste sur la carte avec ce qu'elle contient, mais perd aussitôt une partie de ses bâtiments, de sa flotte et de ses défenses, puis se dégrade jusqu'à disparaître au bout de 60 jours. Tout autre joueur peut la piller ou la recoloniser pendant ce temps, et récupère alors ce qui reste.
 {.is-info}
 
-> **Paramètre d'univers** : les règles de dégradation d'une planète abandonnée peuvent être différentes selon l'univers. Les valeurs ci-dessous sont celles de Redline.
+> **Paramètre d'univers** : toutes les valeurs de dégradation d'une planète abandonnée (pertes immédiates, rythme des pertes, durée de vie, délai avant que l'ancien propriétaire puisse la reprendre) peuvent être différentes selon l'univers.
+> Par défaut : **valeurs du tableau ci-dessous** · Redline : **identiques**
 {.is-info}
 
 ## Règles
 
 ### Conditions
-1. La **planète mère** ne peut pas être abandonnée.
-2. L'abandon est impossible tant que quelque chose est en cours sur la planète : construction, ordre de vaisseaux ou de défenses, recherche lancée depuis cette planète, flotte en mouvement, frappe de missiles en vol, activité sur sa lune.
+1. La **planète mère** ne peut pas être abandonnée. Une lune ne s'abandonne pas seule : elle part avec sa planète.
+2. L'abandon est impossible tant que quelque chose est en cours **sur cette planète ou sur sa lune** : construction de bâtiment, de vaisseaux ou de défenses, réparation, recherche lancée depuis cette planète, flotte en route depuis ou vers elle, frappe de missiles encore en vol. Le jeu affiche la liste de tout ce qui bloque. Vos autres planètes, elles, peuvent être occupées.
 3. Pour confirmer, vous devez saisir le nom de la planète. **L'abandon est irréversible.**
 
 ### Conséquences immédiates
-4. Vous perdez la planète **définitivement**. Rien n'est remboursé.
-5. Vous récupérez **immédiatement une place de colonie**.
-6. Les ressources restent sur place. La production s'arrête.
-7. Les bâtiments perdent **1 niveau**. Une partie de la flotte (**30 %**) et des défenses (**35 %**) est détruite. Les Collecteurs solaires sont **tous perdus**.
-8. La **lune** de la planète, et tout ce qu'elle porte, part avec elle.
+4. Vous perdez la planète **définitivement**. Rien n'est remboursé, et ses points sortent de votre score.
+5. Vous récupérez **immédiatement une place de colonie**. Si vous regardiez cette planète, le jeu vous ramène sur votre planète mère.
+6. Les ressources restent sur place, sans jamais se dégrader. La production s'arrête.
+7. Le **premier choc**, sur la planète comme sur sa lune : chaque bâtiment perd **1 niveau**, la flotte perd **30 %** de chaque type de vaisseau et les défenses **35 %** de chaque type (arrondi à l'inférieur). Les Collecteurs solaires sont **tous perdus**.
+8. Les vaisseaux détruits par ce choc laissent un **champ de ruines** en orbite, au taux de débris des vaisseaux de l'univers (30 % par défaut). Les défenses et les Collecteurs solaires n'en laissent pas.
+9. La **lune** de la planète, et tout ce qu'elle porte, est abandonnée avec elle.
 
 ### Ensuite
-9. Les bâtiments perdent 1 niveau **tous les 2 jours**. La flotte restante perd 5 % tous les 2 jours, les défenses 5 % tous les 3 jours.
-10. Les autres joueurs peuvent l'**espionner, la piller ou la recoloniser**. Celui qui la recolonise récupère les bâtiments restants.
-11. La limite d'attaques ne s'applique pas aux planètes abandonnées.
-12. Au bout de **60 jours**, la planète disparaît. Les champs de ruines en orbite, eux, restent.
-13. L'ancien propriétaire ne peut pas la recoloniser pendant **30 jours**.
+10. Les bâtiments perdent 1 niveau **tous les 2 jours**. La flotte restante perd 5 % de ce qui reste tous les 2 jours, les défenses 5 % tous les 3 jours : au moins une unité à chaque fois, tant qu'il en reste.
+11. Les autres joueurs peuvent l'**espionner, l'attaquer, la piller ou la recoloniser**. Personne ne peut y transporter de ressources. La limite d'attaques ne s'applique pas : la planète n'a plus de propriétaire.
+12. Celui qui la recolonise reprend **tout ce qui reste**, lune comprise, et la dégradation s'arrête.
+13. La planète **disparaît** au bout de **60 jours**, ou plus tôt quand il ne reste plus rien sur elle ni sur sa lune (tous les bâtiments à 0, plus aucun vaisseau ni défense). Les ressources disparaissent avec elle ; la position redevient libre, sous son nom d'origine. Les champs de ruines en orbite, eux, restent.
+14. L'ancien propriétaire ne peut pas la recoloniser pendant **30 jours**.
 
 ## Exemple chiffré
 
-Vous abandonnez une colonie dont l'Excavateur minéral est au niveau 10 :
-- Aussitôt : niveau **9**.
-- Après 2 jours : niveau **8** ; après 4 jours : niveau **7** ; et ainsi de suite.
-- Si un joueur la recolonise au bout de 6 jours, il récupère un Excavateur au niveau **6**.
+Vous abandonnez une colonie avec un Excavateur minéral niveau 10, 1 000 Intercepteurs, 200 défenses d'un même type et 50 Collecteurs solaires.
+- Aussitôt : Excavateur niveau **9** ; 300 Intercepteurs détruits, il en reste **700** ; il reste **130** défenses ; plus aucun Collecteur solaire.
+- Les 300 Intercepteurs détruits laissent 300 × 3 000 × 30 % = **270 000 métal** et 300 × 1 000 × 30 % = **90 000 cristal** de débris.
+- L'Excavateur tombe à 0 au bout de 18 jours. La planète dure tout de même 60 jours, tant qu'il reste des vaisseaux ou des défenses.
+
+Ce qui reste au fil des jours :
+
+| Jour | Excavateur minéral | Intercepteurs | Défenses |
+|---|---|---|---|
+| 0 | 9 | 700 | 130 |
+| 2 | 8 | 665 | 130 |
+| 6 | 6 | 601 | 118 |
+| 10 | 4 | 543 | 113 |
+| 20 | 0 | 422 | 98 |
+| 40 | 0 | 255 | 72 |
+| 60 | 0 | 156 | 53 |
+
+Si un joueur la recolonise au bout de 6 jours, il récupère l'Excavateur au niveau **6**, 601 Intercepteurs, 118 défenses et toutes les ressources.
 
 ## Données détaillées
 
 | Élément | Perte immédiate | Perte ensuite |
 |---|---|---|
 | Bâtiments | −1 niveau | −1 niveau tous les 2 jours |
-| Flotte | −30 % | −5 % tous les 2 jours |
-| Défenses | −35 % | −5 % tous les 3 jours |
-| Collecteurs solaires | −100 % | |
-| Planète | | disparaît au bout de 60 jours |
-| Recolonisation par l'ancien propriétaire | | interdite pendant 30 jours |
+| Vaisseaux | −30 % | −5 % de ce qui reste tous les 2 jours |
+| Défenses | −35 % | −5 % de ce qui reste tous les 3 jours |
+| Collecteurs solaires | −100 % |  |
+| Ressources | aucune perte | aucune perte |
+| Planète |  | disparaît au bout de 60 jours, ou plus tôt s'il n'y reste plus rien |
+| Recolonisation par l'ancien propriétaire |  | interdite pendant 30 jours |
 
 ## Pièges fréquents
 
-- **Videz la planète avant** : rapatriez flotte et ressources avant d'abandonner, sinon elles restent à la merci des pillards.
-- **La lune est perdue aussi** : une lune et ses bâtiments disparaissent avec la planète.
-- **Pas de retour en arrière** : vous ne pourrez pas reprendre la planète avant 30 jours, et elle aura continué à se dégrader.
-- **Tout doit être à l'arrêt** : une construction, une recherche ou une flotte en route bloque l'abandon.
+- **Videz la planète avant** : rapatriez flotte et ressources avant d'abandonner, sinon elles restent à la merci des pillards et de celui qui la recolonisera.
+- **La lune est perdue aussi** : une lune et ses bâtiments partent avec la planète.
+- **Pas de retour en arrière** : vous ne pourrez pas la reprendre avant 30 jours, et elle aura continué à se dégrader.
+- **Tout doit être à l'arrêt, lune comprise** : une construction, une recherche ou une flotte en route bloque l'abandon.
 
 ## Pages liées
 

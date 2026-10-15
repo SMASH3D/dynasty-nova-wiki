@@ -17,10 +17,10 @@ updated: "2026-10-02T16:37:33.005Z"
 
 ## Pages in this section
 
-- [Universes](/en/universe/universes)
-- [Coordinates](/en/universe/coordinates)
-- [The galaxy view](/en/universe/galaxy-view)
-- [Planets: size, temperature, type](/en/universe/planets)
-- [Colonization](/en/universe/colonization)
-- [Abandoning a colony](/en/universe/abandoning-a-planet)
-- [Moons](/en/universe/moons)
+- [Universes](/en/universe/universes): separate games, settings, speeds, joining a universe
+- [Coordinates](/en/universe/coordinates): galaxy, system, position, wrap-around map, distances
+- [The galaxy view](/en/universe/galaxy-view): unexplored cells, badges, deep space, Stellar Station
+- [Planets: size, temperature, type](/en/universe/planets): fields, temperature, position bonus
+- [Colonization](/en/universe/colonization): Space Pioneer, Astrophysics, abandoned planets
+- [Abandoning a colony](/en/universe/abandoning-a-planet): conditions, first shock, decay
+- [Moons](/en/universe/moons): formation, diameter, fields, Lunar base
