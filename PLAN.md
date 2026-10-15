@@ -149,9 +149,15 @@ Chaque page porte un identifiant de page (P-xx). Abréviations : *[B]* = ton bri
 | P-85 | `players/inactivity` | Inactivité | | [B] | `players-06` |
 | P-86 | `players/alliances` | Alliances | Créer, rejoindre, rangs, quarantaine, capacité. | [J] | `players-07` |
 | P-87 | `players/pacts-and-wars` | Pactes, fair-play et guerres | | [J] | |
-| P-88 | `players/alliance-missions` | Missions et station d'alliance | Cycles, paliers, talents, trésorerie. | [J] | `players-08` |
+| P-88 | `players/alliance-missions` | Missions et station d'alliance | Trésorerie par convois, entraide, station à 3 paliers, missions V2 (inscription, effort relatif), talents. Réécrite d'après le code le 15 octobre 2026. | [J] + code | `players-08`, `players-12` |
 | P-89 | `players/messages-and-reports` | Messagerie et rapports | Partage, conservation. | [J] | |
 | P-90 | `players/game-rules` | Règlement | | | `players-09` |
+
+Nouvelle page (15 octobre 2026, non publiée) :
+
+| ID | Chemin | Page | Contenu | Sources | Manque |
+|---|---|---|---|---|---|
+| P-106 | `economy/stellar-bank` | Banque stellaire | Vendre et acheter des ressources contre des Crédits, cours, taxe, livraisons. | code | `bank-01` |
 
 ### `misc`, divers
 | ID | Chemin | Page | Contenu | Sources | Manque |
@@ -362,6 +368,11 @@ Règle : aucune de ces formules ne va dans le wiki avant confirmation. Les pages
 - `economy-11` ⏳ Le bonus du Centre logistique (+10 % par niveau) s'applique-t-il aussi aux 10 000 de la Base planetaire ? Se cumule-t-il avec le talent Entrepôts fédérés (addition ou multiplication) ?
 
 - `universe-12` ⏳ Le bonus de position suit-il aussi la mise à l'échelle sur 15 positions dans les univers de 9 à 20 positions ? Est-il réglable par univers ?
+
+### Alliances et banque (15 octobre 2026)
+- `players-12` ⏳ Les missions d'alliance sont-elles ouvertes sur Redline ? Elles s'ouvrent univers par univers (fermées par défaut, réglage du back-office) ; la page P-88 dit seulement que l'onglet peut manquer.
+- `players-13` ⏳ **Éditorial** : un membre en période d'intégration qui viole un pacte ne coûte aucun point de fair-play à son alliance. Faut-il l'écrire dans le wiki ? (non publié pour l'instant)
+- `bank-01` ⏳ **Éditorial** : la boutique appelle « Crédits » l'onglet des packs de Points stellaires et « Ajouter des crédits » sa recharge, alors que les Crédits de la Banque stellaire ne s'achètent pas. Risque de confusion avec un achat qui donnerait un avantage de jeu (voir `patch-04`). P-106 précise que les deux n'ont rien à voir ; à trancher par le responsable, et à remonter à l'équipe (DONNEES §11.9).
 
 ### Divers
 - `misc-01` ✅ Les flottes en vol arrivent normalement pendant une maintenance.
