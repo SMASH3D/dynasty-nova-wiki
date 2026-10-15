@@ -21,9 +21,10 @@ updated: "2026-10-06T10:30:31.982Z"
 1. The dynasty is chosen **once per universe**, together with your first class. It can no longer be changed in that universe.
 2. Each dynasty gives **two passive traits**, active from the first minute, with nothing to unlock.
 3. Each dynasty opens **two exclusive classes**, on top of the six common classes. See [The classes](/en/dynasty/classes).
-4. A trait adds **past the cap of your talents**: a branch played up to its cap never swallows it. The **total cap**, alliance talents included, stays the same for everyone.
-5. Traits add up with the alliance talents that touch the same bonus.
-6. As long as you have not chosen a dynasty, you have no trait.
+4. A trait adds **past the cap of your talents**: a branch played up to its cap never swallows it. The **total cap**, alliance talents included, stays the same for everyone (45% for mine production).
+5. Nothing Is Lost raises a starting rate (refund, rebuild), without raising that rate's cap: 95% for the refund, 85% for the rebuild.
+6. Traits add up with the alliance talents that touch the same bonus.
+7. As long as you have not chosen a dynasty, you have no trait.
 
 ## The three dynasties
 
@@ -40,7 +41,7 @@ updated: "2026-10-06T10:30:31.982Z"
 | Trait | Effect | Value |
 |---|---|---|
 | **Nothing Is Lost** | A cancelled construction refunds you more, and a larger share of your destroyed defences is rebuilt for free. | refund of a cancelled construction +5 points (80 → 85%); free defence rebuild +5 points (70 → 75%) |
-| **The Halden Rotation** | Your three mines produce a little more, from the very first minute. | production of the three mines +2% |
+| **The Halden Rotation** | Your three mines produce a little more, from the very first minute. | production of the three mines +2%, past the 25% talent cap |
 
 ### The Accord
 
@@ -49,7 +50,7 @@ updated: "2026-10-06T10:30:31.982Z"
 | Trait | Effect | Value |
 |---|---|---|
 | **The Tuning Fork** | Some of your hulls start with a slight edge against specific enemy hulls. In practice: a shot deals more damage to the units the firing ship has rapid fire against. | +5% damage |
-| **Listening Far** | The enemy fleet is visible one tier earlier in your spy reports. No other section of the report changes. | 1 tier |
+| **Listening Far** | The enemy fleet is visible one tier earlier in your spy reports. In practice: the fleet section opens at an effective espionage level of 2 instead of 3. No other section of the report changes. Stacks with the Shadow's Reading the Hangars. | 1 espionage level |
 
 ### The Choir
 
@@ -68,7 +69,7 @@ The Choir is not playable yet: its characters exist as shop avatars, but nobody 
 ## Common pitfalls
 
 - **Choosing a dynasty for a trait alone**: traits are small. The two exclusive classes make the difference. Look first at which class you want to play.
-- **Thinking a trait raises the total cap**: it goes past the cap of your talents, but the total cap with the alliance is the same for everyone.
+- **Thinking a trait raises the total cap**: The Halden Rotation brings your talents and trait to 27% production, but the total cap with the alliance stays 45% for everyone.
 - **Thinking you can change dynasty**: only the class changes. For another dynasty, you need another universe.
 
 ## Related pages

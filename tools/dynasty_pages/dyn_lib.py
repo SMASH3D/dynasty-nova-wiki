@@ -202,3 +202,47 @@ def table(header, rows):
     out = ['| ' + ' | '.join(header) + ' |', '|' + '---|' * len(header)]
     out += ['| ' + ' | '.join(str(c) for c in r) + ' |' for r in rows]
     return '\n'.join(out)
+
+
+def lever_text(lang, lever, value):
+    """Le libellé d'un levier (textes du client), à la valeur donnée."""
+    unit = DATA['lever_units'][lever]
+    tmpl = plural(T(lang)['levers'], lever, value, lang)
+    if not tmpl:
+        return f'{lever} : {amount(unit, value, lang)}'
+    return clean(fill(tmpl, {'value': amount(unit, value, lang), 'count': n(value, lang)}))
+
+
+def tree_reach(owner):
+    """Ce que l'arbre atteint au plus, levier par levier : somme des nœuds pleins, la meilleure option d'un choix."""
+    reach = {}
+    for b in tree(owner):
+        for node in b['nodes']:
+            best = {}
+            for e in node['effects']:
+                if e['fixed'] or e['unit'] == 'unlock':
+                    continue
+                v = value_at(e, node['ranks'])
+                best[e['lever']] = max(best.get(e['lever'], 0.0), v)
+            for lever, v in best.items():
+                reach[lever] = round(reach.get(lever, 0.0) + v, 6)
+    return reach
+
+
+def class_caps_table(lang, owner):
+    """Plafonds propres à la classe : les leviers de son arbre que le code borne pour elle."""
+    caps, reach = DATA['class_caps'][owner], tree_reach(owner)
+    fr = lang == 'fr'
+    rows = []
+    for lever, r in reach.items():
+        cap = caps.get(lever)
+        if cap is None:
+            continue
+        unit = DATA['lever_units'][lever]
+        note = ''
+        if r > cap + 1e-9:
+            note = ' (plafonné)' if fr else ' (capped)'
+        rows.append([lever_text(lang, lever, cap), amount(unit, r, lang) + note])
+    head = ['Plafond de la classe (talents des deux arbres)', "Ce que l'arbre de classe atteint"] if fr else \
+           ['Class cap (talents of both trees)', 'What the class tree reaches']
+    return table(head, rows)

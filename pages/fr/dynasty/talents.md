@@ -103,19 +103,24 @@ Au-delà du niveau 50, l'expérience continue de compter, chaque niveau coûtant
 |---|---|---|---|---|
 | Vitesse de flotte | 40 % | +10 % sur une famille de missions : attaques, espionnages et destructions de lune (Amiral), missions pacifiques ou vers une cible abandonnée (Navigateur), recyclage (Amiral, Archiviste), attaque préparée (Oracle, 9 %) | 50 % | 60 % |
 | Hydrogène consommé | −20 % | −10 % sur les vaisseaux de combat (Amiral) | −30 % | −45 % |
-| Capacité de fret | 25 % |  | 25 % | 25 % |
+| Capacité de fret | 25 % |  | 25 % | 25 % (pas de part d'alliance) |
 | Flottes en vol | +2 | +1 réservée aux attaques (Amiral) | +3 | +3 |
-| Vitesse de recherche | 15 % (+15 % sur deux recherches avec Astrométrie) |  | 25 % | 45 % |
-| Production des mines | 25 % |  | 25 % | 45 % |
+| Vitesse de recherche | 15 % (25 % sur deux recherches avec Astrométrie, dans le même plafond) |  | 25 % | 45 % |
+| Production des mines | 25 % |  | 25 % (+2 % de La rotation Halden au-delà) | 45 % |
+| Production des colonies (planète mère et lunes exclues) | 10 % |  | 10 % | hors plafond, en plus des 45 % |
+| Jeune colonie : mines, bâtiments | 25 %, 20 % |  | 25 %, 20 % | hors plafond |
+| Effet de la recherche Plasma | +50 % |  | +50 % |  |
+| Énergie des centrales et satellites | +8 % |  | +15 % |  |
+| Expéditions : gains, durée d'exploration | +20 %, −25 % |  | +20 %, −25 % |  |
 | Capacité des entrepôts | 20 % |  | 20 % | 40 % |
-| Vitesse des bâtiments | 25 % | +15 % au plus sur une famille : rattrapage des colonies (Bâtisseur), centrales (Énergéticien, 10 %), centres d'innovation (Théoricien, 9 %) | 25 % (40 % sur la famille) | 45 % (50 % sur la famille) |
-| Vitesse des vaisseaux et défenses | 10 % | +15 % sur une famille : vaisseaux de combat (Amiral), défenses et missiles (Vétéran), vaisseaux civils (Navigateur) | 10 % (25 % sur la famille) |  |
+| Vitesse des bâtiments | 25 % | +15 % au plus sur une famille : rattrapage des colonies (Bâtisseur), centrales (Énergéticien, 10 %), centres d'innovation (Théoricien, 9 %), planète en friche (Symbiote, 10 %) | 25 % (40 % sur la famille) | 45 % (50 % sur la famille) |
+| Vitesse des vaisseaux et défenses | 10 % | +15 % sur une famille : vaisseaux de combat (Amiral), défenses et missiles (Vétéran), vaisseaux civils (Navigateur) | 10 % (25 % sur la famille) | pas de part d'alliance |
 | Coûts des bâtiments, vaisseaux et défenses |  | −5 % (Bâtisseur) | −5 % |  |
 | Cases de planète | +2 | +2 (Symbiote) | +4 |  |
 | Pillage des cibles abandonnées | +20 points |  | +20 points |  |
 | Ressources à l'abri du pillage | 5 points | Vétéran (Abri souterrain), Oracle (La cache) | 15 points pour le Vétéran, 10 points pour l'Oracle, 5 points pour les autres, arbre commun compris | taux de pillage jamais sous 30 % |
 
-Les bonus qui ne servent qu'à vous, sur vos retours ou entre vos propres planètes (Vent arrière, Liaisons internes, Retour victorieux…), sont **hors** du plafond de vitesse.
+Les bonus qui ne servent qu'à vous, sur vos retours ou entre vos propres planètes (Vent arrière, Liaisons internes, Retour victorieux, Repli éclair), sont **hors** du plafond de vitesse : ils multiplient la vitesse à part. L'Arche, elle, reste sous le plafond total de 60 %.
 
 ## Pièges fréquents
 

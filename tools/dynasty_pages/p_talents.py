@@ -126,22 +126,28 @@ def caps_rows(lang):
         ['Hydrogène consommé' if fr else 'Hydrogen burned', '−' + P(C['FUEL_CONSUMPTION_COMMON_CEILING']),
          (f"−{P(C['FUEL_CONSUMPTION_ACCENT_CEILING'])} sur les vaisseaux de combat (Amiral)" if fr else f"−{P(C['FUEL_CONSUMPTION_ACCENT_CEILING'])} on combat ships (Admiral)"),
          '−' + P(C['FUEL_CONSUMPTION_TALENT_CEILING']), '−' + P(C['FUEL_CONSUMPTION_CEILING'])],
-        ['Capacité de fret' if fr else 'Cargo capacity', P(25), '', P(C['CARGO_TALENT_CEILING']), P(C['CARGO_TALENT_CEILING'])],
+        ['Capacité de fret' if fr else 'Cargo capacity', P(25), '', P(C['CARGO_TALENT_CEILING']), P(C['CARGO_TALENT_CEILING']) + (" (pas de part d'alliance)" if fr else ' (no alliance share)')],
         ['Flottes en vol' if fr else 'Fleets in flight', '+2', ('+1 réservée aux attaques (Amiral)' if fr else '+1 reserved for attacks (Admiral)'),
          f"+{C['FLEET_SLOTS_CEILING']}", f"+{C['FLEET_SLOTS_CEILING']}"],
-        ['Vitesse de recherche' if fr else 'Research speed', P(15) + (' (+15 % sur deux recherches avec Astrométrie)' if fr else ' (+15% on two studies with Astrometry)'), '',
+        ['Vitesse de recherche' if fr else 'Research speed', P(15) + (' (25 % sur deux recherches avec Astrométrie, dans le même plafond)' if fr else ' (25% on two studies with Astrometry, within the same cap)'), '',
          P(C['RESEARCH_SPEED_TALENT_CEILING']), P(C['RESEARCH_SPEED_CEILING'])],
-        ['Production des mines' if fr else 'Mine production', P(25), '', P(C['PRODUCTION_TALENT_CEILING']), P(C['PRODUCTION_CEILING'])],
+        ['Production des mines' if fr else 'Mine production', P(25), '', P(C['PRODUCTION_TALENT_CEILING']) + (' (+2 % de La rotation Halden au-delà)' if fr else ' (+2% from The Halden Rotation on top)'), P(C['PRODUCTION_CEILING'])],
+        ['Production des colonies (planète mère et lunes exclues)' if fr else 'Colony production (home planet and moons excluded)', P(C['COLONY_PRODUCTION_CEILING']), '', P(C['COLONY_PRODUCTION_CEILING']), ('hors plafond, en plus des 45 %' if fr else 'outside the cap, on top of the 45%')],
+        ['Jeune colonie : mines, bâtiments' if fr else 'Young colony: mines, buildings', f"{P(C['YOUNG_COLONY_PRODUCTION_CEILING'])}, {P(C['YOUNG_COLONY_BUILDING_SPEED_CEILING'])}", '', f"{P(C['YOUNG_COLONY_PRODUCTION_CEILING'])}, {P(C['YOUNG_COLONY_BUILDING_SPEED_CEILING'])}", ('hors plafond' if fr else 'outside the cap')],
+        ["Effet de la recherche Plasma" if fr else 'Effect of the Plasma research', '+' + P(C['PLASMA_EFFECT_CEILING']), '', '+' + P(C['PLASMA_EFFECT_CEILING']), ''],
+        ['Énergie des centrales et satellites' if fr else 'Energy from power plants and satellites', '+' + P(8), '', '+' + P(C['ENERGY_PRODUCTION_CEILING']), ''],
+        ['Expéditions : gains, durée d\'exploration' if fr else 'Expeditions: gains, exploration time', f"+{P(C['EXPEDITION_GAINS_CEILING'])}, −{P(C['EXPEDITION_DURATION_REDUCTION_CEILING'])}", '', f"+{P(C['EXPEDITION_GAINS_CEILING'])}, −{P(C['EXPEDITION_DURATION_REDUCTION_CEILING'])}", ''],
         ['Capacité des entrepôts' if fr else 'Storage capacity', P(20), '', P(C['STORAGE_TALENT_CEILING']), P(C['STORAGE_CEILING'])],
         ['Vitesse des bâtiments' if fr else 'Building speed', P(25),
-         (f"+{P(C['BUILDING_SPEED_ACCENT_CEILING'])} au plus sur une famille : rattrapage des colonies (Bâtisseur), centrales (Énergéticien, {P(10)}), centres d'innovation (Théoricien, {P(9)})"
-          if fr else f"+{P(C['BUILDING_SPEED_ACCENT_CEILING'])} at most on a family: colony catch-up (Builder), power plants (Energetician, {P(10)}), innovation centers (Theorist, {P(9)})"),
+         (f"+{P(C['BUILDING_SPEED_ACCENT_CEILING'])} au plus sur une famille : rattrapage des colonies (Bâtisseur), centrales (Énergéticien, {P(10)}), centres d'innovation (Théoricien, {P(9)}), planète en friche (Symbiote, {P(10)})"
+          if fr else f"+{P(C['BUILDING_SPEED_ACCENT_CEILING'])} at most on a family: colony catch-up (Builder), power plants (Energetician, {P(10)}), innovation centers (Theorist, {P(9)}), fallow planet (Symbiote, {P(10)})"),
          P(C['BUILDING_SPEED_TALENT_CEILING']) + (f" ({P(40)} sur la famille)" if fr else f" ({P(40)} on the family)"),
          P(C['BUILDING_SPEED_CEILING']) + (f" ({P(C['BUILDING_SPEED_ACCENT_SCOPE_CEILING'])} sur la famille)" if fr else f" ({P(C['BUILDING_SPEED_ACCENT_SCOPE_CEILING'])} on the family)")],
         ['Vitesse des vaisseaux et défenses' if fr else 'Ship and defence build speed', P(C['UNIT_SPEED_CEILING']),
          (f"+{P(C['UNIT_SPEED_ACCENT_CEILING'])} sur une famille : vaisseaux de combat (Amiral), défenses et missiles (Vétéran), vaisseaux civils (Navigateur)"
           if fr else f"+{P(C['UNIT_SPEED_ACCENT_CEILING'])} on a family: combat ships (Admiral), defences and missiles (Veteran), civil ships (Navigator)"),
-         P(C['UNIT_SPEED_CEILING']) + (f" ({P(C['UNIT_SPEED_CEILING'] + C['UNIT_SPEED_ACCENT_CEILING'])} sur la famille)" if fr else f" ({P(C['UNIT_SPEED_CEILING'] + C['UNIT_SPEED_ACCENT_CEILING'])} on the family)"), ''],
+         P(C['UNIT_SPEED_CEILING']) + (f" ({P(C['UNIT_SPEED_CEILING'] + C['UNIT_SPEED_ACCENT_CEILING'])} sur la famille)" if fr else f" ({P(C['UNIT_SPEED_CEILING'] + C['UNIT_SPEED_ACCENT_CEILING'])} on the family)"),
+         ('pas de part d\'alliance' if fr else 'no alliance share')],
         ['Coûts des bâtiments, vaisseaux et défenses' if fr else 'Building, ship and defence costs', '',
          (f"−{P(C['COST_REDUCTION_CEILING'])} (Bâtisseur)" if fr else f"−{P(C['COST_REDUCTION_CEILING'])} (Builder)"), '−' + P(C['COST_REDUCTION_CEILING']), ''],
         ['Cases de planète' if fr else 'Planet fields', '+2', ('+2 (Symbiote)'), f"+{C['PLANET_FIELDS_CEILING']}", ''],
@@ -247,7 +253,7 @@ Au-delà du niveau {LAST}, l'expérience continue de compter, chaque niveau coû
 
 {ctab}
 
-Les bonus qui ne servent qu'à vous, sur vos retours ou entre vos propres planètes (Vent arrière, Liaisons internes, Retour victorieux…), sont **hors** du plafond de vitesse.
+Les bonus qui ne servent qu'à vous, sur vos retours ou entre vos propres planètes (Vent arrière, Liaisons internes, Retour victorieux, Repli éclair), sont **hors** du plafond de vitesse : ils multiplient la vitesse à part. L'Arche, elle, reste sous le plafond total de 60 %.
 
 ## Pièges fréquents
 
@@ -342,7 +348,7 @@ Past level {LAST}, experience keeps counting, each level costing as much as leve
 
 {ctab}
 
-The bonuses that only serve you, on your way home or between your own planets (Tailwind, Internal Links, Victorious Return…), are **outside** the speed cap.
+The bonuses that only serve you, on your way home or between your own planets (Tailwind, Inner Lanes, Victorious Return, Flash Retreat), are **outside** the speed cap: they multiply the speed separately. The Ark, however, stays under the 60% total cap.
 
 ## Common pitfalls
 

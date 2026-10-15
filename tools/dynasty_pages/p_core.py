@@ -102,9 +102,10 @@ def dynasties(lang):
 1. La dynastie se choisit **une fois par univers**, avec votre première classe. Elle ne peut plus être changée dans cet univers.
 2. Chaque dynastie donne **deux traits passifs**, actifs dès la première minute, sans rien à débloquer.
 3. Chaque dynastie ouvre **deux classes exclusives**, en plus des six classes communes. Voir [Les classes](/fr/dynasty/classes).
-4. Un trait s'ajoute **au-delà du plafond de vos talents** : une branche jouée jusqu'à son plafond ne l'absorbe pas. Le **plafond total**, talents d'alliance compris, reste le même pour tout le monde.
-5. Les traits s'ajoutent aux talents d'alliance qui touchent le même bonus.
-6. Tant que vous n'avez pas choisi de dynastie, vous n'avez aucun trait.
+4. Un trait s'ajoute **au-delà du plafond de vos talents** : une branche jouée jusqu'à son plafond ne l'absorbe pas. Le **plafond total**, talents d'alliance compris, reste le même pour tout le monde (45 % pour la production des mines).
+5. {tr['nothing_is_lost']['name']} relève un taux de départ (remboursement, reconstruction), sans relever le plafond de ce taux : 95 % pour le remboursement, 85 % pour la reconstruction.
+6. Les traits s'ajoutent aux talents d'alliance qui touchent le même bonus.
+7. Tant que vous n'avez pas choisi de dynastie, vous n'avez aucun trait.
 
 ## Les trois dynasties
 
@@ -121,7 +122,7 @@ def dynasties(lang):
 | Trait | Effet | Valeur |
 |---|---|---|
 | **{tr['nothing_is_lost']['name']}** | {tr['nothing_is_lost']['description']} | remboursement d'une construction annulée +{refund} points (80 → {80 + refund} %) ; reconstruction gratuite des défenses +{rebuild} points (70 → {70 + rebuild} %) |
-| **{tr['halden_rotation']['name']}** | {tr['halden_rotation']['description']} | production des trois mines +{halden} % |
+| **{tr['halden_rotation']['name']}** | {tr['halden_rotation']['description']} | production des trois mines +{halden} %, au-delà du plafond de 25 % des talents |
 
 ### {dyn_name(lang, ac)}
 
@@ -130,7 +131,7 @@ def dynasties(lang):
 | Trait | Effet | Valeur |
 |---|---|---|
 | **{tr['tuning_fork']['name']}** | {tr['tuning_fork']['description']} Concrètement : un tir fait plus de dégâts contre les unités sur lesquelles le vaisseau qui tire a un tir rapide. | +{fork} % de dégâts |
-| **{tr['far_listening']['name']}** | {tr['far_listening']['description']} Aucune autre section du rapport ne change. | {far} palier |
+| **{tr['far_listening']['name']}** | {tr['far_listening']['description']} Concrètement : la section flotte s'ouvre à un niveau d'espionnage effectif de 2 au lieu de 3. Aucune autre section du rapport ne change. Se cumule avec Lecture des hangars de l'Ombre. | {far} niveau d'espionnage |
 
 ### {dyn_name(lang, 'choir')}
 
@@ -149,7 +150,7 @@ def dynasties(lang):
 ## Pièges fréquents
 
 - **Choisir sa dynastie pour un trait seulement** : les traits sont petits. Ce sont les deux classes exclusives qui font la différence. Regardez d'abord quelle classe vous voulez jouer.
-- **Croire qu'un trait relève le plafond total** : il passe au-delà du plafond de vos talents, mais le plafond total avec l'alliance est le même pour tout le monde.
+- **Croire qu'un trait relève le plafond total** : La rotation Halden porte vos talents et votre trait à 27 % de production, mais le plafond total avec l'alliance reste 45 % pour tout le monde.
 - **Croire qu'on peut changer de dynastie** : seule la classe change. Pour une autre dynastie, il faut un autre univers.
 
 ## Pages liées
@@ -171,9 +172,10 @@ def dynasties(lang):
 1. The dynasty is chosen **once per universe**, together with your first class. It can no longer be changed in that universe.
 2. Each dynasty gives **two passive traits**, active from the first minute, with nothing to unlock.
 3. Each dynasty opens **two exclusive classes**, on top of the six common classes. See [The classes](/en/dynasty/classes).
-4. A trait adds **past the cap of your talents**: a branch played up to its cap never swallows it. The **total cap**, alliance talents included, stays the same for everyone.
-5. Traits add up with the alliance talents that touch the same bonus.
-6. As long as you have not chosen a dynasty, you have no trait.
+4. A trait adds **past the cap of your talents**: a branch played up to its cap never swallows it. The **total cap**, alliance talents included, stays the same for everyone (45% for mine production).
+5. {tr['nothing_is_lost']['name']} raises a starting rate (refund, rebuild), without raising that rate's cap: 95% for the refund, 85% for the rebuild.
+6. Traits add up with the alliance talents that touch the same bonus.
+7. As long as you have not chosen a dynasty, you have no trait.
 
 ## The three dynasties
 
@@ -190,7 +192,7 @@ def dynasties(lang):
 | Trait | Effect | Value |
 |---|---|---|
 | **{tr['nothing_is_lost']['name']}** | {tr['nothing_is_lost']['description']} | refund of a cancelled construction +{refund} points (80 → {80 + refund}%); free defence rebuild +{rebuild} points (70 → {70 + rebuild}%) |
-| **{tr['halden_rotation']['name']}** | {tr['halden_rotation']['description']} | production of the three mines +{halden}% |
+| **{tr['halden_rotation']['name']}** | {tr['halden_rotation']['description']} | production of the three mines +{halden}%, past the 25% talent cap |
 
 ### {dyn_name(lang, ac)}
 
@@ -199,7 +201,7 @@ def dynasties(lang):
 | Trait | Effect | Value |
 |---|---|---|
 | **{tr['tuning_fork']['name']}** | {tr['tuning_fork']['description']} In practice: a shot deals more damage to the units the firing ship has rapid fire against. | +{fork}% damage |
-| **{tr['far_listening']['name']}** | {tr['far_listening']['description']} No other section of the report changes. | {far} tier |
+| **{tr['far_listening']['name']}** | {tr['far_listening']['description']} In practice: the fleet section opens at an effective espionage level of 2 instead of 3. No other section of the report changes. Stacks with the Shadow's Reading the Hangars. | {far} espionage level |
 
 ### {dyn_name(lang, 'choir')}
 
@@ -218,7 +220,7 @@ def dynasties(lang):
 ## Common pitfalls
 
 - **Choosing a dynasty for a trait alone**: traits are small. The two exclusive classes make the difference. Look first at which class you want to play.
-- **Thinking a trait raises the total cap**: it goes past the cap of your talents, but the total cap with the alliance is the same for everyone.
+- **Thinking a trait raises the total cap**: The Halden Rotation brings your talents and trait to 27% production, but the total cap with the alliance stays 45% for everyone.
 - **Thinking you can change dynasty**: only the class changes. For another dynasty, you need another universe.
 
 ## Related pages

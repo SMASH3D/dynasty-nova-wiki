@@ -21,9 +21,10 @@ updated: "2026-10-06T10:29:57.527Z"
 1. La dynastie se choisit **une fois par univers**, avec votre première classe. Elle ne peut plus être changée dans cet univers.
 2. Chaque dynastie donne **deux traits passifs**, actifs dès la première minute, sans rien à débloquer.
 3. Chaque dynastie ouvre **deux classes exclusives**, en plus des six classes communes. Voir [Les classes](/fr/dynasty/classes).
-4. Un trait s'ajoute **au-delà du plafond de vos talents** : une branche jouée jusqu'à son plafond ne l'absorbe pas. Le **plafond total**, talents d'alliance compris, reste le même pour tout le monde.
-5. Les traits s'ajoutent aux talents d'alliance qui touchent le même bonus.
-6. Tant que vous n'avez pas choisi de dynastie, vous n'avez aucun trait.
+4. Un trait s'ajoute **au-delà du plafond de vos talents** : une branche jouée jusqu'à son plafond ne l'absorbe pas. Le **plafond total**, talents d'alliance compris, reste le même pour tout le monde (45 % pour la production des mines).
+5. Rien ne se perd relève un taux de départ (remboursement, reconstruction), sans relever le plafond de ce taux : 95 % pour le remboursement, 85 % pour la reconstruction.
+6. Les traits s'ajoutent aux talents d'alliance qui touchent le même bonus.
+7. Tant que vous n'avez pas choisi de dynastie, vous n'avez aucun trait.
 
 ## Les trois dynasties
 
@@ -40,7 +41,7 @@ updated: "2026-10-06T10:29:57.527Z"
 | Trait | Effet | Valeur |
 |---|---|---|
 | **Rien ne se perd** | Une construction annulée vous rembourse davantage, et une plus grande part de vos défenses détruites est reconstruite gratuitement. | remboursement d'une construction annulée +5 points (80 → 85 %) ; reconstruction gratuite des défenses +5 points (70 → 75 %) |
-| **La rotation Halden** | Vos trois mines produisent un peu plus, dès la première minute. | production des trois mines +2 % |
+| **La rotation Halden** | Vos trois mines produisent un peu plus, dès la première minute. | production des trois mines +2 %, au-delà du plafond de 25 % des talents |
 
 ### L'Accord
 
@@ -49,7 +50,7 @@ updated: "2026-10-06T10:29:57.527Z"
 | Trait | Effet | Valeur |
 |---|---|---|
 | **Le diapason** | Certaines de vos coques partent avec un léger avantage face à des coques adverses précises. Concrètement : un tir fait plus de dégâts contre les unités sur lesquelles le vaisseau qui tire a un tir rapide. | +5 % de dégâts |
-| **Écouter loin** | La flotte ennemie est visible un palier plus tôt dans vos rapports d'espionnage. Aucune autre section du rapport ne change. | 1 palier |
+| **Écouter loin** | La flotte ennemie est visible un palier plus tôt dans vos rapports d'espionnage. Concrètement : la section flotte s'ouvre à un niveau d'espionnage effectif de 2 au lieu de 3. Aucune autre section du rapport ne change. Se cumule avec Lecture des hangars de l'Ombre. | 1 niveau d'espionnage |
 
 ### Le Chœur
 
@@ -68,7 +69,7 @@ Le Chœur n'est pas encore jouable : ses personnages existent comme avatars de b
 ## Pièges fréquents
 
 - **Choisir sa dynastie pour un trait seulement** : les traits sont petits. Ce sont les deux classes exclusives qui font la différence. Regardez d'abord quelle classe vous voulez jouer.
-- **Croire qu'un trait relève le plafond total** : il passe au-delà du plafond de vos talents, mais le plafond total avec l'alliance est le même pour tout le monde.
+- **Croire qu'un trait relève le plafond total** : La rotation Halden porte vos talents et votre trait à 27 % de production, mais le plafond total avec l'alliance reste 45 % pour tout le monde.
 - **Croire qu'on peut changer de dynastie** : seule la classe change. Pour une autre dynastie, il faut un autre univers.
 
 ## Pages liées

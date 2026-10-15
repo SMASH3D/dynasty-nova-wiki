@@ -106,19 +106,24 @@ Past level 50, experience keeps counting, each level costing as much as level 50
 |---|---|---|---|---|
 | Fleet speed | 40% | +10% on a mission family: attacks, espionage and moon destruction (Admiral), peaceful missions or missions to an abandoned target (Navigator), recycling (Admiral, Archivist), prepared strike (Oracle, 9%) | 50% | 60% |
 | Hydrogen burned | −20% | −10% on combat ships (Admiral) | −30% | −45% |
-| Cargo capacity | 25% |  | 25% | 25% |
+| Cargo capacity | 25% |  | 25% | 25% (no alliance share) |
 | Fleets in flight | +2 | +1 reserved for attacks (Admiral) | +3 | +3 |
-| Research speed | 15% (+15% on two studies with Astrometry) |  | 25% | 45% |
-| Mine production | 25% |  | 25% | 45% |
+| Research speed | 15% (25% on two studies with Astrometry, within the same cap) |  | 25% | 45% |
+| Mine production | 25% |  | 25% (+2% from The Halden Rotation on top) | 45% |
+| Colony production (home planet and moons excluded) | 10% |  | 10% | outside the cap, on top of the 45% |
+| Young colony: mines, buildings | 25%, 20% |  | 25%, 20% | outside the cap |
+| Effect of the Plasma research | +50% |  | +50% |  |
+| Energy from power plants and satellites | +8% |  | +15% |  |
+| Expeditions: gains, exploration time | +20%, −25% |  | +20%, −25% |  |
 | Storage capacity | 20% |  | 20% | 40% |
-| Building speed | 25% | +15% at most on a family: colony catch-up (Builder), power plants (Energetician, 10%), innovation centers (Theorist, 9%) | 25% (40% on the family) | 45% (50% on the family) |
-| Ship and defence build speed | 10% | +15% on a family: combat ships (Admiral), defences and missiles (Veteran), civil ships (Navigator) | 10% (25% on the family) |  |
+| Building speed | 25% | +15% at most on a family: colony catch-up (Builder), power plants (Energetician, 10%), innovation centers (Theorist, 9%), fallow planet (Symbiote, 10%) | 25% (40% on the family) | 45% (50% on the family) |
+| Ship and defence build speed | 10% | +15% on a family: combat ships (Admiral), defences and missiles (Veteran), civil ships (Navigator) | 10% (25% on the family) | no alliance share |
 | Building, ship and defence costs |  | −5% (Builder) | −5% |  |
 | Planet fields | +2 | +2 (Symbiote) | +4 |  |
 | Plunder of abandoned targets | +20 points |  | +20 points |  |
 | Resources sheltered from plunder | 5 points | Veteran (Underground Shelter), Oracle (The Cache) | 15 points for the Veteran, 10 points for the Oracle, 5 points for the others, common tree included | plunder rate never below 30% |
 
-The bonuses that only serve you, on your way home or between your own planets (Tailwind, Internal Links, Victorious Return…), are **outside** the speed cap.
+The bonuses that only serve you, on your way home or between your own planets (Tailwind, Inner Lanes, Victorious Return, Flash Retreat), are **outside** the speed cap: they multiply the speed separately. The Ark, however, stays under the 60% total cap.
 
 ## Common pitfalls
 
