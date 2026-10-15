@@ -1,0 +1,26 @@
+{
+ "fr/economy": [
+  [
+   "- [Modulateur planétaire et Centre logistique](/fr/economy/terraformer-and-logistics)",
+   "- [Modulateur planétaire et Centre logistique](/fr/economy/terraformer-and-logistics)\n- [Banque stellaire](/fr/economy/stellar-bank)"
+  ]
+ ],
+ "en/economy": [
+  [
+   "- [Planetary Modulator and Logistics Center](/en/economy/terraformer-and-logistics)",
+   "- [Planetary Modulator and Logistics Center](/en/economy/terraformer-and-logistics)\n- [Stellar Bank](/en/economy/stellar-bank)"
+  ]
+ ],
+ "fr/misc/changelog": [
+  [
+   "- **15 octobre 2026 (annexe)** : nouvelle [annexe des bâtiments niveau par niveau](/fr/economy/building-levels) : coût, énergie et production de chaque niveau, jusqu'au niveau 50.",
+   "- **15 octobre 2026 (annexe)** : nouvelle [annexe des bâtiments niveau par niveau](/fr/economy/building-levels) : coût, énergie et production de chaque niveau, jusqu'au niveau 50.\n- **15 octobre 2026 (banque)** : nouvelle page [Banque stellaire](/fr/economy/stellar-bank)."
+  ]
+ ],
+ "en/misc/changelog": [
+  [
+   "- **15 October 2026 (appendix)**: new [appendix of buildings level by level](/en/economy/building-levels): cost, energy and output of every level, up to level 50.",
+   "- **15 October 2026 (appendix)**: new [appendix of buildings level by level](/en/economy/building-levels): cost, energy and output of every level, up to level 50.\n- **15 October 2026 (bank)**: new [Stellar Bank](/en/economy/stellar-bank) page."
+  ]
+ ]
+}

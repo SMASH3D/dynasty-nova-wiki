@@ -8,7 +8,7 @@ description: "Wiki changes, date by date."
 tags: ["misc"]
 published: true
 created: "2026-10-02T13:12:22.294Z"
-updated: "2026-10-15T16:27:31.576Z"
+updated: "2026-10-15T16:29:47.321Z"
 ---
 
 # Wiki changelog
@@ -27,6 +27,7 @@ updated: "2026-10-15T16:27:31.576Z"
 - **15 October 2026**: Economy section checked against the game code. Automaton Factory level 5 cost corrected; buildings you can build on a moon; research one study at a time across the empire; how storage bonuses stack; Lunar base cannot be demolished.
 - **15 October 2026 (alliances)**: Alliances pages checked against the game code. Alliance missions and station rewritten (convoys to the treasury, mutual aid, 3-tier station, missions by enrollment and relative effort); every member votes; rights by rank and function; renaming costs; fair play from 0 to 100; attack limit clarified.
 - **15 October 2026 (appendix)**: new [appendix of buildings level by level](/en/economy/building-levels): cost, energy and output of every level, up to level 50.
+- **15 October 2026 (bank)**: new [Stellar Bank](/en/economy/stellar-bank) page.
 
 ## Related pages
 

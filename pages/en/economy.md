@@ -8,7 +8,7 @@ description: "Resources, energy and buildings."
 tags: ["economy"]
 published: true
 created: "2026-10-02T13:10:34.746Z"
-updated: "2026-10-15T16:27:30.238Z"
+updated: "2026-10-15T16:29:44.217Z"
 ---
 
 # Economy
@@ -27,3 +27,4 @@ updated: "2026-10-15T16:27:30.238Z"
 - [Demolishing a building](/en/economy/demolition)
 - [Repair Station](/en/economy/repair-station)
 - [Planetary Modulator and Logistics Center](/en/economy/terraformer-and-logistics)
+- [Stellar Bank](/en/economy/stellar-bank)
