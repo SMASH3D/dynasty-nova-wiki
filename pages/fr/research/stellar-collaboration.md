@@ -34,7 +34,7 @@ game_version: "Serveur 2.1.0 · Client 3.1.0"
 Certains talents de la classe Théoricien changent ces règles (valeurs sur [Le Théoricien](/fr/dynasty/classes/theorist)) :
 
 - **Liaison montante** : accepte des Centres jusqu'à quelques niveaux sous celui qui étudie.
-- **Antenne lointaine** : élargit encore cette tolérance.
+- **Antenne lointaine** : accepte, elle aussi, des Centres plus bas que celui qui étudie.
 - **Un labo de plus** : met en commun un Centre de plus que la Collaboration Stellaire ne l'autorise.
 - **Labos de campagne** : chaque Centre de vos planètes mis en réseau compte des niveaux de plus.
 - **Labo-mère** : le Centre qui étudie compte des niveaux de plus.

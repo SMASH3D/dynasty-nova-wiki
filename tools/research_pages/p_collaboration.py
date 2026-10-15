@@ -47,7 +47,7 @@ def cost_table(lang):
 
 TALENTS = [  # (FR, EN), effet FR, effet EN
  (('Liaison montante', 'Uplink'), "accepte des Centres jusqu'à quelques niveaux sous celui qui étudie", 'accepts Centers a few levels below the one studying'),
- (('Antenne lointaine', 'Distant Antenna'), 'élargit encore cette tolérance', 'widens that tolerance further'),
+ (('Antenne lointaine', 'Distant Antenna'), "accepte, elle aussi, des Centres plus bas que celui qui étudie", 'also accepts Centers below the one studying'),
  (('Un labo de plus', 'One More Lab'), "met en commun un Centre de plus que la Collaboration Stellaire ne l'autorise", 'pools one more Center than Stellar Collaboration allows'),
  (('Labos de campagne', 'Field Labs'), 'chaque Centre de vos planètes mis en réseau compte des niveaux de plus', 'each of your pooled Centers counts extra levels'),
  (('Labo-mère', 'Mother Lab'), 'le Centre qui étudie compte des niveaux de plus', 'the Center studying counts extra levels'),

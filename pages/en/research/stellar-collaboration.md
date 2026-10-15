@@ -34,7 +34,7 @@ game_version: "Serveur 2.1.0 · Client 3.1.0"
 Some talents of the Theorist class change these rules (values on [The Theorist](/en/dynasty/classes/theorist)):
 
 - **Uplink**: accepts Centers a few levels below the one studying.
-- **Distant Antenna**: widens that tolerance further.
+- **Distant Antenna**: also accepts Centers below the one studying.
 - **One More Lab**: pools one more Center than Stellar Collaboration allows.
 - **Field Labs**: each of your pooled Centers counts extra levels.
 - **Mother Lab**: the Center studying counts extra levels.
