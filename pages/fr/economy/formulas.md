@@ -6,9 +6,9 @@ url: "https://wiki.dynastynova.com/fr/economy/formulas"
 title: "Formules de l'économie"
 description: "Coûts, durées, production et points."
 tags: ["economy"]
-published: false
+published: true
 created: "2026-10-02T13:08:27.831Z"
-updated: "2026-10-15T18:54:13.575Z"
+updated: "2026-10-15T19:28:16.801Z"
 ---
 
 # Formules de l'économie

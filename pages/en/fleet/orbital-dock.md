@@ -6,9 +6,9 @@ url: "https://wiki.dynastynova.com/en/fleet/orbital-dock"
 title: "Orbital Dock (shipyard)"
 description: "Building ships and defenses: queues, payment, delivery, build times."
 tags: ["fleet"]
-published: false
+published: true
 created: "2026-10-02T13:11:07.986Z"
-updated: "2026-10-15T18:53:10.011Z"
+updated: "2026-10-15T19:28:26.518Z"
 ---
 
 # Orbital Dock (shipyard)

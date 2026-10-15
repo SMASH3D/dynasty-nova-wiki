@@ -6,9 +6,9 @@ url: "https://wiki.dynastynova.com/en/universe/moons"
 title: "Moons"
 description: "Moon formation, Lunar base and fields."
 tags: ["universe"]
-published: false
+published: true
 created: "2026-10-02T13:10:32.724Z"
-updated: "2026-10-15T18:53:43.417Z"
+updated: "2026-10-15T19:28:28.281Z"
 ---
 
 # Moons

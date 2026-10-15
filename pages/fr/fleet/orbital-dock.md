@@ -6,9 +6,9 @@ url: "https://wiki.dynastynova.com/fr/fleet/orbital-dock"
 title: "Dock orbital (chantier)"
 description: "Construire vaisseaux et défenses : files, paiement, livraison, durées."
 tags: ["fleet"]
-published: false
+published: true
 created: "2026-10-02T13:08:50.428Z"
-updated: "2026-10-15T18:54:34.471Z"
+updated: "2026-10-15T19:28:18.335Z"
 ---
 
 # Dock orbital (chantier)

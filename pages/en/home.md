@@ -8,7 +8,7 @@ description: "The Dynasty Nova player wiki: rules, data and worked examples."
 tags: ["home"]
 published: true
 created: "2026-10-02T13:33:57.746Z"
-updated: "2026-10-06T10:30:56.630Z"
+updated: "2026-10-15T19:28:29.804Z"
 ---
 
 # Dynasty Nova Wiki
@@ -43,16 +43,20 @@ updated: "2026-10-06T10:30:56.630Z"
 - [Planets: size, temperature, type](/en/universe/planets)
 - [Colonization](/en/universe/colonization)
 - [Abandoning a colony](/en/universe/abandoning-a-planet)
+- [Moons](/en/universe/moons)
 
 ### [Economy](/en/economy)
 - [Resources](/en/economy/resources)
 - [Energy](/en/economy/energy)
 - [Storage](/en/economy/storage)
 - [Buildings list](/en/economy/buildings)
+- [Appendix: buildings level by level](/en/economy/building-levels)
+- [Economy formulas](/en/economy/formulas)
 - [Build queues](/en/economy/build-queue)
 - [Demolishing a building](/en/economy/demolition)
 - [Repair Station](/en/economy/repair-station)
 - [Planetary Modulator and Logistics Center](/en/economy/terraformer-and-logistics)
+- [Stellar Bank](/en/economy/stellar-bank)
 
 ### [Research](/en/research)
 - [Technologies list](/en/research/technologies)
@@ -62,6 +66,7 @@ updated: "2026-10-06T10:30:56.630Z"
 ### [Fleet](/en/fleet)
 - [Ships list](/en/fleet/ships)
 - [Rapid fire](/en/fleet/rapid-fire)
+- [Orbital Dock (shipyard)](/en/fleet/orbital-dock)
 - [Fleet movement](/en/fleet/movement)
 - [Missions](/en/fleet/missions)
 - [Expeditions](/en/fleet/expeditions)

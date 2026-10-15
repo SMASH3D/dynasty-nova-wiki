@@ -8,7 +8,7 @@ description: "Le wiki des joueurs de Dynasty Nova : règles, données et exemple
 tags: ["home"]
 published: true
 created: "2026-10-02T09:11:33.067Z"
-updated: "2026-10-06T10:31:10.577Z"
+updated: "2026-10-15T19:28:21.572Z"
 ---
 
 # Wiki de Dynasty Nova
@@ -40,16 +40,20 @@ updated: "2026-10-06T10:31:10.577Z"
 - [Planètes : taille, température, type](/fr/universe/planets)
 - [Coloniser](/fr/universe/colonization)
 - [Abandonner une colonie](/fr/universe/abandoning-a-planet)
+- [Les lunes](/fr/universe/moons)
 
 ### [Économie](/fr/economy)
 - [Les ressources](/fr/economy/resources)
 - [L'énergie](/fr/economy/energy)
 - [Le stockage](/fr/economy/storage)
 - [Liste des bâtiments](/fr/economy/buildings)
+- [Annexe : les bâtiments niveau par niveau](/fr/economy/building-levels)
+- [Formules de l'économie](/fr/economy/formulas)
 - [Files de construction](/fr/economy/build-queue)
 - [Démolir un bâtiment](/fr/economy/demolition)
 - [Station de réparation](/fr/economy/repair-station)
 - [Modulateur planétaire et Centre logistique](/fr/economy/terraformer-and-logistics)
+- [Banque stellaire](/fr/economy/stellar-bank)
 
 ### [Recherche](/fr/research)
 - [Liste des technologies](/fr/research/technologies)
@@ -59,6 +63,7 @@ updated: "2026-10-06T10:31:10.577Z"
 ### [Flotte](/fr/fleet)
 - [Liste des vaisseaux](/fr/fleet/ships)
 - [Tirs rapides](/fr/fleet/rapid-fire)
+- [Dock orbital (chantier)](/fr/fleet/orbital-dock)
 - [Déplacements](/fr/fleet/movement)
 - [Les missions](/fr/fleet/missions)
 - [Expéditions](/fr/fleet/expeditions)

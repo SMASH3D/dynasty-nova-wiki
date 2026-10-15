@@ -1,0 +1,50 @@
+{
+ "fr/misc/changelog": [
+  [
+   "- **15 octobre 2026 (réécriture)** : toutes les rubriques réécrites d'après le code du jeu, valeurs et tables recalculées.",
+   "- **15 octobre 2026 (réécriture)** : toutes les rubriques réécrites d'après le code du jeu, valeurs et tables recalculées.\n- **15 octobre 2026 (publications)** : pages [Formules de l'économie](/fr/economy/formulas), [Dock orbital](/fr/fleet/orbital-dock) et [Les lunes](/fr/universe/moons) publiées."
+  ]
+ ],
+ "en/misc/changelog": [
+  [
+   "- **15 October 2026 (rewrite)**: every section rewritten from the game code, values and tables recomputed.",
+   "- **15 October 2026 (rewrite)**: every section rewritten from the game code, values and tables recomputed.\n- **15 October 2026 (publications)**: [Economy formulas](/en/economy/formulas), [Orbital Dock](/en/fleet/orbital-dock) and [Moons](/en/universe/moons) pages published."
+  ]
+ ],
+ "fr/home": [
+  [
+   "- [Abandonner une colonie](/fr/universe/abandoning-a-planet)\n",
+   "- [Abandonner une colonie](/fr/universe/abandoning-a-planet)\n- [Les lunes](/fr/universe/moons)\n"
+  ],
+  [
+   "- [Liste des bâtiments](/fr/economy/buildings)\n- [Files",
+   "- [Liste des bâtiments](/fr/economy/buildings)\n- [Annexe : les bâtiments niveau par niveau](/fr/economy/building-levels)\n- [Formules de l'économie](/fr/economy/formulas)\n- [Files"
+  ],
+  [
+   "- [Modulateur planétaire et Centre logistique](/fr/economy/terraformer-and-logistics)\n",
+   "- [Modulateur planétaire et Centre logistique](/fr/economy/terraformer-and-logistics)\n- [Banque stellaire](/fr/economy/stellar-bank)\n"
+  ],
+  [
+   "- [Tirs rapides](/fr/fleet/rapid-fire)\n",
+   "- [Tirs rapides](/fr/fleet/rapid-fire)\n- [Dock orbital (chantier)](/fr/fleet/orbital-dock)\n"
+  ]
+ ],
+ "en/home": [
+  [
+   "- [Abandoning a colony](/en/universe/abandoning-a-planet)\n",
+   "- [Abandoning a colony](/en/universe/abandoning-a-planet)\n- [Moons](/en/universe/moons)\n"
+  ],
+  [
+   "- [Buildings list](/en/economy/buildings)\n- [Build",
+   "- [Buildings list](/en/economy/buildings)\n- [Appendix: buildings level by level](/en/economy/building-levels)\n- [Economy formulas](/en/economy/formulas)\n- [Build"
+  ],
+  [
+   "- [Planetary Modulator and Logistics Center](/en/economy/terraformer-and-logistics)\n",
+   "- [Planetary Modulator and Logistics Center](/en/economy/terraformer-and-logistics)\n- [Stellar Bank](/en/economy/stellar-bank)\n"
+  ],
+  [
+   "- [Rapid fire](/en/fleet/rapid-fire)\n",
+   "- [Rapid fire](/en/fleet/rapid-fire)\n- [Orbital Dock (shipyard)](/en/fleet/orbital-dock)\n"
+  ]
+ ]
+}

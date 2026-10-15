@@ -8,7 +8,7 @@ description: "Les modifications du wiki, date par date."
 tags: ["misc"]
 published: true
 created: "2026-10-02T13:10:02.305Z"
-updated: "2026-10-15T18:57:42.522Z"
+updated: "2026-10-15T19:28:22.987Z"
 ---
 
 # Historique du wiki
@@ -29,6 +29,7 @@ updated: "2026-10-15T18:57:42.522Z"
 - **15 octobre 2026 (annexe)** : nouvelle [annexe des bâtiments niveau par niveau](/fr/economy/building-levels) : coût, énergie et production de chaque niveau, jusqu'au niveau 50.
 - **15 octobre 2026 (banque)** : nouvelle page [Banque stellaire](/fr/economy/stellar-bank).
 - **15 octobre 2026 (réécriture)** : toutes les rubriques réécrites d'après le code du jeu, valeurs et tables recalculées.
+- **15 octobre 2026 (publications)** : pages [Formules de l'économie](/fr/economy/formulas), [Dock orbital](/fr/fleet/orbital-dock) et [Les lunes](/fr/universe/moons) publiées.
   - **Économie** : tables de production, d'énergie et de stockage niveau par niveau, catalogue complet des bâtiments, page des formules, paiement des commandes du chantier, Station de réparation après tout combat en défense.
   - **Alliances** : rangs, fonctions et droits, recrutement, succession ; pactes, fair-play de 0 à 100, votes de tous les membres, guerres et score.
   - **Recherche** : une étude à la fois, formule de durée complète, effets chiffrés, énergie de Manipulation Gravitationnelle, arbre complet, réseau de la Collaboration Stellaire.

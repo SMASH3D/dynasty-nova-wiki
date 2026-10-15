@@ -503,9 +503,9 @@ Traduction des noms français, à utiliser dans les pages EN (et ES tant que le 
 |---|---|
 | P-00 Accueil | Page déjà publiée : modification à faire avec ton accord |
 | P-04 Interface | Captures d'écran FR et EN à fournir |
-| P-17 Lunes | Débloquée (`universe-09`, `moon-02` tranchées par le code le 15 octobre 2026) : rédigée, publication à décider à la relecture |
-| P-25 Formules de l'économie | Débloquée le 15 octobre 2026 (code) : rédigée, non publiée, en attente de relecture |
-| P-43 Dock orbital | Débloquée le 15 octobre 2026 (`fleet-09` et `formula-04` tranchées par le code) : rédigée dans le lot Flotte, non publiée, en attente de relecture |
+| P-17 Lunes | Publiée le 15 octobre 2026 (FR et EN) |
+| P-25 Formules de l'économie | Publiée le 15 octobre 2026 (FR et EN) |
+| P-43 Dock orbital | Publiée le 15 octobre 2026 (FR et EN) |
 | P-90 Règlement | `rules-01` : aucun texte officiel |
 
 **Source des pages** : `wiki/pages/<langue>/<chemin>.md`, une copie locale de chaque page (142 fichiers) avec un front matter (`wiki_id`, `path`, `url`, `title`, `updated`…). **Toute modification se fait d'abord en local**, puis est rejouée sur le wiki :

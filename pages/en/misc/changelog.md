@@ -8,7 +8,7 @@ description: "Wiki changes, date by date."
 tags: ["misc"]
 published: true
 created: "2026-10-02T13:12:22.294Z"
-updated: "2026-10-15T18:57:16.145Z"
+updated: "2026-10-15T19:28:31.234Z"
 ---
 
 # Wiki changelog
@@ -29,6 +29,7 @@ updated: "2026-10-15T18:57:16.145Z"
 - **15 October 2026 (appendix)**: new [appendix of buildings level by level](/en/economy/building-levels): cost, energy and output of every level, up to level 50.
 - **15 October 2026 (bank)**: new [Stellar Bank](/en/economy/stellar-bank) page.
 - **15 October 2026 (rewrite)**: every section rewritten from the game code, values and tables recomputed.
+- **15 October 2026 (publications)**: [Economy formulas](/en/economy/formulas), [Orbital Dock](/en/fleet/orbital-dock) and [Moons](/en/universe/moons) pages published.
   - **Economy**: production, energy and storage tables level by level, full buildings catalogue, formulas page, how shipyard orders are paid, Repair Station after any battle in defense.
   - **Alliances**: ranks, functions and rights, recruitment, succession; pacts, fair play from 0 to 100, every member votes, wars and score.
   - **Research**: one study at a time, full duration formula, effects in figures, Graviton Technology energy, full tree, Stellar Collaboration network.
