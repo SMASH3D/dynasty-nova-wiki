@@ -31,7 +31,7 @@ updated: "2026-10-07T22:08:00.206Z"
 ## Worked example
 
 **Tuned Guns and Hull Doctrine, on a Corvette**
-- Base weapons 400, Offensive Systems level 10: 400 × 2 = 800. With Tuned Guns at rank 3: 800 × 1.09 = **872**.
+- Base weapons 400, Weapon Systems level 10: 400 × 2 = 800. With Tuned Guns at rank 3: 800 × 1.09 = **872**.
 - With Hull Doctrine, the 9% moves to the hull and adds to the node's 4%: hull +13%, weapons 800 with no bonus.
 
 **Towing and Tugs (50%), Repair Station level 10, 30% debris**

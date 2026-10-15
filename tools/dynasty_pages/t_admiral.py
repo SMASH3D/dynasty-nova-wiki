@@ -75,7 +75,7 @@ EN = {
         "Stat bonuses apply **after** research and multiply with it. They work in attack as in defence. Damage bonuses on a pair ([[admiral_firing_line_7]], [[admiral_firing_line_9]]) multiply with each other.",
     ],
     'example': """**[[admiral_firing_line_2]] and [[admiral_firing_line_3:2]], on a Corvette**
-- Base weapons 400, Offensive Systems level 10: 400 × 2 = 800. With [[admiral_firing_line_2]] at rank 3: 800 × 1.09 = **872**.
+- Base weapons 400, Weapon Systems level 10: 400 × 2 = 800. With [[admiral_firing_line_2]] at rank 3: 800 × 1.09 = **872**.
 - With [[admiral_firing_line_3:2]], the 9% moves to the hull and adds to the node's 4%: hull +13%, weapons 800 with no bonus.
 
 **[[admiral_spoils_1]] and [[admiral_spoils_2]] (50%), Repair Station level 10, 30% debris**
