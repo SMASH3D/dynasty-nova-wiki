@@ -148,8 +148,8 @@ Chaque page porte un identifiant de page (P-xx). Abréviations : *[B]* = ton bri
 | P-83 | `players/attack-limit` | Limite d'attaques | 6 sur 24 h, missiles compris. | [B] + [J] | `players-04` |
 | P-84 | `players/vacation-mode` | Mode vacances | 48 h min, conditions. | [B] + [J] | `players-05` |
 | P-85 | `players/inactivity` | Inactivité | | [B] | `players-06` |
-| P-86 | `players/alliances` | Alliances | Créer, rejoindre, rangs, quarantaine, capacité. | [J] | `players-07` |
-| P-87 | `players/pacts-and-wars` | Pactes, fair-play et guerres | | [J] | |
+| P-86 | `players/alliances` | Alliances | Fonder, recrutement, intégration, rangs, fonctions et droits, succession, identité, dissolution. Réécrite d'après le code le 15 octobre 2026. | code | `players-07` |
+| P-87 | `players/pacts-and-wars` | Pactes, fair-play et guerres | Pactes, violations, fair-play de 0 à 100, votes de tous les membres, guerres et score. Réécrite d'après le code le 15 octobre 2026. | code | `players-13` |
 | P-88 | `players/alliance-missions` | Missions et station d'alliance | Trésorerie par convois, entraide, station à 3 paliers, missions V2 (inscription, effort relatif), talents. Réécrite d'après le code le 15 octobre 2026. | [J] + code | `players-08`, `players-12` |
 | P-89 | `players/messages-and-reports` | Messagerie et rapports | Partage, conservation. | [J] | |
 | P-90 | `players/game-rules` | Règlement | | | `players-09` |
