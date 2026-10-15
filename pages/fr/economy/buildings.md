@@ -8,7 +8,7 @@ description: "Tous les bâtiments : rôle, niveau maximum, prérequis."
 tags: ["economy"]
 published: true
 created: "2026-10-02T13:08:26.048Z"
-updated: "2026-10-15T16:10:24.989Z"
+updated: "2026-10-15T16:27:40.705Z"
 game_version: "Serveur 2.1.0 · Client 3.1.0"
 ---
 
@@ -73,7 +73,7 @@ Sur une lune, on peut aussi construire la **Fabrique d'automates** et le **Dock 
 
 ### Coûts relevés en jeu
 
-Coût d'un niveau précis, relevé sur une planète de l'univers Redline. Les tables complètes niveau par niveau seront ajoutées sur les pages de chaque bâtiment.
+Coût d'un niveau précis, relevé sur une planète de l'univers Redline. Le coût, l'énergie et la production de chaque niveau sont dans l'[annexe : les bâtiments niveau par niveau](/fr/economy/building-levels).
 
 | Bâtiment | Niveau | Métal | Cristal | Hydrogène | Énergie requise |
 |---|---|---|---|---|---|
@@ -105,6 +105,7 @@ L'**énergie requise** n'est pas consommée : la production d'énergie de la pla
 
 ## Pages liées
 
+- [Annexe : les bâtiments niveau par niveau](/fr/economy/building-levels)
 - [Les ressources](/fr/economy/resources)
 - [L'énergie](/fr/economy/energy)
 - [Le stockage](/fr/economy/storage)

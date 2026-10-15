@@ -8,7 +8,7 @@ description: "Founding, joining and running an alliance."
 tags: ["players"]
 published: true
 created: "2026-10-02T13:12:02.204Z"
-updated: "2026-10-06T08:08:37.173Z"
+updated: "2026-10-15T16:27:34.814Z"
 game_version: "Serveur 2.1.0 · Client 3.1.0"
 ---
 

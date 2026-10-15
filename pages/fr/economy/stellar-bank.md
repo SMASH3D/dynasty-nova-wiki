@@ -1,10 +1,14 @@
 ---
+wiki_id: 180
 locale: "fr"
 path: "economy/stellar-bank"
+url: "https://wiki.dynastynova.com/fr/economy/stellar-bank"
 title: "Banque stellaire"
 description: "Échanger ses ressources contre des Crédits, et ses Crédits contre des ressources."
 tags: ["economy"]
 published: false
+created: "2026-10-15T16:27:40.950Z"
+updated: "2026-10-15T16:27:42.277Z"
 ---
 
 # Banque stellaire

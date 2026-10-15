@@ -8,7 +8,7 @@ description: "Resources, energy and buildings."
 tags: ["economy"]
 published: true
 created: "2026-10-02T13:10:34.746Z"
-updated: "2026-10-02T16:37:42.867Z"
+updated: "2026-10-15T16:27:30.238Z"
 ---
 
 # Economy
@@ -21,6 +21,7 @@ updated: "2026-10-02T16:37:42.867Z"
 - [Energy](/en/economy/energy)
 - [Storage](/en/economy/storage)
 - [Buildings list](/en/economy/buildings)
+- [Appendix: buildings level by level](/en/economy/building-levels)
 - [Economy formulas](/en/economy/formulas)
 - [Build queues](/en/economy/build-queue)
 - [Demolishing a building](/en/economy/demolition)

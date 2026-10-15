@@ -8,7 +8,7 @@ description: "Les modifications du wiki, date par date."
 tags: ["misc"]
 published: true
 created: "2026-10-02T13:10:02.305Z"
-updated: "2026-10-15T16:10:32.348Z"
+updated: "2026-10-15T16:27:45.682Z"
 ---
 
 # Historique du wiki
@@ -26,6 +26,7 @@ updated: "2026-10-15T16:10:32.348Z"
 - **8 octobre 2026** : diagramme de l'arbre de talents en tête des données détaillées de chaque [classe](/fr/dynasty/classes) et de l'[arbre commun](/fr/dynasty/common-tree).
 - **15 octobre 2026** : rubrique Économie vérifiée sur le code du jeu. Coût de la Fabrique d'automates niveau 5 corrigé ; bâtiments constructibles sur une lune ; recherche une étude à la fois pour tout l'empire ; cumul des bonus de stockage ; Base lunaire non démolissable.
 - **15 octobre 2026 (alliances)** : rubrique Alliances vérifiée sur le code du jeu. Missions et station d'alliance réécrites (convois vers la trésorerie, entraide, station à 3 paliers, missions par inscription et effort relatif) ; tous les membres votent ; droits par rang et par fonction ; coûts de renommage ; fair-play de 0 à 100 ; limite d'attaques précisée.
+- **15 octobre 2026 (annexe)** : nouvelle [annexe des bâtiments niveau par niveau](/fr/economy/building-levels) : coût, énergie et production de chaque niveau, jusqu'au niveau 50.
 
 ## Pages liées
 

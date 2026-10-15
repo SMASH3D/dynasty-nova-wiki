@@ -1,10 +1,14 @@
 ---
+wiki_id: 179
 locale: "en"
 path: "economy/stellar-bank"
+url: "https://wiki.dynastynova.com/en/economy/stellar-bank"
 title: "Stellar Bank"
 description: "Trading your resources for Credits, and your Credits for resources."
 tags: ["economy"]
 published: false
+created: "2026-10-15T16:27:27.035Z"
+updated: "2026-10-15T16:27:28.272Z"
 ---
 
 # Stellar Bank

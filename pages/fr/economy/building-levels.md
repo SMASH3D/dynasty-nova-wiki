@@ -6,9 +6,9 @@ url: "https://wiki.dynastynova.com/fr/economy/building-levels"
 title: "Annexe : les bâtiments niveau par niveau"
 description: "Coût, énergie et production de chaque bâtiment, niveau par niveau."
 tags: ["economy"]
-published: false
+published: true
 created: "2026-10-15T16:14:28.366Z"
-updated: "2026-10-15T16:14:30.406Z"
+updated: "2026-10-15T16:27:39.188Z"
 ---
 
 # Annexe : les bâtiments niveau par niveau

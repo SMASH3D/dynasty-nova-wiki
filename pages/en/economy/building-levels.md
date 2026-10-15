@@ -6,9 +6,9 @@ url: "https://wiki.dynastynova.com/en/economy/building-levels"
 title: "Appendix: buildings level by level"
 description: "Cost, energy and output of every building, level by level."
 tags: ["economy"]
-published: false
+published: true
 created: "2026-10-15T16:14:31.297Z"
-updated: "2026-10-15T16:14:33.582Z"
+updated: "2026-10-15T16:27:25.311Z"
 ---
 
 # Appendix: buildings level by level

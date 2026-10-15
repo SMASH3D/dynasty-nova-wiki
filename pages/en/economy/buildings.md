@@ -8,7 +8,7 @@ description: "All buildings: role, maximum level, requirements."
 tags: ["economy"]
 published: true
 created: "2026-10-02T13:10:42.469Z"
-updated: "2026-10-15T16:10:14.029Z"
+updated: "2026-10-15T16:27:26.726Z"
 game_version: "Serveur 2.1.0 · Client 3.1.0"
 ---
 
@@ -73,7 +73,7 @@ On a moon you can also build the **Automaton Factory** and the **Orbital Dock**,
 
 ### Costs seen in game
 
-Cost of one given level, recorded on a planet in the Redline universe. Full level-by-level tables will be added to each building's own page.
+Cost of one given level, recorded on a planet in the Redline universe. The cost, energy and output of every level are in the [appendix: buildings level by level](/en/economy/building-levels).
 
 | Building | Level | Metal | Crystal | Hydrogen | Energy required |
 |---|---|---|---|---|---|
@@ -105,6 +105,7 @@ Cost of one given level, recorded on a planet in the Redline universe. Full leve
 
 ## Related pages
 
+- [Appendix: buildings level by level](/en/economy/building-levels)
 - [Resources](/en/economy/resources)
 - [Energy](/en/economy/energy)
 - [Storage](/en/economy/storage)
