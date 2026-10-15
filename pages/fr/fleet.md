@@ -13,14 +13,14 @@ updated: "2026-10-02T16:36:27.919Z"
 
 # Flotte
 
-**Vaisseaux, déplacements et missions.**
+**Vaisseaux, déplacements et missions.** Les 14 vaisseaux du jeu se construisent au Dock orbital, volent à la vitesse du plus lent d'entre eux et partent toujours avec une mission.
 
 ## Pages de cette rubrique
 
-- [Liste des vaisseaux](/fr/fleet/ships)
-- [Tirs rapides](/fr/fleet/rapid-fire)
-- [Dock orbital (chantier)](/fr/fleet/orbital-dock)
-- [Déplacements](/fr/fleet/movement)
-- [Les missions](/fr/fleet/missions)
-- [Expéditions](/fr/fleet/expeditions)
-- [Porte de saut](/fr/fleet/jump-gate)
+- [Liste des vaisseaux](/fr/fleet/ships) : coûts, durées, statistiques, moteurs et prérequis.
+- [Tirs rapides](/fr/fleet/rapid-fire) : qui tire plusieurs fois sur quoi, et comment.
+- [Dock orbital (chantier)](/fr/fleet/orbital-dock) : files, paiement, livraison et durées de construction.
+- [Déplacements](/fr/fleet/movement) : emplacements de flotte, distance, durée, hydrogène, rappel.
+- [Les missions](/fr/fleet/missions) : les dix missions et leurs règles.
+- [Expéditions](/fr/fleet/expeditions) : l'espace lointain, ses conditions et ses résultats.
+- [Porte de saut](/fr/fleet/jump-gate) : sauts instantanés entre vos lunes.
