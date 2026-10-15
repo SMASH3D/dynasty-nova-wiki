@@ -191,7 +191,7 @@ Only buildings with requirements are listed.
 | Astrophysics | Space Pioneer (1) |
 | Graviton Technology | Stellar Colossus (1) |
 
-Stellar Collaboration and Stellar Diplomacy unlock nothing: their value lies in their effect (see [Technologies list](/en/research/technologies)).
+Stellar Collaboration and Stellar Diplomacy unlock no building, ship or defense: the first shortens research, the second lets you found an alliance from level 1 (see [Technologies list](/en/research/technologies)).
 
 ## Common pitfalls
 

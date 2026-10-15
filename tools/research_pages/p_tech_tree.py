@@ -68,6 +68,7 @@ def body(lang):
     col = closure('battle_cruiser')
     lab12 = [c for c in RES_ORDER if [l for t, rc, l in RES[c][6] if rc == 'research_lab'][0] >= 10]
     no_unlock = [c for c in RES_ORDER if c not in U]
+    assert no_unlock == ['research_network', 'interstellar_diplomacy'], no_unlock
     if fr:
         return f'''# Arbre technologique
 
@@ -126,7 +127,7 @@ Seuls figurent les bâtiments qui ont des prérequis.
 
 {t_ur}
 
-{' et '.join(nm(c, lang) for c in no_unlock)} ne {'débloquent' if len(no_unlock) > 1 else 'débloque'} rien : {'leur' if len(no_unlock) > 1 else 'son'} intérêt tient à {'leur' if len(no_unlock) > 1 else 'son'} effet (voir [Liste des technologies](/fr/research/technologies)).
+Collaboration Stellaire et Diplomatie Stellaire ne débloquent aucun bâtiment, vaisseau ni défense : la première raccourcit les recherches, la seconde permet de fonder une alliance dès le niveau 1 (voir [Liste des technologies](/fr/research/technologies)).
 
 ## Pièges fréquents
 
@@ -205,7 +206,7 @@ Only buildings with requirements are listed.
 
 {t_ur}
 
-{' and '.join(nm(c, lang) for c in no_unlock)} unlock{'' if len(no_unlock) > 1 else 's'} nothing: {'their' if len(no_unlock) > 1 else 'its'} value lies in {'their' if len(no_unlock) > 1 else 'its'} effect (see [Technologies list](/en/research/technologies)).
+Stellar Collaboration and Stellar Diplomacy unlock no building, ship or defense: the first shortens research, the second lets you found an alliance from level 1 (see [Technologies list](/en/research/technologies)).
 
 ## Common pitfalls
 

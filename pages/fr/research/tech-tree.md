@@ -188,7 +188,7 @@ Seuls figurent les bâtiments qui ont des prérequis.
 | Cosmologie Appliquée | Pionnier spatial (1) |
 | Manipulation Gravitationnelle | Colossus stellaire (1) |
 
-Collaboration Stellaire et Diplomatie Stellaire ne débloquent rien : leur intérêt tient à leur effet (voir [Liste des technologies](/fr/research/technologies)).
+Collaboration Stellaire et Diplomatie Stellaire ne débloquent aucun bâtiment, vaisseau ni défense : la première raccourcit les recherches, la seconde permet de fonder une alliance dès le niveau 1 (voir [Liste des technologies](/fr/research/technologies)).
 
 ## Pièges fréquents
 
