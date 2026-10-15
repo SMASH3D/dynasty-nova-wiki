@@ -68,13 +68,13 @@ Chaque page porte un identifiant de page (P-xx). Abréviations : *[B]* = ton bri
 | ID | Chemin | Page | Contenu | Sources | Manque |
 |---|---|---|---|---|---|
 | P-10 | `universe` | Univers (index) | | | |
-| P-11 | `universe/universes` | Les univers | Paramètres d'un univers, Redline, calendrier. | [J] | `universe-01`, `universe-02` |
+| P-11 | `universe/universes` | Les univers | Paramètres d'un univers, Redline, calendrier. | Code + [J] | `universe-13` |
 | P-12 | `universe/coordinates` | Coordonnées | `[galaxie:système:position]`, 9 × 99 × 15, plus l'espace lointain au-delà de la position 15. | [B] + [J] | `universe-03` |
 | P-13 | `universe/galaxy-view` | La vue galaxie | Lignes, statuts, débris, quota d'attaques, sondage rapide, partage de position. | [B] + [J] | `universe-04` |
 | P-14 | `universe/planets` | Planètes : taille, température, type | Cases, température, types, bonus de position. | [J] partiel | `universe-05`, `universe-06` |
 | P-15 | `universe/colonization` | Coloniser | Pionnier spatial, Cosmologie appliquée, emplacements de colonie. | [B] + [J] | `universe-07` |
 | P-16 | `universe/abandoning-a-planet` | Abandonner une colonie | Conditions, conséquences, dégradation. | [J] complet | |
-| P-17 | `universe/moons` | Les lunes | Formation, Base lunaire, cases, diamètre. | [J] | `universe-08`, `universe-09` |
+| P-17 | `universe/moons` | Les lunes | Formation, Base lunaire, cases, diamètre. **Rédigée d'après le code le 15 octobre 2026, non publiée.** | Code | |
 
 ### `economy`, ressources et bâtiments
 | ID | Chemin | Page | Contenu | Sources | Manque |
@@ -268,14 +268,14 @@ En bref · encart « paramètre d'univers » si besoin · Règles · Exemple chi
 
 ### Univers
 - `universe-01` ✅ Type d'univers (andromeda, orion, quantum, vega) et biome (1 à 8) : tirés au hasard, purement cosmétiques. Biome de planète (1 à 6) : cosmétique aussi.
-- `universe-02` ⏳ Liste et calendrier des univers.
-- `universe-03` ✅ La carte n'est pas circulaire. Distance entre galaxies : 20 000 × écart.
+- `universe-02` ✅ (code, 15 octobre 2026) Le code ne porte ni liste ni calendrier : chaque univers est créé avec sa date d'ouverture, et le jeu les affiche à l'écran Univers (compte à rebours, inscriptions fermées). Seuls les univers privés ont une date de fin. P-11 renvoie à cet écran ; tenir une liste dans le wiki reste un choix éditorial. (Question : Liste et calendrier des univers.)
+- `universe-03` ✅ Révisé par le code (15 octobre 2026) : **la carte boucle** sur les galaxies et sur les systèmes depuis le 9 octobre 2026 (Backend #509, #513), plus court des deux sens ; les positions ne bouclent pas. Distance entre galaxies : 20 000 × écart. P-12 corrigée. (Ancienne réponse : la carte n'est pas circulaire.)
 - `universe-04` ✅ PvE = combats contre des joueurs non humains. Des planètes non joueurs existent sur la bêta, équilibrage en cours.
 - `universe-05` ✅ Table par position (taille moyenne ± 15, température, types), planète mère à 163 cases. Voir [DONNEES.md §3](DONNEES.md).
 - `universe-06` ✅ Plus une planète est proche du soleil, plus elle est chaude et plus les Capteurs photovoltaïques produisent. Plus elle est loin, plus elle est froide et plus le Condensateur produit d'hydrogène. ✅ Formules : Condensateur × (1,44 − 0,004 × Tmax), Collecteur Tmax / 4 + base, Capteurs × (1 + T actuelle / 100). Les +23 % de ma planète sont confirmés (T = 23 °C).
-- `universe-07` ✅ Cosmologie appliquée 1 = planète mère + 1 colonie, puis 1 colonie de plus tous les 2 niveaux. 🔶 Formule déduite, à confirmer au niveau 2 : colonies = arrondi supérieur(N / 2).
+- `universe-07` ✅ Cosmologie appliquée 1 = planète mère + 1 colonie, puis 1 colonie de plus tous les 2 niveaux. ✅ Confirmé par le code (15 octobre 2026) : planètes = 1 + partie entière((N + 1) / 2), lunes non comptées.
 - `universe-08` ✅ Comme OGame : 1 % par 100 000 débris, plafond 20 %.
-- `universe-09` ✅ Comme OGame. **Pages bloquées** pour le moment : P-17 Lunes, P-47 Porte de saut, P-73 Phalange. La formation des lunes est traitée dans P-64 Débris.
+- `universe-09` ✅ Comme OGame. ✅ (code, 15 octobre 2026) Base lunaire : 20 000 métal, 40 000 cristal, 20 000 hydrogène au niveau 1, facteur 2, aucun prérequis, pas de niveau maximal ; premier bâtiment obligatoire d'une lune, non démolissable ; 3 cases ouvertes et 1 occupée par niveau, plafond partie entière((diamètre / 1 000)²). P-17 rédigée d'après le code, laissée non publiée pour relecture.
 
 ### Économie
 - `economy-01` ✅ Taux de fonctionnement par pas de 10 %.
@@ -357,7 +357,7 @@ Règle : aucune de ces formules ne va dans le wiki avant confirmation. Les pages
 - `formula-04` ⏳ (ex `fleet-08`) Durée de construction des vaisseaux et défenses au Dock orbital : quelle formule ? Exemple relevé : une Navette de fret avec Dock orbital 4 et Assembleur 0 prend 1 080 s.
 - `formula-05` ⏳ Collecteur solaire : l'équipe indique « Tmax / 4 plus sa base d'énergie ». La base vaut-elle 20 (35 relevés à Tmax = 60 °C) ?
 - `formula-06` ✅ Confirmé par le code : arrondi à l'inférieur par ressource (15 octobre 2026, DONNEES §4). Ancienne question : Coût des bâtiments et recherches : coût du niveau N = coût du niveau 1 × facteur^(N − 1), avec les facteurs relevés (1,5 ; 1,6 ; 1,75 ; 1,8 ; 2 ; 3 ; 5) ? Arrondi appliqué ?
-- `moon-02` ⏳ **À clarifier pour compléter P-73** : coût de construction et prérequis de la Phalange de capteur. P-73 est rédigée sans ces données, et P-17 Lunes reste bloquée faute de données sur la Base lunaire (`universe-09`).
+- `moon-02` ✅ (code, 15 octobre 2026, rubrique Univers) Phalange de capteur : 20 000 métal, 40 000 cristal, 20 000 hydrogène au niveau 1, facteur 2, prérequis Base lunaire 1, pas de niveau maximal. Repris dans P-17 ; P-73 relève de la rubrique Espionnage. (Question : coût de construction et prérequis de la Phalange de capteur.)
 
 ### Nouvelles questions (2 octobre 2026, fin de journée)
 - `universe-10` ✅ Position ramenée sur une échelle de 15. (Question : Les systèmes comptent de 9 à 20 positions selon l'univers : comment se répartissent taille moyenne, température et types quand un système n'a pas 15 positions ? (P-14 ne donne que la table à 15 positions.))
@@ -368,7 +368,8 @@ Règle : aucune de ces formules ne va dans le wiki avant confirmation. Les pages
 
 - `economy-11` ✅ (code, 15 octobre 2026) Oui, il s'applique aux 10 000 de la Base planetaire, et il s'**additionne** aux autres bonus (Entrepôts fédérés, talents) : DONNEES §4, « Relevé dans le code ». Page `economy/storage` FR et EN complétée. (Question : Le bonus du Centre logistique (+10 % par niveau) s'applique-t-il aussi aux 10 000 de la Base planetaire ? Se cumule-t-il avec le talent Entrepôts fédérés (addition ou multiplication) ?)
 
-- `universe-12` ⏳ Le bonus de position suit-il aussi la mise à l'échelle sur 15 positions dans les univers de 9 à 20 positions ? Est-il réglable par univers ?
+- `universe-12` ✅ (code, 15 octobre 2026) Oui, mais **sans arrondi** : la position est lue sur 15 (1 + (p − 1) × 14 / (n − 1)) et le bonus interpolé entre les deux positions voisines ; taille, types et température utilisent, eux, la position arrondie. Pas réglable par univers. Planète mère exclue (sauf part accordée par un talent de dynastie). (Question : Le bonus de position suit-il aussi la mise à l'échelle sur 15 positions dans les univers de 9 à 20 positions ? Est-il réglable par univers ?)
+- `universe-13` ⏳ Valeurs Redline non relevées : expéditions (ouvertes ?) et événements cosmiques (météorites, pluies de comètes, impacts géants ; fermés par défaut). P-11 indique « ouvertes » pour les expéditions d'après la note de version.
 
 ### Alliances et banque (15 octobre 2026)
 - `players-12` ✅ (responsable, 15 octobre 2026) Oui : encart « Par défaut : fermées · Redline : ouvertes » ajouté à P-88. (Question : Les missions d'alliance sont-elles ouvertes sur Redline ? Elles s'ouvrent univers par univers (fermées par défaut, réglage du back-office) ; la page P-88 dit seulement que l'onglet peut manquer.)
@@ -468,7 +469,7 @@ Traduction des noms français, à utiliser dans les pages EN (et ES tant que le 
 |---|---|
 | P-00 Accueil | Page déjà publiée : modification à faire avec ton accord |
 | P-04 Interface | Captures d'écran FR et EN à fournir |
-| P-17 Lunes | `universe-09` (coûts et prérequis de la Base lunaire), `moon-02` |
+| P-17 Lunes | Débloquée (`universe-09`, `moon-02` tranchées par le code le 15 octobre 2026) : rédigée, publication à décider à la relecture |
 | P-25 Formules de l'économie | `formula-01` à `formula-06` |
 | P-43 Dock orbital | `fleet-09`, `formula-04` |
 | P-90 Règlement | `rules-01` : aucun texte officiel |
