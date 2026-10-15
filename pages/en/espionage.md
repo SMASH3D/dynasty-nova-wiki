@@ -4,7 +4,7 @@ locale: "en"
 path: "espionage"
 url: "https://wiki.dynastynova.com/en/espionage"
 title: "Espionage"
-description: "Probes, reports and the phalanx."
+description: "Probes, reports, shared vision and the phalanx."
 tags: ["espionage"]
 published: true
 created: "2026-10-02T13:11:42.237Z"
@@ -13,10 +13,10 @@ updated: "2026-10-02T16:38:29.235Z"
 
 # Espionage
 
-**Probes, reports and the phalanx.**
+**Probes, reports, shared vision and the phalanx.**
 
 ## Pages in this section
 
-- [Spying](/en/espionage/spying)
-- [Reading a spy report](/en/espionage/spy-report)
-- [Sensor phalanx](/en/espionage/sensor-phalanx)
+- [Spying](/en/espionage/spying): sending Scouts, detail level, risk to the probes, shared alliance vision.
+- [Reading a spy report](/en/espionage/spy-report): the report sections and the intrusion alert.
+- [Sensor phalanx](/en/espionage/sensor-phalanx): watching fleets from a moon.

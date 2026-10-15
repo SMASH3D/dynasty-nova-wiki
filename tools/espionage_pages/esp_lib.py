@@ -36,7 +36,6 @@ PHALANX_SCAN_COST = 5000
 PHALANX_BASE_COST = (20000, 40000, 20000)
 PHALANX_FACTOR = 2
 REDLINE_SYSTEMS = 99
-MOON_STORAGE = 10000  # stockage d'une lune (rubrique Économie, DONNEES §4)
 
 
 def n(x, lang):
