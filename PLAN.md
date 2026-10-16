@@ -160,6 +160,12 @@ Nouvelle page (15 octobre 2026, non publiée) :
 |---|---|---|---|---|---|
 | P-106 | `economy/stellar-bank` | Banque stellaire | Vendre et acheter des ressources contre des Crédits, cours, taxe, livraisons. | code | `bank-01` |
 
+Nouvelle page (16 octobre 2026, non publiée jusqu'à la mise en production de la suppression de compte) :
+
+| ID | Chemin | Page | Contenu | Sources | Manque |
+|---|---|---|---|---|---|
+| P-115 | `players/account-deletion` | Supprimer son compte | Demande depuis les Paramètres, 7 jours sous protection, annulation (lien du mail, 48 h, 30 jours), alliances, ce qui disparaît, abonnements. | code | |
+
 ### `misc`, divers
 | ID | Chemin | Page | Contenu | Sources | Manque |
 |---|---|---|---|---|---|
