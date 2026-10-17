@@ -40,6 +40,7 @@ updated: "2026-10-15T19:28:31.234Z"
   - **Universe**: wrap-around map, Stellar Station, colonization, abandonment, position bonus in 9 to 20 position universes.
   - **Players**: military points for every ship, 7-day newcomer protection, report retention, frozen private universes, report settings.
   - **Dynasty and talents**: values fixed, class ultimates need no level, edge and lock rules, talent texts taken from the game.
+- **17 October 2026**: alliance experience from battles won fixed in the game: 5 points per 1,000 resources of military value destroyed (instead of per 1,000 score points), [Alliance missions and station](/en/players/alliance-missions) page updated with an example.
 
 ## Related pages
 
