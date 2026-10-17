@@ -42,10 +42,13 @@ updated: "2026-10-15T18:57:30.484Z"
 - Avec l'ultime, il lit la minimale : 1,44 − 0,004 × 20 = **1,36**, soit 13 % d'hydrogène en plus.
 
 **Bonus de position de l'Excavateur minéral en position 8 d'un système à 15 positions** (+35 % sans talent)
-- Racines : 35 × 1,15 = **+40,25 %**.
-- Racines et Marcottage : 35 × 1,45 = **+50,75 %**.
-- Avec en plus Filon de métal : 35 × 1,65 = **+57,75 %**.
-- Une planète mère au même endroit, avec Racines, Marcottage et Terre natale au rang 3 : 35 × 1,45 × ½ = **+25,375 %**.
+- Racines ne change rien ici : son plancher de 15 % est sous les 35 % de la position. L'Extracteur cristallin de la même planète, sans bonus de position, passe en revanche à **+15 %**.
+- Marcottage : 35 × 1,9 = **+66,5 %**.
+- Avec en plus Filon de métal : 35 × 2,1 = **+73,5 %**.
+- Une planète mère au même endroit, avec Marcottage et Terre natale au rang 3 : 35 × 1,9 × 1,05 = **+69,825 %**. Sans Terre natale, elle n'aurait que le plancher : +15 % avec Racines, +30 % avec Lunes creusées au rang 3.
+
+**Plancher de position en position 13 d'un système à 15 positions** (aucun bonus sans talent)
+- Racines et Lunes creusées au rang 3 : l'Excavateur minéral et l'Extracteur cristallin ont chacun **+30 %**. Marcottage n'y ajoute rien : il élargit le bonus de la position, pas le plancher.
 
 **Collecteur solaire en position 8 d'un système à 15 positions** (température maximale 60 °C)
 - Sans talent : 60 / 4 + 20 = **35** énergie par Collecteur.
@@ -54,9 +57,9 @@ updated: "2026-10-15T18:57:30.484Z"
 - Peau de lumière au rang 3, Pôle chaud, Satellites d'altitude et Climatiseur planétaire réglé vers le chaud : (60 + 30 + 40) / 4 = 32,5, × 1,70 (45 + 25 % d'amplitude) = 55,25, + 20 = **75**.
 
 **Hôte sur une colonie de 210 cases dont 100 bâties, Excavateur minéral niveau 20** (4 036 métal par heure bruts, vitesse ×1)
-- En friche (100 / 210 = 47,6 %) avec Sève montante au rang 3 : +15 %. Géants (plus de 200 cases) : +8 %. Trois planètes d'autres joueurs dans le système avec Foule : 3 × 2 = +6 %. Une autre de vos planètes dans le système avec Marées au rang 3 : +9 %.
-- Total **+38 %** : 4 036 × 0,38 = **1 533** métal par heure en plus.
-- Dans les 6 h qui suivent un raid qui a emporté des ressources, Repousse ajoute 20 % : +58 %, soit **2 340**.
+- En friche (100 / 210 = 47,6 %) avec Sève montante au rang 3 : +24 %. Géants (plus de 200 cases) : +8 %. Trois planètes d'autres joueurs dans le système avec Foule : 3 × 2 = +6 %. Une autre de vos planètes dans le système avec Marées au rang 3 : +9 %.
+- Total **+47 %** : 4 036 × 0,47 = **1 896** métal par heure en plus.
+- Dans les 6 h qui suivent un raid qui a emporté des ressources, Repousse ajoute 20 % : +67 %, soit **2 704**.
 
 ## Données détaillées
 
@@ -204,21 +207,21 @@ graph TB
 
 | Rangée | Nœud | Type | Effet (nœud plein) | Par rang |
 |---|---|---|---|---|
-| 1 | **Racines** | clé | Le bonus de position de vos planètes dans leur système est 15 % plus fort. |  |
-| 2 | **Terre natale** | 3 rangs | Votre planète mère reçoit ⅙ du bonus de sa position dans le système par rang, ½ au rang 3. | 3 × 16,67 % |
+| 1 | **Racines** | clé | Chacune de vos planètes, planète mère comprise, a au moins 15 % de bonus de position sur ses mines de métal et de cristal, quelle que soit sa place dans le système. |  |
+| 2 | **Terre natale** | 3 rangs | Votre planète mère reçoit 105 % du bonus de sa position dans le système. | 3 × 35 % |
 | 3 | **A · Filon de métal** | choix | Le bonus de position de vos mines de métal, au milieu du système, est encore 20 % plus fort. | |
 |  | **B · Veine de cristal** |  | Le bonus de position de vos mines de cristal, près de l'étoile, est encore 20 % plus fort. | |
-| 4 | **Lunes creusées** | 3 rangs | Chaque niveau de base lunaire creuse +3 cases en plus de ses 3, dans la limite du diamètre de la lune. | 3 × 1 |
-| 5 | **Marcottage** | clé | Le bonus de position de vos planètes est encore 30 % plus fort. |  |
+| 4 | **Lunes creusées** | 3 rangs | Le bonus de position garanti par Racines monte de 15 % sur les mines de métal et de cristal de chacune de vos planètes. | 3 × 5 % |
+| 5 | **Marcottage** | clé | Le bonus de position de vos planètes est encore 90 % plus fort. |  |
 | 6 | **A · Terrain gagné** | choix | Chacune de vos planètes gagne 2 cases constructibles. | |
 |  | **B · Lune pleine** |  | Vos lunes ne sont plus limitées par leur diamètre : chaque niveau de base lunaire leur donne toutes ses cases. | |
 | 7 | **Sol vivant** | 3 rangs | Votre terraformeur et votre base lunaire coûtent 24 % de moins. | 3 × 8 % |
 | 8 | **Terraformeur vivant** | clé | Chaque niveau de terraformeur donne +1 case en plus de ses 5. |  |
 | 9 | **Transplantation** | ultime | Une fois par semaine, déplacez une colonie vers une position libre de son système, bâtiments et lune compris, si aucune flotte n'est en vol vers elle ou depuis elle. |  |
 
-- **Racines**, **Marcottage** et **Filon de métal** ou **Veine de cristal** s'additionnent puis multiplient le bonus de position : +65 % au plus sur une mine. Rien là où la position ne donne rien.
-- **Terre natale** : la planète mère n'a jamais de bonus de position sans ce nœud. La part s'applique au bonus déjà élargi par les nœuds ci-dessus.
-- **Lunes creusées** : chaque niveau de Base lunaire donne 6 cases au rang 3, toujours dans la limite du diamètre de la lune, sauf avec Lune pleine.
+- **Racines** et **Lunes creusées** fixent un **plancher** : les mines de métal et de cristal de chacune de vos planètes, planète mère comprise, ont au moins ce bonus de position (15 %, puis 30 % au rang 3 de Lunes creusées), où qu'elles soient. Le plancher remplace un bonus plus faible, il ne s'y ajoute pas. Les lunes n'en ont pas.
+- **Marcottage** et **Filon de métal** ou **Veine de cristal** s'additionnent puis multiplient le bonus de position : +110 % au plus sur une mine. Rien là où la position ne donne rien, hors plancher.
+- **Terre natale** : sans ce nœud, la planète mère n'a que le plancher. La part (105 % au rang 3) s'applique au bonus déjà élargi par les nœuds ci-dessus ; le plancher se compare ensuite au résultat.
 - **Terrain gagné** ne vaut que pour les planètes, pas les lunes.
 - **Sol vivant** ne vise que le Modulateur planétaire et la Base lunaire ; la réduction s'ajoute aux autres réductions de prix des bâtiments, au-delà de leur plafond commun.
 - **Terraformeur vivant** : 6 cases par niveau de Modulateur au lieu de 5, et la case de plus des niveaux pairs reste (Modulateur 6 : 33 → 39 cases).
@@ -231,7 +234,7 @@ graph TB
 | Rangée | Nœud | Type | Effet (nœud plein) | Par rang |
 |---|---|---|---|---|
 | 1 | **Jeune pousse** | clé | Sur une planète en friche, dont moins de 50 % des cases sont bâties, vos bâtiments se construisent 10 % plus vite. |  |
-| 2 | **Sève montante** | 3 rangs | Vos planètes en friche produisent 15 % de plus dans leurs mines. | 3 × 5 % |
+| 2 | **Sève montante** | 3 rangs | Vos planètes en friche produisent 24 % de plus dans leurs mines. | 3 × 8 % |
 | 3 | **A · Petits mondes** | choix | Sur une planète de moins de 150 cases, vos bâtiments coûtent 15 % de moins. | |
 |  | **B · Géants** |  | Sur une planète de plus de 200 cases, vos mines produisent 8 % de plus. | |
 | 4 | **Longue friche** | 3 rangs | Une planète reste en friche plus longtemps : son seuil monte de 30 pts au-dessus de 50 % de ses cases bâties. | 3 × 10 pts |
@@ -250,7 +253,7 @@ graph TB
 - **Marées** : il suffit d'une autre de vos planètes dans le système. Le bonus ne grandit pas avec leur nombre, et il s'ajoute à Voisinage, Foule ou Solitude.
 - **Repousse** ne se déclenche que si le raid a emporté des ressources. Un nouveau raid relance les 6 h.
 - **Friche éternelle** : jamais une lune. La première planète désignée l'est tout de suite. En désigner une autre retire aussitôt le statut à l'ancienne, et la nouvelle ne l'obtient que 7 jours plus tard.
-- Au plus, l'Hôte ajoute +47 % aux mines d'une planète (15 + 8 + 15 + 9), et +20 % de plus pendant 6 h après un raid.
+- Au plus, l'Hôte ajoute +56 % aux mines d'une planète (24 + 8 + 15 + 9), et +20 % de plus pendant 6 h après un raid.
 
 ### Plafonds de la classe
 
@@ -262,23 +265,24 @@ Ce que les talents des deux arbres peuvent apporter au plus à cette classe, lev
 | Le bonus de froid du synthétiseur d'hydrogène gagne 25 % d'amplitude | 25 % |
 | Le bonus de chaleur de la centrale solaire et des satellites gagne 25 % d'amplitude | 25 % |
 | La part de l'énergie des satellites solaires qui vient de la température gagne 45 % d'amplitude | 45 % |
-| Le bonus de position dans le système gagne 45 % d'amplitude | 45 % |
-| La planète mère reçoit 50 % du bonus de position de sa place dans le système | 50 % |
+| Chaque planète a au moins 30 % de bonus de position sur ses mines de métal et de cristal | 30 % |
+| La planète mère reçoit 105 % du bonus de position de sa place dans le système | 105 % |
 | Le bonus de position des mines de métal gagne 20 % d'amplitude | 20 % |
 | Le bonus de position des mines de cristal gagne 20 % d'amplitude | 20 % |
+| Le bonus de position dans le système gagne 90 % d'amplitude | 90 % |
 | +4 champs sur chaque planète | 2 |
 | −24 % de coût du terraformeur et de la base lunaire | 24 % |
 | −15 % de coût des bâtiments sur un petit monde | 15 % |
 
-La ligne des cases se complète avec Arpenteurs de l'arbre commun (+2) : l'arbre de classe n'en donne que 2 sur les 4. Les bonus de l'Hôte, le Climatiseur, les planchers de rendement, les cases de la Base lunaire et du Modulateur sont des mécaniques bornées à ce que l'arbre donne : aucun point n'y est perdu.
+La ligne des cases se complète avec Arpenteurs de l'arbre commun (+2) : l'arbre de classe n'en donne que 2 sur les 4. Les bonus de l'Hôte, le Climatiseur, les planchers de rendement, les cases du Modulateur sont des mécaniques bornées à ce que l'arbre donne : aucun point n'y est perdu.
 
 ### Builds à 25 points
 
 | Build | Répartition | Ce qu'il obtient |
 |---|---|---|
-| Climatologue | Thermie 15 · Hôte 10 | Les deux saisons, bonus de température +40 % sur les deux facteurs et +25 % de plus sur l'un, Climatiseur de 30 °C, Peau de lumière, La saison longue, Satellites d'altitude ; Jeune pousse, planètes en friche +15 %, petits mondes ou géants, friche jusqu'à 80 % des cases, Voisinage, Foule ou Solitude |
-| Colon | Croissance 15 · Thermie 10 | Transplantation, bonus de position +45 % (+65 % sur une mine), planète mère à la moitié de son bonus, Lunes creusées, Sol vivant, Terraformeur vivant ; bonus de température **+10 %** seulement (+35 % sur un bâtiment avec le pôle), Climatiseur de 30 °C, Peau de lumière, La saison longue |
-| Jardinier | Hôte 15 · Croissance 10 | Friche éternelle, planètes en friche +15 %, Voisinage, Marées, Repousse ; bonus de position +45 % (+65 % sur une mine), Terre natale, Lunes creusées, +2 cases ou Lune pleine |
+| Climatologue | Thermie 15 · Hôte 10 | Les deux saisons, bonus de température +40 % sur les deux facteurs et +25 % de plus sur l'un, Climatiseur de 30 °C, Peau de lumière, La saison longue, Satellites d'altitude ; Jeune pousse, planètes en friche +24 %, petits mondes ou géants, friche jusqu'à 80 % des cases, Voisinage, Foule ou Solitude |
+| Colon | Croissance 15 · Thermie 10 | Transplantation, bonus de position +90 % (+110 % sur une mine) et au moins 30 % partout, planète mère à 105 % de son bonus, Sol vivant, Terraformeur vivant ; bonus de température **+10 %** seulement (+35 % sur un bâtiment avec le pôle), Climatiseur de 30 °C, Peau de lumière, La saison longue |
+| Jardinier | Hôte 15 · Croissance 10 | Friche éternelle, planètes en friche +24 %, Voisinage, Marées, Repousse ; bonus de position +90 % (+110 % sur une mine) et au moins 30 % partout, Terre natale, +2 cases ou Lune pleine |
 
 Avant la rangée 7 de la branche principale, placez au moins 2 points dans la seconde : la porte demande 12 points, et les rangées 1 à 6 d'une branche n'en contiennent que 10.
 
@@ -287,7 +291,7 @@ Avant la rangée 7 de la branche principale, placez au moins 2 points dans la se
 - **Un bonus de température ne change jamais de signe** : sur une planète trop chaude pour le Condensateur d'hydrogène (facteur sous 1), Sang-froid n'ajoute rien, c'est Racines profondes qui relève le plancher. De même, sous 0 °C, les Capteurs photovoltaïques n'ont pas de bonus à élargir : seul Soleil d'hiver les aide.
 - **Climatiseur planétaire tire dans les deux sens** : vers le froid, la planète gagne de l'hydrogène mais perd de l'énergie solaire ; vers le chaud, l'inverse.
 - **10 points en Thermie ne donnent pas les +40 %** : Écoute du climat est en rangée 7. Sans elle, l'amplitude générale reste à 10 %.
-- **Le bonus de position ne concerne que deux mines**, et ses positions dépendent du nombre de positions du système : positions 1 à 3 et 6 à 10 dans un système à 15 positions (Redline). Sur les autres positions, Racines et Marcottage n'apportent rien.
+- **Le bonus de position ne concerne que deux mines**, et ses positions dépendent du nombre de positions du système : positions 1 à 3 et 6 à 10 dans un système à 15 positions (Redline). Sur les autres positions, Marcottage et Filon de métal ou Veine de cristal n'apportent rien : seul le plancher de Racines et Lunes creusées y joue.
 - **« En friche » n'est pas « jeune »** : une colonie est jeune pendant ses premiers jours (arbre commun) ; une planète est en friche tant que ses cases ne sont pas assez bâties. Chaque niveau construit la rapproche du seuil.
 - **Foule remplace Voisinage**, elle ne s'y ajoute pas.
 - **Le total de cases bouge** : un niveau de Modulateur planétaire ou Terrain gagné peut faire perdre Petits mondes (passer de 149 à 151 cases) ou gagner Géants.

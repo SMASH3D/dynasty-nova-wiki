@@ -1,9 +1,9 @@
-"""L'Amiral : textes vérifiés sur le code (notes du 15 octobre 2026, DONNEES §18)."""
+"""L'Amiral : textes vérifiés sur le code (notes du 15 octobre 2026, Part du butin et Chantier de guerre le 17 octobre 2026, DONNEES §18)."""
 
 FR = {
     'brief': "l'Amiral est la classe du combat frontal. Elle ne change pas les vaisseaux que vous construisez, mais ce qu'ils valent une fois face à l'ennemi. Tout le combat tient dans la branche Ligne de feu ; Campagne fait partir vite, enchaîner et rentrer plus tôt ; Butin de guerre ramène davantage de chaque bataille.",
     'rules': [
-        "La vitesse de flotte, l'hydrogène et les soutes génériques viennent de l'[arbre commun](/fr/dynasty/common-tree). L'Amiral n'y ajoute que des **accents** étroits : la vitesse des attaques, espionnages et destructions de lune ([[admiral_campaign_1]]) et des recyclages ([[admiral_spoils_6:2]]), l'hydrogène et la construction des vaisseaux de combat, et une flotte réservée aux attaques.",
+        "La vitesse de flotte, l'hydrogène et les soutes génériques viennent de l'[arbre commun](/fr/dynasty/common-tree). L'Amiral n'y ajoute que des **accents** étroits : la vitesse des attaques, espionnages et destructions de lune ([[admiral_campaign_1]]) et des recyclages ([[admiral_spoils_6:2]]), l'hydrogène, la construction et le coût des vaisseaux de combat, et une flotte réservée aux attaques.",
         "Les **vaisseaux de combat** sont l'Intercepteur, l'Assaillant, la Corvette, le Cuirassé, le Frappe-orbital, le Prédateur, l'Annihilateur et le Colossus stellaire. Les vaisseaux civils (Navette de fret, Cargo stellaire, Récupérateur, Éclaireur, Pionnier spatial) et le Collecteur solaire n'en sont pas.",
         "Les bonus de statistiques s'appliquent **après** la recherche et se multiplient avec elle. Ils jouent en attaque comme en défense. Les bonus de dégâts d'une paire ([[admiral_firing_line_7]], [[admiral_firing_line_9]]) se multiplient entre eux.",
     ],
@@ -11,13 +11,14 @@ FR = {
 - Armement de base 400, Systèmes Offensifs niveau 10 : 400 × 2 = 800. Avec [[admiral_firing_line_2]] au rang 3 : 800 × 1,09 = **872**.
 - Avec [[admiral_firing_line_3:2]], les 9 % passent à la coque et s'ajoutent aux 4 % du nœud : coque +13 %, armement 800 sans bonus.
 
-**[[admiral_spoils_1]] et [[admiral_spoils_2]] (50 %), Station de réparation niveau 10, 30 % de débris**
-- Part de la Station : 54 % × (1 − 30 %) = 37,8 %. [[admiral_spoils_1]] : 37,8 % × 50 % = **18,9 %**.
-- 30 Corvettes perdues en attaque : 30 × 18,9 % = 5,67, soit **5 Corvettes**, et 67 % de chances d'en avoir une sixième.
+**[[admiral_spoils_1]] (20 %), Station de réparation niveau 10, 30 % de débris**
+- Part de la Station : 54 % × (1 − 30 %) = 37,8 %. [[admiral_spoils_1]] : 37,8 % × 20 % = **7,56 %**.
+- 30 Corvettes perdues en attaque : 30 × 7,56 % = 2,268, soit **2 Corvettes**, et 26,8 % de chances d'en avoir une troisième.
 - Les mêmes 30 Corvettes perdues en défense, avec [[admiral_spoils_8]] : 54 % × 1,2 × 70 % = 45,36 %, soit **13** Corvettes (11 sans le nœud).
 
-**[[admiral_spoils_3:2]]**
-- Un match nul pille à 30 % du taux d'une victoire : 50 % × 30 % = **15 %** du stock. Sur 2 000 000 de métal, vous emportez **300 000**, dans la limite de vos soutes.
+**[[admiral_spoils_2]] et [[admiral_spoils_3:2]], contre une cible sans abri**
+- Une attaque gagnée pille 50 % + 15 points = **65 %** du stock. Sur 2 000 000 de métal, vous emportez **1 300 000**, dans la limite de vos soutes.
+- Un match nul pille à 30 % du taux d'une victoire : 65 % × 30 % = **19,5 %** du stock, soit **390 000** métal.
 
 **[[admiral_firing_line_8]]**
 - Contre une lune de 8 944 km, le risque de perdre votre flotte est √8 944 / 2 = 47,29 % ; avec le nœud : 47,29 % × 0,75 = **35,47 %**. La chance de détruire la lune ne change pas.""",
@@ -33,10 +34,12 @@ FR = {
 - **[[admiral_campaign_3:1]]** accélère les Navettes de fret et Cargos stellaires d'une mission Attaque, sans dépasser le vaisseau le plus rapide. **[[admiral_campaign_3:2]]** réduit la part d'hydrogène brûlée par vos vaisseaux de combat : une flotte où ils brûlent la moitié du carburant économise 5 %.
 - **[[admiral_campaign_5]]** ne sert qu'à la mission Attaque (ni espionnage ni destruction de lune).
 - **[[admiral_campaign_6:2]]** : une défaite détruit toute la flotte, il n'y a donc rien à rendre ; en pratique, elle ne joue que sur un match nul.
+- **[[admiral_campaign_7]]** : la baisse de coût ne vaut que pour les vaisseaux de combat, hors plafond de coût de la classe ; elle s'additionne aux autres réductions du vaisseau.
 - **[[admiral_campaign_8]]** vaut pour vos attaques et vos destructions de lune.
 - **[[admiral_campaign_9]]** : à l'envoi, vous nommez une seconde cible, une planète d'un autre joueur ou abandonnée, dans la même galaxie, à 1 système au plus de la première. Si l'attaque est gagnée et la flotte survit, elle y repart aussitôt, une fois par vol, en prenant l'hydrogène du saut dans ses soutes. Trêve, alliance, mode vacances, protections et limite d'attaques sont vérifiés au moment du saut : en cas de refus, la flotte rentre.""",
         'spoils': """- **[[admiral_spoils_1]]** : c'est la Station de réparation de la planète de départ qui remorque. Une lune n'a pas de Station : une flotte partie d'une lune ne remorque rien. Le remorquage utilise un **arrondi probabiliste** : la partie décimale devient une chance d'avoir un vaisseau de plus.
-- **[[admiral_spoils_3:2]]** : 30 % du taux de pillage d'une victoire, abris du défenseur déduits.
+- **[[admiral_spoils_2]]** : les points s'ajoutent au taux de pillage de la victoire (50 %), avec ceux des cibles abandonnées de l'arbre commun ; les abris du défenseur se retirent ensuite, et vos soutes plafonnent toujours ce que vous emportez.
+- **[[admiral_spoils_3:2]]** : 30 % du taux de pillage d'une victoire, [[admiral_spoils_2]] compris, abris du défenseur déduits.
 - **[[admiral_spoils_4]]** accélère toutes les réparations de la Station ; une réparation reste comprise entre 30 min (15 min avec [[admiral_spoils_6:1]]) et 12 h.
 - **[[admiral_spoils_5]]** : les Récupérateurs de la flotte d'attaque ramassent les débris de ce combat, après le pillage.
 - **[[admiral_spoils_7]]** ajoute l'hydrogène seulement dans la place qui reste en soute.
@@ -46,8 +49,8 @@ FR = {
     'builds': """| Build | Répartition | Ce qu'il obtient |
 |---|---|---|
 | Chasseur de flottes | Ligne de feu 15 · Campagne 10 | [[admiral_firing_line_9]], armement +9 % (ou coque +13 %), bouclier +3 %, [[admiral_firing_line_4]], [[admiral_firing_line_7]] ; [[admiral_campaign_1]], hydrogène rendu sur les victoires, retour victorieux, une flotte d'attaque en plus |
-| Raideur | Campagne 15 · Butin de guerre 10 | [[admiral_campaign_9]], [[admiral_campaign_7]], [[admiral_campaign_8]] ; remorquage jusqu'à 50 %, [[admiral_spoils_3:1]] ou [[admiral_spoils_3:2]], réparations plus rapides, recyclage de combat |
-| Pilleur de batailles | Butin de guerre 15 · Ligne de feu 10 | [[admiral_spoils_9]], remorquage, [[admiral_spoils_7]], [[admiral_spoils_8]] ; armement +9 %, bouclier +3 %, [[admiral_firing_line_4]], [[admiral_firing_line_5]] |
+| Raideur | Campagne 15 · Butin de guerre 10 | [[admiral_campaign_9]], [[admiral_campaign_7]], [[admiral_campaign_8]] ; remorquage à 20 %, pillage à 65 % ([[admiral_spoils_2]]), [[admiral_spoils_3:1]] ou [[admiral_spoils_3:2]], réparations plus rapides, recyclage de combat |
+| Pilleur de batailles | Butin de guerre 15 · Ligne de feu 10 | [[admiral_spoils_9]], remorquage, pillage à 65 %, [[admiral_spoils_7]], [[admiral_spoils_8]] ; armement +9 %, bouclier +3 %, [[admiral_firing_line_4]], [[admiral_firing_line_5]] |
 
 Avant la rangée 7 de la branche principale, placez au moins 2 points dans la seconde : la porte demande 12 points, et les rangées 1 à 6 d'une branche n'en contiennent que 10.""",
     'pitfalls': [
@@ -70,7 +73,7 @@ Avant la rangée 7 de la branche principale, placez au moins 2 points dans la se
 EN = {
     'brief': "the Admiral is the head-on combat class. It does not change the ships you build, but what they are worth once facing the enemy. All the combat lies in the Firing Line branch; Campaign leaves fast, chains raids and comes home sooner; Spoils of War brings more back from every battle.",
     'rules': [
-        "Generic fleet speed, hydrogen and holds come from the [common tree](/en/dynasty/common-tree). The Admiral only adds narrow **accents**: the speed of attacks, espionage and moon destruction ([[admiral_campaign_1]]) and of recycling ([[admiral_spoils_6:2]]), combat ships' hydrogen and build speed, and a fleet reserved for attacks.",
+        "Generic fleet speed, hydrogen and holds come from the [common tree](/en/dynasty/common-tree). The Admiral only adds narrow **accents**: the speed of attacks, espionage and moon destruction ([[admiral_campaign_1]]) and of recycling ([[admiral_spoils_6:2]]), combat ships' hydrogen, build speed and cost, and a fleet reserved for attacks.",
         "**Combat ships** are the Interceptor, Assailant, Corvette, Battleship, Orbital Striker, Predator, Annihilator and Stellar Colossus. Civil ships (Cargo Shuttle, Stellar Freighter, Salvager, Scout, Space Pioneer) and the Solar Collector are not.",
         "Stat bonuses apply **after** research and multiply with it. They work in attack as in defence. Damage bonuses on a pair ([[admiral_firing_line_7]], [[admiral_firing_line_9]]) multiply with each other.",
     ],
@@ -78,13 +81,14 @@ EN = {
 - Base weapons 400, Weapon Systems level 10: 400 × 2 = 800. With [[admiral_firing_line_2]] at rank 3: 800 × 1.09 = **872**.
 - With [[admiral_firing_line_3:2]], the 9% moves to the hull and adds to the node's 4%: hull +13%, weapons 800 with no bonus.
 
-**[[admiral_spoils_1]] and [[admiral_spoils_2]] (50%), Repair Station level 10, 30% debris**
-- Station share: 54% × (1 − 30%) = 37.8%. [[admiral_spoils_1]]: 37.8% × 50% = **18.9%**.
-- 30 Corvettes lost in attack: 30 × 18.9% = 5.67, that is **5 Corvettes**, and a 67% chance of a sixth.
+**[[admiral_spoils_1]] (20%), Repair Station level 10, 30% debris**
+- Station share: 54% × (1 − 30%) = 37.8%. [[admiral_spoils_1]]: 37.8% × 20% = **7.56%**.
+- 30 Corvettes lost in attack: 30 × 7.56% = 2.268, that is **2 Corvettes**, and a 26.8% chance of a third.
 - The same 30 Corvettes lost in defence, with [[admiral_spoils_8]]: 54% × 1.2 × 70% = 45.36%, that is **13** Corvettes (11 without the node).
 
-**[[admiral_spoils_3:2]]**
-- A draw plunders at 30% of a victory's rate: 50% × 30% = **15%** of the stock. On 2,000,000 metal, you take **300,000**, within your holds' limit.
+**[[admiral_spoils_2]] and [[admiral_spoils_3:2]], against a target with no shelter**
+- A won attack plunders 50% + 15 points = **65%** of the stock. On 2,000,000 metal, you take **1,300,000**, within your holds' limit.
+- A draw plunders at 30% of a victory's rate: 65% × 30% = **19.5%** of the stock, that is **390,000** metal.
 
 **[[admiral_firing_line_8]]**
 - Against an 8,944 km moon, the risk of losing your fleet is √8,944 / 2 = 47.29%; with the node: 47.29% × 0.75 = **35.47%**. The chance of destroying the moon does not change.""",
@@ -100,10 +104,12 @@ EN = {
 - **[[admiral_campaign_3:1]]** speeds up the Cargo Shuttles and Stellar Freighters of an Attack mission, never past the fastest ship. **[[admiral_campaign_3:2]]** cuts the share of hydrogen burned by your combat ships: a fleet where they burn half the fuel saves 5%.
 - **[[admiral_campaign_5]]** only serves the Attack mission (neither espionage nor moon destruction).
 - **[[admiral_campaign_6:2]]**: a defeat destroys the whole fleet, so there is nothing to give back; in practice, it only works on a draw.
+- **[[admiral_campaign_7]]**: the cost cut only applies to combat ships, outside the class's cost cap; it adds to the ship's other reductions.
 - **[[admiral_campaign_8]]** applies to your attacks and your moon destructions.
 - **[[admiral_campaign_9]]**: when sending, you name a second target, a planet of another player or an abandoned one, in the same galaxy, at most 1 system from the first. If the attack is won and the fleet survives, it leaves for it at once, once per flight, taking the jump's hydrogen from its holds. Truce, alliance, vacation mode, protections and the attack limit are checked at the time of the jump: if refused, the fleet goes home.""",
         'spoils': """- **[[admiral_spoils_1]]**: the Repair Station of the departure planet does the towing. A moon has no Station: a fleet leaving from a moon tows nothing. [[admiral_spoils_1]] uses **probabilistic rounding**: the decimal part becomes a chance of one more ship.
-- **[[admiral_spoils_3:2]]**: 30% of a victory's plunder rate, the defender's shelters deducted.
+- **[[admiral_spoils_2]]**: the points add to a victory's plunder rate (50%), together with the common tree's abandoned-target points; the defender's shelters are taken off afterwards, and your holds still cap what you carry.
+- **[[admiral_spoils_3:2]]**: 30% of a victory's plunder rate, [[admiral_spoils_2]] included, the defender's shelters deducted.
 - **[[admiral_spoils_4]]** speeds up every Station repair; a repair stays between 30 min (15 min with [[admiral_spoils_6:1]]) and 12 h.
 - **[[admiral_spoils_5]]**: the attack fleet's Salvagers collect this battle's debris, after plunder.
 - **[[admiral_spoils_7]]** only adds hydrogen in the space left in the holds.
@@ -113,8 +119,8 @@ EN = {
     'builds': """| Build | Split | What it gets |
 |---|---|---|
 | Fleet Hunter | Firing Line 15 · Campaign 10 | [[admiral_firing_line_9]], weapons +9% (or hull +13%), shield +3%, [[admiral_firing_line_4]], [[admiral_firing_line_7]]; [[admiral_campaign_1]], hydrogen back on victories, victorious return, one more attack fleet |
-| Raider | Campaign 15 · Spoils of War 10 | [[admiral_campaign_9]], [[admiral_campaign_7]], [[admiral_campaign_8]]; towing up to 50%, [[admiral_spoils_3:1]] or [[admiral_spoils_3:2]], faster repairs, combat recycling |
-| Battle Looter | Spoils of War 15 · Firing Line 10 | [[admiral_spoils_9]], towing, [[admiral_spoils_7]], [[admiral_spoils_8]]; weapons +9%, shield +3%, [[admiral_firing_line_4]], [[admiral_firing_line_5]] |
+| Raider | Campaign 15 · Spoils of War 10 | [[admiral_campaign_9]], [[admiral_campaign_7]], [[admiral_campaign_8]]; towing at 20%, plunder at 65% ([[admiral_spoils_2]]), [[admiral_spoils_3:1]] or [[admiral_spoils_3:2]], faster repairs, combat recycling |
+| Battle Looter | Spoils of War 15 · Firing Line 10 | [[admiral_spoils_9]], towing, plunder at 65%, [[admiral_spoils_7]], [[admiral_spoils_8]]; weapons +9%, shield +3%, [[admiral_firing_line_4]], [[admiral_firing_line_5]] |
 
 Before row 7 of the main branch, place at least 2 points in the second one: the gate requires 12 points, and rows 1 to 6 of a branch only hold 10.""",
     'pitfalls': [

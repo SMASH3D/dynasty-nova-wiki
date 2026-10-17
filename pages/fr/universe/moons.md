@@ -35,7 +35,7 @@ updated: "2026-10-15T19:28:20.020Z"
 8. Une lune naît **vide** : ni ressources, ni bâtiments, **une seule case**, et le nom de sa planète (elle peut être renommée).
 9. La **Base lunaire** se construit en premier : aucun autre bâtiment ne peut être lancé sur la lune avant elle. Elle ne se démolit pas.
 10. Chaque niveau de Base lunaire **ouvre 3 cases et en occupe une**, soit 2 cases nettes par niveau.
-11. Les cases d'une lune ne dépassent jamais son **plafond** : partie entière((diamètre / 1 000)²). Au-delà, monter la Base lunaire n'ouvre plus rien. Certains talents de dynastie ajoutent des cases par niveau ou lèvent ce plafond.
+11. Les cases d'une lune ne dépassent jamais son **plafond** : partie entière((diamètre / 1 000)²). Au-delà, monter la Base lunaire n'ouvre plus rien. Un talent de dynastie lève ce plafond.
 12. Bâtiments possibles sur une lune : Base lunaire, Phalange de capteur, Porte de saut, Fabrique d'automates, Dock orbital (tableau ci-dessous).
 13. Une lune **ne produit rien** et stocke 10 000 de chaque ressource (voir [Le stockage](/fr/economy/storage)).
 

@@ -40,6 +40,7 @@ updated: "2026-10-15T19:28:31.234Z"
   - **Universe**: wrap-around map, Stellar Station, colonization, abandonment, position bonus in 9 to 20 position universes.
   - **Players**: military points for every ship, 7-day newcomer protection, report retention, frozen private universes, report settings.
   - **Dynasty and talents**: values fixed, class ultimates need no level, edge and lock rules, talent texts taken from the game.
+- **17 October 2026 (class rebalance)**: [Builder](/en/dynasty/classes/builder) (Lode branch built around the mine of the day, Bulk buying on defences), [Admiral](/en/dynasty/classes/admiral) (Share of the Spoils, cheaper War Yard), [Theorist](/en/dynasty/classes/theorist) (Protocols −18%) and [Symbiote](/en/dynasty/classes/symbiote) (position bonus floor, Native Soil, Layering, Rising Sap) updated; granted resets on [Talents](/en/dynasty/talents).
 
 ## Related pages
 
