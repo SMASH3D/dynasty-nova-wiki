@@ -35,7 +35,7 @@ updated: "2026-10-15T19:28:28.281Z"
 8. A moon is born **empty**: no resources, no buildings, **a single field**, and its planet's name (it can be renamed).
 9. The **Lunar base** is built first: no other building can be started on the moon before it. It cannot be demolished.
 10. Each Lunar base level **opens 3 fields and takes one**, a net 2 fields per level.
-11. A moon's fields never go past its **cap**: whole part of ((diameter / 1,000)²). Beyond it, raising the Lunar base opens nothing more. Some dynasty talents add fields per level or lift that cap.
+11. A moon's fields never go past its **cap**: whole part of ((diameter / 1,000)²). Beyond it, raising the Lunar base opens nothing more. A dynasty talent lifts that cap.
 12. Buildings possible on a moon: Lunar base, Sensor phalanx, Jump gate, Automaton Factory, Orbital Dock (table below).
 13. A moon **produces nothing** and stores 10,000 of each resource (see [Storage](/en/economy/storage)).
 

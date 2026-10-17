@@ -24,8 +24,8 @@ updated: "2026-10-15T18:56:54.779Z"
 1. The Builder is a **common** class: every dynasty can take it.
 2. Its tree has **three branches**: Lode, Yard and Foundry.
 3. Each branch has 9 rows and costs 15 points. With 25 points at most, you complete one branch and its ultimate, plus a second branch down to row 6 (10 points). How points, gates and choices work is described on [Talents](/en/dynasty/talents).
-4. Generic bonuses (mine production, construction speed, storage, Plasma Technology) come from the [common tree](/en/dynasty/common-tree). The Builder only has **mechanics**, a 5% cost accent (Tight quote or Bulk buying) and a construction speed accent, Catch-up, limited to colonies catching up with the home planet.
-5. The extra levels of Master shaft, Twin mines and Mother lode only apply to the three mines (Mineral Excavator, Crystal Extractor, Hydrogen Condenser) and only to their production: the mine still draws the energy of its real level. A mine gains at most 2 production levels: 1 from Master shaft or Twin mines, 1 from Mother lode.
+4. Generic bonuses (mine production, construction speed, storage, Plasma Technology) come from the [common tree](/en/dynasty/common-tree). The Builder only has **mechanics**, a cost accent (Tight quote, 5% on buildings, or Bulk buying, 10% on defences) and a construction speed accent, Catch-up, limited to colonies catching up with the home planet.
+5. The extra levels of Master shaft, Twin mines, Mother lode and Galleries only apply to the three mines (Mineral Excavator, Crystal Extractor, Hydrogen Condenser) and only to their production: the mine still draws the energy of its real level. Every mine gains 1 production level from Master shaft or Twin mines. The **mine of the day** of Prospecting, while its day runs, gains 1 more from Mother lode, from its first level, and 1 more again from Galleries from level 30 (25, 20 then 15 at ranks 1 to 3): 3 levels at most.
 6. First pour, Prospecting and Core sampling are computed on the **mine's own production**: at its production level (extra levels included), its operating rate and the universe speed, without Plasma Technology or any other percentage bonus. Prospecting and Core sampling add to the planet's production and, like it, suffer from an energy shortfall; the First pour payout does not.
 7. "Once a day" means 24 h after the last use, for your whole empire (Core sampling, All-out push). State order comes back 7 days after the designated order is paid.
 
@@ -33,18 +33,19 @@ updated: "2026-10-15T18:56:54.779Z"
 
 Universe at speed 1. A Mineral Excavator produces 30 × N × 1.1^N metal per hour and draws 10 × N × 1.1^N energy: 4,036 metal and 1,345 energy at level 20, 4,662 metal and 1,554 energy at level 21.
 
-**Full Lode on the home planet (Master shaft and Mother lode)**
-- The Excavator reaches level 21. It produces as a level 23 (21 + 1 + 1): 30 × 23 × 1.1^23 = **6,178 metal per hour**, for the energy of a level 21 (1,554).
-- First pour and Great pours (9 h): 9 × 6,178 = **55,602 metal** paid when the level ends.
-- Prospecting at rank 3 on this mine: 6,178 × 30% = 1,853 (rounded down) more per hour, that is **44,472 metal** over the 24 h, at full energy.
-- Core sampling: 2 × 6,178 × 4 = **49,424 more metal** in 4 h, at full energy.
+**Full Lode on the home planet (Master shaft, the Excavator being the mine of the day)**
+- The Excavator reaches level 21. It produces as a level 24 (21 + 1 from Master shaft + 1 from Mother lode + 1 from Galleries, threshold lowered to 15): 30 × 24 × 1.1^24 = **7,091 metal per hour**, for the energy of a level 21 (1,554). The next day, if it is no longer the mine of the day, it produces as a level 22: 5,372.
+- First pour and Great pours (4 h): 4 × 7,091 = **28,364 metal** paid when the level ends.
+- Prospecting at rank 3: 7,091 × 15% = 1,063 (rounded down) more per hour, that is **25,512 metal** over the 24 h, at full energy.
+- Core sampling (production doubled): 7,091 × 4 = **28,364 more metal** in 4 h, at full energy.
 
 **Galleries and Twin mines, on a colony**
-- With Galleries at rank 3, Mother lode applies from level 11. A level 11 Excavator produces as a level 13: **1,346 metal per hour** instead of 941, for the energy of a level 11 (313).
+- With Galleries at rank 3, its extra level applies from level 15. A level 15 Excavator, mine of the day, produces as a level 18: **3,002 metal per hour** instead of 1,879, for the energy of a level 15 (626). On other days, it produces as a level 16: 2,205.
 
 **Foundry: an already known level**
 - Level 25 Excavator on a colony, a level the home planet already reached: 1,010,046 metal and 252,511 crystal at catalogue price.
 - Known plans and Yard archives (25%) plus Tight quote (5%): 30% less, rounded up, that is **707,033 metal** and **176,758 crystal**.
+- If this Excavator is the mine of the day and you have Double lode: 45% less, that is **555,526 metal** and **138,882 crystal**.
 - Designated for State order: half of this already reduced price, **353,517 metal** and **88,379 crystal**, 35% of the catalogue price. Points are still counted on the catalogue price.
 
 **Yard: an 8 h night, empty building queue**
@@ -173,23 +174,25 @@ graph TB
 
 | Row | Node | Type | Effect (full node) | Per rank |
 |---|---|---|---|---|
-| 1 | **First pour** | key | When one of your mines gains a level, it pays you 3 h of its new production at once. |  |
-| 2 | **Great pours** | 3 ranks | A mine that gains a level pays you 6 h more of its new production. | 3 × 2 h |
+| 1 | **First pour** | key | When one of your mines gains a level, it pays you 1 h of its new production at once. |  |
+| 2 | **Great pours** | 3 ranks | A mine that gains a level pays you 3 h more of its new production. | 3 × 1 h |
 | 3 | **A · Master shaft** | choice | Your home planet's mines produce as if they were 1 level higher. | |
 |  | **B · Twin mines** |  | Your colonies' mines produce as if they were 1 level higher. | |
-| 4 | **Prospecting** | 3 ranks | Every day, one of your mines drawn at random produces 30% more for 24 h. | 3 × 10% |
-| 5 | **Mother lode** | key | From level 20, each of your mines produces as if it were 1 level higher, on top of Master shaft or Twin mines. |  |
+| 4 | **Prospecting** | 3 ranks | Every day, one of your mines drawn at random produces 15% more for 24 h. | 3 × 5% |
+| 5 | **Mother lode** | key | The mine of the day produces as if it were 1 level higher, from its first level, on top of Master shaft or Twin mines. |  |
 | 6 | **A · Chosen lode** | choice | Every day, you pick the Prospecting mine instead of the draw. | |
-|  | **B · Double lode** |  | Every day, 2 mines are drawn for Prospecting instead of one. | |
-| 7 | **Galleries** | 3 ranks | Mother lode applies 9 levels earlier. | 3 × 3 |
+|  | **B · Double lode** |  | While its day runs, upgrading the mine of the day costs 15% less. | |
+| 7 | **Galleries** | 3 ranks | The mine of the day produces as if it were 1 level higher still from level 30, a threshold lowered by 15 levels, on top of Mother lode. | 3 × 5 |
 | 8 | **Nothing spills** | key | When a storage is full, 50 pts of the value of the overflowing production is converted into the resource of your choice, at equal value: three metal are worth two crystal or one hydrogen. |  |
-| 9 | **Core sampling** | ultimate | Once a day, the mine of your choice produces three times as much for 4 h. You pick the mine and the moment. |  |
+| 9 | **Core sampling** | ultimate | Once a day, the mine of your choice produces twice as much for 4 h. You pick the mine and the moment. |  |
 
 - **First pour**: every completed level of a mine pays its hours of production, including the level granted by Master stroke. The payout goes straight into the planet's stock.
 - **Master shaft** applies to the home planet, **Twin mines** to every colony, from the mine's level 1.
 - **Prospecting**: the draw is made among all standing mines of all your planets (not moons), each with the same chance whatever its level. A new mine of the day is drawn shortly after the 24 h end.
-- **Mother lode** triggers on the mine's real level (20, or 11 with Galleries at rank 3), not its production level.
-- **Chosen lode**: your choice replaces the drawn mine and lasts 24 h; you choose again when those 24 h end. Without a choice, the draw goes on. **Double lode** draws two different mines.
+- **Mother lode** only applies to the mine of the day, on its planet, while its day runs; the other mines get nothing from it.
+- **Chosen lode**: your choice replaces the drawn mine and lasts 24 h; you choose again when those 24 h end. Without a choice, the draw goes on.
+- **Double lode**: the cut adds to the other building reductions (Known plans, Tight quote…) and counts when you start the upgrade; the mine must be the mine of the day at that moment.
+- **Galleries** triggers on the mine's real level (30, then 25, 20 and 15 at ranks 1 to 3), not its production level, and only on the mine of the day.
 - **Nothing spills**: only the overflow of the two other resources is converted, at equal value, rounded down, and only into the free space of the chosen resource's storage (metal as long as you have chosen nothing). The choice is made planet by planet. It only applies to production, and after Safety Stock (common tree).
 - **Core sampling**: the Mineral Excavator, Crystal Extractor or Hydrogen Condenser, at the time you choose.
 
@@ -228,7 +231,7 @@ graph TB
 | 1 | **Known plans** | key | A building level you already reached on another of your planets costs 10% less. |  |
 | 2 | **Master stroke** | 3 ranks | Each finished building has a 6% chance to reach the next level too, for free. | 3 × 2% |
 | 3 | **A · Tight quote** | choice | Your buildings cost 5% less. | |
-|  | **B · Bulk buying** |  | Your ships and defenses cost 5% less. | |
+|  | **B · Bulk buying** |  | Your defenses cost 10% less. | |
 | 4 | **Yard archives** | 3 ranks | Levels you already know cost another 15% less. | 3 × 5% |
 | 5 | **Down payment** | key | The resources set aside for the order at the head of your building queue are safe from looting, up to 30% of its cost. |  |
 | 6 | **A · Yard credit** | choice | An order starts even when up to 10% of its resources are missing; the rest is taken from your production. | |
@@ -237,7 +240,8 @@ graph TB
 | 8 | **Alliance plans** | key | A level a member of your alliance already reached counts as known for Known plans. |  |
 | 9 | **State order** | ultimate | Once a week, the upgrade of your choice costs 50% less. |  |
 
-- **Known plans**: the level must be reached on **another** of your planets or moons. Building reductions add up (Known plans, Yard archives, Tight quote: 30% at most); the price is rounded up.
+- **Known plans**: the level must be reached on **another** of your planets or moons. Building reductions add up (Known plans, Yard archives, Tight quote: 30% at most, 45% on the mine of the day with Double lode); the price is rounded up.
+- **Bulk buying**: 10% on every defence, outside the class's cost cap; ships are no longer covered.
 - **Master stroke**: only after an upgrade (not a demolition), and if the next level is possible (maximum level, free field).
 - **Down payment**: the protected order is the first order **waiting** in the planet's queue, not the running one (already paid), nor a demolition. The sheltered share, at most the stock, is removed from what can be plundered; the plunder rate then applies to the rest.
 - **Yard credit**: you need at least 90% of **each** resource. The whole available stock goes, the shortfall becomes a debt taken from the stock as soon as it fills, before any other spending. No new credit while a debt runs. **Metal payment** pays missing crystal and hydrogen in metal, if there is enough metal. Both only apply to buildings.
@@ -251,19 +255,19 @@ The most the talents of both trees can bring this class, lever by lever. Past it
 |---|---|
 | The home planet's mines produce as if they had +1 level | 1 |
 | The colonies' mines produce as if they had +1 level | 1 |
-| Every mine produces as if it had +1 level | 1 |
-| Mother lode applies 9 levels earlier | 9 |
+| The mine of the day produces as if it had +1 level, from its first level | 1 |
+| Galleries applies 15 levels earlier | 15 |
 | +15% build speed on a colony level the home planet already has | 15% |
 | −25% cost of a building level already reached on another of your planets | 25% |
 | −5% building resource cost | 5% |
-| −5% ship and defense cost | 5% |
+| −10% defense cost | 10% |
 
 ### 25-point builds
 
 | Build | Split | What it gets |
 |---|---|---|
-| Miner | Lode 15 · Foundry 10 | Core sampling, Mother lode from level 11, 9 h of production at every mine level, Prospecting at 30% on one chosen mine or two drawn, Nothing spills; known levels −25% (−30% with Tight quote), Master stroke 6%, Down payment 30% |
-| Absent Foreman | Yard 15 · Lode 10 | bank of 80% of idle time, 5 h (Automatic relay) or 8 h (Hour bank) per planet, Orbital Dock included, Catch-up 15%, Shared head start, All-out push; 9 h of production at every mine level, Prospecting 30%, Mother lode from level 20 |
+| Miner | Lode 15 · Foundry 10 | Core sampling, the mine of the day 3 levels higher from level 15, 4 h of production at every mine level, Prospecting at 15% on one chosen mine (Chosen lode) or −15% on its upgrade (Double lode), Nothing spills; known levels −25% (−30% with Tight quote), Master stroke 6%, Down payment 30% |
+| Absent Foreman | Yard 15 · Lode 10 | bank of 80% of idle time, 5 h (Automatic relay) or 8 h (Hour bank) per planet, Orbital Dock included, Catch-up 15%, Shared head start, All-out push; 4 h of production at every mine level, Prospecting 15%, Mother lode on the mine of the day |
 | Colonizer | Foundry 15 · Yard 10 | State order, Alliance plans, Down payment up to 60%, known levels −25%; bank of 50% of idle time up to 5 h or 8 h, Catch-up 15% on colonies, Night shipyard |
 
 Before row 7 of the main branch, place at least 2 points in the second one: the gate requires 12 points, and rows 1 to 6 of a branch only hold 10.

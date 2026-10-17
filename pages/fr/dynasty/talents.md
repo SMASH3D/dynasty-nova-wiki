@@ -48,7 +48,7 @@ updated: "2026-10-15T18:57:39.788Z"
 
 ### Réinitialisation
 11. Chaque arbre se réinitialise **séparément** et rend tous ses points d'un coup.
-12. La **première** réinitialisation de chaque arbre est **gratuite**. Les suivantes coûtent **20 Points stellaires** et demandent **24 heures** d'attente depuis la précédente du même arbre.
+12. La **première** réinitialisation de chaque arbre est **gratuite**. Les suivantes coûtent **20 Points stellaires** et demandent **24 heures** d'attente depuis la précédente du même arbre. Quand une classe est rééquilibrée, le jeu peut **offrir** des réinitialisations de son arbre de classe en plus de la première : gratuites et sans attente, elles servent une fois la première utilisée.
 13. Elle est impossible tant qu'une **flotte ennemie** se dirige vers l'une de vos planètes, et tant qu'une de vos **flottes d'attaque** est en route vers sa cible (le retour ne bloque rien). Un arbre vide n'a rien à réinitialiser : rien n'est facturé.
 14. Un [changement de classe](/fr/dynasty/classes#changer-de-classe) vide l'arbre de classe et rend sa prochaine réinitialisation gratuite. L'arbre commun ne bouge pas.
 

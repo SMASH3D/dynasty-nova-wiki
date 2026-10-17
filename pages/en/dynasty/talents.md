@@ -51,7 +51,7 @@ updated: "2026-10-15T18:57:13.217Z"
 
 ### Reset
 11. Each tree is reset **separately** and gives back all its points at once.
-12. The **first** reset of each tree is **free**. The next ones cost **20 Stellar Points** and require **24 hours** since the previous reset of the same tree.
+12. The **first** reset of each tree is **free**. The next ones cost **20 Stellar Points** and require **24 hours** since the previous reset of the same tree. When a class is rebalanced, the game may **grant** resets of its class tree on top of the first one: free and without waiting, they are used once the first one is spent.
 13. It is impossible while an **enemy fleet** is heading for one of your planets, and while one of your **attack fleets** is on its way to its target (the way back blocks nothing). An empty tree has nothing to reset: nothing is charged.
 14. A [class change](/en/dynasty/classes#changing-class) empties the class tree and makes its next reset free. The common tree does not move.
 

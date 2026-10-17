@@ -62,7 +62,7 @@ def body(lang):
 8. Une lune naît **vide** : ni ressources, ni bâtiments, **une seule case**, et le nom de sa planète (elle peut être renommée).
 9. La **Base lunaire** se construit en premier : aucun autre bâtiment ne peut être lancé sur la lune avant elle. Elle ne se démolit pas.
 10. Chaque niveau de Base lunaire **ouvre {LUNAR_BASE_FIELDS} cases et en occupe une**, soit 2 cases nettes par niveau.
-11. Les cases d'une lune ne dépassent jamais son **plafond** : partie entière((diamètre / 1 000)²). Au-delà, monter la Base lunaire n'ouvre plus rien. Certains talents de dynastie ajoutent des cases par niveau ou lèvent ce plafond.
+11. Les cases d'une lune ne dépassent jamais son **plafond** : partie entière((diamètre / 1 000)²). Au-delà, monter la Base lunaire n'ouvre plus rien. Un talent de dynastie lève ce plafond.
 12. Bâtiments possibles sur une lune : Base lunaire, Phalange de capteur, Porte de saut, Fabrique d'automates, Dock orbital (tableau ci-dessous).
 13. Une lune **ne produit rien** et stocke 10 000 de chaque ressource (voir [Le stockage](/fr/economy/storage)).
 
@@ -160,7 +160,7 @@ Coût du niveau N : coût du niveau 1 × 2^(N − 1). Les cases ouvertes sont pl
 8. A moon is born **empty**: no resources, no buildings, **a single field**, and its planet's name (it can be renamed).
 9. The **Lunar base** is built first: no other building can be started on the moon before it. It cannot be demolished.
 10. Each Lunar base level **opens {LUNAR_BASE_FIELDS} fields and takes one**, a net 2 fields per level.
-11. A moon's fields never go past its **cap**: whole part of ((diameter / 1,000)²). Beyond it, raising the Lunar base opens nothing more. Some dynasty talents add fields per level or lift that cap.
+11. A moon's fields never go past its **cap**: whole part of ((diameter / 1,000)²). Beyond it, raising the Lunar base opens nothing more. A dynasty talent lifts that cap.
 12. Buildings possible on a moon: Lunar base, Sensor phalanx, Jump gate, Automaton Factory, Orbital Dock (table below).
 13. A moon **produces nothing** and stores 10,000 of each resource (see [Storage](/en/economy/storage)).
 

@@ -212,7 +212,7 @@ def body(lang):
 
 ### Réinitialisation
 11. Chaque arbre se réinitialise **séparément** et rend tous ses points d'un coup.
-12. La **première** réinitialisation de chaque arbre est **gratuite**. Les suivantes coûtent **{PRICE} Points stellaires** et demandent **{COOL} heures** d'attente depuis la précédente du même arbre.
+12. La **première** réinitialisation de chaque arbre est **gratuite**. Les suivantes coûtent **{PRICE} Points stellaires** et demandent **{COOL} heures** d'attente depuis la précédente du même arbre. Quand une classe est rééquilibrée, le jeu peut **offrir** des réinitialisations de son arbre de classe en plus de la première : gratuites et sans attente, elles servent une fois la première utilisée.
 13. Elle est impossible tant qu'une **flotte ennemie** se dirige vers l'une de vos planètes, et tant qu'une de vos **flottes d'attaque** est en route vers sa cible (le retour ne bloque rien). Un arbre vide n'a rien à réinitialiser : rien n'est facturé.
 14. Un [changement de classe](/fr/dynasty/classes#changer-de-classe) vide l'arbre de classe et rend sa prochaine réinitialisation gratuite. L'arbre commun ne bouge pas.
 
@@ -307,7 +307,7 @@ Les bonus qui ne servent qu'à vous, sur vos retours ou entre vos propres planè
 
 ### Reset
 11. Each tree is reset **separately** and gives back all its points at once.
-12. The **first** reset of each tree is **free**. The next ones cost **{PRICE} Stellar Points** and require **{COOL} hours** since the previous reset of the same tree.
+12. The **first** reset of each tree is **free**. The next ones cost **{PRICE} Stellar Points** and require **{COOL} hours** since the previous reset of the same tree. When a class is rebalanced, the game may **grant** resets of its class tree on top of the first one: free and without waiting, they are used once the first one is spent.
 13. It is impossible while an **enemy fleet** is heading for one of your planets, and while one of your **attack fleets** is on its way to its target (the way back blocks nothing). An empty tree has nothing to reset: nothing is charged.
 14. A [class change](/en/dynasty/classes#changing-class) empties the class tree and makes its next reset free. The common tree does not move.
 

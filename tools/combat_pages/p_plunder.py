@@ -33,7 +33,7 @@ def body(lang):
 9. Les bâtiments, les vaisseaux et les défenses ne se pillent pas.
 
 ### Ce qui modifie le pillage
-10. Les talents de [dynastie et de classe](/fr/dynasty/talents) peuvent changer ces règles : le défenseur peut mettre une part de son stock à l'abri (le taux qu'il subit ne descend jamais sous **{P(LOOT_FLOOR)}**) ; l'attaquant peut piller davantage une planète abandonnée, piller un peu sur un match nul, agrandir ses soutes ou choisir l'ordre de chargement.
+10. Les talents de [dynastie et de classe](/fr/dynasty/talents) peuvent changer ces règles : le défenseur peut mettre une part de son stock à l'abri (le taux qu'il subit ne descend jamais sous **{P(LOOT_FLOOR)}**) ; l'attaquant peut piller davantage sur toute victoire (Amiral) ou sur une planète abandonnée, piller un peu sur un match nul, agrandir ses soutes ou choisir l'ordre de chargement.
 
 ## Exemple chiffré
 
@@ -82,7 +82,7 @@ Capacité de fret par vaisseau, selon le niveau de Pliage Spatial :
 9. Buildings, ships and defenses cannot be plundered.
 
 ### What changes plunder
-10. [Dynasty and class talents](/en/dynasty/talents) can change these rules: the defender can shelter part of its stock (the rate it suffers never goes below **{P(LOOT_FLOOR)}**); the attacker can plunder more from an abandoned planet, plunder a little on a draw, enlarge its holds or choose the loading order.
+10. [Dynasty and class talents](/en/dynasty/talents) can change these rules: the defender can shelter part of its stock (the rate it suffers never goes below **{P(LOOT_FLOOR)}**); the attacker can plunder more on any victory (Admiral) or from an abandoned planet, plunder a little on a draw, enlarge its holds or choose the loading order.
 
 ## Worked example
 

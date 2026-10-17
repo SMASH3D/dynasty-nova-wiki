@@ -21,7 +21,7 @@ updated: "2026-10-15T18:57:17.926Z"
 1. L'Amiral est une classe **commune** : toutes les dynasties peuvent la prendre.
 2. Son arbre compte **trois branches** : Ligne de feu, Campagne et Butin de guerre.
 3. Chaque branche a 9 rangées et coûte 15 points. Avec 25 points au maximum, vous complétez une branche et son ultime, plus une seconde branche jusqu'à la rangée 6 (10 points). Le fonctionnement des points, des portes et des choix est décrit sur [Les talents](/fr/dynasty/talents).
-4. La vitesse de flotte, l'hydrogène et les soutes génériques viennent de l'[arbre commun](/fr/dynasty/common-tree). L'Amiral n'y ajoute que des **accents** étroits : la vitesse des attaques, espionnages et destructions de lune (Marche forcée) et des recyclages (Recycleurs rapides), l'hydrogène et la construction des vaisseaux de combat, et une flotte réservée aux attaques.
+4. La vitesse de flotte, l'hydrogène et les soutes génériques viennent de l'[arbre commun](/fr/dynasty/common-tree). L'Amiral n'y ajoute que des **accents** étroits : la vitesse des attaques, espionnages et destructions de lune (Marche forcée) et des recyclages (Recycleurs rapides), l'hydrogène, la construction et le coût des vaisseaux de combat, et une flotte réservée aux attaques.
 5. Les **vaisseaux de combat** sont l'Intercepteur, l'Assaillant, la Corvette, le Cuirassé, le Frappe-orbital, le Prédateur, l'Annihilateur et le Colossus stellaire. Les vaisseaux civils (Navette de fret, Cargo stellaire, Récupérateur, Éclaireur, Pionnier spatial) et le Collecteur solaire n'en sont pas.
 6. Les bonus de statistiques s'appliquent **après** la recherche et se multiplient avec elle. Ils jouent en attaque comme en défense. Les bonus de dégâts d'une paire (Lire la coque, Feu concentré) se multiplient entre eux.
 
@@ -31,13 +31,14 @@ updated: "2026-10-15T18:57:17.926Z"
 - Armement de base 400, Systèmes Offensifs niveau 10 : 400 × 2 = 800. Avec Canons réglés au rang 3 : 800 × 1,09 = **872**.
 - Avec Doctrine de coque, les 9 % passent à la coque et s'ajoutent aux 4 % du nœud : coque +13 %, armement 800 sans bonus.
 
-**Remorquage et Remorqueurs (50 %), Station de réparation niveau 10, 30 % de débris**
-- Part de la Station : 54 % × (1 − 30 %) = 37,8 %. Remorquage : 37,8 % × 50 % = **18,9 %**.
-- 30 Corvettes perdues en attaque : 30 × 18,9 % = 5,67, soit **5 Corvettes**, et 67 % de chances d'en avoir une sixième.
+**Remorquage (20 %), Station de réparation niveau 10, 30 % de débris**
+- Part de la Station : 54 % × (1 − 30 %) = 37,8 %. Remorquage : 37,8 % × 20 % = **7,56 %**.
+- 30 Corvettes perdues en attaque : 30 × 7,56 % = 2,268, soit **2 Corvettes**, et 26,8 % de chances d'en avoir une troisième.
 - Les mêmes 30 Corvettes perdues en défense, avec Chantier de démontage : 54 % × 1,2 × 70 % = 45,36 %, soit **13** Corvettes (11 sans le nœud).
 
-**Percée**
-- Un match nul pille à 30 % du taux d'une victoire : 50 % × 30 % = **15 %** du stock. Sur 2 000 000 de métal, vous emportez **300 000**, dans la limite de vos soutes.
+**Part du butin et Percée, contre une cible sans abri**
+- Une attaque gagnée pille 50 % + 15 points = **65 %** du stock. Sur 2 000 000 de métal, vous emportez **1 300 000**, dans la limite de vos soutes.
+- Un match nul pille à 30 % du taux d'une victoire : 65 % × 30 % = **19,5 %** du stock, soit **390 000** métal.
 
 **Briseur de lunes**
 - Contre une lune de 8 944 km, le risque de perdre votre flotte est √8 944 / 2 = 47,29 % ; avec le nœud : 47,29 % × 0,75 = **35,47 %**. La chance de détruire la lune ne change pas.
@@ -54,7 +55,7 @@ graph TB
         B3H["BUTIN DE GUERRE<br/>Ce qu'on ramène d'une bataille."]:::head
         B3R1{{"Remorquage<br/>1 pt"}}:::key
         B3H --- B3R1
-        B3R2("Remorqueurs<br/>3 pts"):::rank
+        B3R2("Part du butin<br/>3 pts"):::rank
         B3R1 --- B3R2
         B3R3A["① Personne en orbite<br/>1 pt"]:::option
         B3R3B["② Percée<br/>1 pt"]:::option
@@ -195,7 +196,7 @@ graph TB
 | 5 | **Escadre d'assaut** | clé | Vous pouvez avoir 1 flotte de plus en vol, réservée aux attaques. |  |
 | 6 | **A · Rappel ordonné** | choix | Une flotte rappelée rentre 20 % plus vite. | |
 |  | **B · Ligne de ravitaillement** |  | Une attaque perdue ou nulle vous rend 15 % de l'hydrogène brûlé à l'aller. | |
-| 7 | **Chantier de guerre** | 3 rangs | Vos vaisseaux de combat se construisent 15 % plus vite. | 3 × 5 % |
+| 7 | **Chantier de guerre** | 3 rangs | Vos vaisseaux de combat se construisent 15 % plus vite et coûtent 15 % de moins. | 3 × 5 % |
 | 8 | **Terre brûlée** | clé | Les défenses que vous détruisez ont 15 pts de chances en moins d'être réparées gratuitement (70 % d'habitude). |  |
 | 9 | **Seconde vague** | ultime | Une flotte qui vient de gagner une attaque repart 1 fois vers une autre cible, à 1 système au plus, sans rentrer. |  |
 
@@ -203,6 +204,7 @@ graph TB
 - **Escorte rapide** accélère les Navettes de fret et Cargos stellaires d'une mission Attaque, sans dépasser le vaisseau le plus rapide. **Économie de guerre** réduit la part d'hydrogène brûlée par vos vaisseaux de combat : une flotte où ils brûlent la moitié du carburant économise 5 %.
 - **Escadre d'assaut** ne sert qu'à la mission Attaque (ni espionnage ni destruction de lune).
 - **Ligne de ravitaillement** : une défaite détruit toute la flotte, il n'y a donc rien à rendre ; en pratique, elle ne joue que sur un match nul.
+- **Chantier de guerre** : la baisse de coût ne vaut que pour les vaisseaux de combat, hors plafond de coût de la classe ; elle s'additionne aux autres réductions du vaisseau.
 - **Terre brûlée** vaut pour vos attaques et vos destructions de lune.
 - **Seconde vague** : à l'envoi, vous nommez une seconde cible, une planète d'un autre joueur ou abandonnée, dans la même galaxie, à 1 système au plus de la première. Si l'attaque est gagnée et la flotte survit, elle y repart aussitôt, une fois par vol, en prenant l'hydrogène du saut dans ses soutes. Trêve, alliance, mode vacances, protections et limite d'attaques sont vérifiés au moment du saut : en cas de refus, la flotte rentre.
 
@@ -213,7 +215,7 @@ graph TB
 | Rangée | Nœud | Type | Effet (nœud plein) | Par rang |
 |---|---|---|---|---|
 | 1 | **Remorquage** | clé | Votre dock récupère les vaisseaux perdus en attaque à 20 % de son efficacité. |  |
-| 2 | **Remorqueurs** | 3 rangs | Le remorquage de vos vaisseaux perdus en attaque gagne 30 % d'efficacité. | 3 × 10 % |
+| 2 | **Part du butin** | 3 rangs | Vos attaques gagnées pillent 15 points de plus, au-delà de la moitié habituelle des ressources de la cible. | 3 × 5 pts |
 | 3 | **A · Personne en orbite** | choix | Le remorquage marche même quand toute votre flotte est détruite. | |
 |  | **B · Percée** |  | Une attaque qui finit sur un match nul pille quand même, à 30 % du taux de pillage normal. | |
 | 4 | **Cale sèche** | 3 rangs | Votre dock répare vos vaisseaux 24 % plus vite. | 3 × 8 % |
@@ -225,7 +227,8 @@ graph TB
 | 9 | **Rapaces** | ultime | Après une attaque gagnée, vos vaisseaux de combat chargent 30 % des débris dans leurs soutes libres, après le pillage. |  |
 
 - **Remorquage** : c'est la Station de réparation de la planète de départ qui remorque. Une lune n'a pas de Station : une flotte partie d'une lune ne remorque rien. Le remorquage utilise un **arrondi probabiliste** : la partie décimale devient une chance d'avoir un vaisseau de plus.
-- **Percée** : 30 % du taux de pillage d'une victoire, abris du défenseur déduits.
+- **Part du butin** : les points s'ajoutent au taux de pillage de la victoire (50 %), avec ceux des cibles abandonnées de l'arbre commun ; les abris du défenseur se retirent ensuite, et vos soutes plafonnent toujours ce que vous emportez.
+- **Percée** : 30 % du taux de pillage d'une victoire, Part du butin compris, abris du défenseur déduits.
 - **Cale sèche** accélère toutes les réparations de la Station ; une réparation reste comprise entre 30 min (15 min avec Réparation d'urgence) et 12 h.
 - **Recyclage de combat** : les Récupérateurs de la flotte d'attaque ramassent les débris de ce combat, après le pillage.
 - **Raffinage** ajoute l'hydrogène seulement dans la place qui reste en soute.
@@ -257,8 +260,10 @@ Ce que les talents des deux arbres peuvent apporter au plus à cette classe, lev
 | +20 % de vitesse au retour d'une flotte rappelée | 20 % |
 | Une attaque perdue ou nulle rend 15 % de l'hydrogène brûlé pour atteindre la cible | 15 % |
 | +15 % de vitesse de construction des vaisseaux de combat | 15 % |
+| −15 % de coût des vaisseaux de combat | 15 % |
 | −15 pts de réparation gratuite des défenses que vous détruisez | 15 pts |
-| Les vaisseaux perdus en attaque sont récupérés à 50 % du taux du dock de réparation de la base d'origine | 50 % |
+| Les vaisseaux perdus en attaque sont récupérés à 20 % du taux du dock de réparation de la base d'origine | 20 % |
+| +15 pts de taux de pillage sur une attaque gagnée | 15 pts |
 | Une attaque nulle pille à 30 % du taux d'une attaque gagnée | 30 % |
 | +24 % de vitesse de réparation au dock | 24 % |
 | −15 min sur la durée minimale de réparation au dock | 15 min |
@@ -272,8 +277,8 @@ Ce que les talents des deux arbres peuvent apporter au plus à cette classe, lev
 | Build | Répartition | Ce qu'il obtient |
 |---|---|---|
 | Chasseur de flottes | Ligne de feu 15 · Campagne 10 | Feu concentré, armement +9 % (ou coque +13 %), bouclier +3 %, Salves, Lire la coque ; Marche forcée, hydrogène rendu sur les victoires, retour victorieux, une flotte d'attaque en plus |
-| Raideur | Campagne 15 · Butin de guerre 10 | Seconde vague, Chantier de guerre, Terre brûlée ; remorquage jusqu'à 50 %, Personne en orbite ou Percée, réparations plus rapides, recyclage de combat |
-| Pilleur de batailles | Butin de guerre 15 · Ligne de feu 10 | Rapaces, remorquage, Raffinage, Chantier de démontage ; armement +9 %, bouclier +3 %, Salves, Le maître de cadence |
+| Raideur | Campagne 15 · Butin de guerre 10 | Seconde vague, Chantier de guerre, Terre brûlée ; remorquage à 20 %, pillage à 65 % (Part du butin), Personne en orbite ou Percée, réparations plus rapides, recyclage de combat |
+| Pilleur de batailles | Butin de guerre 15 · Ligne de feu 10 | Rapaces, remorquage, pillage à 65 %, Raffinage, Chantier de démontage ; armement +9 %, bouclier +3 %, Salves, Le maître de cadence |
 
 Avant la rangée 7 de la branche principale, placez au moins 2 points dans la seconde : la porte demande 12 points, et les rangées 1 à 6 d'une branche n'en contiennent que 10.
 

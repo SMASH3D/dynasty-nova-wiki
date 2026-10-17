@@ -39,7 +39,7 @@ Reference study: **Weapon Systems 10** (409,600 metal, 102,400 crystal), univers
 - Unbroken Thread: the study, started after the previous one in the queue, begins with 10% of its time elapsed: **41 h 53 min 28 s** remain.
 - Started by hand after 10 h of empty queue, with Flying Start at rank 3 and Night Watch: 9% (4 h 11 min 20 s) plus 2 h banked make 6 h 11 min 20 s, brought down to the 10% ceiling: **4 h 39 min 16 s**. Night Watch only added 27 min 56 s.
 - Flash of Genius: one click moves the study ahead by 10% of its total time, **4 h 39 min 16 s**. With Stroke of Genius at rank 3 (19%), that would be 8 h 50 min, brought down to the **6 h** maximum.
-- Protocols at rank 3 (−6%): 409,600 → **385,024** metal, 102,400 → **96,256** crystal.
+- Protocols at rank 3 (−18%): 409,600 → **335,872** metal, 102,400 → **83,968** crystal.
 
 **Network**: studying Center 10, three colonies with Centers 10, 9 and 8, Stellar Collaboration 3.
 - With no talent, only the colony's Center 10 joins: effective level 10 + 10 = 20, **24 h 22 min 51 s**.
@@ -173,7 +173,7 @@ graph TB
 | 2 | **Flying Start** | 3 ranks | A study you launch by hand on an empty research queue starts with 9% of its time already elapsed, never past the 10% ceiling on head starts. | 3 × 3% |
 | 3 | **A · Night Watch** | choice | When your research queue is empty, the lab sets aside 25% of the time passing, up to 2 h of head start paid to the next study. | |
 |  | **B · Kept Draft** |  | A cancelled study keeps its progress: started again later at the same level, it resumes where it stopped. | |
-| 4 | **Protocols** | 3 ranks | Your researches cost 6% less. | 3 × 2% |
+| 4 | **Protocols** | 3 ranks | Your researches cost 18% less. | 3 × 6% |
 | 5 | **Flash of Genius** | key | Once a day, at the press of a button, the running study jumps ahead by 10% of its total time, 6 h at most, never to its end. |  |
 | 6 | **A · Quick Wit** | choice | Flash of Genius recharges in 16 h. | |
 |  | **B · Reflex** |  | Flash of Genius fires on its own as soon as it is ready and a study runs, even while you are away. | |
@@ -247,7 +247,7 @@ The most the talents of both trees can bring this class, lever by lever. Past it
 
 | Class cap (talents of both trees) | What the class tree reaches |
 |---|---|
-| −6% research cost | 6% |
+| −18% research cost | 18% |
 | The study network accepts innovation centers up to 5 levels below the one doing the study | 5 (capped) |
 | Each of your networked labs counts +3 levels | 3 |
 | The innovation center counts as +3 levels for research times | 3 |
@@ -261,8 +261,8 @@ The network tolerance keeps the largest value held (Uplink or Distant Antenna): 
 
 | Build | Split | What it gets |
 |---|---|---|
-| Pure researcher | Method 15 · Network 10 | Twin Innovation Center, Unbroken Thread, Kept Draft, Protocols −6%, Flash of Genius at 19% (6 h at most) every 16 h or automatic, Inspiration; Uplink, colony Centers +3 levels, One More Lab, Living Network |
-| Great network | Network 15 · Method 10 | Symposium, University Exchange, Study Grants 9%, 5-level tolerance or Mother Lab; Unbroken Thread, Protocols −6%, Flash of Genius at 10%, Quick Wit or Reflex |
+| Pure researcher | Method 15 · Network 10 | Twin Innovation Center, Unbroken Thread, Kept Draft, Protocols −18%, Flash of Genius at 19% (6 h at most) every 16 h or automatic, Inspiration; Uplink, colony Centers +3 levels, One More Lab, Living Network |
+| Great network | Network 15 · Method 10 | Symposium, University Exchange, Study Grants 9%, 5-level tolerance or Mother Lab; Unbroken Thread, Protocols −18%, Flash of Genius at 10%, Quick Wit or Reflex |
 | War scholar | Prototypes 15 · Method 10 | Revolution, 48 h prototypes, Combat Prototype or Green Light, Reverse Engineering −15%, Specialty; Flash of Genius to catch up on levels |
 
 Before row 7 of the main branch, place at least 2 points in the second one: the gate requires 12 points, and rows 1 to 6 of a branch only hold 10.
