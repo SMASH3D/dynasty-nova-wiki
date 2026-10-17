@@ -124,11 +124,15 @@ Multiplied by the overachievement bonus (rule 20). Mission cap: **8,000 per week
 |---|---|
 | Building a building level | 20 × level |
 | Completing a research level | 40 × level |
-| Battle won, attacking or defending | 5 per 1,000 military points destroyed |
+| Battle won, attacking or defending | 5 per 1,000 resources of military value destroyed for good |
 | Espionage report | 10 |
 | Recycling | 2 per 1,000 resources |
 
 Cap over a rolling 7 days: **800 per member** and **15,000 per alliance**, missions not included. Nothing counts before the station is built, nor during the member's settling-in period.
+
+For a battle, only the winner earns experience, and a draw earns nothing. The destroyed value is the resource cost of the ships and defenses the opponent lost for good: defenses restored after the battle and ships taken back by the [Repair Station](/en/economy/repair-station) do not count. Each full slice of 1,000 resources earns 5 points; the remainder is lost.
+
+**Example**: you win a battle by shooting down 100 Interceptors worth 4,000 resources each (3,000 metal and 1,000 crystal), 400,000 resources in all. The battle is worth 400 × 5 = 2,000 experience points, brought down to 800 by the member cap over a rolling 7 days (if you have not contributed anything yet this week).
 
 ### The 14 talents
 

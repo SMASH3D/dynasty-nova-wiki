@@ -40,6 +40,7 @@ updated: "2026-10-15T19:28:22.987Z"
   - **Univers** : carte qui boucle, Station stellaire, colonisation, abandon, bonus de position dans les univers de 9 à 20 positions.
   - **Joueurs** : points militaires de tous les vaisseaux, protection des nouveaux arrivants de 7 jours, conservation des rapports, univers privé gelé, réglages des rapports.
   - **Dynastie et talents** : valeurs corrigées, ultime de classe sans condition de niveau, règles des arêtes et des verrous, textes des talents repris du jeu.
+- **17 octobre 2026** : expérience d'alliance des combats gagnés corrigée dans le jeu : 5 points par 1 000 ressources de valeur militaire détruites (au lieu de 1 000 points de score), page [Missions et station d'alliance](/fr/players/alliance-missions) mise à jour avec un exemple.
 
 ## Pages liées
 
