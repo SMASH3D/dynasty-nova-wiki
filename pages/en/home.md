@@ -97,6 +97,7 @@ updated: "2026-10-15T19:28:29.804Z"
 - [Attack limit](/en/players/attack-limit)
 - [Vacation mode](/en/players/vacation-mode)
 - [Inactivity](/en/players/inactivity)
+- [Deleting your account](/en/players/account-deletion)
 - [Alliances](/en/players/alliances)
 - [Pacts, fair play and wars](/en/players/pacts-and-wars)
 - [Alliance missions and station](/en/players/alliance-missions)

@@ -4,7 +4,7 @@ path: "players/account-deletion"
 title: "Supprimer son compte"
 description: "Demander la suppression de son compte, l'annuler, et ce qu'elle emporte."
 tags: ["players"]
-published: false
+published: true
 ---
 
 # Supprimer son compte

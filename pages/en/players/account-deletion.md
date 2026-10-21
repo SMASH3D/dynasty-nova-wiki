@@ -4,7 +4,7 @@ path: "players/account-deletion"
 title: "Deleting your account"
 description: "Asking for your account to be deleted, cancelling it, and what it takes with it."
 tags: ["players"]
-published: false
+published: true
 ---
 
 # Deleting your account

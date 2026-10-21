@@ -164,7 +164,7 @@ Nouvelle page (16 octobre 2026, non publiée jusqu'à la mise en production de l
 
 | ID | Chemin | Page | Contenu | Sources | Manque |
 |---|---|---|---|---|---|
-| P-115 | `players/account-deletion` | Supprimer son compte | Demande depuis les Paramètres, 7 jours sous protection, annulation (lien du mail, 48 h, 30 jours), alliances, ce qui disparaît, abonnements. | code | |
+| P-115 | `players/account-deletion` | Supprimer son compte | Demande depuis les Paramètres, 7 jours sous protection, annulation (lien du mail, 48 h, 30 jours), alliances, ce qui disparaît, abonnements. | code, publiée le 21 octobre 2026 | |
 
 ### `misc`, divers
 | ID | Chemin | Page | Contenu | Sources | Manque |

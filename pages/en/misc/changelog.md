@@ -29,8 +29,6 @@ updated: "2026-10-15T19:28:31.234Z"
 - **15 October 2026 (appendix)**: new [appendix of buildings level by level](/en/economy/building-levels): cost, energy and output of every level, up to level 50.
 - **15 October 2026 (bank)**: new [Stellar Bank](/en/economy/stellar-bank) page.
 - **15 October 2026 (rewrite)**: every section rewritten from the game code, values and tables recomputed.
-- **15 October 2026 (publications)**: [Economy formulas](/en/economy/formulas), [Orbital Dock](/en/fleet/orbital-dock) and [Moons](/en/universe/moons) pages published.
-- **21 October 2026 (missions)**: [alliance missions](/en/players/alliance-missions) aligned with the game's retune: no daily cap for a daily mission, pace of a weekly by the day it starts (until Thursday midnight), levels of participation missions, Mutual aid without deducting what you received, count objectives in proportion to the cycle left, rewards of 4 and 16 hours of rate, 72-hour cap over 7 days. Also: one mission per family and per cadence, cumulative daily cap, Wreckage and Clean victory counted with the defender's repairs, same-player decay (100, 50, 25%, then nothing), Expansion weekly only, abandoned planets taken over included. Then: no effort threshold, lighter Mapping, replacement priced on the median, objective sized on at least half the active members, "Always enroll me", start hour picked by the alliance.
   - **Economy**: production, energy and storage tables level by level, full buildings catalogue, formulas page, how shipyard orders are paid, Repair Station after any battle in defense.
   - **Alliances**: ranks, functions and rights, recruitment, succession; pacts, fair play from 0 to 100, every member votes, wars and score.
   - **Research**: one study at a time, full duration formula, effects in figures, Graviton Technology energy, full tree, Stellar Collaboration network.
@@ -41,8 +39,11 @@ updated: "2026-10-15T19:28:31.234Z"
   - **Universe**: wrap-around map, Stellar Station, colonization, abandonment, position bonus in 9 to 20 position universes.
   - **Players**: military points for every ship, 7-day newcomer protection, report retention, frozen private universes, report settings.
   - **Dynasty and talents**: values fixed, class ultimates need no level, edge and lock rules, talent texts taken from the game.
+- **15 October 2026 (publications)**: [Economy formulas](/en/economy/formulas), [Orbital Dock](/en/fleet/orbital-dock) and [Moons](/en/universe/moons) pages published.
 - **17 October 2026 (class rebalance)**: [Builder](/en/dynasty/classes/builder) (Lode branch built around the mine of the day, Bulk buying on defences), [Admiral](/en/dynasty/classes/admiral) (Share of the Spoils, cheaper War Yard), [Theorist](/en/dynasty/classes/theorist) (Protocols −18%) and [Symbiote](/en/dynasty/classes/symbiote) (position bonus floor, Native Soil, Layering, Rising Sap) updated; granted resets on [Talents](/en/dynasty/talents).
 - **17 October 2026**: alliance experience from battles won fixed in the game: 5 points per 1,000 resources of military value destroyed (instead of per 1,000 score points), [Alliance missions and station](/en/players/alliance-missions) page updated with an example.
+- **21 October 2026 (missions)**: [alliance missions](/en/players/alliance-missions) aligned with the game's retune: no daily cap for a daily mission, pace of a weekly by the day it starts (until Thursday midnight), levels of participation missions, Mutual aid without deducting what you received, count objectives in proportion to the cycle left, rewards of 4 and 16 hours of rate, 72-hour cap over 7 days. Also: one mission per family and per cadence, cumulative daily cap, Wreckage and Clean victory counted with the defender's repairs, same-player decay (100, 50, 25%, then nothing), Expansion weekly only, abandoned planets taken over included. Then: no effort threshold, lighter Mapping, replacement priced on the median, objective sized on at least half the active members, "Always enroll me", start hour picked by the alliance.
+- **21 October 2026**: new [Deleting your account](/en/players/account-deletion) page.
 
 ## Related pages
 

@@ -22,6 +22,7 @@ updated: "2026-10-15T18:53:29.526Z"
 - [Attack limit](/en/players/attack-limit): 6 attacks on the same player per 24-hour window (default).
 - [Vacation mode](/en/players/vacation-mode): Pausing your empire, 48 h at least.
 - [Inactivity](/en/players/inactivity): What an absence without vacation mode costs.
+- [Deleting your account](/en/players/account-deletion): the request, cancelling it and what goes away.
 - [Alliances](/en/players/alliances): Founding, joining, ranks and seats.
 - [Pacts, fair play and wars](/en/players/pacts-and-wars): Diplomacy between alliances.
 - [Alliance missions and station](/en/players/alliance-missions): Treasury, mutual aid, station and missions.

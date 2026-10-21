@@ -1,0 +1,38 @@
+{
+ "fr/players": [
+  [
+   "- [Inactivité](/fr/players/inactivity) : Ce que coûte une absence sans mode vacances.\n",
+   "- [Inactivité](/fr/players/inactivity) : Ce que coûte une absence sans mode vacances.\n- [Supprimer son compte](/fr/players/account-deletion) : la demande, l'annulation et ce qui disparaît.\n"
+  ]
+ ],
+ "en/players": [
+  [
+   "- [Inactivity](/en/players/inactivity): What an absence without vacation mode costs.\n",
+   "- [Inactivity](/en/players/inactivity): What an absence without vacation mode costs.\n- [Deleting your account](/en/players/account-deletion): the request, cancelling it and what goes away.\n"
+  ]
+ ],
+ "fr/home": [
+  [
+   "- [Inactivité](/fr/players/inactivity)\n",
+   "- [Inactivité](/fr/players/inactivity)\n- [Supprimer son compte](/fr/players/account-deletion)\n"
+  ]
+ ],
+ "en/home": [
+  [
+   "- [Inactivity](/en/players/inactivity)\n",
+   "- [Inactivity](/en/players/inactivity)\n- [Deleting your account](/en/players/account-deletion)\n"
+  ]
+ ],
+ "fr/misc/changelog": [
+  [
+   "- **17 octobre 2026** : expérience d'alliance des combats gagnés corrigée dans le jeu : 5 points par 1 000 ressources de valeur militaire détruites (au lieu de 1 000 points de score), page [Missions et station d'alliance](/fr/players/alliance-missions) mise à jour avec un exemple.",
+   "- **17 octobre 2026** : expérience d'alliance des combats gagnés corrigée dans le jeu : 5 points par 1 000 ressources de valeur militaire détruites (au lieu de 1 000 points de score), page [Missions et station d'alliance](/fr/players/alliance-missions) mise à jour avec un exemple.\n- **21 octobre 2026** : nouvelle page [Supprimer son compte](/fr/players/account-deletion)."
+  ]
+ ],
+ "en/misc/changelog": [
+  [
+   "- **17 October 2026**: alliance experience from battles won fixed in the game: 5 points per 1,000 resources of military value destroyed (instead of per 1,000 score points), [Alliance missions and station](/en/players/alliance-missions) page updated with an example.",
+   "- **17 October 2026**: alliance experience from battles won fixed in the game: 5 points per 1,000 resources of military value destroyed (instead of per 1,000 score points), [Alliance missions and station](/en/players/alliance-missions) page updated with an example.\n- **21 October 2026**: new [Deleting your account](/en/players/account-deletion) page."
+  ]
+ ]
+}
