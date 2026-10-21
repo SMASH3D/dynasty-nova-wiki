@@ -29,7 +29,7 @@ updated: "2026-10-15T18:53:57.067Z"
 9. Les bâtiments, les vaisseaux et les défenses ne se pillent pas.
 
 ### Ce qui modifie le pillage
-10. Les talents de [dynastie et de classe](/fr/dynasty/talents) peuvent changer ces règles : le défenseur peut mettre une part de son stock à l'abri (le taux qu'il subit ne descend jamais sous **30 %**) ; l'attaquant peut piller davantage une planète abandonnée, piller un peu sur un match nul, agrandir ses soutes ou choisir l'ordre de chargement.
+10. Les talents de [dynastie et de classe](/fr/dynasty/talents) peuvent changer ces règles : le défenseur peut mettre une part de son stock à l'abri (le taux qu'il subit ne descend jamais sous **30 %**) ; l'attaquant peut piller davantage sur toute victoire (Amiral) ou sur une planète abandonnée, piller un peu sur un match nul, agrandir ses soutes ou choisir l'ordre de chargement.
 
 ## Exemple chiffré
 

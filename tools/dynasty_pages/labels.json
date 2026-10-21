@@ -169,9 +169,11 @@
     "mines_throttle_ignored": "Les trois mines ignorent {{value}} de plus de l'étranglement énergétique",
     "hydrogen_temperature_amplitude": "Le bonus de froid du synthétiseur d'hydrogène gagne {{value}} d'amplitude",
     "plasma_effect": "+{{value}} de l'effet du bonus plasma",
-    "mine_bonus_level_one": "Chaque mine produit comme si elle avait +{{value}} niveau",
-    "mine_bonus_level_other": "Chaque mine produit comme si elle avait +{{value}} niveaux",
+    "mine_bonus_level_one": "La mine du jour produit comme si elle avait +{{value}} niveau de plus encore",
+    "mine_bonus_level_other": "La mine du jour produit comme si elle avait +{{value}} niveaux de plus encore",
     "mine_bonus_from_level": "S'applique à partir du niveau {{value}}",
+    "prospected_mine_bonus_level_one": "La mine du jour produit comme si elle avait +{{value}} niveau, dès son premier niveau",
+    "prospected_mine_bonus_level_other": "La mine du jour produit comme si elle avait +{{value}} niveaux, dès son premier niveau",
     "core_sampling": "Une fois par jour, une mine désignée est boostée pendant {{value}}",
     "core_sampling_multiplier": "Production de la mine boostée : {{value}}",
     "building_speed": "+{{value}} de vitesse de construction des bâtiments",
@@ -180,7 +182,7 @@
     "idle_yard_head_start": "Un chantier vide met de côté jusqu'à {{value}} d'avance pour le prochain ordre",
     "chained_order_head_start": "Tout ordre qui démarre de lui-même, à la suite du précédent dans la file, part avec {{value}} de son temps déjà écoulé",
     "building_cost_reduction": "−{{value}} de coût en ressources des bâtiments",
-    "unit_cost_reduction": "−{{value}} de coût des vaisseaux et défenses",
+    "defense_cost_reduction": "−{{value}} de coût des défenses",
     "storage_capacity": "+{{value}} de capacité de stockage",
     "cancel_refund": "+{{value}} de remboursement à l'annulation, ajoutés à votre taux de remboursement",
     "surplus_conversion": "{{value}} de la valeur de la production qui déborde d'un hangar plein est convertie au lieu d'être perdue",
@@ -193,13 +195,12 @@
     "mother_base_mine_bonus_level_other": "Les mines de la planète mère produisent comme si elles avaient +{{value}} niveaux",
     "colony_mine_bonus_level_one": "Les mines des colonies produisent comme si elles avaient +{{value}} niveau",
     "colony_mine_bonus_level_other": "Les mines des colonies produisent comme si elles avaient +{{value}} niveaux",
-    "mine_bonus_threshold_reduction_one": "Veine mère s'applique {{value}} niveau plus tôt",
-    "mine_bonus_threshold_reduction_other": "Veine mère s'applique {{value}} niveaux plus tôt",
+    "mine_bonus_threshold_reduction_one": "Galeries s'applique {{value}} niveau plus tôt",
+    "mine_bonus_threshold_reduction_other": "Galeries s'applique {{value}} niveaux plus tôt",
     "prospection": "La mine du jour produit {{value}} de plus",
     "prospection_window": "Mine du jour pendant {{value}}",
     "prospection_choice": "Vous choisissez chaque jour la mine de Prospection",
-    "prospection_mines_one": "{{value}} mine du jour",
-    "prospection_mines_other": "{{value}} mines du jour",
+    "prospected_mine_cost_reduction": "−{{value}} sur l'amélioration de la mine du jour, tant que son jour court",
     "night_shipyard": "Le chantier spatial vide met aussi de l'avance de côté, versée aux vaisseaux et défenses",
     "head_start_bank": "L'avance est gardée jusqu'à {{value}} et versée sur l'ordre de votre choix",
     "shared_head_start": "L'avance d'une planète peut être versée sur un ordre d'une autre de vos planètes",
@@ -299,6 +300,7 @@
     "combat_recycling": "Les recycleurs d'une flotte d'attaque récoltent les débris de la bataille à l'arrivée, après le pillage",
     "loading_priority": "Le pillage et les débris qui ne tiennent pas en soute se chargent dans l'ordre de votre choix, au lieu d'être répartis proportionnellement",
     "ruin_loot_rate": "+{{value}} de taux de pillage contre une planète abandonnée",
+    "loot_share": "+{{value}} de taux de pillage sur une attaque gagnée",
     "ship_combat_stat": "+{{value}} sur l'armement des vaisseaux, ou sur leur coque en doctrine de coque",
     "ship_combat_stat_hull_focus": "Les points d'arsenal vont à la coque des vaisseaux, à pleine valeur",
     "ship_hull": "+{{value}} de coque des vaisseaux, en doctrine de coque seulement",
@@ -321,6 +323,7 @@
     "attack_fleet_slots_other": "+{{value}} slots de flotte réservés aux attaques",
     "lost_attack_fuel_refund": "Une attaque perdue ou nulle rend {{value}} de l'hydrogène brûlé pour atteindre la cible",
     "combat_ship_build_speed": "+{{value}} de vitesse de construction des vaisseaux de combat",
+    "combat_ship_cost_reduction": "−{{value}} de coût des vaisseaux de combat",
     "scorched_earth": "−{{value}} de réparation gratuite des défenses que vous détruisez",
     "defense_free_repair_rate": "Réparation gratuite habituelle des défenses détruites : {{value}}",
     "second_wave_one": "{{value}} seconde vague par vol après une attaque gagnée",
@@ -583,10 +586,7 @@
     "hydrogen_reads_min_temperature": "Le synthétiseur d'hydrogène lit la température la plus froide de la planète",
     "metal_position_bonus_amplitude": "Le bonus de position des mines de métal gagne {{value}} d'amplitude",
     "crystal_position_bonus_amplitude": "Le bonus de position des mines de cristal gagne {{value}} d'amplitude",
-    "lunar_base_fields_one": "+{{value}} case par niveau de base lunaire",
-    "lunar_base_fields_other": "+{{value}} cases par niveau de base lunaire",
-    "lunar_base_base_fields_one": "Chaque niveau de base lunaire donne {{value}} case",
-    "lunar_base_base_fields_other": "Chaque niveau de base lunaire donne {{value}} cases",
+    "position_bonus_floor": "Chaque planète a au moins {{value}} de bonus de position sur ses mines de métal et de cristal",
     "moon_diameter_unbound": "Les lunes ne sont plus limitées par leur diamètre",
     "terraformer_fields_one": "+{{value}} case par niveau de terraformeur",
     "terraformer_fields_other": "+{{value}} cases par niveau de terraformeur",
@@ -1013,7 +1013,7 @@
     },
     "admiral_campaign_7": {
      "name": "Chantier de guerre",
-     "description": "Vos vaisseaux de combat se construisent {{value}} plus vite."
+     "description": "Vos vaisseaux de combat se construisent {{value}} plus vite et coûtent {{value2}} de moins."
     },
     "admiral_campaign_8": {
      "name": "Terre brûlée",
@@ -1028,8 +1028,8 @@
      "description": "Votre dock récupère les vaisseaux perdus en attaque à {{value}} de son efficacité."
     },
     "admiral_spoils_2": {
-     "name": "Remorqueurs",
-     "description": "Le remorquage de vos vaisseaux perdus en attaque gagne {{value}} d'efficacité."
+     "name": "Part du butin",
+     "description": "Vos attaques gagnées pillent {{number}} points de plus, au-delà de la moitié habituelle des ressources de la cible."
     },
     "admiral_spoils_3": {
      "option1": {
@@ -1095,7 +1095,8 @@
     },
     "builder_lode_5": {
      "name": "Veine mère",
-     "description": "À partir du niveau {{value2}}, chacune de vos mines produit comme si elle avait {{value}} niveau de plus, en plus de Puits maître ou de Mines jumelles."
+     "description_one": "La mine du jour produit comme si elle avait {{value}} niveau de plus, dès son premier niveau, en plus de Puits maître ou de Mines jumelles.",
+     "description_other": "La mine du jour produit comme si elle avait {{value}} niveaux de plus, dès son premier niveau, en plus de Puits maître ou de Mines jumelles."
     },
     "builder_lode_6": {
      "option1": {
@@ -1104,12 +1105,13 @@
      },
      "option2": {
       "name": "Double filon",
-      "description": "Chaque jour, {{value}} mines sont tirées pour la Prospection au lieu d'une."
+      "description": "Tant que son jour court, améliorer la mine du jour coûte {{value}} de moins."
      }
     },
     "builder_lode_7": {
      "name": "Galeries",
-     "description": "Veine mère s'applique {{value}} niveaux plus tôt."
+     "description_one": "La mine du jour produit comme si elle avait {{value}} niveau de plus encore à partir du niveau {{value2}}, seuil abaissé de {{value3}} niveaux, en plus de Veine mère.",
+     "description_other": "La mine du jour produit comme si elle avait {{value}} niveaux de plus encore à partir du niveau {{value2}}, seuil abaissé de {{value3}} niveaux, en plus de Veine mère."
     },
     "builder_lode_8": {
      "name": "Rien ne déborde",
@@ -1182,7 +1184,7 @@
      },
      "option2": {
       "name": "Achats groupés",
-      "description": "Vos vaisseaux et vos défenses coûtent {{value}} de moins."
+      "description": "Vos défenses coûtent {{value}} de moins."
      }
     },
     "builder_foundry_4": {
@@ -1845,11 +1847,11 @@
     },
     "symbiote_growth_1": {
      "name": "Racines",
-     "description": "Le bonus de position de vos planètes dans leur système est {{value}} plus fort."
+     "description": "Chacune de vos planètes, planète mère comprise, a au moins {{value}} de bonus de position sur ses mines de métal et de cristal, quelle que soit sa place dans le système."
     },
     "symbiote_growth_2": {
      "name": "Terre natale",
-     "description": "Votre planète mère reçoit ⅙ du bonus de sa position dans le système par rang, ½ au rang 3."
+     "description": "Votre planète mère reçoit {{value}} du bonus de sa position dans le système."
     },
     "symbiote_growth_3": {
      "option1": {
@@ -1863,8 +1865,7 @@
     },
     "symbiote_growth_4": {
      "name": "Lunes creusées",
-     "description_one": "Chaque niveau de base lunaire creuse +{{value}} case en plus de ses {{value2}}, dans la limite du diamètre de la lune.",
-     "description_other": "Chaque niveau de base lunaire creuse +{{value}} cases en plus de ses {{value2}}, dans la limite du diamètre de la lune."
+     "description": "Le bonus de position garanti par Racines monte de {{value}} sur les mines de métal et de cristal de chacune de vos planètes."
     },
     "symbiote_growth_5": {
      "name": "Marcottage",
@@ -2786,9 +2787,11 @@
     "mines_throttle_ignored": "All three mines ignore a further {{value}} of the energy shortfall",
     "hydrogen_temperature_amplitude": "The hydrogen synthesizer's cold bonus gains {{value}} amplitude",
     "plasma_effect": "+{{value}} to the effect of the plasma bonus",
-    "mine_bonus_level_one": "Every mine produces as if it had +{{value}} level",
-    "mine_bonus_level_other": "Every mine produces as if it had +{{value}} levels",
+    "mine_bonus_level_one": "The mine of the day produces as if it had +{{value}} more level",
+    "mine_bonus_level_other": "The mine of the day produces as if it had +{{value}} more levels",
     "mine_bonus_from_level": "Applies from level {{value}}",
+    "prospected_mine_bonus_level_one": "The mine of the day produces as if it had +{{value}} level, from its first level",
+    "prospected_mine_bonus_level_other": "The mine of the day produces as if it had +{{value}} levels, from its first level",
     "core_sampling": "Once a day, a mine of your choice is boosted for {{value}}",
     "core_sampling_multiplier": "Boosted mine production: {{value}}",
     "building_speed": "+{{value}} building construction speed",
@@ -2797,7 +2800,7 @@
     "idle_yard_head_start": "An idle yard sets aside up to {{value}} of head start for the next order",
     "chained_order_head_start": "Any order that starts on its own, following the previous one in the queue, begins with {{value}} of its time already elapsed",
     "building_cost_reduction": "−{{value}} building resource cost",
-    "unit_cost_reduction": "−{{value}} ship and defense cost",
+    "defense_cost_reduction": "−{{value}} defense cost",
     "storage_capacity": "+{{value}} storage capacity",
     "cancel_refund": "+{{value}} cancellation refund, added to your refund rate",
     "surplus_conversion": "{{value}} of the value of the production overflowing a full storage is converted instead of lost",
@@ -2810,13 +2813,12 @@
     "mother_base_mine_bonus_level_other": "The home planet's mines produce as if they had +{{value}} levels",
     "colony_mine_bonus_level_one": "The colonies' mines produce as if they had +{{value}} level",
     "colony_mine_bonus_level_other": "The colonies' mines produce as if they had +{{value}} levels",
-    "mine_bonus_threshold_reduction_one": "Mother lode applies {{value}} level earlier",
-    "mine_bonus_threshold_reduction_other": "Mother lode applies {{value}} levels earlier",
+    "mine_bonus_threshold_reduction_one": "Galleries applies {{value}} level earlier",
+    "mine_bonus_threshold_reduction_other": "Galleries applies {{value}} levels earlier",
     "prospection": "The mine of the day produces {{value}} more",
     "prospection_window": "Mine of the day for {{value}}",
     "prospection_choice": "You pick the Prospecting mine every day",
-    "prospection_mines_one": "{{value}} mine of the day",
-    "prospection_mines_other": "{{value}} mines of the day",
+    "prospected_mine_cost_reduction": "−{{value}} on upgrading the mine of the day, while its day runs",
     "night_shipyard": "An idle shipyard sets head start aside too, paid into ships and defenses",
     "head_start_bank": "Head start is kept up to {{value}} and paid into the order of your choice",
     "shared_head_start": "A planet's head start can be paid into an order on another of your planets",
@@ -2916,6 +2918,7 @@
     "combat_recycling": "The recyclers of an attack fleet harvest the battle's debris on arrival, after the loot",
     "loading_priority": "Loot and debris that do not fit in the hold load in the order of your choice, instead of pro rata",
     "ruin_loot_rate": "+{{value}} loot rate against an abandoned planet",
+    "loot_share": "+{{value}} loot rate on a won attack",
     "ship_combat_stat": "+{{value}} to ship weapons, or to their hull under the hull doctrine",
     "ship_combat_stat_hull_focus": "Arsenal points go to ship hull, at full value",
     "ship_hull": "+{{value}} ship hull, under the hull doctrine only",
@@ -2938,6 +2941,7 @@
     "attack_fleet_slots_other": "+{{value}} fleet slots kept for attacks",
     "lost_attack_fuel_refund": "A lost or drawn attack gives back {{value}} of the hydrogen burnt to reach the target",
     "combat_ship_build_speed": "+{{value}} build speed of combat ships",
+    "combat_ship_cost_reduction": "−{{value}} combat ship cost",
     "scorched_earth": "−{{value}} free repair of the defenses you destroy",
     "defense_free_repair_rate": "Usual free repair of destroyed defenses: {{value}}",
     "second_wave_one": "{{value}} second wave per flight after a won attack",
@@ -3200,10 +3204,7 @@
     "hydrogen_reads_min_temperature": "The hydrogen synthesizer reads the planet's coldest temperature",
     "metal_position_bonus_amplitude": "The metal mines' position bonus gains {{value}} amplitude",
     "crystal_position_bonus_amplitude": "The crystal mines' position bonus gains {{value}} amplitude",
-    "lunar_base_fields_one": "+{{value}} field per lunar base level",
-    "lunar_base_fields_other": "+{{value}} fields per lunar base level",
-    "lunar_base_base_fields_one": "Each lunar base level gives {{value}} field",
-    "lunar_base_base_fields_other": "Each lunar base level gives {{value}} fields",
+    "position_bonus_floor": "Every planet gets at least {{value}} position bonus on its metal and crystal mines",
     "moon_diameter_unbound": "Moons are no longer bounded by their diameter",
     "terraformer_fields_one": "+{{value}} field per terraformer level",
     "terraformer_fields_other": "+{{value}} fields per terraformer level",
@@ -3630,7 +3631,7 @@
     },
     "admiral_campaign_7": {
      "name": "War Yard",
-     "description": "Your combat ships are built {{value}} faster."
+     "description": "Your combat ships are built {{value}} faster and cost {{value2}} less."
     },
     "admiral_campaign_8": {
      "name": "Scorched Earth",
@@ -3645,8 +3646,8 @@
      "description": "Your dock recovers the ships lost in attack at {{value}} of its efficiency."
     },
     "admiral_spoils_2": {
-     "name": "Tugs",
-     "description": "Towing your ships lost in attack gains {{value}} efficiency."
+     "name": "Share of the Spoils",
+     "description": "Your won attacks plunder {{number}} more points, past the usual half of the target's resources."
     },
     "admiral_spoils_3": {
      "option1": {
@@ -3712,7 +3713,8 @@
     },
     "builder_lode_5": {
      "name": "Mother lode",
-     "description": "From level {{value2}}, each of your mines produces as if it were {{value}} level higher, on top of Master shaft or Twin mines."
+     "description_one": "The mine of the day produces as if it were {{value}} level higher, from its first level, on top of Master shaft or Twin mines.",
+     "description_other": "The mine of the day produces as if it were {{value}} levels higher, from its first level, on top of Master shaft or Twin mines."
     },
     "builder_lode_6": {
      "option1": {
@@ -3721,12 +3723,13 @@
      },
      "option2": {
       "name": "Double lode",
-      "description": "Every day, {{value}} mines are drawn for Prospecting instead of one."
+      "description": "While its day runs, upgrading the mine of the day costs {{value}} less."
      }
     },
     "builder_lode_7": {
      "name": "Galleries",
-     "description": "Mother lode applies {{value}} levels earlier."
+     "description_one": "The mine of the day produces as if it were {{value}} level higher still from level {{value2}}, a threshold lowered by {{value3}} levels, on top of Mother lode.",
+     "description_other": "The mine of the day produces as if it were {{value}} levels higher still from level {{value2}}, a threshold lowered by {{value3}} levels, on top of Mother lode."
     },
     "builder_lode_8": {
      "name": "Nothing spills",
@@ -3799,7 +3802,7 @@
      },
      "option2": {
       "name": "Bulk buying",
-      "description": "Your ships and defenses cost {{value}} less."
+      "description": "Your defenses cost {{value}} less."
      }
     },
     "builder_foundry_4": {
@@ -4462,11 +4465,11 @@
     },
     "symbiote_growth_1": {
      "name": "Roots",
-     "description": "The position bonus of your planets in their system is {{value}} stronger."
+     "description": "Each of your planets, homeworld included, gets at least {{value}} position bonus on its metal and crystal mines, wherever it sits in the system."
     },
     "symbiote_growth_2": {
      "name": "Native Soil",
-     "description": "Your homeworld receives ⅙ of the bonus of its position in the system per rank, ½ at rank 3."
+     "description": "Your homeworld receives {{value}} of the bonus of its position in the system."
     },
     "symbiote_growth_3": {
      "option1": {
@@ -4480,8 +4483,7 @@
     },
     "symbiote_growth_4": {
      "name": "Hollowed Moons",
-     "description_one": "Each lunar base level digs +{{value}} field on top of its {{value2}}, within the moon's diameter.",
-     "description_other": "Each lunar base level digs +{{value}} fields on top of its {{value2}}, within the moon's diameter."
+     "description": "The position bonus Roots guarantees rises by {{value}} on the metal and crystal mines of each of your planets."
     },
     "symbiote_growth_5": {
      "name": "Layering",

@@ -21,8 +21,8 @@ updated: "2026-10-15T18:57:21.610Z"
 1. Le Bâtisseur est une classe **commune** : toutes les dynasties peuvent la prendre.
 2. Son arbre compte **trois branches** : Filon, Chantier et Fonderie.
 3. Chaque branche a 9 rangées et coûte 15 points. Avec 25 points au maximum, vous complétez une branche et son ultime, plus une seconde branche jusqu'à la rangée 6 (10 points). Le fonctionnement des points, des portes et des choix est décrit sur [Les talents](/fr/dynasty/talents).
-4. Les bonus génériques (production des mines, vitesse de construction, entrepôts, Maîtrise du Plasma) viennent de l'[arbre commun](/fr/dynasty/common-tree). Le Bâtisseur n'a que des **mécaniques**, un accent de coût de 5 % (Devis serré ou Achats groupés) et un accent de vitesse de construction, Rattrapage, limité aux colonies qui rattrapent la planète mère.
-5. Les niveaux en plus de Puits maître, Mines jumelles et Veine mère ne valent que pour les trois mines (Excavateur minéral, Extracteur cristallin, Condensateur d'hydrogène) et seulement pour leur production : la mine consomme toujours l'énergie de son niveau réel. Une mine gagne au plus 2 niveaux de production : 1 par Puits maître ou Mines jumelles, 1 par Veine mère.
+4. Les bonus génériques (production des mines, vitesse de construction, entrepôts, Maîtrise du Plasma) viennent de l'[arbre commun](/fr/dynasty/common-tree). Le Bâtisseur n'a que des **mécaniques**, un accent de coût (Devis serré, 5 % sur les bâtiments, ou Achats groupés, 10 % sur les défenses) et un accent de vitesse de construction, Rattrapage, limité aux colonies qui rattrapent la planète mère.
+5. Les niveaux en plus de Puits maître, Mines jumelles, Veine mère et Galeries ne valent que pour les trois mines (Excavateur minéral, Extracteur cristallin, Condensateur d'hydrogène) et seulement pour leur production : la mine consomme toujours l'énergie de son niveau réel. Chaque mine gagne 1 niveau de production par Puits maître ou Mines jumelles. La **mine du jour** de Prospection, tant que son jour court, en gagne 1 de plus par Veine mère, dès son premier niveau, et encore 1 par Galeries à partir du niveau 30 (25, 20 puis 15 aux rangs 1 à 3) : 3 niveaux au plus.
 6. Première coulée, Prospection et Carottage se calculent sur la **production propre de la mine** : à son niveau de production (niveaux en plus compris), à son taux de fonctionnement et à la vitesse de l'univers, sans Maîtrise du Plasma ni aucun autre bonus en pourcentage. Prospection et Carottage s'ajoutent à la production de la planète et subissent comme elle un manque d'énergie ; le versement de Première coulée n'en dépend pas.
 7. « Une fois par jour » veut dire 24 h après la dernière utilisation, pour tout votre empire (Carottage, Coup de collier). Commande d'État revient 7 jours après le paiement de l'ordre désigné.
 
@@ -30,18 +30,19 @@ updated: "2026-10-15T18:57:21.610Z"
 
 Univers à vitesse 1. Un Excavateur minéral produit 30 × N × 1,1^N métal par heure et consomme 10 × N × 1,1^N d'énergie : 4 036 métal et 1 345 d'énergie au niveau 20, 4 662 métal et 1 554 d'énergie au niveau 21.
 
-**Filon complet sur la planète mère (Puits maître et Veine mère)**
-- L'Excavateur passe au niveau 21. Il produit comme un niveau 23 (21 + 1 + 1) : 30 × 23 × 1,1^23 = **6 178 métal par heure**, pour l'énergie d'un niveau 21 (1 554).
-- Première coulée et Grandes coulées (9 h) : 9 × 6 178 = **55 602 métal** versés à la fin du niveau.
-- Prospection au rang 3 sur cette mine : 6 178 × 30 % = 1 853 (arrondi inférieur) de plus par heure, soit **44 472 métal** sur les 24 h, à pleine énergie.
-- Carottage : 2 × 6 178 × 4 = **49 424 métal** de plus en 4 h, à pleine énergie.
+**Filon complet sur la planète mère (Puits maître, l'Excavateur étant la mine du jour)**
+- L'Excavateur passe au niveau 21. Il produit comme un niveau 24 (21 + 1 par Puits maître + 1 par Veine mère + 1 par Galeries, seuil abaissé à 15) : 30 × 24 × 1,1^24 = **7 091 métal par heure**, pour l'énergie d'un niveau 21 (1 554). Le lendemain, s'il n'est plus la mine du jour, il produit comme un niveau 22 : 5 372.
+- Première coulée et Grandes coulées (4 h) : 4 × 7 091 = **28 364 métal** versés à la fin du niveau.
+- Prospection au rang 3 : 7 091 × 15 % = 1 063 (arrondi inférieur) de plus par heure, soit **25 512 métal** sur les 24 h, à pleine énergie.
+- Carottage (production doublée) : 7 091 × 4 = **28 364 métal** de plus en 4 h, à pleine énergie.
 
 **Galeries et Mines jumelles, sur une colonie**
-- Avec Galeries au rang 3, Veine mère joue dès le niveau 11. Un Excavateur 11 produit comme un niveau 13 : **1 346 métal par heure** au lieu de 941, pour l'énergie d'un niveau 11 (313).
+- Avec Galeries au rang 3, son niveau en plus joue dès le niveau 15. Un Excavateur 15, mine du jour, produit comme un niveau 18 : **3 002 métal par heure** au lieu de 1 879, pour l'énergie d'un niveau 15 (626). Les autres jours, il produit comme un niveau 16 : 2 205.
 
 **Fonderie : un niveau déjà connu**
 - Excavateur 25 sur une colonie, niveau déjà atteint sur la planète mère : 1 010 046 métal et 252 511 cristal au prix du catalogue.
 - Plans connus et Archives de chantier (25 %) plus Devis serré (5 %) : 30 % de moins, arrondi à l'unité supérieure, soit **707 033 métal** et **176 758 cristal**.
+- Si cet Excavateur est la mine du jour et que vous avez Double filon : 45 % de moins, soit **555 526 métal** et **138 882 cristal**.
 - Désigné pour Commande d'État : la moitié de ce prix déjà réduit, **353 517 métal** et **88 379 cristal**, 35 % du prix du catalogue. Les points se comptent toujours sur le prix du catalogue.
 
 **Chantier : une nuit de 8 h, file de bâtiments vide**
@@ -170,23 +171,25 @@ graph TB
 
 | Rangée | Nœud | Type | Effet (nœud plein) | Par rang |
 |---|---|---|---|---|
-| 1 | **Première coulée** | clé | Quand une de vos mines monte de niveau, elle vous verse aussitôt 3 h de sa nouvelle production. |  |
-| 2 | **Grandes coulées** | 3 rangs | Une mine qui monte de niveau vous verse 6 h de sa nouvelle production en plus. | 3 × 2 h |
+| 1 | **Première coulée** | clé | Quand une de vos mines monte de niveau, elle vous verse aussitôt 1 h de sa nouvelle production. |  |
+| 2 | **Grandes coulées** | 3 rangs | Une mine qui monte de niveau vous verse 3 h de sa nouvelle production en plus. | 3 × 1 h |
 | 3 | **A · Puits maître** | choix | Les mines de votre planète mère produisent comme si elles avaient 1 niveau de plus. | |
 |  | **B · Mines jumelles** |  | Les mines de vos colonies produisent comme si elles avaient 1 niveau de plus. | |
-| 4 | **Prospection** | 3 rangs | Chaque jour, une de vos mines tirée au sort produit 30 % de plus pendant 24 h. | 3 × 10 % |
-| 5 | **Veine mère** | clé | À partir du niveau 20, chacune de vos mines produit comme si elle avait 1 niveau de plus, en plus de Puits maître ou de Mines jumelles. |  |
+| 4 | **Prospection** | 3 rangs | Chaque jour, une de vos mines tirée au sort produit 15 % de plus pendant 24 h. | 3 × 5 % |
+| 5 | **Veine mère** | clé | La mine du jour produit comme si elle avait 1 niveau de plus, dès son premier niveau, en plus de Puits maître ou de Mines jumelles. |  |
 | 6 | **A · Filon choisi** | choix | Chaque jour, vous choisissez la mine de Prospection au lieu du tirage. | |
-|  | **B · Double filon** |  | Chaque jour, 2 mines sont tirées pour la Prospection au lieu d'une. | |
-| 7 | **Galeries** | 3 rangs | Veine mère s'applique 9 niveaux plus tôt. | 3 × 3 |
+|  | **B · Double filon** |  | Tant que son jour court, améliorer la mine du jour coûte 15 % de moins. | |
+| 7 | **Galeries** | 3 rangs | La mine du jour produit comme si elle avait 1 niveau de plus encore à partir du niveau 30, seuil abaissé de 15 niveaux, en plus de Veine mère. | 3 × 5 |
 | 8 | **Rien ne déborde** | clé | Quand un hangar est plein, 50 pts de la valeur de la production qui déborde est convertie dans la ressource de votre choix, à valeur égale : trois métal valent deux cristal ou un hydrogène. |  |
-| 9 | **Carottage** | ultime | Une fois par jour, la mine de votre choix produit trois fois plus pendant 4 h. Vous choisissez la mine et le moment. |  |
+| 9 | **Carottage** | ultime | Une fois par jour, la mine de votre choix produit deux fois plus pendant 4 h. Vous choisissez la mine et le moment. |  |
 
 - **Première coulée** : chaque niveau terminé d'une mine verse ses heures de production, y compris le niveau offert par Coup de maître. Le versement va directement dans le stock de la planète.
 - **Puits maître** vaut pour la planète mère, **Mines jumelles** pour chaque colonie, dès le niveau 1 de la mine.
 - **Prospection** : le tirage se fait parmi toutes les mines debout de toutes vos planètes (pas les lunes), chacune avec la même chance quel que soit son niveau. Une nouvelle mine du jour est tirée peu après la fin des 24 h.
-- **Veine mère** se déclenche sur le niveau réel de la mine (20, ou 11 avec Galeries au rang 3), pas sur son niveau de production.
-- **Filon choisi** : votre choix remplace la mine tirée et part pour 24 h ; vous rechoisissez à la fin de ces 24 h. Sans choix, le tirage continue. **Double filon** tire deux mines différentes.
+- **Veine mère** ne vaut que pour la mine du jour, sur sa planète, tant que son jour court ; les autres mines n'en tirent rien.
+- **Filon choisi** : votre choix remplace la mine tirée et part pour 24 h ; vous rechoisissez à la fin de ces 24 h. Sans choix, le tirage continue.
+- **Double filon** : la baisse s'additionne aux autres réductions de bâtiment (Plans connus, Devis serré…) et compte au moment où vous lancez l'amélioration ; la mine doit être la mine du jour à cet instant.
+- **Galeries** se déclenche sur le niveau réel de la mine (30, puis 25, 20 et 15 aux rangs 1 à 3), pas sur son niveau de production, et seulement sur la mine du jour.
 - **Rien ne déborde** : seul le débordement des deux autres ressources est converti, à valeur égale, arrondi à l'inférieur, et seulement dans la place libre du hangar de la ressource choisie (le métal tant que vous n'avez rien choisi). Le choix se fait planète par planète. Il ne joue que sur la production, et après Stock de sécurité (arbre commun).
 - **Carottage** : l'Excavateur minéral, l'Extracteur cristallin ou le Condensateur d'hydrogène, au moment que vous choisissez.
 
@@ -225,7 +228,7 @@ graph TB
 | 1 | **Plans connus** | clé | Un niveau de bâtiment que vous avez déjà atteint sur une autre de vos planètes coûte 10 % de moins. |  |
 | 2 | **Coup de maître** | 3 rangs | Chaque bâtiment terminé a 6 % de chances de monter aussi au niveau suivant, gratuitement. | 3 × 2 % |
 | 3 | **A · Devis serré** | choix | Vos bâtiments coûtent 5 % de moins. | |
-|  | **B · Achats groupés** |  | Vos vaisseaux et vos défenses coûtent 5 % de moins. | |
+|  | **B · Achats groupés** |  | Vos défenses coûtent 10 % de moins. | |
 | 4 | **Archives de chantier** | 3 rangs | Les niveaux que vous connaissez déjà coûtent encore 15 % de moins. | 3 × 5 % |
 | 5 | **Acompte** | clé | Les ressources mises de côté pour l'ordre en tête de votre file de bâtiments sont à l'abri du pillage, jusqu'à 30 % de son coût. |  |
 | 6 | **A · Crédit de chantier** | choix | Un ordre démarre même s'il manque jusqu'à 10 % de ses ressources ; le reste est prélevé sur votre production. | |
@@ -234,7 +237,8 @@ graph TB
 | 8 | **Plans d'alliance** | clé | Un niveau qu'un membre de votre alliance a déjà atteint compte comme connu pour Plans connus. |  |
 | 9 | **Commande d'État** | ultime | Une fois par semaine, l'amélioration de votre choix coûte 50 % de moins. |  |
 
-- **Plans connus** : le niveau doit être atteint sur une **autre** de vos planètes ou lunes. Les réductions de bâtiment s'additionnent (Plans connus, Archives de chantier, Devis serré : 30 % au plus) ; le prix est arrondi à l'unité supérieure.
+- **Plans connus** : le niveau doit être atteint sur une **autre** de vos planètes ou lunes. Les réductions de bâtiment s'additionnent (Plans connus, Archives de chantier, Devis serré : 30 % au plus, 45 % sur la mine du jour avec Double filon) ; le prix est arrondi à l'unité supérieure.
+- **Achats groupés** : 10 % sur toutes les défenses, hors plafond de coût de la classe ; les vaisseaux ne sont plus concernés.
 - **Coup de maître** : seulement après une amélioration (pas une démolition), et si le niveau suivant est possible (niveau maximal, case libre).
 - **Acompte** : l'ordre protégé est le premier ordre **en attente** dans la file de la planète, pas celui en cours (déjà payé), ni une démolition. La part abritée, au plus le stock, est retirée de ce qui peut être pillé ; le taux de pillage s'applique ensuite au reste.
 - **Crédit de chantier** : il faut au moins 90 % de **chaque** ressource. Tout le stock disponible part, le manque devient une dette prélevée sur le stock dès qu'il se remplit, avant toute autre dépense. Pas de nouveau crédit tant qu'une dette court. **Paiement en métal** paie en métal le cristal et l'hydrogène qui manquent, s'il y a assez de métal. Les deux ne valent que pour les bâtiments.
@@ -248,19 +252,19 @@ Ce que les talents des deux arbres peuvent apporter au plus à cette classe, lev
 |---|---|
 | Les mines de la planète mère produisent comme si elles avaient +1 niveau | 1 |
 | Les mines des colonies produisent comme si elles avaient +1 niveau | 1 |
-| Chaque mine produit comme si elle avait +1 niveau | 1 |
-| Veine mère s'applique 9 niveaux plus tôt | 9 |
+| La mine du jour produit comme si elle avait +1 niveau, dès son premier niveau | 1 |
+| Galeries s'applique 15 niveaux plus tôt | 15 |
 | +15 % de vitesse de construction sur un niveau de colonie que la planète mère a déjà | 15 % |
 | −25 % de coût d'un niveau de bâtiment déjà atteint sur une autre de vos planètes | 25 % |
 | −5 % de coût en ressources des bâtiments | 5 % |
-| −5 % de coût des vaisseaux et défenses | 5 % |
+| −10 % de coût des défenses | 10 % |
 
 ### Builds à 25 points
 
 | Build | Répartition | Ce qu'il obtient |
 |---|---|---|
-| Mineur | Filon 15 · Fonderie 10 | Carottage, Veine mère dès le niveau 11, 9 h de production à chaque niveau de mine, Prospection à 30 % sur une mine choisie ou deux tirées, Rien ne déborde ; niveaux connus −25 % (−30 % avec Devis serré), Coup de maître 6 %, Acompte 30 % |
-| Contremaître absent | Chantier 15 · Filon 10 | réserve de 80 % du temps vide, 5 h (Relais automatique) ou 8 h (Banque d'heures) par planète, Dock orbital compris, Rattrapage 15 %, Avance partagée, Coup de collier ; 9 h de production à chaque niveau de mine, Prospection 30 %, Veine mère dès le niveau 20 |
+| Mineur | Filon 15 · Fonderie 10 | Carottage, la mine du jour à 3 niveaux de plus dès le niveau 15, 4 h de production à chaque niveau de mine, Prospection à 15 % sur une mine choisie (Filon choisi) ou −15 % sur son amélioration (Double filon), Rien ne déborde ; niveaux connus −25 % (−30 % avec Devis serré), Coup de maître 6 %, Acompte 30 % |
+| Contremaître absent | Chantier 15 · Filon 10 | réserve de 80 % du temps vide, 5 h (Relais automatique) ou 8 h (Banque d'heures) par planète, Dock orbital compris, Rattrapage 15 %, Avance partagée, Coup de collier ; 4 h de production à chaque niveau de mine, Prospection 15 %, Veine mère sur la mine du jour |
 | Colonisateur | Fonderie 15 · Chantier 10 | Commande d'État, Plans d'alliance, Acompte jusqu'à 60 %, niveaux connus −25 % ; réserve de 50 % du temps vide jusqu'à 5 h ou 8 h, Rattrapage 15 % sur les colonies, Chantier spatial de nuit |
 
 Avant la rangée 7 de la branche principale, placez au moins 2 points dans la seconde : la porte demande 12 points, et les rangées 1 à 6 d'une branche n'en contiennent que 10.

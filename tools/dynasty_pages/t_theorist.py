@@ -16,7 +16,7 @@ FR = {
 - [[theorist_method_1]] : l'étude, lancée à la suite de la précédente dans la file, part avec 10 % de son temps écoulé : il reste **41 h 53 min 28 s**.
 - Lancée à la main après 10 h de file vide, avec [[theorist_method_2]] au rang 3 et [[theorist_method_3:1]] : 9 % (4 h 11 min 20 s) plus 2 h mises de côté donnent 6 h 11 min 20 s, ramenés au plafond de 10 % : **4 h 39 min 16 s**. [[theorist_method_3:1]] n'a ajouté que 27 min 56 s.
 - [[theorist_method_5]] : un clic avance l'étude de 10 % de son temps total, **4 h 39 min 16 s**. Avec [[theorist_method_7]] au rang 3 (19 %), on obtiendrait 8 h 50 min, ramenés au maximum de **6 h**.
-- [[theorist_method_4]] au rang 3 (−6 %) : 409 600 → **385 024** métal, 102 400 → **96 256** cristal.
+- [[theorist_method_4]] au rang 3 (−18 %) : 409 600 → **335 872** métal, 102 400 → **83 968** cristal.
 
 **[[b:network]]** : Centre 10 qui étudie, trois colonies avec des Centres 10, 9 et 8, Collaboration Stellaire 3.
 - Sans talent, seul le Centre 10 de colonie entre : niveau effectif 10 + 10 = 20, **24 h 22 min 51 s**.
@@ -52,8 +52,8 @@ FR = {
     'caps_note': "La tolérance du réseau garde la plus grande valeur détenue ([[theorist_network_1]] ou [[theorist_network_3:1]]) : 5 niveaux au plus.",
     'builds': """| Build | Répartition | Ce qu'il obtient |
 |---|---|---|
-| Chercheur pur | [[b:method]] 15 · [[b:network]] 10 | [[theorist_method_9]], [[theorist_method_1]], [[theorist_method_3:2]], [[theorist_method_4]] −6 %, [[theorist_method_5]] à 19 % (6 h au plus) toutes les 16 h ou automatique, [[theorist_method_8]] ; [[theorist_network_1]], Centres de colonie +3 niveaux, [[theorist_network_5]], [[theorist_network_6:1]] |
-| Grand réseau | [[b:network]] 15 · [[b:method]] 10 | [[theorist_network_9]], [[theorist_network_8]], [[theorist_network_7]] 9 %, tolérance de 5 niveaux ou [[theorist_network_3:2]] ; [[theorist_method_1]], [[theorist_method_4]] −6 %, [[theorist_method_5]] à 10 %, [[theorist_method_6:1]] ou [[theorist_method_6:2]] |
+| Chercheur pur | [[b:method]] 15 · [[b:network]] 10 | [[theorist_method_9]], [[theorist_method_1]], [[theorist_method_3:2]], [[theorist_method_4]] −18 %, [[theorist_method_5]] à 19 % (6 h au plus) toutes les 16 h ou automatique, [[theorist_method_8]] ; [[theorist_network_1]], Centres de colonie +3 niveaux, [[theorist_network_5]], [[theorist_network_6:1]] |
+| Grand réseau | [[b:network]] 15 · [[b:method]] 10 | [[theorist_network_9]], [[theorist_network_8]], [[theorist_network_7]] 9 %, tolérance de 5 niveaux ou [[theorist_network_3:2]] ; [[theorist_method_1]], [[theorist_method_4]] −18 %, [[theorist_method_5]] à 10 %, [[theorist_method_6:1]] ou [[theorist_method_6:2]] |
 | Savant de guerre | [[b:prototypes]] 15 · [[b:method]] 10 | [[theorist_prototypes_9]], prototypes de 48 h, [[theorist_prototypes_3:1]] ou [[theorist_prototypes_3:2]], [[theorist_prototypes_4]] −15 %, [[theorist_prototypes_8]] ; [[theorist_method_5]] pour rattraper les niveaux |
 
 Avant la rangée 7 de la branche principale, placez au moins 2 points dans la seconde : la porte demande 12 points, et les rangées 1 à 6 d'une branche n'en contiennent que 10.""",
@@ -88,7 +88,7 @@ EN = {
 - [[theorist_method_1]]: the study, started after the previous one in the queue, begins with 10% of its time elapsed: **41 h 53 min 28 s** remain.
 - Started by hand after 10 h of empty queue, with [[theorist_method_2]] at rank 3 and [[theorist_method_3:1]]: 9% (4 h 11 min 20 s) plus 2 h banked make 6 h 11 min 20 s, brought down to the 10% ceiling: **4 h 39 min 16 s**. [[theorist_method_3:1]] only added 27 min 56 s.
 - [[theorist_method_5]]: one click moves the study ahead by 10% of its total time, **4 h 39 min 16 s**. With [[theorist_method_7]] at rank 3 (19%), that would be 8 h 50 min, brought down to the **6 h** maximum.
-- [[theorist_method_4]] at rank 3 (−6%): 409,600 → **385,024** metal, 102,400 → **96,256** crystal.
+- [[theorist_method_4]] at rank 3 (−18%): 409,600 → **335,872** metal, 102,400 → **83,968** crystal.
 
 **[[b:network]]**: studying Center 10, three colonies with Centers 10, 9 and 8, Stellar Collaboration 3.
 - With no talent, only the colony's Center 10 joins: effective level 10 + 10 = 20, **24 h 22 min 51 s**.
@@ -124,8 +124,8 @@ EN = {
     'caps_note': "The network tolerance keeps the largest value held ([[theorist_network_1]] or [[theorist_network_3:1]]): 5 levels at most.",
     'builds': """| Build | Split | What it gets |
 |---|---|---|
-| Pure researcher | [[b:method]] 15 · [[b:network]] 10 | [[theorist_method_9]], [[theorist_method_1]], [[theorist_method_3:2]], [[theorist_method_4]] −6%, [[theorist_method_5]] at 19% (6 h at most) every 16 h or automatic, [[theorist_method_8]]; [[theorist_network_1]], colony Centers +3 levels, [[theorist_network_5]], [[theorist_network_6:1]] |
-| Great network | [[b:network]] 15 · [[b:method]] 10 | [[theorist_network_9]], [[theorist_network_8]], [[theorist_network_7]] 9%, 5-level tolerance or [[theorist_network_3:2]]; [[theorist_method_1]], [[theorist_method_4]] −6%, [[theorist_method_5]] at 10%, [[theorist_method_6:1]] or [[theorist_method_6:2]] |
+| Pure researcher | [[b:method]] 15 · [[b:network]] 10 | [[theorist_method_9]], [[theorist_method_1]], [[theorist_method_3:2]], [[theorist_method_4]] −18%, [[theorist_method_5]] at 19% (6 h at most) every 16 h or automatic, [[theorist_method_8]]; [[theorist_network_1]], colony Centers +3 levels, [[theorist_network_5]], [[theorist_network_6:1]] |
+| Great network | [[b:network]] 15 · [[b:method]] 10 | [[theorist_network_9]], [[theorist_network_8]], [[theorist_network_7]] 9%, 5-level tolerance or [[theorist_network_3:2]]; [[theorist_method_1]], [[theorist_method_4]] −18%, [[theorist_method_5]] at 10%, [[theorist_method_6:1]] or [[theorist_method_6:2]] |
 | War scholar | [[b:prototypes]] 15 · [[b:method]] 10 | [[theorist_prototypes_9]], 48 h prototypes, [[theorist_prototypes_3:1]] or [[theorist_prototypes_3:2]], [[theorist_prototypes_4]] −15%, [[theorist_prototypes_8]]; [[theorist_method_5]] to catch up on levels |
 
 Before row 7 of the main branch, place at least 2 points in the second one: the gate requires 12 points, and rows 1 to 6 of a branch only hold 10.""",

@@ -29,7 +29,7 @@ updated: "2026-10-15T18:52:33.084Z"
 9. Buildings, ships and defenses cannot be plundered.
 
 ### What changes plunder
-10. [Dynasty and class talents](/en/dynasty/talents) can change these rules: the defender can shelter part of its stock (the rate it suffers never goes below **30%**); the attacker can plunder more from an abandoned planet, plunder a little on a draw, enlarge its holds or choose the loading order.
+10. [Dynasty and class talents](/en/dynasty/talents) can change these rules: the defender can shelter part of its stock (the rate it suffers never goes below **30%**); the attacker can plunder more on any victory (Admiral) or from an abandoned planet, plunder a little on a draw, enlarge its holds or choose the loading order.
 
 ## Worked example
 

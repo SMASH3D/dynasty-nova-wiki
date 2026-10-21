@@ -74,7 +74,7 @@ Chaque page porte un identifiant de page (P-xx). Abréviations : *[B]* = ton bri
 | P-14 | `universe/planets` | Planètes : taille, température, type | Cases, température, types, bonus de position. | [J] partiel | `universe-05`, `universe-06` |
 | P-15 | `universe/colonization` | Coloniser | Pionnier spatial, Cosmologie appliquée, emplacements de colonie. | [B] + [J] | `universe-07` |
 | P-16 | `universe/abandoning-a-planet` | Abandonner une colonie | Conditions, conséquences, dégradation. | [J] complet | |
-| P-17 | `universe/moons` | Les lunes | Formation, Base lunaire, cases, diamètre. **Rédigée d'après le code le 15 octobre 2026, non publiée.** | Code | |
+| P-17 | `universe/moons` | Les lunes | Formation, Base lunaire, cases, diamètre. **Rédigée d'après le code le 15 octobre 2026, non publiée.** Cases lunaires du Symbiote retirées le 17 octobre 2026 (rééquilibrage). | Code | |
 
 ### `economy`, ressources et bâtiments
 | ID | Chemin | Page | Contenu | Sources | Manque |
@@ -125,7 +125,7 @@ Chaque page porte un identifiant de page (P-xx). Abréviations : *[B]* = ton bri
 | P-60 | `combat` | Combat (index) | | | |
 | P-61 | `combat/how-combat-works` | Déroulement d'un combat | Statistiques effectives, rounds, tirs rapides, boucliers, explosions. Réécrite d'après le code le 15 octobre 2026. | code | |
 | P-62 | `combat/battle-report` | Lire un rapport de combat | Contenu, vue partielle, partage. Réécrite d'après le code le 15 octobre 2026. | code | captures |
-| P-63 | `combat/plunder` | Pillage | 50 % fixe, soute, talents. Réécrite d'après le code le 15 octobre 2026. | code | |
+| P-63 | `combat/plunder` | Pillage | 50 % fixe, soute, talents. Réécrite d'après le code le 15 octobre 2026. Part du butin de l'Amiral citée le 17 octobre 2026. | code | |
 | P-64 | `combat/debris` | Champs de débris (« Champ de ruines » en jeu) | Taux réglables, formation et taille des lunes. Réécrite d'après le code le 15 octobre 2026. | code | |
 | P-65 | `combat/defense-rebuild` | Reconstruction des défenses | Tirage à 70 % par unité, L'Héritage, plafond 85 %. Réécrite d'après le code le 15 octobre 2026. | code | |
 | P-66 | `combat/simulator` | Simulateur | Import de rapport, hypothèses, 50 combats, limites. Réécrite d'après le code le 15 octobre 2026. | code | |
@@ -182,9 +182,9 @@ Nouvelle page (16 octobre 2026, non publiée jusqu'à la mise en production de l
 | P-100 | `dynasty` | Dynastie et talents (index) | Modèle dynastie + classe + arbre commun, sommaire. | Code [E] | |
 | P-101 | `dynasty/dynasties` | Les dynasties | L'Héritage, L'Accord, Le Chœur ; traits et classes exclusives. | Code [E] | |
 | P-102 | `dynasty/classes` | Les classes | Les 10 classes, maîtrise, changement de classe. | Code [E] | |
-| P-103 | `dynasty/talents` | Les talents | Deux arbres, points par niveau, portes, brouillon, réinitialisation, plafonds et accents. Réécrite d'après le code le 15 octobre 2026. | Code [E] | `dynasty-04`, `dynasty-21`, `dynasty-22` |
+| P-103 | `dynasty/talents` | Les talents | Deux arbres, points par niveau, portes, brouillon, réinitialisation, plafonds et accents. Réécrite d'après le code le 15 octobre 2026. Réinitialisations offertes par un rééquilibrage ajoutées le 17 octobre 2026. | Code [E] | `dynasty-04`, `dynasty-21`, `dynasty-22` |
 | P-104 | `dynasty/common-tree` | L'arbre commun | Prospérité, Exploration, Logistique, builds à 50 points. Réécrite d'après le code le 15 octobre 2026. | Code [E] | `dynasty-23`, `dynasty-24` |
-| P-105 à P-114 | `dynasty/classes/<code>` | Un arbre de classe par page | `admiral`, `builder`, `energist`, `theorist`, `navigator`, `shadow`, `archivist`, `veteran`, `symbiote`, `oracle` : 3 branches × 9 rangées, exemples, builds à 25 points. Réécrites d'après le code le 15 octobre 2026. | Code [E] | `dynasty-05` à `dynasty-20`, `dynasty-30` à `dynasty-41` |
+| P-105 à P-114 | `dynasty/classes/<code>` | Un arbre de classe par page | `admiral`, `builder`, `energist`, `theorist`, `navigator`, `shadow`, `archivist`, `veteran`, `symbiote`, `oracle` : 3 branches × 9 rangées, exemples, builds à 25 points. Réécrites d'après le code le 15 octobre 2026 ; Bâtisseur, Amiral, Théoricien et Symbiote mis à jour du rééquilibrage le 17 octobre 2026, à pousser à sa sortie en production. | Code [E] | `dynasty-05` à `dynasty-20`, `dynasty-30` à `dynasty-41` |
 
 [E] = code du jeu fourni par l'équipe (règles « déduites du code », AGENTS §4). Détail des données : [DONNEES.md §18](DONNEES.md).
 

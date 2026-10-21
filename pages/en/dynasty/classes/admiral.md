@@ -24,7 +24,7 @@ updated: "2026-10-15T18:56:51.668Z"
 1. The Admiral is a **common** class: every dynasty can take it.
 2. Its tree has **three branches**: Firing Line, Campaign and Spoils of War.
 3. Each branch has 9 rows and costs 15 points. With 25 points at most, you complete one branch and its ultimate, plus a second branch down to row 6 (10 points). How points, gates and choices work is described on [Talents](/en/dynasty/talents).
-4. Generic fleet speed, hydrogen and holds come from the [common tree](/en/dynasty/common-tree). The Admiral only adds narrow **accents**: the speed of attacks, espionage and moon destruction (Forced March) and of recycling (Fast Recyclers), combat ships' hydrogen and build speed, and a fleet reserved for attacks.
+4. Generic fleet speed, hydrogen and holds come from the [common tree](/en/dynasty/common-tree). The Admiral only adds narrow **accents**: the speed of attacks, espionage and moon destruction (Forced March) and of recycling (Fast Recyclers), combat ships' hydrogen, build speed and cost, and a fleet reserved for attacks.
 5. **Combat ships** are the Interceptor, Assailant, Corvette, Battleship, Orbital Striker, Predator, Annihilator and Stellar Colossus. Civil ships (Cargo Shuttle, Stellar Freighter, Salvager, Scout, Space Pioneer) and the Solar Collector are not.
 6. Stat bonuses apply **after** research and multiply with it. They work in attack as in defence. Damage bonuses on a pair (Read the Hull, Focused Fire) multiply with each other.
 
@@ -34,13 +34,14 @@ updated: "2026-10-15T18:56:51.668Z"
 - Base weapons 400, Weapon Systems level 10: 400 × 2 = 800. With Tuned Guns at rank 3: 800 × 1.09 = **872**.
 - With Hull Doctrine, the 9% moves to the hull and adds to the node's 4%: hull +13%, weapons 800 with no bonus.
 
-**Towing and Tugs (50%), Repair Station level 10, 30% debris**
-- Station share: 54% × (1 − 30%) = 37.8%. Towing: 37.8% × 50% = **18.9%**.
-- 30 Corvettes lost in attack: 30 × 18.9% = 5.67, that is **5 Corvettes**, and a 67% chance of a sixth.
+**Towing (20%), Repair Station level 10, 30% debris**
+- Station share: 54% × (1 − 30%) = 37.8%. Towing: 37.8% × 20% = **7.56%**.
+- 30 Corvettes lost in attack: 30 × 7.56% = 2.268, that is **2 Corvettes**, and a 26.8% chance of a third.
 - The same 30 Corvettes lost in defence, with Breaking Yard: 54% × 1.2 × 70% = 45.36%, that is **13** Corvettes (11 without the node).
 
-**Breakthrough**
-- A draw plunders at 30% of a victory's rate: 50% × 30% = **15%** of the stock. On 2,000,000 metal, you take **300,000**, within your holds' limit.
+**Share of the Spoils and Breakthrough, against a target with no shelter**
+- A won attack plunders 50% + 15 points = **65%** of the stock. On 2,000,000 metal, you take **1,300,000**, within your holds' limit.
+- A draw plunders at 30% of a victory's rate: 65% × 30% = **19.5%** of the stock, that is **390,000** metal.
 
 **Moonbreaker**
 - Against an 8,944 km moon, the risk of losing your fleet is √8,944 / 2 = 47.29%; with the node: 47.29% × 0.75 = **35.47%**. The chance of destroying the moon does not change.
@@ -57,7 +58,7 @@ graph TB
         B3H["SPOILS OF WAR<br/>What you bring back from a battle."]:::head
         B3R1{{"Towing<br/>1 pt"}}:::key
         B3H --- B3R1
-        B3R2("Tugs<br/>3 pts"):::rank
+        B3R2("Share of the Spoils<br/>3 pts"):::rank
         B3R1 --- B3R2
         B3R3A["① Nobody in Orbit<br/>1 pt"]:::option
         B3R3B["② Breakthrough<br/>1 pt"]:::option
@@ -198,7 +199,7 @@ graph TB
 | 5 | **Assault Squadron** | key | You can have 1 more fleet in flight, kept for attacks. |  |
 | 6 | **A · Orderly Recall** | choice | A recalled fleet comes home 20% faster. | |
 |  | **B · Supply Line** |  | A lost or drawn attack gives you back 15% of the hydrogen burnt on the way out. | |
-| 7 | **War Yard** | 3 ranks | Your combat ships are built 15% faster. | 3 × 5% |
+| 7 | **War Yard** | 3 ranks | Your combat ships are built 15% faster and cost 15% less. | 3 × 5% |
 | 8 | **Scorched Earth** | key | The defenses you destroy have 15 pts less chance of a free repair (70% usually). |  |
 | 9 | **Second Wave** | ultimate | A fleet that has just won an attack flies on 1 time to another target, 1 system away at most, without coming home. |  |
 
@@ -206,6 +207,7 @@ graph TB
 - **Fast Escort** speeds up the Cargo Shuttles and Stellar Freighters of an Attack mission, never past the fastest ship. **War Economy** cuts the share of hydrogen burned by your combat ships: a fleet where they burn half the fuel saves 5%.
 - **Assault Squadron** only serves the Attack mission (neither espionage nor moon destruction).
 - **Supply Line**: a defeat destroys the whole fleet, so there is nothing to give back; in practice, it only works on a draw.
+- **War Yard**: the cost cut only applies to combat ships, outside the class's cost cap; it adds to the ship's other reductions.
 - **Scorched Earth** applies to your attacks and your moon destructions.
 - **Second Wave**: when sending, you name a second target, a planet of another player or an abandoned one, in the same galaxy, at most 1 system from the first. If the attack is won and the fleet survives, it leaves for it at once, once per flight, taking the jump's hydrogen from its holds. Truce, alliance, vacation mode, protections and the attack limit are checked at the time of the jump: if refused, the fleet goes home.
 
@@ -216,7 +218,7 @@ graph TB
 | Row | Node | Type | Effect (full node) | Per rank |
 |---|---|---|---|---|
 | 1 | **Towing** | key | Your dock recovers the ships lost in attack at 20% of its efficiency. |  |
-| 2 | **Tugs** | 3 ranks | Towing your ships lost in attack gains 30% efficiency. | 3 × 10% |
+| 2 | **Share of the Spoils** | 3 ranks | Your won attacks plunder 15 more points, past the usual half of the target's resources. | 3 × 5 pts |
 | 3 | **A · Nobody in Orbit** | choice | Towing works even when your whole fleet is destroyed. | |
 |  | **B · Breakthrough** |  | An attack that ends in a draw still plunders, at 30% of the normal loot rate. | |
 | 4 | **Dry Dock** | 3 ranks | Your dock repairs your ships 24% faster. | 3 × 8% |
@@ -228,7 +230,8 @@ graph TB
 | 9 | **Raptors** | ultimate | After a won attack, your combat ships load 30% of the debris into their free holds, after the loot. |  |
 
 - **Towing**: the Repair Station of the departure planet does the towing. A moon has no Station: a fleet leaving from a moon tows nothing. Towing uses **probabilistic rounding**: the decimal part becomes a chance of one more ship.
-- **Breakthrough**: 30% of a victory's plunder rate, the defender's shelters deducted.
+- **Share of the Spoils**: the points add to a victory's plunder rate (50%), together with the common tree's abandoned-target points; the defender's shelters are taken off afterwards, and your holds still cap what you carry.
+- **Breakthrough**: 30% of a victory's plunder rate, Share of the Spoils included, the defender's shelters deducted.
 - **Dry Dock** speeds up every Station repair; a repair stays between 30 min (15 min with Emergency Repair) and 12 h.
 - **Combat Recycling**: the attack fleet's Salvagers collect this battle's debris, after plunder.
 - **Refining** only adds hydrogen in the space left in the holds.
@@ -260,8 +263,10 @@ The most the talents of both trees can bring this class, lever by lever. Past it
 | +20% speed on a recalled fleet's way back | 20% |
 | A lost or drawn attack gives back 15% of the hydrogen burnt to reach the target | 15% |
 | +15% build speed of combat ships | 15% |
+| −15% combat ship cost | 15% |
 | −15 pts free repair of the defenses you destroy | 15 pts |
-| Ships lost in attack are recovered at 50% of the home base's repair dock rate | 50% |
+| Ships lost in attack are recovered at 20% of the home base's repair dock rate | 20% |
+| +15 pts loot rate on a won attack | 15 pts |
 | A drawn attack plunders at 30% of a won attack's rate | 30% |
 | +24% dock repair speed | 24% |
 | −15 min off the dock's shortest repair time | 15 min |
@@ -275,8 +280,8 @@ The most the talents of both trees can bring this class, lever by lever. Past it
 | Build | Split | What it gets |
 |---|---|---|
 | Fleet Hunter | Firing Line 15 · Campaign 10 | Focused Fire, weapons +9% (or hull +13%), shield +3%, Volleys, Read the Hull; Forced March, hydrogen back on victories, victorious return, one more attack fleet |
-| Raider | Campaign 15 · Spoils of War 10 | Second Wave, War Yard, Scorched Earth; towing up to 50%, Nobody in Orbit or Breakthrough, faster repairs, combat recycling |
-| Battle Looter | Spoils of War 15 · Firing Line 10 | Raptors, towing, Refining, Breaking Yard; weapons +9%, shield +3%, Volleys, Master of Cadence |
+| Raider | Campaign 15 · Spoils of War 10 | Second Wave, War Yard, Scorched Earth; towing at 20%, plunder at 65% (Share of the Spoils), Nobody in Orbit or Breakthrough, faster repairs, combat recycling |
+| Battle Looter | Spoils of War 15 · Firing Line 10 | Raptors, towing, plunder at 65%, Refining, Breaking Yard; weapons +9%, shield +3%, Volleys, Master of Cadence |
 
 Before row 7 of the main branch, place at least 2 points in the second one: the gate requires 12 points, and rows 1 to 6 of a branch only hold 10.
 

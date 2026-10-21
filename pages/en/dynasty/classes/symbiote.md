@@ -45,10 +45,13 @@ updated: "2026-10-15T18:57:03.420Z"
 - With the ultimate, it reads the minimum: 1.44 − 0.004 × 20 = **1.36**, that is 13% more hydrogen.
 
 **Mineral Excavator position bonus in position 8 of a 15-position system** (+35% with no talent)
-- Roots: 35 × 1.15 = **+40.25%**.
-- Roots and Layering: 35 × 1.45 = **+50.75%**.
+- Roots changes nothing here: its 15% floor is under the position's 35%. The same planet's Crystal Extractor, with no position bonus, goes up to **+15%** instead.
+- Layering: 35 × 1.9 = **+66.5%**.
 - Adding Metal Lode: 35 × 1.65 = **+57.75%**.
-- A homeworld at the same spot, with Roots, Layering and Native Soil at rank 3: 35 × 1.45 × ½ = **+25.375%**.
+- A homeworld at the same spot, with Layering and Native Soil at rank 3: 35 × 1.9 × 1.05 = **+69.825%**. Without Native Soil, it would only get the floor: +15% with Roots, +30% with Hollowed Moons at rank 3.
+
+**Position floor at position 13 of a 15-position system** (no bonus without talents)
+- Roots and Hollowed Moons at rank 3: the Mineral Excavator and the Crystal Extractor each get **+30%**. Layering adds nothing there: it widens the position's bonus, not the floor.
 
 **Solar Collector in position 8 of a 15-position system** (maximum temperature 60 °C)
 - No talent: 60 / 4 + 20 = **35** energy per Collector.
@@ -57,9 +60,9 @@ updated: "2026-10-15T18:57:03.420Z"
 - Skin of Light at rank 3, Hot Pole, High-Altitude Satellites and Planetary Climate Control set toward the heat: (60 + 30 + 40) / 4 = 32.5, × 1.70 (45 + 25% amplitude) = 55.25, + 20 = **75**.
 
 **Host on a 210-field colony with 100 fields built, Mineral Excavator level 20** (4,036 metal per hour gross, speed ×1)
-- Fallow (100 / 210 = 47.6%) with Rising Sap at rank 3: +15%. Giants (over 200 fields): +8%. Three planets of other players in the system with Crowd: 3 × 2 = +6%. Another of your planets in the system with Tides at rank 3: +9%.
-- Total **+38%**: 4,036 × 0.38 = **1,533** more metal per hour.
-- For 6 h after a raid that took resources, Regrowth adds 20%: +58%, that is **2,340**.
+- Fallow (100 / 210 = 47.6%) with Rising Sap at rank 3: +24%. Giants (over 200 fields): +8%. Three planets of other players in the system with Crowd: 3 × 2 = +6%. Another of your planets in the system with Tides at rank 3: +9%.
+- Total **+47%**: 4,036 × 0.47 = **1,896** more metal per hour.
+- For 6 h after a raid that took resources, Regrowth adds 20%: +67%, that is **2,704**.
 
 ## Detailed data
 
@@ -207,21 +210,21 @@ graph TB
 
 | Row | Node | Type | Effect (full node) | Per rank |
 |---|---|---|---|---|
-| 1 | **Roots** | key | The position bonus of your planets in their system is 15% stronger. |  |
-| 2 | **Native Soil** | 3 ranks | Your homeworld receives ⅙ of the bonus of its position in the system per rank, ½ at rank 3. | 3 × 16.67% |
+| 1 | **Roots** | key | Each of your planets, homeworld included, gets at least 15% position bonus on its metal and crystal mines, wherever it sits in the system. |  |
+| 2 | **Native Soil** | 3 ranks | Your homeworld receives 105% of the bonus of its position in the system. | 3 × 35% |
 | 3 | **A · Metal Lode** | choice | The position bonus of your metal mines, mid-system, is 20% stronger still. | |
 |  | **B · Crystal Vein** |  | The position bonus of your crystal mines, near the star, is 20% stronger still. | |
-| 4 | **Hollowed Moons** | 3 ranks | Each lunar base level digs +3 fields on top of its 3, within the moon's diameter. | 3 × 1 |
-| 5 | **Layering** | key | Your planets' position bonus is 30% stronger still. |  |
+| 4 | **Hollowed Moons** | 3 ranks | The position bonus Roots guarantees rises by 15% on the metal and crystal mines of each of your planets. | 3 × 5% |
+| 5 | **Layering** | key | Your planets' position bonus is 90% stronger still. |  |
 | 6 | **A · Ground Gained** | choice | Each of your planets gains 2 buildable fields. | |
 |  | **B · Full Moon** |  | Your moons are no longer bounded by their diameter: each lunar base level gives them all its fields. | |
 | 7 | **Living Soil** | 3 ranks | Your terraformer and lunar base cost 24% less. | 3 × 8% |
 | 8 | **Living Terraformer** | key | Each terraformer level gives +1 field on top of its 5. |  |
 | 9 | **Transplantation** | ultimate | Once a week, move a colony to a free position of its system, buildings and moon included, if no fleet is flying to or from it. |  |
 
-- **Roots**, **Layering** and **Metal Lode** or **Crystal Vein** add up, then multiply the position bonus: +65% at most on one mine. Nothing where the position gives nothing.
-- **Native Soil**: the homeworld never gets a position bonus without this node. The share applies to the bonus already widened by the nodes above.
-- **Hollowed Moons**: each Lunar base level gives 6 fields at rank 3, always within the moon's diameter, except with Full Moon.
+- **Roots** and **Hollowed Moons** set a **floor**: the metal and crystal mines of each of your planets, homeworld included, get at least this position bonus (15%, then 30% at rank 3 of Hollowed Moons), wherever they sit. The floor replaces a weaker bonus, it does not add to it. Moons get none.
+- **Layering** and **Metal Lode** or **Crystal Vein** add up, then multiply the position bonus: +110% at most on one mine. Nothing where the position gives nothing, floor aside.
+- **Native Soil**: without this node, the homeworld only gets the floor. The share (105% at rank 3) applies to the bonus already widened by the nodes above; the floor is then compared to the result.
 - **Ground Gained** only applies to planets, not moons.
 - **Living Soil** only targets the Planetary Modulator and the Lunar base; the reduction adds to the other building price reductions, past their common cap.
 - **Living Terraformer**: 6 fields per Modulator level instead of 5, and the extra field of even levels stays (Modulator 6: 33 → 39 fields).
@@ -234,7 +237,7 @@ graph TB
 | Row | Node | Type | Effect (full node) | Per rank |
 |---|---|---|---|---|
 | 1 | **Young Shoot** | key | On a fallow planet, with fewer than 50% of its fields built, your buildings are built 10% faster. |  |
-| 2 | **Rising Sap** | 3 ranks | Your fallow planets produce 15% more in their mines. | 3 × 5% |
+| 2 | **Rising Sap** | 3 ranks | Your fallow planets produce 24% more in their mines. | 3 × 8% |
 | 3 | **A · Small Worlds** | choice | On a planet of fewer than 150 fields, your buildings cost 15% less. | |
 |  | **B · Giants** |  | On a planet of more than 200 fields, your mines produce 8% more. | |
 | 4 | **Long Fallow** | 3 ranks | A planet stays fallow longer: its threshold rises by 30 pts above 50% of its fields built. | 3 × 10 pts |
@@ -253,7 +256,7 @@ graph TB
 - **Tides**: one other planet of yours in the system is enough. The bonus does not grow with their number, and it adds to Neighbourhood, Crowd or Solitude.
 - **Regrowth** only triggers if the raid took resources. A new raid restarts the 6 h.
 - **Eternal Fallow**: never a moon. The first planet named is fallow at once. Naming another removes the status from the old one at once, and the new one only gets it 7 days later.
-- At most, the Host adds +47% to a planet's mines (15 + 8 + 15 + 9), and +20% more for 6 h after a raid.
+- At most, the Host adds +56% to a planet's mines (24 + 8 + 15 + 9), and +20% more for 6 h after a raid.
 
 ### Class caps
 
@@ -265,23 +268,24 @@ The most the talents of both trees can bring this class, lever by lever. Past it
 | The hydrogen synthesizer's cold bonus gains 25% amplitude | 25% |
 | The heat bonus of the solar plant and satellites gains 25% amplitude | 25% |
 | The share of solar satellites' energy that comes from temperature gains 45% amplitude | 45% |
-| The system position bonus gains 45% amplitude | 45% |
-| The mother planet receives 50% of the position bonus of its place in the system | 50% |
+| Every planet gets at least 30% position bonus on its metal and crystal mines | 30% |
+| The mother planet receives 105% of the position bonus of its place in the system | 105% |
 | The metal mines' position bonus gains 20% amplitude | 20% |
 | The crystal mines' position bonus gains 20% amplitude | 20% |
+| The system position bonus gains 90% amplitude | 90% |
 | +4 fields on every planet | 2 |
 | −24% terraformer and lunar base cost | 24% |
 | −15% building cost on a small world | 15% |
 
-The fields row is completed by the common tree's Surveyors (+2): the class tree only gives 2 of the 4. The Host's bonuses, the Climate Control, the yield floors, the Lunar base and Modulator fields are mechanics bounded to what the tree gives: no point is lost there.
+The fields row is completed by the common tree's Surveyors (+2): the class tree only gives 2 of the 4. The Host's bonuses, the Climate Control, the yield floors, the Modulator fields are mechanics bounded to what the tree gives: no point is lost there.
 
 ### 25-point builds
 
 | Build | Split | What it gets |
 |---|---|---|
-| Climatologist | Thermal 15 · Host 10 | The Two Seasons, temperature bonus +40% on both factors and +25% more on one, 30 °C Climate Control, Skin of Light, The Long Season, High-Altitude Satellites; Young Shoot, fallow planets +15%, small worlds or giants, fallow up to 80% of fields, Neighbourhood, Crowd or Solitude |
-| Settler | Growth 15 · Thermal 10 | Transplantation, position bonus +45% (+65% on one mine), homeworld at half its bonus, Hollowed Moons, Living Soil, Living Terraformer; temperature bonus **+10%** only (+35% on one building with the pole), 30 °C Climate Control, Skin of Light, The Long Season |
-| Gardener | Host 15 · Growth 10 | Eternal Fallow, fallow planets +15%, Neighbourhood, Tides, Regrowth; position bonus +45% (+65% on one mine), Native Soil, Hollowed Moons, +2 fields or Full Moon |
+| Climatologist | Thermal 15 · Host 10 | The Two Seasons, temperature bonus +40% on both factors and +25% more on one, 30 °C Climate Control, Skin of Light, The Long Season, High-Altitude Satellites; Young Shoot, fallow planets +24%, small worlds or giants, fallow up to 80% of fields, Neighbourhood, Crowd or Solitude |
+| Settler | Growth 15 · Thermal 10 | Transplantation, position bonus +90% (+110% on one mine) and at least 30% everywhere, homeworld at 105% of its bonus, Living Soil, Living Terraformer; temperature bonus **+10%** only (+35% on one building with the pole), 30 °C Climate Control, Skin of Light, The Long Season |
+| Gardener | Host 15 · Growth 10 | Eternal Fallow, fallow planets +24%, Neighbourhood, Tides, Regrowth; position bonus +90% (+110% on one mine) and at least 30% everywhere, Native Soil, +2 fields or Full Moon |
 
 Before row 7 of the main branch, place at least 2 points in the second one: the gate requires 12 points, and rows 1 to 6 of a branch only hold 10.
 
@@ -290,7 +294,7 @@ Before row 7 of the main branch, place at least 2 points in the second one: the 
 - **A temperature bonus never changes sign**: on a planet too hot for the Hydrogen Condenser (factor under 1), Cold Blood adds nothing, Deep Roots is what raises the floor. Likewise, under 0 °C the Photovoltaic Sensors have no bonus to widen: only Winter Sun helps them.
 - **Planetary Climate Control cuts both ways**: toward the cold, the planet gains hydrogen but loses solar energy; toward the heat, the reverse.
 - **10 points in Thermal do not give the +40%**: Reading the Climate is in row 7. Without it, the general amplitude stays at 10%.
-- **The position bonus only concerns two mines**, and its positions depend on the number of positions in the system: positions 1 to 3 and 6 to 10 in a 15-position system (Redline). On other positions, Roots and Layering bring nothing.
+- **The position bonus only concerns two mines**, and its positions depend on the number of positions in the system: positions 1 to 3 and 6 to 10 in a 15-position system (Redline). On other positions, Layering and Metal Lode or Crystal Vein bring nothing: only the floor of Roots and Hollowed Moons works there.
 - **"Fallow" is not "young"**: a colony is young for its first days (common tree); a planet is fallow while its fields are not built enough. Every level built brings it closer to the threshold.
 - **Crowd replaces Neighbourhood**, it does not add to it.
 - **The total of fields moves**: a Planetary Modulator level or Ground Gained can lose you Small Worlds (going from 149 to 151 fields) or win you Giants.

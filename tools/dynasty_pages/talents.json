@@ -1,5 +1,5 @@
 {
-    "source": "astro-nova-backend 7b255c83",
+    "source": "astro-nova-backend 59b01c6a",
     "rules": {
         "COMMON_MAX_POINTS": 50,
         "COMMON_ROW_COUNT": 10,
@@ -70,6 +70,7 @@
         "COST_REDUCTION_CEILING": 5.0,
         "COLONY_SHIP_COST_REDUCTION_CEILING": 25.0,
         "COLONY_SHIP_BUILD_SPEED_CEILING": 50.0,
+        "COMBAT_SHIP_COST_REDUCTION_CEILING": 15.0,
         "COLONIZATION_SPEED_CEILING": 25.0,
         "ENERGY_PRODUCTION_CEILING": 15.0,
         "EXPEDITION_GAINS_CEILING": 20.0,
@@ -80,8 +81,10 @@
         "THROTTLE_RECOVERED_EXTRA_POINTS_CEILING": 15.0,
         "HYDROGEN_TEMPERATURE_AMPLITUDE_CEILING": 25.0,
         "DOCK_SALVAGE_CEILING": 20.0,
+        "PROSPECTED_MINE_BONUS_LEVELS_CEILING": 1,
         "MINE_BONUS_LEVELS_CEILING": 1,
-        "MINE_BONUS_THRESHOLD_REDUCTION_CEILING": 9,
+        "MINE_BONUS_THRESHOLD_REDUCTION_CEILING": 15,
+        "DEFENSE_COST_REDUCTION_CEILING": 10.0,
         "PLACE_MINE_BONUS_LEVELS_CEILING": 1,
         "KNOWN_PLAN_COST_REDUCTION_CEILING": 25.0,
         "ESPIONAGE_LEVELS_TALENT_CEILING": 1,
@@ -108,7 +111,7 @@
         "SATELLITE_COST_REDUCTION_CEILING": 20.0,
         "RESEARCH_SPEED_TALENT_CEILING": 25.0,
         "RESEARCH_SPEED_CEILING": 45.0,
-        "RESEARCH_COST_REDUCTION_CEILING": 6.0,
+        "RESEARCH_COST_REDUCTION_CEILING": 18.0,
         "DEEP_RESEARCH_COST_REDUCTION_CEILING": 3.0,
         "RESEARCH_LAB_BONUS_LEVELS_CEILING": 3,
         "RESEARCH_NETWORK_TOLERANCE_CEILING": 5,
@@ -121,9 +124,10 @@
         "RUIN_LOOT_RATE_POINTS_CEILING": 20.0,
         "TEMPERATURE_AMPLITUDE_CEILING": 40.0,
         "SATELLITE_TEMPERATURE_AMPLITUDE_CEILING": 45.0,
-        "POSITION_BONUS_AMPLITUDE_CEILING": 45.0,
+        "POSITION_BONUS_AMPLITUDE_CEILING": 90.0,
+        "POSITION_BONUS_FLOOR_CEILING": 30.0,
         "MINE_POSITION_BONUS_AMPLITUDE_CEILING": 20.0,
-        "MOTHER_BASE_POSITION_BONUS_CEILING": 50.0,
+        "MOTHER_BASE_POSITION_BONUS_CEILING": 105.0,
         "PLANET_FIELDS_CEILING": 4,
         "FIELD_BUILDINGS_COST_REDUCTION_CEILING": 24.0,
         "SMALL_WORLD_BUILDING_COST_REDUCTION_CEILING": 15.0,
@@ -131,6 +135,7 @@
         "DEFENSE_WEAPONS_SHARE_CEILING": 50.0,
         "ATTACK_SALVAGE_CEILING": 60.0,
         "DRAW_LOOT_CEILING": 30.0,
+        "LOOT_SHARE_POINTS_CEILING": 15.0,
         "MOON_DESTRUCTION_FLEET_RISK_CEILING": 25.0,
         "ATTACK_ESCORT_SPEED_CEILING": 25.0,
         "VICTORIOUS_RETURN_SPEED_CEILING": 30.0,
@@ -952,7 +957,7 @@
                         "effects": [
                             {
                                 "lever": "mine_level_payout",
-                                "value": 3.0,
+                                "value": 1.0,
                                 "option": null,
                                 "per_rank": false,
                                 "fixed": false,
@@ -970,7 +975,7 @@
                         "effects": [
                             {
                                 "lever": "mine_level_payout",
-                                "value": 2.0,
+                                "value": 1.0,
                                 "option": null,
                                 "per_rank": true,
                                 "fixed": false,
@@ -1014,7 +1019,7 @@
                         "effects": [
                             {
                                 "lever": "prospection",
-                                "value": 10.0,
+                                "value": 5.0,
                                 "option": null,
                                 "per_rank": true,
                                 "fixed": false,
@@ -1039,20 +1044,12 @@
                         "level": null,
                         "effects": [
                             {
-                                "lever": "mine_bonus_level",
+                                "lever": "prospected_mine_bonus_level",
                                 "value": 1.0,
                                 "option": null,
                                 "per_rank": false,
                                 "fixed": false,
                                 "unit": "levels"
-                            },
-                            {
-                                "lever": "mine_bonus_from_level",
-                                "value": 20.0,
-                                "option": null,
-                                "per_rank": false,
-                                "fixed": false,
-                                "unit": "level_threshold"
                             }
                         ]
                     },
@@ -1073,12 +1070,12 @@
                                 "unit": "unlock"
                             },
                             {
-                                "lever": "prospection_mines",
-                                "value": 2.0,
+                                "lever": "prospected_mine_cost_reduction",
+                                "value": 15.0,
                                 "option": 2,
                                 "per_rank": false,
                                 "fixed": false,
-                                "unit": "count"
+                                "unit": "percent"
                             }
                         ]
                     },
@@ -1091,8 +1088,24 @@
                         "level": null,
                         "effects": [
                             {
+                                "lever": "mine_bonus_level",
+                                "value": 1.0,
+                                "option": null,
+                                "per_rank": false,
+                                "fixed": true,
+                                "unit": "levels"
+                            },
+                            {
+                                "lever": "mine_bonus_from_level",
+                                "value": 30.0,
+                                "option": null,
+                                "per_rank": false,
+                                "fixed": true,
+                                "unit": "level_threshold"
+                            },
+                            {
                                 "lever": "mine_bonus_threshold_reduction",
-                                "value": 3.0,
+                                "value": 5.0,
                                 "option": null,
                                 "per_rank": true,
                                 "fixed": false,
@@ -1136,7 +1149,7 @@
                         "effects": [
                             {
                                 "lever": "core_sampling_multiplier",
-                                "value": 3.0,
+                                "value": 2.0,
                                 "option": null,
                                 "per_rank": false,
                                 "fixed": false,
@@ -1435,8 +1448,8 @@
                                 "unit": "percent"
                             },
                             {
-                                "lever": "unit_cost_reduction",
-                                "value": 5.0,
+                                "lever": "defense_cost_reduction",
+                                "value": 10.0,
                                 "option": 2,
                                 "per_rank": false,
                                 "fixed": false,
@@ -2298,7 +2311,7 @@
                         "effects": [
                             {
                                 "lever": "research_cost_reduction",
-                                "value": 2.0,
+                                "value": 6.0,
                                 "option": null,
                                 "per_rank": true,
                                 "fixed": false,
@@ -3199,6 +3212,14 @@
                                 "per_rank": true,
                                 "fixed": false,
                                 "unit": "percent"
+                            },
+                            {
+                                "lever": "combat_ship_cost_reduction",
+                                "value": 5.0,
+                                "option": null,
+                                "per_rank": true,
+                                "fixed": false,
+                                "unit": "percent"
                             }
                         ]
                     },
@@ -3287,12 +3308,12 @@
                         "level": null,
                         "effects": [
                             {
-                                "lever": "attack_salvage",
-                                "value": 10.0,
+                                "lever": "loot_share",
+                                "value": 5.0,
                                 "option": null,
                                 "per_rank": true,
                                 "fixed": false,
-                                "unit": "percent"
+                                "unit": "percentage_points"
                             }
                         ]
                     },
@@ -6127,7 +6148,7 @@
                         "level": null,
                         "effects": [
                             {
-                                "lever": "position_bonus_amplitude",
+                                "lever": "position_bonus_floor",
                                 "value": 15.0,
                                 "option": null,
                                 "per_rank": false,
@@ -6146,7 +6167,7 @@
                         "effects": [
                             {
                                 "lever": "mother_base_position_bonus",
-                                "value": 16.666666666666668,
+                                "value": 35.0,
                                 "option": null,
                                 "per_rank": true,
                                 "fixed": false,
@@ -6189,20 +6210,12 @@
                         "level": null,
                         "effects": [
                             {
-                                "lever": "lunar_base_fields",
-                                "value": 1.0,
+                                "lever": "position_bonus_floor",
+                                "value": 5.0,
                                 "option": null,
                                 "per_rank": true,
                                 "fixed": false,
-                                "unit": "count"
-                            },
-                            {
-                                "lever": "lunar_base_base_fields",
-                                "value": 3.0,
-                                "option": null,
-                                "per_rank": false,
-                                "fixed": true,
-                                "unit": "count"
+                                "unit": "percent"
                             }
                         ]
                     },
@@ -6216,7 +6229,7 @@
                         "effects": [
                             {
                                 "lever": "position_bonus_amplitude",
-                                "value": 30.0,
+                                "value": 90.0,
                                 "option": null,
                                 "per_rank": false,
                                 "fixed": false,
@@ -6354,7 +6367,7 @@
                         "effects": [
                             {
                                 "lever": "fallow_mine_production",
-                                "value": 5.0,
+                                "value": 8.0,
                                 "option": null,
                                 "per_rank": true,
                                 "fixed": false,
@@ -7189,6 +7202,7 @@
         "mines_throttle_ignored": "percent",
         "hydrogen_temperature_amplitude": "percent",
         "plasma_effect": "percent",
+        "prospected_mine_bonus_level": "levels",
         "mine_bonus_level": "levels",
         "mine_bonus_from_level": "level_threshold",
         "mine_bonus_threshold_reduction": "levels",
@@ -7200,7 +7214,7 @@
         "prospection": "percent",
         "prospection_window": "hours",
         "prospection_choice": "unlock",
-        "prospection_mines": "count",
+        "prospected_mine_cost_reduction": "percent",
         "building_speed": "percent",
         "unit_speed": "percent",
         "construction_head_start": "minutes",
@@ -7218,7 +7232,7 @@
         "chained_order_head_start": "percent",
         "building_next_level_chance": "chance",
         "building_cost_reduction": "percent",
-        "unit_cost_reduction": "percent",
+        "defense_cost_reduction": "percent",
         "known_plan_cost_reduction": "percent",
         "alliance_plans": "unlock",
         "state_order": "percent",
@@ -7366,6 +7380,7 @@
         "attack_salvage": "percent",
         "attack_salvage_wiped_fleet": "unlock",
         "draw_loot": "percent",
+        "loot_share": "percentage_points",
         "rapid_fire_chain_ships": "percent",
         "rapid_fire_chain_defenses": "percent",
         "rapid_fire_designated_shooter": "count",
@@ -7379,6 +7394,7 @@
         "attack_fleet_slots": "count",
         "lost_attack_fuel_refund": "percent",
         "combat_ship_build_speed": "percent",
+        "combat_ship_cost_reduction": "percent",
         "scorched_earth": "percentage_points",
         "defense_free_repair_rate": "percent",
         "second_wave": "count",
@@ -7426,12 +7442,11 @@
         "satellite_temperature_offset": "degrees",
         "hydrogen_reads_min_temperature": "unlock",
         "position_bonus_amplitude": "percent",
+        "position_bonus_floor": "percent",
         "metal_position_bonus_amplitude": "percent",
         "crystal_position_bonus_amplitude": "percent",
         "mother_base_position_bonus": "percent",
         "planet_fields": "count",
-        "lunar_base_fields": "count",
-        "lunar_base_base_fields": "count",
         "moon_diameter_unbound": "unlock",
         "field_buildings_cost_reduction": "percent",
         "terraformer_fields": "count",
@@ -7637,15 +7652,16 @@
             "mines_throttle_ignored": 40.0,
             "hydrogen_temperature_amplitude": 25.0,
             "plasma_effect": 50.0,
+            "prospected_mine_bonus_level": 1.0,
             "mine_bonus_level": 1.0,
-            "mine_bonus_threshold_reduction": 9.0,
+            "mine_bonus_threshold_reduction": 15.0,
             "mother_base_mine_bonus_level": 1.0,
             "colony_mine_bonus_level": 1.0,
             "building_speed": 25.0,
             "unit_speed": 10.0,
             "catch_up_building_speed": 15.0,
             "building_cost_reduction": 5.0,
-            "unit_cost_reduction": 5.0,
+            "defense_cost_reduction": 10.0,
             "known_plan_cost_reduction": 25.0,
             "storage_capacity": 20.0,
             "dock_salvage": 20.0,
@@ -7661,7 +7677,6 @@
             "building_speed": 25.0,
             "unit_speed": 10.0,
             "building_cost_reduction": 5.0,
-            "unit_cost_reduction": 5.0,
             "storage_capacity": 20.0,
             "dock_salvage": 20.0,
             "espionage_level": 1.0,
@@ -7687,11 +7702,10 @@
             "building_speed": 25.0,
             "unit_speed": 10.0,
             "building_cost_reduction": 5.0,
-            "unit_cost_reduction": 5.0,
             "storage_capacity": 20.0,
             "dock_salvage": 20.0,
             "espionage_level": 1.0,
-            "research_cost_reduction": 6.0,
+            "research_cost_reduction": 18.0,
             "research_lab_bonus_level": 3.0,
             "deep_research_cost_reduction": 3.0,
             "research_network_tolerance": 5.0,
@@ -7709,7 +7723,6 @@
             "building_speed": 25.0,
             "unit_speed": 10.0,
             "building_cost_reduction": 5.0,
-            "unit_cost_reduction": 5.0,
             "storage_capacity": 20.0,
             "dock_salvage": 20.0,
             "espionage_level": 1.0,
@@ -7721,8 +7734,9 @@
             "ship_hull": 13.0,
             "ship_shield": 3.0,
             "defense_weapons_share": 50.0,
-            "attack_salvage": 50.0,
+            "attack_salvage": 20.0,
             "draw_loot": 30.0,
+            "loot_share": 15.0,
             "rapid_fire_chain_ships": 9.0,
             "rapid_fire_chain_defenses": 10.0,
             "rapid_fire_designated_shooter": 1.0,
@@ -7735,6 +7749,7 @@
             "attack_fleet_slots": 1.0,
             "lost_attack_fuel_refund": 15.0,
             "combat_ship_build_speed": 15.0,
+            "combat_ship_cost_reduction": 15.0,
             "scorched_earth": 15.0,
             "raptors": 30.0,
             "dock_min_repair_time": 15.0,
@@ -7750,7 +7765,6 @@
             "building_speed": 25.0,
             "unit_speed": 10.0,
             "building_cost_reduction": 5.0,
-            "unit_cost_reduction": 5.0,
             "storage_capacity": 20.0,
             "dock_salvage": 20.0,
             "espionage_level": 1.0,
@@ -7777,7 +7791,6 @@
             "building_speed": 25.0,
             "unit_speed": 10.0,
             "building_cost_reduction": 5.0,
-            "unit_cost_reduction": 5.0,
             "storage_capacity": 20.0,
             "dock_salvage": 20.0,
             "espionage_level": 1.0,
@@ -7799,7 +7812,6 @@
             "building_speed": 25.0,
             "unit_speed": 10.0,
             "building_cost_reduction": 5.0,
-            "unit_cost_reduction": 5.0,
             "storage_capacity": 20.0,
             "dock_salvage": 20.0,
             "espionage_level": 1.0,
@@ -7819,7 +7831,6 @@
             "building_speed": 25.0,
             "unit_speed": 10.0,
             "building_cost_reduction": 5.0,
-            "unit_cost_reduction": 5.0,
             "storage_capacity": 20.0,
             "dock_salvage": 20.0,
             "espionage_level": 1.0,
@@ -7847,7 +7858,6 @@
             "building_speed": 25.0,
             "unit_speed": 10.0,
             "building_cost_reduction": 5.0,
-            "unit_cost_reduction": 5.0,
             "storage_capacity": 20.0,
             "dock_salvage": 20.0,
             "espionage_level": 1.0,
@@ -7855,10 +7865,11 @@
             "counter_damage": 15.0,
             "temperature_amplitude": 40.0,
             "satellite_temperature_amplitude": 45.0,
-            "position_bonus_amplitude": 45.0,
+            "position_bonus_amplitude": 90.0,
+            "position_bonus_floor": 30.0,
             "metal_position_bonus_amplitude": 20.0,
             "crystal_position_bonus_amplitude": 20.0,
-            "mother_base_position_bonus": 50.0,
+            "mother_base_position_bonus": 105.0,
             "planet_fields": 4.0,
             "field_buildings_cost_reduction": 24.0,
             "small_world_building_cost_reduction": 15.0
@@ -7872,7 +7883,6 @@
             "building_speed": 25.0,
             "unit_speed": 10.0,
             "building_cost_reduction": 5.0,
-            "unit_cost_reduction": 5.0,
             "storage_capacity": 20.0,
             "dock_salvage": 20.0,
             "espionage_level": 1.0,
@@ -7895,7 +7905,6 @@
             "building_speed": 25.0,
             "unit_speed": 10.0,
             "building_cost_reduction": 5.0,
-            "unit_cost_reduction": 5.0,
             "storage_capacity": 20.0,
             "dock_salvage": 20.0,
             "espionage_level": 1.0,
@@ -7910,7 +7919,6 @@
             "building_speed": 25.0,
             "unit_speed": 10.0,
             "building_cost_reduction": 5.0,
-            "unit_cost_reduction": 5.0,
             "storage_capacity": 20.0,
             "dock_salvage": 20.0,
             "espionage_level": 1.0,

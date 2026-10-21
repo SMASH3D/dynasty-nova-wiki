@@ -36,7 +36,7 @@ updated: "2026-10-15T18:57:32.111Z"
 - Fil continu : l'étude, lancée à la suite de la précédente dans la file, part avec 10 % de son temps écoulé : il reste **41 h 53 min 28 s**.
 - Lancée à la main après 10 h de file vide, avec Départ lancé au rang 3 et Veille de nuit : 9 % (4 h 11 min 20 s) plus 2 h mises de côté donnent 6 h 11 min 20 s, ramenés au plafond de 10 % : **4 h 39 min 16 s**. Veille de nuit n'a ajouté que 27 min 56 s.
 - Éclair de génie : un clic avance l'étude de 10 % de son temps total, **4 h 39 min 16 s**. Avec Coup de génie au rang 3 (19 %), on obtiendrait 8 h 50 min, ramenés au maximum de **6 h**.
-- Protocoles au rang 3 (−6 %) : 409 600 → **385 024** métal, 102 400 → **96 256** cristal.
+- Protocoles au rang 3 (−18 %) : 409 600 → **335 872** métal, 102 400 → **83 968** cristal.
 
 **Réseau** : Centre 10 qui étudie, trois colonies avec des Centres 10, 9 et 8, Collaboration Stellaire 3.
 - Sans talent, seul le Centre 10 de colonie entre : niveau effectif 10 + 10 = 20, **24 h 22 min 51 s**.
@@ -170,7 +170,7 @@ graph TB
 | 2 | **Départ lancé** | 3 rangs | Une étude lancée à la main sur une file de recherche vide part avec 9 % de son temps déjà écoulé, sans dépasser le plafond de 10 % des avances. | 3 × 3 % |
 | 3 | **A · Veille de nuit** | choix | Quand votre file de recherche est vide, le centre d'innovation met de côté 25 % du temps qui passe, jusqu'à 2 h d'avance versées à la prochaine étude. | |
 |  | **B · Brouillon conservé** |  | Une étude annulée garde sa progression : relancée plus tard au même niveau, elle reprend où elle s'était arrêtée. | |
-| 4 | **Protocoles** | 3 rangs | Vos recherches coûtent 6 % de moins. | 3 × 2 % |
+| 4 | **Protocoles** | 3 rangs | Vos recherches coûtent 18 % de moins. | 3 × 6 % |
 | 5 | **Éclair de génie** | clé | Une fois par jour, d'un bouton, l'étude en cours avance d'un coup de 10 % de son temps total, 6 h au plus, sans jamais l'achever. |  |
 | 6 | **A · Esprit vif** | choix | L'Éclair de génie se recharge en 16 h. | |
 |  | **B · Réflexe** |  | L'Éclair de génie part tout seul dès qu'il est prêt et qu'une étude tourne, même sans vous connecter. | |
@@ -244,7 +244,7 @@ Ce que les talents des deux arbres peuvent apporter au plus à cette classe, lev
 
 | Plafond de la classe (talents des deux arbres) | Ce que l'arbre de classe atteint |
 |---|---|
-| −6 % de coût des recherches | 6 % |
+| −18 % de coût des recherches | 18 % |
 | Le réseau d'étude accepte les centres d'innovation jusqu'à 5 niveaux sous celui qui étudie | 5 (plafonné) |
 | Chacun de vos centres d'innovation mis en réseau compte +3 niveaux | 3 |
 | Le centre d'innovation compte pour +3 niveaux dans la durée des recherches | 3 |
@@ -258,8 +258,8 @@ La tolérance du réseau garde la plus grande valeur détenue (Liaison montante 
 
 | Build | Répartition | Ce qu'il obtient |
 |---|---|---|
-| Chercheur pur | Méthode 15 · Réseau 10 | Centre d'innovation jumeau, Fil continu, Brouillon conservé, Protocoles −6 %, Éclair de génie à 19 % (6 h au plus) toutes les 16 h ou automatique, Inspiration ; Liaison montante, Centres de colonie +3 niveaux, Un labo de plus, Réseau vivant |
-| Grand réseau | Réseau 15 · Méthode 10 | Symposium, Échange universitaire, Bourses d'étude 9 %, tolérance de 5 niveaux ou Labo-mère ; Fil continu, Protocoles −6 %, Éclair de génie à 10 %, Esprit vif ou Réflexe |
+| Chercheur pur | Méthode 15 · Réseau 10 | Centre d'innovation jumeau, Fil continu, Brouillon conservé, Protocoles −18 %, Éclair de génie à 19 % (6 h au plus) toutes les 16 h ou automatique, Inspiration ; Liaison montante, Centres de colonie +3 niveaux, Un labo de plus, Réseau vivant |
+| Grand réseau | Réseau 15 · Méthode 10 | Symposium, Échange universitaire, Bourses d'étude 9 %, tolérance de 5 niveaux ou Labo-mère ; Fil continu, Protocoles −18 %, Éclair de génie à 10 %, Esprit vif ou Réflexe |
 | Savant de guerre | Prototypes 15 · Méthode 10 | Révolution, prototypes de 48 h, Prototype de combat ou Feu vert, Ingénierie inverse −15 %, Spécialité ; Éclair de génie pour rattraper les niveaux |
 
 Avant la rangée 7 de la branche principale, placez au moins 2 points dans la seconde : la porte demande 12 points, et les rangées 1 à 6 d'une branche n'en contiennent que 10.
