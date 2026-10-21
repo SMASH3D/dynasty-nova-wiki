@@ -1,10 +1,14 @@
 ---
+wiki_id: 181
 locale: "en"
 path: "players/account-deletion"
+url: "https://wiki.dynastynova.com/en/players/account-deletion"
 title: "Deleting your account"
 description: "Asking for your account to be deleted, cancelling it, and what it takes with it."
 tags: ["players"]
 published: true
+created: "2026-10-21T16:00:31.842Z"
+updated: "2026-10-21T16:00:33.172Z"
 ---
 
 # Deleting your account

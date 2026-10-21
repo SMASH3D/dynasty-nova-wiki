@@ -8,7 +8,7 @@ description: "La classe du combat frontal : Ligne de feu, Campagne et Butin de g
 tags: ["dynasty"]
 published: true
 created: "2026-10-06T10:29:36.126Z"
-updated: "2026-10-15T18:57:17.926Z"
+updated: "2026-10-21T16:00:42.214Z"
 ---
 
 # L'Amiral

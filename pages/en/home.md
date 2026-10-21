@@ -8,7 +8,7 @@ description: "The Dynasty Nova player wiki: rules, data and worked examples."
 tags: ["home"]
 published: true
 created: "2026-10-02T13:33:57.746Z"
-updated: "2026-10-15T19:28:29.804Z"
+updated: "2026-10-21T16:00:30.110Z"
 ---
 
 # Dynasty Nova Wiki

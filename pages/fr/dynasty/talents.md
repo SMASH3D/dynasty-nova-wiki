@@ -8,7 +8,7 @@ description: "Les deux arbres, les points, les portes, le brouillon, la réiniti
 tags: ["dynasty"]
 published: true
 created: "2026-10-06T10:29:33.970Z"
-updated: "2026-10-15T18:57:39.788Z"
+updated: "2026-10-21T16:00:48.869Z"
 ---
 
 # Les talents

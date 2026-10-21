@@ -8,7 +8,7 @@ description: "Formation des lunes, Base lunaire et cases."
 tags: ["universe"]
 published: true
 created: "2026-10-02T13:08:16.183Z"
-updated: "2026-10-15T19:28:20.020Z"
+updated: "2026-10-21T16:00:58.903Z"
 ---
 
 # Les lunes

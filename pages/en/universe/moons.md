@@ -8,7 +8,7 @@ description: "Moon formation, Lunar base and fields."
 tags: ["universe"]
 published: true
 created: "2026-10-02T13:10:32.724Z"
-updated: "2026-10-15T19:28:28.281Z"
+updated: "2026-10-21T16:00:38.934Z"
 ---
 
 # Moons

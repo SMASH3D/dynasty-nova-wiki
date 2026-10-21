@@ -8,7 +8,7 @@ description: "What the attacker takes home after a victory."
 tags: ["combat"]
 published: true
 created: "2026-10-02T13:11:32.016Z"
-updated: "2026-10-15T18:52:33.084Z"
+updated: "2026-10-21T16:00:20.415Z"
 ---
 
 # Plunder

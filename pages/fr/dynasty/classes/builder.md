@@ -8,7 +8,7 @@ description: "Arbre de classe du Bâtisseur : Filon, Chantier, Fonderie."
 tags: ["dynasty"]
 published: true
 created: "2026-10-06T10:29:40.591Z"
-updated: "2026-10-15T18:57:21.610Z"
+updated: "2026-10-21T16:00:43.882Z"
 ---
 
 # Le Bâtisseur

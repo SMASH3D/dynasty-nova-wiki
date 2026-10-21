@@ -1,10 +1,14 @@
 ---
+wiki_id: 182
 locale: "fr"
 path: "players/account-deletion"
+url: "https://wiki.dynastynova.com/fr/players/account-deletion"
 title: "Supprimer son compte"
 description: "Demander la suppression de son compte, l'annuler, et ce qu'elle emporte."
 tags: ["players"]
 published: true
+created: "2026-10-21T16:00:52.017Z"
+updated: "2026-10-21T16:00:53.277Z"
 ---
 
 # Supprimer son compte
