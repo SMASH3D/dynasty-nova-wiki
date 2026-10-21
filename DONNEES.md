@@ -1053,7 +1053,7 @@ Relevé dans `astro-nova-backend` main 7b255c83 (lecture seule), le front `Astro
 
 - Points de doctrine : 2 par niveau d'alliance de 1 à 5, puis 1 par niveau ; plafond 50 points au niveau 45.
 - Passer du niveau n au suivant : 10 000 + 2 500 × (n − 1) points d'expérience.
-- Expérience d'alliance : constructions (20 × niveau), recherches (40 × niveau), raids gagnés (5 pour 1 000 points militaires détruits), rapports d'espionnage (10), recyclage (2 pour 1 000), missions d'alliance. Plafond glissant sur 7 jours : 800 par membre, 15 000 par alliance.
+- Expérience d'alliance : constructions (20 × niveau), recherches (40 × niveau), combats gagnés (5 pour 1 000 **ressources** de valeur militaire détruites, soit 5 par point de score ; vainqueur seul, rien sur un match nul, pertes rattrapées par la remise en état des défenses ou la Station de réparation exclues, `Base` l. 7140-7190 ; `AllianceExperiencePolicy::forMilitaryDestroyed()` et `CreditAllianceExperienceHandler`, Backend#595, commit `1c0abe1`, relevé le 17/10/2026 ; avant ce correctif le barème s'appliquait à des points de score, soit 5 par million de ressources), rapports d'espionnage (10), recyclage (2 pour 1 000), missions d'alliance. Plafond glissant sur 7 jours : 800 par membre, 15 000 par alliance.
 - Branche Logistique offensive : fermée, réservée aux futures attaques groupées.
 
 **Règlement** (`players-09`)

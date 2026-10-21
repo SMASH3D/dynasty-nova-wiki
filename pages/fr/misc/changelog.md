@@ -41,6 +41,7 @@ updated: "2026-10-15T19:28:22.987Z"
   - **Joueurs** : points militaires de tous les vaisseaux, protection des nouveaux arrivants de 7 jours, conservation des rapports, univers privé gelé, réglages des rapports.
   - **Dynastie et talents** : valeurs corrigées, ultime de classe sans condition de niveau, règles des arêtes et des verrous, textes des talents repris du jeu.
 - **17 octobre 2026 (rééquilibrage des classes)** : [Bâtisseur](/fr/dynasty/classes/builder) (branche Filon autour de la mine du jour, Achats groupés sur les défenses), [Amiral](/fr/dynasty/classes/admiral) (Part du butin, Chantier de guerre moins cher), [Théoricien](/fr/dynasty/classes/theorist) (Protocoles −18 %) et [Symbiote](/fr/dynasty/classes/symbiote) (plancher de bonus de position, Terre natale, Marcottage, Sève montante) mis à jour ; réinitialisations offertes sur [Les talents](/fr/dynasty/talents).
+- **17 octobre 2026** : expérience d'alliance des combats gagnés corrigée dans le jeu : 5 points par 1 000 ressources de valeur militaire détruites (au lieu de 1 000 points de score), page [Missions et station d'alliance](/fr/players/alliance-missions) mise à jour avec un exemple.
 
 ## Pages liées
 

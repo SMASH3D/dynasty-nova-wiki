@@ -124,11 +124,15 @@ Multipliée par le bonus de dépassement (règle 20). Plafond des missions : **8
 |---|---|
 | Construire un niveau de bâtiment | 20 × niveau |
 | Terminer un niveau de recherche | 40 × niveau |
-| Combat gagné, en attaque ou en défense | 5 pour 1 000 points militaires détruits |
+| Combat gagné, en attaque ou en défense | 5 pour 1 000 ressources de valeur militaire détruites définitivement |
 | Rapport d'espionnage | 10 |
 | Recyclage | 2 pour 1 000 ressources |
 
 Plafond sur 7 jours glissants : **800 par membre** et **15 000 par alliance**, missions non comprises. Rien ne compte avant que la station soit bâtie, ni pendant la période d'intégration du membre.
+
+Pour un combat, seul le vainqueur gagne de l'expérience, et un match nul ne rapporte rien. La valeur détruite est le coût en ressources des vaisseaux et défenses perdus pour de bon par l'adversaire : les défenses remises en état après le combat et les vaisseaux repris par la [Station de réparation](/fr/economy/repair-station) ne comptent pas. Chaque tranche complète de 1 000 ressources rapporte 5 points, le reste est perdu.
+
+**Exemple** : vous gagnez un combat en abattant 100 Intercepteurs à 4 000 ressources pièce (3 000 de métal et 1 000 de cristal), soit 400 000 ressources. Le combat vaut 400 × 5 = 2 000 points d'expérience, ramenés à 800 par le plafond du membre sur 7 jours glissants (si vous n'avez encore rien apporté cette semaine).
 
 ### Les 14 talents
 
