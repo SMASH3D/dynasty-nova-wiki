@@ -34,7 +34,11 @@ Ne jamais modifier une page directement dans l'éditeur du wiki : la modificatio
 - **Notes de version** : publiées en jeu, page Actualités (`/news`). Les relever dans `DONNEES.md` (§17) et vérifier leur effet sur chaque page concernée ; une annonce qui contredit le wiki devient une question.
 - **Questions à l'équipe** : identifiant `domaine-NN` (`economy-01`, `research-02`, `fleet-09`...), statut ✅ (répondu), ⏳ (en attente), ⚠️ (incohérence). Ne pas réutiliser un identifiant.
 - **Paramètres d'univers** : toute valeur réglable par univers s'accompagne de l'encart prévu (`PLAN.md` §8) avec la valeur par défaut et celle de Redline.
-- **Exemples chiffrés** : refaire le calcul avant d'écrire. Coordonnées réalistes : sur Redline, 9 galaxies, systèmes 1 à 99, positions 1 à 15 (espace lointain = 16) ; la carte n'est pas circulaire. Vérifier chaque `[g:s:p]`.
+- **Exemples chiffrés** : refaire le calcul avant d'écrire. Coordonnées réalistes : sur Redline, 9 galaxies, systèmes 1 à 99, positions 1 à 15 (espace lointain = 16) ; la carte boucle sur les galaxies et les systèmes (de la galaxie 9 à la galaxie 1, l'écart est de 1), pas sur les positions. Vérifier chaque `[g:s:p]`.
+- **Ce qui se publie, ce qui reste caché** (décision du responsable, 21 octobre 2026, `fleet-12`) :
+  - **À publier** : les probabilités et les règles de tout ce qui est tiré au hasard (résultats d'expédition, tailles de trouvaille, ressource trouvée, épuisement, force des pirates et des aliens, chances de combat, de destruction de lune, de réparation, de détection…). Le résultat d'un tirage est imprévisible, ses chances ne sont pas un secret : les joueurs en ont besoin pour décider.
+  - **À ne pas publier** : les mécanismes anti-triche et de détection, les outils et réglages d'administration, les secrets et endpoints internes, les fonctionnalités non sorties ou masquées, et ce que le jeu cache volontairement à un joueur sur un autre (positions non espionnées, contenu d'un rapport qu'il n'a pas obtenu).
+  - En cas de doute, poser la question dans `PLAN.md` §7 plutôt que de retirer une information déjà publiée.
 - **Noms** : reprendre les noms affichés par le jeu, même incohérents. En anglais, les noms de vaisseaux sont des traductions provisoires (`PLAN.md` §8).
 
 ## 5. Ligne éditoriale
