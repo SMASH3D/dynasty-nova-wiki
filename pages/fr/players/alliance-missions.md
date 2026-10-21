@@ -48,13 +48,13 @@ updated: "2026-10-15T18:54:40.424Z"
 
 ### Missions
 13. **Tirage** : chaque jour (de minuit à minuit, heure de Paris) et chaque semaine (du lundi minuit au lundi suivant), l'alliance reçoit des propositions, **au plus une par famille** : 3 quotidiennes et 5 hebdomadaires. Une mission jouée ne revient pas avant 3 jours (quotidienne) ou 14 jours (hebdomadaire).
-14. **Choix** : le Coordinateur, ou tout membre qui a le droit « Gérer les missions », en retient une et choisit sa difficulté parmi celles que le palier ouvre. **Une seule mission par famille** peut courir à la fois, et une mission choisie ne s'abandonne pas. Une quotidienne se choisit jusqu'à la fin de sa journée ; une hebdomadaire **jusqu'au jeudi minuit** seulement, jamais dans les 3 derniers jours de sa semaine, pour lui laisser au moins 4 jours de jeu.
+14. **Choix** : le Coordinateur, ou tout membre qui a le droit « Gérer les missions », en retient une et choisit sa difficulté parmi celles que le palier ouvre. **Une seule mission par famille et par cadence** peut courir à la fois : une quotidienne et une hebdomadaire de la même famille peuvent courir ensemble, et une mission choisie ne s'abandonne pas. Une quotidienne se choisit jusqu'à la fin de sa journée ; une hebdomadaire **jusqu'au jeudi minuit** seulement, jamais dans les 3 derniers jours de sa semaine, pour lui laisser au moins 4 jours de jeu.
 15. **Remplacer une proposition** avant le choix coûte des ressources de la trésorerie : 200 000 pour une quotidienne, 1 000 000 pour une hebdomadaire, puis le double à chaque fois, **3 remplacements au plus** par cycle.
 16. **Mise Épique** : une mission Épique demande une mise, avancée par la trésorerie au moment du choix, rendue si la mission réussit et perdue sinon. Son montant s'affiche avant de choisir.
 17. **Inscription** : les membres s'inscrivent pendant le **premier quart du cycle** après le choix. Seuls les inscrits comptent et se partagent la récompense ; leurs actions comptent dès leur inscription. À la fin des inscriptions, l'objectif est fixé sur la production des inscrits. Avant, la progression se compte déjà contre l'objectif estimé sur les inscrits du moment, plafonds compris.
 18. Un membre en période d'intégration, ou **écarté des missions** par la direction, ne peut pas s'inscrire et ne compte pas.
 19. **Taille de l'objectif** : une mission comptée en ressources demande une part de ce que produisent les inscrits entre son choix et la fin du cycle. Une mission comptée en nombre (Expéditions, Cartographie, Expansion, Victoire nette) demande tant par inscrit pour un cycle entier, **au prorata du cycle qui reste** quand elle est choisie, mais jamais moins que l'équivalent de **12 heures**. Une difficulté Avancée demande ×1,8 et une Épique ×3,2.
-20. **Plafond par jour** : une quotidienne n'en a pas. Une hebdomadaire compte au plus, par tranche de 24 heures depuis son choix, une part de son objectif : **200 % divisé par le nombre de jours qui lui restent** au moment du choix (arrondi au supérieur), et jamais moins de 25 %. Ainsi 200 % reste atteignable, quel que soit le jour du lancement.
+20. **Plafond par jour** : une quotidienne n'en a pas. Une hebdomadaire compte au plus, par tranche de 24 heures depuis son choix, une part de son objectif : **200 % divisé par le nombre de jours qui lui restent** au moment du choix (arrondi au supérieur), et jamais moins de 25 %. Ce plafond est **cumulatif** : pendant son n-ième jour, la mission compte au plus n fois ce plafond en tout, et ce qu'un jour n'a pas compté reste disponible les jours suivants. Ainsi 200 % reste atteignable, quel que soit le jour du lancement.
 21. **Plafond par membre** : ce qu'un même membre apporte compte au plus pour **2,5 parts moyennes** de l'objectif (l'objectif divisé par le nombre d'inscrits).
 22. **Clôture** : la mission reste ouverte jusqu'à la fin du cycle. Elle est **réussie à 100 %** de son objectif, et paie **25 % de plus à 150 %**, **50 % de plus à 200 %**. En dessous de 100 %, elle échoue et ne rapporte rien.
 23. **Missions de participation** (Ravitaillement, Touche-à-tout) : chaque inscrit compte une fois, quand il a franchi sa propre barre. Leurs paliers se lisent entre l'objectif et l'ensemble des inscrits : ×1 à l'objectif, **×1,25 à mi-chemin** entre l'objectif et tous les inscrits, **×1,5 quand tous les inscrits** ont fait leur part.
@@ -99,6 +99,8 @@ Les exemples suivants prennent un inscrit qui produit **10 000 ressources par he
 
 Lancée le jeudi à 20 h, il lui reste 3 jours et 4 heures, compté 4 jours : 50 % par 24 heures.
 
+**Le plafond cumulatif** : une hebdomadaire lancée le lundi avec un objectif de 1 000 000 compte au plus 290 000 par jour (29 %). Rien le 1er jour ; 700 000 le 2e jour, dont **580 000** comptés (deux plafonds) ; 200 000 le 3e jour, tous comptés puisqu'il reste 870 000 − 580 000 = 290 000 de marge : **780 000** au total.
+
 **Une quotidienne en nombre lancée en cours de journée**, pour un objectif de 20 sur une journée entière :
 
 | Choisie à | Heures restantes | Objectif |
@@ -137,20 +139,20 @@ Multipliées par le bonus de dépassement (×1,25 ou ×1,5) et par la part d'eff
 | Famille | Mission | Quotidienne | Hebdomadaire | Ce qui compte |
 |---|---|---|---|---|
 | Raid | Pillage | oui | oui | Ressources ramenées d'un raid gagné |
-| Raid | Casse | oui | oui | Valeur des vaisseaux et défenses adverses détruits dans un combat gagné, en attaque comme en défense ; un match nul ne compte pas |
+| Raid | Casse | oui | oui | Valeur des vaisseaux et défenses adverses détruits pendant un combat gagné, réparations du défenseur comprises (la valeur du rapport), en attaque comme en défense ; un match nul ne compte pas |
 | Raid | Pluie de missiles | oui | oui | Valeur des défenses détruites pour de bon par vos missiles, réparations déduites |
 | Exploration | Expéditions | oui | oui | Chaque expédition revenue avec une trouvaille |
 | Exploration | Cartographie | non | oui | Systèmes espionnés dans la galaxie désignée, où l'alliance n'a aucune planète ; un système compte une fois par inscrit |
-| Territoire | Expansion | oui | oui | Chaque colonie fondée, ruines comprises |
+| Territoire | Expansion | non | oui | Chaque colonie fondée, ruines et planètes abandonnées reprises comprises ; pas une planète laissée par un allié ou par un membre parti depuis moins de 7 jours |
 | Territoire | Recyclage | oui | oui | Ressources récoltées sur des champs de débris |
 | Coordination | Entraide | oui | oui | Ressources transportées à la planète d'un autre membre, même par qui a lui-même reçu ; pas d'aller-retour ; ce qu'un même membre reçoit ne compte que jusqu'au quart de sa production sur la mission, tous envoyeurs confondus |
 | Coordination | Ravitaillement | oui | non | Inscrits qui ont livré par convoi 6 heures de leur production, moins l'aide reçue ; pas de difficulté Épique |
 | Coordination | Parrainage | non | oui | Recrue arrivée pendant le cycle, à 300 points et toujours là à la fin ; proposée seulement s'il reste une place, en Standard |
-| Défi | Victoire nette | oui | oui | Raid gagné sans perte qui détruit au moins 50 000 ressources, ou face à un défenseur valant au moins le quart de votre flotte |
+| Défi | Victoire nette | oui | oui | Raid gagné sans perte qui détruit au moins 50 000 ressources (réparations du défenseur comprises), ou face à un défenseur valant au moins le quart de votre flotte |
 | Défi | Rien ne se perd | oui | oui | Débris des combats des inscrits recyclés ; il faut aussi en recycler au moins 60 % |
 | Défi | Touche-à-tout | non | oui | Inscrits qui ont agi dans au moins 4 des 5 familles |
 
-Contre un bot ou un joueur inactif depuis une semaine, les raids comptent à moitié ; contre un membre, un allié ou un joueur parti de l'alliance depuis moins de 7 jours, jamais. Frapper ou piller la même cible rapporte de moins en moins, puis plus rien.
+Contre un bot ou un joueur inactif depuis une semaine, les raids comptent à moitié ; contre un membre, un allié ou un joueur parti de l'alliance depuis moins de 7 jours, jamais. Dans une même mission, un inscrit qui frappe ou pille plusieurs fois le même joueur (Pillage, Casse, Pluie de missiles, Victoire nette) compte 100 % la 1re fois, 50 % la 2e, 25 % la 3e, et plus rien à partir de la 4e.
 
 ### Expérience d'une mission réussie
 
@@ -199,7 +201,7 @@ Plafond sur 7 jours glissants : **800 par membre** et **15 000 par alliance**, m
 - **Pas de convoi sous la menace** : quand une attaque est annoncée sur une planète, elle ne peut plus envoyer de convoi.
 - **Lancez l'hebdomadaire tôt** : elle se choisit jusqu'au jeudi minuit, et plus elle est lancée tard, plus chaque journée doit compter.
 - **Entraide : aidez plusieurs membres** : chacun ne peut faire compter que le quart de sa production, tous envoyeurs confondus ; la jauge de la mission dit qui peut encore recevoir.
-- **Changez de cible** : piller ou frapper toujours le même joueur rapporte de moins en moins.
+- **Changez de cible** : dans une même mission, le même joueur rapporte 100 %, 50 %, 25 %, puis plus rien à partir de la 4e frappe ou du 4e pillage.
 - **Réclamez votre part** : sinon elle n'arrive qu'au bout de 7 jours, sur la planète mère.
 - **Les Doctrines coûtent 2 points** : prévoyez-les dans votre plan de talents.
 
