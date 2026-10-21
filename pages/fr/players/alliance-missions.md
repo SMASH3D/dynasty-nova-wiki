@@ -47,13 +47,13 @@ updated: "2026-10-15T18:54:40.424Z"
 {.is-info}
 
 ### Missions
-13. **Tirage** : chaque jour (de minuit à minuit, heure de Paris) et chaque semaine (du lundi minuit au lundi suivant), l'alliance reçoit des propositions, **au plus une par famille** : 3 quotidiennes et 5 hebdomadaires. Une mission jouée ne revient pas avant 3 jours (quotidienne) ou 14 jours (hebdomadaire).
-14. **Choix** : le Coordinateur, ou tout membre qui a le droit « Gérer les missions », en retient une et choisit sa difficulté parmi celles que le palier ouvre. **Une seule mission par famille et par cadence** peut courir à la fois : une quotidienne et une hebdomadaire de la même famille peuvent courir ensemble, et une mission choisie ne s'abandonne pas. Une quotidienne se choisit jusqu'à la fin de sa journée ; une hebdomadaire **jusqu'au jeudi minuit** seulement, jamais dans les 3 derniers jours de sa semaine, pour lui laisser au moins 4 jours de jeu.
-15. **Remplacer une proposition** avant le choix coûte des ressources de la trésorerie : 200 000 pour une quotidienne, 1 000 000 pour une hebdomadaire, puis le double à chaque fois, **3 remplacements au plus** par cycle.
+13. **Tirage** : chaque jour et chaque semaine (du lundi au lundi suivant), à partir de l'**heure de départ** de l'alliance (minuit, heure de Paris, par défaut), l'alliance reçoit des propositions, **au plus une par famille** : 3 quotidiennes et 5 hebdomadaires. Une mission jouée ne revient pas avant 3 jours (quotidienne) ou 14 jours (hebdomadaire). Chaque alliance choisit l'heure de départ de son jour de missions (heure de Paris) ; la semaine commence le lundi à cette heure. Elle se change avec le droit « Gérer les missions », seulement quand aucune mission de l'alliance ne court.
+14. **Choix** : le Coordinateur, ou tout membre qui a le droit « Gérer les missions », en retient une et choisit sa difficulté parmi celles que le palier ouvre. **Une seule mission par famille et par cadence** peut courir à la fois : une quotidienne et une hebdomadaire de la même famille peuvent courir ensemble, et une mission choisie ne s'abandonne pas. Une quotidienne se choisit jusqu'à la fin de sa journée ; une hebdomadaire **jusqu'au jeudi minuit** seulement (à l'heure de départ de l'alliance si elle en a choisi une autre), jamais dans les 3 derniers jours de sa semaine, pour lui laisser au moins 4 jours de jeu.
+15. **Remplacer une proposition** avant le choix coûte des ressources de la trésorerie : **20 heures** de la production médiane de l'univers pour une quotidienne, **100 heures** pour une hebdomadaire (60 % de métal, 30 % de cristal, 10 % d'hydrogène), puis le double à chaque fois, le prix s'affichant avant de payer, **3 remplacements au plus** par cycle.
 16. **Mise Épique** : une mission Épique demande une mise, avancée par la trésorerie au moment du choix, rendue si la mission réussit et perdue sinon. Son montant s'affiche avant de choisir.
-17. **Inscription** : les membres s'inscrivent pendant le **premier quart du cycle** après le choix. Seuls les inscrits comptent et se partagent la récompense ; leurs actions comptent dès leur inscription. À la fin des inscriptions, l'objectif est fixé sur la production des inscrits. Avant, la progression se compte déjà contre l'objectif estimé sur les inscrits du moment, plafonds compris.
+17. **Inscription** : les membres s'inscrivent pendant le **premier quart du cycle** après le choix. Seuls les inscrits comptent et se partagent la récompense ; leurs actions comptent dès leur inscription. À la fin des inscriptions, l'objectif est fixé sur la production des inscrits. Avant, la progression se compte déjà contre l'objectif estimé sur les inscrits du moment, plafonds compris. Un membre qui active **« Toujours m'inscrire »** est inscrit tout de suite aux missions encore ouvertes aux inscriptions, puis à chaque mission que l'alliance choisit, aux mêmes conditions qu'à la main ; s'il le coupe, ses inscriptions restent.
 18. Un membre en période d'intégration, ou **écarté des missions** par la direction, ne peut pas s'inscrire et ne compte pas.
-19. **Taille de l'objectif** : une mission comptée en ressources demande une part de ce que produisent les inscrits entre son choix et la fin du cycle. Une mission comptée en nombre (Expéditions, Cartographie, Expansion, Victoire nette) demande tant par inscrit pour un cycle entier, **au prorata du cycle qui reste** quand elle est choisie, mais jamais moins que l'équivalent de **12 heures**. Une difficulté Avancée demande ×1,8 et une Épique ×3,2.
+19. **Taille de l'objectif** : une mission comptée en ressources demande une part de ce que produisent les inscrits entre son choix et la fin du cycle. Une mission comptée en nombre (Expéditions, Cartographie, Expansion, Victoire nette) demande tant par inscrit pour un cycle entier, **au prorata du cycle qui reste** quand elle est choisie, mais jamais moins que l'équivalent de **12 heures**. Une difficulté Avancée demande ×1,8 et une Épique ×3,2. Une mission en ressources ou en nombre se mesure toujours sur **au moins la moitié des membres actifs** de l'alliance (sortis de leur période d'intégration, joueurs humains, vus dans la semaine), chacun compté à la production moyenne des inscrits : inscrire seulement les plus sûrs ne la rend pas plus facile. Les missions de participation ne sont pas concernées.
 20. **Plafond par jour** : une quotidienne n'en a pas. Une hebdomadaire compte au plus, par tranche de 24 heures depuis son choix, une part de son objectif : **200 % divisé par le nombre de jours qui lui restent** au moment du choix (arrondi au supérieur), et jamais moins de 25 %. Ce plafond est **cumulatif** : pendant son n-ième jour, la mission compte au plus n fois ce plafond en tout, et ce qu'un jour n'a pas compté reste disponible les jours suivants. Ainsi 200 % reste atteignable, quel que soit le jour du lancement.
 21. **Plafond par membre** : ce qu'un même membre apporte compte au plus pour **2,5 parts moyennes** de l'objectif (l'objectif divisé par le nombre d'inscrits).
 22. **Clôture** : la mission reste ouverte jusqu'à la fin du cycle. Elle est **réussie à 100 %** de son objectif, et paie **25 % de plus à 150 %**, **50 % de plus à 200 %**. En dessous de 100 %, elle échoue et ne rapporte rien.
@@ -63,7 +63,7 @@ updated: "2026-10-15T18:54:40.424Z"
 ### Récompenses
 25. Chaque inscrit a un **taux horaire** : 40 % de la production médiane de l'univers plus 60 % de sa propre production (métal, cristal et hydrogène additionnés).
 26. Sa **base** vaut **4 heures** de ce taux pour une quotidienne, **16 heures** pour une hebdomadaire, ×1,5 en Avancée, ×2 en Épique, puis × le bonus de dépassement (règles 22 et 23).
-27. La récompense se partage selon **l'effort** de chacun, c'est-à-dire ce qu'il a fait rapporté à sa propre production : un petit joueur qui donne tout compte autant qu'un gros. Si tout le monde fournit le même effort, chacun touche sa base. Sous 30 % de l'effort moyen, on ne touche rien ; personne ne touche plus de 2,5 parts moyennes.
+27. La récompense se partage selon **l'effort** de chacun, c'est-à-dire ce qu'il a fait rapporté à sa propre production : un petit joueur qui donne tout compte autant qu'un gros. Si tout le monde fournit le même effort, chacun touche sa base. Il n'y a pas de seuil : tout inscrit qui a agi touche une part à la mesure de son effort, et qui n'a rien fait ne touche rien. Personne ne touche plus de 2,5 parts moyennes.
 28. Sur 7 jours glissants, un membre ne touche pas plus de **72 heures** de son taux, ni plus de **40 % de son revenu de la semaine** (sa propre production sur 168 heures).
 29. La part se **réclame** : choisissez la planète, elle part de la Station stellaire et arrive **30 minutes** plus tard, en 60 % de métal, 30 % de cristal et 10 % d'hydrogène. Non réclamée en 7 jours, elle arrive sur votre planète mère.
 30. Une **hebdomadaire réussie** rapporte aussi des **Points stellaires** : 1 sous l'effort moyen, 2 à l'effort moyen ou au-dessus, ×1,5 en Avancée et ×2 en Épique, arrondi au supérieur, **8 au plus par compte sur 7 jours glissants**.
@@ -87,7 +87,7 @@ Les exemples suivants prennent un inscrit qui produit **10 000 ressources par he
 - Plafond sur 7 jours : 72 × 8 400 = 604 800, ou 40 % × 10 000 × 168 = 672 000 ; le plus petit, **604 800**, n'est pas atteint.
 - Points stellaires : 2 (effort moyen) × 1,5 (Avancée) = **3**.
 
-**Le rythme d'une hebdomadaire selon son jour de lancement** (choisie à minuit, heure de Paris)
+**Le rythme d'une hebdomadaire selon son jour de lancement** (heure de départ par défaut, choisie à minuit, heure de Paris)
 
 | Lancée le | Jours restants | Compté au plus par 24 h |
 |---|---|---|
@@ -101,7 +101,7 @@ Lancée le jeudi à 20 h, il lui reste 3 jours et 4 heures, compté 4 jours : 50
 
 **Le plafond cumulatif** : une hebdomadaire lancée le lundi avec un objectif de 1 000 000 compte au plus 290 000 par jour (29 %). Rien le 1er jour ; 700 000 le 2e jour, dont **580 000** comptés (deux plafonds) ; 200 000 le 3e jour, tous comptés puisqu'il reste 870 000 − 580 000 = 290 000 de marge : **780 000** au total.
 
-**Une quotidienne en nombre lancée en cours de journée**, pour un objectif de 20 sur une journée entière :
+**Une quotidienne en nombre lancée en cours de journée**, pour un objectif de 20 sur une journée entière (heure de départ par défaut, minuit) :
 
 | Choisie à | Heures restantes | Objectif |
 |---|---|---|
@@ -114,6 +114,12 @@ Lancée le jeudi à 20 h, il lui reste 3 jours et 4 heures, compté 4 jours : 50
 - ×1 à 10 inscrits qui ont fait leur part, ×1,25 à 13 (à mi-chemin entre 10 et 16), ×1,5 à **16**, tous les inscrits.
 
 **Entraide** : sur une quotidienne choisie à minuit, un membre qui produit 10 000 par heure peut recevoir et faire compter 25 % × 10 000 × 24 = **60 000** ressources, tous envoyeurs confondus. Si un premier inscrit lui a déjà envoyé 40 000, un second ne fait plus compter que **20 000**, même s'il en envoie davantage.
+
+**Remplacer des propositions** dans un univers dont la production médiane est de 6 000 par heure :
+- 1er remplacement d'une quotidienne : 20 × 6 000 = **120 000** (72 000 métal, 36 000 cristal, 12 000 hydrogène) ; 2e : 240 000 ; 3e : 480 000.
+- 1er remplacement d'une hebdomadaire : 100 × 6 000 = **600 000**.
+
+**Une alliance de 20 membres actifs dont 4 s'inscrivent**, à 10 000 par heure en moyenne : la mission se mesure sur 20 × 50 % = **10 membres**, soit 10 × 10 000 = **100 000 par heure** de production, et non sur les 40 000 des 4 inscrits.
 
 **Aide de la trésorerie avec Réseau d'assistance niveau 2**
 - Un membre peut recevoir 50 000 + 2 × 50 000 = **150 000** sur 24 heures.
@@ -142,7 +148,7 @@ Multipliées par le bonus de dépassement (×1,25 ou ×1,5) et par la part d'eff
 | Raid | Casse | oui | oui | Valeur des vaisseaux et défenses adverses détruits pendant un combat gagné, réparations du défenseur comprises (la valeur du rapport), en attaque comme en défense ; un match nul ne compte pas |
 | Raid | Pluie de missiles | oui | oui | Valeur des défenses détruites pour de bon par vos missiles, réparations déduites |
 | Exploration | Expéditions | oui | oui | Chaque expédition revenue avec une trouvaille |
-| Exploration | Cartographie | non | oui | Systèmes espionnés dans la galaxie désignée, où l'alliance n'a aucune planète ; un système compte une fois par inscrit |
+| Exploration | Cartographie | non | oui | Systèmes espionnés dans la galaxie désignée, où l'alliance n'a aucune planète ; un système compte une fois par inscrit. Objectif sur une semaine entière : 13,3 systèmes par inscrit en Standard, 24 en Avancée, 43 en Épique, jamais plus que les systèmes habités de la galaxie |
 | Territoire | Expansion | non | oui | Chaque colonie fondée, ruines et planètes abandonnées reprises comprises ; pas une planète laissée par un allié ou par un membre parti depuis moins de 7 jours |
 | Territoire | Recyclage | oui | oui | Ressources récoltées sur des champs de débris |
 | Coordination | Entraide | oui | oui | Ressources transportées à la planète d'un autre membre, même par qui a lui-même reçu ; pas d'aller-retour ; ce qu'un même membre reçoit ne compte que jusqu'au quart de sa production sur la mission, tous envoyeurs confondus |
@@ -196,7 +202,7 @@ Plafond sur 7 jours glissants : **800 par membre** et **15 000 par alliance**, m
 
 ## Pièges fréquents
 
-- **Inscrivez-vous à temps** : passé le premier quart du cycle, les inscriptions sont closes et vos actions ne comptent plus pour la mission.
+- **Inscrivez-vous à temps** : passé le premier quart du cycle, les inscriptions sont closes et vos actions ne comptent plus pour la mission. « Toujours m'inscrire » vous évite de le manquer.
 - **Une bourse pleine refuse les dons** : un convoi qui arrive sur une trésorerie pleine rentre chargé, et ne compte pas pour Ravitaillement. Dépensez d'abord.
 - **Pas de convoi sous la menace** : quand une attaque est annoncée sur une planète, elle ne peut plus envoyer de convoi.
 - **Lancez l'hebdomadaire tôt** : elle se choisit jusqu'au jeudi minuit, et plus elle est lancée tard, plus chaque journée doit compter.

@@ -47,13 +47,13 @@ updated: "2026-10-15T18:53:16.385Z"
 {.is-info}
 
 ### Missions
-13. **Draw**: every day (midnight to midnight, Paris time) and every week (Monday midnight to the next Monday), the alliance gets proposals, **at most one per family**: 3 daily and 5 weekly. A mission once played does not come back for 3 days (daily) or 14 days (weekly).
-14. **Choice**: the Coordinator, or any member with the "Manage missions" right, picks one and its difficulty among those the tier opens. **Only one mission per family and per cadence** can run at a time: a daily and a weekly of the same family can run together, and a chosen mission cannot be dropped. A daily can be chosen until the end of its day; a weekly **until Thursday midnight** only, never in the last 3 days of its week, so that it gets at least 4 days of play.
-15. **Replacing a proposal** before the choice costs treasury resources: 200,000 for a daily, 1,000,000 for a weekly, then twice as much each time, **3 replacements at most** per cycle.
+13. **Draw**: every day and every week (Monday to the next Monday), from the alliance's **start hour** (midnight, Paris time, by default), the alliance gets proposals, **at most one per family**: 3 daily and 5 weekly. A mission once played does not come back for 3 days (daily) or 14 days (weekly). Each alliance picks the start hour of its mission day (Paris time); the week starts on Monday at that hour. It is changed with the "Manage missions" right, only while none of the alliance's missions is running.
+14. **Choice**: the Coordinator, or any member with the "Manage missions" right, picks one and its difficulty among those the tier opens. **Only one mission per family and per cadence** can run at a time: a daily and a weekly of the same family can run together, and a chosen mission cannot be dropped. A daily can be chosen until the end of its day; a weekly **until Thursday midnight** only (at the alliance's start hour if it picked another one), never in the last 3 days of its week, so that it gets at least 4 days of play.
+15. **Replacing a proposal** before the choice costs treasury resources: **20 hours** of the universe's median production for a daily, **100 hours** for a weekly (60% metal, 30% crystal, 10% hydrogen), then twice as much each time, the price being shown before you pay, **3 replacements at most** per cycle.
 16. **Epic stake**: an Epic mission takes a stake, advanced by the treasury when it is chosen, returned if the mission succeeds and lost otherwise. Its amount is shown before you choose.
-17. **Enrollment**: members enroll during the **first quarter of the cycle** after the choice. Only enrolled members count and share the reward; their actions count from the moment they enroll. When enrollment closes, the target is set on the enrolled members' production. Before that, progress already counts against the target estimated on the members enrolled so far, caps included.
+17. **Enrollment**: members enroll during the **first quarter of the cycle** after the choice. Only enrolled members count and share the reward; their actions count from the moment they enroll. When enrollment closes, the target is set on the enrolled members' production. Before that, progress already counts against the target estimated on the members enrolled so far, caps included. A member who switches on **"Always enroll me"** is enrolled at once in the missions still open for enrollment, then in every mission the alliance picks, on the same conditions as by hand; switched off, their enrollments stay.
 18. A member in their settling-in period, or **barred from missions** by the leadership, cannot enroll and does not count.
-19. **Size of the objective**: a mission counted in resources asks for a share of what the enrolled members produce between its choice and the end of the cycle. A mission counted in numbers (Expeditions, Mapping, Expansion, Clean victory) asks for so many per enrolled member over a whole cycle, **in proportion to the share of the cycle left** when it is chosen, but never less than the equivalent of **12 hours**. Advanced difficulty asks ×1.8 and Epic ×3.2.
+19. **Size of the objective**: a mission counted in resources asks for a share of what the enrolled members produce between its choice and the end of the cycle. A mission counted in numbers (Expeditions, Mapping, Expansion, Clean victory) asks for so many per enrolled member over a whole cycle, **in proportion to the share of the cycle left** when it is chosen, but never less than the equivalent of **12 hours**. Advanced difficulty asks ×1.8 and Epic ×3.2. A mission counted in resources or in numbers is always sized on **at least half of the alliance's active members** (past their settling-in period, human players, seen within the week), each counted at the enrolled members' average production: enrolling only the safest players does not make it easier. Participation missions are not concerned.
 20. **Daily cap**: a daily mission has none. A weekly counts at most, per 24 hours from its choice, a share of its objective: **200% divided by the number of days it has left** when chosen (rounded up), and never less than 25%. This cap is **cumulative**: during its n-th day, the mission counts at most n times that cap in total, and what a day did not count stays available on the following days. So 200% stays within reach, whatever the day it starts.
 21. **Member cap**: what one member brings counts for at most **2.5 average shares** of the objective (the objective divided by the number of enrolled members).
 22. **Close**: the mission stays open until the end of the cycle. It **succeeds at 100%** of its objective, and pays **25% more at 150%**, **50% more at 200%**. Below 100%, it fails and pays nothing.
@@ -63,7 +63,7 @@ updated: "2026-10-15T18:53:16.385Z"
 ### Rewards
 25. Each enrolled member has an **hourly rate**: 40% of the universe's median production plus 60% of their own production (metal, crystal and hydrogen added up).
 26. Their **base** is **4 hours** of that rate for a daily, **16 hours** for a weekly, ×1.5 at Advanced, ×2 at Epic, then × the overachievement bonus (rules 22 and 23).
-27. The reward is shared by each member's **effort**, that is what they did relative to their own production: a small player who gives everything counts as much as a big one. If everybody gives the same effort, everybody gets their base. Under 30% of the average effort, you get nothing; nobody gets more than 2.5 average shares.
+27. The reward is shared by each member's **effort**, that is what they did relative to their own production: a small player who gives everything counts as much as a big one. If everybody gives the same effort, everybody gets their base. There is no threshold: every enrolled member who acted gets a share in line with their effort, and doing nothing pays nothing. Nobody gets more than 2.5 average shares.
 28. Over a rolling 7 days, a member gets no more than **72 hours** of their rate, nor more than **40% of their weekly income** (their own production over 168 hours).
 29. The share is **claimed**: pick the planet, it leaves the Stellar Station and arrives **30 minutes** later, as 60% metal, 30% crystal and 10% hydrogen. Unclaimed after 7 days, it arrives on your home planet.
 30. A **successful weekly** also pays **Stellar Points**: 1 below the average effort, 2 at or above it, ×1.5 at Advanced and ×2 at Epic, rounded up, **8 at most per account over a rolling 7 days**.
@@ -87,7 +87,7 @@ The following examples take an enrolled member producing **10,000 resources per 
 - 7-day cap: 72 × 8,400 = 604,800, or 40% × 10,000 × 168 = 672,000; the smaller, **604,800**, is not reached.
 - Stellar Points: 2 (average effort) × 1.5 (Advanced) = **3**.
 
-**The pace of a weekly by the day it starts** (chosen at midnight, Paris time)
+**The pace of a weekly by the day it starts** (default start hour, chosen at midnight, Paris time)
 
 | Started on | Days left | Counted at most per 24 h |
 |---|---|---|
@@ -101,7 +101,7 @@ Started on Thursday at 8 p.m., it has 3 days and 4 hours left, counted as 4 days
 
 **The cumulative cap**: a weekly started on Monday with an objective of 1,000,000 counts at most 290,000 per day (29%). Nothing on day 1; 700,000 on day 2, of which **580,000** count (two caps); 200,000 on day 3, all counted since 870,000 − 580,000 = 290,000 of room is left: **780,000** in total.
 
-**A daily counted in numbers started partway through the day**, for an objective of 20 over a whole day:
+**A daily counted in numbers started partway through the day**, for an objective of 20 over a whole day (default start hour, midnight):
 
 | Chosen at | Hours left | Objective |
 |---|---|---|
@@ -114,6 +114,12 @@ Started on Thursday at 8 p.m., it has 3 days and 4 hours left, counted as 4 days
 - ×1 at 10 members who did their part, ×1.25 at 13 (halfway between 10 and 16), ×1.5 at **16**, every enrolled member.
 
 **Mutual aid**: on a daily chosen at midnight, a member producing 10,000 per hour can receive and count 25% × 10,000 × 24 = **60,000** resources, all senders together. If a first enrolled member already sent them 40,000, a second one only counts **20,000**, even if they send more.
+
+**Replacing proposals** in a universe whose median production is 6,000 per hour:
+- 1st replacement of a daily: 20 × 6,000 = **120,000** (72,000 metal, 36,000 crystal, 12,000 hydrogen); 2nd: 240,000; 3rd: 480,000.
+- 1st replacement of a weekly: 100 × 6,000 = **600,000**.
+
+**An alliance of 20 active members of whom 4 enroll**, at 10,000 per hour on average: the mission is sized on 20 × 50% = **10 members**, so 10 × 10,000 = **100,000 per hour** of production, not on the 4 enrolled members' 40,000.
 
 **Treasury aid with Assistance network level 2**
 - A member can receive 50,000 + 2 × 50,000 = **150,000** over 24 hours.
@@ -142,7 +148,7 @@ Multiplied by the overachievement bonus (×1.25 or ×1.5) and by each member's e
 | Raid | Wreckage | yes | yes | Value of enemy ships and defences destroyed during a battle won, the defender's repairs included (the report's value), attacking or defending; a draw does not count |
 | Raid | Missile rain | yes | yes | Value of defences destroyed for good by your missiles, repairs taken off |
 | Exploration | Expeditions | yes | yes | Each expedition that comes back with a find |
-| Exploration | Mapping | no | yes | Systems spied in the named galaxy, where the alliance owns no planet; a system counts once per enrolled member |
+| Exploration | Mapping | no | yes | Systems spied in the named galaxy, where the alliance owns no planet; a system counts once per enrolled member. Objective over a whole week: 13.3 systems per enrolled member at Standard, 24 at Advanced, 43 at Epic, never more than the galaxy's inhabited systems |
 | Territory | Expansion | no | yes | Each colony founded, ruins and abandoned planets taken over included; not a planet left by an ally or by a member who left less than 7 days ago |
 | Territory | Recycling | yes | yes | Resources harvested from debris fields |
 | Coordination | Mutual aid | yes | yes | Resources carried to another member's planet, even by a member who received some; no back and forth; what one member receives only counts up to a quarter of their production over the mission, all senders together |
@@ -196,7 +202,7 @@ Cap over a rolling 7 days: **800 per member** and **15,000 per alliance**, missi
 
 ## Common pitfalls
 
-- **Enroll in time**: after the first quarter of the cycle, enrollment is closed and your actions no longer count for the mission.
+- **Enroll in time**: after the first quarter of the cycle, enrollment is closed and your actions no longer count for the mission. "Always enroll me" keeps you from missing it.
 - **A full purse refuses donations**: a convoy reaching a full treasury comes home loaded, and does not count for Resupply. Spend first.
 - **No convoy under threat**: once an attack is announced on a planet, it can no longer send a convoy.
 - **Start the weekly early**: it can be chosen until Thursday midnight, and the later it starts, the more each day has to count.
