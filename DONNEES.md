@@ -1351,3 +1351,16 @@ Source : `astro-nova-backend` `main` (`7b255c83`), contexte `src/Bank/` (Backend
 - Non publiés : profondeur initiale des réserves (un tiers de la dépense quotidienne de l'univers, plancher 3 000 000), commandes d'administration (`app:bank:seed`), contrôles de cohérence et rattrapages, idempotence.
 - Exemple du wiki recalculé par script (réserves hypothétiques : métal 1 000 000 face à 1 000 Crédits, cristal 666 666 face à 1 000).
 
+## 21. Suppression de compte (code du jeu, relevé le 16 octobre 2026)
+
+Source : `astro-nova-backend` branche `feat/account-deletion` (`9465c47b`, PR Backend#588) et `Astro-Nova-React` branche `feat/account-deletion` (`982a7da0`, PR Frontend#1303), pas encore fusionnées ; arbitrages dans `ACCOUNT_DELETION_BACKLOG.md` à la racine.
+
+- Délai de 7 jours (`AccountDeletion::GRACE_DAYS`), rappel la veille (`isReminderDueAt`, nouveau jeton qui remplace le premier), nouvelle demande 30 jours après une annulation (`COOLDOWN_DAYS`).
+- Protection : vacances posées dans chaque univers sans les conditions habituelles (`User::raiseDeletionShield`), production réglée d'abord ; un univers déjà en vacances garde ses vacances. Levée après annulation au plus tôt 48 h après la demande (`shieldLiftableFrom`, `VacationMode::MINIMUM_HOURS`). Le bouclier est lu à l'envoi : les flottes déjà en vol arrivent.
+- Alliance : passation à la demande (`Alliance::handOverOnAccountDeletion`), au membre choisi s'il est éligible (`AllianceSuccessionPlanner::isEligible`), sinon meilleur prétendant ou membre le plus ancien ; seul membre : dissolution à J+7 (`ReleaseDeletedMemberHandler`).
+- Exécution (`ExecuteAccountDeletionHandler`) : éviction PU-206 par univers (`EvictPlayerFromUniverse` : flottes perdues, ordres remboursés, planètes abandonnées sous la règle de l'univers), compte de la banque fermé (`CloseBankAccountCommand`), messages privés et réactions effacés, messages publics gardés (`senderDeleted`, « Joueur supprimé » / « Deleted player »), vitrines publiées retirées et nom masqué en adversaire (`ForgetDeletedPlayerShowcases`), compte anonymisé (`User::anonymise`), pseudo réservé 30 jours (`ReservedUsername::RESERVATION_DAYS`).
+- Abonnements : renouvellement coupé à la demande, rétabli à l'annulation (`SetSubscriptionRenewal`) ; pas de remboursement ; univers privé ouvert jusqu'à la fin de la période payée.
+- Libellés FR/EN : `accountDeletion.json` du front, onglet « Compte » / « Account » des Paramètres, bouton « Revenir » / « Come back » du mode vacances.
+- Non publiés : gestion par le support (back-office), conservation de l'empreinte de l'adresse d'un compte sanctionné (fair-play), détails du jeton d'annulation.
+- Exemple recalculé par script (demande le 16/10 à 10:00 : suppression le 23/10 à 10:00, rappel dès le 22/10 à 10:00, annulation le 17/10 à 08:00, protection levée le 18/10 à 10:00, nouvelle demande dès le 16/11 à 08:00).
+
