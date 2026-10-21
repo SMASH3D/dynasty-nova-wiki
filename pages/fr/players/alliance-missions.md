@@ -48,38 +48,72 @@ updated: "2026-10-15T18:54:40.424Z"
 
 ### Missions
 13. **Tirage** : chaque jour (de minuit à minuit, heure de Paris) et chaque semaine (du lundi minuit au lundi suivant), l'alliance reçoit des propositions, **au plus une par famille** : 3 quotidiennes et 5 hebdomadaires. Une mission jouée ne revient pas avant 3 jours (quotidienne) ou 14 jours (hebdomadaire).
-14. **Choix** : le Coordinateur, ou tout membre qui a le droit « Gérer les missions », en retient une et choisit sa difficulté parmi celles que le palier ouvre. **Une seule mission par famille** peut courir à la fois, et une mission choisie ne s'abandonne pas.
+14. **Choix** : le Coordinateur, ou tout membre qui a le droit « Gérer les missions », en retient une et choisit sa difficulté parmi celles que le palier ouvre. **Une seule mission par famille** peut courir à la fois, et une mission choisie ne s'abandonne pas. Une quotidienne se choisit jusqu'à la fin de sa journée ; une hebdomadaire **jusqu'au jeudi minuit** seulement, jamais dans les 3 derniers jours de sa semaine, pour lui laisser au moins 4 jours de jeu.
 15. **Remplacer une proposition** avant le choix coûte des ressources de la trésorerie : 200 000 pour une quotidienne, 1 000 000 pour une hebdomadaire, puis le double à chaque fois, **3 remplacements au plus** par cycle.
 16. **Mise Épique** : une mission Épique demande une mise, avancée par la trésorerie au moment du choix, rendue si la mission réussit et perdue sinon. Son montant s'affiche avant de choisir.
-17. **Inscription** : les membres s'inscrivent pendant le **premier quart du cycle** après le choix. Seuls les inscrits comptent et se partagent la récompense ; leurs actions comptent dès leur inscription. À la fin des inscriptions, l'objectif est fixé sur la production des inscrits.
+17. **Inscription** : les membres s'inscrivent pendant le **premier quart du cycle** après le choix. Seuls les inscrits comptent et se partagent la récompense ; leurs actions comptent dès leur inscription. À la fin des inscriptions, l'objectif est fixé sur la production des inscrits. Avant, la progression se compte déjà contre l'objectif estimé sur les inscrits du moment, plafonds compris.
 18. Un membre en période d'intégration, ou **écarté des missions** par la direction, ne peut pas s'inscrire et ne compte pas.
-19. **Plafonds** : une hebdomadaire compte au plus un quart de son objectif par jour, et la part d'un même membre est plafonnée.
-20. **Clôture** : la mission reste ouverte jusqu'à la fin du cycle. Elle est **réussie à 100 %** de son objectif, et paie **25 % de plus à 150 %**, **50 % de plus à 200 %**. En dessous de 100 %, elle échoue et ne rapporte rien.
+19. **Taille de l'objectif** : une mission comptée en ressources demande une part de ce que produisent les inscrits entre son choix et la fin du cycle. Une mission comptée en nombre (Expéditions, Cartographie, Expansion, Victoire nette) demande tant par inscrit pour un cycle entier, **au prorata du cycle qui reste** quand elle est choisie, mais jamais moins que l'équivalent de **12 heures**. Une difficulté Avancée demande ×1,8 et une Épique ×3,2.
+20. **Plafond par jour** : une quotidienne n'en a pas. Une hebdomadaire compte au plus, par tranche de 24 heures depuis son choix, une part de son objectif : **200 % divisé par le nombre de jours qui lui restent** au moment du choix (arrondi au supérieur), et jamais moins de 25 %. Ainsi 200 % reste atteignable, quel que soit le jour du lancement.
+21. **Plafond par membre** : ce qu'un même membre apporte compte au plus pour **2,5 parts moyennes** de l'objectif (l'objectif divisé par le nombre d'inscrits).
+22. **Clôture** : la mission reste ouverte jusqu'à la fin du cycle. Elle est **réussie à 100 %** de son objectif, et paie **25 % de plus à 150 %**, **50 % de plus à 200 %**. En dessous de 100 %, elle échoue et ne rapporte rien.
+23. **Missions de participation** (Ravitaillement, Touche-à-tout) : chaque inscrit compte une fois, quand il a franchi sa propre barre. Leurs paliers se lisent entre l'objectif et l'ensemble des inscrits : ×1 à l'objectif, **×1,25 à mi-chemin** entre l'objectif et tous les inscrits, **×1,5 quand tous les inscrits** ont fait leur part.
+24. **Entraide** : un transport compte pour l'inscrit qui l'envoie, même s'il a lui-même reçu des ressources. Un envoi vers un membre qui vous a déjà envoyé des ressources pendant la mission ne compte pas (pas d'aller-retour). Ce qu'un même membre reçoit compte au plus pour **25 % de sa production sur la durée de la mission, tous envoyeurs confondus** ; l'écran de la mission affiche ce que chaque membre peut encore recevoir.
 
 ### Récompenses
-21. Chaque inscrit a un **taux horaire** : 40 % de la production médiane de l'univers plus 60 % de sa propre production (métal, cristal et hydrogène additionnés).
-22. Sa **base** vaut 1 heure de ce taux pour une quotidienne, 4 heures pour une hebdomadaire, ×1,5 en Avancée, ×2 en Épique, puis × le bonus de dépassement (règle 20).
-23. La récompense se partage selon **l'effort** de chacun, c'est-à-dire ce qu'il a fait rapporté à sa propre production : un petit joueur qui donne tout compte autant qu'un gros. Si tout le monde fournit le même effort, chacun touche sa base. Sous 30 % de l'effort moyen, on ne touche rien ; personne ne touche plus de 2,5 parts moyennes.
-24. Sur 7 jours glissants, un membre ne touche pas plus de 24 heures de son taux, ni plus du quart de son revenu de la semaine.
-25. La part se **réclame** : choisissez la planète, elle part de la Station stellaire et arrive **30 minutes** plus tard, en 60 % de métal, 30 % de cristal et 10 % d'hydrogène. Non réclamée en 7 jours, elle arrive sur votre planète mère.
-26. Une **hebdomadaire réussie** rapporte aussi des **Points stellaires** : 1 sous l'effort moyen, 2 à l'effort moyen ou au-dessus, ×1,5 en Avancée et ×2 en Épique, arrondi au supérieur, **8 au plus par compte sur 7 jours glissants**.
+25. Chaque inscrit a un **taux horaire** : 40 % de la production médiane de l'univers plus 60 % de sa propre production (métal, cristal et hydrogène additionnés).
+26. Sa **base** vaut **4 heures** de ce taux pour une quotidienne, **16 heures** pour une hebdomadaire, ×1,5 en Avancée, ×2 en Épique, puis × le bonus de dépassement (règles 22 et 23).
+27. La récompense se partage selon **l'effort** de chacun, c'est-à-dire ce qu'il a fait rapporté à sa propre production : un petit joueur qui donne tout compte autant qu'un gros. Si tout le monde fournit le même effort, chacun touche sa base. Sous 30 % de l'effort moyen, on ne touche rien ; personne ne touche plus de 2,5 parts moyennes.
+28. Sur 7 jours glissants, un membre ne touche pas plus de **72 heures** de son taux, ni plus de **40 % de son revenu de la semaine** (sa propre production sur 168 heures).
+29. La part se **réclame** : choisissez la planète, elle part de la Station stellaire et arrive **30 minutes** plus tard, en 60 % de métal, 30 % de cristal et 10 % d'hydrogène. Non réclamée en 7 jours, elle arrive sur votre planète mère.
+30. Une **hebdomadaire réussie** rapporte aussi des **Points stellaires** : 1 sous l'effort moyen, 2 à l'effort moyen ou au-dessus, ×1,5 en Avancée et ×2 en Épique, arrondi au supérieur, **8 au plus par compte sur 7 jours glissants**.
 
 ### Niveau, doctrine et talents
-27. L'alliance gagne de l'**expérience** grâce aux actions de ses membres et aux missions réussies, une fois la station bâtie. Passer du niveau n au niveau suivant coûte 10 000 + 2 500 × (n − 1) points d'expérience.
-28. Chaque niveau donne des **points de doctrine** : 2 par niveau du niveau 1 au niveau 5, puis 1 par niveau, jusqu'à 50 points au niveau 45.
-29. Un niveau de talent coûte **1 point de doctrine et 300 000 métal, 150 000 cristal, 50 000 hydrogène**, coût doublé à chaque niveau, payé par la trésorerie. Exception : les deux Doctrines n'ont qu'un niveau, qui coûte 2 points, 3 000 000 métal, 1 500 000 cristal et 500 000 hydrogène. L'achat demande le droit « Gérer les missions ».
-30. Les bonus de talent profitent aux membres présents depuis plus de **24 heures**.
+31. L'alliance gagne de l'**expérience** grâce aux actions de ses membres et aux missions réussies, une fois la station bâtie. Passer du niveau n au niveau suivant coûte 10 000 + 2 500 × (n − 1) points d'expérience.
+32. Chaque niveau donne des **points de doctrine** : 2 par niveau du niveau 1 au niveau 5, puis 1 par niveau, jusqu'à 50 points au niveau 45.
+33. Un niveau de talent coûte **1 point de doctrine et 300 000 métal, 150 000 cristal, 50 000 hydrogène**, coût doublé à chaque niveau, payé par la trésorerie. Exception : les deux Doctrines n'ont qu'un niveau, qui coûte 2 points, 3 000 000 métal, 1 500 000 cristal et 500 000 hydrogène. L'achat demande le droit « Gérer les missions ».
+34. Les bonus de talent profitent aux membres présents depuis plus de **24 heures**.
 
 ## Exemple chiffré
 
-**Une mission hebdomadaire Avancée réussie à 150 %**, pour un inscrit qui produit 10 000 ressources par heure, dans un univers où la production médiane est de 6 000 par heure, quand tous les inscrits ont fourni le même effort :
-- Taux : 40 % × 6 000 + 60 % × 10 000 = 2 400 + 6 000 = **8 400 par heure**.
-- Base : 4 heures × 1,5 (Avancée) = 6 heures, soit 50 400 ; × 1,25 (150 %) = **63 000 ressources**.
-- Livrées en **37 800 métal, 18 900 cristal et 6 300 hydrogène**.
-- Plafond sur 7 jours : 24 × 8 400 = 201 600, ou 25 % × 10 000 × 168 = 420 000 ; le plus petit, **201 600**, n'est pas atteint.
+Les exemples suivants prennent un inscrit qui produit **10 000 ressources par heure**, dans un univers où la production médiane est de **6 000 par heure**, quand tous les inscrits ont fourni le même effort. Son taux : 40 % × 6 000 + 60 % × 10 000 = 2 400 + 6 000 = **8 400 par heure**.
+
+**Une quotidienne Standard réussie à 100 %**
+- Base : 4 heures × 8 400 = **33 600 ressources**.
+
+**Une hebdomadaire Avancée réussie à 150 %**
+- Base : 16 heures × 1,5 (Avancée) = 24 heures, soit 201 600 ; × 1,25 (150 %) = **252 000 ressources**.
+- Livrées en **151 200 métal, 75 600 cristal et 25 200 hydrogène**.
+- Plafond sur 7 jours : 72 × 8 400 = 604 800, ou 40 % × 10 000 × 168 = 672 000 ; le plus petit, **604 800**, n'est pas atteint.
 - Points stellaires : 2 (effort moyen) × 1,5 (Avancée) = **3**.
 
-**Entraide avec Réseau d'assistance niveau 2**
+**Le rythme d'une hebdomadaire selon son jour de lancement** (choisie à minuit, heure de Paris)
+
+| Lancée le | Jours restants | Compté au plus par 24 h |
+|---|---|---|
+| Lundi | 7 | 29 % de l'objectif |
+| Mardi | 6 | 34 % |
+| Mercredi | 5 | 40 % |
+| Jeudi | 4 | 50 % |
+| Vendredi à dimanche | | ne se lance plus |
+
+Lancée le jeudi à 20 h, il lui reste 3 jours et 4 heures, compté 4 jours : 50 % par 24 heures.
+
+**Une quotidienne en nombre lancée en cours de journée**, pour un objectif de 20 sur une journée entière :
+
+| Choisie à | Heures restantes | Objectif |
+|---|---|---|
+| Minuit | 24 | 20 |
+| 9 h | 15 | 15/24 × 20 = 12,5, soit **13** |
+| 18 h | 6, comptées 12 | 12/24 × 20 = **10** |
+| 23 h | 1, comptée 12 | 12/24 × 20 = **10** |
+
+**Une mission de participation avec 16 inscrits et un objectif de 10**
+- ×1 à 10 inscrits qui ont fait leur part, ×1,25 à 13 (à mi-chemin entre 10 et 16), ×1,5 à **16**, tous les inscrits.
+
+**Entraide** : sur une quotidienne choisie à minuit, un membre qui produit 10 000 par heure peut recevoir et faire compter 25 % × 10 000 × 24 = **60 000** ressources, tous envoyeurs confondus. Si un premier inscrit lui a déjà envoyé 40 000, un second ne fait plus compter que **20 000**, même s'il en envoie davantage.
+
+**Aide de la trésorerie avec Réseau d'assistance niveau 2**
 - Un membre peut recevoir 50 000 + 2 × 50 000 = **150 000** sur 24 heures.
 - L'alliance peut donner 5 × 150 000 = **750 000** sur 24 heures.
 
@@ -88,6 +122,15 @@ updated: "2026-10-15T18:54:40.424Z"
 - Points de doctrine au niveau 5 : 5 × 2 = **10**.
 
 ## Données détaillées
+
+### Récompenses, en heures de taux
+
+| | Standard | Avancée | Épique |
+|---|---|---|---|
+| Quotidienne | 4 h | 6 h | 8 h |
+| Hebdomadaire | 16 h | 24 h | 32 h |
+
+Multipliées par le bonus de dépassement (×1,25 ou ×1,5) et par la part d'effort de chacun.
 
 ### Les missions
 
@@ -100,7 +143,7 @@ updated: "2026-10-15T18:54:40.424Z"
 | Exploration | Cartographie | non | oui | Systèmes espionnés dans la galaxie désignée, où l'alliance n'a aucune planète ; un système compte une fois par inscrit |
 | Territoire | Expansion | oui | oui | Chaque colonie fondée, ruines comprises |
 | Territoire | Recyclage | oui | oui | Ressources récoltées sur des champs de débris |
-| Coordination | Entraide | oui | oui | Ressources transportées à la planète d'un autre membre ; ce qu'un même membre reçoit ne compte que jusqu'au quart de sa production |
+| Coordination | Entraide | oui | oui | Ressources transportées à la planète d'un autre membre, même par qui a lui-même reçu ; pas d'aller-retour ; ce qu'un même membre reçoit ne compte que jusqu'au quart de sa production sur la mission, tous envoyeurs confondus |
 | Coordination | Ravitaillement | oui | non | Inscrits qui ont livré par convoi 6 heures de leur production, moins l'aide reçue ; pas de difficulté Épique |
 | Coordination | Parrainage | non | oui | Recrue arrivée pendant le cycle, à 300 points et toujours là à la fin ; proposée seulement s'il reste une place, en Standard |
 | Défi | Victoire nette | oui | oui | Raid gagné sans perte qui détruit au moins 50 000 ressources, ou face à un défenseur valant au moins le quart de votre flotte |
@@ -116,7 +159,7 @@ Contre un bot ou un joueur inactif depuis une semaine, les raids comptent à moi
 | Quotidienne | 1 000 | 1 600 | 2 500 |
 | Hebdomadaire | 5 000 | 8 000 | 12 500 |
 
-Multipliée par le bonus de dépassement (règle 20). Plafond des missions : **8 000 par semaine et par alliance**.
+Multipliée par le bonus de dépassement (règles 22 et 23). Plafond des missions : **8 000 par semaine et par alliance**.
 
 ### Ce qui rapporte de l'expérience à l'alliance
 
@@ -154,6 +197,8 @@ Plafond sur 7 jours glissants : **800 par membre** et **15 000 par alliance**, m
 - **Inscrivez-vous à temps** : passé le premier quart du cycle, les inscriptions sont closes et vos actions ne comptent plus pour la mission.
 - **Une bourse pleine refuse les dons** : un convoi qui arrive sur une trésorerie pleine rentre chargé, et ne compte pas pour Ravitaillement. Dépensez d'abord.
 - **Pas de convoi sous la menace** : quand une attaque est annoncée sur une planète, elle ne peut plus envoyer de convoi.
+- **Lancez l'hebdomadaire tôt** : elle se choisit jusqu'au jeudi minuit, et plus elle est lancée tard, plus chaque journée doit compter.
+- **Entraide : aidez plusieurs membres** : chacun ne peut faire compter que le quart de sa production, tous envoyeurs confondus ; la jauge de la mission dit qui peut encore recevoir.
 - **Changez de cible** : piller ou frapper toujours le même joueur rapporte de moins en moins.
 - **Réclamez votre part** : sinon elle n'arrive qu'au bout de 7 jours, sur la planète mère.
 - **Les Doctrines coûtent 2 points** : prévoyez-les dans votre plan de talents.
