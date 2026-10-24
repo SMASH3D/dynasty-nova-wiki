@@ -220,7 +220,7 @@ graph TB
 
 | Rangée | Nœud | Type | Effet (nœud plein) | Par rang |
 |---|---|---|---|---|
-| 1 | **Report de charge** | clé | Un niveau de mine qui s'achève ne tire sa nouvelle consommation que 4 h plus tard : le temps de monter la centrale qui va avec. |  |
+| 1 | **Report de charge** | clé | Chaque niveau de mine qui s'achève ne tire sa nouvelle consommation que 4 h plus tard, même si vous en enchaînez plusieurs : le temps de monter la centrale qui va avec. |  |
 | 2 | **Délestage** | 3 rangs | Vos mines ignorent 30 % du manque d'énergie. | 3 × 10 % |
 | 3 | **A · Délestage d'urgence** | choix | Vos mines ignorent encore 10 % du manque d'énergie. | |
 |  | **B · Mise en route** |  | Sur une colonie de moins de 30 jours, vos mines ignorent tout le manque d'énergie : montez-les avant la première centrale. | |
@@ -232,7 +232,7 @@ graph TB
 | 8 | **Éruption** | clé | Une fois par jour, sur la base de votre choix, centrales solaires et satellites produisent une fois et demie plus d'énergie pendant 4 h. |  |
 | 9 | **Réseau interplanétaire** | ultime | Le surplus de vos planètes alimente celles qui manquent d'énergie, jusqu'à 20 % de leur consommation. |  |
 
-- **Report de charge** : le niveau qui s'achève produit aussitôt ; seule sa consommation attend, celle du niveau précédent restant en vigueur pendant le délai.
+- **Report de charge** : le niveau qui s'achève produit aussitôt ; seule sa consommation attend, celle du niveau précédent restant en vigueur pendant le délai. Chaque niveau a son propre délai : une mine montée du niveau 10 au 13 en une heure consomme comme au niveau 10, puis monte d'un cran à la fin du délai de chaque niveau, dans l'ordre où ils se sont achevés. Un niveau perdu (démolition, abandon) emporte son délai avec lui.
 - **Mise en route** : sur une colonie fondée par un Pionnier spatial depuis moins de 30 jours, pas sur la planète mère.
 - **Priorité de charge** : la mine désignée tourne à plein tant que la production d'énergie couvre **sa** consommation ; les autres se partagent le reste, avec leur délestage.
 - **Accumulateurs** : la base garde au plus 12 heures de son surplus du moment. En déficit, la réserve couvre tout le manque, les mines tournant à plein, jusqu'à épuisement.
