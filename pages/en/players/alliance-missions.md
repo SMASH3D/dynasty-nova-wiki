@@ -179,7 +179,7 @@ Multiplied by the overachievement bonus (rules 22 and 23). Mission cap: **8,000 
 | Espionage report | 10 |
 | Recycling | 2 per 1,000 resources |
 
-Cap over a rolling 7 days: **800 per member** and **15,000 per alliance**, missions not included. Nothing counts before the station is built, nor during the member's settling-in period.
+Cap over a rolling 7 days: **800 per member**, and for the alliance by its station's tier: **15,000** (tier 1), **22,500** (tier 2), **30,000** (tier 3), missions not included. A demolition earns nothing. The alliance's Progression page shows your share source by source, and warns you when a ceiling stops your play from counting. Nothing counts before the station is built, nor during the member's settling-in period.
 
 For a battle, only the winner earns experience, and a draw earns nothing. The destroyed value is the resource cost of the ships and defenses the opponent lost for good: defenses restored after the battle and ships taken back by the [Repair Station](/en/economy/repair-station) do not count. Each full slice of 1,000 resources earns 5 points; the remainder is lost.
 

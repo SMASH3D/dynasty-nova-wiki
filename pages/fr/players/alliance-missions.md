@@ -179,7 +179,7 @@ Multipliée par le bonus de dépassement (règles 22 et 23). Plafond des mission
 | Rapport d'espionnage | 10 |
 | Recyclage | 2 pour 1 000 ressources |
 
-Plafond sur 7 jours glissants : **800 par membre** et **15 000 par alliance**, missions non comprises. Rien ne compte avant que la station soit bâtie, ni pendant la période d'intégration du membre.
+Plafond sur 7 jours glissants : **800 par membre**, et pour l'alliance selon le palier de sa station : **15 000** (palier 1), **22 500** (palier 2), **30 000** (palier 3), missions non comprises. Une démolition ne rapporte rien. La page Progression de l'alliance montre votre part source par source, et prévient quand un plafond arrête votre jeu. Rien ne compte avant que la station soit bâtie, ni pendant la période d'intégration du membre.
 
 Pour un combat, seul le vainqueur gagne de l'expérience, et un match nul ne rapporte rien. La valeur détruite est le coût en ressources des vaisseaux et défenses perdus pour de bon par l'adversaire : les défenses remises en état après le combat et les vaisseaux repris par la [Station de réparation](/fr/economy/repair-station) ne comptent pas. Chaque tranche complète de 1 000 ressources rapporte 5 points, le reste est perdu.
 
