@@ -55,6 +55,11 @@ No: these missions do not exist. See [Missions](/en/fleet/missions).
 **Does staying longer on an expedition raise the odds?**
 No, duration does not change the odds. See [Expeditions](/en/fleet/expeditions).
 
+## Level and talents
+
+**Where does the experience that raises my level and my class mastery come from?**
+From two sources only: the quests you claim, and your points record in the rankings, at 10 experience points per point (divided by the universe's economy speed). Building, researching, producing ships and defenses raises your points, hence your experience. Winning a battle, plundering or recycling gives none directly, and losing units takes none away. Class mastery rises with the same experience. See [Talents](/en/dynasty/talents#points-per-level) and [The classes](/en/dynasty/classes#class-mastery).
+
 ## Account
 
 **I am going away for a long time: what should I do?**

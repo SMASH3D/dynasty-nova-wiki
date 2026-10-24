@@ -185,6 +185,7 @@ Nouvelle page (16 octobre 2026, non publiée jusqu'à la mise en production de l
 | P-103 | `dynasty/talents` | Les talents | Deux arbres, points par niveau, portes, brouillon, réinitialisation, plafonds et accents. Réécrite d'après le code le 15 octobre 2026. Réinitialisations offertes par un rééquilibrage ajoutées le 17 octobre 2026. | Code [E] | `dynasty-04`, `dynasty-21`, `dynasty-22` |
 | P-104 | `dynasty/common-tree` | L'arbre commun | Prospérité, Exploration, Logistique, builds à 50 points. Réécrite d'après le code le 15 octobre 2026. | Code [E] | `dynasty-23`, `dynasty-24` |
 | P-105 à P-114 | `dynasty/classes/<code>` | Un arbre de classe par page | `admiral`, `builder`, `energist`, `theorist`, `navigator`, `shadow`, `archivist`, `veteran`, `symbiote`, `oracle` : 3 branches × 9 rangées, exemples, builds à 25 points. Réécrites d'après le code le 15 octobre 2026 ; Bâtisseur, Amiral, Théoricien et Symbiote mis à jour du rééquilibrage le 17 octobre 2026, à pousser à sa sortie en production. | Code [E] | `dynasty-05` à `dynasty-20`, `dynasty-30` à `dynasty-41` |
+| P-116 | `dynasty/experience` | Expérience et niveau | Les deux sources d'XP (quêtes, record de points), ce qui fait monter les points, ce qui ne rapporte rien (combats, pillage, recyclage, missions d'alliance), pertes et reconstruction, niveau, maîtrise de classe, seuils des 50 niveaux. Demandée par un joueur (Shary, 23 octobre 2026). Rédigée d'après le code le 24 octobre 2026, non publiée. | Code [E] | |
 
 [E] = code du jeu fourni par l'équipe (règles « déduites du code », AGENTS §4). Détail des données : [DONNEES.md §18](DONNEES.md).
 
@@ -504,6 +505,8 @@ Traduction des noms français, à utiliser dans les pages EN (et ES tant que le 
 **Publiées** : P-96, P-29, P-02, P-03, P-05, P-06, P-07, P-11, P-12, P-13, P-14, P-15, P-16, P-21, P-22, P-23, P-24, P-26, P-27, P-28, P-31, P-32, P-33, P-41, P-42, P-44, P-45, P-46, P-47, P-51, P-52, P-53, P-61, P-62, P-63, P-64, P-65, P-66, P-67, P-71, P-72, P-73, P-81, P-82, P-83, P-84, P-85, P-86, P-87, P-88, P-89, P-92, P-93, P-94, P-95, P-97, et les 10 pages de rubrique.
 
 **Rubrique `dynasty` (6 octobre 2026)** : 15 pages FR et 15 pages EN rédigées en local (P-100 à P-114), **non créées sur le wiki** (pas de clé d'API sur ce poste) et non publiées tant que la fonctionnalité n'est pas en jeu (`dynasty-01`). À la sortie : `create`, application de `edits/2026-10-06-dynasty-release.json` (déplacements, didacticiel, reconstruction des défenses, accueil), ligne d'historique FR et EN, publication.
+
+**Expérience et niveau (24 octobre 2026)** : P-116 rédigée en FR et EN, non publiée, à créer (`create`) après fusion. À sa publication : lien depuis l'index `dynasty` (FR et EN), et la question de la FAQ peut pointer vers elle plutôt que vers Talents et Classes. La FAQ (P-08) reçoit dès maintenant une rubrique « Niveau et talents ».
 
 **Bloquées** :
 | Page | Bloquée par |
