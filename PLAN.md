@@ -165,6 +165,7 @@ Nouvelle page (16 octobre 2026, non publiée jusqu'à la mise en production de l
 | ID | Chemin | Page | Contenu | Sources | Manque |
 |---|---|---|---|---|---|
 | P-115 | `players/account-deletion` | Supprimer son compte | Demande depuis les Paramètres, 7 jours sous protection, annulation (lien du mail, 48 h, 30 jours), alliances, ce qui disparaît, abonnements. | code, publiée le 21 octobre 2026 | |
+| P-117 | `players/account-credentials` | Pseudo, e-mail et mot de passe | Onglet Compte des Paramètres, mot de passe actuel exigé, pseudo gratuit tous les 7 jours (identifiant de connexion, « Anciennement » et réservation 30 jours, anciens liens), adresse par code de 6 chiffres valable 30 minutes, ancienne adresse prévenue, 24 h entre deux changements, autres sessions fermées au changement de mot de passe, rien pendant une suppression. Rédigée d'après le code le 27 octobre 2026 (CRD-402), non publiée, à publier après la fusion de Backend#666 et Frontend#1395. | code | |
 
 ### `misc`, divers
 | ID | Chemin | Page | Contenu | Sources | Manque |
