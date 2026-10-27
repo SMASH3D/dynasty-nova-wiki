@@ -1247,6 +1247,12 @@ Source : code du serveur (dépôt Backend, fusion « dynasties, classes and tale
 ### Expérience et niveaux
 - Expérience = quêtes + **10 par point** du record de points, divisé par la vitesse de l'univers.
 - Seuils d'expérience (début de niveau) : 1 : 0 · 8 : 500 · 10 : 1 221 · 20 : 43 939 · 24 : 100 397 · 25 : 121 716 · 32 : 437 052 · 40 : 1 773 675 · 50 : 10 000 000. Au-delà du niveau 50, chaque niveau coûte autant que le 50e et ne rapporte rien.
+- Relevé du 24 octobre 2026 (Backend `origin/main` f0a66b1c) pour P-116 :
+  - XP totale = XP de campagne (quêtes et bonus de grade, montants fixes, non divisés par la vitesse : `GrantQuestRewardHandler`, `GrantQuestGradeRewardHandler`) + XP d'empire (`UserUniverse::refreshTotal()` : quand le total de points dépasse `pointsRecord`, `PlayerExperience::earnedByRecord()` crédite floor(10 × nouveau record / vitesse d'économie) − floor(10 × ancien record / vitesse)). L'XP ne diminue jamais (`addExperience`, pas de retrait).
+  - Ce qui ajoute des points (donc de l'XP au-delà du record) : fin d'un niveau de bâtiment ou de recherche (`WheneverConstructionFinished/UpdateUserPointsHandler`), niveau offert (`WheneverBuildingLevelBonusGranted/UpdateUserPointsHandler`), livraison de vaisseaux et défenses (`AbstractUnitDeliveryPointsHandler`), vaisseaux trouvés en expédition (`AddFoundShipsPointsHandler`, seau militaire), reprise d'une planète abandonnée (`CreditRecolonizedBasePointsHandler`, économie et militaire, pas la recherche). Aucun crédit d'XP joueur sur combat, pillage, recyclage, espionnage : ces événements ne créditent que l'XP d'alliance (`Alliance/.../CreditAllianceExperienceHandler`).
+  - Seuils complets des 50 niveaux : `PlayerExperience::LEVEL_STARTS` ; coût d'un niveau au-delà du 50e : 10 000 000 − 8 414 751 = 1 585 249.
+  - Maîtrise : `ClassTenure::masteryAt()` / `positionAt()` : départ au seuil de la maîtrise d'entrée, + XP gagnée depuis l'entrée, plafonnée au total du joueur et au niveau 50. Points de classe = ceil(maîtrise / 2), 25 au maximum.
+  - Exemples de P-116 recalculés par script (hors dépôt) : 100 + 10 × 2 000 = 20 100 (niveau 16) ; Cuirassé 60 000 ressources = +600 XP, ×2 = +300 ; 21 300 = niveau 17 ; niveau 20 + 10 699 XP = 54 638 (niveau 21), nouvelle classe maîtrise 14 (7 points).
 
 ### Règles des arbres
 - Arbre commun : 3 × 10, rangs par rangée 3, 5, 1, 5, 1, 1, 5, 1, 5, 1 (28 par branche), portes à 0/0/0/8/8/8/20/20/32/32 points placés au-dessus (toutes branches), 1 point par niveau, 50 au maximum.

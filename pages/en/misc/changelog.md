@@ -44,6 +44,7 @@ updated: "2026-10-21T16:00:31.524Z"
 - **17 October 2026**: alliance experience from battles won fixed in the game: 5 points per 1,000 resources of military value destroyed (instead of per 1,000 score points), [Alliance missions and station](/en/players/alliance-missions) page updated with an example.
 - **21 October 2026 (missions)**: [alliance missions](/en/players/alliance-missions) aligned with the game's retune: no daily cap for a daily mission, pace of a weekly by the day it starts (until Thursday midnight), levels of participation missions, Mutual aid without deducting what you received, count objectives in proportion to the cycle left, rewards of 4 and 16 hours of rate, 72-hour cap over 7 days. Also: one mission per family and per cadence, cumulative daily cap, Wreckage and Clean victory counted with the defender's repairs, same-player decay (100, 50, 25%, then nothing), Expansion weekly only, abandoned planets taken over included. Then: no effort threshold, lighter Mapping, replacement priced on the median, objective sized on at least half the active members, "Always enroll me", start hour picked by the alliance.
 - **21 October 2026**: new [Deleting your account](/en/players/account-deletion) page.
+- **24 October 2026**: [FAQ](/en/getting-started/faq): where the experience that raises your level and class mastery comes from.
 
 ## Related pages
 

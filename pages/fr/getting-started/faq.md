@@ -55,6 +55,11 @@ Non : ces missions n'existent pas. Voir [Les missions](/fr/fleet/missions).
 **Rester plus longtemps en expédition augmente-t-il les chances ?**
 Non, la durée ne change pas les chances. Voir [Expéditions](/fr/fleet/expeditions).
 
+## Niveau et talents
+
+**D'où vient l'expérience qui fait monter mon niveau et ma maîtrise de classe ?**
+De deux sources seulement : les quêtes que vous réclamez, et votre record de points au classement, à 10 points d'expérience par point (divisé par la vitesse d'économie de l'univers). Construire, rechercher, produire des vaisseaux et des défenses fait monter vos points, donc votre expérience. Gagner un combat, piller ou recycler n'en donne pas directement, et perdre des unités n'en retire pas. La maîtrise de classe monte avec la même expérience. Voir [Les talents](/fr/dynasty/talents#points-par-niveau) et [Les classes](/fr/dynasty/classes#maîtrise-de-classe).
+
 ## Compte
 
 **Je pars longtemps : que faire ?**
