@@ -223,7 +223,7 @@ graph TB
 
 | Row | Node | Type | Effect (full node) | Per rank |
 |---|---|---|---|---|
-| 1 | **Deferred Load** | key | A mine level just completed draws its new consumption only 4 h later: time to raise the plant that goes with it. |  |
+| 1 | **Deferred Load** | key | Each mine level just completed draws its new consumption only 4 h later, even when you chain several: time to raise the plant that goes with them. |  |
 | 2 | **Load Shedding** | 3 ranks | Your mines ignore 30% of the energy shortfall. | 3 × 10% |
 | 3 | **A · Emergency Shedding** | choice | Your mines ignore a further 10% of the energy shortfall. | |
 |  | **B · Start-up** |  | On a colony younger than 30 days, your mines ignore the whole energy shortfall: raise them before the first plant. | |
@@ -235,7 +235,7 @@ graph TB
 | 8 | **Flare** | key | Once a day, on the base of your choice, solar plants and satellites produce one and a half times as much energy for 4 h. |  |
 | 9 | **Interplanetary Grid** | ultimate | Your planets' surplus feeds those short of energy, up to 20% of their consumption. |  |
 
-- **Deferred Load**: the completed level produces at once; only its draw waits, the previous level's draw staying in force during the delay.
+- **Deferred Load**: the completed level produces at once; only its draw waits, the previous level's draw staying in force during the delay. Every level has its own delay: a mine raised from level 10 to 13 within the hour draws as level 10, then steps up once as each level's delay runs out, in the order they were completed. A level lost (demolition, abandonment) takes its delay with it.
 - **Start-up**: on a colony founded by a Space Pioneer less than 30 days ago, not on the home planet.
 - **Load Priority**: the designated mine runs full as long as energy production covers **its** draw; the others share the rest, with their load shedding.
 - **Accumulators**: the base stores at most 12 hours of its current surplus. In deficit, the reserve covers the whole shortfall, the mines running full, until it runs out.
