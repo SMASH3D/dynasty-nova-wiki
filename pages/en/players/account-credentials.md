@@ -1,4 +1,5 @@
 ---
+wiki_id: 184
 locale: "en"
 path: "players/account-credentials"
 url: "https://wiki.dynastynova.com/en/players/account-credentials"
@@ -6,6 +7,8 @@ title: "Pseudo, email and password"
 description: "Changing your pseudo, email address or password: where, on what conditions and what it changes."
 tags: ["players"]
 published: false
+created: "2026-10-30T20:31:13.710Z"
+updated: "2026-10-30T20:31:15.516Z"
 ---
 
 # Pseudo, email and password

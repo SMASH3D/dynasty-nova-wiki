@@ -1,4 +1,5 @@
 ---
+wiki_id: 186
 locale: "fr"
 path: "players/account-credentials"
 url: "https://wiki.dynastynova.com/fr/players/account-credentials"
@@ -6,6 +7,8 @@ title: "Pseudo, e-mail et mot de passe"
 description: "Changer de pseudo, d'adresse e-mail ou de mot de passe : où, à quelles conditions et ce que ça change."
 tags: ["players"]
 published: false
+created: "2026-10-30T20:31:32.436Z"
+updated: "2026-10-30T20:31:33.918Z"
 ---
 
 # Pseudo, e-mail et mot de passe

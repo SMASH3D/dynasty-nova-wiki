@@ -1,4 +1,5 @@
 ---
+wiki_id: 183
 locale: "en"
 path: "dynasty/experience"
 url: "https://wiki.dynastynova.com/en/dynasty/experience"
@@ -6,6 +7,8 @@ title: "Experience and level"
 description: "Where experience comes from, and how it raises your level and your class mastery."
 tags: ["dynasty"]
 published: true
+created: "2026-10-30T20:31:02.778Z"
+updated: "2026-10-30T20:31:04.774Z"
 ---
 
 # Experience and level

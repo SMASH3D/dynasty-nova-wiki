@@ -8,7 +8,7 @@ description: "Dynasties, classes, arbre commun et arbres de classe."
 tags: ["dynasty"]
 published: true
 created: "2026-10-06T10:29:25.188Z"
-updated: "2026-10-15T18:57:41.231Z"
+updated: "2026-10-30T20:31:26.507Z"
 ---
 
 # Dynastie et talents

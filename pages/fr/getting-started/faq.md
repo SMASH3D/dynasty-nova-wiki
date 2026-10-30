@@ -8,7 +8,7 @@ description: "Réponses courtes aux questions fréquentes."
 tags: ["getting-started"]
 published: true
 created: "2026-10-02T13:08:00.798Z"
-updated: "2026-10-02T16:35:57.275Z"
+updated: "2026-10-30T20:31:28.213Z"
 ---
 
 # FAQ
