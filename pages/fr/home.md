@@ -104,6 +104,7 @@ updated: "2026-10-21T16:00:50.431Z"
 - [Les dynasties](/fr/dynasty/dynasties)
 - [Les classes](/fr/dynasty/classes)
 - [Les talents](/fr/dynasty/talents)
+- [Expérience et niveau](/fr/dynasty/experience)
 - [L'arbre commun](/fr/dynasty/common-tree)
 
 ### [Divers](/fr/misc)

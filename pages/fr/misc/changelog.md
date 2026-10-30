@@ -45,6 +45,7 @@ updated: "2026-10-21T16:00:51.787Z"
 - **21 octobre 2026 (missions)** : [missions d'alliance](/fr/players/alliance-missions) réalignées sur le réglage du jeu : plus de plafond par jour pour une quotidienne, rythme d'une hebdomadaire selon son jour de lancement (jusqu'au jeudi minuit), paliers des missions de participation, Entraide sans déduction de ce qu'on a reçu, objectif en nombre au prorata du cycle restant, récompenses de 4 et 16 heures de taux, plafond de 72 heures sur 7 jours. Compléments : une mission par famille et par cadence, plafond par jour cumulatif, Casse et Victoire nette comptées réparations du défenseur comprises, dégressivité sur un même joueur (100, 50, 25 %, puis rien), Expansion en hebdomadaire seulement avec les planètes abandonnées reprises. Puis : plus de seuil d'effort, Cartographie allégée, remplacement indexé sur la médiane, objectif mesuré sur au moins la moitié des membres actifs, « Toujours m'inscrire », heure de départ choisie par l'alliance.
 - **21 octobre 2026** : nouvelle page [Supprimer son compte](/fr/players/account-deletion).
 - **24 octobre 2026** : [FAQ](/fr/getting-started/faq) : d'où vient l'expérience qui fait monter le niveau et la maîtrise de classe.
+- **30 octobre 2026** : nouvelle page [Expérience et niveau](/fr/dynasty/experience) ; [Report de charge](/fr/dynasty/classes/energist) de l'Énergéticien valable pour chaque niveau de mine.
 
 ## Pages liées
 

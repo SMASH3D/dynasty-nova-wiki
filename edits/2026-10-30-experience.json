@@ -1,0 +1,38 @@
+{
+ "fr/dynasty": [
+  [
+   "- [Les talents : points, portes et réinitialisation](/fr/dynasty/talents)\n",
+   "- [Les talents : points, portes et réinitialisation](/fr/dynasty/talents)\n- [Expérience et niveau](/fr/dynasty/experience)\n"
+  ]
+ ],
+ "en/dynasty": [
+  [
+   "- [Talents: points, gates and resets](/en/dynasty/talents)\n",
+   "- [Talents: points, gates and resets](/en/dynasty/talents)\n- [Experience and level](/en/dynasty/experience)\n"
+  ]
+ ],
+ "fr/home": [
+  [
+   "- [Les talents](/fr/dynasty/talents)\n",
+   "- [Les talents](/fr/dynasty/talents)\n- [Expérience et niveau](/fr/dynasty/experience)\n"
+  ]
+ ],
+ "en/home": [
+  [
+   "- [Talents](/en/dynasty/talents)\n",
+   "- [Talents](/en/dynasty/talents)\n- [Experience and level](/en/dynasty/experience)\n"
+  ]
+ ],
+ "fr/misc/changelog": [
+  [
+   "- **24 octobre 2026** : [FAQ](/fr/getting-started/faq) : d'où vient l'expérience qui fait monter le niveau et la maîtrise de classe.",
+   "- **24 octobre 2026** : [FAQ](/fr/getting-started/faq) : d'où vient l'expérience qui fait monter le niveau et la maîtrise de classe.\n- **30 octobre 2026** : nouvelle page [Expérience et niveau](/fr/dynasty/experience) ; [Report de charge](/fr/dynasty/classes/energist) de l'Énergéticien valable pour chaque niveau de mine."
+  ]
+ ],
+ "en/misc/changelog": [
+  [
+   "- **24 October 2026**: [FAQ](/en/getting-started/faq): where the experience that raises your level and class mastery comes from.",
+   "- **24 October 2026**: [FAQ](/en/getting-started/faq): where the experience that raises your level and class mastery comes from.\n- **30 October 2026**: new [Experience and level](/en/dynasty/experience) page; the Energetician's [Deferred Load](/en/dynasty/classes/energist) applies to every mine level."
+  ]
+ ]
+}

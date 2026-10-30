@@ -30,6 +30,7 @@ updated: "2026-10-15T18:57:41.231Z"
 - [Les dynasties](/fr/dynasty/dynasties)
 - [Les classes](/fr/dynasty/classes)
 - [Les talents : points, portes et réinitialisation](/fr/dynasty/talents)
+- [Expérience et niveau](/fr/dynasty/experience)
 - [L'arbre commun](/fr/dynasty/common-tree)
 
 ### Arbres de classe

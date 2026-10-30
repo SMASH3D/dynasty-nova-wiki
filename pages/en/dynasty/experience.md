@@ -5,7 +5,7 @@ url: "https://wiki.dynastynova.com/en/dynasty/experience"
 title: "Experience and level"
 description: "Where experience comes from, and how it raises your level and your class mastery."
 tags: ["dynasty"]
-published: false
+published: true
 ---
 
 # Experience and level
