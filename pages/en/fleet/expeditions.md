@@ -8,7 +8,7 @@ description: "Exploring deep space: conditions, outcomes and size of finds."
 tags: ["fleet"]
 published: true
 created: "2026-10-02T13:11:13.809Z"
-updated: "2026-11-05T10:48:17.193Z"
+updated: "2026-11-05T12:59:34.272Z"
 game_version: "Serveur 2.1.0 · Client 3.1.0"
 ---
 
