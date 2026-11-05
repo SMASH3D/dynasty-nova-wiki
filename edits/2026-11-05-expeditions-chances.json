@@ -1,0 +1,18 @@
+{
+"fr/fleet/expeditions": [
+["### Résultats\n10.", "### Résultats\nAvant le départ, l'écran *Préparer la flotte* affiche les **chances de chaque résultat** (table plus bas) et le **gain moyen** estimé par expédition pour la flotte choisie.\n\n10."],
+["### Plafond des points d'expédition", "### Chances de chaque résultat\n\n| Résultat | Chance |\n|---|---|\n| Ressources | 40 % |\n| Rien | 26 % |\n| Vaisseaux | 17 % |\n| Retard | 7 % |\n| Pirates | 5,5 % |\n| Aliens | 2,3 % |\n| Retour anticipé | 2 % |\n| Trou noir | 0,2 % |\n\nChances affichées par le jeu avant le départ (relevé du 5 novembre 2026). Leur évolution dans une zone usée ou épuisée (règle 9) n'est pas encore relevée.\n\n### Plafond des points d'expédition"],
+["- **Prévoyez de la soute**", "- **Une expédition sur quatre ne rapporte rien** : « Rien » sort dans 26 % des cas, et 8 % des départs finissent en combat ou dans un trou noir.\n- **Prévoyez de la soute**"]
+],
+"en/fleet/expeditions": [
+["### Outcomes\n10.", "### Outcomes\nBefore departure, the fleet preparation screen shows the **odds of each outcome** (table below) and the estimated **average gain** per expedition for the chosen fleet.\n\n10."],
+["### Expedition points cap", "### Odds of each outcome\n\n| Outcome | Odds |\n|---|---|\n| Resources | 40% |\n| Nothing | 26% |\n| Ships | 17% |\n| Delay | 7% |\n| Pirates | 5.5% |\n| Aliens | 2.3% |\n| Early return | 2% |\n| Black hole | 0.2% |\n\nOdds shown by the game before departure (read on 5 November 2026). How they change in a worn or depleted area (rule 9) has not been read yet.\n\n### Expedition points cap"],
+["- **Keep cargo space free**", "- **One expedition in four brings nothing**: \"Nothing\" comes up 26% of the time, and 8% of departures end in a battle or a black hole.\n- **Keep cargo space free**"]
+],
+"fr/misc/changelog": [
+["points d'expédition calculés sur le coût des coques.", "points d'expédition calculés sur le coût des coques ; chances de chaque résultat publiées."]
+],
+"en/misc/changelog": [
+["expedition points worked out on hull cost.", "expedition points worked out on hull cost; odds of each outcome published."]
+]
+}

@@ -46,7 +46,7 @@ updated: "2026-11-05T10:48:22.407Z"
 - **21 October 2026**: new [Deleting your account](/en/players/account-deletion) page.
 - **24 October 2026**: [FAQ](/en/getting-started/faq): where the experience that raises your level and class mastery comes from.
 - **30 October 2026**: new [Experience and level](/en/dynasty/experience) page; the Energetician's [Deferred Load](/en/dynasty/classes/energist) applies to every mine level.
-- **5 November 2026**: [expeditions](/en/fleet/expeditions): each hour of hold beyond the first adds 15% to the find; an area wears out from 20 expeditions in 24 h and is depleted from 40; expedition points worked out on hull cost.
+- **5 November 2026**: [expeditions](/en/fleet/expeditions): each hour of hold beyond the first adds 15% to the find; an area wears out from 20 expeditions in 24 h and is depleted from 40; expedition points worked out on hull cost; odds of each outcome published.
 
 ## Related pages
 

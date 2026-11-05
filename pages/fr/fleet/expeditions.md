@@ -39,6 +39,8 @@ game_version: "Serveur 2.1.0 · Client 3.1.0"
 9. Une zone trop visitée **s'use** : à partir de **20 expéditions** résolues sur l'espace lointain d'un même système en 24 heures, tous joueurs confondus, la zone est « usée » et les rencontres s'y font plus rares ; à partir de **40**, elle est « épuisée » et elles se raréfient encore. Si la flotte emporte au moins un **Éclaireur**, le rapport indique l'état de la zone.
 
 ### Résultats
+Avant le départ, l'écran *Préparer la flotte* affiche les **chances de chaque résultat** (table plus bas) et le **gain moyen** estimé par expédition pour la flotte choisie.
+
 10. **Ressources** : un seul type de ressource par trouvaille, métal, cristal ou hydrogène. Le montant est proportionnel aux points d'expédition de la flotte (règle 15), en équivalent métal : il est divisé par 2 pour le cristal et par 3 pour l'hydrogène. La trouvaille est limitée par la **soute libre** : le surplus est perdu, et le rapport le signale.
 11. **Vaisseaux** : des vaisseaux abandonnés rejoignent votre flotte, pour une valeur égale à la moitié d'une trouvaille de ressources. Ils ne prennent pas de place dans la soute. Vous pouvez trouver jusqu'au rang qui suit celui de votre meilleur vaisseau à bord (table plus bas). Jamais de Colossus stellaire, de Pionnier spatial, de Récupérateur ni de Collecteur solaire, qui ne comptent pas non plus pour le rang. Les vaisseaux trouvés rapportent leurs points militaires.
 12. **Retard** : le retour est allongé de 2, 3 ou 5 fois la durée de maintien choisie, selon l'ampleur de l'événement. **Retour anticipé** : la durée du retour est divisée par 2, 3 ou 5.
@@ -71,6 +73,21 @@ game_version: "Serveur 2.1.0 · Client 3.1.0"
 | 9 | 9 h | 3 |
 | 12 | 12 h | 3 |
 | 16 | 16 h | 4 |
+
+### Chances de chaque résultat
+
+| Résultat | Chance |
+|---|---|
+| Ressources | 40 % |
+| Rien | 26 % |
+| Vaisseaux | 17 % |
+| Retard | 7 % |
+| Pirates | 5,5 % |
+| Aliens | 2,3 % |
+| Retour anticipé | 2 % |
+| Trou noir | 0,2 % |
+
+Chances affichées par le jeu avant le départ (relevé du 5 novembre 2026). Leur évolution dans une zone usée ou épuisée (règle 9) n'est pas encore relevée.
 
 ### Plafond des points d'expédition
 
@@ -106,6 +123,7 @@ Exemple : une flotte dont le meilleur vaisseau est un Cuirassé (rang 7) peut tr
 ## Pièges fréquents
 
 - **Rester plus longtemps rapporte, mais se paie** : +15 % de trouvaille par heure au-delà de la première, contre une flotte immobilisée plus longtemps, plus d'hydrogène sur place et un retard éventuel plus long.
+- **Une expédition sur quatre ne rapporte rien** : « Rien » sort dans 26 % des cas, et 8 % des départs finissent en combat ou dans un trou noir.
 - **Prévoyez de la soute** : une trouvaille de ressources qui ne rentre pas est perdue, et l'hydrogène du voyage occupe déjà une partie des soutes.
 - **Changez de système** : l'espace lointain très fréquenté s'use dès 20 expéditions en 24 heures, quel que soit le joueur qui l'a visité.
 - **Un rappel annule tout** : la flotte rentre bredouille, après un retour aussi long que l'aller.

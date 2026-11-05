@@ -790,6 +790,8 @@ Durée d'une recherche (h) = (métal + cristal) / (1 000 × (1 + niveau effectif
 
 Conditions : expéditions activées dans l'univers ; Cosmologie Appliquée ≥ 1 ; cible = espace lointain (position N+1) ; flotte pas uniquement composée d'Éclaireurs ; maintien de 1 h à niveau de Cosmologie heures ; un emplacement de flotte et un emplacement d'expédition libres.
 
+Table du code au 2 octobre 2026, **remplacée le 5 novembre 2026** par les chances affichées en jeu (§23.1) : Ressources 40 %, Rien 26 %.
+
 | Résultat | Probabilité |
 |---|---|
 | Ressources | 33 % |
@@ -1421,3 +1423,30 @@ Ce qu'on en retient :
 - **Zone** : « usée » dès **20** expéditions en 24 h, « épuisée » dès **40** (au lieu de 10 et 25) ; les rencontres s'y font plus rares. Effet chiffré à relever dans le code (`fleet-12`).
 - Non précisé par ces textes, à confirmer (`fleet-14`) : plancher de 200 points toujours en vigueur ; bonus de durée appliqué avant ou après le plafond ; effet de la durée sur les chances de chaque résultat ; bonus additif ou composé.
 
+### 23.1 Écrans d'expédition (captures transmises par le responsable le 5 novembre 2026)
+
+Source : captures des écrans « Espace lointain » et « Préparer la flotte » (FR), compte du responsable, Cosmologie Appliquée 9. Les textes du §23 en sont extraits.
+
+Chances affichées avant le départ, dans l'écran « Préparer la flotte » :
+
+| Résultat | Chance |
+|---|---|
+| Ressources | 40 % |
+| Rien | 26 % |
+| Vaisseaux | 17 % |
+| Retard | 7 % |
+| Pirates | 5,5 % |
+| Aliens | 2,3 % |
+| Retour anticipé | 2 % |
+| Trou noir | 0,2 % |
+
+Total 100 %. Par rapport au code du 2 octobre (§11.3), 7 points passent de « Rien » à « Ressources » ; le reste est inchangé. L'état de la zone visée au moment de la capture n'est pas connu : l'effet d'une zone usée ou épuisée sur ces chances reste à relever (`fleet-14`).
+
+Autres textes de ces écrans :
+- « La simulation chiffre le gain avant le départ » ; ligne « Gain moyen par expédition ≈ 12,4k » sous « Ce que l'expédition peut rapporter » (flotte de la capture).
+- « Ce que trouve une expédition est plafonné par la capacité de soute de la flotte : le surplus reste dans l'espace lointain. »
+- Expéditions simultanées : « 1 dès le niveau 1 de Cosmologie Appliquée, 2 au niveau 4, 3 au niveau 9, 4 au niveau 16. Chacune occupe aussi un emplacement de flotte. » (conforme à la racine carrée, §11.3).
+- « Premium : une expédition simultanée de plus, en plus de celles de la recherche. » Compteur affiché « 0/4 » avec « +1 » au niveau 9. Contredit la page Premium (« aucun achat ne donne d'avantage de jeu ») : non publié, question `fleet-15`.
+- « Une flotte de sondes seules est refusée : il faut au moins une autre coque à bord. »
+- « L'hydrogène couvre l'aller, le retour et chaque heure passée sur place. »
+- « Ressources, vaisseaux à récupérer, retards… ou pirates, aliens et trous noirs : le vide ne promet rien. »

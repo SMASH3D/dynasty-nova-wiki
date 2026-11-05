@@ -46,7 +46,7 @@ updated: "2026-11-05T10:48:15.321Z"
 - **21 octobre 2026** : nouvelle page [Supprimer son compte](/fr/players/account-deletion).
 - **24 octobre 2026** : [FAQ](/fr/getting-started/faq) : d'où vient l'expérience qui fait monter le niveau et la maîtrise de classe.
 - **30 octobre 2026** : nouvelle page [Expérience et niveau](/fr/dynasty/experience) ; [Report de charge](/fr/dynasty/classes/energist) de l'Énergéticien valable pour chaque niveau de mine.
-- **5 novembre 2026** : [expéditions](/fr/fleet/expeditions) : chaque heure de maintien au-delà de la première ajoute 15 % à la trouvaille ; une zone s'use dès 20 expéditions en 24 h et s'épuise dès 40 ; points d'expédition calculés sur le coût des coques.
+- **5 novembre 2026** : [expéditions](/fr/fleet/expeditions) : chaque heure de maintien au-delà de la première ajoute 15 % à la trouvaille ; une zone s'use dès 20 expéditions en 24 h et s'épuise dès 40 ; points d'expédition calculés sur le coût des coques ; chances de chaque résultat publiées.
 
 ## Pages liées
 
