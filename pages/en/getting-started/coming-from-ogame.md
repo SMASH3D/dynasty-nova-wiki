@@ -8,7 +8,7 @@ description: "What sets Dynasty Nova apart from OGame."
 tags: ["getting-started"]
 published: true
 created: "2026-10-02T13:10:14.677Z"
-updated: "2026-10-06T08:04:45.390Z"
+updated: "2026-11-05T10:48:20.790Z"
 ---
 
 # Coming from OGame?
