@@ -39,6 +39,8 @@ game_version: "Serveur 2.1.0 · Client 3.1.0"
 9. An over-visited area **wears out**: from **20 expeditions** resolved in the same system's deep space within 24 hours, all players combined, the area is "worn" and encounters there become rarer; from **40**, it is "depleted" and they become rarer still. If the fleet carries at least one **Scout**, the report gives the area's state.
 
 ### Outcomes
+Before departure, the fleet preparation screen shows the **odds of each outcome** (table below) and the estimated **average gain** per expedition for the chosen fleet.
+
 10. **Resources**: a single resource type per find, metal, crystal or hydrogen. The amount is proportional to the fleet's expedition points (rule 15), in metal equivalent: divided by 2 for crystal and by 3 for hydrogen. The find is capped by **free cargo space**: the excess is lost, and the report says so.
 11. **Ships**: abandoned ships join your fleet, worth half a resource find. They take no cargo space. You can find up to the rank right above your best ship aboard (table below). Never a Stellar Colossus, Space Pioneer, Salvager or Solar Collector, which do not count for the rank either. Found ships bring their military points.
 12. **Delay**: the way back is lengthened by 2, 3 or 5 times the chosen hold duration, depending on the size of the event. **Early return**: the way back is divided by 2, 3 or 5.
@@ -71,6 +73,21 @@ game_version: "Serveur 2.1.0 · Client 3.1.0"
 | 9 | 9 h | 3 |
 | 12 | 12 h | 3 |
 | 16 | 16 h | 4 |
+
+### Odds of each outcome
+
+| Outcome | Odds |
+|---|---|
+| Resources | 40% |
+| Nothing | 26% |
+| Ships | 17% |
+| Delay | 7% |
+| Pirates | 5.5% |
+| Aliens | 2.3% |
+| Early return | 2% |
+| Black hole | 0.2% |
+
+Odds shown by the game before departure (read on 5 November 2026). How they change in a worn or depleted area (rule 9) has not been read yet.
 
 ### Expedition points cap
 
@@ -106,6 +123,7 @@ Example: a fleet whose best ship is a Battleship (rank 7) can find up to a Preda
 ## Common pitfalls
 
 - **Staying longer pays, at a price**: +15% find per hour beyond the first, against a fleet tied up longer, more hydrogen on site and a longer delay if one happens.
+- **One expedition in four brings nothing**: "Nothing" comes up 26% of the time, and 8% of departures end in a battle or a black hole.
 - **Keep cargo space free**: a resource find that does not fit is lost, and the trip's hydrogen already takes part of the holds.
 - **Switch systems**: a busy deep space runs dry, whoever visited it.
 - **A recall cancels everything**: the fleet comes home empty-handed, after a way back as long as the way out.
