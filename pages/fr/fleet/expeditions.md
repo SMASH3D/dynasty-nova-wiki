@@ -34,9 +34,9 @@ game_version: "Serveur 2.1.0 · Client 3.1.0"
 6. **Hydrogène** : l'aller, le retour et le maintien sont payés au départ. Le maintien coûte $\lceil h \times C / 10 \rceil$, où $h$ est le nombre d'heures et $C$ la somme des consommations de base des vaisseaux envoyés (consommation × nombre). Aucun talent d'économie de carburant ne s'applique au maintien. Tout l'hydrogène du voyage doit tenir dans les soutes avec la cargaison.
 
 ### Sur place
-7. La **durée de maintien ne change pas les chances** de trouver quelque chose. Elle allonge seulement le voyage et la consommation, et un éventuel retard (règle 12).
+7. **Chaque heure de maintien au-delà de la première ajoute 15 %** à la trouvaille : ×1,15 pour 2 h, ×1,30 pour 3 h, ×1,45 pour 4 h. En contrepartie, la flotte reste absente plus longtemps, brûle plus d'hydrogène sur place (règle 6), et un éventuel retard s'allonge d'autant (règle 12).
 8. **Rappel** : une flotte rappelée pendant son maintien refait tout le trajet de l'aller pour rentrer et ne rapporte **rien**, ni résultat ni rapport.
-9. Une zone trop visitée **s'épuise** : à partir de **10 expéditions** résolues sur l'espace lointain d'un même système en 24 heures, tous joueurs confondus, la zone est « exploitée » et les chances de trouvaille baissent ; à partir de **25**, elle est « épuisée » et elles baissent davantage. La part perdue va au résultat « rien ». Si la flotte emporte au moins un **Éclaireur**, le rapport indique l'état de la zone.
+9. Une zone trop visitée **s'use** : à partir de **20 expéditions** résolues sur l'espace lointain d'un même système en 24 heures, tous joueurs confondus, la zone est « usée » et les rencontres s'y font plus rares ; à partir de **40**, elle est « épuisée » et elles se raréfient encore. Si la flotte emporte au moins un **Éclaireur**, le rapport indique l'état de la zone.
 
 ### Résultats
 10. **Ressources** : un seul type de ressource par trouvaille, métal, cristal ou hydrogène. Le montant est proportionnel aux points d'expédition de la flotte (règle 15), en équivalent métal : il est divisé par 2 pour le cristal et par 3 pour l'hydrogène. La trouvaille est limitée par la **soute libre** : le surplus est perdu, et le rapport le signale.
@@ -46,14 +46,15 @@ game_version: "Serveur 2.1.0 · Client 3.1.0"
 14. **Trou noir** : la flotte entière et sa cargaison sont perdues. **Rien** : la flotte rentre comme elle est partie.
 
 ### Taille des trouvailles
-15. **Points d'expédition** = max(200, structure totale de la flotte / 200, arrondi à l'inférieur), plafonnés selon les points du **meilleur joueur humain** de l'univers (table plus bas). Plus la flotte est grande, plus elle rapporte, jusqu'au plafond.
+15. **Points d'expédition** = coût en métal + cristal des coques envoyées, divisé par 200 (arrondi à l'inférieur, 200 au minimum), plafonné selon les points du **meilleur joueur humain** de l'univers (table plus bas). Le jeu affiche le plafond en vigueur, par exemple « jusqu'à 2,5k points dans cet univers ». Plus la flotte est grande, plus elle rapporte, jusqu'au plafond ; la durée de maintien ajoute ensuite son bonus (règle 7).
 
 ## Exemple chiffré
 
 50 Cargos stellaires et 1 Éclaireur partent de [2:40:8] vers l'espace lointain [2:40:16], avec Propulseur Chimique 6, à 100 %, pour 3 heures de maintien. Le meilleur joueur de l'univers a 500 000 points.
 - Distance : 1 000 + 5 × 8 = **1 040**. Vitesse de la flotte : celle du Cargo, 7 500 × 1,6 = 12 000. Trajet : **3 268 s** (54 min 28 s) à l'aller comme au retour.
 - Hydrogène : 297 par trajet, soit 594 pour l'aller-retour, plus le maintien $\lceil 3 \times 2\,501 / 10 \rceil$ = 751 : **1 345** payés au départ. Ils voyagent dans les 1 250 005 de soute.
-- Structure totale : 50 × 12 000 + 1 000 = 601 000. Points d'expédition : 601 000 / 200 = **3 005**, sous le plafond de **6 000** (meilleur joueur sous 1 000 000 de points).
+- Coût des coques : 50 × (6 000 + 6 000) + 1 000 = 601 000 en métal et cristal. Points d'expédition : 601 000 / 200 = **3 005**, sous le plafond de **6 000** (meilleur joueur sous 1 000 000 de points).
+- Maintien de 3 heures : +2 × 15 % = +30 %, soit une trouvaille calculée sur environ **3 906** points.
 - Avec Cosmologie Appliquée 5 : jusqu'à 5 heures de maintien et **2** expéditions simultanées.
 
 ## Données détaillées
@@ -104,9 +105,9 @@ Exemple : une flotte dont le meilleur vaisseau est un Cuirassé (rang 7) peut tr
 
 ## Pièges fréquents
 
-- **Rester plus longtemps ne sert à rien** pour les chances : choisissez la durée selon votre emploi du temps. Elle allonge en plus un éventuel retard.
+- **Rester plus longtemps rapporte, mais se paie** : +15 % de trouvaille par heure au-delà de la première, contre une flotte immobilisée plus longtemps, plus d'hydrogène sur place et un retard éventuel plus long.
 - **Prévoyez de la soute** : une trouvaille de ressources qui ne rentre pas est perdue, et l'hydrogène du voyage occupe déjà une partie des soutes.
-- **Changez de système** : l'espace lointain très fréquenté s'épuise, quel que soit le joueur qui l'a visité.
+- **Changez de système** : l'espace lointain très fréquenté s'use dès 20 expéditions en 24 heures, quel que soit le joueur qui l'a visité.
 - **Un rappel annule tout** : la flotte rentre bredouille, après un retour aussi long que l'aller.
 - **Le trou noir existe** : n'envoyez pas votre flotte principale.
 

@@ -65,7 +65,7 @@ updated: "2026-10-06T08:04:45.390Z"
 - **Galaxy size**: the number of systems per galaxy depends on the universe (99 on Redline, against a fixed 499 in OGame).
 - **Position bonus**: colonies only (crystal at positions 1 to 3, metal at positions 6 to 10), never on the mother planet.
 - **Living temperature**: it swings every month between the planet's minimum and maximum.
-- **Expeditions**: no dark matter or merchant; pirates and aliens fought by the real combat engine; cap set by the universe's best player; areas that wear out; time spent on site does not change the odds.
+- **Expeditions**: no dark matter or merchant; pirates and aliens fought by the real combat engine; cap set by the universe's best player; areas that wear out; each hour on site beyond the first adds 15% to the find.
 - **Moon formation**: chance and threshold configurable per universe.
 - **Vacation mode**: 48 h minimum, no maximum; espionage and recycling remain possible, with an empty report.
 - **Battlecruiser** (Predator): also requires Ion Technology 5.

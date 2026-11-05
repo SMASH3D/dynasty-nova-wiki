@@ -62,7 +62,7 @@ updated: "2026-10-06T08:04:53.036Z"
 - **Taille des galaxies** : le nombre de systèmes par galaxie dépend de l'univers (99 sur Redline, contre 499 fixes dans OGame).
 - **Bonus de position** : uniquement sur les colonies (cristal en positions 1 à 3, métal en positions 6 à 10), jamais sur la planète mère.
 - **Température vivante** : elle oscille chaque mois entre le minimum et le maximum de la planète.
-- **Expéditions** : pas de matière noire ni de marchand ; pirates et aliens joués par le vrai moteur de combat ; plafond fixé par le meilleur joueur de l'univers ; zones qui s'épuisent ; la durée sur place ne change pas les chances.
+- **Expéditions** : pas de matière noire ni de marchand ; pirates et aliens joués par le vrai moteur de combat ; plafond fixé par le meilleur joueur de l'univers ; zones qui s'usent ; chaque heure sur place au-delà de la première ajoute 15 % à la trouvaille.
 - **Formation de lune** : chance et seuil réglables par univers.
 - **Mode vacances** : 48 h minimum, pas de maximum ; l'espionnage et le recyclage restent possibles, avec un rapport vide.
 - **Traqueur** (Prédateur) : exige en plus Manipulation Ionique 5.

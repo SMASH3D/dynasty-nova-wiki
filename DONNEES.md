@@ -541,7 +541,7 @@ Source : `astro-nova-backend` `main` au commit `7b255c83` ; catalogues lus dans 
 - Maintien 1 h à niveau de Cosmologie h, par heure ; carburant du maintien = ⌈h × Σ conso de base / 10⌉ (`HoldDuration::fuelFor()`, consommation d'origine), hors économies de carburant.
 - Simultanées = ⌊√Cosmologie⌋ (`ExpeditionSlots`), **+1 en Premium** (`PREMIUM_BONUS`, Backend #442) : non écrit dans le wiki tant que `patch-04` est ouvert.
 - Rappel en maintien : aucun résultat ni rapport. Le raccourci « skip-hold » est un outil de test interdit en production.
-- Points d'expédition = max(200, ⌊Σ structure / 200⌋) (`ExpeditionPoints`), plafond selon le meilleur joueur humain (`ExpeditionFindCap`, table inchangée du §11.3).
+- Points d'expédition = max(200, ⌊Σ structure / 200⌋) (`ExpeditionPoints`), plafond selon le meilleur joueur humain (`ExpeditionFindCap`, table inchangée du §11.3). **Règles modifiées le 5 novembre 2026 : voir §23.**
 - Effets publiés : diviseurs 1 / 2 / 3 (`FoundResource::amountFor()`), vaisseaux = moitié de la valeur (`ExpeditionResolver`), hors soute, échelle `ExpeditionShipLadder::standard` (rang + 1, exclusions) ; retard + maintien × 2/3/5, retour anticipé ÷ 2/3/5 (`ReturnLegShift`) ; pirates −3, aliens +3 (`HostileFaction::RESEARCH_GAP`) ; débris 10 % (`DebrisRule::expedition()`) ; trou noir = perte totale ; épuisement à 10 et 25 expéditions sur 24 h par espace lointain, tous joueurs (`DepletionLevel`, `ExpeditionVisits`) ; état de la zone donné si un Éclaireur est à bord.
 - **À republier (décision du 21 octobre 2026, `fleet-12`)** : poids des résultats (`ExpeditionOutcomeWeights::default()`), probabilités de taille et plages de facteur (`FindSize`), choix de la ressource (`FoundResource::fromRoll()`), part des flottes pirates et aliens et sa dispersion, composition des escortes (`HostileFaction`, `EncounterShare`), multiplicateurs d'épuisement (`DepletionLevel::oddsKept()`), talent Flair de prospecteur. Les valeurs ne sont pas recopiées ici (dépôt public) ; celles du §11.3 datent du 2 octobre et étaient publiées sur la page jusqu'au 15 octobre 2026 : retirées de la page, leur maintien au §11.3 est signalé au responsable.
 
@@ -802,8 +802,8 @@ Conditions : expéditions activées dans l'univers ; Cosmologie Appliquée ≥ 1
 | Trou noir | 0,2 % |
 
 - Pas de matière noire, de Points stellaires ni de marchand.
-- **La durée de maintien ne change pas les probabilités** (le texte du jeu qui dit le contraire est faux).
-- Épuisement d'une case : à partir de 10 expéditions terminées dessus en 24 h, chances de trouvaille × 0,75 ; à partir de 25, × 0,5 ; le reste va à « rien ».
+- ~~La durée de maintien ne change pas les probabilités~~ : **remplacé le 5 novembre 2026** (§23), chaque heure au-delà de la première ajoute 15 % à la trouvaille.
+- (Avant le 5 novembre 2026, seuils remplacés par 20 et 40, §23.) Épuisement d'une case : à partir de 10 expéditions terminées dessus en 24 h, chances de trouvaille × 0,75 ; à partir de 25, × 0,5 ; le reste va à « rien ».
 - Taille : normale 89 % (facteur 10 à 50), grande 10 % (50 à 100), énorme 1 % (100 à 200).
 - Points d'expédition = max(200, structure totale de la flotte / 200), plafonnés selon les points du meilleur joueur humain de l'univers :
 
@@ -1126,7 +1126,7 @@ Backend `origin/main` 7b255c83 (lecture seule), front `origin/main` 33217140 (li
 
 | Où | Texte actuel | Problème |
 |---|---|---|
-| Expéditions | « Plus la flotte reste, plus elle a de chances » | La durée ne change pas les probabilités (`fleet-06`) |
+| Expéditions | « Plus la flotte reste, plus elle a de chances » | Réglé le 5 novembre 2026 : la durée augmente la trouvaille (+15 % par heure au-delà de la première), le texte du jeu a été réécrit (§23) |
 | Aide, Boutique et Points stellaires (PvP) | « aucun avantage de jeu » | Le Premium (files plus longues) s'obtient en Points stellaires (`patch-02`) |
 | Nom du bâtiment `planetary_base` (FR) | « Base planetaire » | Accent manquant |
 | Écran de connexion | Lien « conditions d'utilisation » | Page inexistante (`players-09`) |
@@ -1406,3 +1406,18 @@ Source : `astro-nova-backend` branche `feat/account-credentials` (`7eeb2e3f`, PR
 - Adresse : code de 6 chiffres (`confirm_email_change_request_payload.xml`), `EMAIL_CHANGE_CODE_LIFETIME = '+30 minutes'`, envoyé à la nouvelle adresse ; une nouvelle demande remplace la précédente ; l'adresse actuelle reste celle du compte jusqu'à la confirmation (C4). `EMAIL_CHANGE_COOLDOWN_HOURS = 24`, compté depuis la dernière confirmation. Adresse déjà prise : demande acceptée sans envoi de code (`SendEmailChangeCodeHandler`, C3), refus à la confirmation (`credentials.email_unavailable`) ; la page n'explique pas l'absence de code (pour ne pas révéler qui joue), elle dit seulement qu'une adresse prise ne peut pas l'être. Mail à l'ancienne adresse avec la nouvelle (`SendEmailChangedEmailHandler`). Non publié : le client de paiement suit l'adresse (`MovePaymentCustomer`).
 - Mot de passe : 5 caractères au moins, confirmation identique (`change_password_request_payload.xml`), différent de l'actuel (`credentials.password_unchanged`). Toutes les sessions antérieures coupées (`User::areSessionsRevokedSince`, `sessions_revoked_at` comparé à l'émission des jetons, CRD-002) ; le front reconnecte l'appareil qui a fait le changement. Mail « Mot de passe modifié », aussi après une réinitialisation par le lien (`SendUserPasswordUpdatedEmailHandler`). Non publié : mécanique des jetons et `refresh_token_ttl`.
 - Exemple recalculé par script : pseudo changé le 27/10 à 14:00, prochain le 03/11 à 14:00, ancien affiché et réservé jusqu'au 26/11 à 14:00 ; demande d'adresse à 14:05, code valable jusqu'à 14:35, saisi à 14:12, prochain changement le 28/10 à 14:12.
+
+## 23. Expéditions, nouvelles règles (textes du jeu, transmis par le responsable le 5 novembre 2026)
+
+Source : textes affichés par le jeu, cités par le responsable du wiki le 5 novembre 2026. Ils remplacent les seuils d'épuisement et la règle de durée du §11.3 et du §4 (code du 15 octobre 2026).
+
+> Une trouvaille grandit avec votre flotte (coût métal + cristal des coques ÷ 200), jusqu'à 2,5k points dans cet univers. Chaque heure de maintien au-delà de la première ajoute 15 %. Une zone s'use dès 20 expéditions en 24 h et s'épuise dès 40 : les rencontres s'y font plus rares.
+
+> 1h de maintien supplémentaire possible par niveau de cosmologie appliquée. Chaque heure au-delà de la première augmente la trouvaille, mais allonge l'absence de la flotte et brûle plus d'hydrogène sur place.
+
+Ce qu'on en retient :
+- **Points d'expédition** : coût en métal + cristal des coques envoyées, divisé par 200. Pour les vaisseaux du jeu, c'est la même valeur que la structure (structure = métal + cristal du coût). Le plafond affiché (« 2,5k points dans cet univers ») correspond à la ligne « moins de 100 000 points » de la table du plafond (§11.3).
+- **Durée de maintien** : de 1 h à 1 h par niveau de Cosmologie Appliquée (inchangé). Chaque heure au-delà de la première ajoute **15 %** à la trouvaille : ×1,15 pour 2 h, ×1,30 pour 3 h, ×1,45 pour 4 h (lecture additive de « chaque heure ajoute 15 % », à confirmer : `fleet-14`). Contrepartie : absence plus longue, hydrogène du maintien, retard proportionnel à la durée.
+- **Zone** : « usée » dès **20** expéditions en 24 h, « épuisée » dès **40** (au lieu de 10 et 25) ; les rencontres s'y font plus rares. Effet chiffré à relever dans le code (`fleet-12`).
+- Non précisé par ces textes, à confirmer (`fleet-14`) : plancher de 200 points toujours en vigueur ; bonus de durée appliqué avant ou après le plafond ; effet de la durée sur les chances de chaque résultat ; bonus additif ou composé.
+

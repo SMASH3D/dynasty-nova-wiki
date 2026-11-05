@@ -34,9 +34,9 @@ game_version: "Serveur 2.1.0 · Client 3.1.0"
 6. **Hydrogen**: the way out, the way back and the hold are paid at departure. The hold costs $\lceil h \times C / 10 \rceil$, where $h$ is the number of hours and $C$ the sum of the base consumption of the ships sent (consumption × count). No fuel-saving talent applies to the hold. All the trip's hydrogen must fit in the holds alongside the cargo.
 
 ### In deep space
-7. The **hold duration does not change the odds** of finding something. It only lengthens the trip and the fuel bill, and any delay (rule 12).
+7. **Each hour of hold beyond the first adds 15%** to the find: ×1.15 for 2 h, ×1.30 for 3 h, ×1.45 for 4 h. In return, the fleet stays away longer, burns more hydrogen on site (rule 6), and any delay grows accordingly (rule 12).
 8. **Recall**: a fleet recalled during its hold flies the whole way out again to get home and brings back **nothing**, neither outcome nor report.
-9. An over-visited area **runs dry**: from **10 expeditions** resolved in the same system's deep space within 24 hours, all players combined, the area is "exploited" and the odds of a find drop; from **25**, it is "depleted" and they drop further. The lost share goes to the "nothing" outcome. If the fleet carries at least one **Scout**, the report gives the area's state.
+9. An over-visited area **wears out**: from **20 expeditions** resolved in the same system's deep space within 24 hours, all players combined, the area is "worn" and encounters there become rarer; from **40**, it is "depleted" and they become rarer still. If the fleet carries at least one **Scout**, the report gives the area's state.
 
 ### Outcomes
 10. **Resources**: a single resource type per find, metal, crystal or hydrogen. The amount is proportional to the fleet's expedition points (rule 15), in metal equivalent: divided by 2 for crystal and by 3 for hydrogen. The find is capped by **free cargo space**: the excess is lost, and the report says so.
@@ -46,14 +46,15 @@ game_version: "Serveur 2.1.0 · Client 3.1.0"
 14. **Black hole**: the whole fleet and its cargo are lost. **Nothing**: the fleet comes back as it left.
 
 ### Size of finds
-15. **Expedition points** = max(200, total fleet structure / 200, rounded down), capped by the points of the universe's **top human player** (table below). The bigger the fleet, the more it brings back, up to the cap.
+15. **Expedition points** = metal + crystal cost of the hulls sent, divided by 200 (rounded down, 200 at least), capped by the points of the universe's **top human player** (table below). The game shows the cap in force, for example "up to 2.5k points in this universe". The bigger the fleet, the more it brings back, up to the cap; the hold duration then adds its bonus (rule 7).
 
 ## Worked example
 
 50 Stellar Freighters and 1 Scout fly from [2:40:8] to deep space [2:40:16], with Combustion Drive 6, at 100%, for a 3-hour hold. The universe's top player has 500,000 points.
 - Distance: 1,000 + 5 × 8 = **1,040**. Fleet speed: the Freighter's, 7,500 × 1.6 = 12,000. Trip: **3,268 s** (54 min 28 s) each way.
 - Hydrogen: 297 per leg, so 594 for the round trip, plus the hold $\lceil 3 \times 2{,}501 / 10 \rceil$ = 751: **1,345** paid at departure. It travels in the 1,250,005 of cargo space.
-- Total structure: 50 × 12,000 + 1,000 = 601,000. Expedition points: 601,000 / 200 = **3,005**, under the cap of **6,000** (top player under 1,000,000 points).
+- Hull cost: 50 × (6,000 + 6,000) + 1,000 = 601,000 in metal and crystal. Expedition points: 601,000 / 200 = **3,005**, under the cap of **6,000** (top player under 1,000,000 points).
+- 3-hour hold: +2 × 15% = +30%, so the find is worked out on about **3,906** points.
 - With Astrophysics 5: up to 5 hours of hold and **2** simultaneous expeditions.
 
 ## Detailed data
@@ -104,7 +105,7 @@ Example: a fleet whose best ship is a Battleship (rank 7) can find up to a Preda
 
 ## Common pitfalls
 
-- **Staying longer does not help** the odds: pick the duration to suit your schedule. It also lengthens any delay.
+- **Staying longer pays, at a price**: +15% find per hour beyond the first, against a fleet tied up longer, more hydrogen on site and a longer delay if one happens.
 - **Keep cargo space free**: a resource find that does not fit is lost, and the trip's hydrogen already takes part of the holds.
 - **Switch systems**: a busy deep space runs dry, whoever visited it.
 - **A recall cancels everything**: the fleet comes home empty-handed, after a way back as long as the way out.

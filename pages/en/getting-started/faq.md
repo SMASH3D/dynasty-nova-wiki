@@ -52,8 +52,8 @@ Your fleet slots are full: you have 1 + your Quantum Computing level, expedition
 **Can I make a grouped attack or defend an ally?**
 No: these missions do not exist. See [Missions](/en/fleet/missions).
 
-**Does staying longer on an expedition raise the odds?**
-No, duration does not change the odds. See [Expeditions](/en/fleet/expeditions).
+**Does staying longer on an expedition bring back more?**
+Yes: each hour of hold beyond the first adds 15% to the find, but the fleet stays away longer and burns more hydrogen on site. See [Expeditions](/en/fleet/expeditions).
 
 ## Level and talents
 

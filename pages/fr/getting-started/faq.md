@@ -52,8 +52,8 @@ Vos emplacements de flotte sont pleins : vous en avez 1 + votre niveau de Calcul
 **Puis-je faire une attaque groupée ou défendre un allié ?**
 Non : ces missions n'existent pas. Voir [Les missions](/fr/fleet/missions).
 
-**Rester plus longtemps en expédition augmente-t-il les chances ?**
-Non, la durée ne change pas les chances. Voir [Expéditions](/fr/fleet/expeditions).
+**Rester plus longtemps en expédition rapporte-t-il plus ?**
+Oui : chaque heure de maintien au-delà de la première ajoute 15 % à la trouvaille, mais la flotte reste absente plus longtemps et brûle plus d'hydrogène sur place. Voir [Expéditions](/fr/fleet/expeditions).
 
 ## Niveau et talents
 

@@ -1,0 +1,86 @@
+{
+ "fr/fleet/expeditions": [
+  [
+   "7. La **durée de maintien ne change pas les chances** de trouver quelque chose. Elle allonge seulement le voyage et la consommation, et un éventuel retard (règle 12).",
+   "7. **Chaque heure de maintien au-delà de la première ajoute 15 %** à la trouvaille : ×1,15 pour 2 h, ×1,30 pour 3 h, ×1,45 pour 4 h. En contrepartie, la flotte reste absente plus longtemps, brûle plus d'hydrogène sur place (règle 6), et un éventuel retard s'allonge d'autant (règle 12)."
+  ],
+  [
+   "9. Une zone trop visitée **s'épuise** : à partir de **10 expéditions** résolues sur l'espace lointain d'un même système en 24 heures, tous joueurs confondus, la zone est « exploitée » et les chances de trouvaille baissent ; à partir de **25**, elle est « épuisée » et elles baissent davantage. La part perdue va au résultat « rien ».",
+   "9. Une zone trop visitée **s'use** : à partir de **20 expéditions** résolues sur l'espace lointain d'un même système en 24 heures, tous joueurs confondus, la zone est « usée » et les rencontres s'y font plus rares ; à partir de **40**, elle est « épuisée » et elles se raréfient encore."
+  ],
+  [
+   "15. **Points d'expédition** = max(200, structure totale de la flotte / 200, arrondi à l'inférieur), plafonnés selon les points du **meilleur joueur humain** de l'univers (table plus bas). Plus la flotte est grande, plus elle rapporte, jusqu'au plafond.",
+   "15. **Points d'expédition** = coût en métal + cristal des coques envoyées, divisé par 200 (arrondi à l'inférieur, 200 au minimum), plafonné selon les points du **meilleur joueur humain** de l'univers (table plus bas). Le jeu affiche le plafond en vigueur, par exemple « jusqu'à 2,5k points dans cet univers ». Plus la flotte est grande, plus elle rapporte, jusqu'au plafond ; la durée de maintien ajoute ensuite son bonus (règle 7)."
+  ],
+  [
+   "- Structure totale : 50 × 12 000 + 1 000 = 601 000. Points d'expédition : 601 000 / 200 = **3 005**, sous le plafond de **6 000** (meilleur joueur sous 1 000 000 de points).",
+   "- Coût des coques : 50 × (6 000 + 6 000) + 1 000 = 601 000 en métal et cristal. Points d'expédition : 601 000 / 200 = **3 005**, sous le plafond de **6 000** (meilleur joueur sous 1 000 000 de points).\n- Maintien de 3 heures : +2 × 15 % = +30 %, soit une trouvaille calculée sur environ **3 906** points."
+  ],
+  [
+   "- **Rester plus longtemps ne sert à rien** pour les chances : choisissez la durée selon votre emploi du temps. Elle allonge en plus un éventuel retard.",
+   "- **Rester plus longtemps rapporte, mais se paie** : +15 % de trouvaille par heure au-delà de la première, contre une flotte immobilisée plus longtemps, plus d'hydrogène sur place et un retard éventuel plus long."
+  ],
+  [
+   "- **Changez de système** : l'espace lointain très fréquenté s'épuise, quel que soit le joueur qui l'a visité.",
+   "- **Changez de système** : l'espace lointain très fréquenté s'use dès 20 expéditions en 24 heures, quel que soit le joueur qui l'a visité."
+  ]
+ ],
+ "en/fleet/expeditions": [
+  [
+   "7. The **hold duration does not change the odds** of finding something. It only lengthens the trip and the fuel bill, and any delay (rule 12).",
+   "7. **Each hour of hold beyond the first adds 15%** to the find: ×1.15 for 2 h, ×1.30 for 3 h, ×1.45 for 4 h. In return, the fleet stays away longer, burns more hydrogen on site (rule 6), and any delay grows accordingly (rule 12)."
+  ],
+  [
+   "9. An over-visited area **runs dry**: from **10 expeditions** resolved in the same system's deep space within 24 hours, all players combined, the area is \"exploited\" and the odds of a find drop; from **25**, it is \"depleted\" and they drop further. The lost share goes to the \"nothing\" outcome.",
+   "9. An over-visited area **wears out**: from **20 expeditions** resolved in the same system's deep space within 24 hours, all players combined, the area is \"worn\" and encounters there become rarer; from **40**, it is \"depleted\" and they become rarer still."
+  ],
+  [
+   "15. **Expedition points** = max(200, total fleet structure / 200, rounded down), capped by the points of the universe's **top human player** (table below). The bigger the fleet, the more it brings back, up to the cap.",
+   "15. **Expedition points** = metal + crystal cost of the hulls sent, divided by 200 (rounded down, 200 at least), capped by the points of the universe's **top human player** (table below). The game shows the cap in force, for example \"up to 2.5k points in this universe\". The bigger the fleet, the more it brings back, up to the cap; the hold duration then adds its bonus (rule 7)."
+  ],
+  [
+   "- Total structure: 50 × 12,000 + 1,000 = 601,000. Expedition points: 601,000 / 200 = **3,005**, under the cap of **6,000** (top player under 1,000,000 points).",
+   "- Hull cost: 50 × (6,000 + 6,000) + 1,000 = 601,000 in metal and crystal. Expedition points: 601,000 / 200 = **3,005**, under the cap of **6,000** (top player under 1,000,000 points).\n- 3-hour hold: +2 × 15% = +30%, so the find is worked out on about **3,906** points."
+  ],
+  [
+   "- **Staying longer does not help** the odds: pick the duration to suit your schedule. It also lengthens any delay.",
+   "- **Staying longer pays, at a price**: +15% find per hour beyond the first, against a fleet tied up longer, more hydrogen on site and a longer delay if one happens."
+  ]
+ ],
+ "fr/getting-started/faq": [
+  [
+   "**Rester plus longtemps en expédition augmente-t-il les chances ?**\nNon, la durée ne change pas les chances. Voir [Expéditions](/fr/fleet/expeditions).",
+   "**Rester plus longtemps en expédition rapporte-t-il plus ?**\nOui : chaque heure de maintien au-delà de la première ajoute 15 % à la trouvaille, mais la flotte reste absente plus longtemps et brûle plus d'hydrogène sur place. Voir [Expéditions](/fr/fleet/expeditions)."
+  ]
+ ],
+ "en/getting-started/faq": [
+  [
+   "**Does staying longer on an expedition raise the odds?**\nNo, duration does not change the odds. See [Expeditions](/en/fleet/expeditions).",
+   "**Does staying longer on an expedition bring back more?**\nYes: each hour of hold beyond the first adds 15% to the find, but the fleet stays away longer and burns more hydrogen on site. See [Expeditions](/en/fleet/expeditions)."
+  ]
+ ],
+ "fr/getting-started/coming-from-ogame": [
+  [
+   "zones qui s'épuisent ; la durée sur place ne change pas les chances.",
+   "zones qui s'usent ; chaque heure sur place au-delà de la première ajoute 15 % à la trouvaille."
+  ]
+ ],
+ "en/getting-started/coming-from-ogame": [
+  [
+   "areas that wear out; time spent on site does not change the odds.",
+   "areas that wear out; each hour on site beyond the first adds 15% to the find."
+  ]
+ ],
+ "fr/misc/changelog": [
+  [
+   "- **30 octobre 2026** : nouvelle page [Expérience et niveau](/fr/dynasty/experience) ; [Report de charge](/fr/dynasty/classes/energist) de l'Énergéticien valable pour chaque niveau de mine.",
+   "- **30 octobre 2026** : nouvelle page [Expérience et niveau](/fr/dynasty/experience) ; [Report de charge](/fr/dynasty/classes/energist) de l'Énergéticien valable pour chaque niveau de mine.\n- **5 novembre 2026** : [expéditions](/fr/fleet/expeditions) : chaque heure de maintien au-delà de la première ajoute 15 % à la trouvaille ; une zone s'use dès 20 expéditions en 24 h et s'épuise dès 40 ; points d'expédition calculés sur le coût des coques."
+  ]
+ ],
+ "en/misc/changelog": [
+  [
+   "- **30 October 2026**: new [Experience and level](/en/dynasty/experience) page; the Energetician's [Deferred Load](/en/dynasty/classes/energist) applies to every mine level.",
+   "- **30 October 2026**: new [Experience and level](/en/dynasty/experience) page; the Energetician's [Deferred Load](/en/dynasty/classes/energist) applies to every mine level.\n- **5 November 2026**: [expeditions](/en/fleet/expeditions): each hour of hold beyond the first adds 15% to the find; an area wears out from 20 expeditions in 24 h and is depleted from 40; expedition points worked out on hull cost."
+  ]
+ ]
+}
