@@ -117,4 +117,4 @@ updated: "2026-10-30T20:31:30.210Z"
 
 ## Communauté
 
-Rejoignez le Discord de Dynasty Nova : https://discord.gg/mpKjSWFrz
+Rejoignez le Discord de Dynasty Nova : https://discord.gg/nmt2bse7cR

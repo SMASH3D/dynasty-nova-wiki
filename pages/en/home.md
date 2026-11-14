@@ -120,4 +120,4 @@ updated: "2026-10-30T20:31:11.420Z"
 
 ## Community
 
-Join the Dynasty Nova Discord: https://discord.gg/mpKjSWFrz
+Join the Dynasty Nova Discord: https://discord.gg/nmt2bse7cR
