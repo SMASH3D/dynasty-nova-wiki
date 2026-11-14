@@ -72,4 +72,4 @@ Dans les univers PvP, la boutique ne vend que des cosmétiques ; les Points stel
 
 - [Premiers pas](/fr/getting-started/first-steps)
 - [Glossaire et nomenclature](/fr/getting-started/glossary)
-- Discord de la communauté : https://discord.gg/mpKjSWFrz
+- Discord de la communauté : https://discord.gg/nmt2bse7cR

@@ -72,4 +72,4 @@ In PvP universes, the shop only sells cosmetics; Stellar Points also pay for pla
 
 - [First steps](/en/getting-started/first-steps)
 - [Glossary and naming](/en/getting-started/glossary)
-- Community Discord: https://discord.gg/mpKjSWFrz
+- Community Discord: https://discord.gg/nmt2bse7cR

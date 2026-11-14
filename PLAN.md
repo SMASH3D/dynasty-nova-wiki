@@ -260,7 +260,7 @@ En bref · encart « paramètre d'univers » si besoin · Règles · Exemple chi
 - `general-03` ✅ Le wiki couvre **tous les univers**. Tout paramètre réglable par univers est signalé par l'encart standard (§8).
 
 ### Accueil
-- `home-01` ✅ Discord : https://discord.gg/mpKjSWFrz
+- `home-01` ✅ Discord : https://discord.gg/nmt2bse7cR
 
 ### Bien démarrer
 - `start-01` ✅ Conseil officiel : se laisser guider par les quêtes.

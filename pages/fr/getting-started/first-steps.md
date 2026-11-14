@@ -74,4 +74,4 @@ Le grade 1 terminé vous rapporte 2 634 métal, 859 cristal, 200 hydrogène et 1
 - [L'énergie](/fr/economy/energy)
 - [Protection des débutants](/fr/players/beginner-protection)
 - [Mode vacances](/fr/players/vacation-mode)
-- Discord de la communauté : https://discord.gg/mpKjSWFrz
+- Discord de la communauté : https://discord.gg/nmt2bse7cR

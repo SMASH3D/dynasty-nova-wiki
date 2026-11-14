@@ -74,4 +74,4 @@ Completing grade 1 gives you 2,634 metal, 859 crystal, 200 hydrogen and 100 expe
 - [Energy](/en/economy/energy)
 - [Beginner protection](/en/players/beginner-protection)
 - [Vacation mode](/en/players/vacation-mode)
-- Community Discord: https://discord.gg/mpKjSWFrz
+- Community Discord: https://discord.gg/nmt2bse7cR
