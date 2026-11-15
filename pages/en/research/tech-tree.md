@@ -118,7 +118,7 @@ graph TB
 | Plasma Ejector | Innovation Center 4, Automaton Factory 2, Orbital Dock 8, Energy Science 8, Plasma Technology 7, Laser Technology 10, Ion Technology 5 |
 | Defensive Barrier | Innovation Center 6, Automaton Factory 2, Orbital Dock 1, Energy Science 3, Shielding Technology 2 |
 | Protective Dome | Innovation Center 6, Automaton Factory 2, Orbital Dock 6, Energy Science 3, Shielding Technology 6 |
-| Interception Missile | Automaton Factory 2, Orbital Dock 1, Ballistic Arsenal 2 |
+| Anti-Ballistic Missile | Automaton Factory 2, Orbital Dock 1, Ballistic Arsenal 2 |
 | Long-Range Warheads | Innovation Center 2, Automaton Factory 2, Orbital Dock 1, Ballistic Arsenal 4, Energy Science 1, Combustion Drive 3, Impulse Drive 1 |
 
 ### Full paths: buildings
@@ -166,9 +166,9 @@ Only buildings with requirements are listed.
 | Hydrogen Condenser | Thermonuclear Reactor (5) |
 | Innovation Center | Energy Science, Laser Technology, Combustion Drive, Quantum Computing (1); Impulse Drive, Armor Technology (2); Espionage Technology, Astrophysics (3); Ion Technology, Plasma Technology, Weapon Systems (4); Stellar Diplomacy (5); Shielding Technology (6); Hyperspace Technology, Hyperspace Drive (7); Stellar Collaboration (10); Graviton Technology (12) |
 | Automaton Factory | Orbital Dock (2); Molecular Assembler (10) |
-| Orbital Dock | Ballistic Arsenal, Solar Collector, Interceptor, Ballistic Projector, Defensive Barrier, Interception Missile, Long-Range Warheads (1); Repair Station, Cargo Shuttle, Photonic Cannon (2); Scout, Assailant (3); Stellar Freighter, Space Pioneer, Salvager, High-Energy Emitter, Ion Battery (4); Corvette (5); Magnetic Accelerator, Protective Dome (6); Battleship (7); Orbital Striker, Predator, Plasma Ejector (8); Annihilator (9); Stellar Colossus (12) |
+| Orbital Dock | Ballistic Arsenal, Solar Collector, Interceptor, Ballistic Projector, Defensive Barrier, Anti-Ballistic Missile, Long-Range Warheads (1); Repair Station, Cargo Shuttle, Photonic Cannon (2); Scout, Assailant (3); Stellar Freighter, Space Pioneer, Salvager, High-Energy Emitter, Ion Battery (4); Corvette (5); Magnetic Accelerator, Protective Dome (6); Battleship (7); Orbital Striker, Predator, Plasma Ejector (8); Annihilator (9); Stellar Colossus (12) |
 | Molecular Assembler | Planetary Modulator (1) |
-| Ballistic Arsenal | Interception Missile (2); Long-Range Warheads (4) |
+| Ballistic Arsenal | Anti-Ballistic Missile (2); Long-Range Warheads (4) |
 | Lunar base | Sensor phalanx, Jump gate (1) |
 
 ### What each technology unlocks

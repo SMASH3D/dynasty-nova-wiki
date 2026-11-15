@@ -52,7 +52,7 @@ updated: "2026-10-02T16:35:54.289Z"
 
 | Français | Anglais | Espagnol | Code |
 |---|---|---|---|
-| Base planetaire | Planetary Base | Base Planetaria | planetary_base |
+| Base planétaire | Planetary Base | Base Planetaria | planetary_base |
 | Base Coloniale | Colonial Base | Base Colonial | planetary_base_colony |
 | Excavateur minéral | Mineral Excavator | Excavadora Mineral | metal_mine |
 | Extracteur cristallin | Crystal Extractor | Extractor de Cristal | crystal_mine |
@@ -71,7 +71,7 @@ updated: "2026-10-02T16:35:54.289Z"
 | Arsenal balistique | Ballistic Arsenal | Arsenal Balístico | missile_silo |
 | Centre logistique | Logistics Center | Centro Logístico | logistics_center |
 | Base lunaire | Lunar base | Base lunar | lunar_base |
-| Phalange de capteur | Sensor phalanx | Falange sensorial | sensor_phalanx |
+| Phalange de capteurs | Sensor phalanx | Falange sensorial | sensor_phalanx |
 | Porte de saut | Jump gate | Puerta de salto | jump_gate |
 
 ### Recherches
@@ -131,7 +131,7 @@ Le jeu affiche le nom français dans toutes les langues. Les noms anglais sont p
 | Éjecteur à plasma | Plasma Ejector | Eyector de plasma | plasma_ejector |
 | Barrière défensive | Defensive Barrier | Barrera defensiva | defensive_barrier |
 | Dôme protecteur | Protective Dome | Cúpula protectora | protective_dome |
-| Intercepteurs | Interceptors (*Interception Missile* dans le wiki) | Interceptores | interceptors |
+| Contre-ogives | Anti-Ballistic Missiles | Contraojivas | interceptors |
 | Ogives longue portée | Long-Range Warheads | Ojivas de largo alcance | long_range_warheads |
 
 ### Missions de flotte
@@ -149,7 +149,7 @@ Le jeu affiche le nom français dans toutes les langues. Les noms anglais sont p
 
 ## Pièges fréquents
 
-- **Intercepteur ou Intercepteurs ?** « Intercepteur » (singulier) est le premier vaisseau de combat. « Intercepteurs » (pluriel) est le missile qui détruit les Ogives longue portée. Le wiki anglais les distingue en « Interceptor » et « Interception Missile ».
+- **Intercepteur ou Contre-ogives ?** L'« Intercepteur » est le premier vaisseau de combat. Les « Contre-ogives » sont les missiles qui abattent les Ogives longue portée ; elles s'appelaient « Intercepteurs » avant le 15/11/2026.
 - **Les codes ne suivent pas les noms** : `battle_cruiser` désigne le Colossus stellaire, pas un croiseur ; `shipyard` est le Dock orbital.
 - **Les noms anglais des recherches** ne sont pas la traduction des noms français. Pour passer d'une langue à l'autre, fiez-vous au code.
 - **Champ de ruines** : c'est le nom que le jeu donne, en français, aux débris laissés par un combat.

@@ -13,7 +13,7 @@ updated: "2026-10-15T18:52:42.079Z"
 
 # Defense
 
-> **In short**: defenses stay on their planet and take part in every battle fought there. They are built at the Orbital Dock, never move and are never plundered. Missiles are stored apart, in the Ballistic Arsenal: Long-Range Warheads destroy an enemy planet's defenses without sending a fleet, Interception Missiles shoot down the ones aimed at yours.
+> **In short**: defenses stay on their planet and take part in every battle fought there. They are built at the Orbital Dock, never move and are never plundered. Missiles are stored apart, in the Ballistic Arsenal: Long-Range Warheads destroy an enemy planet's defenses without sending a fleet, Anti-Ballistic Missiles shoot down the ones aimed at yours.
 {.is-info}
 
 ## Pages in this section

@@ -71,7 +71,7 @@ graph TB
         B3G3(["🔒 5 points in the tree"]):::gate
         B3R3A --- B3G3
         B3R3B --- B3G3
-        B3R4("Recovered Interceptors<br/>3 pts"):::rank
+        B3R4("Recovered Anti-Ballistic Missiles<br/>3 pts"):::rank
         B3G3 --- B3R4
         B3R5{{"Counter-Salvo<br/>1 pt"}}:::key
         B3R4 --- B3R5
@@ -224,7 +224,7 @@ graph TB
 | 2 | **Shaped Charge** | 3 ranks | Your warheads deal 9% more damage. | 3 × 3% |
 | 3 | **A · Casemates** | choice | Your missile silo holds a further 30% more missiles. | |
 |  | **B · Long Reach** |  | Your missiles reach 2 more systems. | |
-| 4 | **Recovered Interceptors** | 3 ranks | An interceptor that downs a warhead has a 15% chance to stay in the silo. | 3 × 5% |
+| 4 | **Recovered Anti-Ballistic Missiles** | 3 ranks | An anti-ballistic missile that downs a warhead has a 15% chance to stay in the silo. | 3 × 5% |
 | 5 | **Counter-Salvo** | key | For 24 h, the base that struck one of your planets is within range of your missiles, even in another galaxy. |  |
 | 6 | **A · Automatic Riposte** | choice | When a strike hits one of your planets, it fires back at once at the base of origin as many warheads as it received, up to 10, taken only from those you mark as the riposte reserve: the rest of the silo is never emptied. | |
 |  | **B · Mass Production** |  | Your missiles build 15% faster. | |
@@ -232,9 +232,9 @@ graph TB
 | 8 | **Lunar Silo** | key | You can build a Ballistic Arsenal on your moons and launch your missiles from them. |  |
 | 9 | **Steel Rain** | ultimate | Once a day, a salvo of at least 20 warheads cannot be intercepted. |  |
 
-- **Deep Pits** and **Casemates** add up: +35% slots, rounded down. An Interception Missile takes 1 slot, a Long-Range Warhead 2.
+- **Deep Pits** and **Casemates** add up: +35% slots, rounded down. An Anti-Ballistic Missile takes 1 slot, a Long-Range Warhead 2.
 - **Long Reach** and **Impulse Reach** add up (5 systems at most) on the base range, Impulse Drive level × 5 − 1. Never outside the galaxy, except against a base targeted by Counter-Salvo.
-- **Recovered Interceptors** is a chance per Interception Missile that downs a warhead.
+- **Recovered Anti-Ballistic Missiles** is a chance per Anti-Ballistic Missile that downs a warhead.
 - **Counter-Salvo**: the base the salvo came from is within range of all your bases for 24 h.
 - **Automatic Riposte**: the riposte reserve is marked base by base. A struck base with no marked warheads does not answer. A riposte never triggers a riposte in return.
 - **Mass Production** shares Quick Stretchers's 15% cap: with both, your missiles build no faster.
@@ -267,7 +267,7 @@ Two caps are shared: the build speed of Quick Stretchers and Mass Production fit
 | Build | Split | What it gets |
 |---|---|---|
 | Fortress | Rampart 15 · Relief 10 | Last Salvo, Battle Stations, defences +9% damage and +5% shield, Counter-Battery, Front Rank, The Moon Holds; repair at 85%, 35% back on losses |
-| Unbreakable | Relief 15 · Silo 10 | Line Reformed, Domes First, repair at 85%, 50% back on losses; Arsenal +35% with Casemates (or range +2 with Long Reach), warheads +9%, Recovered Interceptors, Counter-Salvo |
+| Unbreakable | Relief 15 · Silo 10 | Line Reformed, Domes First, repair at 85%, 50% back on losses; Arsenal +35% with Casemates (or range +2 with Long Reach), warheads +9%, Recovered Anti-Ballistic Missiles, Counter-Salvo |
 | Artillerist | Silo 15 · Rampart 10 | Steel Rain, Lunar Silo, Automatic Riposte or Mass Production, range +3 to +5 systems; Reinforced Concrete, Gun Layers, Counter-Battery, Battle Stations |
 
 Before row 7 of the main branch, place at least 2 points in the second one: the gate requires 12 points, and rows 1 to 6 of a branch only hold 10.

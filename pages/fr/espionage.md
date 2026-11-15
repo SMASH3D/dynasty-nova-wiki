@@ -19,4 +19,4 @@ updated: "2026-10-15T18:54:26.692Z"
 
 - [Espionner](/fr/espionage/spying) : envoyer des Éclaireurs, niveau de détail, risque pour les sondes, vision partagée d'alliance.
 - [Lire un rapport d'espionnage](/fr/espionage/spy-report) : les sections du rapport et l'alerte d'intrusion.
-- [Phalange de capteur](/fr/espionage/sensor-phalanx) : observer les flottes depuis une lune.
+- [Phalange de capteurs](/fr/espionage/sensor-phalanx) : observer les flottes depuis une lune.

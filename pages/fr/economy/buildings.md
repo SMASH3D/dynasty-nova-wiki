@@ -24,14 +24,14 @@ game_version: "Serveur 2.1.0 · Client 3.1.0"
 ## Règles
 
 1. Un bâtiment se construit **niveau par niveau**. Le coût du niveau N vaut le coût du niveau 1 × facteur^(N − 1), arrondi à l'inférieur pour chaque ressource (voir [Formules de l'économie](/fr/economy/formulas)).
-2. **Chaque niveau occupe une case** de la planète. Exceptions : la Base planetaire (une case, niveau unique) et la Station de réparation, qui n'en occupe aucune.
+2. **Chaque niveau occupe une case** de la planète. Exceptions : la Base planétaire (une case, niveau unique) et la Station de réparation, qui n'en occupe aucune.
 3. Un ennemi ne peut **jamais détruire vos bâtiments**. Seul leur propriétaire peut les démolir (voir [Démolir un bâtiment](/fr/economy/demolition)) ; seule la destruction d'une lune emporte les bâtiments de cette lune.
 4. Un bâtiment est **payé au lancement** de sa construction, pas à sa mise en file.
 5. **Points** : chaque niveau rapporte 1 point par tranche de 1 000 ressources dépensées (métal, cristal et hydrogène), comptés dans les points d'économie.
 6. Chaque bâtiment a un **niveau maximum**, sauf les bâtiments lunaires, limités par la place sur la lune.
-7. La **Base planetaire** (Base Coloniale sur une colonie) est présente dès la fondation et ne peut pas être démolie.
+7. La **Base planétaire** (Base Coloniale sur une colonie) est présente dès la fondation et ne peut pas être démolie.
 8. Certains bâtiments demandent une **énergie requise** : la production d'énergie de la planète doit atteindre ce seuil au lancement de la construction, rien n'est consommé.
-9. **Sur une lune** : la Base lunaire, la Phalange de capteur et la Porte de saut, plus la Fabrique d'automates et le Dock orbital, aux mêmes coûts et avec les mêmes prérequis que sur une planète. Une lune démarre avec 1 case ; chaque niveau de Base lunaire en ouvre 3 et en occupe 1, sans dépasser ce que permet le diamètre de la lune.
+9. **Sur une lune** : la Base lunaire, la Phalange de capteurs et la Porte de saut, plus la Fabrique d'automates et le Dock orbital, aux mêmes coûts et avec les mêmes prérequis que sur une planète. Une lune démarre avec 1 case ; chaque niveau de Base lunaire en ouvre 3 et en occupe 1, sans dépasser ce que permet le diamètre de la lune.
 
 ## Exemple chiffré
 
@@ -44,7 +44,7 @@ Faire passer l'Excavateur minéral du niveau 13 au niveau 14 :
 
 | Bâtiment | Catégorie | Rôle | Coût du niveau 1 (métal / cristal / hydrogène) | Facteur | Niveau max | Prérequis | Où |
 |---|---|---|---|---|---|---|---|
-| <img src="/images/illustrations/buildings/base-planetaire.jpg" width="48" alt="Base planetaire / Base Coloniale"> Base planetaire / Base Coloniale | base | Cœur de la planète : 10 000 de stockage par ressource, 20 métal et 10 cristal par heure | donnée à la fondation |  | 1 | aucun | planète |
+| <img src="/images/illustrations/buildings/base-planetaire.jpg" width="48" alt="Base planétaire / Base Coloniale"> Base planétaire / Base Coloniale | base | Cœur de la planète : 10 000 de stockage par ressource, 20 métal et 10 cristal par heure | donnée à la fondation |  | 1 | aucun | planète |
 | <img src="/images/illustrations/buildings/excavateur-mineral.jpg" width="48" alt="Excavateur minéral"> Excavateur minéral | production | Produit le métal | 60 / 15 / 0 | 1,5 | 50 | aucun | planète |
 | <img src="/images/illustrations/buildings/extracteur-cristallin.jpg" width="48" alt="Extracteur cristallin"> Extracteur cristallin | production | Produit le cristal | 48 / 24 / 0 | 1,6 | 50 | aucun | planète |
 | <img src="/images/illustrations/buildings/condensateur-d-hydrogene.jpg" width="48" alt="Condensateur d'hydrogène"> Condensateur d'hydrogène | production | Produit l'hydrogène, davantage sur une planète froide | 225 / 75 / 0 | 1,5 | 50 | aucun | planète |
@@ -62,7 +62,7 @@ Faire passer l'Excavateur minéral du niveau 13 au niveau 14 :
 | <img src="/images/illustrations/facilities/arsenal-balistique.jpg" width="48" alt="Arsenal balistique"> Arsenal balistique | ressource | Stocke les missiles | 20 000 / 20 000 / 1 000 | 2 | 10 | Dock orbital 1 | planète |
 | <img src="/images/illustrations/facilities/centre-logistique.jpg" width="48" alt="Centre logistique"> Centre logistique | ressource | Agrandit les entrepôts de 10 % par niveau | 20 000 / 40 000 / 0 | 2 | 10 | Calcul Quantique 2 | planète |
 | <img src="/images/illustrations/facilities/base-lunaire.jpg" width="48" alt="Base lunaire"> Base lunaire | installation | Rend la surface de la lune constructible : chaque niveau ouvre 3 cases et en occupe 1 | 20 000 / 40 000 / 20 000 | 2 | aucun | aucun | lune |
-| <img src="/images/illustrations/facilities/phalange-de-capteur.jpg" width="48" alt="Phalange de capteur"> Phalange de capteur | installation | Repère les flottes autour d'une planète | 20 000 / 40 000 / 20 000 | 2 | aucun | Base lunaire 1 | lune |
+| <img src="/images/illustrations/facilities/phalange-de-capteur.jpg" width="48" alt="Phalange de capteurs"> Phalange de capteurs | installation | Repère les flottes autour d'une planète | 20 000 / 40 000 / 20 000 | 2 | aucun | Base lunaire 1 | lune |
 | <img src="/images/illustrations/facilities/porte-de-saut.jpg" width="48" alt="Porte de saut"> Porte de saut | installation | Saut instantané entre deux lunes | 2 000 000 / 4 000 000 / 2 000 000 | 2 | aucun | Base lunaire 1, Pliage Spatial 7 | lune |
 
 Le coût du niveau N se calcule avec le facteur : par exemple, le Dock orbital niveau 5 coûte 400 × 2^4 = 6 400 métal, 3 200 cristal et 1 600 hydrogène. Le coût, l'énergie et la production de chaque niveau sont dans l'[annexe : les bâtiments niveau par niveau](/fr/economy/building-levels).

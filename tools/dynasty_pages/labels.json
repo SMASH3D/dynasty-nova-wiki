@@ -1767,8 +1767,8 @@
      }
     },
     "veteran_silo_4": {
-     "name": "Intercepteurs récupérés",
-     "description": "Un intercepteur qui abat une ogive a {{value}} de chances de rester au silo."
+     "name": "Contre-ogives récupérées",
+     "description": "Une contre-ogive qui abat une ogive a {{value}} de chances de rester au silo."
     },
     "veteran_silo_5": {
      "name": "Contre-salve",
@@ -4385,8 +4385,8 @@
      }
     },
     "veteran_silo_4": {
-     "name": "Recovered Interceptors",
-     "description": "An interceptor that downs a warhead has a {{value}} chance to stay in the silo."
+     "name": "Recovered Anti-Ballistic Missiles",
+     "description": "An anti-ballistic missile that downs a warhead has a {{value}} chance to stay in the silo."
     },
     "veteran_silo_5": {
      "name": "Counter-Salvo",

@@ -40,9 +40,9 @@ FR = {
 - **[[veteran_relief_6:1]]** : les commandes de défenses lancées dans les 24 h construisent plus vite, pour autant d'unités de chaque type que vous en avez perdu. Une nouvelle perte ajoute ses unités et relance les 24 h.
 - **[[veteran_relief_6:2]]** avance seulement la commande de défenses en cours, sans dépasser sa fin.
 - **[[veteran_relief_9]]** : la fenêtre s'ouvre à chaque attaque subie hors fenêtre. Une attaque qui tombe dedans ne la prolonge pas. [[admiral_campaign_8]] d'un Amiral retire encore ses 15 points : 85 % de réparation au lieu de 100 %.""",
-        'silo': """- **[[veteran_silo_1]]** et **[[veteran_silo_3:1]]** s'additionnent : +35 % d'emplacements, arrondi à l'unité inférieure. Un Intercepteur prend 1 emplacement, une Ogive longue portée 2.
+        'silo': """- **[[veteran_silo_1]]** et **[[veteran_silo_3:1]]** s'additionnent : +35 % d'emplacements, arrondi à l'unité inférieure. Une Contre-ogive prend 1 emplacement, une Ogive longue portée 2.
 - **[[veteran_silo_3:2]]** et **[[veteran_silo_7]]** s'additionnent (5 systèmes au plus) sur la portée de base, niveau de Moteur Magnétique × 5 − 1. Jamais hors de la galaxie, sauf contre une base visée par [[veteran_silo_5]].
-- **[[veteran_silo_4]]** est une chance par Intercepteur qui abat une ogive.
+- **[[veteran_silo_4]]** est une chance par Contre-ogive qui abat une ogive.
 - **[[veteran_silo_5]]** : la base d'où est partie la salve est à portée de toutes vos bases pendant 24 h.
 - **[[veteran_silo_6:1]]** : la réserve de riposte se marque base par base. Une base frappée sans ogives marquées ne riposte pas. Une riposte ne déclenche jamais de riposte en retour.
 - **[[veteran_silo_6:2]]** partage le plafond de 15 % de [[veteran_relief_3:2]] : avec les deux, vos missiles ne vont pas plus vite.
@@ -113,9 +113,9 @@ EN = {
 - **[[veteran_relief_6:1]]**: defence orders started within 24 h build faster, for as many units of each type as you lost. A new loss adds its units and restarts the 24 h.
 - **[[veteran_relief_6:2]]** only moves the running defence order forward, never past its end.
 - **[[veteran_relief_9]]**: the window opens on every attack suffered outside a window. An attack landing inside it does not extend it. An Admiral's [[admiral_campaign_8]] still takes its 15 points off: 85% repair instead of 100%.""",
-        'silo': """- **[[veteran_silo_1]]** and **[[veteran_silo_3:1]]** add up: +35% slots, rounded down. An Interception Missile takes 1 slot, a Long-Range Warhead 2.
+        'silo': """- **[[veteran_silo_1]]** and **[[veteran_silo_3:1]]** add up: +35% slots, rounded down. An Anti-Ballistic Missile takes 1 slot, a Long-Range Warhead 2.
 - **[[veteran_silo_3:2]]** and **[[veteran_silo_7]]** add up (5 systems at most) on the base range, Impulse Drive level × 5 − 1. Never outside the galaxy, except against a base targeted by [[veteran_silo_5]].
-- **[[veteran_silo_4]]** is a chance per Interception Missile that downs a warhead.
+- **[[veteran_silo_4]]** is a chance per Anti-Ballistic Missile that downs a warhead.
 - **[[veteran_silo_5]]**: the base the salvo came from is within range of all your bases for 24 h.
 - **[[veteran_silo_6:1]]**: the riposte reserve is marked base by base. A struck base with no marked warheads does not answer. A riposte never triggers a riposte in return.
 - **[[veteran_silo_6:2]]** shares [[veteran_relief_3:2]]'s 15% cap: with both, your missiles build no faster.

@@ -22,7 +22,7 @@ updated: "2026-10-02T16:35:51.128Z"
 
 ## Règles
 
-1. À votre arrivée dans un univers, vous recevez une **planète mère** de **163 cases**, placée de préférence au centre de son système, avec une **Base planetaire** déjà construite.
+1. À votre arrivée dans un univers, vous recevez une **planète mère** de **163 cases**, placée de préférence au centre de son système, avec une **Base planétaire** déjà construite.
 2. Vous êtes **protégé des attaques pendant 7 jours** (protection de nouveau joueur). Le temps restant s'affiche en haut de l'écran. Lancer une attaque ou une salve de missiles y met fin définitivement.
 3. S'y ajoute la **protection des débutants** par points : un joueur beaucoup plus fort ou beaucoup plus faible que vous ne peut pas vous attaquer (voir [Protection des débutants](/fr/players/beginner-protection)).
 4. Les ressources (métal, cristal, hydrogène) sont produites **en continu** par vos mines, même hors connexion.

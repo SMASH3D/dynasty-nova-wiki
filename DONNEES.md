@@ -18,7 +18,7 @@ Les noms anglais des recherches ne suivent pas toujours les noms FR et ES (ex. `
 
 | Code | FR | EN | ES |
 |---|---|---|---|
-| planetary_base | Base planetaire | Planetary Base | Base Planetaria |
+| planetary_base | Base planétaire | Planetary Base | Base Planetaria |
 | planetary_base_colony | Base Coloniale | Colonial Base | Base Colonial |
 | metal_mine | Excavateur minéral | Mineral Excavator | Excavadora Mineral |
 | crystal_mine | Extracteur cristallin | Crystal Extractor | Extractor de Cristal |
@@ -37,7 +37,7 @@ Les noms anglais des recherches ne suivent pas toujours les noms FR et ES (ex. `
 | missile_silo | Arsenal balistique | Ballistic Arsenal | Arsenal Balístico |
 | logistics_center | Centre logistique | Logistics Center | Centro Logístico |
 | lunar_base | Base lunaire | Lunar base | Base lunar |
-| sensor_phalanx | Phalange de capteur | Sensor phalanx | Falange sensorial |
+| sensor_phalanx | Phalange de capteurs | Sensor phalanx | Falange sensorial |
 | jump_gate | Porte de saut | Jump gate | Puerta de salto |
 
 ### Recherches
@@ -74,7 +74,7 @@ Les noms anglais des recherches ne suivent pas toujours les noms FR et ES (ex. `
 | plasma_ejector | Éjecteur à plasma | Plasma Ejector | Eyector de plasma |
 | defensive_barrier | Barrière défensive | Defensive Barrier | Barrera defensiva |
 | protective_dome | Dôme protecteur | Protective Dome | Cúpula protectora |
-| interceptors | Intercepteurs | Interceptors (wiki EN : **Interception Missile**, `glossary-03`) | Interceptores |
+| interceptors | Contre-ogives | Anti-Ballistic Missiles | Contraojivas |
 | long_range_warheads | Ogives longue portée | Long-Range Warheads | Ojivas de largo alcance |
 
 ### Vaisseaux (FR seulement, voir constat)
@@ -116,6 +116,10 @@ Attention : le code `battle_cruiser` désigne le Colossus (équivalent de l'Éto
 **Il n'y a ni attaque groupée ni défense alliée** (`fleet-05`). L'attaque groupée est un chantier à part, non planifié (le terme existe déjà dans les traductions). La défense alliée est en réflexion. Le Stationnement ne vise que ses propres bases ; le Transport peut viser un allié.
 
 ---
+
+### Renommages du 15 novembre 2026
+
+Source : traductions du front (`Astro-Nova-React/src/i18n/locales/{fr,en,es}/buildings.json` et `defenses.json`), Dynasty-Nova/Frontend#1575 (fusionnée) et #1576. `planetary_base` prend son accent (« Base planétaire »), `sensor_phalanx` passe au pluriel (« Phalange de capteurs »), `interceptors` devient « Contre-ogives » (EN « Anti-Ballistic Missiles », ES « Contraojivas ») pour ne plus se confondre avec le vaisseau Intercepteur (`light_fighter`). Le talent du Vétéran « Intercepteurs récupérés » devient « Contre-ogives récupérées » (EN « Recovered Anti-Ballistic Missiles »). Le nom EN du wiki « Interception Missile » (`glossary-03`) est abandonné : le jeu affiche désormais un nom distinct.
 
 ## 2. Univers Redline (`/universes/{id}`)
 

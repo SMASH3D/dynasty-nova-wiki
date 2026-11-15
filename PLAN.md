@@ -496,7 +496,7 @@ Traduction des noms français, à utiliser dans les pages EN (et ES tant que le 
 | battle_cruiser | Colossus stellaire | Stellar Colossus |
 
 - « Stellar Colossus » est déjà le nom qu'utilisent les textes anglais du jeu (destruction de lune).
-- `glossary-03` ✅ Vaisseau : **Interceptor**. Missile : **Interception Missile** dans le wiki EN (le jeu affiche « Interceptors »).
+- `glossary-03` ✅ Vaisseau : **Interceptor**. Missile : **Interception Missile** dans le wiki EN (le jeu affiche « Interceptors »). Remplacé le 15/11/2026 : le jeu renomme le missile « Contre-ogives » (EN « Anti-Ballistic Missiles »), repris tel quel dans le wiki.
 
 
 ---

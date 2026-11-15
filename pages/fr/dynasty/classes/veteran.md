@@ -68,7 +68,7 @@ graph TB
         B3G3(["🔒 5 points dans l'arbre"]):::gate
         B3R3A --- B3G3
         B3R3B --- B3G3
-        B3R4("Intercepteurs récupérés<br/>3 pts"):::rank
+        B3R4("Contre-ogives récupérées<br/>3 pts"):::rank
         B3G3 --- B3R4
         B3R5{{"Contre-salve<br/>1 pt"}}:::key
         B3R4 --- B3R5
@@ -221,7 +221,7 @@ graph TB
 | 2 | **Charge creuse** | 3 rangs | Vos ogives font 9 % de dégâts en plus. | 3 × 3 % |
 | 3 | **A · Casemates** | choix | Votre silo à missiles stocke encore 30 % de missiles en plus. | |
 |  | **B · Allonge** |  | Vos missiles portent 2 systèmes plus loin. | |
-| 4 | **Intercepteurs récupérés** | 3 rangs | Un intercepteur qui abat une ogive a 15 % de chances de rester au silo. | 3 × 5 % |
+| 4 | **Contre-ogives récupérées** | 3 rangs | Une contre-ogive qui abat une ogive a 15 % de chances de rester au silo. | 3 × 5 % |
 | 5 | **Contre-salve** | clé | Pendant 24 h, la base qui a frappé une de vos planètes est à portée de vos missiles, même dans une autre galaxie. |  |
 | 6 | **A · Riposte automatique** | choix | Quand une frappe touche une de vos planètes, elle renvoie aussitôt sur la base d'origine autant d'ogives qu'elle en a reçu, jusqu'à 10, prises seulement parmi celles que vous marquez « réserve de riposte » : le reste du silo n'est jamais vidé. | |
 |  | **B · Production en série** |  | Vos missiles se construisent 15 % plus vite. | |
@@ -229,9 +229,9 @@ graph TB
 | 8 | **Silo lunaire** | clé | Vous pouvez construire un arsenal balistique sur vos lunes et lancer vos missiles depuis elles. |  |
 | 9 | **Pluie d'acier** | ultime | Une fois par jour, une salve d'au moins 20 ogives ne peut pas être interceptée. |  |
 
-- **Fosses profondes** et **Casemates** s'additionnent : +35 % d'emplacements, arrondi à l'unité inférieure. Un Intercepteur prend 1 emplacement, une Ogive longue portée 2.
+- **Fosses profondes** et **Casemates** s'additionnent : +35 % d'emplacements, arrondi à l'unité inférieure. Une Contre-ogive prend 1 emplacement, une Ogive longue portée 2.
 - **Allonge** et **Portée d'impulsion** s'additionnent (5 systèmes au plus) sur la portée de base, niveau de Moteur Magnétique × 5 − 1. Jamais hors de la galaxie, sauf contre une base visée par Contre-salve.
-- **Intercepteurs récupérés** est une chance par Intercepteur qui abat une ogive.
+- **Contre-ogives récupérées** est une chance par Contre-ogive qui abat une ogive.
 - **Contre-salve** : la base d'où est partie la salve est à portée de toutes vos bases pendant 24 h.
 - **Riposte automatique** : la réserve de riposte se marque base par base. Une base frappée sans ogives marquées ne riposte pas. Une riposte ne déclenche jamais de riposte en retour.
 - **Production en série** partage le plafond de 15 % de Brancards rapides : avec les deux, vos missiles ne vont pas plus vite.
@@ -264,7 +264,7 @@ Deux plafonds se partagent : la vitesse de construction de Brancards rapides et 
 | Build | Répartition | Ce qu'il obtient |
 |---|---|---|
 | Forteresse | Muraille 15 · Relève 10 | Dernière salve, Branle-bas de combat, défenses +9 % de dégâts et +5 % de bouclier, Contre-batterie, Premier rang, La lune tient ; réparation à 85 %, 35 % rendus sur les pertes |
-| Increvable | Relève 15 · Silo 10 | Ligne reformée, Les dômes d'abord, réparation à 85 %, 50 % rendus sur les pertes ; Arsenal +35 % avec Casemates (ou portée +2 avec Allonge), ogives +9 %, Intercepteurs récupérés, Contre-salve |
+| Increvable | Relève 15 · Silo 10 | Ligne reformée, Les dômes d'abord, réparation à 85 %, 50 % rendus sur les pertes ; Arsenal +35 % avec Casemates (ou portée +2 avec Allonge), ogives +9 %, Contre-ogives récupérées, Contre-salve |
 | Artilleur | Silo 15 · Muraille 10 | Pluie d'acier, Silo lunaire, Riposte automatique ou Production en série, portée +3 à +5 systèmes ; Béton armé, Pointeurs, Contre-batterie, Branle-bas de combat |
 
 Avant la rangée 7 de la branche principale, placez au moins 2 points dans la seconde : la porte demande 12 points, et les rangées 1 à 6 d'une branche n'en contiennent que 10.

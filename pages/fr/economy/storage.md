@@ -22,17 +22,17 @@ game_version: "Serveur 2.1.0 · Client 3.1.0"
 ## Règles
 
 1. Chaque planète a une **capacité par ressource** : métal, cristal, hydrogène.
-2. La **Base planetaire** fournit **10 000** de capacité pour chaque ressource. Une **lune**, qui n'a ni Base planetaire ni entrepôts, stocke elle aussi 10 000 de chaque ressource.
+2. La **Base planétaire** fournit **10 000** de capacité pour chaque ressource. Une **lune**, qui n'a ni Base planétaire ni entrepôts, stocke elle aussi 10 000 de chaque ressource.
 3. Chaque entrepôt ajoute sa capacité à une ressource : **Dépôt d'alliages** (métal), **Chambre cristalline** (cristal), **Citerne d'hydrogène** (hydrogène). Au niveau N, il contient 5 000 × partie entière(2,5 × e^(20 × N / 33)), jusqu'au niveau 20.
 4. La production remplit l'entrepôt **jusqu'à sa capacité, jamais au-delà**. Quand le stock **atteint** la capacité, la **production de cette ressource s'arrête** ; elle reprend dès que le stock repasse en dessous.
 5. Un stock **au-dessus** de la capacité reste entièrement utilisable : construction, recherche, chantier, transport.
 6. Le **Centre logistique** agrandit la capacité de **10 % par niveau**, jusqu'à +100 % au niveau 10 (voir [Modulateur planétaire et Centre logistique](/fr/economy/terraformer-and-logistics)).
 7. Le talent d'alliance **Entrepôts fédérés** ajoute **10 %** de capacité par niveau (2 niveaux), et certains talents de dynastie en ajoutent aussi.
-8. Ces bonus **s'additionnent** : ils ne se multiplient pas entre eux. Ils s'appliquent à toute la capacité de la planète, **les 10 000 de la Base planetaire compris**.
+8. Ces bonus **s'additionnent** : ils ne se multiplient pas entre eux. Ils s'appliquent à toute la capacité de la planète, **les 10 000 de la Base planétaire compris**.
 
 ## Exemple chiffré
 
-Dépôt d'alliages niveau 2 : 40 000, plus 10 000 de la Base planetaire, soit **50 000 métal**. Avec une production de 1 366 métal par heure, un stock vide est plein en 50 000 / 1 366 = **36,6 heures**.
+Dépôt d'alliages niveau 2 : 40 000, plus 10 000 de la Base planétaire, soit **50 000 métal**. Avec une production de 1 366 métal par heure, un stock vide est plein en 50 000 / 1 366 = **36,6 heures**.
 
 Ajoutez un Centre logistique niveau 3 (+30 %) et Entrepôts fédérés niveau 2 (+20 %) :
 - Bonus total : 30 % + 20 % = **+50 %** (et non 1,3 × 1,2).
@@ -40,7 +40,7 @@ Ajoutez un Centre logistique niveau 3 (+30 %) et Entrepôts fédérés niveau 2 
 
 ## Données détaillées
 
-Capacité d'un entrepôt au niveau N, sans la Base planetaire ni les bonus, et coût pour atteindre ce niveau (métal / cristal) :
+Capacité d'un entrepôt au niveau N, sans la Base planétaire ni les bonus, et coût pour atteindre ce niveau (métal / cristal) :
 
 | Niveau | Capacité | Dépôt d'alliages (métal) | Chambre cristalline | Citerne d'hydrogène |
 |---|---|---|---|---|

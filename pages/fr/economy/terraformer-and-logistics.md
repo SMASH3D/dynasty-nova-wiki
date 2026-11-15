@@ -30,7 +30,7 @@ game_version: "Serveur 2.1.0 · Client 3.1.0"
 
 ### Centre logistique
 6. Prérequis : **Calcul Quantique 2**. Niveau maximum : 10. Planètes seulement.
-7. Chaque niveau agrandit la capacité de stockage de la planète de **10 %**, Base planetaire comprise : +100 % au niveau 10. Ce bonus s'additionne à ceux d'alliance et de talents (voir [Le stockage](/fr/economy/storage)).
+7. Chaque niveau agrandit la capacité de stockage de la planète de **10 %**, Base planétaire comprise : +100 % au niveau 10. Ce bonus s'additionne à ceux d'alliance et de talents (voir [Le stockage](/fr/economy/storage)).
 8. Coût du niveau 1 : **20 000 métal et 40 000 cristal**. Le coût double à chaque niveau.
 
 ## Exemple chiffré
@@ -39,7 +39,7 @@ game_version: "Serveur 2.1.0 · Client 3.1.0"
 - Cases ajoutées : 5 + 6 + 5 + 6 = **22**. Le Modulateur en occupe 4 : **18 cases** de plus pour vos autres bâtiments, soit 185 cases au total.
 - Coût total des 4 niveaux : 750 000 cristal et 1 500 000 hydrogène. Énergie requise pour lancer le niveau 4 : 8 000.
 
-**Centre logistique niveau 3** avec un Dépôt d'alliages niveau 2 (40 000) et la Base planetaire (10 000)
+**Centre logistique niveau 3** avec un Dépôt d'alliages niveau 2 (40 000) et la Base planétaire (10 000)
 - Bonus : +30 % sur 50 000, soit **65 000 métal**.
 
 ## Données détaillées

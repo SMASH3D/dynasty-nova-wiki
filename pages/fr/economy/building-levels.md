@@ -331,7 +331,7 @@ Facteur 1,8, niveau maximal 50. La production dépend du niveau de Science Éner
 
 #### Dépôt d'alliages
 
-Facteur 2, niveau maximal 20. Capacité du bâtiment seul, avant les 10 000 par niveau de Base planetaire et le bonus du Centre logistique.
+Facteur 2, niveau maximal 20. Capacité du bâtiment seul, avant les 10 000 par niveau de Base planétaire et le bonus du Centre logistique.
 
 | Niveau | Métal | Capacité |
 |---|---|---|
@@ -358,7 +358,7 @@ Facteur 2, niveau maximal 20. Capacité du bâtiment seul, avant les 10 000 par 
 
 #### Chambre cristalline
 
-Facteur 2, niveau maximal 20. Capacité du bâtiment seul, avant les 10 000 par niveau de Base planetaire et le bonus du Centre logistique.
+Facteur 2, niveau maximal 20. Capacité du bâtiment seul, avant les 10 000 par niveau de Base planétaire et le bonus du Centre logistique.
 
 | Niveau | Métal | Cristal | Capacité |
 |---|---|---|---|
@@ -385,7 +385,7 @@ Facteur 2, niveau maximal 20. Capacité du bâtiment seul, avant les 10 000 par 
 
 #### Citerne d'hydrogène
 
-Facteur 2, niveau maximal 20. Capacité du bâtiment seul, avant les 10 000 par niveau de Base planetaire et le bonus du Centre logistique.
+Facteur 2, niveau maximal 20. Capacité du bâtiment seul, avant les 10 000 par niveau de Base planétaire et le bonus du Centre logistique.
 
 | Niveau | Métal | Cristal | Capacité |
 |---|---|---|---|
@@ -412,7 +412,7 @@ Facteur 2, niveau maximal 20. Capacité du bâtiment seul, avant les 10 000 par 
 
 #### Centre logistique
 
-Facteur 2, niveau maximal 10. Le bonus s'ajoute à ceux des talents et s'applique à toute la capacité de stockage de la base, Base planetaire comprise.
+Facteur 2, niveau maximal 10. Le bonus s'ajoute à ceux des talents et s'applique à toute la capacité de stockage de la base, Base planétaire comprise.
 
 | Niveau | Métal | Cristal | Stockage |
 |---|---|---|---|
@@ -611,7 +611,7 @@ Facteur 2, pas de niveau maximal. 3 cases par niveau, sans dépasser ce que perm
 | 49 | 5 629 499 534 213 120 000 | 11 258 999 068 426 240 000 | 5 629 499 534 213 120 000 | 147 |
 | 50 | 11 258 999 068 426 240 000 | 22 517 998 136 852 480 000 | 11 258 999 068 426 240 000 | 150 |
 
-#### Phalange de capteur
+#### Phalange de capteurs
 
 Facteur 2, pas de niveau maximal.
 

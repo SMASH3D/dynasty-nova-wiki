@@ -208,7 +208,7 @@ graph TB
 - **Le risque mesuré** : l'écran d'envoi calcule la chance au moment de l'envoi ; le tirage se fait à l'arrivée des Éclaireurs.
 - **Sondes larguées** et **Coques muettes** s'additionnent ; le nombre d'Éclaireurs sauvés est arrondi à l'inférieur, un Éclaireur seul ne rentre jamais. Sans adresse étant l'autre choix, la survie est alors de 21 % au plus.
 - **Prudence** : compare la chance bornes comprises. La vague a fait le vol aller-retour et payé son hydrogène. Vous recevez une notification.
-- **Silhouette** : vaut pour tout balayage de Phalange de capteur, y compris ceux partagés en alliance.
+- **Silhouette** : vaut pour tout balayage de Phalange de capteurs, y compris ceux partagés en alliance.
 - **Écran de fumée** : seulement les Attaques à l'aller, pour tout autre joueur (cible et Phalanges).
 - **Fausse piste** : la fausse origine est une planète d'un joueur inactif de votre galaxie ; s'il n'y en a aucune, la vraie origine est donnée. Inutile avec Sans adresse, puisque la vague n'est jamais tracée.
 - **Le vide parfait** : « aucun risque » veut dire une chance de 0 % ; une cible qui a Orbite gardée garde ses orbites vides à 5 %. Le défenseur reçoit « activité repérée » dans son système, à l'heure près, au lieu de l'alerte.
@@ -287,4 +287,4 @@ Avant la rangée 7 de la branche principale, placez au moins 2 points dans la se
 - [Dynasties](/fr/dynasty/dynasties)
 - [Espionner](/fr/espionage/spying)
 - [Lire un rapport d'espionnage](/fr/espionage/spy-report)
-- [Phalange de capteur](/fr/espionage/sensor-phalanx)
+- [Phalange de capteurs](/fr/espionage/sensor-phalanx)

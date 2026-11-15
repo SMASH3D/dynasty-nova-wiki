@@ -87,7 +87,7 @@ Points of each defense and missile:
 | Plasma Ejector | 50,000 | 50,000 | 30,000 | 130 |
 | Defensive Barrier | 10,000 | 10,000 | 0 | 20 |
 | Protective Dome | 50,000 | 50,000 | 0 | 100 |
-| Interception Missile | 8,000 | 2,000 | 0 | 10 |
+| Anti-Ballistic Missiles | 8,000 | 2,000 | 0 | 10 |
 | Long-Range Warheads | 12,500 | 2,500 | 10,000 | 25 |
 
 | Ranking | What counts | What lowers it |

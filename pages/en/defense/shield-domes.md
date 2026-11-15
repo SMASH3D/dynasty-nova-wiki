@@ -37,7 +37,7 @@ game_version: "Serveur 2.1.0 · Client 3.1.0"
 > Ship names are provisional English translations: the game still shows French names (see the [glossary](/en/getting-started/glossary)).
 
 **The same Dome against Long-Range Warheads**
-- Toughness: 10,000 + 10,000 = **20,000**. A Warhead deals 12,000 damage with no research: it takes **2** that get past the Interception Missiles.
+- Toughness: 10,000 + 10,000 = **20,000**. A Warhead deals 12,000 damage with no research: it takes **2** that get past the Anti-Ballistic Missiles.
 - With Shielding Technology 6 and Armor Technology 6 on the defender's side, toughness rises to 32,000: a shooter with no research needs **3** Warheads, but one at Weapon Systems 4 (16,800 per Warhead) needs **2**.
 
 ## Detailed data

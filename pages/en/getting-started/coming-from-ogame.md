@@ -109,7 +109,7 @@ updated: "2026-11-05T10:48:20.790Z"
 | Light / Heavy Laser | Photonic Cannon / High-Energy Emitter |
 | Ion Cannon, Gauss Cannon, Plasma Turret | Ion Battery, Magnetic Accelerator, Plasma Ejector |
 | Small / Large Shield Dome | Defensive Barrier / Protective Dome |
-| Anti-Ballistic / Interplanetary Missile | Interception Missile / Long-Range Warheads |
+| Anti-Ballistic / Interplanetary Missile | Anti-Ballistic Missiles / Long-Range Warheads |
 
 Every name, in English, French and Spanish, is in the [glossary](/en/getting-started/glossary).
 

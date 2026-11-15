@@ -68,6 +68,6 @@ Le coût continue de doubler aux niveaux suivants.
 ## Pages liées
 
 - [Les lunes](/fr/universe/moons)
-- [Phalange de capteur](/fr/espionage/sensor-phalanx)
+- [Phalange de capteurs](/fr/espionage/sensor-phalanx)
 - [Déplacements](/fr/fleet/movement)
 - [Liste des bâtiments](/fr/economy/buildings)

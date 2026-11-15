@@ -23,7 +23,7 @@ updated: "2026-10-15T18:54:56.113Z"
 3. Un prérequis de **bâtiment** se lit sur la planète (ou la lune) où l'on construit ou d'où l'on lance la recherche. Un prérequis de **technologie** vaut pour tout l'empire. Dans les chemins complets, le Centre d'innovation est celui de la planète qui lance chaque recherche : pour la Porte de saut, bâtie sur une lune, il se trouve sur l'une de vos planètes.
 4. Les prérequis s'enchaînent : une technologie demandée a elle-même ses prérequis. Les tableaux de chemins donnent la **liste complète**, chaînes comprises, en gardant pour chaque élément le niveau le plus élevé demandé.
 5. Les prérequis d'un **bâtiment** ne se vérifient qu'à son premier niveau sur une planète. Ceux d'une **technologie** se vérifient à chaque niveau, sur la planète qui la lance ; ceux d'un **vaisseau** ou d'une **défense**, à chaque commande.
-6. Les bâtiments lunaires (Phalange de capteur, Porte de saut) demandent une Base lunaire sur la même lune.
+6. Les bâtiments lunaires (Phalange de capteurs, Porte de saut) demandent une Base lunaire sur la même lune.
 7. **Mise en file** : un prérequis compte déjà s'il sera atteint par un ordre placé avant (un bâtiment de la même planète, une étude de l'empire). Il est vérifié de nouveau quand l'ordre démarre ; s'il manque alors, l'ordre est abandonné sans frais.
 
 ## Exemple chiffré
@@ -115,7 +115,7 @@ graph TB
 | Éjecteur à plasma | Centre d'innovation 4, Fabrique d'automates 2, Dock orbital 8, Science Énergétique 8, Maîtrise du Plasma 7, Systèmes Photoniques 10, Manipulation Ionique 5 |
 | Barrière défensive | Centre d'innovation 6, Fabrique d'automates 2, Dock orbital 1, Science Énergétique 3, Champs de Protection 2 |
 | Dôme protecteur | Centre d'innovation 6, Fabrique d'automates 2, Dock orbital 6, Science Énergétique 3, Champs de Protection 6 |
-| Intercepteurs | Fabrique d'automates 2, Dock orbital 1, Arsenal balistique 2 |
+| Contre-ogives | Fabrique d'automates 2, Dock orbital 1, Arsenal balistique 2 |
 | Ogives longue portée | Centre d'innovation 2, Fabrique d'automates 2, Dock orbital 1, Arsenal balistique 4, Science Énergétique 1, Propulseur Chimique 3, Moteur Magnétique 1 |
 
 ### Chemins complets : bâtiments
@@ -131,7 +131,7 @@ Seuls figurent les bâtiments qui ont des prérequis.
 | Station de réparation | Fabrique d'automates 2, Dock orbital 2 |
 | Arsenal balistique | Fabrique d'automates 2, Dock orbital 1 |
 | Centre logistique | Centre d'innovation 1, Calcul Quantique 2 |
-| Phalange de capteur | Base lunaire 1 |
+| Phalange de capteurs | Base lunaire 1 |
 | Porte de saut | Centre d'innovation 7, Base lunaire 1, Science Énergétique 5, Systèmes Photoniques 7, Manipulation Ionique 5, Pliage Spatial 7 |
 
 ### Chemins complets : technologies
@@ -163,10 +163,10 @@ Seuls figurent les bâtiments qui ont des prérequis.
 | Condensateur d'hydrogène | Réacteur thermonucléaire (5) |
 | Centre d'innovation | Science Énergétique, Systèmes Photoniques, Propulseur Chimique, Calcul Quantique (1) ; Moteur Magnétique, Métallurgie Avancée (2) ; Renseignement Tactique, Cosmologie Appliquée (3) ; Manipulation Ionique, Maîtrise du Plasma, Systèmes Offensifs (4) ; Diplomatie Stellaire (5) ; Champs de Protection (6) ; Pliage Spatial, Navigation Transdimensionnelle (7) ; Collaboration Stellaire (10) ; Manipulation Gravitationnelle (12) |
 | Fabrique d'automates | Dock orbital (2) ; Assembleur moléculaire (10) |
-| Dock orbital | Arsenal balistique, Collecteur solaire, Intercepteur, Projecteur balistique, Barrière défensive, Intercepteurs, Ogives longue portée (1) ; Station de réparation, Navette de fret, Canon photonique (2) ; Éclaireur, Assaillant (3) ; Cargo stellaire, Pionnier spatial, Récupérateur, Émetteur à haute énergie, Batterie ionique (4) ; Corvette (5) ; Accélérateur magnétique, Dôme protecteur (6) ; Cuirassé (7) ; Frappe-orbital, Prédateur, Éjecteur à plasma (8) ; Annihilateur (9) ; Colossus stellaire (12) |
+| Dock orbital | Arsenal balistique, Collecteur solaire, Intercepteur, Projecteur balistique, Barrière défensive, Contre-ogives, Ogives longue portée (1) ; Station de réparation, Navette de fret, Canon photonique (2) ; Éclaireur, Assaillant (3) ; Cargo stellaire, Pionnier spatial, Récupérateur, Émetteur à haute énergie, Batterie ionique (4) ; Corvette (5) ; Accélérateur magnétique, Dôme protecteur (6) ; Cuirassé (7) ; Frappe-orbital, Prédateur, Éjecteur à plasma (8) ; Annihilateur (9) ; Colossus stellaire (12) |
 | Assembleur moléculaire | Modulateur planétaire (1) |
-| Arsenal balistique | Intercepteurs (2) ; Ogives longue portée (4) |
-| Base lunaire | Phalange de capteur, Porte de saut (1) |
+| Arsenal balistique | Contre-ogives (2) ; Ogives longue portée (4) |
+| Base lunaire | Phalange de capteurs, Porte de saut (1) |
 
 ### Ce que débloque chaque technologie
 

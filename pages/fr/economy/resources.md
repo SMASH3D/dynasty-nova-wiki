@@ -17,7 +17,7 @@ game_version: "Serveur 2.1.0 · Client 3.1.0"
 > **En bref** : trois ressources se stockent, le métal, le cristal et l'hydrogène. Vos mines les produisent en continu, même quand vous n'êtes pas connecté, et chaque planète a son propre stock. L'énergie, quatrième ressource, ne se stocke pas : elle fait tourner les mines.
 {.is-info}
 
-> **Paramètre d'univers** : la vitesse d'économie multiplie la production des mines et de la Base planetaire.
+> **Paramètre d'univers** : la vitesse d'économie multiplie la production des mines et de la Base planétaire.
 > Par défaut : **×1** · Redline : **×1**
 {.is-info}
 
@@ -29,14 +29,14 @@ game_version: "Serveur 2.1.0 · Client 3.1.0"
 2. **Cristal** : produit par l'Extracteur cristallin, 20 × N × 1,1^N par heure.
 3. **Hydrogène** : produit par le Condensateur d'hydrogène, 10 × N × 1,1^N par heure, multiplié par un **facteur de température** qui vaut 1,44 − 0,004 × la température maximale de la planète. Une planète froide produit davantage ; au-delà de 360 °C, plus rien.
 4. **Énergie** : produite par les Capteurs photovoltaïques, le Réacteur thermonucléaire et les Collecteurs solaires, consommée par les trois mines. Elle ne se stocke pas (voir [L'énergie](/fr/economy/energy)).
-5. La **Base planetaire** (Base Coloniale sur une colonie) ajoute **20 métal et 10 cristal par heure**, multipliés par la vitesse d'économie.
+5. La **Base planétaire** (Base Coloniale sur une colonie) ajoute **20 métal et 10 cristal par heure**, multipliés par la vitesse d'économie.
 6. La production est **continue**, calculée à l'heure et arrondie à l'inférieur. Chaque planète a **son propre stock**, limité par ses entrepôts (voir [Le stockage](/fr/economy/storage)).
 7. **Bonus** : ils s'appliquent à la production brute des trois mines et **s'additionnent**, sans se multiplier entre eux :
    - **Maîtrise du Plasma** : +1 % de métal, +0,66 % de cristal et +0,33 % d'hydrogène par niveau ;
    - talent d'alliance **Extraction coordonnée** : +5 % des trois ressources par niveau ;
    - **bonus de position**, sur les colonies seulement : jusqu'à +40 % de cristal en positions 1 à 3, jusqu'à +35 % de métal en positions 6 à 10 (voir [Planètes](/fr/universe/planets)) ;
    - les traits de dynastie et les talents (voir [Dynastie et talents](/fr/dynasty)).
-8. Si l'énergie manque, la production des mines, bonus compris, baisse dans la proportion du déficit. Le revenu de la Base planetaire n'est pas touché.
+8. Si l'énergie manque, la production des mines, bonus compris, baisse dans la proportion du déficit. Le revenu de la Base planétaire n'est pas touché.
 9. **Taux de fonctionnement** : chaque mine se règle par pas de 10 %, de 0 à 100 %. Sa production et sa consommation d'énergie baissent dans la même proportion.
 10. La production s'arrête quand le stock d'une ressource atteint sa capacité, pendant le [mode vacances](/fr/players/vacation-mode), sur une planète abandonnée, et quand un univers privé est gelé ou terminé.
 

@@ -131,7 +131,7 @@ The game shows the French name in every language. The English names are provisio
 | Plasma Ejector | Éjecteur à plasma | Eyector de plasma | plasma_ejector |
 | Defensive Barrier | Barrière défensive | Barrera defensiva | defensive_barrier |
 | Protective Dome | Dôme protecteur | Cúpula protectora | protective_dome |
-| Interception Missile (game: Interceptors) | Intercepteurs | Interceptores | interceptors |
+| Anti-Ballistic Missiles | Contre-ogives | Contraojivas | interceptors |
 | Long-Range Warheads | Ogives longue portée | Ojivas de largo alcance | long_range_warheads |
 
 ### Fleet missions
@@ -149,7 +149,7 @@ The game shows the French name in every language. The English names are provisio
 
 ## Common pitfalls
 
-- **Interceptor or Interception Missile?** The Interceptor is the first combat ship. The Interception Missile (shown as "Interceptors" in the game) is the missile that destroys Long-Range Warheads.
+- **Interceptor or Anti-Ballistic Missiles?** The Interceptor is the first combat ship. Anti-Ballistic Missiles are the missiles that shoot down Long-Range Warheads; the game called them "Interceptors" until 15/11/2026.
 - **Codes do not follow names**: `battle_cruiser` is the Stellar Colossus, not a cruiser; `shipyard` is the Orbital Dock.
 - **English research names** are not translations of the French ones. To switch languages, rely on the code.
 - **Ship names in game**: while ships are untranslated, look for the French name in the game screens.

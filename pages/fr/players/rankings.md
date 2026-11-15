@@ -84,7 +84,7 @@ Points de chaque défense et missile :
 | Éjecteur à plasma | 50 000 | 50 000 | 30 000 | 130 |
 | Barrière défensive | 10 000 | 10 000 | 0 | 20 |
 | Dôme protecteur | 50 000 | 50 000 | 0 | 100 |
-| Intercepteurs | 8 000 | 2 000 | 0 | 10 |
+| Contre-ogives | 8 000 | 2 000 | 0 | 10 |
 | Ogives longue portée | 12 500 | 2 500 | 10 000 | 25 |
 
 | Classement | Ce qui compte | Ce qui fait baisser |

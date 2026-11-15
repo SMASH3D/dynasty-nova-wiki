@@ -23,7 +23,7 @@ updated: "2026-10-15T18:57:26.611Z"
 3. Chaque branche a 9 rangées et coûte 15 points. Avec 25 points au maximum, vous complétez une branche et son ultime, plus une seconde branche jusqu'à la rangée 6 (10 points). Le fonctionnement des points, des portes et des choix est décrit sur [Les talents](/fr/dynasty/talents).
 4. La protection générique contre le pillage et la vitesse de retour des flottes viennent de l'[arbre commun](/fr/dynasty/common-tree). L'Oracle n'y ajoute que deux **accents** étroits : Frappe préparée (vitesse des attaques, dans l'accent de vitesse de 10 % de la classe) et La cache (protection contre le pillage, 10 points au plus avec Coffres enterrés). Le pistage des espions appartient à l'[Ombre](/fr/dynasty/classes/shadow).
 5. Sans talent, seule une mission **Attaque** est annoncée, **60 s** avant l'impact, ou dès son départ si le vol dure moins. Le délai d'une flotte est fixé **à son départ**, d'après vos talents à ce moment ; une flotte accélérée en vol garde le même délai sur sa nouvelle heure d'impact. Dans le temps gagné avant les 60 s, l'alerte ne donne que la base visée et l'heure d'arrivée à la minute près ; l'heure exacte et l'origine arrivent à 60 s, sauf avec Heure juste. L'alerte ne donne jamais la composition de la flotte.
-6. La [Phalange de capteur](/fr/espionage/sensor-phalanx) se construit sur une lune et ne vise jamais une lune. Un balayage coûte 5 000 hydrogène, sauf celui de Balayage réflexe, et il est impossible en mode vacances. Il montre seulement les **mouvements** (flottes qui partent de la planète ou y arrivent), jamais les vaisseaux posés, ni les missions d'espionnage et de recyclage. Par défaut, personne n'est prévenu d'un balayage : seule l'Ombre, avec Lumière dans le dos, l'apprend.
+6. La [Phalange de capteurs](/fr/espionage/sensor-phalanx) se construit sur une lune et ne vise jamais une lune. Un balayage coûte 5 000 hydrogène, sauf celui de Balayage réflexe, et il est impossible en mode vacances. Il montre seulement les **mouvements** (flottes qui partent de la planète ou y arrivent), jamais les vaisseaux posés, ni les missions d'espionnage et de recyclage. Par défaut, personne n'est prévenu d'un balayage : seule l'Ombre, avec Lumière dans le dos, l'apprend.
 7. Les lectures de Présage partent de **vos** rapports d'espionnage. La part pillable y est calculée à votre taux de pillage (50 % sur Redline, plus vos talents contre une cible abandonnée), **sans** la protection du défenseur, que le rapport ne montre pas : c'est un maximum.
 
 ## Exemple chiffré
@@ -40,7 +40,7 @@ updated: "2026-10-15T18:57:26.611Z"
 
 Une attaque dont le vol dure 75 s est annoncée à son départ, 75 s avant l'impact : Garde prévenue, qui demande 90 s, ne joue pas.
 
-**Phalange de capteur niveau 3 avec Longue-vue et Lentilles au rang 3**
+**Phalange de capteurs niveau 3 avec Longue-vue et Lentilles au rang 3**
 - Portée : la Phalange porte comme un niveau 4, soit 4² − 1 = **15 systèmes** de part et d'autre, au lieu de 8.
 - Coût d'un balayage : 5 000 × (1 − 0,24) = **3 800 hydrogène**.
 - Avec Vue d'empire, un joueur qui a 3 planètes à portée se balaie en entier pour 3 800 hydrogène au lieu de 11 400.
@@ -300,7 +300,7 @@ Avant la rangée 7 de la branche principale, placez au moins 2 points dans la se
 - [Classes](/fr/dynasty/classes)
 - [Arbre commun](/fr/dynasty/common-tree)
 - [Dynasties](/fr/dynasty/dynasties)
-- [Phalange de capteur](/fr/espionage/sensor-phalanx)
+- [Phalange de capteurs](/fr/espionage/sensor-phalanx)
 - [Lire un rapport d'espionnage](/fr/espionage/spy-report)
 - [Pillage](/fr/combat/plunder)
 - [Simulateur](/fr/combat/simulator)
