@@ -86,7 +86,7 @@ updated: "2026-10-30T20:31:30.210Z"
 ### [Espionnage](/fr/espionage)
 - [Espionner](/fr/espionage/spying)
 - [Lire un rapport d'espionnage](/fr/espionage/spy-report)
-- [Phalange de capteur](/fr/espionage/sensor-phalanx)
+- [Phalange de capteurs](/fr/espionage/sensor-phalanx)
 
 ### [Joueurs et règles](/fr/players)
 - [Classements et points](/fr/players/rankings)

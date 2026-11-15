@@ -118,7 +118,7 @@ Hydrogène facturé pour une mission d'espionnage, selon votre niveau de Renseig
 ## Pages liées
 
 - [Lire un rapport d'espionnage](/fr/espionage/spy-report)
-- [Phalange de capteur](/fr/espionage/sensor-phalanx)
+- [Phalange de capteurs](/fr/espionage/sensor-phalanx)
 - [La vue galaxie](/fr/universe/galaxy-view)
 - [Liste des technologies](/fr/research/technologies)
 - [Missions et station d'alliance](/fr/players/alliance-missions)

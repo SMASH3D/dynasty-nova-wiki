@@ -1,0 +1,324 @@
+{
+  "fr/dynasty/classes/oracle": [
+    [
+      "Phalange de capteur",
+      "Phalange de capteurs"
+    ]
+  ],
+  "fr/dynasty/classes/shadow": [
+    [
+      "Phalange de capteur",
+      "Phalange de capteurs"
+    ]
+  ],
+  "fr/dynasty/common-tree": [
+    [
+      "Base planetaire",
+      "Base planétaire"
+    ]
+  ],
+  "fr/economy/building-levels": [
+    [
+      "Base planetaire",
+      "Base planétaire"
+    ],
+    [
+      "Phalange de capteur",
+      "Phalange de capteurs"
+    ]
+  ],
+  "fr/economy/buildings": [
+    [
+      "Base planetaire",
+      "Base planétaire"
+    ],
+    [
+      "Phalange de capteur",
+      "Phalange de capteurs"
+    ]
+  ],
+  "fr/economy/demolition": [
+    [
+      "Base planetaire",
+      "Base planétaire"
+    ]
+  ],
+  "fr/economy/energy": [
+    [
+      "Base planetaire",
+      "Base planétaire"
+    ]
+  ],
+  "fr/economy/formulas": [
+    [
+      "Base planetaire",
+      "Base planétaire"
+    ]
+  ],
+  "fr/economy/resources": [
+    [
+      "Base planetaire",
+      "Base planétaire"
+    ]
+  ],
+  "fr/economy/storage": [
+    [
+      "Base planetaire",
+      "Base planétaire"
+    ]
+  ],
+  "fr/economy/terraformer-and-logistics": [
+    [
+      "Base planetaire",
+      "Base planétaire"
+    ]
+  ],
+  "fr/espionage/sensor-phalanx": [
+    [
+      "Phalange de capteur",
+      "Phalange de capteurs"
+    ]
+  ],
+  "fr/espionage/spying": [
+    [
+      "Phalange de capteur",
+      "Phalange de capteurs"
+    ]
+  ],
+  "fr/espionage": [
+    [
+      "Phalange de capteur",
+      "Phalange de capteurs"
+    ]
+  ],
+  "fr/fleet/jump-gate": [
+    [
+      "Phalange de capteur",
+      "Phalange de capteurs"
+    ]
+  ],
+  "fr/getting-started/first-steps": [
+    [
+      "Base planetaire",
+      "Base planétaire"
+    ]
+  ],
+  "fr/getting-started/glossary": [
+    [
+      "Base planetaire",
+      "Base planétaire"
+    ],
+    [
+      "Phalange de capteur",
+      "Phalange de capteurs"
+    ],
+    [
+      "| Intercepteurs | Interceptors (*Interception Missile* dans le wiki) | Interceptores | interceptors |",
+      "| Contre-ogives | Anti-Ballistic Missiles | Contraojivas | interceptors |"
+    ],
+    [
+      "- **Intercepteur ou Intercepteurs ?** « Intercepteur » (singulier) est le premier vaisseau de combat. « Intercepteurs » (pluriel) est le missile qui détruit les Ogives longue portée. Le wiki anglais les distingue en « Interceptor » et « Interception Missile ».",
+      "- **Intercepteur ou Contre-ogives ?** L'« Intercepteur » est le premier vaisseau de combat. Les « Contre-ogives » sont les missiles qui abattent les Ogives longue portée ; elles s'appelaient « Intercepteurs » avant le 15/11/2026."
+    ]
+  ],
+  "fr/home": [
+    [
+      "Phalange de capteur",
+      "Phalange de capteurs"
+    ]
+  ],
+  "fr/research/tech-tree": [
+    [
+      "Phalange de capteur",
+      "Phalange de capteurs"
+    ],
+    [
+      "| Intercepteurs | Fabrique",
+      "| Contre-ogives | Fabrique"
+    ],
+    [
+      "Barrière défensive, Intercepteurs, Ogives",
+      "Barrière défensive, Contre-ogives, Ogives"
+    ],
+    [
+      "| Arsenal balistique | Intercepteurs (2)",
+      "| Arsenal balistique | Contre-ogives (2)"
+    ]
+  ],
+  "fr/research/technologies": [
+    [
+      "Base planetaire",
+      "Base planétaire"
+    ]
+  ],
+  "fr/universe/moons": [
+    [
+      "Phalange de capteur",
+      "Phalange de capteurs"
+    ]
+  ],
+  "fr/dynasty/classes/veteran": [
+    [
+      "\"Intercepteurs récupérés<br/>",
+      "\"Contre-ogives récupérées<br/>"
+    ],
+    [
+      "**Intercepteurs récupérés** | 3 rangs | Un intercepteur qui abat",
+      "**Contre-ogives récupérées** | 3 rangs | Une contre-ogive qui abat"
+    ],
+    [
+      "Un Intercepteur prend 1 emplacement",
+      "Une Contre-ogive prend 1 emplacement"
+    ],
+    [
+      "**Intercepteurs récupérés** est une chance par Intercepteur qui abat",
+      "**Contre-ogives récupérées** est une chance par Contre-ogive qui abat"
+    ],
+    [
+      "ogives +9 %, Intercepteurs récupérés",
+      "ogives +9 %, Contre-ogives récupérées"
+    ]
+  ],
+  "fr/players/rankings": [
+    [
+      "| Intercepteurs | 8 000",
+      "| Contre-ogives | 8 000"
+    ]
+  ],
+  "fr/getting-started/coming-from-ogame": [
+    [
+      "| Intercepteurs / Ogives longue portée |",
+      "| Contre-ogives / Ogives longue portée |"
+    ]
+  ],
+  "fr/defense/shield-domes": [
+    [
+      "qui passent les Intercepteurs.",
+      "qui passent les Contre-ogives."
+    ]
+  ],
+  "fr/defense/missiles": [
+    [
+      "alt=\"Intercepteurs\">",
+      "alt=\"Contre-ogives\">"
+    ],
+    [
+      "2. Un **Intercepteur** occupe **1 case**",
+      "2. Une **Contre-ogive** occupe **1 case**"
+    ],
+    [
+      "ou un Intercepteur consommé",
+      "ou une Contre-ogive consommée"
+    ],
+    [
+      "chaque Intercepteur de la planète visée abat **une Ogive**, automatiquement, avant tout dégât. Il est consommé.",
+      "chaque Contre-ogive de la planète visée abat **une Ogive**, automatiquement, avant tout dégât. Elle est consommée."
+    ],
+    [
+      "- 10 Intercepteurs (10 cases)",
+      "- 10 Contre-ogives (10 cases)"
+    ],
+    [
+      "qui a 3 Intercepteurs,",
+      "qui a 3 Contre-ogives,"
+    ],
+    [
+      "Les 3 Intercepteurs sont consommés.",
+      "Les 3 Contre-ogives sont consommées."
+    ],
+    [
+      "\"Contre-ogives\"> Intercepteurs |",
+      "\"Contre-ogives\"> Contre-ogives |"
+    ],
+    [
+      "Un Intercepteur ne fait aucun dégât : il ne sert",
+      "Une Contre-ogive ne fait aucun dégât : elle ne sert"
+    ],
+    [
+      "| Intercepteurs au plus |",
+      "| Contre-ogives au plus |"
+    ],
+    [
+      "- **« Intercepteurs » n'est pas l'« Intercepteur »** : le missile (pluriel) et le vaisseau de combat (singulier) n'ont rien à voir.",
+      "- **Les Contre-ogives ne sont pas l'Intercepteur** : le missile et le vaisseau de combat n'ont rien à voir. Les Contre-ogives s'appelaient « Intercepteurs » avant le 15/11/2026."
+    ],
+    [
+      "seuls les Intercepteurs servent en défense",
+      "seules les Contre-ogives servent en défense"
+    ],
+    [
+      "Les **Intercepteurs** abattent automatiquement",
+      "Les **Contre-ogives** abattent automatiquement"
+    ]
+  ],
+  "en/research/tech-tree": [
+    [
+      "Interception Missile",
+      "Anti-Ballistic Missile"
+    ]
+  ],
+  "en/dynasty/classes/veteran": [
+    [
+      "Recovered Interceptors",
+      "Recovered Anti-Ballistic Missiles"
+    ],
+    [
+      "An interceptor that downs",
+      "An anti-ballistic missile that downs"
+    ],
+    [
+      "Interception Missile",
+      "Anti-Ballistic Missile"
+    ]
+  ],
+  "en/players/rankings": [
+    [
+      "| Interception Missile |",
+      "| Anti-Ballistic Missiles |"
+    ]
+  ],
+  "en/getting-started/glossary": [
+    [
+      "| Interception Missile (game: Interceptors) | Intercepteurs | Interceptores | interceptors |",
+      "| Anti-Ballistic Missiles | Contre-ogives | Contraojivas | interceptors |"
+    ],
+    [
+      "- **Interceptor or Interception Missile?** The Interceptor is the first combat ship. The Interception Missile (shown as \"Interceptors\" in the game) is the missile that destroys Long-Range Warheads.",
+      "- **Interceptor or Anti-Ballistic Missiles?** The Interceptor is the first combat ship. Anti-Ballistic Missiles are the missiles that shoot down Long-Range Warheads; the game called them \"Interceptors\" until 15/11/2026."
+    ]
+  ],
+  "en/defense/shield-domes": [
+    [
+      "Interception Missiles",
+      "Anti-Ballistic Missiles"
+    ]
+  ],
+  "en/defense/missiles": [
+    [
+      "Interception Missile",
+      "Anti-Ballistic Missile"
+    ],
+    [
+      "- **\"Anti-Ballistic Missile\" is not the \"Interceptor\"**: the missile and the combat ship have nothing in common. The game shows the missile as \"Interceptors\".",
+      "- **Anti-Ballistic Missiles are not the Interceptor**: the missile and the combat ship have nothing in common. The game called these missiles \"Interceptors\" until 15/11/2026."
+    ]
+  ],
+  "en/getting-started/coming-from-ogame": [
+    [
+      "| Interception Missile / Long-Range Warheads |",
+      "| Anti-Ballistic Missiles / Long-Range Warheads |"
+    ]
+  ],
+  "fr/defense": [
+    [
+      "les Intercepteurs abattent celles qui visent la vôtre",
+      "les Contre-ogives abattent celles qui visent la vôtre"
+    ]
+  ],
+  "en/defense": [
+    [
+      "Interception Missiles shoot down the ones aimed at yours",
+      "Anti-Ballistic Missiles shoot down the ones aimed at yours"
+    ]
+  ]
+}

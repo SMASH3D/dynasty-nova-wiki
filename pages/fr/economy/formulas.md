@@ -49,10 +49,10 @@ $$t = \frac{M + C}{1\,000 \times (1 + L)} \div v_r$$
 10. Réacteur thermonucléaire : $30 \times N \times (1{,}05 + 0{,}01 \times S)^N$ énergie, $S$ étant le niveau de Science Énergétique ; il consomme $10 \times N \times 1{,}1^N$ hydrogène, multiplié par la vitesse d'économie.
 11. Collecteur solaire : $\lfloor T_{max} / 4 + 20 \rfloor$ énergie par unité, jamais négatif.
 12. Bonus de production : Maîtrise du Plasma (+1 % de métal, +0,66 % de cristal, +0,33 % d'hydrogène par niveau), Extraction coordonnée (+5 % par niveau), bonus de position des colonies, dynastie et talents. Chacun se calcule sur la production brute des mines, s'arrondit à l'inférieur, et ils s'additionnent.
-13. Déficit d'énergie : la production des mines, bonus compris, est multipliée par $\min(1, \text{production} / \text{consommation})$. Puis s'ajoutent 20 métal et 10 cristal de la Base planetaire, multipliés par la vitesse d'économie.
+13. Déficit d'énergie : la production des mines, bonus compris, est multipliée par $\min(1, \text{production} / \text{consommation})$. Puis s'ajoutent 20 métal et 10 cristal de la Base planétaire, multipliés par la vitesse d'économie.
 
 ### Stockage
-14. Capacité d'un entrepôt au niveau $N$ : $5\,000 \times \lfloor 2{,}5 \times e^{20N/33} \rfloor$. Base planetaire : 10 000 par ressource. Bonus (Centre logistique +10 % par niveau, Entrepôts fédérés +10 % par niveau, talents) additionnés et appliqués à toute la capacité.
+14. Capacité d'un entrepôt au niveau $N$ : $5\,000 \times \lfloor 2{,}5 \times e^{20N/33} \rfloor$. Base planétaire : 10 000 par ressource. Bonus (Centre logistique +10 % par niveau, Entrepôts fédérés +10 % par niveau, talents) additionnés et appliqués à toute la capacité.
 
 $T_{max}$ : température maximale de la planète, en °C.
 
@@ -71,7 +71,7 @@ Une Navette de fret construite ensuite au Dock orbital 7 avec l'Assembleur 1 : 5
 
 | Vitesse | Effet |
 |---|---|
-| Économie | Multiplie la production des mines, de la Base planetaire et la consommation d'hydrogène du Réacteur ; ne change ni l'énergie ni la consommation d'énergie |
+| Économie | Multiplie la production des mines, de la Base planétaire et la consommation d'hydrogène du Réacteur ; ne change ni l'énergie ni la consommation d'énergie |
 | Construction | Divise la durée des bâtiments et des démolitions |
 | Recherche | Divise la durée des recherches |
 | Chantier | Divise la durée des vaisseaux et des défenses, accélère la Station de réparation |

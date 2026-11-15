@@ -3,7 +3,7 @@ wiki_id: 54
 locale: "fr"
 path: "espionage/sensor-phalanx"
 url: "https://wiki.dynastynova.com/fr/espionage/sensor-phalanx"
-title: "Phalange de capteur"
+title: "Phalange de capteurs"
 description: "Observer les flottes depuis une lune : portée, coût, ce qui est vu."
 tags: ["espionage", "lune"]
 published: true
@@ -12,12 +12,12 @@ updated: "2026-10-15T18:54:22.273Z"
 game_version: "Serveur 2.1.0 · Client 3.1.0"
 ---
 
-# Phalange de capteur
+# Phalange de capteurs
 
-> **En bref** : la Phalange de capteur se construit sur une lune. Elle balaie une planète de la même galaxie et montre toutes les flottes en route qui en partent ou s'y dirigent : composition, mission et horaires. Chaque balayage coûte 5 000 hydrogène, pris sur la lune.
+> **En bref** : la Phalange de capteurs se construit sur une lune. Elle balaie une planète de la même galaxie et montre toutes les flottes en route qui en partent ou s'y dirigent : composition, mission et horaires. Chaque balayage coûte 5 000 hydrogène, pris sur la lune.
 {.is-info}
 
-<img src="/images/illustrations/facilities/phalange-de-capteur.jpg" width="180" alt="Phalange de capteur">
+<img src="/images/illustrations/facilities/phalange-de-capteur.jpg" width="180" alt="Phalange de capteurs">
 
 > **Paramètre d'univers** : le nombre de systèmes par galaxie peut être différent selon l'univers.
 > Par défaut : **fixé à la création de l'univers** · Redline : **99 systèmes**

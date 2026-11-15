@@ -4,7 +4,7 @@ locale: "fr"
 path: "defense/missiles"
 url: "https://wiki.dynastynova.com/fr/defense/missiles"
 title: "Missiles"
-description: "Arsenal balistique, Intercepteurs et Ogives longue portée."
+description: "Arsenal balistique, Contre-ogives et Ogives longue portée."
 tags: ["defense", "missiles"]
 published: true
 created: "2026-10-02T13:09:06.140Z"
@@ -14,25 +14,25 @@ game_version: "Serveur 2.1.0 · Client 3.1.0"
 
 # Missiles
 
-> **En bref** : les missiles se stockent dans l'Arsenal balistique. Les **Ogives longue portée** détruisent les défenses d'une planète ennemie de la même galaxie sans engager de flotte ; leur portée dépend du Moteur Magnétique. Les **Intercepteurs** abattent automatiquement, une pour une, les Ogives qui visent votre planète. Les missiles ne prennent jamais part aux combats de flottes.
+> **En bref** : les missiles se stockent dans l'Arsenal balistique. Les **Ogives longue portée** détruisent les défenses d'une planète ennemie de la même galaxie sans engager de flotte ; leur portée dépend du Moteur Magnétique. Les **Contre-ogives** abattent automatiquement, une pour une, les Ogives qui visent votre planète. Les missiles ne prennent jamais part aux combats de flottes.
 {.is-info}
 
 > **Paramètre d'univers** : la limite d'attaques, qui compte aussi les salves de missiles, peut être différente selon l'univers.
 > Par défaut : **6 attaques par 24 h** · Redline : **6 attaques par 24 h**
 {.is-info}
 
-<img src="/images/illustrations/facilities/arsenal-balistique.jpg" width="180" alt="Arsenal balistique"> <img src="/images/illustrations/defense/intercepteurs.jpg" width="180" alt="Intercepteurs"> <img src="/images/illustrations/defense/ogives-longue-portee.jpg" width="180" alt="Ogives longue portée">
+<img src="/images/illustrations/facilities/arsenal-balistique.jpg" width="180" alt="Arsenal balistique"> <img src="/images/illustrations/defense/intercepteurs.jpg" width="180" alt="Contre-ogives"> <img src="/images/illustrations/defense/ogives-longue-portee.jpg" width="180" alt="Ogives longue portée">
 
 ## Règles
 
 ### L'Arsenal balistique
 1. Les missiles sont stockés dans l'**Arsenal balistique**, qui offre **10 cases par niveau** (niveau 10 au plus). Il ne se construit que sur une planète.
-2. Un **Intercepteur** occupe **1 case**, une **Ogive longue portée** en occupe **2**.
+2. Une **Contre-ogive** occupe **1 case**, une **Ogive longue portée** en occupe **2**.
 3. Les missiles en file d'attente ou en construction comptent déjà : une commande qui ne tiendrait pas dans les cases libres est refusée avant toute dépense.
 4. Les missiles n'occupent aucune case de la planète. Seul l'Arsenal lui-même occupe une case par niveau.
 5. Démolir un niveau d'Arsenal alors qu'il est plein ne détruit aucun missile ; vous ne pouvez simplement plus en commander.
 6. Les missiles ne tirent jamais pendant un combat, ne comptent pas dans la puissance défensive de la planète et ne peuvent pas être détruits par une salve.
-7. **Points** : comme les défenses, 1 point par tranche de 1 000 ressources, dans les points militaires, tant qu'ils sont au silo. Un missile tiré, ou un Intercepteur consommé, sort de vos points.
+7. **Points** : comme les défenses, 1 point par tranche de 1 000 ressources, dans les points militaires, tant qu'ils sont au silo. Un missile tiré, ou une Contre-ogive consommée, sort de vos points.
 
 ### Portée et vol
 8. **Portée** : avec le Moteur Magnétique au niveau $N$, une Ogive atteint toute planète située à au plus $5 \times N - 1$ systèmes, **dans la même galaxie** seulement.
@@ -50,7 +50,7 @@ game_version: "Serveur 2.1.0 · Client 3.1.0"
 17. Pendant une **maintenance**, aucun tir n'est accepté ; une salve déjà en vol arrive normalement.
 
 ### À l'impact
-18. **Interception** : chaque Intercepteur de la planète visée abat **une Ogive**, automatiquement, avant tout dégât. Il est consommé.
+18. **Interception** : chaque Contre-ogive de la planète visée abat **une Ogive**, automatiquement, avant tout dégât. Elle est consommée.
 19. **Dégâts** : chaque Ogive qui passe apporte $12\,000 \times (1 + 0{,}1 \times S)$ dégâts, mis en commun pour toute la salve (arrondi à l'inférieur).
    - $S$ : niveau de Systèmes Offensifs du tireur.
 20. **Résistance** d'une défense : son bouclier + sa coque de combat, avec les recherches et bonus du défenseur (voir [Liste des défenses](/fr/defense/defenses), règle 8).
@@ -65,7 +65,7 @@ game_version: "Serveur 2.1.0 · Client 3.1.0"
 
 **Remplir un Arsenal balistique niveau 3**
 - Capacité : 3 × 10 = **30 cases**.
-- 10 Intercepteurs (10 cases) + 10 Ogives longue portée (20 cases) = 30 : l'Arsenal est plein.
+- 10 Contre-ogives (10 cases) + 10 Ogives longue portée (20 cases) = 30 : l'Arsenal est plein.
 - Coût des 10 Ogives : 125 000 métal, 25 000 cristal, 100 000 hydrogène, soit 250 points militaires, retirés quand elles partent.
 
 **Portée et vol** (Moteur Magnétique 4)
@@ -74,8 +74,8 @@ game_version: "Serveur 2.1.0 · Client 3.1.0"
 - De [5:97:6] vers [5:3:10] : l'anneau passe par 98, 99, 1, 2, 3, soit **5 systèmes**, à portée dès le Moteur Magnétique 2 ; vol de 2 min 30 s.
 - Vers [4:40:8] : autre galaxie, **hors de portée**.
 
-**Une salve de 5 Ogives** tirée avec Systèmes Offensifs 6, sur une planète qui a 3 Intercepteurs, 1 Dôme protecteur, 2 Éjecteurs à plasma et 40 Projecteurs balistiques (défenseur à Champs de Protection 4 et Métallurgie Avancée 5)
-- Interception : 3 Ogives abattues, **2 arrivent**. Les 3 Intercepteurs sont consommés.
+**Une salve de 5 Ogives** tirée avec Systèmes Offensifs 6, sur une planète qui a 3 Contre-ogives, 1 Dôme protecteur, 2 Éjecteurs à plasma et 40 Projecteurs balistiques (défenseur à Champs de Protection 4 et Métallurgie Avancée 5)
+- Interception : 3 Ogives abattues, **2 arrivent**. Les 3 Contre-ogives sont consommées.
 - Dégâts : 2 × 12 000 × 1,6 = **38 400**.
 - Résistances : Dôme 29 000, Éjecteur à plasma 15 420, Projecteur balistique 328.
 - Sans cible désignée : 1 Dôme protecteur (1 × 29 000) : 38 400 → 9 400 ; 28 Projecteurs balistiques (28 × 328) : 9 400 → 216. Les Éjecteurs (il faudrait 15 420) sont sautés. Bilan : **1 Dôme protecteur, 28 Projecteurs balistiques**, 216 dégâts perdus.
@@ -87,16 +87,16 @@ game_version: "Serveur 2.1.0 · Client 3.1.0"
 
 | Missile | Métal | Cristal | Hydrogène | Points | Cases d'Arsenal | Dégâts | Durée de base | Prérequis |
 |---|---|---|---|---|---|---|---|---|
-| <img src="/images/illustrations/defense/intercepteurs.jpg" width="48" alt="Intercepteurs"> Intercepteurs | 8 000 | 2 000 | 0 | 10 | 1 | aucun | 3 h 12 min | Dock orbital 1, Arsenal balistique 2 |
+| <img src="/images/illustrations/defense/intercepteurs.jpg" width="48" alt="Contre-ogives"> Contre-ogives | 8 000 | 2 000 | 0 | 10 | 1 | aucun | 3 h 12 min | Dock orbital 1, Arsenal balistique 2 |
 | <img src="/images/illustrations/defense/ogives-longue-portee.jpg" width="48" alt="Ogives longue portée"> Ogives longue portée | 12 500 | 2 500 | 10 000 | 25 | 2 | 12 000 | 6 h | Dock orbital 1, Arsenal balistique 4, Moteur Magnétique 1 |
 
-Les dégâts sont ceux d'une Ogive sans recherche (règle 19). Un Intercepteur ne fait aucun dégât : il ne sert qu'à abattre une Ogive. Le Moteur Magnétique 1 requis pour les Ogives donne déjà une portée de 4 systèmes.
+Les dégâts sont ceux d'une Ogive sans recherche (règle 19). Une Contre-ogive ne fait aucun dégât : elle ne sert qu'à abattre une Ogive. Le Moteur Magnétique 1 requis pour les Ogives donne déjà une portée de 4 systèmes.
 
 ### Arsenal balistique
 
 Prérequis : Dock orbital 1. Le coût double à chaque niveau.
 
-| Niveau | Métal | Cristal | Hydrogène | Cases | Ogives au plus | Intercepteurs au plus |
+| Niveau | Métal | Cristal | Hydrogène | Cases | Ogives au plus | Contre-ogives au plus |
 |---|---|---|---|---|---|---|
 | 1 | 20 000 | 20 000 | 1 000 | 10 | 5 | 10 |
 | 2 | 40 000 | 40 000 | 2 000 | 20 | 10 | 20 |
@@ -143,13 +143,13 @@ Sur Redline, une galaxie compte 99 systèmes : par le plus court côté de l'ann
 
 ## Pièges fréquents
 
-- **« Intercepteurs » n'est pas l'« Intercepteur »** : le missile (pluriel) et le vaisseau de combat (singulier) n'ont rien à voir.
+- **Les Contre-ogives ne sont pas l'Intercepteur** : le missile et le vaisseau de combat n'ont rien à voir. Les Contre-ogives s'appelaient « Intercepteurs » avant le 15/11/2026.
 - **Pas de missile entre galaxies** : la portée ne compte que les systèmes de votre galaxie.
 - **Le Dôme part en premier** : sans cible désignée, la défense la plus résistante est frappée d'abord. Désignez une cible si vous visez autre chose.
 - **Une salve trop faible passe à côté** : une Ogive seule ne détruit pas un Dôme sans recherche ; ses dégâts vont aux défenses suivantes.
 - **Une salve coûte un créneau d'attaque** : elle compte dans la limite d'attaques sur le joueur, même si elle ne détruit rien.
 - **Fin de la protection de nouveau joueur** : votre première salve y met fin, comme une attaque de flotte.
-- **Les missiles ne défendent pas contre les flottes** : seuls les Intercepteurs servent en défense, et uniquement contre les Ogives.
+- **Les missiles ne défendent pas contre les flottes** : seules les Contre-ogives servent en défense, et uniquement contre les Ogives.
 
 ## Pages liées
 

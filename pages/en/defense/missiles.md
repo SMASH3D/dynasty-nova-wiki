@@ -4,7 +4,7 @@ locale: "en"
 path: "defense/missiles"
 url: "https://wiki.dynastynova.com/en/defense/missiles"
 title: "Missiles"
-description: "Ballistic Arsenal, Interception Missiles and Long-Range Warheads."
+description: "Ballistic Arsenal, Anti-Ballistic Missiles and Long-Range Warheads."
 tags: ["defense", "missiles"]
 published: true
 created: "2026-10-02T13:11:23.628Z"
@@ -14,25 +14,25 @@ game_version: "Serveur 2.1.0 · Client 3.1.0"
 
 # Missiles
 
-> **In short**: missiles are stored in the Ballistic Arsenal. **Long-Range Warheads** destroy the defenses of an enemy planet in the same galaxy without sending a fleet; their range depends on the Impulse Drive. **Interception Missiles** automatically shoot down, one for one, the Warheads aimed at your planet. Missiles never take part in fleet battles.
+> **In short**: missiles are stored in the Ballistic Arsenal. **Long-Range Warheads** destroy the defenses of an enemy planet in the same galaxy without sending a fleet; their range depends on the Impulse Drive. **Anti-Ballistic Missiles** automatically shoot down, one for one, the Warheads aimed at your planet. Missiles never take part in fleet battles.
 {.is-info}
 
 > **Universe setting**: the attack limit, which also counts missile salvos, may differ from one universe to another.
 > Default: **6 attacks per 24 h** · Redline: **6 attacks per 24 h**
 {.is-info}
 
-<img src="/images/illustrations/facilities/arsenal-balistique.jpg" width="180" alt="Ballistic Arsenal"> <img src="/images/illustrations/defense/intercepteurs.jpg" width="180" alt="Interception Missile"> <img src="/images/illustrations/defense/ogives-longue-portee.jpg" width="180" alt="Long-Range Warheads">
+<img src="/images/illustrations/facilities/arsenal-balistique.jpg" width="180" alt="Ballistic Arsenal"> <img src="/images/illustrations/defense/intercepteurs.jpg" width="180" alt="Anti-Ballistic Missile"> <img src="/images/illustrations/defense/ogives-longue-portee.jpg" width="180" alt="Long-Range Warheads">
 
 ## Rules
 
 ### The Ballistic Arsenal
 1. Missiles are stored in the **Ballistic Arsenal**, which offers **10 slots per level** (level 10 at most). It can only be built on a planet.
-2. An **Interception Missile** takes **1 slot**, a **Long-Range Warhead** takes **2**.
+2. An **Anti-Ballistic Missile** takes **1 slot**, a **Long-Range Warhead** takes **2**.
 3. Missiles in the queue or under construction already count: an order that would not fit in the free slots is refused before anything is spent.
 4. Missiles take no planet fields. Only the Arsenal itself takes one field per level.
 5. Demolishing an Arsenal level while it is full destroys no missile; you just cannot order more.
 6. Missiles never fire during a battle, do not count towards the planet's defensive power and cannot be destroyed by a salvo.
-7. **Points**: like defenses, 1 point per 1,000 resources, in military points, while they sit in the silo. A missile fired, or an Interception Missile spent, leaves your points.
+7. **Points**: like defenses, 1 point per 1,000 resources, in military points, while they sit in the silo. A missile fired, or an Anti-Ballistic Missile spent, leaves your points.
 
 ### Range and flight
 8. **Range**: with the Impulse Drive at level $N$, a Warhead reaches any planet at most $5 \times N - 1$ systems away, **in the same galaxy** only.
@@ -50,7 +50,7 @@ game_version: "Serveur 2.1.0 · Client 3.1.0"
 17. During **maintenance**, no launch is accepted; a salvo already in flight lands normally.
 
 ### On impact
-18. **Interception**: each Interception Missile on the target planet shoots down **one Warhead**, automatically, before any damage. It is spent.
+18. **Interception**: each Anti-Ballistic Missile on the target planet shoots down **one Warhead**, automatically, before any damage. It is spent.
 19. **Damage**: each Warhead that gets through brings $12{,}000 \times (1 + 0.1 \times S)$ damage, pooled for the whole salvo (rounded down).
    - $S$: the shooter's Weapon Systems level.
 20. **Toughness** of a defense: its shield + its combat hull, with the defender's research and bonuses (see [Defenses list](/en/defense/defenses), rule 8).
@@ -65,7 +65,7 @@ game_version: "Serveur 2.1.0 · Client 3.1.0"
 
 **Filling a level 3 Ballistic Arsenal**
 - Capacity: 3 × 10 = **30 slots**.
-- 10 Interception Missiles (10 slots) + 10 Long-Range Warheads (20 slots) = 30: the Arsenal is full.
+- 10 Anti-Ballistic Missiles (10 slots) + 10 Long-Range Warheads (20 slots) = 30: the Arsenal is full.
 - Cost of the 10 Warheads: 125,000 metal, 25,000 crystal, 100,000 hydrogen, that is 250 military points, removed when they leave.
 
 **Range and flight** (Impulse Drive 4)
@@ -74,8 +74,8 @@ game_version: "Serveur 2.1.0 · Client 3.1.0"
 - From [5:97:6] to [5:3:10]: the ring goes through 98, 99, 1, 2, 3, that is **5 systems**, in range from Impulse Drive 2; flight of 2 min 30 s.
 - To [4:40:8]: another galaxy, **out of range**.
 
-**A salvo of 5 Warheads** fired with Weapon Systems 6, at a planet holding 3 Interception Missiles, 1 Protective Dome, 2 Plasma Ejectors and 40 Ballistic Projectors (defender at Shielding Technology 4 and Armor Technology 5)
-- Interception: 3 Warheads shot down, **2 land**. The 3 Interception Missiles are spent.
+**A salvo of 5 Warheads** fired with Weapon Systems 6, at a planet holding 3 Anti-Ballistic Missiles, 1 Protective Dome, 2 Plasma Ejectors and 40 Ballistic Projectors (defender at Shielding Technology 4 and Armor Technology 5)
+- Interception: 3 Warheads shot down, **2 land**. The 3 Anti-Ballistic Missiles are spent.
 - Damage: 2 × 12,000 × 1.6 = **38,400**.
 - Toughness: Dome 29,000, Plasma Ejector 15,420, Ballistic Projector 328.
 - No designated target: 1 Protective Dome (1 × 29,000): 38,400 → 9,400; 28 Ballistic Projectors (28 × 328): 9,400 → 216. The Ejectors (one would take 15,420) are skipped. Result: **1 Protective Dome, 28 Ballistic Projectors**, 216 damage lost.
@@ -87,16 +87,16 @@ game_version: "Serveur 2.1.0 · Client 3.1.0"
 
 | Missile | Metal | Crystal | Hydrogen | Points | Arsenal slots | Damage | Base time | Requirements |
 |---|---|---|---|---|---|---|---|---|
-| <img src="/images/illustrations/defense/intercepteurs.jpg" width="48" alt="Interception Missile"> Interception Missile | 8,000 | 2,000 | 0 | 10 | 1 | none | 3 h 12 min | Orbital Dock 1, Ballistic Arsenal 2 |
+| <img src="/images/illustrations/defense/intercepteurs.jpg" width="48" alt="Anti-Ballistic Missile"> Anti-Ballistic Missile | 8,000 | 2,000 | 0 | 10 | 1 | none | 3 h 12 min | Orbital Dock 1, Ballistic Arsenal 2 |
 | <img src="/images/illustrations/defense/ogives-longue-portee.jpg" width="48" alt="Long-Range Warheads"> Long-Range Warheads | 12,500 | 2,500 | 10,000 | 25 | 2 | 12,000 | 6 h | Orbital Dock 1, Ballistic Arsenal 4, Impulse Drive 1 |
 
-Damage is that of one Warhead with no research (rule 19). An Interception Missile deals no damage: it only shoots down a Warhead. The Impulse Drive 1 required for Warheads already gives a range of 4 systems.
+Damage is that of one Warhead with no research (rule 19). An Anti-Ballistic Missile deals no damage: it only shoots down a Warhead. The Impulse Drive 1 required for Warheads already gives a range of 4 systems.
 
 ### Ballistic Arsenal
 
 Requirement: Orbital Dock 1. The cost doubles at each level.
 
-| Level | Metal | Crystal | Hydrogen | Slots | Warheads at most | Interception Missiles at most |
+| Level | Metal | Crystal | Hydrogen | Slots | Warheads at most | Anti-Ballistic Missiles at most |
 |---|---|---|---|---|---|---|
 | 1 | 20,000 | 20,000 | 1,000 | 10 | 5 | 10 |
 | 2 | 40,000 | 40,000 | 2,000 | 20 | 10 | 20 |
@@ -143,13 +143,13 @@ On Redline a galaxy has 99 systems: the short way round the ring, none is more t
 
 ## Common pitfalls
 
-- **"Interception Missile" is not the "Interceptor"**: the missile and the combat ship have nothing in common. The game shows the missile as "Interceptors".
+- **Anti-Ballistic Missiles are not the Interceptor**: the missile and the combat ship have nothing in common. The game called these missiles "Interceptors" until 15/11/2026.
 - **No missile across galaxies**: range only counts systems in your own galaxy.
 - **The Dome goes first**: without a designated target, the toughest defense is hit first. Designate a target if you are after something else.
 - **A salvo too weak goes past**: a single Warhead does not destroy a Dome with no research; its damage goes to the next defenses.
 - **A salvo costs an attack slot**: it counts in the attack limit on the player, even if it destroys nothing.
 - **End of new-player protection**: your first salvo ends it, just like a fleet attack.
-- **Missiles do not defend against fleets**: only Interception Missiles help in defense, and only against Warheads.
+- **Missiles do not defend against fleets**: only Anti-Ballistic Missiles help in defense, and only against Warheads.
 
 ## Related pages
 

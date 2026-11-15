@@ -35,7 +35,7 @@ game_version: "Serveur 2.1.0 · Client 3.1.0"
 - Un Cuirassé (attaque 1 000) passe le seuil : 10 tirs vident le bouclier, les suivants entament la coque.
 
 **Le même Dôme face aux Ogives longue portée**
-- Résistance : 10 000 + 10 000 = **20 000**. Une Ogive fait 12 000 dégâts sans recherche : il en faut **2** qui passent les Intercepteurs.
+- Résistance : 10 000 + 10 000 = **20 000**. Une Ogive fait 12 000 dégâts sans recherche : il en faut **2** qui passent les Contre-ogives.
 - Avec Champs de Protection 6 et Métallurgie Avancée 6 chez le défenseur, la résistance monte à 32 000 : il faut **3** Ogives à un tireur sans recherche, mais **2** à un tireur à Systèmes Offensifs 4 (16 800 par Ogive).
 
 ## Données détaillées

@@ -50,7 +50,7 @@ updated: "2026-10-15T18:57:36.822Z"
 | 10 | **Âge d'or** | ultime | Vos mines produisent 1 % de plus et vos bâtiments se construisent 5 % plus vite encore. |  |
 
 - Les bonus de production s'appliquent à la production brute des trois mines, avant le rapport d'énergie. Ils s'additionnent entre eux, puis sont plafonnés.
-- **Entrepôts** s'ajoute au Centre logistique et à toute la capacité de la planète, Base planetaire comprise. **Coffres enterrés** retire 5 points au taux de pillage que vous subissez (50 % → 45 %), jamais sous 30 %.
+- **Entrepôts** s'ajoute au Centre logistique et à toute la capacité de la planète, Base planétaire comprise. **Coffres enterrés** retire 5 points au taux de pillage que vous subissez (50 % → 45 %), jamais sous 30 %.
 - **Fonderie à plasma** : votre niveau de Maîtrise du Plasma compte une fois et demie pour la production. Ce bonus se calcule à part du plafond de production.
 - **Réseau optimisé** augmente l'énergie produite par les Capteurs photovoltaïques, le Réacteur thermonucléaire et les Collecteurs solaires. **Colonies prospères** touche chaque planète qui n'est ni votre planète mère ni une lune (colonies et mondes conquis), au-delà du plafond de 45 %.
 - **Pont de ressources** : une fois par 24 heures glissantes pour tout votre empire, vers n'importe quelle autre de vos planètes ou lunes. La limite est de 2 heures de la production actuelle de la planète de départ, les trois ressources additionnées et réparties comme vous le voulez, sans dépasser son stock. La planète d'arrivée peut dépasser ses entrepôts.

@@ -107,7 +107,7 @@ updated: "2026-11-05T10:48:13.388Z"
 | Artillerie laser légère / lourde | Canon photonique / Émetteur à haute énergie |
 | Artillerie à ions, Canon de Gauss, Lanceur de plasma | Batterie ionique, Accélérateur magnétique, Éjecteur à plasma |
 | Petit / Grand bouclier | Barrière défensive / Dôme protecteur |
-| Missile d'interception / interplanétaire | Intercepteurs / Ogives longue portée |
+| Missile d'interception / interplanétaire | Contre-ogives / Ogives longue portée |
 
 Tous les noms, en français, anglais et espagnol, sont dans le [glossaire](/fr/getting-started/glossary).
 

@@ -13,7 +13,7 @@ updated: "2026-10-21T16:00:58.903Z"
 
 # Les lunes
 
-> **En bref** : une lune peut naître des débris d'un combat livré au-dessus d'une planète. Elle revient toujours au propriétaire de la planète, quel que soit le vainqueur. Elle commence avec une seule case : la Base lunaire en ouvre d'autres, dans la limite fixée par son diamètre. Une lune accueille la Phalange de capteur et la Porte de saut, et ne peut pas être scannée par une phalange.
+> **En bref** : une lune peut naître des débris d'un combat livré au-dessus d'une planète. Elle revient toujours au propriétaire de la planète, quel que soit le vainqueur. Elle commence avec une seule case : la Base lunaire en ouvre d'autres, dans la limite fixée par son diamètre. Une lune accueille la Phalange de capteurs et la Porte de saut, et ne peut pas être scannée par une phalange.
 {.is-info}
 
 > **Paramètre d'univers** : la chance maximale de former une lune et la quantité de débris qui l'atteint peuvent être différentes selon l'univers.
@@ -36,13 +36,13 @@ updated: "2026-10-21T16:00:58.903Z"
 9. La **Base lunaire** se construit en premier : aucun autre bâtiment ne peut être lancé sur la lune avant elle. Elle ne se démolit pas.
 10. Chaque niveau de Base lunaire **ouvre 3 cases et en occupe une**, soit 2 cases nettes par niveau.
 11. Les cases d'une lune ne dépassent jamais son **plafond** : partie entière((diamètre / 1 000)²). Au-delà, monter la Base lunaire n'ouvre plus rien. Un talent de dynastie lève ce plafond.
-12. Bâtiments possibles sur une lune : Base lunaire, Phalange de capteur, Porte de saut, Fabrique d'automates, Dock orbital (tableau ci-dessous).
+12. Bâtiments possibles sur une lune : Base lunaire, Phalange de capteurs, Porte de saut, Fabrique d'automates, Dock orbital (tableau ci-dessous).
 13. Une lune **ne produit rien** et stocke 10 000 de chaque ressource (voir [Le stockage](/fr/economy/storage)).
 
 ### Vivre avec une lune
 14. Le vol entre une planète et sa lune a une distance de **5** : un trajet très court, mais un vrai vol.
 15. Une lune peut être espionnée, attaquée, détruite par des Colossus stellaires (voir [Destruction de lune](/fr/combat/moon-destruction)), et recevoir des transports. Elle ne se colonise pas, et elle n'occupe pas de place de colonie.
-16. Une **Phalange de capteur** ne peut jamais scanner une lune : une flotte qui y stationne reste invisible.
+16. Une **Phalange de capteurs** ne peut jamais scanner une lune : une flotte qui y stationne reste invisible.
 17. Abandonner une planète abandonne aussi sa lune et tout ce qu'elle porte ; recoloniser cette planète la rend avec sa lune.
 
 ## Formules
@@ -118,7 +118,7 @@ Coût du niveau N : coût du niveau 1 × 2^(N − 1). Les cases ouvertes sont pl
 | Bâtiment | Coût du niveau 1 (métal / cristal / hydrogène) | Facteur par niveau | Prérequis | Niveau max |
 |---|---|---|---|---|
 | Base lunaire | 20 000 / 40 000 / 20 000 | ×2 | aucun | aucun (le diamètre plafonne les cases) |
-| Phalange de capteur | 20 000 / 40 000 / 20 000 | ×2 | Base lunaire 1 | aucun |
+| Phalange de capteurs | 20 000 / 40 000 / 20 000 | ×2 | Base lunaire 1 | aucun |
 | Porte de saut | 2 000 000 / 4 000 000 / 2 000 000 | ×2 | Base lunaire 1, Pliage Spatial 7 | aucun |
 | Fabrique d'automates | 400 / 120 / 200 | ×2 | Base lunaire 1 | 10 |
 | Dock orbital | 400 / 200 / 100 | ×2 | Base lunaire 1, Fabrique d'automates 2 | 12 |
@@ -134,6 +134,6 @@ Coût du niveau N : coût du niveau 1 × 2^(N − 1). Les cases ouvertes sont pl
 
 - [Champs de débris](/fr/combat/debris)
 - [Destruction de lune](/fr/combat/moon-destruction)
-- [Phalange de capteur](/fr/espionage/sensor-phalanx)
+- [Phalange de capteurs](/fr/espionage/sensor-phalanx)
 - [Porte de saut](/fr/fleet/jump-gate)
 - [Liste des bâtiments](/fr/economy/buildings)

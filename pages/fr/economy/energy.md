@@ -25,7 +25,7 @@ game_version: "Serveur 2.1.0 · Client 3.1.0"
 2. **Réacteur thermonucléaire** : 30 × N × (1,05 + 0,01 × Science Énergétique)^N énergie, en **consommant de l'hydrogène** : 10 × N × 1,1^N par heure, multipliés par la vitesse d'économie de l'univers.
 3. **Collecteur solaire** : vaisseau qui reste en orbite et produit, chacun, température maximale / 4 + 20 énergie, arrondi à l'inférieur et jamais négatif. Il peut être détruit en combat.
 4. **Consommation** : l'Excavateur minéral, l'Extracteur cristallin et le Condensateur d'hydrogène consomment chacun 10 × N × 1,1^N énergie. La vitesse d'économie ne change pas la consommation.
-5. **Déficit** : si la consommation dépasse la production, la production des trois mines, bonus compris, est multipliée par production / consommation. Le détail de production affiche une ligne « Déficit d'énergie ». Le revenu de la Base planetaire n'est pas touché.
+5. **Déficit** : si la consommation dépasse la production, la production des trois mines, bonus compris, est multipliée par production / consommation. Le détail de production affiche une ligne « Déficit d'énergie ». Le revenu de la Base planétaire n'est pas touché.
 6. **Taux de fonctionnement** : chaque mine se règle par pas de 10 % ; production et consommation baissent ensemble. Le Réacteur, lui, tourne toujours à plein, sauf talent qui le permet.
 7. L'énergie **ne se stocke pas** : elle se calcule à chaque instant.
 8. Certains bâtiments et recherches demandent une **énergie requise** pour être lancés (Station de réparation, Modulateur planétaire, Manipulation Gravitationnelle) : c'est un seuil de production, pas une dépense.

@@ -22,7 +22,7 @@ updated: "2026-10-15T18:54:10.074Z"
 2. La démolition **ne coûte rien et ne rend rien**, ni au lancement ni à la fin ; l'annuler ne rend rien non plus.
 3. Elle **retire les points** du niveau démoli.
 4. Sa durée vaut **la moitié du temps de construction** du niveau retiré, avec la Fabrique d'automates, l'Assembleur moléculaire et la vitesse de construction de l'univers, mais **sans les bonus de vitesse** d'alliance ou de talents.
-5. Impossible de démolir la **Base planetaire**, la **Base lunaire** ou un bâtiment au **niveau 0**.
+5. Impossible de démolir la **Base planétaire**, la **Base lunaire** ou un bâtiment au **niveau 0**.
 6. Une démolition passe par la file des bâtiments et y prend une place. Elle ne peut pas attendre derrière une amélioration du même bâtiment, ni l'inverse.
 7. Le **Dock orbital** ne peut pas être démoli pendant qu'il produit des unités.
 8. Démolir l'**Arsenal balistique** ne détruit aucun missile : ceux qui sont stockés restent.
